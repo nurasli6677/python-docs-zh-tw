@@ -280,7 +280,7 @@
 <dd class="field-odd"><p>3.10.2</p>
 </dd>
 <dt class="field-even">日期</dt>
-<dd class="field-even"><p>1月 25, 2022</p>
+<dd class="field-even"><p>1月 27, 2022</p>
 </dd>
 <dt class="field-odd">編輯者</dt>
 <dd class="field-odd"><p>Pablo Galindo Salgado</p>
@@ -1248,9 +1248,16 @@ OpenSSL support.
 <section id="idle-and-idlelib">
 <h3>IDLE and idlelib<a class="headerlink" href="#idle-and-idlelib" title="本標題的永久連結">¶</a></h3>
 <p>Make IDLE invoke <a class="reference internal" href="../library/sys.html#sys.excepthook" title="sys.excepthook"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.excepthook()</span></code></a> (when started without '-n').
-User hooks were previously ignored.  (Patch by Ken Hilton in
+User hooks were previously ignored.  (Contributed by Ken Hilton in
 <a class="reference external" href="https://bugs.python.org/issue43008">bpo-43008</a>.)</p>
-<p>This change was backported to a 3.9 maintenance release.</p>
+<p>Rearrange the settings dialog.  Split the General tab into Windows
+and Shell/Ed tabs.  Move help sources, which extend the Help menu, to the
+Extensions tab.  Make space for new options and shorten the dialog. The
+latter makes the dialog better fit small screens.  (Contributed by Terry Jan
+Reedy in <a class="reference external" href="https://bugs.python.org/issue40468">bpo-40468</a>.)  Move the indent space setting from the Font tab to
+the new Windows tab.  (Contributed by Mark Roseman and Terry Jan Reedy in
+<a class="reference external" href="https://bugs.python.org/issue33962">bpo-33962</a>.)</p>
+<p>These changes were backported to a 3.9 maintenance release.</p>
 <p>Add a Shell sidebar.  Move the primary prompt ('&gt;&gt;&gt;') to the sidebar.
 Add secondary prompts ('...') to the sidebar.  Left click and optional
 drag selects one or more lines of text, as with the editor
@@ -1261,10 +1268,8 @@ appears on the context menu for the text.  (Contributed by Tal Einat
 in <a class="reference external" href="https://bugs.python.org/issue37903">bpo-37903</a>.)</p>
 <p>Use spaces instead of tabs to indent interactive code.  This makes
 interactive code entries 'look right'.  Making this feasible was a
-major motivation for adding the shell sidebar.  Contributed by
+major motivation for adding the shell sidebar.  (Contributed by
 Terry Jan Reedy in <a class="reference external" href="https://bugs.python.org/issue37892">bpo-37892</a>.)</p>
-<p>We expect to backport these shell changes to a future 3.9 maintenance
-release.</p>
 <p>Highlight the new <a class="reference internal" href="../reference/lexical_analysis.html#soft-keywords"><span class="std std-ref">soft keywords</span></a> <a class="reference internal" href="../reference/compound_stmts.html#match"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">match</span></code></a>,
 <a class="reference internal" href="../reference/compound_stmts.html#match"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">case</span></code></a>, and <a class="reference internal" href="../reference/compound_stmts.html#wildcard-patterns"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">_</span></code></a> in
 pattern-matching statements. However, this highlighting is not perfect
@@ -2477,7 +2482,7 @@ only used internally by the compiler.
 <br />
     <br />
 
-    最後更新於 1月 25, 2022。
+    最後更新於 1月 27, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

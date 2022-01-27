@@ -262,9 +262,11 @@ file.</p>
 </dd>
 <dt>Print Window</dt><dd><p>Print the current window to the default printer.</p>
 </dd>
-<dt>關閉</dt><dd><p>Close the current window (ask to save if unsaved).</p>
+<dt>Close Window</dt><dd><p>Close the current window (if an unsaved editor, ask to save; if an unsaved
+Shell, ask to quit execution).  Calling <code class="docutils literal notranslate"><span class="pre">exit()</span></code> or <code class="docutils literal notranslate"><span class="pre">close()</span></code> in the Shell
+window also closes Shell.  If this is the only window, also exit IDLE.</p>
 </dd>
-<dt>離開</dt><dd><p>Close all windows and quit IDLE (ask to save unsaved windows).</p>
+<dt>Exit IDLE</dt><dd><p>Close all windows and quit IDLE (ask to save unsaved edit windows).</p>
 </dd>
 </dl>
 </section>
@@ -1122,7 +1124,7 @@ also used for testing.</p>
 <br />
     <br />
 
-    最後更新於 1月 25, 2022。
+    最後更新於 1月 27, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

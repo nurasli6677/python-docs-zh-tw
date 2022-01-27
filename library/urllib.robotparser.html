@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>urllib.robotparser --- Parser for robots.txt &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>urllib.robotparser --- robots.txt 的剖析器 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -127,7 +127,7 @@
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="internet.html" accesskey="U">Internet Protocols and Support</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.robotparser</span></code> ---  Parser for robots.txt</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.robotparser</span></code> --- robots.txt 的剖析器</a></li>
                 <li class="right">
                     
 
@@ -151,66 +151,54 @@
           <div class="body" role="main">
             
   <section id="module-urllib.robotparser">
-<span id="urllib-robotparser-parser-for-robots-txt"></span><h1><a class="reference internal" href="#module-urllib.robotparser" title="urllib.robotparser: Load a robots.txt file and answer questions about fetchability of other URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.robotparser</span></code></a> ---  Parser for robots.txt<a class="headerlink" href="#module-urllib.robotparser" title="本標題的永久連結">¶</a></h1>
+<span id="urllib-robotparser-parser-for-robots-txt"></span><h1><a class="reference internal" href="#module-urllib.robotparser" title="urllib.robotparser: Load a robots.txt file and answer questions about fetchability of other URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.robotparser</span></code></a> --- robots.txt 的剖析器<a class="headerlink" href="#module-urllib.robotparser" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/urllib/robotparser.py">Lib/urllib/robotparser.py</a></p>
 <hr class="docutils" id="index-0" />
-<p>This module provides a single class, <a class="reference internal" href="#urllib.robotparser.RobotFileParser" title="urllib.robotparser.RobotFileParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotFileParser</span></code></a>, which answers
-questions about whether or not a particular user agent can fetch a URL on the
-web site that published the <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> file.  For more details on the
-structure of <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> files, see <a class="reference external" href="http://www.robotstxt.org/orig.html">http://www.robotstxt.org/orig.html</a>.</p>
+<p>此模組 (module) 提供了一個單獨的類別 (class) <a class="reference internal" href="#urllib.robotparser.RobotFileParser" title="urllib.robotparser.RobotFileParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotFileParser</span></code></a>，它可以知道某個特定 user agent（使用者代理）是否能在有發布 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件的網站 fetch（擷取）特定 URL。有關 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件結構的更多細節，請參閱 <a class="reference external" href="http://www.robotstxt.org/orig.html">http://www.robotstxt.org/orig.html</a>。</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urllib.robotparser.</span></span><span class="sig-name descname"><span class="pre">RobotFileParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser" title="本定義的永久連結">¶</a></dt>
-<dd><p>This class provides methods to read, parse and answer questions about the
-<code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> file at <em>url</em>.</p>
+<dd><p>此類別提供了一些方法可以讀取、剖析和回答關於 <em>url</em> 上的 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件的問題。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.set_url">
 <span class="sig-name descname"><span class="pre">set_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.set_url" title="本定義的永久連結">¶</a></dt>
-<dd><p>Sets the URL referring to a <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> file.</p>
+<dd><p>設置指向 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件的 URL。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.read">
 <span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.read" title="本定義的永久連結">¶</a></dt>
-<dd><p>Reads the <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> URL and feeds it to the parser.</p>
+<dd><p>讀取 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> URL 並將其輸入到剖析器。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.parse">
 <span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.parse" title="本定義的永久連結">¶</a></dt>
-<dd><p>Parses the lines argument.</p>
+<dd><p>剖析 lines 引數。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.can_fetch">
 <span class="sig-name descname"><span class="pre">can_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useragent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.can_fetch" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <em>useragent</em> is allowed to fetch the <em>url</em>
-according to the rules contained in the parsed <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code>
-file.</p>
+<dd><p>根據從 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件中剖析出的規則，如果 <em>useragent</em> 被允許 fetch <em>url</em> 的話，則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.mtime">
 <span class="sig-name descname"><span class="pre">mtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.mtime" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns the time the <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> file was last fetched.  This is
-useful for long-running web spiders that need to check for new
-<code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> files periodically.</p>
+<dd><p>回傳最近一次 fetch <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件的時間。這適用於需要定期檢查 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件更新情況的長時間運行網頁爬蟲。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.modified">
 <span class="sig-name descname"><span class="pre">modified</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.modified" title="本定義的永久連結">¶</a></dt>
-<dd><p>Sets the time the <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> file was last fetched to the current
-time.</p>
+<dd><p>將最近一次 fetch <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 文件的時間設置為當前時間。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.crawl_delay">
 <span class="sig-name descname"><span class="pre">crawl_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useragent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.crawl_delay" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns the value of the <code class="docutils literal notranslate"><span class="pre">Crawl-delay</span></code> parameter from <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code>
-for the <em>useragent</em> in question.  If there is no such parameter or it
-doesn't apply to the <em>useragent</em> specified or the <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> entry
-for this parameter has invalid syntax, return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dd><p>針對指定的 <em>useragent</em> 從 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 回傳 <code class="docutils literal notranslate"><span class="pre">Crawl-delay</span></code> 參數的值。如果此參數不存在、不適用於指定的 <em>useragent</em> ，或是此參數在 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 中所指的條目含有無效語法，則回傳 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版本新加入.</span></p>
 </div>
@@ -219,11 +207,7 @@ for this parameter has invalid syntax, return <code class="docutils literal notr
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.request_rate">
 <span class="sig-name descname"><span class="pre">request_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useragent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.request_rate" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns the contents of the <code class="docutils literal notranslate"><span class="pre">Request-rate</span></code> parameter from
-<code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> as a <a class="reference internal" href="../glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a> <code class="docutils literal notranslate"><span class="pre">RequestRate(requests,</span> <span class="pre">seconds)</span></code>.
-If there is no such parameter or it doesn't apply to the <em>useragent</em>
-specified or the <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> entry for this parameter has invalid
-syntax, return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dd><p>以 <a class="reference internal" href="../glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a> <code class="docutils literal notranslate"><span class="pre">RequestRate(requests,</span> <span class="pre">seconds)</span></code> 的形式從 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 回傳 <code class="docutils literal notranslate"><span class="pre">Request-rate</span></code> 參數的內容。如果此參數不存在、不適用於指定的 <em>useragent</em> ，或是此參數在 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 中所指的條目含有無效語法，則回傳 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版本新加入.</span></p>
 </div>
@@ -232,10 +216,7 @@ syntax, return <code class="docutils literal notranslate"><span class="pre">None
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.robotparser.RobotFileParser.site_maps">
 <span class="sig-name descname"><span class="pre">site_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.robotparser.RobotFileParser.site_maps" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns the contents of the <code class="docutils literal notranslate"><span class="pre">Sitemap</span></code> parameter from
-<code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> in the form of a <a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-func docutils literal notranslate"><span class="pre">list()</span></code></a>. If there is no such
-parameter or the <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> entry for this parameter has
-invalid syntax, return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dd><p>以 <a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-func docutils literal notranslate"><span class="pre">list()</span></code></a> 的形式從 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 回傳 <code class="docutils literal notranslate"><span class="pre">Sitemap</span></code> 參數的內容。如果此參數不存在或此參數在 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 中所指的條目含有無效語法，則回傳 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
@@ -243,8 +224,7 @@ invalid syntax, return <code class="docutils literal notranslate"><span class="p
 
 </dd></dl>
 
-<p>The following example demonstrates basic use of the <a class="reference internal" href="#urllib.robotparser.RobotFileParser" title="urllib.robotparser.RobotFileParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotFileParser</span></code></a>
-class:</p>
+<p>下面的範例展示了 <a class="reference internal" href="#urllib.robotparser.RobotFileParser" title="urllib.robotparser.RobotFileParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotFileParser</span></code></a> 類別的基本用法：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">urllib.robotparser</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rp</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">robotparser</span><span class="o">.</span><span class="n">RobotFileParser</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rp</span><span class="o">.</span><span class="n">set_url</span><span class="p">(</span><span class="s2">&quot;http://www.musi-cal.com/robots.txt&quot;</span><span class="p">)</span>
@@ -327,7 +307,7 @@ class:</p>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="internet.html" >Internet Protocols and Support</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.robotparser</span></code> ---  Parser for robots.txt</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.robotparser</span></code> --- robots.txt 的剖析器</a></li>
                 <li class="right">
                     
 
@@ -359,7 +339,7 @@ class:</p>
 <br />
     <br />
 
-    最後更新於 1月 25, 2022。
+    最後更新於 1月 27, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
