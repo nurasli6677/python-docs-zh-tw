@@ -1053,6 +1053,9 @@ by Pablo Galindo</p></li>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46539">bpo-46539</a>: In <a class="reference internal" href="../library/typing.html#typing.get_type_hints" title="typing.get_type_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.get_type_hints()</span></code></a>, support evaluating
+stringified <code class="docutils literal notranslate"><span class="pre">ClassVar</span></code> and <code class="docutils literal notranslate"><span class="pre">Final</span></code> annotations inside <code class="docutils literal notranslate"><span class="pre">Annotated</span></code>.
+Patch by Gregory Beauregard.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46491">bpo-46491</a>: Allow <a class="reference internal" href="../library/typing.html#typing.Annotated" title="typing.Annotated"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Annotated</span></code></a> to wrap <a class="reference internal" href="../library/typing.html#typing.Final" title="typing.Final"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Final</span></code></a> and
 <a class="reference internal" href="../library/typing.html#typing.ClassVar" title="typing.ClassVar"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.ClassVar</span></code></a>. Patch by Gregory Beauregard.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue41403">bpo-41403</a>: Make <code class="xref py py-meth docutils literal notranslate"><span class="pre">mock.patch()</span></code> raise a <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> with a
@@ -1073,12 +1076,24 @@ added to <code class="docutils literal notranslate"><span class="pre">__all__</s
 <li><p><a class="reference external" href="https://bugs.python.org/issue43118">bpo-43118</a>: Fix a bug in <a class="reference internal" href="../library/inspect.html#inspect.signature" title="inspect.signature"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.signature()</span></code></a> that was causing it to
 fail on some subclasses of classes with a <code class="docutils literal notranslate"><span class="pre">__text_signature__</span></code>
 referencing module globals. Patch by Weipeng Hong.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue26552">bpo-26552</a>: Fixed case where failing <a class="reference internal" href="../library/asyncio-future.html#asyncio.ensure_future" title="asyncio.ensure_future"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.ensure_future()</span></code></a> did not
+close the coroutine. Patch by Kumar Aditya.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue21987">bpo-21987</a>: Fix an issue with <a class="reference internal" href="../library/tarfile.html#tarfile.TarFile.getmember" title="tarfile.TarFile.getmember"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tarfile.TarFile.getmember()</span></code></a> getting a
 directory name with a trailing slash.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46080">bpo-46080</a>: Fix exception in argparse help text generation if a
 <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.BooleanOptionalAction</span></code> argument's default is
 <code class="docutils literal notranslate"><span class="pre">argparse.SUPPRESS</span></code> and it has <code class="docutils literal notranslate"><span class="pre">help</span></code> specified.  Patch by Felix
 Fontein.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45703">bpo-45703</a>: When a namespace package is imported before another module from
+the same namespace is created/installed in a different <a class="reference internal" href="../library/sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>
+location while the program is running, calling the
+<a class="reference internal" href="../library/importlib.html#importlib.invalidate_caches" title="importlib.invalidate_caches"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.invalidate_caches()</span></code></a> function will now also guarantee the
+new module is noticed.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue44791">bpo-44791</a>: Fix substitution of <a class="reference internal" href="../library/typing.html#typing.ParamSpec" title="typing.ParamSpec"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpec</span></code></a> in
+<a class="reference internal" href="../library/typing.html#typing.Concatenate" title="typing.Concatenate"><code class="xref py py-data docutils literal notranslate"><span class="pre">Concatenate</span></code></a> with different parameter expressions.
+Substitution with a list of types returns now a tuple of types.
+Substitution with <code class="docutils literal notranslate"><span class="pre">Concatenate</span></code> returns now a <code class="docutils literal notranslate"><span class="pre">Concatenate</span></code> with
+concatenated lists of arguments.</p></li>
 </ul>
 </section>
 <section id="documentation">
@@ -1091,6 +1106,9 @@ documentation file</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46542">bpo-46542</a>: Fix <code class="docutils literal notranslate"><span class="pre">test_json</span></code> tests checking for <a class="reference internal" href="../library/exceptions.html#RecursionError" title="RecursionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RecursionError</span></code></a>:
+modify these tests to use <code class="docutils literal notranslate"><span class="pre">support.infinite_recursion()</span></code>. Patch by
+Victor Stinner.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue13886">bpo-13886</a>: Skip test_builtin PTY tests on non-ASCII characters if the
 readline module is loaded. The readline module changes input() behavior,
 but test_builtin is not intented to test the readline module. Patch by
@@ -1106,6 +1124,7 @@ German locale.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46513">bpo-46513</a>: <strong class="program">configure</strong> no longer uses <code class="docutils literal notranslate"><span class="pre">AC_C_CHAR_UNSIGNED</span></code>
 macro and <code class="docutils literal notranslate"><span class="pre">pyconfig.h</span></code> no longer defines reserved symbol
 <code class="docutils literal notranslate"><span class="pre">__CHAR_UNSIGNED__</span></code>.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45925">bpo-45925</a>: Update Windows installer to use SQLite 3.37.2.</p></li>
 </ul>
 </section>
 <section id="idle">
@@ -25233,7 +25252,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 1月 27, 2022。
+    最後更新於 1月 31, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

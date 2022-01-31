@@ -408,8 +408,9 @@ buffers of bytes. Applications and libraries should limit <em>password</em> to
 a sensible length (e.g. 1024). <em>salt</em> should be about 16 or more bytes from
 a proper source, e.g. <a class="reference internal" href="os.html#os.urandom" title="os.urandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.urandom()</span></code></a>.</p>
 <p>The number of <em>iterations</em> should be chosen based on the hash algorithm and
-computing power. As of 2013, at least 100,000 iterations of SHA-256 are
-suggested.</p>
+computing power. As of 2022, hundreds of thousands of iterations of SHA-256
+are suggested. For rationale as to why and how to choose what is best for
+your application, read <em>Appendix A.2.2</em> of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf">NIST-SP-800-132</a>.</p>
 <p><em>dklen</em> is the length of the derived key. If <em>dklen</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code> then the
 digest size of the hash algorithm <em>hash_name</em> is used, e.g. 64 for SHA-512.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hashlib</span>
@@ -898,6 +899,8 @@ what that means regarding their use.</p>
 </dd>
 <dt><a class="reference external" href="https://www.ietf.org/rfc/rfc8018.txt">https://www.ietf.org/rfc/rfc8018.txt</a></dt><dd><p>PKCS #5: Password-Based Cryptography Specification Version 2.1</p>
 </dd>
+<dt><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf</a></dt><dd><p>NIST Recommendation for Password-Based Key Derivation.</p>
+</dd>
 </dl>
 </div>
 </section>
@@ -1026,7 +1029,7 @@ what that means regarding their use.</p>
 <br />
     <br />
 
-    最後更新於 1月 27, 2022。
+    最後更新於 1月 31, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
