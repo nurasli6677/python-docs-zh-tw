@@ -401,11 +401,7 @@
 <p><span class="versionmodified added">在 3.1 版本新加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>As a <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> subclass, <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a>
-inherited the capability to remember insertion order.  Math operations
-on <em>Counter</em> objects also preserve order.  Results are ordered
-according to when an element is first encountered in the left operand
-and then by the order encountered in the right operand.</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>作為 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的子類別，<a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 繼承了記憶插入順序的功能。對 <em>Counter</em> 做數學運算後同樣保留順序性，其結果是依照各個元素在運算元左邊出現的時間先後、再按照運算元右邊出現的時間先後來排列。</p>
 </div>
 <p>除了字典的方法外，Counter 物件額外支援三個新方法：</p>
 <dl class="py method">
@@ -493,13 +489,7 @@ and then by the order encountered in the right operand.</p>
 <span class="o">+</span><span class="n">c</span>                              <span class="c1"># remove zero and negative counts</span>
 </pre></div>
 </div>
-<p>Several mathematical operations are provided for combining <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a>
-objects to produce multisets (counters that have counts greater than zero).
-Addition and subtraction combine counters by adding or subtracting the counts
-of corresponding elements.  Intersection and union return the minimum and
-maximum of corresponding counts.  Equality and inclusion compare
-corresponding counts.  Each operation can accept inputs with signed
-counts, but the output will exclude results with counts of zero or less.</p>
+<p>為結合多個 <a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 物件以產生 multiset（多重集合，擁有大於 0 計數元素的計數器），有提供了幾種數學操作。加法和減法是根據各個對應元素分別將 Counter 加上和減去計數，交集和聯集分別回傳各個元素最小和最大計數，相等性與包含性運算則會比較對應的計數。每一個操作都可以接受輸入帶有正負號的計數，但輸出的 Counter 則會將擁有小於或等於 0 計數的元素剔除。</p>
 <div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">+</span> <span class="n">d</span>                       <span class="c1"># add two counters together:  c[x] + d[x]</span>
@@ -1365,7 +1355,7 @@ counts, but the output will exclude results with counts of zero or less.</p>
 <br />
     <br />
 
-    最後更新於 2月 02, 2022。
+    最後更新於 2月 07, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
