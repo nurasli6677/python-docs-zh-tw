@@ -1124,6 +1124,10 @@ documentation file</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46678">bpo-46678</a>: The function <code class="docutils literal notranslate"><span class="pre">make_legacy_pyc</span></code> in
+<code class="docutils literal notranslate"><span class="pre">Lib/test/support/import_helper.py</span></code> no longer fails when
+<code class="docutils literal notranslate"><span class="pre">PYTHONPYCACHEPREFIX</span></code> is set to a directory on a different device from
+where tempfiles are stored.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46616">bpo-46616</a>: Ensures <code class="docutils literal notranslate"><span class="pre">test_importlib.test_windows</span></code> cleans up registry keys
 after completion.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue44359">bpo-44359</a>: test_ftplib now silently ignores socket errors to prevent
@@ -25306,7 +25310,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 08, 2022。
+    最後更新於 2月 09, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
