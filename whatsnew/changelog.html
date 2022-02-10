@@ -1027,6 +1027,8 @@
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46707">bpo-46707</a>: Avoid potential exponential backtracking when producing some
+syntax errors involving lots of brackets. Patch by Pablo Galindo.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue40479">bpo-40479</a>: Add a missing call to <code class="docutils literal notranslate"><span class="pre">va_end()</span></code> in
 <code class="docutils literal notranslate"><span class="pre">Modules/_hashopenssl.c</span></code>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45773">bpo-45773</a>: Remove two invalid &quot;peephole&quot; optimizations from the bytecode
@@ -1060,6 +1062,10 @@ by Pablo Galindo</p></li>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45863">bpo-45863</a>: When the <a class="reference internal" href="../library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> module creates a pax format archive, it
+will put an integer representation of timestamps in the ustar header (if
+possible) for the benefit of older unarchivers, in addition to the
+existing full-precision timestamps in the pax extended header.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46676">bpo-46676</a>: Make <a class="reference internal" href="../library/typing.html#typing.ParamSpec" title="typing.ParamSpec"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.ParamSpec</span></code></a> args and kwargs equal to
 themselves. Patch by Gregory Beauregard.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46655">bpo-46655</a>: In <a class="reference internal" href="../library/typing.html#typing.get_type_hints" title="typing.get_type_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.get_type_hints()</span></code></a>, support evaluating bare
@@ -25310,7 +25316,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 09, 2022。
+    最後更新於 2月 10, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
