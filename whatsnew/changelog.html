@@ -1093,6 +1093,8 @@ class.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46434">bpo-46434</a>: <a class="reference internal" href="../library/pdb.html#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a> now gracefully handles <code class="docutils literal notranslate"><span class="pre">help</span></code> when <code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>
 is missing, for example when run with pregenerated optimized <code class="docutils literal notranslate"><span class="pre">.pyc</span></code>
 files.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46246">bpo-46246</a>: Add missing <code class="docutils literal notranslate"><span class="pre">__slots__</span></code> to
+<code class="docutils literal notranslate"><span class="pre">importlib.metadata.DeprecatedList</span></code>. Patch by Arie Bovenberg.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46266">bpo-46266</a>: Improve day constants in <a class="reference internal" href="../library/calendar.html#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a>.</p>
 <p>Now all constants (<code class="xref py py-obj docutils literal notranslate"><span class="pre">MONDAY</span></code> ... <code class="xref py py-obj docutils literal notranslate"><span class="pre">SUNDAY</span></code>) are documented, tested, and
 added to <code class="docutils literal notranslate"><span class="pre">__all__</span></code>.</p>
@@ -1130,6 +1132,8 @@ documentation file</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46708">bpo-46708</a>: Prevent default asyncio event loop policy modification warning
+after <code class="docutils literal notranslate"><span class="pre">test_asyncio</span></code> execution.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46678">bpo-46678</a>: The function <code class="docutils literal notranslate"><span class="pre">make_legacy_pyc</span></code> in
 <code class="docutils literal notranslate"><span class="pre">Lib/test/support/import_helper.py</span></code> no longer fails when
 <code class="docutils literal notranslate"><span class="pre">PYTHONPYCACHEPREFIX</span></code> is set to a directory on a different device from
@@ -25316,7 +25320,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 10, 2022。
+    最後更新於 2月 11, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
