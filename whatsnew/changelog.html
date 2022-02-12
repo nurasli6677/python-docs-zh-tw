@@ -1031,6 +1031,10 @@
 syntax errors involving lots of brackets. Patch by Pablo Galindo.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue40479">bpo-40479</a>: Add a missing call to <code class="docutils literal notranslate"><span class="pre">va_end()</span></code> in
 <code class="docutils literal notranslate"><span class="pre">Modules/_hashopenssl.c</span></code>.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46615">bpo-46615</a>: When iterating over sets internally in <code class="docutils literal notranslate"><span class="pre">setobject.c</span></code>, acquire
+strong references to the resulting items from the set.  This prevents
+crashes in corner-cases of various set operations where the set gets
+mutated.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45773">bpo-45773</a>: Remove two invalid &quot;peephole&quot; optimizations from the bytecode
 compiler.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46503">bpo-46503</a>: Fix an assert when parsing some invalid N escape sequences in
@@ -1197,6 +1201,8 @@ mean 'close Shell'. If there are no other windows, this also exits IDLE.</p></li
 <section id="c-api">
 <h3>C API<a class="headerlink" href="#c-api" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46433">bpo-46433</a>: The internal function _PyType_GetModuleByDef now correctly
+handles inheritance patterns involving static types.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue14916">bpo-14916</a>: Fixed bug in the tokenizer that prevented
 <code class="docutils literal notranslate"><span class="pre">PyRun_InteractiveOne</span></code> from parsing from the provided FD.</p></li>
 </ul>
@@ -25320,7 +25326,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 11, 2022。
+    最後更新於 2月 12, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
