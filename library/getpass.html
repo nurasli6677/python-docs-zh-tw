@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>getpass --- Portable password input &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getpass --- 可攜式密碼輸入工具 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -127,7 +127,7 @@
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="allos.html" accesskey="U">Generic Operating System Services</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code> --- Portable password input</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code> --- 可攜式密碼輸入工具</a></li>
                 <li class="right">
                     
 
@@ -151,46 +151,33 @@
           <div class="body" role="main">
             
   <section id="module-getpass">
-<span id="getpass-portable-password-input"></span><h1><a class="reference internal" href="#module-getpass" title="getpass: Portable reading of passwords and retrieval of the userid."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code></a> --- Portable password input<a class="headerlink" href="#module-getpass" title="本標題的永久連結">¶</a></h1>
+<span id="getpass-portable-password-input"></span><h1><a class="reference internal" href="#module-getpass" title="getpass: Portable reading of passwords and retrieval of the userid."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code></a> --- 可攜式密碼輸入工具<a class="headerlink" href="#module-getpass" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/getpass.py">Lib/getpass.py</a></p>
 <hr class="docutils" />
-<p>The <a class="reference internal" href="#module-getpass" title="getpass: Portable reading of passwords and retrieval of the userid."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code></a> module provides two functions:</p>
+<p><a class="reference internal" href="#module-getpass" title="getpass: Portable reading of passwords and retrieval of the userid."><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code></a> 模組 (module) 提供了兩個函式：</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="getpass.getpass">
 <span class="sig-prename descclassname"><span class="pre">getpass.</span></span><span class="sig-name descname"><span class="pre">getpass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Password:</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getpass.getpass" title="本定義的永久連結">¶</a></dt>
-<dd><p>Prompt the user for a password without echoing.  The user is prompted using
-the string <em>prompt</em>, which defaults to <code class="docutils literal notranslate"><span class="pre">'Password:</span> <span class="pre">'</span></code>.  On Unix, the
-prompt is written to the file-like object <em>stream</em> using the replace error
-handler if needed.  <em>stream</em> defaults to the controlling terminal
-(<code class="file docutils literal notranslate"><span class="pre">/dev/tty</span></code>) or if that is unavailable to <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> (this
-argument is ignored on Windows).</p>
-<p>If echo free input is unavailable getpass() falls back to printing
-a warning message to <em>stream</em> and reading from <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code> and
-issuing a <a class="reference internal" href="#getpass.GetPassWarning" title="getpass.GetPassWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GetPassWarning</span></code></a>.</p>
+<dd><p>提示使用者輸入一個密碼且不會有回音 (echo)。使用者會看到字串 <em>prompt</em> 作為提示，其預設值為 <code class="docutils literal notranslate"><span class="pre">'Password:</span> <span class="pre">'</span></code>。在 Unix 上，如有必要的話會使用替換錯誤處理函式 (replace error handler) 寫入到類檔案物件 (file-like object) <em>stream</em>中。<em>stream</em> 預設為主控終端機 (controlling terminal) (<code class="file docutils literal notranslate"><span class="pre">/dev/tty</span></code>)，如果不可用則為 <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> (此引數在 Windows 上會被忽略)。</p>
+<p>如果無回音輸入 (echo-free input) 無法使用則 getpass() 將回退為印出一條警告訊息到 <em>stream</em>，並從 <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code> 讀取且同時發出 <a class="reference internal" href="#getpass.GetPassWarning" title="getpass.GetPassWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">GetPassWarning</span></code></a>。</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>If you call getpass from within IDLE, the input may be done in the
-terminal you launched IDLE from rather than the idle window itself.</p>
+<p>如果你從 IDLE 內部呼叫 getpass，輸入可能會在你啟動 IDLE 的終端機中完成，而非在 IDLE 視窗中。</p>
 </div>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="getpass.GetPassWarning">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">getpass.</span></span><span class="sig-name descname"><span class="pre">GetPassWarning</span></span><a class="headerlink" href="#getpass.GetPassWarning" title="本定義的永久連結">¶</a></dt>
-<dd><p>A <a class="reference internal" href="exceptions.html#UserWarning" title="UserWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UserWarning</span></code></a> subclass issued when password input may be echoed.</p>
+<dd><p>當密碼輸入可能被回音時會發出的 <a class="reference internal" href="exceptions.html#UserWarning" title="UserWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UserWarning</span></code></a> 子類別。</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="getpass.getuser">
 <span class="sig-prename descclassname"><span class="pre">getpass.</span></span><span class="sig-name descname"><span class="pre">getuser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getpass.getuser" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return the &quot;login name&quot; of the user.</p>
-<p>This function checks the environment variables <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LOGNAME</span></code>,
-<span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USER</span></code>, <span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LNAME</span></code> and <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USERNAME</span></code>, in order, and
-returns the value of the first one which is set to a non-empty string.  If
-none are set, the login name from the password database is returned on
-systems which support the <a class="reference internal" href="pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a> module, otherwise, an exception is
-raised.</p>
-<p>In general, this function should be preferred over <a class="reference internal" href="os.html#os.getlogin" title="os.getlogin"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getlogin()</span></code></a>.</p>
+<dd><p>回傳使用者的&quot;登入名稱&quot;。</p>
+<p>此函式會按順序檢查環境變數 <span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LOGNAME</span></code>、<span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USER</span></code>、<span class="target" id="index-10"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LNAME</span></code> 和 <span class="target" id="index-11"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USERNAME</span></code>，並回傳其中第一個被設定成非空字串的值。如果均未設定，則在支援 <a class="reference internal" href="pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code></a> 模組的系統上將會回傳來自密碼資料庫的登入名稱，否則將引發一個例外。</p>
+<p>大部分情況下，此函式應該要比 <a class="reference internal" href="os.html#os.getlogin" title="os.getlogin"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getlogin()</span></code></a> 優先使用。</p>
 </dd></dl>
 
 </section>
@@ -258,7 +245,7 @@ raised.</p>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="allos.html" >Generic Operating System Services</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code> --- Portable password input</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">getpass</span></code> --- 可攜式密碼輸入工具</a></li>
                 <li class="right">
                     
 
