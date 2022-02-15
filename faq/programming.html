@@ -1866,7 +1866,7 @@ correctly using identity tests:</p>
 for <code class="docutils literal notranslate"><span class="pre">None</span></code>.  This reads like plain English in code and avoids confusion with
 other objects that may have boolean values that evaluate to false.</p>
 <p>2) Detecting optional arguments can be tricky when <code class="docutils literal notranslate"><span class="pre">None</span></code> is a valid input
-value.  In those situations, you can create an singleton sentinel object
+value.  In those situations, you can create a singleton sentinel object
 guaranteed to be distinct from other objects.  For example, here is how
 to implement a method that behaves like <a class="reference internal" href="../library/stdtypes.html#dict.pop" title="dict.pop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.pop()</span></code></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">_sentinel</span> <span class="o">=</span> <span class="nb">object</span><span class="p">()</span>
@@ -1945,7 +1945,7 @@ level.</p>
 <p>The <em>cached_property</em> approach only works with methods that do not take
 any arguments.  It does not create a reference to the instance.  The
 cached method result will be kept only as long as the instance is alive.</p>
-<p>The advantage is that when an instance is not longer used, the cached
+<p>The advantage is that when an instance is no longer used, the cached
 method result will be released right away.  The disadvantage is that if
 instances accumulate, so too will the accumulated method results.  They
 can grow without bound.</p>
@@ -2277,7 +2277,7 @@ class objects:</p>
 <br />
     <br />
 
-    最後更新於 2月 14, 2022。
+    最後更新於 2月 15, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

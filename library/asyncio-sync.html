@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Synchronization Primitives &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同步化原始物件 (Synchronization Primitives) &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Synchronization Primitives</a><ul>
+<li><a class="reference internal" href="#">同步化原始物件 (Synchronization Primitives)</a><ul>
 <li><a class="reference internal" href="#lock">Lock</a></li>
 <li><a class="reference internal" href="#event">Event</a></li>
 <li><a class="reference internal" href="#condition">Condition</a></li>
@@ -142,7 +142,7 @@
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Synchronization Primitives</a></li>
+        <li class="nav-item nav-item-this"><a href="">同步化原始物件 (Synchronization Primitives)</a></li>
                 <li class="right">
                     
 
@@ -166,20 +166,15 @@
           <div class="body" role="main">
             
   <section id="synchronization-primitives">
-<span id="asyncio-sync"></span><h1>Synchronization Primitives<a class="headerlink" href="#synchronization-primitives" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-sync"></span><h1>同步化原始物件 (Synchronization Primitives)<a class="headerlink" href="#synchronization-primitives" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/locks.py">Lib/asyncio/locks.py</a></p>
 <hr class="docutils" />
-<p>asyncio synchronization primitives are designed to be similar to
-those of the <a class="reference internal" href="threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> module with two important caveats:</p>
+<p>asyncio 的同步化原始物件被設計成和那些 <a class="reference internal" href="threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> 模組 (module) 中的同名物件相似，但有兩個重要的限制條件：</p>
 <ul class="simple">
-<li><p>asyncio primitives are not thread-safe, therefore they should not
-be used for OS thread synchronization (use <a class="reference internal" href="threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> for
-that);</p></li>
-<li><p>methods of these synchronization primitives do not accept the <em>timeout</em>
-argument; use the <a class="reference internal" href="asyncio-task.html#asyncio.wait_for" title="asyncio.wait_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.wait_for()</span></code></a> function to perform
-operations with timeouts.</p></li>
+<li><p>asyncio 原始物件並不支援執行緒安全 (thread-safe)，因此他們不可被用於 OS 執行緒同步化（請改用 <a class="reference internal" href="threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a>）；</p></li>
+<li><p>這些同步化原始物件的方法 (method) 並不接受 <em>timeout</em> 引數；要達成有超時 (timeout) 設定的操作請改用 <a class="reference internal" href="asyncio-task.html#asyncio.wait_for" title="asyncio.wait_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.wait_for()</span></code></a> 函式。</p></li>
 </ul>
-<p>asyncio has the following basic synchronization primitives:</p>
+<p>asyncio 有以下基礎同步化原始物件：</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a></p></li>
 <li><p><a class="reference internal" href="#asyncio.Event" title="asyncio.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p></li>
@@ -193,11 +188,9 @@ operations with timeouts.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Lock">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Lock</span></span><a class="headerlink" href="#asyncio.Lock" title="本定義的永久連結">¶</a></dt>
-<dd><p>Implements a mutex lock for asyncio tasks.  Not thread-safe.</p>
-<p>An asyncio lock can be used to guarantee exclusive access to a
-shared resource.</p>
-<p>The preferred way to use a Lock is an <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a>
-statement:</p>
+<dd><p>實作了一個給 asyncio 任務 (task) 用的互斥鎖 (mutex lock)。不支援執行緒安全。</p>
+<p>一個 asyncio 的鎖可以用來確保一個共享資源的存取權被獨佔。</p>
+<p>使用 Lock 的推薦方式是透過 <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> 陳述式：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">lock</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
 
 <span class="c1"># ... later</span>
@@ -205,7 +198,7 @@ statement:</p>
     <span class="c1"># access shared state</span>
 </pre></div>
 </div>
-<p>which is equivalent to:</p>
+<p>這等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">lock</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
 
 <span class="c1"># ... later</span>
@@ -217,36 +210,29 @@ statement:</p>
 </pre></div>
 </div>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This class has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Lock.acquire">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">acquire</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Lock.acquire" title="本定義的永久連結">¶</a></dt>
-<dd><p>Acquire the lock.</p>
-<p>This method waits until the lock is <em>unlocked</em>, sets it to
-<em>locked</em> and returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>When more than one coroutine is blocked in <a class="reference internal" href="#asyncio.Lock.acquire" title="asyncio.Lock.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a>
-waiting for the lock to be unlocked, only one coroutine
-eventually proceeds.</p>
-<p>Acquiring a lock is <em>fair</em>: the coroutine that proceeds will be
-the first coroutine that started waiting on the lock.</p>
+<dd><p>獲得鎖。</p>
+<p>此方法會持續等待直到鎖的狀態成為 <em>unlocked</em>，並將其設置為 <em>locked</em> 和回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<p>當多於一個的協程 (coroutine) 在 <a class="reference internal" href="#asyncio.Lock.acquire" title="asyncio.Lock.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> 中等待解鎖而被阻塞，最終只會有其中的一個被處理。</p>
+<p>鎖的獲取方式是<em>公平</em>的：被處理的協程會是最早開始等待解鎖的那一個。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Lock.release">
 <span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Lock.release" title="本定義的永久連結">¶</a></dt>
-<dd><p>Release the lock.</p>
-<p>When the lock is <em>locked</em>, reset it to <em>unlocked</em> and return.</p>
-<p>If the lock is <em>unlocked</em>, a <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> is raised.</p>
+<dd><p>釋放鎖。</p>
+<p>如果鎖的狀態為 <em>locked</em> 則將其重置為 <em>unlocked</em> 並回傳。</p>
+<p>如果鎖的狀態為 <em>unlocked</em> 則 <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> 會被引發。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Lock.locked">
 <span class="sig-name descname"><span class="pre">locked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Lock.locked" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the lock is <em>locked</em>.</p>
+<dd><p>如果鎖的狀態為 <em>locked</em> 則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 </dd></dl>
@@ -257,18 +243,11 @@ the first coroutine that started waiting on the lock.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Event">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><a class="headerlink" href="#asyncio.Event" title="本定義的永久連結">¶</a></dt>
-<dd><p>An event object.  Not thread-safe.</p>
-<p>An asyncio event can be used to notify multiple asyncio tasks
-that some event has happened.</p>
-<p>An Event object manages an internal flag that can be set to <em>true</em>
-with the <a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a> method and reset to <em>false</em> with the
-<a class="reference internal" href="#asyncio.Event.clear" title="asyncio.Event.clear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code></a> method.  The <a class="reference internal" href="#asyncio.Event.wait" title="asyncio.Event.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> method blocks until the
-flag is set to <em>true</em>.  The flag is set to <em>false</em> initially.</p>
+<dd><p>一個事件 (event) 物件。不支援執行緒安全。</p>
+<p>一個 asyncio 事件可以被用於通知多個有發生某些事件於其中的 asyncio 任務。</p>
+<p>一個 Event 物件會管理一個內部旗標 (flag)，它可以透過 <a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a> 方法來被設為 <em>true</em> 並透過 <a class="reference internal" href="#asyncio.Event.clear" title="asyncio.Event.clear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code></a> 方法來重置為 <em>false</em>。<a class="reference internal" href="#asyncio.Event.wait" title="asyncio.Event.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> 方法會被阻塞 (block) 直到該旗標被設為 <em>true</em>。該旗標初始設置為 <em>false</em>。</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This class has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
 </div>
 <p id="asyncio-example-sync-event">範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">waiter</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
@@ -296,31 +275,28 @@ for more information.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Event.wait">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Event.wait" title="本定義的永久連結">¶</a></dt>
-<dd><p>Wait until the event is set.</p>
-<p>If the event is set, return <code class="docutils literal notranslate"><span class="pre">True</span></code> immediately.
-Otherwise block until another task calls <a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a>.</p>
+<dd><p>持續等待直到事件被設置。</p>
+<p>如果事件有被設置則立刻回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。否則持續阻塞直到另一個任務呼叫 <a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Event.set">
 <span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Event.set" title="本定義的永久連結">¶</a></dt>
-<dd><p>Set the event.</p>
-<p>All tasks waiting for event to be set will be immediately
-awakened.</p>
+<dd><p>設置事件。</p>
+<p>所有正在等待事件被設置的任務會立即被喚醒。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Event.clear">
 <span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Event.clear" title="本定義的永久連結">¶</a></dt>
-<dd><p>Clear (unset) the event.</p>
-<p>Tasks awaiting on <a class="reference internal" href="#asyncio.Event.wait" title="asyncio.Event.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> will now block until the
-<a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a> method is called again.</p>
+<dd><p>清除（還原）事件。</p>
+<p>正透過 <a class="reference internal" href="#asyncio.Event.wait" title="asyncio.Event.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> 等待的 Tasks 現在會持續阻塞直到 <a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a> 方法再次被呼叫。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Event.is_set">
 <span class="sig-name descname"><span class="pre">is_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Event.is_set" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the event is set.</p>
+<dd><p>如果事件有被設置則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 </dd></dl>
@@ -331,26 +307,14 @@ awakened.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Condition">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition" title="本定義的永久連結">¶</a></dt>
-<dd><p>A Condition object.  Not thread-safe.</p>
-<p>An asyncio condition primitive can be used by a task to wait for
-some event to happen and then get exclusive access to a shared
-resource.</p>
-<p>In essence, a Condition object combines the functionality
-of an <a class="reference internal" href="#asyncio.Event" title="asyncio.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> and a <a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a>.  It is possible to have
-multiple Condition objects share one Lock, which allows coordinating
-exclusive access to a shared resource between different tasks
-interested in particular states of that shared resource.</p>
-<p>The optional <em>lock</em> argument must be a <a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a> object or
-<code class="docutils literal notranslate"><span class="pre">None</span></code>.  In the latter case a new Lock object is created
-automatically.</p>
+<dd><p>一個條件 (codition) 物件。不支援執行緒安全。</p>
+<p>一個 asyncio 條件原始物件可以被任務用來等待某事件發生，並獲得一個共享資源的獨佔存取權。</p>
+<p>本質上，一個 Condition 物件會結合 <a class="reference internal" href="#asyncio.Event" title="asyncio.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> 和 <a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a> 的功能。多個 Condition 物件共享一個 Lock 是有可能發生的，這能夠協調關注同一共享資源的不同狀態以獲取其獨佔存取權的多個任務。</p>
+<p>可選的 <em>lock</em> 引數必須是一個 <a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a> 物件或者為 <code class="docutils literal notranslate"><span class="pre">None</span></code>。如為後者則一個新的 Lock 物件會被自動建立。</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This class has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
 </div>
-<p>The preferred way to use a Condition is an <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a>
-statement:</p>
+<p>使用 Condition 的推薦方式是透過 <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> 陳述式：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cond</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Condition</span><span class="p">()</span>
 
 <span class="c1"># ... later</span>
@@ -358,7 +322,7 @@ statement:</p>
     <span class="k">await</span> <span class="n">cond</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>which is equivalent to:</p>
+<p>這等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cond</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Condition</span><span class="p">()</span>
 
 <span class="c1"># ... later</span>
@@ -372,65 +336,51 @@ statement:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.acquire">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">acquire</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.acquire" title="本定義的永久連結">¶</a></dt>
-<dd><p>Acquire the underlying lock.</p>
-<p>This method waits until the underlying lock is <em>unlocked</em>,
-sets it to <em>locked</em> and returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dd><p>獲取底層的鎖。</p>
+<p>此方法會持續等待直到底層的鎖為 <em>unlocked</em>，並將其設為 <em>locked</em> 並回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.notify">
 <span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.notify" title="本定義的永久連結">¶</a></dt>
-<dd><p>Wake up at most <em>n</em> tasks (1 by default) waiting on this
-condition.  The method is no-op if no tasks are waiting.</p>
-<p>The lock must be acquired before this method is called and
-released shortly after.  If called with an <em>unlocked</em> lock
-a <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> error is raised.</p>
+<dd><p>喚醒至多 <em>n</em> 個正在等待此條件的任務（預設為 1），如果沒有正在等待的任務則此方法為空操作 (no-op)。</p>
+<p>在此方法被呼叫前必須先獲得鎖，並在之後立刻將其釋放。如果呼叫於一個 <em>unlocked</em> 的鎖則 <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> 錯誤會被引發。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.locked">
 <span class="sig-name descname"><span class="pre">locked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.locked" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the underlying lock is acquired.</p>
+<dd><p>如果已獲取底層的鎖則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.notify_all">
 <span class="sig-name descname"><span class="pre">notify_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.notify_all" title="本定義的永久連結">¶</a></dt>
-<dd><p>Wake up all tasks waiting on this condition.</p>
-<p>This method acts like <a class="reference internal" href="#asyncio.Condition.notify" title="asyncio.Condition.notify"><code class="xref py py-meth docutils literal notranslate"><span class="pre">notify()</span></code></a>, but wakes up all waiting
-tasks.</p>
-<p>The lock must be acquired before this method is called and
-released shortly after.  If called with an <em>unlocked</em> lock
-a <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> error is raised.</p>
+<dd><p>喚醒所有正在等待此條件的任務。</p>
+<p>這個方法的行為就像 <a class="reference internal" href="#asyncio.Condition.notify" title="asyncio.Condition.notify"><code class="xref py py-meth docutils literal notranslate"><span class="pre">notify()</span></code></a>，但會喚醒所有正在等待的任務。</p>
+<p>在此方法被呼叫前必須先獲得鎖，並在之後立刻將其釋放。如果呼叫於一個 <em>unlocked</em> 的鎖則 <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> 錯誤會被引發。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.release">
 <span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.release" title="本定義的永久連結">¶</a></dt>
-<dd><p>Release the underlying lock.</p>
-<p>When invoked on an unlocked lock, a <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> is
-raised.</p>
+<dd><p>釋放底層的鎖。</p>
+<p>當調用於一個未被解開的鎖之上時，會引發一個 <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.wait">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.wait" title="本定義的永久連結">¶</a></dt>
-<dd><p>Wait until notified.</p>
-<p>If the calling task has not acquired the lock when this method is
-called, a <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> is raised.</p>
-<p>This method releases the underlying lock, and then blocks until
-it is awakened by a <a class="reference internal" href="#asyncio.Condition.notify" title="asyncio.Condition.notify"><code class="xref py py-meth docutils literal notranslate"><span class="pre">notify()</span></code></a> or <a class="reference internal" href="#asyncio.Condition.notify_all" title="asyncio.Condition.notify_all"><code class="xref py py-meth docutils literal notranslate"><span class="pre">notify_all()</span></code></a> call.
-Once awakened, the Condition re-acquires its lock and this method
-returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dd><p>持續等待直到被通知 (notify)。</p>
+<p>當此方法被呼叫時，如果呼叫它的任務還沒有獲取鎖的話，<a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> 會被引發。</p>
+<p>此方法會釋放底層的鎖，然後持續阻塞直到被 <a class="reference internal" href="#asyncio.Condition.notify" title="asyncio.Condition.notify"><code class="xref py py-meth docutils literal notranslate"><span class="pre">notify()</span></code></a> 或 <a class="reference internal" href="#asyncio.Condition.notify_all" title="asyncio.Condition.notify_all"><code class="xref py py-meth docutils literal notranslate"><span class="pre">notify_all()</span></code></a> 的呼叫所喚醒。一但被喚醒，Condition 會重新獲取該鎖且此方法會回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Condition.wait_for">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition.wait_for" title="本定義的永久連結">¶</a></dt>
-<dd><p>Wait until a predicate becomes <em>true</em>.</p>
-<p>The predicate must be a callable which result will be
-interpreted as a boolean value.  The final value is the
-return value.</p>
+<dd><p>持續等待直到謂語 (predicate) 成為 <em>true</em>。</p>
+<p>謂語必須是一個結果可被直譯為一個 boolean 值的可呼叫物件 (callable)。最終值為回傳值。</p>
 </dd></dl>
 
 </dd></dl>
@@ -441,23 +391,13 @@ return value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Semaphore">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Semaphore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Semaphore" title="本定義的永久連結">¶</a></dt>
-<dd><p>A Semaphore object.  Not thread-safe.</p>
-<p>A semaphore manages an internal counter which is decremented by each
-<a class="reference internal" href="#asyncio.Semaphore.acquire" title="asyncio.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> call and incremented by each <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> call.
-The counter can never go below zero; when <a class="reference internal" href="#asyncio.Semaphore.acquire" title="asyncio.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> finds
-that it is zero, it blocks, waiting until some task calls
-<a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a>.</p>
-<p>The optional <em>value</em> argument gives the initial value for the
-internal counter (<code class="docutils literal notranslate"><span class="pre">1</span></code> by default). If the given value is
-less than <code class="docutils literal notranslate"><span class="pre">0</span></code> a <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> is raised.</p>
+<dd><p>一個旗號 (semaphore) 物件。不支援執行緒安全。</p>
+<p>一個旗號物件會管理一個內部計數器，會在每次呼叫 <a class="reference internal" href="#asyncio.Semaphore.acquire" title="asyncio.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> 時減少一、每次呼叫 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> 時增加一。此計數器永遠不會少於零；當 <a class="reference internal" href="#asyncio.Semaphore.acquire" title="asyncio.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> 發現它是零時，它會持續阻塞並等待某任務呼叫 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a>。</p>
+<p>可選的 <em>value</em> 引數給定了內部計數器的初始值（預設為 <code class="docutils literal notranslate"><span class="pre">1</span></code>）。如給定的值少於 <code class="docutils literal notranslate"><span class="pre">0</span></code> 則 <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 會被引發。</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This class has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
 </div>
-<p>The preferred way to use a Semaphore is an <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a>
-statement:</p>
+<p>使用 Semaphore 的推薦方式是透過 <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> 陳述式：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">sem</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># ... later</span>
@@ -465,7 +405,7 @@ statement:</p>
     <span class="c1"># work with shared resource</span>
 </pre></div>
 </div>
-<p>which is equivalent to:</p>
+<p>這等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">sem</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># ... later</span>
@@ -479,25 +419,21 @@ statement:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Semaphore.acquire">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">acquire</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Semaphore.acquire" title="本定義的永久連結">¶</a></dt>
-<dd><p>Acquire a semaphore.</p>
-<p>If the internal counter is greater than zero, decrement
-it by one and return <code class="docutils literal notranslate"><span class="pre">True</span></code> immediately.  If it is zero, wait
-until a <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> is called and return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dd><p>獲取一個旗號。</p>
+<p>如果內部計數器大於零，將其減一並立刻回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。如果為零，則持續等待直到 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> 被呼叫，並回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Semaphore.locked">
 <span class="sig-name descname"><span class="pre">locked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Semaphore.locked" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if semaphore can not be acquired immediately.</p>
+<dd><p>如果旗號無法立即被取得則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Semaphore.release">
 <span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Semaphore.release" title="本定義的永久連結">¶</a></dt>
-<dd><p>Release a semaphore, incrementing the internal counter by one.
-Can wake up a task waiting to acquire the semaphore.</p>
-<p>Unlike <a class="reference internal" href="#asyncio.BoundedSemaphore" title="asyncio.BoundedSemaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BoundedSemaphore</span></code></a>, <a class="reference internal" href="#asyncio.Semaphore" title="asyncio.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> allows
-making more <code class="docutils literal notranslate"><span class="pre">release()</span></code> calls than <code class="docutils literal notranslate"><span class="pre">acquire()</span></code> calls.</p>
+<dd><p>釋放一個旗號，並為其內部的計數器數值增加一。可以把一個正在等待獲取旗號的任務叫醒。</p>
+<p>和 <a class="reference internal" href="#asyncio.BoundedSemaphore" title="asyncio.BoundedSemaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BoundedSemaphore</span></code></a> 不同，<a class="reference internal" href="#asyncio.Semaphore" title="asyncio.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> 允許 <code class="docutils literal notranslate"><span class="pre">release()</span></code> 的呼叫次數多於 <code class="docutils literal notranslate"><span class="pre">acquire()</span></code>。</p>
 </dd></dl>
 
 </dd></dl>
@@ -508,23 +444,16 @@ making more <code class="docutils literal notranslate"><span class="pre">release
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.BoundedSemaphore">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">BoundedSemaphore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.BoundedSemaphore" title="本定義的永久連結">¶</a></dt>
-<dd><p>A bounded semaphore object.  Not thread-safe.</p>
-<p>Bounded Semaphore is a version of <a class="reference internal" href="#asyncio.Semaphore" title="asyncio.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> that raises
-a <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> in <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> if it
-increases the internal counter above the initial <em>value</em>.</p>
+<dd><p>一個有界的旗號物件。不支援執行緒安全。</p>
+<p>Bounded Semaphore 是 <a class="reference internal" href="#asyncio.Semaphore" title="asyncio.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> 的另一版本，如果其內部的計數器數值增加至大於初始 <em>value</em> 值的話，<a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 會在 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> 時被引發。</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This class has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
 </div>
 </dd></dl>
 
 <hr class="docutils" />
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>Acquiring a lock using <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">lock</span></code> or <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span> <span class="pre">lock</span></code> and/or
-<a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement (<code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">await</span> <span class="pre">lock</span></code>, <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">(yield</span> <span class="pre">from</span>
-<span class="pre">lock)</span></code>) was removed.  Use <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span> <span class="pre">lock</span></code> instead.</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>透過 <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">lock</span></code> 或 <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span> <span class="pre">lock</span></code> 和/或 <a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 陳述式 (<code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">await</span> <span class="pre">lock</span></code>, <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">(yield</span> <span class="pre">from</span> <span class="pre">lock)</span></code>) 來獲取鎖的方式已被移除。請改用 <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span> <span class="pre">lock</span></code>。</p>
 </div>
 </section>
 </section>
@@ -539,7 +468,7 @@ for more information.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Synchronization Primitives</a><ul>
+<li><a class="reference internal" href="#">同步化原始物件 (Synchronization Primitives)</a><ul>
 <li><a class="reference internal" href="#lock">Lock</a></li>
 <li><a class="reference internal" href="#event">Event</a></li>
 <li><a class="reference internal" href="#condition">Condition</a></li>
@@ -607,7 +536,7 @@ for more information.</p>
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Synchronization Primitives</a></li>
+        <li class="nav-item nav-item-this"><a href="">同步化原始物件 (Synchronization Primitives)</a></li>
                 <li class="right">
                     
 
@@ -639,7 +568,7 @@ for more information.</p>
 <br />
     <br />
 
-    最後更新於 2月 14, 2022。
+    最後更新於 2月 15, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
