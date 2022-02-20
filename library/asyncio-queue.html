@@ -189,6 +189,9 @@ until an item is removed by <a class="reference internal" href="#asyncio.Queue.g
 <p>Unlike the standard library threading <a class="reference internal" href="queue.html#module-queue" title="queue: A synchronized queue class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code></a>, the size of
 the queue is always known and can be returned by calling the
 <a class="reference internal" href="#asyncio.Queue.qsize" title="asyncio.Queue.qsize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">qsize()</span></code></a> method.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>Removed the <em>loop</em> parameter.</p>
+</div>
 <p>This class is <a class="reference internal" href="asyncio-dev.html#asyncio-multithreading"><span class="std std-ref">not thread safe</span></a>.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="asyncio.Queue.maxsize">
@@ -270,12 +273,6 @@ into the queue).</p>
 items placed in the queue.</p>
 </dd></dl>
 
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
-</div>
 </dd></dl>
 
 </section>
@@ -490,7 +487,7 @@ concurrent tasks:</p>
 <br />
     <br />
 
-    最後更新於 2月 16, 2022。
+    最後更新於 2月 20, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

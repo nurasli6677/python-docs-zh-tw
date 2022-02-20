@@ -442,7 +442,7 @@ a task disappearing mid execution.</p>
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">name</span></code> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>name</em> 參數。</p>
 </div>
 </dd></dl>
 
@@ -483,11 +483,8 @@ for 5 seconds:</p>
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">display_date</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 </dd></dl>
 
@@ -517,11 +514,8 @@ treated as if it raised <a class="reference internal" href="asyncio-exceptions.h
 call is <strong>not</strong> cancelled in this case.  This is to prevent the
 cancellation of one submitted Task/Future to cause other
 Tasks/Futures to be cancelled.</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <p id="asyncio-example-gather">範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -573,11 +567,8 @@ gather won't cancel any other awaitables.</p>
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>If the <em>gather</em> itself is cancelled, the cancellation is
 propagated regardless of <em>return_exceptions</em>.</p>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.10 版本開始棄用: </span>Deprecation warning is emitted if no positional arguments are provided
@@ -619,11 +610,8 @@ clause, as follows:</p>
     <span class="n">res</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.10 版本開始棄用: </span>Deprecation warning is emitted if <em>aw</em> is not Future-like object
@@ -651,11 +639,8 @@ wrap it in <a class="reference internal" href="#asyncio.shield" title="asyncio.s
 so the total wait time may exceed the <em>timeout</em>. If an exception
 happens during cancellation, it is propagated.</p>
 <p>If the wait is cancelled, the future <em>aw</em> is also cancelled.</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <p id="asyncio-example-waitfor">範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">eternity</span><span class="p">():</span>
@@ -682,11 +667,8 @@ for more information.</p>
 for <em>aw</em> to be cancelled.  Previously, it raised
 <a class="reference internal" href="asyncio-exceptions.html#asyncio.TimeoutError" title="asyncio.TimeoutError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a> immediately.</p>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 </dd></dl>
 
@@ -748,11 +730,8 @@ scheduled as a Task.  Passing coroutines objects to
 <code class="docutils literal notranslate"><span class="pre">wait()</span></code> directly is deprecated as it leads to
 <a class="reference internal" href="#asyncio-example-wait-coroutine"><span class="std std-ref">confusing behavior</span></a>.</p>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <div class="admonition note" id="asyncio-example-wait-coroutine">
 <p class="admonition-title">備註</p>
@@ -782,14 +761,11 @@ sets.  Therefore the following code won't work as expected:</p>
 </div>
 </div>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
-</div>
-<div class="deprecated-removed">
 <p><span class="versionmodified">Deprecated since version 3.8, will be removed in version 3.11: </span>Passing coroutine objects to <code class="docutils literal notranslate"><span class="pre">wait()</span></code> directly is
 deprecated.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 </dd></dl>
 
@@ -802,11 +778,8 @@ Each coroutine returned can be awaited to get the earliest next
 result from the iterable of the remaining awaitables.</p>
 <p>Raises <a class="reference internal" href="asyncio-exceptions.html#asyncio.TimeoutError" title="asyncio.TimeoutError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a> if the timeout occurs before
 all Futures are done.</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <p>範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">coro</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">aws</span><span class="p">):</span>
@@ -814,11 +787,8 @@ for more information.</p>
     <span class="c1"># ...</span>
 </pre></div>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <em>loop</em> 參數。</p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.10 版本開始棄用: </span>Deprecation warning is emitted if not all awaitable objects in the <em>aws</em>
@@ -994,10 +964,7 @@ coroutine in the copied context.</p>
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>Added support for the <a class="reference internal" href="contextvars.html#module-contextvars" title="contextvars: Context Variables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code></a> module.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">name</span></code> 參數。</p>
-</div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><em>loop</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>name</em> 參數。</p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.10 版本開始棄用: </span>Deprecation warning is emitted if <em>loop</em> is not specified
@@ -1017,7 +984,7 @@ not guarantee that the Task will be cancelled, although
 suppressing cancellation completely is not common and is actively
 discouraged.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>msg</em> 參數。</p>
 </div>
 <p id="asyncio-example-task-cancel">The following example illustrates how coroutines can intercept
 the cancellation request:</p>
@@ -1359,7 +1326,7 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
 <br />
     <br />
 
-    最後更新於 2月 16, 2022。
+    最後更新於 2月 20, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

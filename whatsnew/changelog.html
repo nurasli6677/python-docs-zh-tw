@@ -1027,6 +1027,11 @@
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46762">bpo-46762</a>: Fix an assert failure in debug builds when a '&lt;', '&gt;', or '='
+is the last character in an f-string that's missing a closing right brace.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46724">bpo-46724</a>: Make sure that all backwards jumps use the <code class="docutils literal notranslate"><span class="pre">JUMP_ABSOLUTE</span></code>
+instruction, rather than <code class="docutils literal notranslate"><span class="pre">JUMP_FORWARD</span></code> with an argument of
+<code class="docutils literal notranslate"><span class="pre">(2**32)+offset</span></code>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46707">bpo-46707</a>: Avoid potential exponential backtracking when producing some
 syntax errors involving lots of brackets. Patch by Pablo Galindo.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue40479">bpo-40479</a>: Add a missing call to <code class="docutils literal notranslate"><span class="pre">va_end()</span></code> in
@@ -1066,6 +1071,8 @@ by Pablo Galindo</p></li>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46784">bpo-46784</a>: Fix libexpat symbols collisions with user dynamically loaded or
+statically linked libexpat in embedded Python.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45863">bpo-45863</a>: When the <a class="reference internal" href="../library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> module creates a pax format archive, it
 will put an integer representation of timestamps in the ustar header (if
 possible) for the benefit of older unarchivers, in addition to the
@@ -1082,6 +1089,7 @@ the Python implementation does.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46521">bpo-46521</a>: Fix a bug in the <a class="reference internal" href="../library/codeop.html#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> module that was incorrectly
 identifying invalid code involving string quotes as valid code.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46591">bpo-46591</a>: Make the IDLE doc URL on the About IDLE dialog clickable.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46400">bpo-46400</a>: expat: Update libexpat from 2.4.1 to 2.4.4</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46487">bpo-46487</a>: Add the <code class="docutils literal notranslate"><span class="pre">get_write_buffer_limits</span></code> method to
 <code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.transports.WriteTransport</span></code> and to the SSL transport.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45173">bpo-45173</a>: Note the configparser deprecations will be removed in Python
@@ -1105,6 +1113,10 @@ class.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46434">bpo-46434</a>: <a class="reference internal" href="../library/pdb.html#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a> now gracefully handles <code class="docutils literal notranslate"><span class="pre">help</span></code> when <code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>
 is missing, for example when run with pregenerated optimized <code class="docutils literal notranslate"><span class="pre">.pyc</span></code>
 files.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46333">bpo-46333</a>: The <code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">__hash__()</span></code> methods of
+<a class="reference internal" href="../library/typing.html#typing.ForwardRef" title="typing.ForwardRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef</span></code></a> now honor the <code class="docutils literal notranslate"><span class="pre">module</span></code> parameter of
+<a class="reference internal" href="../library/typing.html#typing.ForwardRef" title="typing.ForwardRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef</span></code></a>. Forward references from different modules are
+now differentiated.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46246">bpo-46246</a>: Add missing <code class="docutils literal notranslate"><span class="pre">__slots__</span></code> to
 <code class="docutils literal notranslate"><span class="pre">importlib.metadata.DeprecatedList</span></code>. Patch by Arie Bovenberg.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46266">bpo-46266</a>: Improve day constants in <a class="reference internal" href="../library/calendar.html#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a>.</p>
@@ -25336,7 +25348,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 16, 2022。
+    最後更新於 2月 20, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -209,8 +209,8 @@
     <span class="n">lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.Lock.acquire">
@@ -246,8 +246,8 @@
 <dd><p>一個事件 (event) 物件。不支援執行緒安全。</p>
 <p>一個 asyncio 事件可以被用於通知多個有發生某些事件於其中的 asyncio 任務。</p>
 <p>一個 Event 物件會管理一個內部旗標 (flag)，它可以透過 <a class="reference internal" href="#asyncio.Event.set" title="asyncio.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a> 方法來被設為 <em>true</em> 並透過 <a class="reference internal" href="#asyncio.Event.clear" title="asyncio.Event.clear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code></a> 方法來重置為 <em>false</em>。<a class="reference internal" href="#asyncio.Event.wait" title="asyncio.Event.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> 方法會被阻塞 (block) 直到該旗標被設為 <em>true</em>。該旗標初始設置為 <em>false</em>。</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。</p>
 </div>
 <p id="asyncio-example-sync-event">範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">waiter</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
@@ -311,8 +311,8 @@
 <p>一個 asyncio 條件原始物件可以被任務用來等待某事件發生，並獲得一個共享資源的獨佔存取權。</p>
 <p>本質上，一個 Condition 物件會結合 <a class="reference internal" href="#asyncio.Event" title="asyncio.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> 和 <a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a> 的功能。多個 Condition 物件共享一個 Lock 是有可能發生的，這能夠協調關注同一共享資源的不同狀態以獲取其獨佔存取權的多個任務。</p>
 <p>可選的 <em>lock</em> 引數必須是一個 <a class="reference internal" href="#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a> 物件或者為 <code class="docutils literal notranslate"><span class="pre">None</span></code>。如為後者則一個新的 Lock 物件會被自動建立。</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。</p>
 </div>
 <p>使用 Condition 的推薦方式是透過 <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> 陳述式：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cond</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Condition</span><span class="p">()</span>
@@ -394,8 +394,8 @@
 <dd><p>一個旗號 (semaphore) 物件。不支援執行緒安全。</p>
 <p>一個旗號物件會管理一個內部計數器，會在每次呼叫 <a class="reference internal" href="#asyncio.Semaphore.acquire" title="asyncio.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> 時減少一、每次呼叫 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> 時增加一。此計數器永遠不會少於零；當 <a class="reference internal" href="#asyncio.Semaphore.acquire" title="asyncio.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> 發現它是零時，它會持續阻塞並等待某任務呼叫 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a>。</p>
 <p>可選的 <em>value</em> 引數給定了內部計數器的初始值（預設為 <code class="docutils literal notranslate"><span class="pre">1</span></code>）。如給定的值少於 <code class="docutils literal notranslate"><span class="pre">0</span></code> 則 <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 會被引發。</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。</p>
 </div>
 <p>使用 Semaphore 的推薦方式是透過 <a class="reference internal" href="../reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> 陳述式：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">sem</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -446,8 +446,8 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">BoundedSemaphore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.BoundedSemaphore" title="本定義的永久連結">¶</a></dt>
 <dd><p>一個有界的旗號物件。不支援執行緒安全。</p>
 <p>Bounded Semaphore 是 <a class="reference internal" href="#asyncio.Semaphore" title="asyncio.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> 的另一版本，如果其內部的計數器數值增加至大於初始 <em>value</em> 值的話，<a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 會在 <a class="reference internal" href="#asyncio.Semaphore.release" title="asyncio.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a> 時被引發。</p>
-<div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。自從 3.7 版本開始，此類別會隱晦地拿到當前正在運行的事件迴圈。更多資訊請見 <a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">3.10 有什麼新功能中的被移除功能相關段落</span></a>。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.10 版本變更: </span>移除 <code class="docutils literal notranslate"><span class="pre">loop</span></code> 參數。</p>
 </div>
 </dd></dl>
 
@@ -568,7 +568,7 @@
 <br />
     <br />
 
-    最後更新於 2月 16, 2022。
+    最後更新於 2月 20, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

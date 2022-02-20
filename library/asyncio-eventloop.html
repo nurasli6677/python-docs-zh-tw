@@ -530,7 +530,7 @@ of <a class="reference internal" href="asyncio-task.html#asyncio.Task" title="as
 <p>If the <em>name</em> argument is provided and not <code class="docutils literal notranslate"><span class="pre">None</span></code>, it is set as
 the name of the task using <a class="reference internal" href="asyncio-task.html#asyncio.Task.set_name" title="asyncio.Task.set_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Task.set_name()</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>加入 <code class="docutils literal notranslate"><span class="pre">name</span></code> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>加入 <em>name</em> 參數。</p>
 </div>
 </dd></dl>
 
@@ -630,8 +630,18 @@ are looked up using <code class="docutils literal notranslate"><span class="pre"
 to wait for the TLS handshake to complete before aborting the connection.
 <code class="docutils literal notranslate"><span class="pre">60.0</span></code> seconds if <code class="docutils literal notranslate"><span class="pre">None</span></code> (default).</p></li>
 </ul>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.8 版本新加入: </span>加入 <em>happy_eyeballs_delay</em> 和 <em>interleave</em> 參數。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added support for SSL/TLS in <a class="reference internal" href="#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a>.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>The socket option <code class="xref py py-data docutils literal notranslate"><span class="pre">TCP_NODELAY</span></code> is set by default
+for all TCP connections.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>增加 <em>ssl_handshake_timeout</em> 參數。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>加入 <em>happy_eyeballs_delay</em> 和 <em>interleave</em> 參數。</p>
 <p>Happy Eyeballs Algorithm: Success with Dual-Stack Hosts.
 When a server's IPv4 path and protocol are working, but the server's
 IPv6 path and protocol are not working, a dual-stack client
@@ -641,16 +651,6 @@ stack client to have a worse user experience.  This document
 specifies requirements for algorithms that reduce this user-visible
 delay and provides an algorithm.</p>
 <p>更多資訊請見：<a class="reference external" href="https://tools.ietf.org/html/rfc6555">https://tools.ietf.org/html/rfc6555</a></p>
-</div>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span><em>ssl_handshake_timeout</em> 參數。</p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>The socket option <code class="xref py py-data docutils literal notranslate"><span class="pre">TCP_NODELAY</span></code> is set by default
-for all TCP connections.</p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added support for SSL/TLS in <a class="reference internal" href="#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a>.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -738,11 +738,9 @@ supported.</p>
 <p>See the documentation of the <a class="reference internal" href="#asyncio.loop.create_connection" title="asyncio.loop.create_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_connection()</span></code></a> method
 for information about arguments to this method.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Unix。</p>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span><em>ssl_handshake_timeout</em> 參數。</p>
-</div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>path</em> parameter can now be a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>Added the <em>ssl_handshake_timeout</em> parameter.
+The <em>path</em> parameter can now be a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
 </dd></dl>
 
@@ -803,18 +801,16 @@ the user should await on <a class="reference internal" href="#asyncio.Server.sta
 <a class="reference internal" href="#asyncio.Server.serve_forever" title="asyncio.Server.serve_forever"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Server.serve_forever()</span></code></a> to make the server to start accepting
 connections.</p></li>
 </ul>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span>新增 <em>ssl_handshake_timeout</em> 與 <em>start_serving</em> 參數。</p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>The socket option <code class="xref py py-data docutils literal notranslate"><span class="pre">TCP_NODELAY</span></code> is set by default
-for all TCP connections.</p>
-</div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>Added support for SSL/TLS in <a class="reference internal" href="#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a>.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5.1 版本變更: </span>The <em>host</em> parameter can be a sequence of strings.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>Added <em>ssl_handshake_timeout</em> and <em>start_serving</em> parameters.
+The socket option <code class="xref py py-data docutils literal notranslate"><span class="pre">TCP_NODELAY</span></code> is set by default
+for all TCP connections.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -836,11 +832,8 @@ are supported.</p>
 <p>See the documentation of the <a class="reference internal" href="#asyncio.loop.create_server" title="asyncio.loop.create_server"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_server()</span></code></a> method
 for information about arguments to this method.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Unix。</p>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span>The <em>ssl_handshake_timeout</em> and <em>start_serving</em> parameters.</p>
-</div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>path</em> parameter can now be a <a class="reference internal" href="pathlib.html#pathlib.Path" title="pathlib.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a> object.</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增 <em>ssl_handshake_timeout</em> 與 <em>start_serving</em> 參數。<em>path</em> 參數現在可為一個 <a class="reference internal" href="pathlib.html#pathlib.Path" title="pathlib.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a> 物件。</p>
 </div>
 </dd></dl>
 
@@ -864,10 +857,10 @@ wait for the SSL handshake to complete before aborting the connection.
 </ul>
 <p>Returns a <code class="docutils literal notranslate"><span class="pre">(transport,</span> <span class="pre">protocol)</span></code> pair.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span><em>ssl_handshake_timeout</em> 參數。</p>
-</div>
-<div class="versionadded">
 <p><span class="versionmodified added">在 3.5.3 版本新加入.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>增加 <em>ssl_handshake_timeout</em> 參數。</p>
 </div>
 </dd></dl>
 
@@ -1963,7 +1956,7 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
 <br />
     <br />
 
-    最後更新於 2月 16, 2022。
+    最後更新於 2月 20, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
