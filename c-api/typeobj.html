@@ -1216,7 +1216,7 @@ definition found there:</p>
 <section id="pyobject-slots">
 <h2>PyObject Slots<a class="headerlink" href="#pyobject-slots" title="本標題的永久連結">¶</a></h2>
 <p>The type object structure extends the <a class="reference internal" href="structures.html#c.PyVarObject" title="PyVarObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyVarObject</span></code></a> structure. The
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">ob_size</span></code> field is used for dynamic types (created by  <code class="xref py py-func docutils literal notranslate"><span class="pre">type_new()</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ob_size</span></code> field is used for dynamic types (created by <code class="xref py py-func docutils literal notranslate"><span class="pre">type_new()</span></code>,
 usually called from a class statement). Note that <a class="reference internal" href="type.html#c.PyType_Type" title="PyType_Type"><code class="xref c c-data docutils literal notranslate"><span class="pre">PyType_Type</span></code></a> (the
 metatype) initializes <a class="reference internal" href="#c.PyTypeObject.tp_itemsize" title="PyTypeObject.tp_itemsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_itemsize</span></code></a>, which means that its instances (i.e.
 type objects) <em>must</em> have the <code class="xref py py-attr docutils literal notranslate"><span class="pre">ob_size</span></code> field.</p>
@@ -2606,6 +2606,16 @@ therefore, a recommended way to write a non-trivial finalizer is:</p>
 </div>
 <p>For this field to be taken into account (even through inheritance),
 you must also set the <a class="reference internal" href="#Py_TPFLAGS_HAVE_FINALIZE" title="Py_TPFLAGS_HAVE_FINALIZE"><code class="xref py py-const docutils literal notranslate"><span class="pre">Py_TPFLAGS_HAVE_FINALIZE</span></code></a> flags bit.</p>
+<p>Also, note that, in a garbage collected Python,
+<a class="reference internal" href="#c.PyTypeObject.tp_dealloc" title="PyTypeObject.tp_dealloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dealloc</span></code></a> may be called from
+any Python thread, not just the thread which created the object (if the object
+becomes part of a refcount cycle, that cycle might be collected by a garbage
+collection on any thread).  This is not a problem for Python API calls, since
+the thread on which tp_dealloc is called will own the Global Interpreter Lock
+(GIL). However, if the object being destroyed in turn destroys objects from some
+other C or C++ library, care should be taken to ensure that destroying those
+objects on the thread which called tp_dealloc will not violate any assumptions
+of the library.</p>
 <p><strong>Inheritance:</strong></p>
 <p>This field is inherited by subtypes.</p>
 <div class="versionadded">
@@ -2632,15 +2642,6 @@ using <code class="xref py py-attr docutils literal notranslate"><span class="pr
 </div>
 </dd></dl>
 
-<p>Also, note that, in a garbage collected Python, <a class="reference internal" href="#c.PyTypeObject.tp_dealloc" title="PyTypeObject.tp_dealloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dealloc</span></code></a> may be called from
-any Python thread, not just the thread which created the object (if the object
-becomes part of a refcount cycle, that cycle might be collected by a garbage
-collection on any thread).  This is not a problem for Python API calls, since
-the thread on which tp_dealloc is called will own the Global Interpreter Lock
-(GIL). However, if the object being destroyed in turn destroys objects from some
-other C or C++ library, care should be taken to ensure that destroying those
-objects on the thread which called tp_dealloc will not violate any assumptions
-of the library.</p>
 </section>
 <section id="static-types">
 <span id="id4"></span><h2>Static Types<a class="headerlink" href="#static-types" title="本標題的永久連結">¶</a></h2>
@@ -3173,7 +3174,8 @@ must return <code class="docutils literal notranslate"><span class="pre">1</span
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">am_aiter</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Must return an <a class="reference internal" href="../glossary.html#term-awaitable"><span class="xref std std-term">awaitable</span></a> object.  See <code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code> for details.</p>
+<p>Must return an <a class="reference internal" href="../glossary.html#term-asynchronous-iterator"><span class="xref std std-term">asynchronous iterator</span></a> object.
+See <code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code> for details.</p>
 <p>This slot may be set to <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if an object does not implement
 asynchronous iteration protocol.</p>
 </dd></dl>
@@ -3635,7 +3637,7 @@ to create instances (e.g. uses a separate factory func) using
 <br />
     <br />
 
-    最後更新於 2月 20, 2022。
+    最後更新於 2月 25, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

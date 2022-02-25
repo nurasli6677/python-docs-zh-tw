@@ -205,6 +205,8 @@ platforms, it is a file-like object whose <code class="xref py py-attr docutils 
 underlying true file object.</p>
 <p>The <a class="reference internal" href="os.html#os.O_TMPFILE" title="os.O_TMPFILE"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.O_TMPFILE</span></code></a> flag is used if it is available and works
 (Linux-specific, requires Linux kernel 3.11 or later).</p>
+<p>On platforms that are neither Posix nor Cygwin, TemporaryFile is an alias
+for NamedTemporaryFile.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">tempfile.mkstemp</span></code> with argument <code class="docutils literal notranslate"><span class="pre">fullpath</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>The <a class="reference internal" href="os.html#os.O_TMPFILE" title="os.O_TMPFILE"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.O_TMPFILE</span></code></a> flag is now used if available.</p>
@@ -624,7 +626,7 @@ be replaced easily with <a class="reference internal" href="#tempfile.NamedTempo
 <br />
     <br />
 
-    最後更新於 2月 20, 2022。
+    最後更新於 2月 25, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -183,7 +183,7 @@ currently executing.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyFrame_GetBack">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyFrame_GetBack</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="veryhigh.html#c.PyFrameObject" title="PyFrameObject"><span class="n"><span class="pre">PyFrameObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">frame</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyFrame_GetBack" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="veryhigh.html#c.PyFrameObject" title="PyFrameObject"><span class="n"><span class="pre">PyFrameObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyFrame_GetBack</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="veryhigh.html#c.PyFrameObject" title="PyFrameObject"><span class="n"><span class="pre">PyFrameObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">frame</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyFrame_GetBack" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Get the <em>frame</em> next outer frame.</p>
 <p>Return a <a class="reference internal" href="../glossary.html#term-strong-reference"><span class="xref std std-term">strong reference</span></a>, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if <em>frame</em> has no outer frame.</p>
 <p><em>frame</em> 不可為 <code class="docutils literal notranslate"><span class="pre">NULL</span></code>。</p>
@@ -194,7 +194,7 @@ currently executing.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyFrame_GetCode">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyFrame_GetCode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="veryhigh.html#c.PyFrameObject" title="PyFrameObject"><span class="n"><span class="pre">PyFrameObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">frame</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyFrame_GetCode" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="code.html#c.PyCodeObject" title="PyCodeObject"><span class="n"><span class="pre">PyCodeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyFrame_GetCode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="veryhigh.html#c.PyFrameObject" title="PyFrameObject"><span class="n"><span class="pre">PyFrameObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">frame</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyFrame_GetCode" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.10.</em><p>Get the <em>frame</em> code.</p>
 <p>Return a <a class="reference internal" href="../glossary.html#term-strong-reference"><span class="xref std std-term">strong reference</span></a>.</p>
 <p><em>frame</em> must not be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>. The result (frame code) cannot be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
@@ -324,7 +324,7 @@ Return values include &quot;()&quot; for functions and methods, &quot; construct
 <br />
     <br />
 
-    最後更新於 2月 20, 2022。
+    最後更新於 2月 25, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

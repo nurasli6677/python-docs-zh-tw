@@ -1027,11 +1027,17 @@
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46794">bpo-46794</a>: Bump up the libexpat version into 2.4.6</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46820">bpo-46820</a>: Fix parsing a numeric literal immediately (without spaces)
+followed by &quot;not in&quot; keywords, like in <code class="docutils literal notranslate"><span class="pre">1not</span> <span class="pre">in</span> <span class="pre">x</span></code>. Now the parser only
+emits a warning, not a syntax error.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46762">bpo-46762</a>: Fix an assert failure in debug builds when a '&lt;', '&gt;', or '='
 is the last character in an f-string that's missing a closing right brace.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46724">bpo-46724</a>: Make sure that all backwards jumps use the <code class="docutils literal notranslate"><span class="pre">JUMP_ABSOLUTE</span></code>
 instruction, rather than <code class="docutils literal notranslate"><span class="pre">JUMP_FORWARD</span></code> with an argument of
 <code class="docutils literal notranslate"><span class="pre">(2**32)+offset</span></code>.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46732">bpo-46732</a>: Correct the docstring for the <code class="xref py py-meth docutils literal notranslate"><span class="pre">__bool__()</span></code> method. Patch by
+Jelle Zijlstra.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46707">bpo-46707</a>: Avoid potential exponential backtracking when producing some
 syntax errors involving lots of brackets. Patch by Pablo Galindo.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue40479">bpo-40479</a>: Add a missing call to <code class="docutils literal notranslate"><span class="pre">va_end()</span></code> in
@@ -1071,14 +1077,31 @@ by Pablo Galindo</p></li>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue44886">bpo-44886</a>: Inherit asyncio proactor datagram transport from
+<a class="reference internal" href="../library/asyncio-protocol.html#asyncio.DatagramTransport" title="asyncio.DatagramTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.DatagramTransport</span></code></a>.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46827">bpo-46827</a>: Support UDP sockets in  <a class="reference internal" href="../library/asyncio-eventloop.html#asyncio.loop.sock_connect" title="asyncio.loop.sock_connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.loop.sock_connect()</span></code></a> for
+selector-based event loops.  Patch by Thomas Grainger.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46811">bpo-46811</a>: Make test suite support Expat &gt;=2.4.5</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46252">bpo-46252</a>: Raise <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> if <a class="reference internal" href="../library/ssl.html#ssl.SSLSocket" title="ssl.SSLSocket"><code class="xref py py-class docutils literal notranslate"><span class="pre">ssl.SSLSocket</span></code></a> is passed to
+transport-based APIs.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46784">bpo-46784</a>: Fix libexpat symbols collisions with user dynamically loaded or
 statically linked libexpat in embedded Python.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue39327">bpo-39327</a>: <a class="reference internal" href="../library/shutil.html#shutil.rmtree" title="shutil.rmtree"><code class="xref py py-func docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code></a> can now work with VirtualBox shared
+folders when running from the guest operating-system.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46756">bpo-46756</a>: Fix a bug in
+<a class="reference internal" href="../library/urllib.request.html#urllib.request.HTTPPasswordMgr.find_user_password" title="urllib.request.HTTPPasswordMgr.find_user_password"><code class="xref py py-meth docutils literal notranslate"><span class="pre">urllib.request.HTTPPasswordMgr.find_user_password()</span></code></a> and
+<a class="reference internal" href="../library/urllib.request.html#urllib.request.HTTPPasswordMgrWithPriorAuth.is_authenticated" title="urllib.request.HTTPPasswordMgrWithPriorAuth.is_authenticated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">urllib.request.HTTPPasswordMgrWithPriorAuth.is_authenticated()</span></code></a> which
+allowed to bypass authorization. For example, access to URI
+<code class="docutils literal notranslate"><span class="pre">example.org/foobar</span></code> was allowed if the user was authorized for URI
+<code class="docutils literal notranslate"><span class="pre">example.org/foo</span></code>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45863">bpo-45863</a>: When the <a class="reference internal" href="../library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> module creates a pax format archive, it
 will put an integer representation of timestamps in the ustar header (if
 possible) for the benefit of older unarchivers, in addition to the
 existing full-precision timestamps in the pax extended header.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46676">bpo-46676</a>: Make <a class="reference internal" href="../library/typing.html#typing.ParamSpec" title="typing.ParamSpec"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.ParamSpec</span></code></a> args and kwargs equal to
 themselves. Patch by Gregory Beauregard.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46672">bpo-46672</a>: Fix <code class="docutils literal notranslate"><span class="pre">NameError</span></code> in <a class="reference internal" href="../library/asyncio-task.html#asyncio.gather" title="asyncio.gather"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.gather()</span></code></a> when initial type
+check fails.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46655">bpo-46655</a>: In <a class="reference internal" href="../library/typing.html#typing.get_type_hints" title="typing.get_type_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.get_type_hints()</span></code></a>, support evaluating bare
 stringified <code class="docutils literal notranslate"><span class="pre">TypeAlias</span></code> annotations. Patch by Gregory Beauregard.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45948">bpo-45948</a>: Fixed a discrepancy in the C implementation of the
@@ -1123,6 +1146,8 @@ now differentiated.</p></li>
 <p>Now all constants (<code class="xref py py-obj docutils literal notranslate"><span class="pre">MONDAY</span></code> ... <code class="xref py py-obj docutils literal notranslate"><span class="pre">SUNDAY</span></code>) are documented, tested, and
 added to <code class="docutils literal notranslate"><span class="pre">__all__</span></code>.</p>
 </li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46232">bpo-46232</a>: The <a class="reference internal" href="../library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> module now handles certificates with bit strings
+in DN correctly.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue43118">bpo-43118</a>: Fix a bug in <a class="reference internal" href="../library/inspect.html#inspect.signature" title="inspect.signature"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.signature()</span></code></a> that was causing it to
 fail on some subclasses of classes with a <code class="docutils literal notranslate"><span class="pre">__text_signature__</span></code>
 referencing module globals. Patch by Weipeng Hong.</p></li>
@@ -25348,7 +25373,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 20, 2022。
+    最後更新於 2月 25, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -2238,10 +2238,10 @@ name.</p>
 <p>Due to the early negotiation phase of the TLS connection, only limited
 methods and attributes are usable like
 <a class="reference internal" href="#ssl.SSLSocket.selected_alpn_protocol" title="ssl.SSLSocket.selected_alpn_protocol"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.selected_alpn_protocol()</span></code></a> and <a class="reference internal" href="#ssl.SSLSocket.context" title="ssl.SSLSocket.context"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLSocket.context</span></code></a>.
-<a class="reference internal" href="#ssl.SSLSocket.getpeercert" title="ssl.SSLSocket.getpeercert"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.getpeercert()</span></code></a>, <a class="reference internal" href="#ssl.SSLSocket.getpeercert" title="ssl.SSLSocket.getpeercert"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.getpeercert()</span></code></a>,
-<a class="reference internal" href="#ssl.SSLSocket.cipher" title="ssl.SSLSocket.cipher"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.cipher()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.compress()</span></code> methods require that
+The <a class="reference internal" href="#ssl.SSLSocket.getpeercert" title="ssl.SSLSocket.getpeercert"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.getpeercert()</span></code></a>,
+<a class="reference internal" href="#ssl.SSLSocket.cipher" title="ssl.SSLSocket.cipher"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.cipher()</span></code></a> and <a class="reference internal" href="#ssl.SSLSocket.compression" title="ssl.SSLSocket.compression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLSocket.compression()</span></code></a> methods require that
 the TLS connection has progressed beyond the TLS Client Hello and therefore
-will not contain return meaningful values nor can they be called safely.</p>
+will not return meaningful values nor can they be called safely.</p>
 <p>The <em>sni_callback</em> function must return <code class="docutils literal notranslate"><span class="pre">None</span></code> to allow the
 TLS negotiation to continue.  If a TLS failure is required, a constant
 <a class="reference internal" href="#ssl.ALERT_DESCRIPTION_INTERNAL_ERROR" title="ssl.ALERT_DESCRIPTION_INTERNAL_ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ALERT_DESCRIPTION_*</span></code></a> can be
@@ -3424,7 +3424,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 20, 2022。
+    最後更新於 2月 25, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

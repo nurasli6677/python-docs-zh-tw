@@ -380,6 +380,8 @@ in which case the key/value delimiter may also be left
 out.  Values can also span multiple lines, as long as they are indented deeper
 than the first line of the value.  Depending on the parser's mode, blank lines
 may be treated as parts of multiline values or ignored.</p>
+<p>By default,  a valid section name can be any string that does not contain '\n' or ']'.
+To change this, see <a class="reference internal" href="#configparser.ConfigParser.SECTCRE" title="configparser.ConfigParser.SECTCRE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConfigParser.SECTCRE</span></code></a>.</p>
 <p>Configuration files may include comments, prefixed by specific
 characters (<code class="docutils literal notranslate"><span class="pre">#</span></code> and <code class="docutils literal notranslate"><span class="pre">;</span></code> by default <a class="footnote-reference brackets" href="#id15" id="id8">1</a>).  Comments may appear on
 their own on an otherwise empty line, possibly indented. <a class="footnote-reference brackets" href="#id15" id="id9">1</a></p>
@@ -1576,7 +1578,7 @@ changing the behaviour outlined by the footnote reference, consult the
 <br />
     <br />
 
-    最後更新於 2月 20, 2022。
+    最後更新於 2月 25, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
