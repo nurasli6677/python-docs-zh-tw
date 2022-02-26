@@ -1045,13 +1045,31 @@
 <h2><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 物件<a class="headerlink" href="#ordereddict-objects" title="本標題的永久連結">¶</a></h2>
 <p>Ordered dictionary（有序字典）就像常規字典一樣，但有一些與排序操作相關的額外功能，但由於內建的 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 類別現在已經有記憶插入順序的能力（Python 3.7 中確保了這種新行為），它們變得不那麼重要了。</p>
 <p>仍存在一些與 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的不同之處：</p>
-<ul class="simple">
+<ul>
 <li><p>常規的 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 被設計成非常擅長於對映相關操作，追蹤插入的順序為次要目標。</p></li>
 <li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 則被設計成擅長於重新排序相關的操作，空間效率、疊代速度和更新操作的效能則為次要設計目標。</p></li>
-<li><p>在演算法中，<a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 比起 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 更適合處理頻繁的重新排序操作，這讓它適合用於追蹤近期存取紀錄（例如用於 <a class="reference external" href="https://medium.com/&#64;krishankantsinghal/my-first-blog-on-medium-583159139237">LRU cache</a>）。</p></li>
-<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 之相等性運算會檢查順序是否相同。</p></li>
-<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 類別的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">popitem()</span></code> 方法有不同的函數簽名 (signature)，它接受傳入一個選擇性引數來指定要移除哪個元素。</p></li>
-<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 有個 <code class="xref py py-meth docutils literal notranslate"><span class="pre">move_to_end()</span></code> 方法可有效率地將一個元素重新排列到任一端。</p></li>
+<li><p>The <a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> algorithm can handle frequent reordering operations
+better than <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  As shown in the recipes below, this makes it
+suitable for implementing various kinds of LRU caches.</p></li>
+<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 之相等性運算會檢查順序是否相同。</p>
+<p>A regular <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> can emulate the order sensitive equality test with
+<code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">==</span> <span class="pre">q</span> <span class="pre">and</span> <span class="pre">all(k1</span> <span class="pre">==</span> <span class="pre">k2</span> <span class="pre">for</span> <span class="pre">k1,</span> <span class="pre">k2</span> <span class="pre">in</span> <span class="pre">zip(p,</span> <span class="pre">q))</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 類別的 <code class="xref py py-meth docutils literal notranslate"><span class="pre">popitem()</span></code> 方法有不同的函數簽名 (signature)，它接受傳入一個選擇性引數來指定要移除哪個元素。</p>
+<p>A regular <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> can emulate OrderedDict's <code class="docutils literal notranslate"><span class="pre">od.popitem(last=True)</span></code>
+with <code class="docutils literal notranslate"><span class="pre">d.popitem()</span></code> which is guaranteed to pop the rightmost (last) item.</p>
+<p>A regular <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> can emulate OrderedDict's <code class="docutils literal notranslate"><span class="pre">od.popitem(last=False)</span></code>
+with <code class="docutils literal notranslate"><span class="pre">(k</span> <span class="pre">:=</span> <span class="pre">next(iter(d)),</span> <span class="pre">d.pop(k))</span></code> which will return and remove the
+leftmost (first) item if it exists.</p>
+</li>
+<li><p><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 有個 <code class="xref py py-meth docutils literal notranslate"><span class="pre">move_to_end()</span></code> 方法可有效率地將一個元素重新排列到任一端。</p>
+<p>A regular <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> can emulate OrderedDict's <code class="docutils literal notranslate"><span class="pre">od.move_to_end(k,</span>
+<span class="pre">last=True)</span></code> with <code class="docutils literal notranslate"><span class="pre">d[k]</span> <span class="pre">=</span> <span class="pre">d.pop(k)</span></code> which will move the key and its
+associated value to the rightmost (last) position.</p>
+<p>A regular <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> does not have an efficient equivalent for
+OrderedDict's <code class="docutils literal notranslate"><span class="pre">od.move_to_end(k,</span> <span class="pre">last=False)</span></code> which moves the key
+and its associated value to the leftmost (first) position.</p>
+</li>
 <li><p>在 Python 3.8 之前，<a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 並沒有 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__reversed__()</span></code> 方法。</p></li>
 </ul>
 <dl class="py class">
@@ -1355,7 +1373,7 @@
 <br />
     <br />
 
-    最後更新於 2月 25, 2022。
+    最後更新於 2月 26, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

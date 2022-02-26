@@ -153,15 +153,8 @@
   <section id="module-builtins">
 <span id="builtins-built-in-objects"></span><h1><a class="reference internal" href="#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code></a> --- 內建物件<a class="headerlink" href="#module-builtins" title="本標題的永久連結">¶</a></h1>
 <hr class="docutils" />
-<p>This module provides direct access to all 'built-in' identifiers of Python; for
-example, <code class="docutils literal notranslate"><span class="pre">builtins.open</span></code> is the full name for the built-in function
-<a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>.  See <a class="reference internal" href="functions.html#built-in-funcs"><span class="std std-ref">內建函式</span></a> and <a class="reference internal" href="constants.html#built-in-consts"><span class="std std-ref">內建常數</span></a> for
-documentation.</p>
-<p>This module is not normally accessed explicitly by most applications, but can be
-useful in modules that provide objects with the same name as a built-in value,
-but in which the built-in of that name is also needed.  For example, in a module
-that wants to implement an <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function that wraps the built-in
-<a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>, this module can be used directly:</p>
+<p>該模組提供對 Python 所有'內建'識別符號的直接存取；例如 <code class="docutils literal notranslate"><span class="pre">builtins.open</span></code> 是內建函式 <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 的全名。請參閱<a class="reference internal" href="functions.html#built-in-funcs"><span class="std std-ref">內建函式</span></a>和<a class="reference internal" href="constants.html#built-in-consts"><span class="std std-ref">內建常數</span></a>的文件。</p>
+<p>大多數應用程式通常不會顯式地存取此模組，但在提供與內建值同名之物件的模組中可能很有用，不過其中還會需要內建該名稱。例如，在一個將內建 <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 包裝起來以實現另一版本 <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 函式的模組中，這個模組可以直接被使用：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
 
 <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
@@ -180,11 +173,7 @@ that wants to implement an <a class="reference internal" href="functions.html#op
     <span class="c1"># ...</span>
 </pre></div>
 </div>
-<p>As an implementation detail, most modules have the name <code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> made
-available as part of their globals.  The value of <code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> is normally
-either this module or the value of this module's <a class="reference internal" href="stdtypes.html#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> attribute.
-Since this is an implementation detail, it may not be used by alternate
-implementations of Python.</p>
+<p>有個實作細節是，大多數模組都將名稱 <code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> 作為其全域性變數的一部分以提使用。<code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> 的值通常是這個模組或者這個模組的 <a class="reference internal" href="stdtypes.html#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> 屬性值。由於這是一個實作細節，因此 Python 的其他實作可能不會使用它。</p>
 </section>
 
 
@@ -282,7 +271,7 @@ implementations of Python.</p>
 <br />
     <br />
 
-    最後更新於 2月 25, 2022。
+    最後更新於 2月 26, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

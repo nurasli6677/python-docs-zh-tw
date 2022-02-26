@@ -465,13 +465,14 @@ any arguments.</p>
 <p><em>stdin</em>, <em>stdout</em> and <em>stderr</em> specify the executed program's standard input,
 standard output and standard error file handles, respectively.  Valid values
 are <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>, <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a>, an existing file descriptor (a positive
-integer), an existing file object, and <code class="docutils literal notranslate"><span class="pre">None</span></code>.  <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a> indicates
-that a new pipe to the child should be created.  <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a> indicates
-that the special file <a class="reference internal" href="os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a> will be used.  With the default
-settings of <code class="docutils literal notranslate"><span class="pre">None</span></code>, no redirection will occur; the child's file handles
-will be inherited from the parent.  Additionally, <em>stderr</em> can be
-<a class="reference internal" href="#subprocess.STDOUT" title="subprocess.STDOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">STDOUT</span></code></a>, which indicates that the stderr data from the child
-process should be captured into the same file handle as for <em>stdout</em>.</p>
+integer), an existing file object with a valid file descriptor, and <code class="docutils literal notranslate"><span class="pre">None</span></code>.
+<a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a> indicates that a new pipe to the child should be created.
+<a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a> indicates that the special file <a class="reference internal" href="os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a> will
+be used.  With the default settings of <code class="docutils literal notranslate"><span class="pre">None</span></code>, no redirection will occur;
+the child's file handles will be inherited from the parent.
+Additionally, <em>stderr</em> can be <a class="reference internal" href="#subprocess.STDOUT" title="subprocess.STDOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">STDOUT</span></code></a>, which indicates that the
+stderr data from the child process should be captured into the same file
+handle as for <em>stdout</em>.</p>
 <p id="index-1">If <em>encoding</em> or <em>errors</em> are specified, or <em>text</em> (also known as
 <em>universal_newlines</em>) is true,
 the file objects <em>stdin</em>, <em>stdout</em> and <em>stderr</em> will be opened in text
@@ -659,13 +660,14 @@ on Windows.</p>
 <p><em>stdin</em>, <em>stdout</em> and <em>stderr</em> specify the executed program's standard input,
 standard output and standard error file handles, respectively.  Valid values
 are <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>, <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a>, an existing file descriptor (a positive
-integer), an existing <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>, and <code class="docutils literal notranslate"><span class="pre">None</span></code>.  <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a>
-indicates that a new pipe to the child should be created.  <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a>
-indicates that the special file <a class="reference internal" href="os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a> will be used. With the
-default settings of <code class="docutils literal notranslate"><span class="pre">None</span></code>, no redirection will occur; the child's file
-handles will be inherited from the parent.  Additionally, <em>stderr</em> can be
-<a class="reference internal" href="#subprocess.STDOUT" title="subprocess.STDOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">STDOUT</span></code></a>, which indicates that the stderr data from the applications
-should be captured into the same file handle as for stdout.</p>
+integer), an existing <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file object</span></a> with a valid file descriptor,
+and <code class="docutils literal notranslate"><span class="pre">None</span></code>.  <a class="reference internal" href="#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">PIPE</span></code></a> indicates that a new pipe to the child should
+be created.  <a class="reference internal" href="#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a> indicates that the special file
+<a class="reference internal" href="os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a> will be used. With the default settings of <code class="docutils literal notranslate"><span class="pre">None</span></code>,
+no redirection will occur; the child's file handles will be inherited from
+the parent.  Additionally, <em>stderr</em> can be <a class="reference internal" href="#subprocess.STDOUT" title="subprocess.STDOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">STDOUT</span></code></a>, which indicates
+that the stderr data from the applications should be captured into the same
+file handle as for stdout.</p>
 <p>If <em>preexec_fn</em> is set to a callable object, this object will be called in the
 child process just before the child is executed.
 (POSIX only)</p>
@@ -1832,7 +1834,7 @@ described in rule 3.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 25, 2022。
+    最後更新於 2月 26, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

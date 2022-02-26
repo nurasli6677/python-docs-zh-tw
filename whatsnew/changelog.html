@@ -1027,6 +1027,9 @@
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46852">bpo-46852</a>: Rename the private undocumented <code class="docutils literal notranslate"><span class="pre">float.__set_format__()</span></code>
+method to <code class="docutils literal notranslate"><span class="pre">float.__setformat__()</span></code> to fix a typo introduced in Python
+3.7. The method is only used by test_float. Patch by Victor Stinner.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46794">bpo-46794</a>: Bump up the libexpat version into 2.4.6</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46820">bpo-46820</a>: Fix parsing a numeric literal immediately (without spaces)
 followed by &quot;not in&quot; keywords, like in <code class="docutils literal notranslate"><span class="pre">1not</span> <span class="pre">in</span> <span class="pre">x</span></code>. Now the parser only
@@ -25373,7 +25376,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 2月 25, 2022。
+    最後更新於 2月 26, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
