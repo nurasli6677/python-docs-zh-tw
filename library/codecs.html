@@ -874,8 +874,9 @@ handling strategies during the lifetime of the <a class="reference internal" hre
 <dl class="py method">
 <dt class="sig sig-object py" id="codecs.StreamWriter.writelines">
 <span class="sig-name descname"><span class="pre">writelines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codecs.StreamWriter.writelines" title="本定義的永久連結">¶</a></dt>
-<dd><p>Writes the concatenated list of strings to the stream (possibly by reusing
-the <a class="reference internal" href="#codecs.StreamWriter.write" title="codecs.StreamWriter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> method). The standard bytes-to-bytes codecs
+<dd><p>Writes the concatenated iterable of strings to the stream (possibly by reusing
+the <a class="reference internal" href="#codecs.StreamWriter.write" title="codecs.StreamWriter.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> method). Infinite or
+very large iterables are not supported. The standard bytes-to-bytes codecs
 do not support this method.</p>
 </dd></dl>
 
@@ -2049,7 +2050,7 @@ optional UTF-8 encoded BOM at the start of the data will be skipped.</p>
 <br />
     <br />
 
-    最後更新於 3月 01, 2022。
+    最後更新於 3月 04, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

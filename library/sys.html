@@ -574,10 +574,7 @@ or <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <dl class="py function">
 <dt class="sig sig-object py" id="sys.exit">
 <span class="sig-prename descclassname"><span class="pre">sys.</span></span><span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sys.exit" title="本定義的永久連結">¶</a></dt>
-<dd><p>Exit from Python.  This is implemented by raising the <a class="reference internal" href="exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a>
-exception, so cleanup actions specified by finally clauses of <a class="reference internal" href="../reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a>
-statements are honored, and it is possible to intercept the exit attempt at
-an outer level.</p>
+<dd><p>Raise a <a class="reference internal" href="exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> exception, signaling an intention to exit the interpreter.</p>
 <p>The optional argument <em>arg</em> can be an integer giving the exit status
 (defaulting to zero), or another type of object.  If it is an integer, zero
 is considered &quot;successful termination&quot; and any nonzero value is considered
@@ -592,7 +589,8 @@ particular, <code class="docutils literal notranslate"><span class="pre">sys.exi
 program when an error occurs.</p>
 <p>Since <a class="reference internal" href="constants.html#exit" title="exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">exit()</span></code></a> ultimately &quot;only&quot; raises an exception, it will only exit
 the process when called from the main thread, and the exception is not
-intercepted.</p>
+intercepted. Cleanup actions specified by finally clauses of <a class="reference internal" href="../reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> statements
+are honored, and it is possible to intercept the exit attempt at an outer level.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>If an error occurs in the cleanup after the Python interpreter
 has caught <a class="reference internal" href="exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> (such as an error flushing buffered data
@@ -2124,7 +2122,7 @@ means, or not at all.</p>
 <br />
     <br />
 
-    最後更新於 3月 01, 2022。
+    最後更新於 3月 04, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

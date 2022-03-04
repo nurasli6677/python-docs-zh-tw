@@ -1097,6 +1097,9 @@ folders when running from the guest operating-system.</p></li>
 allowed to bypass authorization. For example, access to URI
 <code class="docutils literal notranslate"><span class="pre">example.org/foobar</span></code> was allowed if the user was authorized for URI
 <code class="docutils literal notranslate"><span class="pre">example.org/foo</span></code>.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46643">bpo-46643</a>: In <a class="reference internal" href="../library/typing.html#typing.get_type_hints" title="typing.get_type_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.get_type_hints()</span></code></a>, support evaluating
+stringified <code class="docutils literal notranslate"><span class="pre">ParamSpecArgs</span></code> and <code class="docutils literal notranslate"><span class="pre">ParamSpecKwargs</span></code> annotations. Patch
+by Gregory Beauregard.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45863">bpo-45863</a>: When the <a class="reference internal" href="../library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> module creates a pax format archive, it
 will put an integer representation of timestamps in the ustar header (if
 possible) for the benefit of older unarchivers, in addition to the
@@ -1184,6 +1187,9 @@ documentation file</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46913">bpo-46913</a>: Fix test_faulthandler.test_sigfpe() if Python is built with
+undefined behavior sanitizer (UBSAN): disable UBSAN on the
+faulthandler_sigfpe() function. Patch by Victor Stinner.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46708">bpo-46708</a>: Prevent default asyncio event loop policy modification warning
 after <code class="docutils literal notranslate"><span class="pre">test_asyncio</span></code> execution.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46678">bpo-46678</a>: The function <code class="docutils literal notranslate"><span class="pre">make_legacy_pyc</span></code> in
@@ -25376,7 +25382,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 3月 01, 2022。
+    最後更新於 3月 04, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

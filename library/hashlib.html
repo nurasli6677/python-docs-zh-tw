@@ -410,13 +410,15 @@ a proper source, e.g. <a class="reference internal" href="os.html#os.urandom" ti
 <p>The number of <em>iterations</em> should be chosen based on the hash algorithm and
 computing power. As of 2022, hundreds of thousands of iterations of SHA-256
 are suggested. For rationale as to why and how to choose what is best for
-your application, read <em>Appendix A.2.2</em> of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf">NIST-SP-800-132</a>.</p>
+your application, read <em>Appendix A.2.2</em> of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf">NIST-SP-800-132</a>. The answers
+on the <a class="reference external" href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/">stackexchange pbkdf2 iterations question</a> explain in detail.</p>
 <p><em>dklen</em> is the length of the derived key. If <em>dklen</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code> then the
 digest size of the hash algorithm <em>hash_name</em> is used, e.g. 64 for SHA-512.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dk</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;salt&#39;</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">pbkdf2_hmac</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">our_app_iters</span> <span class="o">=</span> <span class="mi">500_000</span>  <span class="c1"># Application specific, read above.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dk</span> <span class="o">=</span> <span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;bad salt&#39;</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">our_app_iters</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dk</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
-<span class="go">&#39;0394a2ede332c9a13eb82e9b24631604c31df978b4e2f0fbd2c549944f9d79a5&#39;</span>
+<span class="go">&#39;15530bba69924174860db778f2c6f8104d3aaf9d26241840c8c4a641c8d000a9&#39;</span>
 </pre></div>
 </div>
 <div class="versionadded">
@@ -1029,7 +1031,7 @@ what that means regarding their use.</p>
 <br />
     <br />
 
-    最後更新於 3月 01, 2022。
+    最後更新於 3月 04, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
