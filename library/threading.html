@@ -579,8 +579,8 @@ module function <a class="reference internal" href="#threading.enumerate" title=
 <dl class="py attribute">
 <dt class="sig sig-object py" id="threading.Thread.daemon">
 <span class="sig-name descname"><span class="pre">daemon</span></span><a class="headerlink" href="#threading.Thread.daemon" title="本定義的永久連結">¶</a></dt>
-<dd><p>A boolean value indicating whether this thread is a daemon thread (True)
-or not (False).  This must be set before <a class="reference internal" href="#threading.Thread.start" title="threading.Thread.start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">start()</span></code></a> is called,
+<dd><p>A boolean value indicating whether this thread is a daemon thread (<code class="docutils literal notranslate"><span class="pre">True</span></code>)
+or not (<code class="docutils literal notranslate"><span class="pre">False</span></code>).  This must be set before <a class="reference internal" href="#threading.Thread.start" title="threading.Thread.start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">start()</span></code></a> is called,
 otherwise <a class="reference internal" href="exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> is raised.  Its initial value is inherited
 from the creating thread; the main thread is not a daemon thread and
 therefore all threads created in the main thread default to
@@ -647,7 +647,7 @@ immediately; otherwise, set the lock to locked and return <code class="docutils 
 value, block for at most the number of seconds specified by <em>timeout</em>
 and as long as the lock cannot be acquired.  A <em>timeout</em> argument of <code class="docutils literal notranslate"><span class="pre">-1</span></code>
 specifies an unbounded wait.  It is forbidden to specify a <em>timeout</em>
-when <em>blocking</em> is false.</p>
+when <em>blocking</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <p>The return value is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the lock is acquired successfully,
 <code class="docutils literal notranslate"><span class="pre">False</span></code> if not (for example if the <em>timeout</em> expired).</p>
 <div class="versionchanged">
@@ -674,7 +674,7 @@ to proceed.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="threading.Lock.locked">
 <span class="sig-name descname"><span class="pre">locked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#threading.Lock.locked" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return true if the lock is acquired.</p>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the lock is acquired.</p>
 </dd></dl>
 
 </dd></dl>
@@ -715,15 +715,15 @@ unlocked (not owned by any thread), then grab ownership, set the recursion level
 to one, and return.  If more than one thread is blocked waiting until the lock
 is unlocked, only one at a time will be able to grab ownership of the lock.
 There is no return value in this case.</p>
-<p>When invoked with the <em>blocking</em> argument set to true, do the same thing as when
+<p>When invoked with the <em>blocking</em> argument set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, do the same thing as when
 called without arguments, and return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>When invoked with the <em>blocking</em> argument set to false, do not block.  If a call
+<p>When invoked with the <em>blocking</em> argument set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, do not block.  If a call
 without an argument would block, return <code class="docutils literal notranslate"><span class="pre">False</span></code> immediately; otherwise, do the
 same thing as when called without arguments, and return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>When invoked with the floating-point <em>timeout</em> argument set to a positive
 value, block for at most the number of seconds specified by <em>timeout</em>
 and as long as the lock cannot be acquired.  Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the lock has
-been acquired, false if the timeout has elapsed.</p>
+been acquired, <code class="docutils literal notranslate"><span class="pre">False</span></code> if the timeout has elapsed.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>timeout</em> parameter is new.</p>
 </div>
@@ -952,7 +952,7 @@ than 0), decrement the counter by 1 and return <code class="docutils literal not
 thread will be awoken by each call to <a class="reference internal" href="#threading.Semaphore.release" title="threading.Semaphore.release"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code></a>.  The
 order in which threads are awoken should not be relied on.</p></li>
 </ul>
-<p>When invoked with <em>blocking</em> set to false, do not block.  If a call
+<p>When invoked with <em>blocking</em> set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, do not block.  If a call
 without an argument would block, return <code class="docutils literal notranslate"><span class="pre">False</span></code> immediately; otherwise, do
 the same thing as when called without arguments, and return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>When invoked with a <em>timeout</em> other than <code class="docutils literal notranslate"><span class="pre">None</span></code>, it will block for at
@@ -1364,7 +1364,7 @@ the following snippet:</p>
 <br />
     <br />
 
-    最後更新於 3月 04, 2022。
+    最後更新於 3月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

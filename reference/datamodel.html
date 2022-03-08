@@ -1603,7 +1603,7 @@ iterator.</p></li>
 <section id="customizing-class-creation">
 <span id="class-customization"></span><h3><span class="section-number">3.3.3. </span>Customizing class creation<a class="headerlink" href="#customizing-class-creation" title="本標題的永久連結">¶</a></h3>
 <p>Whenever a class inherits from another class, <a class="reference internal" href="#object.__init_subclass__" title="object.__init_subclass__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init_subclass__()</span></code></a> is
-called on that class. This way, it is possible to write classes which
+called on the parent class. This way, it is possible to write classes which
 change the behavior of subclasses. This is closely related to class
 decorators, but where class decorators only affect the specific class they're
 applied to, <code class="docutils literal notranslate"><span class="pre">__init_subclass__</span></code> solely applies to future subclasses of the
@@ -2848,7 +2848,7 @@ supported, which is why the reflected method is not called.</p>
 <br />
     <br />
 
-    最後更新於 3月 04, 2022。
+    最後更新於 3月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

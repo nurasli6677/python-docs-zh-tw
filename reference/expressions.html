@@ -780,36 +780,48 @@ same attribute reference may yield different objects.</p>
 </section>
 <section id="subscriptions">
 <span id="id6"></span><h3><span class="section-number">6.3.2. </span>Subscriptions<a class="headerlink" href="#subscriptions" title="本標題的永久連結">¶</a></h3>
-<span class="target" id="index-41"></span><p id="index-42">Subscription of a sequence (string, tuple or list) or mapping (dictionary)
-object usually selects an item from the collection:</p>
+<span class="target" id="index-41"></span><p id="index-42">The subscription of an instance of a <a class="reference internal" href="datamodel.html#sequence-types"><span class="std std-ref">container class</span></a>
+will generally select an element from the container. The subscription of a
+<a class="reference internal" href="../glossary.html#term-generic-type"><span class="xref std std-term">generic class</span></a> will generally return a
+<a class="reference internal" href="../library/stdtypes.html#types-genericalias"><span class="std std-ref">GenericAlias</span></a> object.</p>
 <pre>
 <strong id="grammar-token-python-grammar-subscription"><span id="grammar-token-subscription"></span>subscription</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;[&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression_list"><code class="xref docutils literal notranslate"><span class="pre">expression_list</span></code></a> &quot;]&quot;
 </pre>
-<p>The primary must evaluate to an object that supports subscription (lists or
-dictionaries for example).  User-defined objects can support subscription by
-defining a <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code> method.</p>
-<p>For built-in objects, there are two types of objects that support subscription:</p>
-<p>If the primary is a mapping, the expression list must evaluate to an object
-whose value is one of the keys of the mapping, and the subscription selects the
-value in the mapping that corresponds to that key.  (The expression list is a
-tuple except if it has exactly one item.)</p>
-<p>If the primary is a sequence, the expression list must evaluate to an integer
-or a slice (as discussed in the following section).</p>
+<p>When an object is subscripted, the interpreter will evaluate the primary and
+the expression list.</p>
+<p>The primary must evaluate to an object that supports subscription. An object
+may support subscription through defining one or both of
+<a class="reference internal" href="datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a> and <a class="reference internal" href="datamodel.html#object.__class_getitem__" title="object.__class_getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__class_getitem__()</span></code></a>. When the
+primary is subscripted, the evaluated result of the expression list will be
+passed to one of these methods. For more details on when <code class="docutils literal notranslate"><span class="pre">__class_getitem__</span></code>
+is called instead of <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>, see <a class="reference internal" href="datamodel.html#classgetitem-versus-getitem"><span class="std std-ref">__class_getitem__ versus __getitem__</span></a>.</p>
+<p>If the expression list contains at least one comma, it will evaluate to a
+<a class="reference internal" href="../library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> containing the items of the expression list. Otherwise, the
+expression list will evaluate to the value of the list's sole member.</p>
+<p>For built-in objects, there are two types of objects that support subscription
+via <a class="reference internal" href="datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a>:</p>
+<ol class="arabic simple">
+<li><p>Mappings. If the primary is a <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping</span></a>, the expression list must
+evaluate to an object whose value is one of the keys of the mapping, and the
+subscription selects the value in the mapping that corresponds to that key.
+An example of a builtin mapping class is the <a class="reference internal" href="../library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> class.</p></li>
+<li><p>Sequences. If the primary is a <a class="reference internal" href="../glossary.html#term-sequence"><span class="xref std std-term">sequence</span></a>, the expression list must
+evaluate to an <a class="reference internal" href="../library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> or a <a class="reference internal" href="../library/functions.html#slice" title="slice"><code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code></a> (as discussed in the
+following section). Examples of builtin sequence classes include the
+<a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference internal" href="../library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> and <a class="reference internal" href="../library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> classes.</p></li>
+</ol>
 <p>The formal syntax makes no special provision for negative indices in
-sequences; however, built-in sequences all provide a <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code>
+<a class="reference internal" href="../glossary.html#term-sequence"><span class="xref std std-term">sequences</span></a>. However, built-in sequences all provide a <a class="reference internal" href="datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a>
 method that interprets negative indices by adding the length of the sequence
-to the index (so that <code class="docutils literal notranslate"><span class="pre">x[-1]</span></code> selects the last item of <code class="docutils literal notranslate"><span class="pre">x</span></code>).  The
+to the index so that, for example, <code class="docutils literal notranslate"><span class="pre">x[-1]</span></code> selects the last item of <code class="docutils literal notranslate"><span class="pre">x</span></code>. The
 resulting value must be a nonnegative integer less than the number of items in
 the sequence, and the subscription selects the item whose index is that value
 (counting from zero). Since the support for negative indices and slicing
 occurs in the object's <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code> method, subclasses overriding
 this method will need to explicitly add that support.</p>
-<p id="index-43">A string's items are characters.  A character is not a separate data type but a
+<p id="index-43">A <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></a> is a special kind of sequence whose items are
+<em>characters</em>. A character is not a separate data type but a
 string of exactly one character.</p>
-<p>Subscription of certain <a class="reference internal" href="../glossary.html#term-class"><span class="xref std std-term">classes</span></a> or <a class="reference internal" href="../glossary.html#term-type"><span class="xref std std-term">types</span></a>
-creates a <a class="reference internal" href="../library/stdtypes.html#types-genericalias"><span class="std std-ref">generic alias</span></a>.
-In this case, user-defined classes can support subscription by providing a
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">__class_getitem__()</span></code> classmethod.</p>
 </section>
 <section id="slicings">
 <span id="id7"></span><h3><span class="section-number">6.3.3. </span>Slicings<a class="headerlink" href="#slicings" title="本標題的永久連結">¶</a></h3>
@@ -1726,7 +1738,7 @@ precedence applies.</p>
 <br />
     <br />
 
-    最後更新於 3月 04, 2022。
+    最後更新於 3月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

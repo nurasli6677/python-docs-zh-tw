@@ -1027,6 +1027,8 @@
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46940">bpo-46940</a>: Avoid overriding <a class="reference internal" href="../library/exceptions.html#AttributeError" title="AttributeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code></a> metadata information for
+nested attribute access calls. Patch by Pablo Galindo.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46852">bpo-46852</a>: Rename the private undocumented <code class="docutils literal notranslate"><span class="pre">float.__set_format__()</span></code>
 method to <code class="docutils literal notranslate"><span class="pre">float.__setformat__()</span></code> to fix a typo introduced in Python
 3.7. The method is only used by test_float. Patch by Victor Stinner.</p></li>
@@ -1080,6 +1082,9 @@ by Pablo Galindo</p></li>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46932">bpo-46932</a>: Update bundled libexpat to 2.4.7</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue25707">bpo-25707</a>: Fixed a file leak in <a class="reference internal" href="../library/xml.etree.elementtree.html#xml.etree.ElementTree.iterparse" title="xml.etree.ElementTree.iterparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">xml.etree.ElementTree.iterparse()</span></code></a>
+when the iterator is not exhausted. Patch by Jacob Walls.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue44886">bpo-44886</a>: Inherit asyncio proactor datagram transport from
 <a class="reference internal" href="../library/asyncio-protocol.html#asyncio.DatagramTransport" title="asyncio.DatagramTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.DatagramTransport</span></code></a>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46827">bpo-46827</a>: Support UDP sockets in  <a class="reference internal" href="../library/asyncio-eventloop.html#asyncio.loop.sock_connect" title="asyncio.loop.sock_connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.loop.sock_connect()</span></code></a> for
@@ -1165,6 +1170,9 @@ directory name with a trailing slash.</p></li>
 <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.BooleanOptionalAction</span></code> argument's default is
 <code class="docutils literal notranslate"><span class="pre">argparse.SUPPRESS</span></code> and it has <code class="docutils literal notranslate"><span class="pre">help</span></code> specified.  Patch by Felix
 Fontein.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue44439">bpo-44439</a>: Fix <code class="docutils literal notranslate"><span class="pre">.write()</span></code> method of a member file in <code class="docutils literal notranslate"><span class="pre">ZipFile</span></code>, when
+the input data is an object that supports the buffer protocol, the file
+length may be wrong.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45703">bpo-45703</a>: When a namespace package is imported before another module from
 the same namespace is created/installed in a different <a class="reference internal" href="../library/sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>
 location while the program is running, calling the
@@ -1175,6 +1183,10 @@ new module is noticed.</p></li>
 Substitution with a list of types returns now a tuple of types.
 Substitution with <code class="docutils literal notranslate"><span class="pre">Concatenate</span></code> returns now a <code class="docutils literal notranslate"><span class="pre">Concatenate</span></code> with
 concatenated lists of arguments.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue14156">bpo-14156</a>: argparse.FileType now supports an argument of '-' in binary
+mode, returning the .buffer attribute of sys.stdin/sys.stdout as
+appropriate. Modes including 'x' and 'a' are treated equivalently to 'w'
+when argument is '-'. Patch contributed by Josh Rosenberg</p></li>
 </ul>
 </section>
 <section id="documentation">
@@ -1229,6 +1241,10 @@ macro and <code class="docutils literal notranslate"><span class="pre">pyconfig.
 <section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue44549">bpo-44549</a>: Update bzip2 to 1.0.8 in Windows builds to mitigate
+CVE-2016-3189 and CVE-2019-12900</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46948">bpo-46948</a>: Prevent CVE-2022-26488 by ensuring the Add to PATH option in
+the Windows installer uses the correct path when being repaired.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46638">bpo-46638</a>: Ensures registry virtualization is consistently disabled. For
 3.10 and earlier, it remains enabled (some registry writes are protected),
 while for 3.11 and later it is disabled (registry modifications affect all
@@ -25382,7 +25398,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 3月 04, 2022。
+    最後更新於 3月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
