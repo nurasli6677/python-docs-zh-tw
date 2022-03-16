@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>typing --- Support for type hints &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing --- Support for type hints &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.10.3 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -166,7 +166,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1622,14 +1622,23 @@ Usage:</p>
 <span class="k">assert</span> <span class="n">Point2D</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The type info for introspection can be accessed via <code class="docutils literal notranslate"><span class="pre">Point2D.__annotations__</span></code>,
-<code class="docutils literal notranslate"><span class="pre">Point2D.__total__</span></code>, <code class="docutils literal notranslate"><span class="pre">Point2D.__required_keys__</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">Point2D.__optional_keys__</span></code>.
-To allow using this feature with older versions of Python that do not
+<p>To allow using this feature with older versions of Python that do not
 support <span class="target" id="index-39"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0526"><strong>PEP 526</strong></a>, <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> supports two additional equivalent
 syntactic forms:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Point2D</span> <span class="o">=</span> <span class="n">TypedDict</span><span class="p">(</span><span class="s1">&#39;Point2D&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">Point2D</span> <span class="o">=</span> <span class="n">TypedDict</span><span class="p">(</span><span class="s1">&#39;Point2D&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>The functional syntax should also be used when any of the keys are not valid
+<a class="reference internal" href="../reference/lexical_analysis.html#identifiers"><span class="std std-ref">Identifiers and keywords</span></a>, for example because they are keywords or contain hyphens.
+Example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># raises SyntaxError</span>
+<span class="k">class</span> <span class="nc">Point2D</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+    <span class="ow">in</span><span class="p">:</span> <span class="nb">int</span>  <span class="c1"># &#39;in&#39; is a keyword</span>
+    <span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">:</span> <span class="nb">int</span>  <span class="c1"># name with hyphens</span>
+
+<span class="c1"># OK, functional syntax</span>
+<span class="n">Point2D</span> <span class="o">=</span> <span class="n">TypedDict</span><span class="p">(</span><span class="s1">&#39;Point2D&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;x-y&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span>
 </pre></div>
 </div>
 <p>By default, all keys must be present in a <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code>. It is possible to
@@ -1644,6 +1653,91 @@ Usage:</p>
 omitted. A type checker is only expected to support a literal <code class="docutils literal notranslate"><span class="pre">False</span></code> or
 <code class="docutils literal notranslate"><span class="pre">True</span></code> as the value of the <code class="docutils literal notranslate"><span class="pre">total</span></code> argument. <code class="docutils literal notranslate"><span class="pre">True</span></code> is the default,
 and makes all items defined in the class body required.</p>
+<p>It is possible for a <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> type to inherit from one or more other <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> types
+using the class-based syntax.
+Usage:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point3D</span><span class="p">(</span><span class="n">Point2D</span><span class="p">):</span>
+    <span class="n">z</span><span class="p">:</span> <span class="nb">int</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Point3D</span></code> has three items: <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>. It is equivalent to this
+definition:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point3D</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">z</span><span class="p">:</span> <span class="nb">int</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> cannot inherit from a non-TypedDict class,
+notably including <a class="reference internal" href="#typing.Generic" title="typing.Generic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>. For example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">X</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span> <span class="nc">Y</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span> <span class="nc">Z</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span> <span class="k">pass</span>  <span class="c1"># A non-TypedDict class</span>
+
+<span class="k">class</span> <span class="nc">XY</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span> <span class="k">pass</span>  <span class="c1"># OK</span>
+
+<span class="k">class</span> <span class="nc">XZ</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Z</span><span class="p">):</span> <span class="k">pass</span>  <span class="c1"># raises TypeError</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">XT</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span> <span class="k">pass</span>  <span class="c1"># raises TypeError</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> can be introspected via annotations dicts
+(see <a class="reference internal" href="../howto/annotations.html#annotations-howto"><span class="std std-ref">Annotations Best Practices</span></a> for more information on annotations best practices),
+<a class="reference internal" href="#typing.TypedDict.__total__" title="typing.TypedDict.__total__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__total__</span></code></a>, <a class="reference internal" href="#typing.TypedDict.__required_keys__" title="typing.TypedDict.__required_keys__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__required_keys__</span></code></a>, and <a class="reference internal" href="#typing.TypedDict.__optional_keys__" title="typing.TypedDict.__optional_keys__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__optional_keys__</span></code></a>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="typing.TypedDict.__total__">
+<span class="sig-name descname"><span class="pre">__total__</span></span><a class="headerlink" href="#typing.TypedDict.__total__" title="本定義的永久連結">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Point2D.__total__</span></code> gives the value of the <code class="docutils literal notranslate"><span class="pre">total</span></code> argument.
+Example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypedDict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point2D</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span> <span class="k">pass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point2D</span><span class="o">.</span><span class="n">__total__</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point2D</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span> <span class="k">pass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point2D</span><span class="o">.</span><span class="n">__total__</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point3D</span><span class="p">(</span><span class="n">Point2D</span><span class="p">):</span> <span class="k">pass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point3D</span><span class="o">.</span><span class="n">__total__</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="typing.TypedDict.__required_keys__">
+<span class="sig-name descname"><span class="pre">__required_keys__</span></span><a class="headerlink" href="#typing.TypedDict.__required_keys__" title="本定義的永久連結">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="typing.TypedDict.__optional_keys__">
+<span class="sig-name descname"><span class="pre">__optional_keys__</span></span><a class="headerlink" href="#typing.TypedDict.__optional_keys__" title="本定義的永久連結">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Point2D.__required_keys__</span></code> and <code class="docutils literal notranslate"><span class="pre">Point2D.__optional_keys__</span></code> return
+<a class="reference internal" href="stdtypes.html#frozenset" title="frozenset"><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></a> objects containing required and non-required keys, respectively.
+Currently the only way to declare both required and non-required keys in the
+same <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> is mixed inheritance, declaring a <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> with one value
+for the <code class="docutils literal notranslate"><span class="pre">total</span></code> argument and then inheriting it from another <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> with
+a different value for <code class="docutils literal notranslate"><span class="pre">total</span></code>.
+Usage:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point2D</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
+<span class="gp">... </span>    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Point3D</span><span class="p">(</span><span class="n">Point2D</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">z</span><span class="p">:</span> <span class="nb">int</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point3D</span><span class="o">.</span><span class="n">__required_keys__</span> <span class="o">==</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s1">&#39;z&#39;</span><span class="p">})</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point3D</span><span class="o">.</span><span class="n">__optional_keys__</span> <span class="o">==</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">})</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
 <p>See <span class="target" id="index-40"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0589"><strong>PEP 589</strong></a> for more examples and detailed rules of using <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
@@ -2629,7 +2723,7 @@ This makes it unnecessary to use quotes around the annotation.
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2666,7 +2760,7 @@ This makes it unnecessary to use quotes around the annotation.
 <br />
     <br />
 
-    最後更新於 3月 08, 2022。
+    最後更新於 3月 16, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

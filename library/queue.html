@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>queue --- A synchronized queue class &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queue --- A synchronized queue class &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.10.3 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -359,15 +359,14 @@ count of unfinished tasks drops to zero, <a class="reference internal" href="#qu
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Finished </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="n">q</span><span class="o">.</span><span class="n">task_done</span><span class="p">()</span>
 
-<span class="c1"># turn-on the worker thread</span>
+<span class="c1"># Turn-on the worker thread.</span>
 <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">worker</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<span class="c1"># send thirty task requests to the worker</span>
+<span class="c1"># Send thirty task requests to the worker.</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
     <span class="n">q</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All task requests sent</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
-<span class="c1"># block until all tasks are done</span>
+<span class="c1"># Block until all tasks are done.</span>
 <span class="n">q</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All work completed&#39;</span><span class="p">)</span>
 </pre></div>
@@ -515,7 +514,7 @@ and also support indexing.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -552,7 +551,7 @@ and also support indexing.</p>
 <br />
     <br />
 
-    最後更新於 3月 08, 2022。
+    最後更新於 3月 16, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

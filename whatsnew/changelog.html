@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Changelog（更動日誌） &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog（更動日誌） &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.10.3 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -75,7 +75,7 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Changelog（更動日誌）</a><ul>
-<li><a class="reference internal" href="#python-next">Python next</a><ul>
+<li><a class="reference internal" href="#python-3-10-3-final">Python 3.10.3 final</a><ul>
 <li><a class="reference internal" href="#core-and-builtins">Core and Builtins</a></li>
 <li><a class="reference internal" href="#library">Library</a></li>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>
@@ -992,7 +992,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -1021,9 +1021,9 @@
             
   <section id="changelog">
 <span id="id1"></span><h1>Changelog（更動日誌）<a class="headerlink" href="#changelog" title="本標題的永久連結">¶</a></h1>
-<section id="python-next">
-<h2>Python next<a class="headerlink" href="#python-next" title="本標題的永久連結">¶</a></h2>
-<p><em>Release date: XXXX-XX-XX</em></p>
+<section id="python-3-10-3-final">
+<h2>Python 3.10.3 final<a class="headerlink" href="#python-3-10-3-final" title="本標題的永久連結">¶</a></h2>
+<p><em>Release date: 2022-03-16</em></p>
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
@@ -1053,6 +1053,9 @@ crashes in corner-cases of various set operations where the set gets
 mutated.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45773">bpo-45773</a>: Remove two invalid &quot;peephole&quot; optimizations from the bytecode
 compiler.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue43721">bpo-43721</a>: Fix docstrings of <code class="xref py py-attr docutils literal notranslate"><span class="pre">getter</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">setter</span></code>, and <code class="xref py py-attr docutils literal notranslate"><span class="pre">deleter</span></code> to clarify that
+they create a new copy of the property.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46503">bpo-46503</a>: Fix an assert when parsing some invalid N escape sequences in
 f-strings.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46417">bpo-46417</a>: Fix a race condition on setting a type <code class="docutils literal notranslate"><span class="pre">__bases__</span></code> attribute:
@@ -1082,6 +1085,22 @@ by Pablo Galindo</p></li>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue43253">bpo-43253</a>: Fix a crash when closing transports where the underlying socket
+handle is already invalid on the Proactor event loop.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue47004">bpo-47004</a>: Apply bugfixes from importlib_metadata 4.11.3, including bugfix
+for EntryPoint.extras, which was returning match objects and not the
+extras strings.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46985">bpo-46985</a>: Upgrade pip wheel bundled with ensurepip (pip 22.0.4)</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46968">bpo-46968</a>: <a class="reference internal" href="../library/faulthandler.html#module-faulthandler" title="faulthandler: Dump the Python traceback."><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code></a>: On Linux 5.14 and newer, dynamically
+determine size of signal handler stack size CPython allocates using
+<code class="docutils literal notranslate"><span class="pre">getauxval(AT_MINSIGSTKSZ)</span></code>. This changes allows for Python extension's
+request to Linux kernel to use AMX_TILE instruction set on Sapphire Rapids
+Xeon processor to succeed, unblocking use of the ISA in frameworks.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46955">bpo-46955</a>: Expose <code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.base_events.Server</span></code> as
+<a class="reference internal" href="../library/asyncio-eventloop.html#asyncio.Server" title="asyncio.Server"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Server</span></code></a>. Patch by Stefan Zabka.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue23325">bpo-23325</a>: The <a class="reference internal" href="../library/signal.html#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> module no longer assumes that
+<a class="reference internal" href="../library/signal.html#signal.SIG_IGN" title="signal.SIG_IGN"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_IGN</span></code></a> and <a class="reference internal" href="../library/signal.html#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_DFL</span></code></a> are small int
+singletons.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46932">bpo-46932</a>: Update bundled libexpat to 2.4.7</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue25707">bpo-25707</a>: Fixed a file leak in <a class="reference internal" href="../library/xml.etree.elementtree.html#xml.etree.ElementTree.iterparse" title="xml.etree.ElementTree.iterparse"><code class="xref py py-func docutils literal notranslate"><span class="pre">xml.etree.ElementTree.iterparse()</span></code></a>
 when the iterator is not exhausted. Patch by Jacob Walls.</p></li>
@@ -1122,6 +1141,8 @@ provides a default <a class="reference internal" href="../library/xml.etree.elem
 the Python implementation does.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46521">bpo-46521</a>: Fix a bug in the <a class="reference internal" href="../library/codeop.html#module-codeop" title="codeop: Compile (possibly incomplete) Python code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codeop</span></code></a> module that was incorrectly
 identifying invalid code involving string quotes as valid code.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue46581">bpo-46581</a>: Brings <code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpec</span></code> propagation for <code class="xref py py-class docutils literal notranslate"><span class="pre">GenericAlias</span></code>
+in line with <code class="xref py py-class docutils literal notranslate"><span class="pre">Concatenate</span></code> (and others).</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46591">bpo-46591</a>: Make the IDLE doc URL on the About IDLE dialog clickable.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46400">bpo-46400</a>: expat: Update libexpat from 2.4.1 to 2.4.4</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46487">bpo-46487</a>: Add the <code class="docutils literal notranslate"><span class="pre">get_write_buffer_limits</span></code> method to
@@ -1166,6 +1187,8 @@ referencing module globals. Patch by Weipeng Hong.</p></li>
 close the coroutine. Patch by Kumar Aditya.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue21987">bpo-21987</a>: Fix an issue with <a class="reference internal" href="../library/tarfile.html#tarfile.TarFile.getmember" title="tarfile.TarFile.getmember"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tarfile.TarFile.getmember()</span></code></a> getting a
 directory name with a trailing slash.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue20392">bpo-20392</a>: Fix inconsistency with uppercase file extensions in
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">MimeTypes.guess_type()</span></code>. Patch by Kumar Aditya.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46080">bpo-46080</a>: Fix exception in argparse help text generation if a
 <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.BooleanOptionalAction</span></code> argument's default is
 <code class="docutils literal notranslate"><span class="pre">argparse.SUPPRESS</span></code> and it has <code class="docutils literal notranslate"><span class="pre">help</span></code> specified.  Patch by Felix
@@ -1178,6 +1201,8 @@ the same namespace is created/installed in a different <a class="reference inter
 location while the program is running, calling the
 <a class="reference internal" href="../library/importlib.html#importlib.invalidate_caches" title="importlib.invalidate_caches"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.invalidate_caches()</span></code></a> function will now also guarantee the
 new module is noticed.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue24959">bpo-24959</a>: Fix bug where <a class="reference internal" href="../library/unittest.html#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> sometimes drops frames from
+tracebacks of exceptions raised in tests.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue44791">bpo-44791</a>: Fix substitution of <a class="reference internal" href="../library/typing.html#typing.ParamSpec" title="typing.ParamSpec"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpec</span></code></a> in
 <a class="reference internal" href="../library/typing.html#typing.Concatenate" title="typing.Concatenate"><code class="xref py py-data docutils literal notranslate"><span class="pre">Concatenate</span></code></a> with different parameter expressions.
 Substitution with a list of types returns now a tuple of types.
@@ -1229,6 +1254,10 @@ Victor Stinner.</p></li>
 <section id="build">
 <h3>Build<a class="headerlink" href="#build" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue47032">bpo-47032</a>: Ensure Windows install builds fail correctly with a non-zero
+exit code when part of the build fails.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue47024">bpo-47024</a>: Update OpenSSL to 1.1.1n for macOS installers and all Windows
+builds.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue38472">bpo-38472</a>: Fix GCC detection in setup.py when cross-compiling. The C
 compiler is now run with LC_ALL=C. Previously, the detection failed with a
 German locale.</p></li>
@@ -24446,7 +24475,7 @@ Kilburn.</p></li>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Changelog（更動日誌）</a><ul>
-<li><a class="reference internal" href="#python-next">Python next</a><ul>
+<li><a class="reference internal" href="#python-3-10-3-final">Python 3.10.3 final</a><ul>
 <li><a class="reference internal" href="#core-and-builtins">Core and Builtins</a></li>
 <li><a class="reference internal" href="#library">Library</a></li>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>
@@ -25362,7 +25391,7 @@ Kilburn.</p></li>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -25398,7 +25427,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 3月 08, 2022。
+    最後更新於 3月 16, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

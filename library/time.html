@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>time --- Time access and conversions &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time --- Time access and conversions &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.10.3 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -134,7 +134,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -423,6 +423,11 @@ function.</p>
 <dd><p>Like <a class="reference internal" href="#time.gmtime" title="time.gmtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">gmtime()</span></code></a> but converts to local time.  If <em>secs</em> is not provided or
 <a class="reference internal" href="constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>, the current time as returned by <a class="reference internal" href="#time.time" title="time.time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time()</span></code></a> is used.  The dst
 flag is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> when DST applies to the given time.</p>
+<p><a class="reference internal" href="#time.localtime" title="time.localtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">localtime()</span></code></a> may raise <a class="reference internal" href="exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>, if the timestamp is
+outside the range of values supported by the platform C <code class="xref c c-func docutils literal notranslate"><span class="pre">localtime()</span></code>
+or <code class="xref c c-func docutils literal notranslate"><span class="pre">gmtime()</span></code> functions, and <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> on <code class="xref c c-func docutils literal notranslate"><span class="pre">localtime()</span></code> or
+<code class="xref c c-func docutils literal notranslate"><span class="pre">gmtime()</span></code> failure. It's common for this to be restricted to years
+between 1970 and 2038.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1220,7 +1225,7 @@ been first recommended by <span class="target" id="index-21"></span><a class="rf
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.10.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1257,7 +1262,7 @@ been first recommended by <span class="target" id="index-21"></span><a class="rf
 <br />
     <br />
 
-    最後更新於 3月 08, 2022。
+    最後更新於 3月 16, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
