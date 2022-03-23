@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>asynchat --- Asynchronous socket command/response handler &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asynchat --- 非同步 socket 指令/回應處理函式 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="signal --- Set handlers for asynchronous events" href="signal.html" />
-    <link rel="prev" title="asyncore --- Asynchronous socket handler" href="asyncore.html" />
+    <link rel="next" title="asyncore --- 非同步 socket 處理函式" href="asyncore.html" />
+    <link rel="prev" title="aifc --- 讀寫 AIFF 與 AIFC 檔案" href="aifc.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/asynchat.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- Asynchronous socket command/response handler</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- 非同步 socket 指令/回應處理函式</a><ul>
 <li><a class="reference internal" href="#asynchat-example">asynchat Example</a></li>
 </ul>
 </li>
@@ -82,13 +82,13 @@
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="asyncore.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code> --- Asynchronous socket handler</a></p>
+    <p class="topless"><a href="aifc.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aifc</span></code> --- 讀寫 AIFF 與 AIFC 檔案</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="signal.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code> --- Set handlers for asynchronous events</a></p>
+    <p class="topless"><a href="asyncore.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code> --- 非同步 socket 處理函式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -116,10 +116,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="signal.html" title="signal --- Set handlers for asynchronous events"
+          <a href="asyncore.html" title="asyncore --- 非同步 socket 處理函式"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="asyncore.html" title="asyncore --- Asynchronous socket handler"
+          <a href="aifc.html" title="aifc --- 讀寫 AIFF 與 AIFC 檔案"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -136,8 +136,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="ipc.html" accesskey="U">Networking and Interprocess Communication</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- Asynchronous socket command/response handler</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- 非同步 socket 指令/回應處理函式</a></li>
                 <li class="right">
                     
 
@@ -161,10 +161,10 @@
           <div class="body" role="main">
             
   <section id="module-asynchat">
-<span id="asynchat-asynchronous-socket-command-response-handler"></span><h1><a class="reference internal" href="#module-asynchat" title="asynchat: Support for asynchronous command/response protocols."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> --- Asynchronous socket command/response handler<a class="headerlink" href="#module-asynchat" title="本標題的永久連結">¶</a></h1>
+<span id="asynchat-asynchronous-socket-command-response-handler"></span><h1><a class="reference internal" href="#module-asynchat" title="asynchat: Support for asynchronous command/response protocols.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> --- 非同步 socket 指令/回應處理函式<a class="headerlink" href="#module-asynchat" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asynchat.py">Lib/asynchat.py</a></p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 3.6 版本開始棄用: </span>Please use <a class="reference internal" href="asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> instead.</p>
+<p><span class="versionmodified deprecated">在 3.6 版本開始棄用: </span><a class="reference internal" href="#module-asynchat" title="asynchat: Support for asynchronous command/response protocols.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> 將於 Python 3.12 中移除（<span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。請改用 <a class="reference internal" href="asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a>。</p>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
@@ -172,13 +172,13 @@
 <p>This module exists for backwards compatibility only.  For new code we
 recommend using <a class="reference internal" href="asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a>.</p>
 </div>
-<p>This module builds on the <a class="reference internal" href="asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a> infrastructure, simplifying
+<p>This module builds on the <a class="reference internal" href="asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a> infrastructure, simplifying
 asynchronous clients and servers and making it easier to handle protocols
 whose elements are terminated by arbitrary strings, or are of variable length.
-<a class="reference internal" href="#module-asynchat" title="asynchat: Support for asynchronous command/response protocols."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> defines the abstract class <a class="reference internal" href="#asynchat.async_chat" title="asynchat.async_chat"><code class="xref py py-class docutils literal notranslate"><span class="pre">async_chat</span></code></a> that you
+<a class="reference internal" href="#module-asynchat" title="asynchat: Support for asynchronous command/response protocols.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> defines the abstract class <a class="reference internal" href="#asynchat.async_chat" title="asynchat.async_chat"><code class="xref py py-class docutils literal notranslate"><span class="pre">async_chat</span></code></a> that you
 subclass, providing implementations of the <code class="xref py py-meth docutils literal notranslate"><span class="pre">collect_incoming_data()</span></code> and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">found_terminator()</span></code> methods. It uses the same asynchronous loop as
-<a class="reference internal" href="asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a>, and the two types of channel, <a class="reference internal" href="asyncore.html#asyncore.dispatcher" title="asyncore.dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncore.dispatcher</span></code></a>
+<a class="reference internal" href="asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a>, and the two types of channel, <a class="reference internal" href="asyncore.html#asyncore.dispatcher" title="asyncore.dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncore.dispatcher</span></code></a>
 and <a class="reference internal" href="#asynchat.async_chat" title="asynchat.async_chat"><code class="xref py py-class docutils literal notranslate"><span class="pre">asynchat.async_chat</span></code></a>, can freely be mixed in the channel map.
 Typically an <a class="reference internal" href="asyncore.html#asyncore.dispatcher" title="asyncore.dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncore.dispatcher</span></code></a> server channel generates new
 <a class="reference internal" href="#asynchat.async_chat" title="asynchat.async_chat"><code class="xref py py-class docutils literal notranslate"><span class="pre">asynchat.async_chat</span></code></a> channel objects as it receives incoming
@@ -388,7 +388,7 @@ any extraneous data sent by the web client are ignored.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- Asynchronous socket command/response handler</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- 非同步 socket 指令/回應處理函式</a><ul>
 <li><a class="reference internal" href="#asynchat-example">asynchat Example</a></li>
 </ul>
 </li>
@@ -397,13 +397,13 @@ any extraneous data sent by the web client are ignored.</p>
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="asyncore.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code> --- Asynchronous socket handler</a></p>
+    <p class="topless"><a href="aifc.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aifc</span></code> --- 讀寫 AIFF 與 AIFC 檔案</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="signal.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code> --- Set handlers for asynchronous events</a></p>
+    <p class="topless"><a href="asyncore.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code> --- 非同步 socket 處理函式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -430,10 +430,10 @@ any extraneous data sent by the web client are ignored.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="signal.html" title="signal --- Set handlers for asynchronous events"
+          <a href="asyncore.html" title="asyncore --- 非同步 socket 處理函式"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="asyncore.html" title="asyncore --- Asynchronous socket handler"
+          <a href="aifc.html" title="aifc --- 讀寫 AIFF 與 AIFC 檔案"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -450,8 +450,8 @@ any extraneous data sent by the web client are ignored.</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- Asynchronous socket command/response handler</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code> --- 非同步 socket 指令/回應處理函式</a></li>
                 <li class="right">
                     
 
@@ -483,7 +483,7 @@ any extraneous data sent by the web client are ignored.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

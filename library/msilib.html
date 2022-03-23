@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>msilib --- Read and write Microsoft Installer files &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>msilib --- 讀寫 Microsoft Installer 檔案 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="msvcrt --- Useful routines from the MS VC++ runtime" href="msvcrt.html" />
-    <link rel="prev" title="MS Windows 特有服務" href="windows.html" />
+    <link rel="next" title="nntplib --- NNTP 協定客戶端" href="nntplib.html" />
+    <link rel="prev" title="imp --- Access the import internals" href="imp.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/msilib.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- Read and write Microsoft Installer files</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- 讀寫 Microsoft Installer 檔案</a><ul>
 <li><a class="reference internal" href="#database-objects">Database Objects</a></li>
 <li><a class="reference internal" href="#view-objects">View Objects</a></li>
 <li><a class="reference internal" href="#summary-information-objects">Summary Information Objects</a></li>
@@ -91,13 +91,13 @@
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="windows.html"
-                          title="上一章">MS Windows 特有服務</a></p>
+    <p class="topless"><a href="imp.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code> --- Access the <span class="xref std std-ref">import</span> internals</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="msvcrt.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msvcrt</span></code> --- Useful routines from the MS VC++ runtime</a></p>
+    <p class="topless"><a href="nntplib.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code> --- NNTP 協定客戶端</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -125,10 +125,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="msvcrt.html" title="msvcrt --- Useful routines from the MS VC++ runtime"
+          <a href="nntplib.html" title="nntplib --- NNTP 協定客戶端"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="windows.html" title="MS Windows 特有服務"
+          <a href="imp.html" title="imp --- Access the import internals"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -145,8 +145,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="windows.html" accesskey="U">MS Windows 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- Read and write Microsoft Installer files</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- 讀寫 Microsoft Installer 檔案</a></li>
                 <li class="right">
                     
 
@@ -170,10 +170,13 @@
           <div class="body" role="main">
             
   <section id="module-msilib">
-<span id="msilib-read-and-write-microsoft-installer-files"></span><h1><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> --- Read and write Microsoft Installer files<a class="headerlink" href="#module-msilib" title="本標題的永久連結">¶</a></h1>
+<span id="msilib-read-and-write-microsoft-installer-files"></span><h1><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> --- 讀寫 Microsoft Installer 檔案<a class="headerlink" href="#module-msilib" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/msilib/__init__.py">Lib/msilib/__init__.py</a></p>
-<hr class="docutils" id="index-0" />
-<p>The <a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> supports the creation of Microsoft Installer (<code class="docutils literal notranslate"><span class="pre">.msi</span></code>) files.
+<div class="deprecated" id="index-0">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
+<hr class="docutils" />
+<p>The <a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> supports the creation of Microsoft Installer (<code class="docutils literal notranslate"><span class="pre">.msi</span></code>) files.
 Because these files often contain an embedded &quot;cabinet&quot; file (<code class="docutils literal notranslate"><span class="pre">.cab</span></code>), it also
 exposes an API to create CAB files. Support for reading <code class="docutils literal notranslate"><span class="pre">.cab</span></code> files is
 currently not implemented; read support for the <code class="docutils literal notranslate"><span class="pre">.msi</span></code> database is possible.</p>
@@ -583,7 +586,7 @@ resulting feature object can be passed to the <code class="xref py py-meth docut
 <dl class="py method">
 <dt class="sig sig-object py" id="msilib.Feature.set_current">
 <span class="sig-name descname"><span class="pre">set_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msilib.Feature.set_current" title="本定義的永久連結">¶</a></dt>
-<dd><p>Make this feature the current feature of <a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a>. New components are
+<dd><p>Make this feature the current feature of <a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a>. New components are
 automatically added to the default feature, unless a feature is explicitly
 specified.</p>
 </dd></dl>
@@ -597,7 +600,7 @@ specified.</p>
 </section>
 <section id="gui-classes">
 <span id="msi-gui"></span><h2>GUI classes<a class="headerlink" href="#gui-classes" title="本標題的永久連結">¶</a></h2>
-<p><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> provides several classes that wrap the GUI tables in an MSI
+<p><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> provides several classes that wrap the GUI tables in an MSI
 database. However, no standard user interface is provided; use
 <a class="reference internal" href="../distutils/apiref.html#module-distutils.command.bdist_msi" title="distutils.command.bdist_msi: Build a binary distribution as a Windows MSI file"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bdist_msi</span></code></a> to create MSI files with a user-interface
 for installing Python packages.</p>
@@ -707,7 +710,7 @@ provided.</p>
 </section>
 <section id="precomputed-tables">
 <span id="msi-tables"></span><h2>Precomputed tables<a class="headerlink" href="#precomputed-tables" title="本標題的永久連結">¶</a></h2>
-<p><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> provides a few subpackages that contain only schema and table
+<p><a class="reference internal" href="#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> provides a few subpackages that contain only schema and table
 definitions. Currently, these definitions are based on MSI version 2.0.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="msilib.schema">
@@ -745,7 +748,7 @@ standard installer actions.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- Read and write Microsoft Installer files</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- 讀寫 Microsoft Installer 檔案</a><ul>
 <li><a class="reference internal" href="#database-objects">Database Objects</a></li>
 <li><a class="reference internal" href="#view-objects">View Objects</a></li>
 <li><a class="reference internal" href="#summary-information-objects">Summary Information Objects</a></li>
@@ -763,13 +766,13 @@ standard installer actions.</p>
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="windows.html"
-                          title="上一章">MS Windows 特有服務</a></p>
+    <p class="topless"><a href="imp.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code> --- Access the <span class="xref std std-ref">import</span> internals</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="msvcrt.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msvcrt</span></code> --- Useful routines from the MS VC++ runtime</a></p>
+    <p class="topless"><a href="nntplib.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code> --- NNTP 協定客戶端</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -796,10 +799,10 @@ standard installer actions.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="msvcrt.html" title="msvcrt --- Useful routines from the MS VC++ runtime"
+          <a href="nntplib.html" title="nntplib --- NNTP 協定客戶端"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="windows.html" title="MS Windows 特有服務"
+          <a href="imp.html" title="imp --- Access the import internals"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -816,8 +819,8 @@ standard installer actions.</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="windows.html" >MS Windows 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- Read and write Microsoft Installer files</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code> --- 讀寫 Microsoft Installer 檔案</a></li>
                 <li class="right">
                     
 
@@ -849,7 +852,7 @@ standard installer actions.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

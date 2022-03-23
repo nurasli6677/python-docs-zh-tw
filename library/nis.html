@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>nis --- Interface to Sun&#39;s NIS (Yellow Pages) &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nis --- Sun NIS (Yellow Pages) 介面 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="syslog --- Unix syslog library routines" href="syslog.html" />
-    <link rel="prev" title="resource --- Resource usage information" href="resource.html" />
+    <link rel="next" title="optparse --- Parser for command line options" href="optparse.html" />
+    <link rel="prev" title="nntplib --- NNTP 協定客戶端" href="nntplib.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/nis.html" />
     
       
@@ -72,13 +72,13 @@
             <div class="language_switcher_placeholder"></div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="resource.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code> --- Resource usage information</a></p>
+    <p class="topless"><a href="nntplib.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code> --- NNTP 協定客戶端</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="syslog.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">syslog</span></code> --- Unix syslog library routines</a></p>
+    <p class="topless"><a href="optparse.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code> --- Parser for command line options</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -106,10 +106,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="syslog.html" title="syslog --- Unix syslog library routines"
+          <a href="optparse.html" title="optparse --- Parser for command line options"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="resource.html" title="resource --- Resource usage information"
+          <a href="nntplib.html" title="nntplib --- NNTP 協定客戶端"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -126,8 +126,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="unix.html" accesskey="U">Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code> --- Interface to Sun's NIS (Yellow Pages)</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code> --- Sun NIS (Yellow Pages) 介面</a></li>
                 <li class="right">
                     
 
@@ -151,12 +151,15 @@
           <div class="body" role="main">
             
   <section id="module-nis">
-<span id="nis-interface-to-sun-s-nis-yellow-pages"></span><h1><a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> --- Interface to Sun's NIS (Yellow Pages)<a class="headerlink" href="#module-nis" title="本標題的永久連結">¶</a></h1>
+<span id="nis-interface-to-sun-s-nis-yellow-pages"></span><h1><a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> --- Sun NIS (Yellow Pages) 介面<a class="headerlink" href="#module-nis" title="本標題的永久連結">¶</a></h1>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
 <hr class="docutils" />
-<p>The <a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> module gives a thin wrapper around the NIS library, useful for
+<p>The <a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> module gives a thin wrapper around the NIS library, useful for
 central administration of several hosts.</p>
 <p>Because NIS exists only on Unix systems, this module is only available for Unix.</p>
-<p>The <a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> module defines the following functions:</p>
+<p>The <a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> module defines the following functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="nis.match">
 <span class="sig-prename descclassname"><span class="pre">nis.</span></span><span class="sig-name descname"><span class="pre">match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">default_domain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nis.match" title="本定義的永久連結">¶</a></dt>
@@ -194,7 +197,7 @@ unspecified, lookup is in the default NIS domain.</p>
 <dd><p>Return the system default NIS domain.</p>
 </dd></dl>
 
-<p>The <a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> module defines the following exception:</p>
+<p>The <a class="reference internal" href="#module-nis" title="nis: Interface to Sun's NIS (Yellow Pages) library.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code></a> module defines the following exception:</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="nis.error">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nis.</span></span><span class="sig-name descname"><span class="pre">error</span></span><a class="headerlink" href="#nis.error" title="本定義的永久連結">¶</a></dt>
@@ -212,13 +215,13 @@ unspecified, lookup is in the default NIS domain.</p>
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="resource.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code> --- Resource usage information</a></p>
+    <p class="topless"><a href="nntplib.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code> --- NNTP 協定客戶端</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="syslog.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">syslog</span></code> --- Unix syslog library routines</a></p>
+    <p class="topless"><a href="optparse.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code> --- Parser for command line options</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -245,10 +248,10 @@ unspecified, lookup is in the default NIS domain.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="syslog.html" title="syslog --- Unix syslog library routines"
+          <a href="optparse.html" title="optparse --- Parser for command line options"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="resource.html" title="resource --- Resource usage information"
+          <a href="nntplib.html" title="nntplib --- NNTP 協定客戶端"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -265,8 +268,8 @@ unspecified, lookup is in the default NIS domain.</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="unix.html" >Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code> --- Interface to Sun's NIS (Yellow Pages)</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">nis</span></code> --- Sun NIS (Yellow Pages) 介面</a></li>
                 <li class="right">
                     
 
@@ -298,7 +301,7 @@ unspecified, lookup is in the default NIS domain.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>xdrlib --- Encode and decode XDR data &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xdrlib --- XDR 資料的編碼與解碼 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="plistlib --- Generate and parse Apple .plist files" href="plistlib.html" />
-    <link rel="prev" title="netrc --- netrc file processing" href="netrc.html" />
+    <link rel="next" title="Undocumented Modules" href="undoc.html" />
+    <link rel="prev" title="xdrlib --- uuencode 檔案的編碼與解碼" href="uu.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/xdrlib.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- Encode and decode XDR data</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- XDR 資料的編碼與解碼</a><ul>
 <li><a class="reference internal" href="#packer-objects">Packer Objects</a></li>
 <li><a class="reference internal" href="#unpacker-objects">Unpacker Objects</a></li>
 <li><a class="reference internal" href="#exceptions">例外</a></li>
@@ -84,13 +84,13 @@
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="netrc.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">netrc</span></code> --- netrc file processing</a></p>
+    <p class="topless"><a href="uu.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- uuencode 檔案的編碼與解碼</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="plistlib.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">plistlib</span></code> --- Generate and parse Apple <code class="docutils literal notranslate"><span class="pre">.plist</span></code> files</a></p>
+    <p class="topless"><a href="undoc.html"
+                          title="下一章">Undocumented Modules</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -118,10 +118,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="plistlib.html" title="plistlib --- Generate and parse Apple .plist files"
+          <a href="undoc.html" title="Undocumented Modules"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="netrc.html" title="netrc --- netrc file processing"
+          <a href="uu.html" title="xdrlib --- uuencode 檔案的編碼與解碼"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -138,8 +138,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="fileformats.html" accesskey="U">檔案格式</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- Encode and decode XDR data</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- XDR 資料的編碼與解碼</a></li>
                 <li class="right">
                     
 
@@ -163,13 +163,16 @@
           <div class="body" role="main">
             
   <section id="module-xdrlib">
-<span id="xdrlib-encode-and-decode-xdr-data"></span><h1><a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> --- Encode and decode XDR data<a class="headerlink" href="#module-xdrlib" title="本標題的永久連結">¶</a></h1>
+<span id="xdrlib-encode-and-decode-xdr-data"></span><h1><a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> --- XDR 資料的編碼與解碼<a class="headerlink" href="#module-xdrlib" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/xdrlib.py">Lib/xdrlib.py</a></p>
-<hr class="docutils" id="index-0" />
-<p>The <a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> module supports the External Data Representation Standard as
-described in <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1014.html"><strong>RFC 1014</strong></a>, written by Sun Microsystems, Inc. June 1987.  It
+<div class="deprecated" id="index-0">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
+<hr class="docutils" />
+<p>The <a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> module supports the External Data Representation Standard as
+described in <span class="target" id="index-2"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1014.html"><strong>RFC 1014</strong></a>, written by Sun Microsystems, Inc. June 1987.  It
 supports most of the data types described in the RFC.</p>
-<p>The <a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> module defines two classes, one for packing variables into XDR
+<p>The <a class="reference internal" href="#module-xdrlib" title="xdrlib: Encoders and decoders for the External Data Representation (XDR).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code></a> module defines two classes, one for packing variables into XDR
 representation, and another for unpacking from XDR representation.  There are
 also two exception classes.</p>
 <dl class="py class">
@@ -189,10 +192,10 @@ string buffer.  The input buffer is given as <em>data</em>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-2"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1014.html"><strong>RFC 1014</strong></a> - XDR: External Data Representation Standard</dt><dd><p>This RFC defined the encoding of data which was XDR at the time this module was
-originally written.  It has apparently been obsoleted by <span class="target" id="index-3"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1832.html"><strong>RFC 1832</strong></a>.</p>
+<dt><span class="target" id="index-3"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1014.html"><strong>RFC 1014</strong></a> - XDR: External Data Representation Standard</dt><dd><p>This RFC defined the encoding of data which was XDR at the time this module was
+originally written.  It has apparently been obsoleted by <span class="target" id="index-4"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1832.html"><strong>RFC 1832</strong></a>.</p>
 </dd>
-<dt><span class="target" id="index-4"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1832.html"><strong>RFC 1832</strong></a> - XDR: External Data Representation Standard</dt><dd><p>Newer RFC that provides a revised definition of XDR.</p>
+<dt><span class="target" id="index-5"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1832.html"><strong>RFC 1832</strong></a> - XDR: External Data Representation Standard</dt><dd><p>Newer RFC that provides a revised definition of XDR.</p>
 </dd>
 </dl>
 </div>
@@ -453,7 +456,7 @@ unpacked as in <a class="reference internal" href="#xdrlib.Unpacker.unpack_farra
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- Encode and decode XDR data</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- XDR 資料的編碼與解碼</a><ul>
 <li><a class="reference internal" href="#packer-objects">Packer Objects</a></li>
 <li><a class="reference internal" href="#unpacker-objects">Unpacker Objects</a></li>
 <li><a class="reference internal" href="#exceptions">例外</a></li>
@@ -464,13 +467,13 @@ unpacked as in <a class="reference internal" href="#xdrlib.Unpacker.unpack_farra
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="netrc.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">netrc</span></code> --- netrc file processing</a></p>
+    <p class="topless"><a href="uu.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- uuencode 檔案的編碼與解碼</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="plistlib.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">plistlib</span></code> --- Generate and parse Apple <code class="docutils literal notranslate"><span class="pre">.plist</span></code> files</a></p>
+    <p class="topless"><a href="undoc.html"
+                          title="下一章">Undocumented Modules</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -497,10 +500,10 @@ unpacked as in <a class="reference internal" href="#xdrlib.Unpacker.unpack_farra
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="plistlib.html" title="plistlib --- Generate and parse Apple .plist files"
+          <a href="undoc.html" title="Undocumented Modules"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="netrc.html" title="netrc --- netrc file processing"
+          <a href="uu.html" title="xdrlib --- uuencode 檔案的編碼與解碼"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -517,8 +520,8 @@ unpacked as in <a class="reference internal" href="#xdrlib.Unpacker.unpack_farra
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="fileformats.html" >檔案格式</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- Encode and decode XDR data</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">xdrlib</span></code> --- XDR 資料的編碼與解碼</a></li>
                 <li class="right">
                     
 
@@ -550,7 +553,7 @@ unpacked as in <a class="reference internal" href="#xdrlib.Unpacker.unpack_farra
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

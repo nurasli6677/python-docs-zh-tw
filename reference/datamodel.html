@@ -1219,7 +1219,7 @@ not considered.</p>
 <span class="sig-prename descclassname"><span class="pre">object.</span></span><span class="sig-name descname"><span class="pre">__hash__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#object.__hash__" title="本定義的永久連結">¶</a></dt>
 <dd><p id="index-76">Called by built-in function <a class="reference internal" href="../library/functions.html#hash" title="hash"><code class="xref py py-func docutils literal notranslate"><span class="pre">hash()</span></code></a> and for operations on members of
 hashed collections including <a class="reference internal" href="../library/stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>, <a class="reference internal" href="../library/stdtypes.html#frozenset" title="frozenset"><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></a>, and
-<a class="reference internal" href="../library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  <a class="reference internal" href="#object.__hash__" title="object.__hash__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__hash__()</span></code></a> should return an integer. The only required
+<a class="reference internal" href="../library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  The <code class="docutils literal notranslate"><span class="pre">__hash__()</span></code> method should return an integer. The only required
 property is that objects which compare equal have the same hash value; it is
 advised to mix together the hash values of the components of the object that
 also play a part in comparison of objects by packing them into a tuple and
@@ -2848,7 +2848,7 @@ supported, which is why the reflected method is not called.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

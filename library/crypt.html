@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>crypt --- Function to check Unix passwords &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crypt --- 用於檢查 Unix 密碼的函式 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="termios --- POSIX style tty control" href="termios.html" />
-    <link rel="prev" title="grp --- The group database" href="grp.html" />
+    <link rel="next" title="imghdr --- 推測圖片種類" href="imghdr.html" />
+    <link rel="prev" title="chunk --- 讀取 IFF 分塊資料" href="chunk.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/crypt.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- Function to check Unix passwords</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- 用於檢查 Unix 密碼的函式</a><ul>
 <li><a class="reference internal" href="#hashing-methods">Hashing Methods</a></li>
 <li><a class="reference internal" href="#module-attributes">模組屬性</a></li>
 <li><a class="reference internal" href="#module-functions">模組函式</a></li>
@@ -85,13 +85,13 @@
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="grp.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></p>
+    <p class="topless"><a href="chunk.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code> --- 讀取 IFF 分塊資料</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="termios.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX style tty control</a></p>
+    <p class="topless"><a href="imghdr.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code> --- 推測圖片種類</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -119,10 +119,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="termios.html" title="termios --- POSIX style tty control"
+          <a href="imghdr.html" title="imghdr --- 推測圖片種類"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="grp.html" title="grp --- The group database"
+          <a href="chunk.html" title="chunk --- 讀取 IFF 分塊資料"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -139,8 +139,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="unix.html" accesskey="U">Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- Function to check Unix passwords</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- 用於檢查 Unix 密碼的函式</a></li>
                 <li class="right">
                     
 
@@ -164,15 +164,18 @@
           <div class="body" role="main">
             
   <section id="module-crypt">
-<span id="crypt-function-to-check-unix-passwords"></span><h1><a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> --- Function to check Unix passwords<a class="headerlink" href="#module-crypt" title="本標題的永久連結">¶</a></h1>
+<span id="crypt-function-to-check-unix-passwords"></span><h1><a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> --- 用於檢查 Unix 密碼的函式<a class="headerlink" href="#module-crypt" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/crypt.py">Lib/crypt.py</a></p>
-<hr class="docutils" id="index-0" />
+<div class="deprecated" id="index-0">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
+<hr class="docutils" />
 <p>This module implements an interface to the <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/crypt(3)">crypt(3)</a></em> routine, which is
 a one-way hash function based upon a modified DES algorithm; see the Unix man
 page for further details.  Possible uses include storing hashed passwords
 so you can check passwords without storing the actual password, or attempting
 to crack Unix passwords with a dictionary.</p>
-<p id="index-1">Notice that the behavior of this module depends on the actual implementation  of
+<p id="index-2">Notice that the behavior of this module depends on the actual implementation  of
 the <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/crypt(3)">crypt(3)</a></em> routine in the running system.  Therefore, any
 extensions available on the current implementation will also  be available on
 this module.</p>
@@ -182,7 +185,7 @@ this module.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
-<p>The <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> module defines the list of hashing methods (not all methods
+<p>The <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> module defines the list of hashing methods (not all methods
 are available on all platforms):</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="crypt.METHOD_SHA512">
@@ -239,7 +242,7 @@ weakest.</p>
 </section>
 <section id="module-functions">
 <h2>模組函式<a class="headerlink" href="#module-functions" title="本標題的永久連結">¶</a></h2>
-<p><a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> 模組定義了以下函式：</p>
+<p><a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> 模組定義了以下函式：</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="crypt.crypt">
 <span class="sig-prename descclassname"><span class="pre">crypt.</span></span><span class="sig-name descname"><span class="pre">crypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">salt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#crypt.crypt" title="本定義的永久連結">¶</a></dt>
@@ -251,7 +254,7 @@ including salt, as returned by this function.  If <em>salt</em> is not
 provided, the strongest method will be used (as returned by
 <a class="reference internal" href="#crypt.methods" title="crypt.methods"><code class="xref py py-func docutils literal notranslate"><span class="pre">methods()</span></code></a>).</p>
 <p>Checking a password is usually done by passing the plain-text password
-as <em>word</em> and the full results of a previous <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords. (Unix)"><code class="xref py py-func docutils literal notranslate"><span class="pre">crypt()</span></code></a> call,
+as <em>word</em> and the full results of a previous <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-func docutils literal notranslate"><span class="pre">crypt()</span></code></a> call,
 which should be the same as the results of this call.</p>
 <p><em>salt</em> (either a random 2 or 16 character string, possibly prefixed with
 <code class="docutils literal notranslate"><span class="pre">$digit$</span></code> to indicate the method) which will be used to perturb the
@@ -260,7 +263,7 @@ encryption algorithm.  The characters in <em>salt</em> must be in the set
 prefixes a <code class="docutils literal notranslate"><span class="pre">$digit$</span></code>.</p>
 <p>Returns the hashed password as a string, which will be composed of
 characters from the same alphabet as the salt.</p>
-<p id="index-2">Since a few <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/crypt(3)">crypt(3)</a></em> extensions allow different values, with
+<p id="index-3">Since a few <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/crypt(3)">crypt(3)</a></em> extensions allow different values, with
 different sizes in the <em>salt</em>, it is recommended to use  the full crypted
 password as salt when checking for a password.</p>
 <div class="versionchanged">
@@ -275,7 +278,7 @@ password as salt when checking for a password.</p>
 <em>method</em> is given, the strongest method available as returned by
 <a class="reference internal" href="#crypt.methods" title="crypt.methods"><code class="xref py py-func docutils literal notranslate"><span class="pre">methods()</span></code></a> is used.</p>
 <p>The return value is a string suitable for passing as the <em>salt</em> argument
-to <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords. (Unix)"><code class="xref py py-func docutils literal notranslate"><span class="pre">crypt()</span></code></a>.</p>
+to <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-func docutils literal notranslate"><span class="pre">crypt()</span></code></a>.</p>
 <p><em>rounds</em> specifies the number of rounds for <code class="docutils literal notranslate"><span class="pre">METHOD_SHA256</span></code>,
 <code class="docutils literal notranslate"><span class="pre">METHOD_SHA512</span></code> and <code class="docutils literal notranslate"><span class="pre">METHOD_BLOWFISH</span></code>.
 For <code class="docutils literal notranslate"><span class="pre">METHOD_SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">METHOD_SHA512</span></code> it must be an integer between
@@ -337,7 +340,7 @@ check it against the original:</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- Function to check Unix passwords</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- 用於檢查 Unix 密碼的函式</a><ul>
 <li><a class="reference internal" href="#hashing-methods">Hashing Methods</a></li>
 <li><a class="reference internal" href="#module-attributes">模組屬性</a></li>
 <li><a class="reference internal" href="#module-functions">模組函式</a></li>
@@ -349,13 +352,13 @@ check it against the original:</p>
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="grp.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></p>
+    <p class="topless"><a href="chunk.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code> --- 讀取 IFF 分塊資料</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="termios.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX style tty control</a></p>
+    <p class="topless"><a href="imghdr.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code> --- 推測圖片種類</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -382,10 +385,10 @@ check it against the original:</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="termios.html" title="termios --- POSIX style tty control"
+          <a href="imghdr.html" title="imghdr --- 推測圖片種類"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="grp.html" title="grp --- The group database"
+          <a href="chunk.html" title="chunk --- 讀取 IFF 分塊資料"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -402,8 +405,8 @@ check it against the original:</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="unix.html" >Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- Function to check Unix passwords</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- 用於檢查 Unix 密碼的函式</a></li>
                 <li class="right">
                     
 
@@ -435,7 +438,7 @@ check it against the original:</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

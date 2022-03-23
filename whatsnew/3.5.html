@@ -2000,7 +2000,7 @@ accepts <code class="docutils literal notranslate"><span class="pre">&quot;x&quo
 </section>
 <section id="other-module-level-changes">
 <h2>Other module-level changes<a class="headerlink" href="#other-module-level-changes" title="本標題的永久連結">¶</a></h2>
-<p>Many functions in the <a class="reference internal" href="../library/mmap.html#module-mmap" title="mmap: Interface to memory-mapped files for Unix and Windows."><code class="xref py py-mod docutils literal notranslate"><span class="pre">mmap</span></code></a>, <a class="reference internal" href="../library/ossaudiodev.html#module-ossaudiodev" title="ossaudiodev: Access to OSS-compatible audio devices. (Linux, FreeBSD)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ossaudiodev</span></code></a>, <a class="reference internal" href="../library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a>,
+<p>Many functions in the <a class="reference internal" href="../library/mmap.html#module-mmap" title="mmap: Interface to memory-mapped files for Unix and Windows."><code class="xref py py-mod docutils literal notranslate"><span class="pre">mmap</span></code></a>, <a class="reference internal" href="../library/ossaudiodev.html#module-ossaudiodev" title="ossaudiodev: Access to OSS-compatible audio devices.（已棄用） (Linux, FreeBSD)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ossaudiodev</span></code></a>, <a class="reference internal" href="../library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a>,
 <a class="reference internal" href="../library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a>, and <a class="reference internal" href="../library/codecs.html#module-codecs" title="codecs: Encode and decode data and streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code></a> modules now accept writable
 <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like objects</span></a>.
 (Contributed by Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue23001">bpo-23001</a>.)</p>
@@ -2158,7 +2158,7 @@ for details.</p>
 slated for removal in Python 3.6.</p>
 <p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.async()</span></code> function is deprecated in favor of
 <a class="reference internal" href="../library/asyncio-future.html#asyncio.ensure_future" title="asyncio.ensure_future"><code class="xref py py-func docutils literal notranslate"><span class="pre">ensure_future()</span></code></a>.</p>
-<p>The <a class="reference internal" href="../library/smtpd.html#module-smtpd" title="smtpd: A SMTP server implementation in Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtpd</span></code></a> module has in the past always decoded the DATA portion of
+<p>The <a class="reference internal" href="../library/smtpd.html#module-smtpd" title="smtpd: A SMTP server implementation in Python.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtpd</span></code></a> module has in the past always decoded the DATA portion of
 email messages using the <code class="docutils literal notranslate"><span class="pre">utf-8</span></code> codec.  This can now be controlled by the
 new <em>decode_data</em> keyword to <a class="reference internal" href="../library/smtpd.html#smtpd.SMTPServer" title="smtpd.SMTPServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTPServer</span></code></a>.  The default value is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>, but this default is deprecated.  Specify the <em>decode_data</em> keyword
@@ -2628,7 +2628,7 @@ of generated files by updating their modification times has been removed.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

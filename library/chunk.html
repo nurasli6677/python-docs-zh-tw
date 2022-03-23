@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>chunk --- Read IFF chunked data &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chunk --- 讀取 IFF 分塊資料 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="colorsys --- 顏色系統間的轉換" href="colorsys.html" />
-    <link rel="prev" title="wave --- Read and write WAV files" href="wave.html" />
+    <link rel="next" title="crypt --- 用於檢查 Unix 密碼的函式" href="crypt.html" />
+    <link rel="prev" title="cgitb --- CGI 腳本的回溯 (traceback) 管理程式" href="cgitb.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/chunk.html" />
     
       
@@ -72,13 +72,13 @@
             <div class="language_switcher_placeholder"></div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="wave.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">wave</span></code> --- Read and write WAV files</a></p>
+    <p class="topless"><a href="cgitb.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- CGI 腳本的回溯 (traceback) 管理程式</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="colorsys.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">colorsys</span></code> --- 顏色系統間的轉換</a></p>
+    <p class="topless"><a href="crypt.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- 用於檢查 Unix 密碼的函式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -106,10 +106,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="colorsys.html" title="colorsys --- 顏色系統間的轉換"
+          <a href="crypt.html" title="crypt --- 用於檢查 Unix 密碼的函式"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="wave.html" title="wave --- Read and write WAV files"
+          <a href="cgitb.html" title="cgitb --- CGI 腳本的回溯 (traceback) 管理程式"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -126,8 +126,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="mm.html" accesskey="U">Multimedia Services</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code> --- Read IFF chunked data</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code> --- 讀取 IFF 分塊資料</a></li>
                 <li class="right">
                     
 
@@ -151,9 +151,12 @@
           <div class="body" role="main">
             
   <section id="module-chunk">
-<span id="chunk-read-iff-chunked-data"></span><h1><a class="reference internal" href="#module-chunk" title="chunk: Module to read IFF chunks."><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code></a> --- Read IFF chunked data<a class="headerlink" href="#module-chunk" title="本標題的永久連結">¶</a></h1>
+<span id="chunk-read-iff-chunked-data"></span><h1><a class="reference internal" href="#module-chunk" title="chunk: Module to read IFF chunks.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code></a> --- 讀取 IFF 分塊資料<a class="headerlink" href="#module-chunk" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/chunk.py">Lib/chunk.py</a></p>
-<hr class="docutils" id="index-0" />
+<div class="deprecated" id="index-0">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-chunk" title="chunk: Module to read IFF chunks.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
+<hr class="docutils" />
 <p>This module provides an interface for reading files that use EA IFF 85 chunks.
 <a class="footnote-reference brackets" href="#id2" id="id1">1</a>  This format is used in at least the Audio Interchange File Format
 (AIFF/AIFF-C) and the Real Media File Format (RMFF).  The WAVE audio file format
@@ -304,13 +307,13 @@ Arts, January 1985.</p>
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="wave.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">wave</span></code> --- Read and write WAV files</a></p>
+    <p class="topless"><a href="cgitb.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- CGI 腳本的回溯 (traceback) 管理程式</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="colorsys.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">colorsys</span></code> --- 顏色系統間的轉換</a></p>
+    <p class="topless"><a href="crypt.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code> --- 用於檢查 Unix 密碼的函式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -337,10 +340,10 @@ Arts, January 1985.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="colorsys.html" title="colorsys --- 顏色系統間的轉換"
+          <a href="crypt.html" title="crypt --- 用於檢查 Unix 密碼的函式"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="wave.html" title="wave --- Read and write WAV files"
+          <a href="cgitb.html" title="cgitb --- CGI 腳本的回溯 (traceback) 管理程式"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -357,8 +360,8 @@ Arts, January 1985.</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="mm.html" >Multimedia Services</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code> --- Read IFF chunked data</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">chunk</span></code> --- 讀取 IFF 分塊資料</a></li>
                 <li class="right">
                     
 
@@ -390,7 +393,7 @@ Arts, January 1985.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

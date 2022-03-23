@@ -820,7 +820,7 @@ with home directories for users with non-ASCII characters in their usernames.</p
 <p>Python's standard library has undergone significant maintenance efforts and
 quality improvements.</p>
 <p>The biggest news for Python 3.2 is that the <a class="reference internal" href="../library/email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code></a> package, <a class="reference internal" href="../library/mailbox.html#module-mailbox" title="mailbox: Manipulate mailboxes in various formats"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mailbox</span></code></a>
-module, and <a class="reference internal" href="../library/nntplib.html#module-nntplib" title="nntplib: NNTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> modules now work correctly with the bytes/text model
+module, and <a class="reference internal" href="../library/nntplib.html#module-nntplib" title="nntplib: NNTP protocol client (requires sockets).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> modules now work correctly with the bytes/text model
 in Python 3.  For the first time, there is correct handling of messages with
 mixed encodings.</p>
 <p>Throughout the standard library, there has been more careful attention to
@@ -1739,7 +1739,7 @@ attributes <a class="reference internal" href="../library/ssl.html#ssl.OPENSSL_V
 </section>
 <section id="nntp">
 <h3>nntp<a class="headerlink" href="#nntp" title="本標題的永久連結">¶</a></h3>
-<p>The <a class="reference internal" href="../library/nntplib.html#module-nntplib" title="nntplib: NNTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> module has a revamped implementation with better bytes and
+<p>The <a class="reference internal" href="../library/nntplib.html#module-nntplib" title="nntplib: NNTP protocol client (requires sockets).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> module has a revamped implementation with better bytes and
 text semantics as well as more practical APIs.  These improvements break
 compatibility with the nntplib version in Python 3.1, which was partly
 dysfunctional in itself.</p>
@@ -2609,7 +2609,7 @@ keeps comment prefix characters in values from being mistaken as comments.</p></
 empty string. For empty strings, use <code class="docutils literal notranslate"><span class="pre">&quot;option</span> <span class="pre">=&quot;</span></code> in a line.</p></li>
 </ul>
 </li>
-<li><p>The <a class="reference internal" href="../library/nntplib.html#module-nntplib" title="nntplib: NNTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> module was reworked extensively, meaning that its APIs
+<li><p>The <a class="reference internal" href="../library/nntplib.html#module-nntplib" title="nntplib: NNTP protocol client (requires sockets).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> module was reworked extensively, meaning that its APIs
 are often incompatible with the 3.1 APIs.</p></li>
 <li><p><a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> objects can no longer be used as filenames; instead,
 they should be converted to <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>.</p></li>
@@ -2870,7 +2870,7 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

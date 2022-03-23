@@ -335,8 +335,9 @@ the program, or returns to its interactive main loop.  In either case, it prints
 a stack traceback, except when the exception is <a class="reference internal" href="../library/exceptions.html#SystemExit" title="SystemExit"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a>.</p>
 <p>Exceptions are identified by class instances.  The <a class="reference internal" href="compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> clause is
 selected depending on the class of the instance: it must reference the class of
-the instance or a base class thereof.  The instance can be received by the
-handler and can carry additional information about the exceptional condition.</p>
+the instance or a <a class="reference internal" href="../glossary.html#term-abstract-base-class"><span class="xref std std-term">non-virtual base class</span></a> thereof.
+The instance can be received by the handler and can carry additional information
+about the exceptional condition.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>Exception messages are not part of the Python API.  Their contents may change
@@ -467,7 +468,7 @@ is not available at the time the module is compiled.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

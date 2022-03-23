@@ -184,9 +184,9 @@ strong, and should not be used for authentication or digital signatures.  Since
 the algorithm is designed for use as a checksum algorithm, it is not suitable
 for use as a general hash algorithm.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.0 版本變更: </span>Always returns an unsigned value.
-To generate the same numeric value across all Python versions and
-platforms, use <code class="docutils literal notranslate"><span class="pre">adler32(data)</span> <span class="pre">&amp;</span> <span class="pre">0xffffffff</span></code>.</p>
+<p><span class="versionmodified changed">在 3.0 版本變更: </span>The result is always unsigned.
+To generate the same numeric value when using Python 2 or earlier,
+use <code class="docutils literal notranslate"><span class="pre">adler32(data)</span> <span class="pre">&amp;</span> <span class="pre">0xffffffff</span></code>.</p>
 </div>
 </dd></dl>
 
@@ -261,9 +261,9 @@ strong, and should not be used for authentication or digital signatures.  Since
 the algorithm is designed for use as a checksum algorithm, it is not suitable
 for use as a general hash algorithm.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.0 版本變更: </span>Always returns an unsigned value.
-To generate the same numeric value across all Python versions and
-platforms, use <code class="docutils literal notranslate"><span class="pre">crc32(data)</span> <span class="pre">&amp;</span> <span class="pre">0xffffffff</span></code>.</p>
+<p><span class="versionmodified changed">在 3.0 版本變更: </span>The result is always unsigned.
+To generate the same numeric value when using Python 2 or earlier,
+use <code class="docutils literal notranslate"><span class="pre">crc32(data)</span> <span class="pre">&amp;</span> <span class="pre">0xffffffff</span></code>.</p>
 </div>
 </dd></dl>
 
@@ -565,7 +565,7 @@ functions.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

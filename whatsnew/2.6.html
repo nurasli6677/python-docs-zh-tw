@@ -1798,7 +1798,7 @@ changes, sorted alphabetically by module name. Consult the
 <code class="file docutils literal notranslate"><span class="pre">Misc/NEWS</span></code> file in the source tree for a more complete list of
 changes, or look through the Subversion logs for all the details.</p>
 <ul>
-<li><p>The <a class="reference internal" href="../library/asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a> and <a class="reference internal" href="../library/asynchat.html#module-asynchat" title="asynchat: Support for asynchronous command/response protocols."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> modules are
+<li><p>The <a class="reference internal" href="../library/asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a> and <a class="reference internal" href="../library/asynchat.html#module-asynchat" title="asynchat: Support for asynchronous command/response protocols.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asynchat</span></code></a> modules are
 being actively maintained again, and a number of patches and bugfixes
 were applied.  (Maintained by Josiah Carlson; see <a class="reference external" href="https://bugs.python.org/issue1736190">bpo-1736190</a> for
 one patch.)</p></li>
@@ -1812,14 +1812,14 @@ Python's.</p>
 available, instead of restricting itself to protocol 1.
 (Contributed by W. Barnes.)</p>
 </li>
-<li><p>The <a class="reference internal" href="../library/cgi.html#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module will now read variables from the query string
+<li><p>The <a class="reference internal" href="../library/cgi.html#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module will now read variables from the query string
 of an HTTP POST request.  This makes it possible to use form actions
 with URLs that include query strings such as
 &quot;/cgi-bin/add.py?category=1&quot;.  (Contributed by Alexandre Fiori and
 Nubis; <a class="reference external" href="https://bugs.python.org/issue1817">bpo-1817</a>.)</p>
 <p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">parse_qs()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">parse_qsl()</span></code> functions have been
-relocated from the <a class="reference internal" href="../library/cgi.html#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module to the <code class="xref py py-mod docutils literal notranslate"><span class="pre">urlparse</span></code> module.
-The versions still available in the <a class="reference internal" href="../library/cgi.html#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module will
+relocated from the <a class="reference internal" href="../library/cgi.html#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module to the <code class="xref py py-mod docutils literal notranslate"><span class="pre">urlparse</span></code> module.
+The versions still available in the <a class="reference internal" href="../library/cgi.html#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module will
 trigger <a class="reference internal" href="../library/exceptions.html#PendingDeprecationWarning" title="PendingDeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a> messages in 2.6
 (<a class="reference external" href="https://bugs.python.org/issue600362">bpo-600362</a>).</p>
 </li>
@@ -2989,7 +2989,7 @@ and <code class="xref py py-func docutils literal notranslate"><span class="pre"
 registry reflection for 32-bit processes running on 64-bit systems.
 (<a class="reference external" href="https://bugs.python.org/issue1753245">bpo-1753245</a>)</p>
 </li>
-<li><p>The <a class="reference internal" href="../library/msilib.html#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> module's <code class="xref py py-class docutils literal notranslate"><span class="pre">Record</span></code> object
+<li><p>The <a class="reference internal" href="../library/msilib.html#module-msilib" title="msilib: Creation of Microsoft Installer files, and CAB files.（已棄用） (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msilib</span></code></a> module's <code class="xref py py-class docutils literal notranslate"><span class="pre">Record</span></code> object
 gained <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetInteger()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetString()</span></code> methods that
 return field values as an integer or a string.
 (Contributed by Floris Bruynooghe; <a class="reference external" href="https://bugs.python.org/issue2125">bpo-2125</a>.)</p></li>
@@ -3298,7 +3298,7 @@ Antoine Pitrou, Brian Warner.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

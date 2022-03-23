@@ -264,7 +264,7 @@ object as necessary.  The default encoding is base64.  See the
 <p>A subclass of <a class="reference internal" href="#email.mime.nonmultipart.MIMENonMultipart" title="email.mime.nonmultipart.MIMENonMultipart"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMENonMultipart</span></code></a>, the
 <a class="reference internal" href="#email.mime.audio.MIMEAudio" title="email.mime.audio.MIMEAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEAudio</span></code></a> class is used to create MIME message objects of major type
 <em class="mimetype">audio</em>. <em>_audiodata</em> is a string containing the raw audio data.  If
-this data can be decoded by the standard Python module <a class="reference internal" href="sndhdr.html#module-sndhdr" title="sndhdr: Determine type of a sound file."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sndhdr</span></code></a>, then the
+this data can be decoded by the standard Python module <a class="reference internal" href="sndhdr.html#module-sndhdr" title="sndhdr: Determine type of a sound file.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sndhdr</span></code></a>, then the
 subtype will be automatically included in the <em class="mailheader">Content-Type</em> header.
 Otherwise you can explicitly specify the audio subtype via the <em>_subtype</em>
 argument.  If the minor type could not be guessed and <em>_subtype</em> was not given,
@@ -292,7 +292,7 @@ object as necessary.  The default encoding is base64.  See the
 <p>A subclass of <a class="reference internal" href="#email.mime.nonmultipart.MIMENonMultipart" title="email.mime.nonmultipart.MIMENonMultipart"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMENonMultipart</span></code></a>, the
 <a class="reference internal" href="#email.mime.image.MIMEImage" title="email.mime.image.MIMEImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEImage</span></code></a> class is used to create MIME message objects of major type
 <em class="mimetype">image</em>. <em>_imagedata</em> is a string containing the raw image data.  If
-this data can be decoded by the standard Python module <a class="reference internal" href="imghdr.html#module-imghdr" title="imghdr: Determine the type of image contained in a file or byte stream."><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code></a>, then the
+this data can be decoded by the standard Python module <a class="reference internal" href="imghdr.html#module-imghdr" title="imghdr: Determine the type of image contained in a file or byte stream.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code></a>, then the
 subtype will be automatically included in the <em class="mailheader">Content-Type</em> header.
 Otherwise you can explicitly specify the image subtype via the <em>_subtype</em>
 argument.  If the minor type could not be guessed and <em>_subtype</em> was not given,
@@ -460,7 +460,7 @@ will automatically encode the new payload (and add a new
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

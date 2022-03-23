@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>cgi --- Common Gateway Interface support &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cgi --- 通用閘道器介面支援 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="cgitb --- Traceback manager for CGI scripts" href="cgitb.html" />
-    <link rel="prev" title="webbrowser --- Convenient web-browser controller" href="webbrowser.html" />
+    <link rel="next" title="cgitb --- CGI 腳本的回溯 (traceback) 管理程式" href="cgitb.html" />
+    <link rel="prev" title="audioop --- 操作原始聲音檔案" href="audioop.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/cgi.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- Common Gateway Interface support</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- 通用閘道器介面支援</a><ul>
 <li><a class="reference internal" href="#introduction">簡介</a></li>
 <li><a class="reference internal" href="#using-the-cgi-module">Using the cgi module</a></li>
 <li><a class="reference internal" href="#higher-level-interface">Higher Level Interface</a></li>
@@ -90,13 +90,13 @@
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="webbrowser.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">webbrowser</span></code> --- Convenient web-browser controller</a></p>
+    <p class="topless"><a href="audioop.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code> --- 操作原始聲音檔案</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="cgitb.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- Traceback manager for CGI scripts</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- CGI 腳本的回溯 (traceback) 管理程式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -124,10 +124,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="cgitb.html" title="cgitb --- Traceback manager for CGI scripts"
+          <a href="cgitb.html" title="cgitb --- CGI 腳本的回溯 (traceback) 管理程式"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="webbrowser.html" title="webbrowser --- Convenient web-browser controller"
+          <a href="audioop.html" title="audioop --- 操作原始聲音檔案"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -144,8 +144,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="internet.html" accesskey="U">Internet Protocols and Support</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- Common Gateway Interface support</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- 通用閘道器介面支援</a></li>
                 <li class="right">
                     
 
@@ -169,9 +169,12 @@
           <div class="body" role="main">
             
   <section id="module-cgi">
-<span id="cgi-common-gateway-interface-support"></span><h1><a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> --- Common Gateway Interface support<a class="headerlink" href="#module-cgi" title="本標題的永久連結">¶</a></h1>
+<span id="cgi-common-gateway-interface-support"></span><h1><a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> --- 通用閘道器介面支援<a class="headerlink" href="#module-cgi" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/cgi.py">Lib/cgi.py</a></p>
-<hr class="docutils" id="index-0" />
+<div class="deprecated" id="index-0">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
+<hr class="docutils" />
 <p>Support module for Common Gateway Interface (CGI) scripts.</p>
 <p>This module defines a number of utilities for use by CGI scripts written in
 Python.</p>
@@ -224,7 +227,7 @@ instead, with code like this:</p>
 </pre></div>
 </div>
 <p>It's very helpful to use this feature during script development. The reports
-produced by <a class="reference internal" href="cgitb.html#module-cgitb" title="cgitb: Configurable traceback handler for CGI scripts."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code></a> provide information that can save you a lot of time in
+produced by <a class="reference internal" href="cgitb.html#module-cgitb" title="cgitb: Configurable traceback handler for CGI scripts.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code></a> provide information that can save you a lot of time in
 tracking down bugs.  You can always remove the <code class="docutils literal notranslate"><span class="pre">cgitb</span></code> line later when you
 have tested your script and are confident that it works correctly.</p>
 <p>To get at submitted form data, use the <code class="xref py py-class docutils literal notranslate"><span class="pre">FieldStorage</span></code> class. If the form
@@ -471,7 +474,7 @@ formats all information provided to the script in HTML format.</p>
 </section>
 <section id="caring-about-security">
 <span id="cgi-security"></span><h2>Caring about security<a class="headerlink" href="#caring-about-security" title="本標題的永久連結">¶</a></h2>
-<p id="index-1">There's one important rule: if you invoke an external program (via
+<p id="index-2">There's one important rule: if you invoke an external program (via
 <a class="reference internal" href="os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>, <a class="reference internal" href="os.html#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code></a> or other functions with similar
 functionality), make very sure you don't pass arbitrary strings received from
 the client to the shell.  This is a well-known security hole whereby clever
@@ -503,8 +506,8 @@ privileges.  It can only read (write, execute) files that everybody can read
 (write, execute).  The current directory at execution time is also different (it
 is usually the server's cgi-bin directory) and the set of environment variables
 is also different from what you get when you log in.  In particular, don't count
-on the shell's search path for executables (<span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>) or the Python module
-search path (<span class="target" id="index-3"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a>) to be set to anything interesting.</p>
+on the shell's search path for executables (<span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>) or the Python module
+search path (<span class="target" id="index-4"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a>) to be set to anything interesting.</p>
 <p>If you need to load modules from a directory which is not on Python's default
 module search path, you can change the path in your script, before importing
 other modules.  For example:</p>
@@ -530,7 +533,7 @@ choice but to read the next section.</p>
 </section>
 <section id="debugging-cgi-scripts">
 <h2>Debugging CGI scripts<a class="headerlink" href="#debugging-cgi-scripts" title="本標題的永久連結">¶</a></h2>
-<p id="index-4">First of all, check for trivial installation errors --- reading the section
+<p id="index-5">First of all, check for trivial installation errors --- reading the section
 above on installing your CGI script carefully can save you a lot of time.  If
 you wonder whether you have understood the installation procedure correctly, try
 installing a copy of this module file (<code class="file docutils literal notranslate"><span class="pre">cgi.py</span></code>) as a CGI script.  When
@@ -549,7 +552,7 @@ content (in this example, the fields should be listed as &quot;addr&quot; with v
 Home&quot; and &quot;name&quot; with value &quot;Joe Blow&quot;), the <code class="file docutils literal notranslate"><span class="pre">cgi.py</span></code> script has been
 installed correctly.  If you follow the same procedure for your own script, you
 should now be able to debug it.</p>
-<p>The next step could be to call the <a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module's <a class="reference internal" href="test.html#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-func docutils literal notranslate"><span class="pre">test()</span></code></a> function
+<p>The next step could be to call the <a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> module's <a class="reference internal" href="test.html#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-func docutils literal notranslate"><span class="pre">test()</span></code></a> function
 from your script: replace its main code with the single statement</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cgi</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 </pre></div>
@@ -563,7 +566,7 @@ interpreter will still do this when your CGI script raises an exception, most
 likely the traceback will end up in one of the HTTP server's log files, or be
 discarded altogether.</p>
 <p>Fortunately, once you have managed to get your script to execute <em>some</em> code,
-you can easily send tracebacks to the web browser using the <a class="reference internal" href="cgitb.html#module-cgitb" title="cgitb: Configurable traceback handler for CGI scripts."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code></a> module.
+you can easily send tracebacks to the web browser using the <a class="reference internal" href="cgitb.html#module-cgitb" title="cgitb: Configurable traceback handler for CGI scripts.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code></a> module.
 If you haven't done so already, just add the lines:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cgitb</span>
 <span class="n">cgitb</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
@@ -572,7 +575,7 @@ If you haven't done so already, just add the lines:</p>
 <p>to the top of your script.  Then try running it again; when a problem occurs,
 you should see a detailed report that will likely make apparent the cause of the
 crash.</p>
-<p>If you suspect that there may be a problem in importing the <a class="reference internal" href="cgitb.html#module-cgitb" title="cgitb: Configurable traceback handler for CGI scripts."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code></a> module,
+<p>If you suspect that there may be a problem in importing the <a class="reference internal" href="cgitb.html#module-cgitb" title="cgitb: Configurable traceback handler for CGI scripts.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code></a> module,
 you can use an even more robust approach (which only uses built-in modules):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span>
@@ -602,7 +605,7 @@ may be useful!)</p></li>
 <li><p>If your script does not have any syntax errors, try adding <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cgitb;</span>
 <span class="pre">cgitb.enable()</span></code> to the top of the script.</p></li>
 <li><p>When invoking external programs, make sure they can be found. Usually, this
-means using absolute path names --- <span class="target" id="index-5"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code> is usually not set to a very
+means using absolute path names --- <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code> is usually not set to a very
 useful value in a CGI script.</p></li>
 <li><p>When reading or writing external files, make sure they can be read or written
 by the userid under which your CGI script will be running: this is typically the
@@ -633,7 +636,7 @@ tedious and error-prone.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- Common Gateway Interface support</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- 通用閘道器介面支援</a><ul>
 <li><a class="reference internal" href="#introduction">簡介</a></li>
 <li><a class="reference internal" href="#using-the-cgi-module">Using the cgi module</a></li>
 <li><a class="reference internal" href="#higher-level-interface">Higher Level Interface</a></li>
@@ -650,13 +653,13 @@ tedious and error-prone.</p>
   </div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="webbrowser.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">webbrowser</span></code> --- Convenient web-browser controller</a></p>
+    <p class="topless"><a href="audioop.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code> --- 操作原始聲音檔案</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="cgitb.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- Traceback manager for CGI scripts</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- CGI 腳本的回溯 (traceback) 管理程式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -683,10 +686,10 @@ tedious and error-prone.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="cgitb.html" title="cgitb --- Traceback manager for CGI scripts"
+          <a href="cgitb.html" title="cgitb --- CGI 腳本的回溯 (traceback) 管理程式"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="webbrowser.html" title="webbrowser --- Convenient web-browser controller"
+          <a href="audioop.html" title="audioop --- 操作原始聲音檔案"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -703,8 +706,8 @@ tedious and error-prone.</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="internet.html" >Internet Protocols and Support</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- Common Gateway Interface support</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code> --- 通用閘道器介面支援</a></li>
                 <li class="right">
                     
 
@@ -736,7 +739,7 @@ tedious and error-prone.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

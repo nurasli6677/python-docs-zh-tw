@@ -757,12 +757,12 @@ by Lucas Maystre in <a class="reference external" href="https://bugs.python.org/
 </section>
 <section id="audioop">
 <h3>audioop<a class="headerlink" href="#audioop" title="本標題的永久連結">¶</a></h3>
-<p><a class="reference internal" href="../library/audioop.html#module-audioop" title="audioop: Manipulate raw audio data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code></a> now supports 24-bit samples.  (Contributed by Serhiy Storchaka
+<p><a class="reference internal" href="../library/audioop.html#module-audioop" title="audioop: Manipulate raw audio data.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code></a> now supports 24-bit samples.  (Contributed by Serhiy Storchaka
 in <a class="reference external" href="https://bugs.python.org/issue12866">bpo-12866</a>.)</p>
 <p>New <a class="reference internal" href="../library/audioop.html#audioop.byteswap" title="audioop.byteswap"><code class="xref py py-func docutils literal notranslate"><span class="pre">byteswap()</span></code></a> function converts big-endian samples to
 little-endian and vice versa.  (Contributed by Serhiy Storchaka in
 <a class="reference external" href="https://bugs.python.org/issue19641">bpo-19641</a>.)</p>
-<p>All <a class="reference internal" href="../library/audioop.html#module-audioop" title="audioop: Manipulate raw audio data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code></a> functions now accept any <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>.  Strings
+<p>All <a class="reference internal" href="../library/audioop.html#module-audioop" title="audioop: Manipulate raw audio data.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code></a> functions now accept any <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>.  Strings
 are not accepted: they didn't work before, now they raise an error right away.
 (Contributed by Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue16685">bpo-16685</a>.)</p>
 </section>
@@ -2207,7 +2207,7 @@ the <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 to be matched is a <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>.  Previously the return type
 matched the input type, so if your code was depending on the return value
 being, say, a <code class="docutils literal notranslate"><span class="pre">bytearray</span></code>, you will need to change your code.</p></li>
-<li><p><a class="reference internal" href="../library/audioop.html#module-audioop" title="audioop: Manipulate raw audio data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code></a> functions now raise an error immediately if passed string
+<li><p><a class="reference internal" href="../library/audioop.html#module-audioop" title="audioop: Manipulate raw audio data.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">audioop</span></code></a> functions now raise an error immediately if passed string
 input, instead of failing randomly later on (<a class="reference external" href="https://bugs.python.org/issue16685">bpo-16685</a>).</p></li>
 <li><p>The new <em>convert_charrefs</em> argument to <a class="reference internal" href="../library/html.parser.html#html.parser.HTMLParser" title="html.parser.HTMLParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLParser</span></code></a>
 currently defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code> for backward compatibility, but will
@@ -2530,7 +2530,7 @@ alternate context:</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

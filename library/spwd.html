@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>spwd --- The shadow password database &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spwd --- shadow 密碼資料庫 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -26,8 +26,8 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="grp --- The group database" href="grp.html" />
-    <link rel="prev" title="pwd --- The password database" href="pwd.html" />
+    <link rel="next" title="sunau --- 讀寫 Sun AU 檔案" href="sunau.html" />
+    <link rel="prev" title="imghdr --- 推測音檔種類" href="sndhdr.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/spwd.html" />
     
       
@@ -72,13 +72,13 @@
             <div class="language_switcher_placeholder"></div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="pwd.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code> --- The password database</a></p>
+    <p class="topless"><a href="sndhdr.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code> --- 推測音檔種類</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="grp.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></p>
+    <p class="topless"><a href="sunau.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sunau</span></code> --- 讀寫 Sun AU 檔案</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -106,10 +106,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="grp.html" title="grp --- The group database"
+          <a href="sunau.html" title="sunau --- 讀寫 Sun AU 檔案"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="pwd.html" title="pwd --- The password database"
+          <a href="sndhdr.html" title="imghdr --- 推測音檔種類"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -126,8 +126,8 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="unix.html" accesskey="U">Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code> --- The shadow password database</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" accesskey="U">已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code> --- shadow 密碼資料庫</a></li>
                 <li class="right">
                     
 
@@ -151,7 +151,10 @@
           <div class="body" role="main">
             
   <section id="module-spwd">
-<span id="spwd-the-shadow-password-database"></span><h1><a class="reference internal" href="#module-spwd" title="spwd: The shadow password database (getspnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code></a> --- The shadow password database<a class="headerlink" href="#module-spwd" title="本標題的永久連結">¶</a></h1>
+<span id="spwd-the-shadow-password-database"></span><h1><a class="reference internal" href="#module-spwd" title="spwd: The shadow password database (getspnam() and friends).（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code></a> --- shadow 密碼資料庫<a class="headerlink" href="#module-spwd" title="本標題的永久連結">¶</a></h1>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-spwd" title="spwd: The shadow password database (getspnam() and friends).（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0594"><strong>PEP 594</strong></a>）。</p>
+</div>
 <hr class="docutils" />
 <p>This module provides access to the Unix shadow password database. It is
 available on various Unix versions.</p>
@@ -257,13 +260,13 @@ order.</p>
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="pwd.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pwd</span></code> --- The password database</a></p>
+    <p class="topless"><a href="sndhdr.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imghdr</span></code> --- 推測音檔種類</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="grp.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></p>
+    <p class="topless"><a href="sunau.html"
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sunau</span></code> --- 讀寫 Sun AU 檔案</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -290,10 +293,10 @@ order.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="grp.html" title="grp --- The group database"
+          <a href="sunau.html" title="sunau --- 讀寫 Sun AU 檔案"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="pwd.html" title="pwd --- The password database"
+          <a href="sndhdr.html" title="imghdr --- 推測音檔種類"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -310,8 +313,8 @@ order.</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="unix.html" >Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code> --- The shadow password database</a></li>
+          <li class="nav-item nav-item-2"><a href="superseded.html" >已被取代的模組</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">spwd</span></code> --- shadow 密碼資料庫</a></li>
                 <li class="right">
                     
 
@@ -343,7 +346,7 @@ order.</p>
 <br />
     <br />
 
-    最後更新於 3月 17, 2022。
+    最後更新於 3月 23, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
