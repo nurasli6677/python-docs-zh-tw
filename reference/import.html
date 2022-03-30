@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. The import system &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. The import system &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -167,7 +167,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 語言參考手冊</a> &#187;</li>
@@ -226,9 +226,9 @@ invoked.  These strategies can be modified and extended by using various hooks
 described in the sections below.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>The import system has been updated to fully implement the second phase
-of <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a>. There is no longer any implicit import machinery - the full
+of <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a>. There is no longer any implicit import machinery - the full
 import system is exposed through <a class="reference internal" href="../library/sys.html#sys.meta_path" title="sys.meta_path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.meta_path</span></code></a>. In addition,
-native namespace package support has been implemented (see <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a>).</p>
+native namespace package support has been implemented (see <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a>).</p>
 </div>
 <section id="importlib">
 <h2><span class="section-number">5.1. </span><a class="reference internal" href="../library/importlib.html#module-importlib" title="importlib: The implementation of the import machinery."><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib</span></code></a><a class="headerlink" href="#importlib" title="本標題的永久連結">¶</a></h2>
@@ -307,7 +307,7 @@ each one is provided by a different portion.  Thus <code class="docutils literal
 physically located next to <code class="docutils literal notranslate"><span class="pre">parent/two</span></code>.  In this case, Python will create a
 namespace package for the top-level <code class="docutils literal notranslate"><span class="pre">parent</span></code> package whenever it or one of
 its subpackages is imported.</p>
-<p>See also <span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a> for the namespace package specification.</p>
+<p>See also <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a> for the namespace package specification.</p>
 </section>
 </section>
 <section id="searching">
@@ -662,10 +662,10 @@ be a string, but it can be the same value as its <code class="docutils literal n
 the module is a package, its <code class="docutils literal notranslate"><span class="pre">__package__</span></code> value should be set to
 its <code class="docutils literal notranslate"><span class="pre">__name__</span></code>.  When the module is not a package, <code class="docutils literal notranslate"><span class="pre">__package__</span></code>
 should be set to the empty string for top-level modules, or for
-submodules, to the parent package's name.  See <span class="target" id="index-11"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0366"><strong>PEP 366</strong></a> for further
+submodules, to the parent package's name.  See <span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0366/"><strong>PEP 366</strong></a> for further
 details.</p>
 <p>This attribute is used instead of <code class="docutils literal notranslate"><span class="pre">__name__</span></code> to calculate explicit
-relative imports for main modules, as defined in <span class="target" id="index-12"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0366"><strong>PEP 366</strong></a>. It is
+relative imports for main modules, as defined in <span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0366/"><strong>PEP 366</strong></a>. It is
 expected to have the same value as <code class="docutils literal notranslate"><span class="pre">__spec__.parent</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>The value of <code class="docutils literal notranslate"><span class="pre">__package__</span></code> is expected to be the same as
@@ -719,7 +719,7 @@ has no semantic meaning (e.g. a module loaded from a database).</p>
 <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> attribute which is the path to any compiled version of
 the code (e.g. byte-compiled file). The file does not need to exist
 to set this attribute; the path can simply point to where the
-compiled file would exist (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a>).</p>
+compiled file would exist (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-3147/"><strong>PEP 3147</strong></a>).</p>
 <p>It is also appropriate to set <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> when <code class="docutils literal notranslate"><span class="pre">__file__</span></code> is not
 set.  However, that scenario is quite atypical.  Ultimately, the
 loader is what makes use of <code class="docutils literal notranslate"><span class="pre">__file__</span></code> and/or <code class="docutils literal notranslate"><span class="pre">__cached__</span></code>.  So
@@ -742,7 +742,7 @@ The same rules used for <a class="reference internal" href="../library/sys.html#
 consulted when traversing a package's <code class="docutils literal notranslate"><span class="pre">__path__</span></code>.</p>
 <p>A package's <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file may set or alter the package's <code class="docutils literal notranslate"><span class="pre">__path__</span></code>
 attribute, and this was typically the way namespace packages were implemented
-prior to <span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a>.  With the adoption of <span class="target" id="index-15"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a>, namespace packages no
+prior to <span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a>.  With the adoption of <span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a>, namespace packages no
 longer need to supply <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files containing only <code class="docutils literal notranslate"><span class="pre">__path__</span></code>
 manipulation code; the import machinery automatically sets <code class="docutils literal notranslate"><span class="pre">__path__</span></code>
 correctly for the namespace package.</p>
@@ -1069,25 +1069,25 @@ links at the top pointing to the new import system section.</p>
 <p>XXX Add more explanation regarding the different ways in which
 <code class="docutils literal notranslate"><span class="pre">__main__</span></code> is initialized?</p>
 <p>XXX Add more info on <code class="docutils literal notranslate"><span class="pre">__main__</span></code> quirks/pitfalls (i.e. copy from
-<span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0395"><strong>PEP 395</strong></a>).</p>
+<span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0395/"><strong>PEP 395</strong></a>).</p>
 </section>
 <section id="references">
 <h2><span class="section-number">5.10. </span>References<a class="headerlink" href="#references" title="本標題的永久連結">¶</a></h2>
 <p>The import machinery has evolved considerably since Python's early days.  The
 original <a class="reference external" href="https://www.python.org/doc/essays/packages/">specification for packages</a> is still available to read,
 although some details have changed since the writing of that document.</p>
-<p>The original specification for <a class="reference internal" href="../library/sys.html#sys.meta_path" title="sys.meta_path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.meta_path</span></code></a> was <span class="target" id="index-19"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a>, with
-subsequent extension in <span class="target" id="index-20"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a>.</p>
-<p><span class="target" id="index-21"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a> introduced <a class="reference internal" href="../glossary.html#term-namespace-package"><span class="xref std std-term">namespace packages</span></a> for
-Python 3.3.  <span class="target" id="index-22"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0420"><strong>PEP 420</strong></a> also introduced the <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_loader()</span></code> protocol as an
+<p>The original specification for <a class="reference internal" href="../library/sys.html#sys.meta_path" title="sys.meta_path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.meta_path</span></code></a> was <span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a>, with
+subsequent extension in <span class="target" id="index-20"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a>.</p>
+<p><span class="target" id="index-21"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a> introduced <a class="reference internal" href="../glossary.html#term-namespace-package"><span class="xref std std-term">namespace packages</span></a> for
+Python 3.3.  <span class="target" id="index-22"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a> also introduced the <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_loader()</span></code> protocol as an
 alternative to <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_module()</span></code>.</p>
-<p><span class="target" id="index-23"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0366"><strong>PEP 366</strong></a> describes the addition of the <code class="docutils literal notranslate"><span class="pre">__package__</span></code> attribute for
+<p><span class="target" id="index-23"></span><a class="pep reference external" href="https://peps.python.org/pep-0366/"><strong>PEP 366</strong></a> describes the addition of the <code class="docutils literal notranslate"><span class="pre">__package__</span></code> attribute for
 explicit relative imports in main modules.</p>
-<p><span class="target" id="index-24"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0328"><strong>PEP 328</strong></a> introduced absolute and explicit relative imports and initially
-proposed <code class="docutils literal notranslate"><span class="pre">__name__</span></code> for semantics <span class="target" id="index-25"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0366"><strong>PEP 366</strong></a> would eventually specify for
+<p><span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0328/"><strong>PEP 328</strong></a> introduced absolute and explicit relative imports and initially
+proposed <code class="docutils literal notranslate"><span class="pre">__name__</span></code> for semantics <span class="target" id="index-25"></span><a class="pep reference external" href="https://peps.python.org/pep-0366/"><strong>PEP 366</strong></a> would eventually specify for
 <code class="docutils literal notranslate"><span class="pre">__package__</span></code>.</p>
-<p><span class="target" id="index-26"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0338"><strong>PEP 338</strong></a> defines executing modules as scripts.</p>
-<p><span class="target" id="index-27"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a> adds the encapsulation of per-module import state in spec
+<p><span class="target" id="index-26"></span><a class="pep reference external" href="https://peps.python.org/pep-0338/"><strong>PEP 338</strong></a> defines executing modules as scripts.</p>
+<p><span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a> adds the encapsulation of per-module import state in spec
 objects.  It also off-loads most of the boilerplate responsibilities of
 loaders back onto the import machinery.  These changes allow the
 deprecation of several APIs in the import system and also addition of new
@@ -1218,7 +1218,7 @@ is recommended that code be changed to use <code class="docutils literal notrans
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 語言參考手冊</a> &#187;</li>
@@ -1254,11 +1254,11 @@ is recommended that code be changed to use <code class="docutils literal notrans
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>tempfile --- Generate temporary files and directories &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tempfile --- Generate temporary files and directories &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -237,10 +237,10 @@ be used in a <a class="reference internal" href="../reference/compound_stmts.htm
 </div>
 </dd></dl>
 
-<dl class="py function">
+<dl class="py class">
 <dt class="sig sig-object py" id="tempfile.SpooledTemporaryFile">
-<span class="sig-prename descclassname"><span class="pre">tempfile.</span></span><span class="sig-name descname"><span class="pre">SpooledTemporaryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w+b'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tempfile.SpooledTemporaryFile" title="本定義的永久連結">¶</a></dt>
-<dd><p>This function operates exactly as <a class="reference internal" href="#tempfile.TemporaryFile" title="tempfile.TemporaryFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">TemporaryFile()</span></code></a> does, except that
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tempfile.</span></span><span class="sig-name descname"><span class="pre">SpooledTemporaryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w+b'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tempfile.SpooledTemporaryFile" title="本定義的永久連結">¶</a></dt>
+<dd><p>This class operates exactly as <a class="reference internal" href="#tempfile.TemporaryFile" title="tempfile.TemporaryFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">TemporaryFile()</span></code></a> does, except that
 data is spooled in memory until the file size exceeds <em>max_size</em>, or
 until the file's <code class="xref py py-func docutils literal notranslate"><span class="pre">fileno()</span></code> method is called, at which point the
 contents are written to disk and operation proceeds as with
@@ -261,10 +261,10 @@ a normal file.</p>
 </div>
 </dd></dl>
 
-<dl class="py function">
+<dl class="py class">
 <dt class="sig sig-object py" id="tempfile.TemporaryDirectory">
-<span class="sig-prename descclassname"><span class="pre">tempfile.</span></span><span class="sig-name descname"><span class="pre">TemporaryDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_cleanup_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tempfile.TemporaryDirectory" title="本定義的永久連結">¶</a></dt>
-<dd><p>This function securely creates a temporary directory using the same rules as <a class="reference internal" href="#tempfile.mkdtemp" title="tempfile.mkdtemp"><code class="xref py py-func docutils literal notranslate"><span class="pre">mkdtemp()</span></code></a>.
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tempfile.</span></span><span class="sig-name descname"><span class="pre">TemporaryDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_cleanup_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tempfile.TemporaryDirectory" title="本定義的永久連結">¶</a></dt>
+<dd><p>This class securely creates a temporary directory using the same rules as <a class="reference internal" href="#tempfile.mkdtemp" title="tempfile.mkdtemp"><code class="xref py py-func docutils literal notranslate"><span class="pre">mkdtemp()</span></code></a>.
 The resulting object can be used as a context manager (see
 <a class="reference internal" href="#tempfile-examples"><span class="std std-ref">範例</span></a>).  On completion of the context or destruction
 of the temporary directory object, the newly created temporary directory
@@ -589,7 +589,7 @@ be replaced easily with <a class="reference internal" href="#tempfile.NamedTempo
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -626,11 +626,11 @@ be replaced easily with <a class="reference internal" href="#tempfile.NamedTempo
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

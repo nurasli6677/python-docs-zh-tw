@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>sys --- System-specific parameters and functions &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sys --- System-specific parameters and functions &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -160,7 +160,7 @@ always available.</p>
 <dt class="sig sig-object py" id="sys.abiflags">
 <span class="sig-prename descclassname"><span class="pre">sys.</span></span><span class="sig-name descname"><span class="pre">abiflags</span></span><a class="headerlink" href="#sys.abiflags" title="本定義的永久連結">¶</a></dt>
 <dd><p>On POSIX systems where Python was built with the standard <code class="docutils literal notranslate"><span class="pre">configure</span></code>
-script, this contains the ABI flags as specified by <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3149"><strong>PEP 3149</strong></a>.</p>
+script, this contains the ABI flags as specified by <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-3149/"><strong>PEP 3149</strong></a>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>Default flags became an empty string (<code class="docutils literal notranslate"><span class="pre">m</span></code> flag for pymalloc has been
 removed).</p>
@@ -189,7 +189,7 @@ callers cannot assume that their hook has been added unless they control
 all existing hooks.</p>
 </p>
 <p>See the <a class="reference internal" href="audit_events.html#audit-events"><span class="std std-ref">audit events table</span></a> for all events raised by
-CPython, and <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0578"><strong>PEP 578</strong></a> for the original design discussion.</p>
+CPython, and <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0578/"><strong>PEP 578</strong></a> for the original design discussion.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
@@ -867,7 +867,7 @@ startup by the <code class="xref c c-func docutils literal notranslate"><span cl
 <p><span class="versionmodified changed">在 3.2 版本變更: </span><a class="reference internal" href="#sys.getfilesystemencoding" title="sys.getfilesystemencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">getfilesystemencoding()</span></code></a> 的結果不再為 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>Windows is no longer guaranteed to return <code class="docutils literal notranslate"><span class="pre">'mbcs'</span></code>. See <span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0529"><strong>PEP 529</strong></a>
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>Windows is no longer guaranteed to return <code class="docutils literal notranslate"><span class="pre">'mbcs'</span></code>. See <span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0529/"><strong>PEP 529</strong></a>
 and <a class="reference internal" href="#sys._enablelegacywindowsfsencoding" title="sys._enablelegacywindowsfsencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">_enablelegacywindowsfsencoding()</span></code></a> for more information.</p>
 </div>
 <div class="versionchanged">
@@ -1043,11 +1043,11 @@ functions which take an <a class="reference internal" href="../glossary.html#ter
 argument, and are used to schedule finalization of an asynchronous
 generator by an event loop.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.6 版本新加入: </span>更多細節請見 <span class="target" id="index-39"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0525"><strong>PEP 525</strong></a>。</p>
+<p><span class="versionmodified added">在 3.6 版本新加入: </span>更多細節請見 <span class="target" id="index-39"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a>。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>This function has been added on a provisional basis (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0411"><strong>PEP 411</strong></a>
+<p>This function has been added on a provisional basis (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0411/"><strong>PEP 411</strong></a>
 for details.)</p>
 </div>
 </dd></dl>
@@ -1062,7 +1062,7 @@ for details.)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>This function has been added on a provisional basis (see <span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0411"><strong>PEP 411</strong></a>
+<p>This function has been added on a provisional basis (see <span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0411/"><strong>PEP 411</strong></a>
 for details.)  Use it only for debugging purposes.</p>
 </div>
 </dd></dl>
@@ -1172,14 +1172,14 @@ the Python implementation.  These non-standard attributes must start with
 an underscore, and are not described here.  Regardless of its contents,
 <a class="reference internal" href="#sys.implementation" title="sys.implementation"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.implementation</span></code></a> will not change during a run of the interpreter,
 nor between implementation versions.  (It may change between Python
-language versions, however.)  See <span class="target" id="index-15"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0421"><strong>PEP 421</strong></a> for more information.</p>
+language versions, however.)  See <span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0421/"><strong>PEP 421</strong></a> for more information.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>The addition of new required attributes must go through the normal PEP
-process. See <span class="target" id="index-16"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0421"><strong>PEP 421</strong></a> for more information.</p>
+process. See <span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0421/"><strong>PEP 421</strong></a> for more information.</p>
 </div>
 </dd></dl>
 
@@ -1287,7 +1287,7 @@ take.  It's usually <code class="docutils literal notranslate"><span class="pre"
 <dd><p>An integer giving the value of the largest Unicode code point,
 i.e. <code class="docutils literal notranslate"><span class="pre">1114111</span></code> (<code class="docutils literal notranslate"><span class="pre">0x10FFFF</span></code> in hexadecimal).</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>Before <span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0393"><strong>PEP 393</strong></a>, <code class="docutils literal notranslate"><span class="pre">sys.maxunicode</span></code> used to be either <code class="docutils literal notranslate"><span class="pre">0xFFFF</span></code>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>Before <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0393/"><strong>PEP 393</strong></a>, <code class="docutils literal notranslate"><span class="pre">sys.maxunicode</span></code> used to be either <code class="docutils literal notranslate"><span class="pre">0xFFFF</span></code>
 or <code class="docutils literal notranslate"><span class="pre">0x10FFFF</span></code>, depending on the configuration option that specified
 whether Unicode characters were stored as UCS-2 or UCS-4.</p>
 </div>
@@ -1318,7 +1318,7 @@ instances of.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span><a class="reference internal" href="../glossary.html#term-module-spec"><span class="xref std std-term">Module specs</span></a> were introduced in Python 3.4, by
-<span class="target" id="index-19"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a>. Earlier versions of Python looked for a method called
+<span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a>. Earlier versions of Python looked for a method called
 <a class="reference internal" href="importlib.html#importlib.abc.MetaPathFinder.find_module" title="importlib.abc.MetaPathFinder.find_module"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_module()</span></code></a>.
 This is still called as a fallback if a <a class="reference internal" href="#sys.meta_path" title="sys.meta_path"><code class="xref py py-data docutils literal notranslate"><span class="pre">meta_path</span></code></a> entry doesn't
 have a <a class="reference internal" href="importlib.html#importlib.abc.MetaPathFinder.find_spec" title="importlib.abc.MetaPathFinder.find_spec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_spec()</span></code></a> method.</p>
@@ -1378,7 +1378,7 @@ ignored during import.</p>
 <dd><p>A list of callables that take a path argument to try to create a
 <a class="reference internal" href="../glossary.html#term-finder"><span class="xref std std-term">finder</span></a> for the path. If a finder can be created, it is to be
 returned by the callable, else raise <a class="reference internal" href="exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a>.</p>
-<p>Originally specified in <span class="target" id="index-23"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a>.</p>
+<p>Originally specified in <span class="target" id="index-23"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -1389,7 +1389,7 @@ paths that have been passed to <a class="reference internal" href="#sys.path_hoo
 the finders that are found. If a path is a valid file system path but no
 finder is found on <a class="reference internal" href="#sys.path_hooks" title="sys.path_hooks"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path_hooks</span></code></a> then <code class="docutils literal notranslate"><span class="pre">None</span></code> is
 stored.</p>
-<p>Originally specified in <span class="target" id="index-24"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a>.</p>
+<p>Originally specified in <span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版本變更: </span><code class="docutils literal notranslate"><span class="pre">None</span></code> is stored instead of <a class="reference internal" href="imp.html#imp.NullImporter" title="imp.NullImporter"><code class="xref py py-class docutils literal notranslate"><span class="pre">imp.NullImporter</span></code></a> when no finder
 is found.</p>
@@ -1691,14 +1691,14 @@ is about to be garbage collected.</p>
 <p>Two auditing events are raised because the underlying API consists of two
 calls, each of which must raise its own event.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.6 版本新加入: </span>See <span class="target" id="index-28"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0525"><strong>PEP 525</strong></a> for more details, and for a reference example of a
+<p><span class="versionmodified added">在 3.6 版本新加入: </span>See <span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a> for more details, and for a reference example of a
 <em>finalizer</em> method see the implementation of
 <code class="docutils literal notranslate"><span class="pre">asyncio.Loop.shutdown_asyncgens</span></code> in
 <a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/base_events.py">Lib/asyncio/base_events.py</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>This function has been added on a provisional basis (see <span class="target" id="index-29"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0411"><strong>PEP 411</strong></a>
+<p>This function has been added on a provisional basis (see <span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0411/"><strong>PEP 411</strong></a>
 for details.)</p>
 </div>
 </dd></dl>
@@ -1721,7 +1721,7 @@ pass set <em>depth</em> to zero.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>This function has been added on a provisional basis (see <span class="target" id="index-30"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0411"><strong>PEP 411</strong></a>
+<p>This function has been added on a provisional basis (see <span class="target" id="index-30"></span><a class="pep reference external" href="https://peps.python.org/pep-0411/"><strong>PEP 411</strong></a>
 for details.)  Use it only for debugging purposes.</p>
 </div>
 </dd></dl>
@@ -1738,7 +1738,7 @@ environment variable before launching Python.</p>
 <a class="reference internal" href="#sys.getfilesystemencodeerrors" title="sys.getfilesystemencodeerrors"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.getfilesystemencodeerrors()</span></code></a>.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Windows。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.6 版本新加入: </span>更多細節請見 <span class="target" id="index-40"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0529"><strong>PEP 529</strong></a>。</p>
+<p><span class="versionmodified added">在 3.6 版本新加入: </span>更多細節請見 <span class="target" id="index-40"></span><a class="pep reference external" href="https://peps.python.org/pep-0529/"><strong>PEP 529</strong></a>。</p>
 </div>
 </dd></dl>
 
@@ -2085,7 +2085,7 @@ means, or not at all.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2122,11 +2122,11 @@ means, or not at all.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

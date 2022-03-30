@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>py_compile --- Compile Python source files &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>py_compile --- Compile Python source files &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -132,7 +132,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -181,7 +181,7 @@ byte-code cache files in the directory containing the source code.</p>
 <span class="sig-prename descclassname"><span class="pre">py_compile.</span></span><span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doraise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invalidation_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PycInvalidationMode.TIMESTAMP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py_compile.compile" title="本定義的永久連結">¶</a></dt>
 <dd><p>Compile a source file to byte-code and write out the byte-code cache file.
 The source code is loaded from the file named <em>file</em>.  The byte-code is
-written to <em>cfile</em>, which defaults to the <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a>/<span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0488"><strong>PEP 488</strong></a> path, ending
+written to <em>cfile</em>, which defaults to the <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-3147/"><strong>PEP 3147</strong></a>/<span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0488/"><strong>PEP 488</strong></a> path, ending
 in <code class="docutils literal notranslate"><span class="pre">.pyc</span></code>.
 For example, if <em>file</em> is <code class="docutils literal notranslate"><span class="pre">/foo/bar/baz.py</span></code> <em>cfile</em> will default to
 <code class="docutils literal notranslate"><span class="pre">/foo/bar/__pycache__/baz.cpython-32.pyc</span></code> for Python 3.2.  If <em>dfile</em> is
@@ -212,7 +212,7 @@ runtime.  The default is <a class="reference internal" href="#py_compile.PycInva
 the <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SOURCE_DATE_EPOCH</span></code> environment variable is set, otherwise
 the default is <a class="reference internal" href="#py_compile.PycInvalidationMode.TIMESTAMP" title="py_compile.PycInvalidationMode.TIMESTAMP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PycInvalidationMode.TIMESTAMP</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>Changed default value of <em>cfile</em> to be <span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a>-compliant.  Previous
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Changed default value of <em>cfile</em> to be <span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-3147/"><strong>PEP 3147</strong></a>-compliant.  Previous
 default was <em>file</em> + <code class="docutils literal notranslate"><span class="pre">'c'</span></code> (<code class="docutils literal notranslate"><span class="pre">'o'</span></code> if optimization was enabled).
 Also added the <em>optimize</em> parameter.</p>
 </div>
@@ -224,7 +224,7 @@ caveat that <a class="reference internal" href="exceptions.html#FileExistsError"
 non-regular file.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>invalidation_mode</em> parameter was added as specified in <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0552"><strong>PEP 552</strong></a>.
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>invalidation_mode</em> parameter was added as specified in <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0552/"><strong>PEP 552</strong></a>.
 If the <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SOURCE_DATE_EPOCH</span></code> environment variable is set,
 <em>invalidation_mode</em> will be forced to
 <a class="reference internal" href="#py_compile.PycInvalidationMode.CHECKED_HASH" title="py_compile.PycInvalidationMode.CHECKED_HASH"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PycInvalidationMode.CHECKED_HASH</span></code></a>.</p>
@@ -385,7 +385,7 @@ parameter, the list of files is taken from standard input.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -422,11 +422,11 @@ parameter, the list of files is taken from standard input.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>簡介 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡介 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -145,7 +145,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python/C API 參考手冊</a> &#187;</li>
@@ -196,7 +196,7 @@ application.</p>
 <section id="coding-standards">
 <h2>Coding standards<a class="headerlink" href="#coding-standards" title="本標題的永久連結">¶</a></h2>
 <p>If you're writing C code for inclusion in CPython, you <strong>must</strong> follow the
-guidelines and standards defined in <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0007"><strong>PEP 7</strong></a>.  These guidelines apply
+guidelines and standards defined in <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0007/"><strong>PEP 7</strong></a>.  These guidelines apply
 regardless of the version of Python you are contributing to.  Following these
 conventions is not necessary for your own third party extension modules,
 unless you eventually expect to contribute them to Python.</p>
@@ -367,7 +367,7 @@ symbol name.</p>
 <dd><p>Creates a variable with name <code class="docutils literal notranslate"><span class="pre">name</span></code> that can be used in docstrings.
 If Python is built without docstrings, the value will be empty.</p>
 <p>Use <a class="reference internal" href="#c.PyDoc_STRVAR" title="PyDoc_STRVAR"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyDoc_STRVAR</span></code></a> for docstrings to support building
-Python without docstrings, as specified in <span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0007"><strong>PEP 7</strong></a>.</p>
+Python without docstrings, as specified in <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0007/"><strong>PEP 7</strong></a>.</p>
 <p>範例：</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">pop_doc</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Remove and return the rightmost element.&quot;</span><span class="p">);</span><span class="w"></span>
 
@@ -386,7 +386,7 @@ Python without docstrings, as specified in <span class="target" id="index-6"></s
 <dd><p>Creates a docstring for the given input string or an empty string
 if docstrings are disabled.</p>
 <p>Use <a class="reference internal" href="#c.PyDoc_STR" title="PyDoc_STR"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyDoc_STR</span></code></a> in specifying docstrings to support
-building Python without docstrings, as specified in <span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0007"><strong>PEP 7</strong></a>.</p>
+building Python without docstrings, as specified in <span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0007/"><strong>PEP 7</strong></a>.</p>
 <p>範例：</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyMethodDef</span><span class="w"> </span><span class="n">pysqlite_row_methods</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="s">&quot;keys&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">pysqlite_row_keys</span><span class="p">,</span><span class="w"> </span><span class="n">METH_NOARGS</span><span class="p">,</span><span class="w"></span>
@@ -908,7 +908,7 @@ for more detailed information.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -944,11 +944,11 @@ for more detailed information.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

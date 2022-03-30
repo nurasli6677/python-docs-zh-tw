@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 3.7 有什麼新功能 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 3.7 有什麼新功能 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -260,7 +260,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -368,8 +368,8 @@ releases please refer to the <a class="reference internal" href="#porting-to-pyt
 <section id="pep-563-postponed-evaluation-of-annotations">
 <span id="whatsnew37-pep563"></span><h3>PEP 563: Postponed Evaluation of Annotations<a class="headerlink" href="#pep-563-postponed-evaluation-of-annotations" title="本標題的永久連結">¶</a></h3>
 <p>The advent of type hints in Python uncovered two glaring usability issues
-with the functionality of annotations added in <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3107"><strong>PEP 3107</strong></a> and refined
-further in <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0526"><strong>PEP 526</strong></a>:</p>
+with the functionality of annotations added in <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-3107/"><strong>PEP 3107</strong></a> and refined
+further in <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a>:</p>
 <ul class="simple">
 <li><p>annotations could only use names which were already available in the
 current scope, in other words they didn't support forward references
@@ -408,7 +408,7 @@ on a per-module basis in Python 3.7 using a <a class="reference internal" href="
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0563"><strong>PEP 563</strong></a> -- Postponed evaluation of annotations</dt><dd><p>PEP written and implemented by Łukasz Langa.</p>
+<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0563/"><strong>PEP 563</strong></a> -- Postponed evaluation of annotations</dt><dd><p>PEP written and implemented by Łukasz Langa.</p>
 </dd>
 </dl>
 </div>
@@ -419,14 +419,14 @@ on a per-module basis in Python 3.7 using a <a class="reference internal" href="
 default strategy for handling the &quot;7-bit ASCII&quot; text encoding assumption
 currently implied by the use of the default C or POSIX locale on non-Windows
 platforms.</p>
-<p><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0538"><strong>PEP 538</strong></a> updates the default interpreter command line interface to
+<p><span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0538/"><strong>PEP 538</strong></a> updates the default interpreter command line interface to
 automatically coerce that locale to an available UTF-8 based locale as
 described in the documentation of the new <span class="target" id="index-4"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONCOERCECLOCALE"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONCOERCECLOCALE</span></code></a>
 environment variable. Automatically setting <code class="docutils literal notranslate"><span class="pre">LC_CTYPE</span></code> this way means that
 both the core interpreter and locale-aware C extensions (such as
 <a class="reference internal" href="../library/readline.html#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a>) will assume the use of UTF-8 as the default text encoding,
 rather than ASCII.</p>
-<p>The platform support definition in <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0011"><strong>PEP 11</strong></a> has also been updated to limit
+<p>The platform support definition in <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0011/"><strong>PEP 11</strong></a> has also been updated to limit
 full text handling support to suitably configured non-ASCII based locales.</p>
 <p>As part of this change, the default error handler for <a class="reference internal" href="../library/sys.html#sys.stdin" title="sys.stdin"><code class="xref py py-data docutils literal notranslate"><span class="pre">stdin</span></code></a> and
 <a class="reference internal" href="../library/sys.html#sys.stdout" title="sys.stdout"><code class="xref py py-data docutils literal notranslate"><span class="pre">stdout</span></code></a> is now <code class="docutils literal notranslate"><span class="pre">surrogateescape</span></code> (rather than <code class="docutils literal notranslate"><span class="pre">strict</span></code>) when
@@ -438,7 +438,7 @@ locale related integration problems, explicit warnings (emitted directly on
 <a class="reference internal" href="../library/sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>) can be requested by setting <code class="docutils literal notranslate"><span class="pre">PYTHONCOERCECLOCALE=warn</span></code>.
 This setting will also cause the Python runtime to emit a warning if the
 legacy C locale remains active when the core interpreter is initialized.</p>
-<p>While <span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0538"><strong>PEP 538</strong></a>'s locale coercion has the benefit of also affecting extension
+<p>While <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0538/"><strong>PEP 538</strong></a>'s locale coercion has the benefit of also affecting extension
 modules (such as GNU <code class="docutils literal notranslate"><span class="pre">readline</span></code>), as well as child processes (including those
 running non-Python applications and older versions of Python), it has the
 downside of requiring that a suitable target locale be present on the running
@@ -448,7 +448,7 @@ system. To better handle the case where no suitable target locale is available
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0538"><strong>PEP 538</strong></a> -- Coercing the legacy C locale to a UTF-8 based locale</dt><dd><p>由 Nick Coghlan 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0538/"><strong>PEP 538</strong></a> -- Coercing the legacy C locale to a UTF-8 based locale</dt><dd><p>由 Nick Coghlan 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -463,20 +463,20 @@ UTF-8 encoding by default.  The error handlers for <a class="reference internal"
 <p>The forced UTF-8 mode can be used to change the text handling behavior in
 an embedded Python interpreter without changing the locale settings of
 an embedding application.</p>
-<p>While <span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0540"><strong>PEP 540</strong></a>'s UTF-8 mode has the benefit of working regardless of which
+<p>While <span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0540/"><strong>PEP 540</strong></a>'s UTF-8 mode has the benefit of working regardless of which
 locales are available on the running system, it has the downside of having no
 effect on extension modules (such as GNU <code class="docutils literal notranslate"><span class="pre">readline</span></code>), child processes running
 non-Python applications, and child processes running older versions of Python.
 To reduce the risk of corrupting text data when communicating with such
 components, Python 3.7 also implements <a class="reference internal" href="#whatsnew37-pep540"><span class="std std-ref">PEP 540: Forced UTF-8 Runtime Mode</span></a>).</p>
 <p>The UTF-8 mode is enabled by default when the locale is <code class="docutils literal notranslate"><span class="pre">C</span></code> or <code class="docutils literal notranslate"><span class="pre">POSIX</span></code>, and
-the <span class="target" id="index-10"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0538"><strong>PEP 538</strong></a> locale coercion feature fails to change it to a UTF-8 based
+the <span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0538/"><strong>PEP 538</strong></a> locale coercion feature fails to change it to a UTF-8 based
 alternative (whether that failure is due to <code class="docutils literal notranslate"><span class="pre">PYTHONCOERCECLOCALE=0</span></code> being set,
 <code class="docutils literal notranslate"><span class="pre">LC_ALL</span></code> being set, or the lack of a suitable target locale).</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-11"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0540"><strong>PEP 540</strong></a> -- Add a new UTF-8 mode</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0540/"><strong>PEP 540</strong></a> -- Add a new UTF-8 mode</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -495,7 +495,7 @@ choice.  Set <code class="docutils literal notranslate"><span class="pre">PYTHON
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0553"><strong>PEP 553</strong></a> -- Built-in breakpoint()</dt><dd><p>由 Barry Warsaw 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0553/"><strong>PEP 553</strong></a> -- Built-in breakpoint()</dt><dd><p>由 Barry Warsaw 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -507,7 +507,7 @@ choice.  Set <code class="docutils literal notranslate"><span class="pre">PYTHON
 <span class="xref c c-texpr"><span class="kt">int</span></span> to represent TLS keys across all platforms.  This has not
 generally been a problem for officially-support platforms, but that is neither
 POSIX-compliant, nor portable in any practical sense.</p>
-<p><span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0539"><strong>PEP 539</strong></a> changes this by providing a new <a class="reference internal" href="../c-api/init.html#thread-specific-storage-api"><span class="std std-ref">Thread Specific Storage (TSS)
+<p><span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0539/"><strong>PEP 539</strong></a> changes this by providing a new <a class="reference internal" href="../c-api/init.html#thread-specific-storage-api"><span class="std std-ref">Thread Specific Storage (TSS)
 API</span></a> to CPython which supersedes use of the
 existing TLS API within the CPython interpreter, while deprecating the existing
 API.  The TSS API uses a new type <a class="reference internal" href="../c-api/init.html#c.Py_tss_t" title="Py_tss_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_tss_t</span></code></a> instead of <span class="xref c c-texpr"><span class="kt">int</span></span>
@@ -523,7 +523,7 @@ effort will be made to add such support.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-15"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0539"><strong>PEP 539</strong></a> -- A New C-API for Thread-Local Storage in CPython</dt><dd><p>PEP 由 Erik M. Bray 撰寫；由 Masayuki Yamamoto 實作。</p>
+<dt><span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0539/"><strong>PEP 539</strong></a> -- A New C-API for Thread-Local Storage in CPython</dt><dd><p>PEP 由 Erik M. Bray 撰寫；由 Masayuki Yamamoto 實作。</p>
 </dd>
 </dl>
 </div>
@@ -538,7 +538,7 @@ and lazy loading.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-16"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0562"><strong>PEP 562</strong></a> -- Module <code class="docutils literal notranslate"><span class="pre">__getattr__</span></code> and <code class="docutils literal notranslate"><span class="pre">__dir__</span></code></dt><dd><p>由 Ivan Levkivskyi 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0562/"><strong>PEP 562</strong></a> -- Module <code class="docutils literal notranslate"><span class="pre">__getattr__</span></code> and <code class="docutils literal notranslate"><span class="pre">__dir__</span></code></dt><dd><p>由 Ivan Levkivskyi 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -547,7 +547,7 @@ and lazy loading.</p>
 <span id="whatsnew37-pep564"></span><h3>PEP 564: New Time Functions With Nanosecond Resolution<a class="headerlink" href="#pep-564-new-time-functions-with-nanosecond-resolution" title="本標題的永久連結">¶</a></h3>
 <p>The resolution of clocks in modern systems can exceed the limited precision
 of a floating point number returned by the <a class="reference internal" href="../library/time.html#time.time" title="time.time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.time()</span></code></a> function
-and its variants.  To avoid loss of precision, <span class="target" id="index-17"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0564"><strong>PEP 564</strong></a> adds six new
+and its variants.  To avoid loss of precision, <span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0564/"><strong>PEP 564</strong></a> adds six new
 &quot;nanosecond&quot; variants of the existing timer functions to the <a class="reference internal" href="../library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a>
 module:</p>
 <ul class="simple">
@@ -565,7 +565,7 @@ approximately 3 times better than that of <a class="reference internal" href="..
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0564"><strong>PEP 564</strong></a> -- Add new time functions with nanosecond resolution</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0564/"><strong>PEP 564</strong></a> -- Add new time functions with nanosecond resolution</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -600,14 +600,14 @@ by breaking changes in the APIs they used.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-19"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0565"><strong>PEP 565</strong></a> -- Show DeprecationWarning in <code class="docutils literal notranslate"><span class="pre">__main__</span></code></dt><dd><p>由 Nick Coghlan 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0565/"><strong>PEP 565</strong></a> -- Show DeprecationWarning in <code class="docutils literal notranslate"><span class="pre">__main__</span></code></dt><dd><p>由 Nick Coghlan 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-560-core-support-for-typing-module-and-generic-types">
 <span id="whatsnew37-pep560"></span><h3>PEP 560: Core Support for <code class="docutils literal notranslate"><span class="pre">typing</span></code> module and Generic Types<a class="headerlink" href="#pep-560-core-support-for-typing-module-and-generic-types" title="本標題的永久連結">¶</a></h3>
-<p>Initially <span class="target" id="index-20"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0484"><strong>PEP 484</strong></a> was designed in such way that it would not introduce <em>any</em>
+<p>Initially <span class="target" id="index-20"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> was designed in such way that it would not introduce <em>any</em>
 changes to the core CPython interpreter. Now type hints and the <a class="reference internal" href="../library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a>
 module are extensively used by the community, so this restriction is removed.
 The PEP introduces two special methods <code class="xref py py-meth docutils literal notranslate"><span class="pre">__class_getitem__()</span></code> and
@@ -619,7 +619,7 @@ fixed.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-21"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0560"><strong>PEP 560</strong></a> -- Core support for typing module and generic types</dt><dd><p>由 Ivan Levkivskyi 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-21"></span><a class="pep reference external" href="https://peps.python.org/pep-0560/"><strong>PEP 560</strong></a> -- Core support for typing module and generic types</dt><dd><p>由 Ivan Levkivskyi 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -634,7 +634,7 @@ filesystem timestamps are too coarse, Python can miss source updates, leading to
 user confusion. Additionally, having a timestamp in the cache file is
 problematic for <a class="reference external" href="https://reproducible-builds.org/">build reproducibility</a> and
 content-based build systems.</p>
-<p><span class="target" id="index-22"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0552"><strong>PEP 552</strong></a> extends the pyc format to allow the hash of the source file to be
+<p><span class="target" id="index-22"></span><a class="pep reference external" href="https://peps.python.org/pep-0552/"><strong>PEP 552</strong></a> extends the pyc format to allow the hash of the source file to be
 used for invalidation instead of the source timestamp. Such <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files are
 called &quot;hash-based&quot;. By default, Python still uses timestamp-based invalidation
 and does not generate hash-based <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files at runtime. Hash-based <code class="docutils literal notranslate"><span class="pre">.pyc</span></code>
@@ -649,14 +649,14 @@ keeping <code class="docutils literal notranslate"><span class="pre">.pyc</span>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-23"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0552"><strong>PEP 552</strong></a> -- Deterministic pycs</dt><dd><p>由 Benjamin Peterson 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-23"></span><a class="pep reference external" href="https://peps.python.org/pep-0552/"><strong>PEP 552</strong></a> -- Deterministic pycs</dt><dd><p>由 Benjamin Peterson 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-545-python-documentation-translations">
 <span id="whatsnew37-pep545"></span><h3>PEP 545：Python 文件翻譯<a class="headerlink" href="#pep-545-python-documentation-translations" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-24"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0545"><strong>PEP 545</strong></a> describes the process of creating and maintaining Python
+<p><span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0545/"><strong>PEP 545</strong></a> describes the process of creating and maintaining Python
 documentation translations.</p>
 <p>Three new translations have been added:</p>
 <ul class="simple">
@@ -667,7 +667,7 @@ documentation translations.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-40"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0545"><strong>PEP 545</strong></a> -- Python 文件翻譯</dt><dd><p>PEP 由 Julien Palard、Inada Naoki 與 Victor Stinner 撰寫。</p>
+<dt><span class="target" id="index-40"></span><a class="pep reference external" href="https://peps.python.org/pep-0545/"><strong>PEP 545</strong></a> -- Python 文件翻譯</dt><dd><p>PEP 由 Julien Palard、Inada Naoki 與 Victor Stinner 撰寫。</p>
 </dd>
 </dl>
 </div>
@@ -739,7 +739,7 @@ decimal operations to work with the correct context in asynchronous code.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-28"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0567"><strong>PEP 567</strong></a> -- Context Variables</dt><dd><p>由 Yury Selivanov 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0567/"><strong>PEP 567</strong></a> -- Context Variables</dt><dd><p>由 Yury Selivanov 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -765,7 +765,7 @@ annotations.  Its constructor and other magic methods, such as
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-29"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0557"><strong>PEP 557</strong></a> -- Data Classes</dt><dd><p>由 Eric V. Smith 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0557/"><strong>PEP 557</strong></a> -- Data Classes</dt><dd><p>由 Eric V. Smith 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -813,7 +813,7 @@ destroying the event loop.
 <a class="reference internal" href="../library/asyncio-future.html#asyncio.Future.add_done_callback" title="asyncio.Future.add_done_callback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Future.add_done_callback()</span></code></a>
 have a new optional keyword-only <em>context</em> parameter.
 <a class="reference internal" href="../library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tasks</span></code></a> now track their context automatically.
-See <span class="target" id="index-30"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0567"><strong>PEP 567</strong></a> for more details.
+See <span class="target" id="index-30"></span><a class="pep reference external" href="https://peps.python.org/pep-0567/"><strong>PEP 567</strong></a> for more details.
 (Contributed by Yury Selivanov in <a class="reference external" href="https://bugs.python.org/issue32436">bpo-32436</a>.)</p></li>
 <li><p>The new <a class="reference internal" href="../library/asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code></a> function has been added as a shortcut
 to <code class="docutils literal notranslate"><span class="pre">asyncio.get_event_loop().create_task()</span></code>.
@@ -1436,7 +1436,7 @@ the deprecated <code class="xref py py-func docutils literal notranslate"><span 
 </section>
 <section id="time">
 <h3>time<a class="headerlink" href="#time" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-32"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0564"><strong>PEP 564</strong></a> adds six new functions with nanosecond resolution to the
+<p><span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0564/"><strong>PEP 564</strong></a> adds six new functions with nanosecond resolution to the
 <a class="reference internal" href="../library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../library/time.html#time.clock_gettime_ns" title="time.clock_gettime_ns"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.clock_gettime_ns()</span></code></a></p></li>
@@ -1486,7 +1486,7 @@ and <a class="reference internal" href="../library/types.html#types.ClassMethodD
 (Contributed by Manuel Krebber and Guido van Rossum in <a class="reference external" href="https://bugs.python.org/issue29377">bpo-29377</a>,
 and Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue32265">bpo-32265</a>.)</p>
 <p>The new <a class="reference internal" href="../library/types.html#types.resolve_bases" title="types.resolve_bases"><code class="xref py py-func docutils literal notranslate"><span class="pre">types.resolve_bases()</span></code></a> function resolves MRO entries
-dynamically as specified by <span class="target" id="index-33"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0560"><strong>PEP 560</strong></a>.
+dynamically as specified by <span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0560/"><strong>PEP 560</strong></a>.
 (Contributed by Ivan Levkivskyi in <a class="reference external" href="https://bugs.python.org/issue32717">bpo-32717</a>.)</p>
 </section>
 <section id="unicodedata">
@@ -2060,7 +2060,7 @@ that may require changes to your code.</p>
 <li><p><a class="reference internal" href="../reference/compound_stmts.html#async"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span></code></a> and <a class="reference internal" href="../reference/expressions.html#await"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">await</span></code></a> names are now reserved keywords.
 Code using these names as identifiers will now raise a <a class="reference internal" href="../library/exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a>.
 (Contributed by Jelle Zijlstra in <a class="reference external" href="https://bugs.python.org/issue30406">bpo-30406</a>.)</p></li>
-<li><p><span class="target" id="index-37"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0479"><strong>PEP 479</strong></a> is enabled for all code in Python 3.7, meaning that
+<li><p><span class="target" id="index-37"></span><a class="pep reference external" href="https://peps.python.org/pep-0479/"><strong>PEP 479</strong></a> is enabled for all code in Python 3.7, meaning that
 <a class="reference internal" href="../library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> exceptions raised directly or indirectly in
 coroutines and generators are transformed into <a class="reference internal" href="../library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a>
 exceptions.
@@ -2274,7 +2274,7 @@ See <a class="reference internal" href="../using/windows.html#finding-modules"><
 <section id="id13">
 <h3>Other CPython implementation changes<a class="headerlink" href="#id13" title="本標題的永久連結">¶</a></h3>
 <p>In preparation for potential future changes to the public CPython runtime
-initialization API (see <span class="target" id="index-38"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0432"><strong>PEP 432</strong></a> for an initial, but somewhat outdated,
+initialization API (see <span class="target" id="index-38"></span><a class="pep reference external" href="https://peps.python.org/pep-0432/"><strong>PEP 432</strong></a> for an initial, but somewhat outdated,
 draft), CPython's internal startup
 and configuration management logic has been significantly refactored. While
 these updates are intended to be entirely transparent to both embedding
@@ -2553,7 +2553,7 @@ documentation.
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -2589,11 +2589,11 @@ documentation.
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

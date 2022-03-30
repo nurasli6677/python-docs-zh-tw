@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 3.6 有什麼新功能 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 3.6 有什麼新功能 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -268,7 +268,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -308,7 +308,7 @@ Python 3.6 was released on December 23, 2016.  See the
 list of changes.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
-<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0494"><strong>PEP 494</strong></a> - Python 3.6 Release Schedule</p>
+<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0494/"><strong>PEP 494</strong></a> - Python 3.6 Release Schedule</p>
 </div>
 <section id="summary-release-highlights">
 <h2>Summary -- Release highlights<a class="headerlink" href="#summary-release-highlights" title="本標題的永久連結">¶</a></h2>
@@ -370,7 +370,7 @@ information.</p></li>
 cryptographically strong pseudo-random numbers suitable for
 managing secrets such as account authentication, tokens, and similar.</p></li>
 <li><p>On Linux, <a class="reference internal" href="../library/os.html#os.urandom" title="os.urandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.urandom()</span></code></a> now blocks until the system urandom entropy
-pool is initialized to increase the security. See the <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0524"><strong>PEP 524</strong></a> for the
+pool is initialized to increase the security. See the <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0524/"><strong>PEP 524</strong></a> for the
 rationale.</p></li>
 <li><p>The <a class="reference internal" href="../library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code></a> and <a class="reference internal" href="../library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> modules now support OpenSSL 1.1.0.</p></li>
 <li><p>The default settings and feature set of the <a class="reference internal" href="../library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> module have been
@@ -401,7 +401,7 @@ more information.</p></li>
 <h2>New Features<a class="headerlink" href="#new-features" title="本標題的永久連結">¶</a></h2>
 <section id="pep-498-formatted-string-literals">
 <span id="whatsnew36-pep498"></span><h3>PEP 498: Formatted string literals<a class="headerlink" href="#pep-498-formatted-string-literals" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0498"><strong>PEP 498</strong></a> introduces a new kind of string literals: <em>f-strings</em>, or
+<p><span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0498/"><strong>PEP 498</strong></a> introduces a new kind of string literals: <em>f-strings</em>, or
 <a class="reference internal" href="../reference/lexical_analysis.html#f-strings"><span class="std std-ref">formatted string literals</span></a>.</p>
 <p>Formatted string literals are prefixed with <code class="docutils literal notranslate"><span class="pre">'f'</span></code> and are similar to
 the format strings accepted by <a class="reference internal" href="../library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a>.  They contain replacement
@@ -421,7 +421,7 @@ which are evaluated at run time, and then formatted using the
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0498"><strong>PEP 498</strong></a> -- Literal String Interpolation.</dt><dd><p>由 Eric V. Smith 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-0498/"><strong>PEP 498</strong></a> -- Literal String Interpolation.</dt><dd><p>由 Eric V. Smith 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="../reference/lexical_analysis.html#f-strings"><span class="std std-ref">Feature documentation</span></a>.</p>
@@ -429,7 +429,7 @@ which are evaluated at run time, and then formatted using the
 </section>
 <section id="pep-526-syntax-for-variable-annotations">
 <span id="whatsnew36-pep526"></span><h3>PEP 526: Syntax for variable annotations<a class="headerlink" href="#pep-526-syntax-for-variable-annotations" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0484"><strong>PEP 484</strong></a> introduced the standard for type annotations of function
+<p><span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> introduced the standard for type annotations of function
 parameters, a.k.a. type hints. This PEP adds syntax to Python for annotating
 the types of variables including class variables and instance variables:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -450,7 +450,7 @@ and the <code class="docutils literal notranslate"><span class="pre">__annotatio
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0526"><strong>PEP 526</strong></a> -- Syntax for variable annotations.</dt><dd><p>PEP written by Ryan Gonzalez, Philip House, Ivan Levkivskyi, Lisa Roach,
+<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a> -- Syntax for variable annotations.</dt><dd><p>PEP written by Ryan Gonzalez, Philip House, Ivan Levkivskyi, Lisa Roach,
 and Guido van Rossum. Implemented by Ivan Levkivskyi.</p>
 </dd>
 </dl>
@@ -461,7 +461,7 @@ and Guido van Rossum. Implemented by Ivan Levkivskyi.</p>
 </section>
 <section id="pep-515-underscores-in-numeric-literals">
 <span id="whatsnew36-pep515"></span><h3>PEP 515: Underscores in Numeric Literals<a class="headerlink" href="#pep-515-underscores-in-numeric-literals" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0515"><strong>PEP 515</strong></a> adds the ability to use underscores in numeric literals for
+<p><span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0515/"><strong>PEP 515</strong></a> adds the ability to use underscores in numeric literals for
 improved readability.  For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1_000_000_000_000_000</span>
 <span class="go">1000000000000000</span>
@@ -487,14 +487,14 @@ digits:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0515"><strong>PEP 515</strong></a> -- Underscores in Numeric Literals</dt><dd><p>由 Georg Brandl 與 Serhiy Storchaka 撰寫 PEP。</p>
+<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0515/"><strong>PEP 515</strong></a> -- Underscores in Numeric Literals</dt><dd><p>由 Georg Brandl 與 Serhiy Storchaka 撰寫 PEP。</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-525-asynchronous-generators">
 <span id="whatsnew36-pep525"></span><h3>PEP 525: Asynchronous Generators<a class="headerlink" href="#pep-525-asynchronous-generators" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> introduced support for native coroutines and <code class="docutils literal notranslate"><span class="pre">async</span></code> / <code class="docutils literal notranslate"><span class="pre">await</span></code>
+<p><span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a> introduced support for native coroutines and <code class="docutils literal notranslate"><span class="pre">async</span></code> / <code class="docutils literal notranslate"><span class="pre">await</span></code>
 syntax to Python 3.5.  A notable limitation of the Python 3.5 implementation
 is that it was not possible to use <code class="docutils literal notranslate"><span class="pre">await</span></code> and <code class="docutils literal notranslate"><span class="pre">yield</span></code> in the same
 function body.  In Python 3.6 this restriction has been lifted, making it
@@ -510,14 +510,14 @@ possible to define <em>asynchronous generators</em>:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-10"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0525"><strong>PEP 525</strong></a> -- Asynchronous Generators</dt><dd><p>由 Yury Selivanov 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a> -- Asynchronous Generators</dt><dd><p>由 Yury Selivanov 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-530-asynchronous-comprehensions">
 <span id="whatsnew36-pep530"></span><h3>PEP 530: Asynchronous Comprehensions<a class="headerlink" href="#pep-530-asynchronous-comprehensions" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-11"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0530"><strong>PEP 530</strong></a> adds support for using <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code> in list, set, dict
+<p><span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0530/"><strong>PEP 530</strong></a> adds support for using <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code> in list, set, dict
 comprehensions and generator expressions:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">async</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">aiter</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
 </pre></div>
@@ -530,7 +530,7 @@ of comprehensions:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-12"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0530"><strong>PEP 530</strong></a> -- Asynchronous Comprehensions</dt><dd><p>由 Yury Selivanov 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0530/"><strong>PEP 530</strong></a> -- Asynchronous Comprehensions</dt><dd><p>由 Yury Selivanov 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -561,7 +561,7 @@ ensure that the new <code class="docutils literal notranslate"><span class="pre"
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0487"><strong>PEP 487</strong></a> -- Simpler customization of class creation</dt><dd><p>由 Martin Teichmann 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0487/"><strong>PEP 487</strong></a> -- Simpler customization of class creation</dt><dd><p>由 Martin Teichmann 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="../reference/datamodel.html#class-customization"><span class="std std-ref">Feature documentation</span></a></p>
@@ -569,7 +569,7 @@ ensure that the new <code class="docutils literal notranslate"><span class="pre"
 </section>
 <section id="pep-487-descriptor-protocol-enhancements">
 <span id="whatsnew36-pep487-descriptors"></span><h3>PEP 487: Descriptor Protocol Enhancements<a class="headerlink" href="#pep-487-descriptor-protocol-enhancements" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0487"><strong>PEP 487</strong></a> extends the descriptor protocol to include the new optional
+<p><span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0487/"><strong>PEP 487</strong></a> extends the descriptor protocol to include the new optional
 <a class="reference internal" href="../reference/datamodel.html#object.__set_name__" title="object.__set_name__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__set_name__()</span></code></a> method.  Whenever a new class is defined, the new
 method will be called on all descriptors included in the definition, providing
 them with a reference to the class being defined and the name given to the
@@ -596,7 +596,7 @@ owner class:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-15"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0487"><strong>PEP 487</strong></a> -- Simpler customization of class creation</dt><dd><p>由 Martin Teichmann 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0487/"><strong>PEP 487</strong></a> -- Simpler customization of class creation</dt><dd><p>由 Martin Teichmann 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="../reference/datamodel.html#descriptors"><span class="std std-ref">Feature documentation</span></a></p>
@@ -657,7 +657,7 @@ pre-existing code:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-16"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0519"><strong>PEP 519</strong></a> -- Adding a file system path protocol</dt><dd><p>由 Brett Cannon 與 Koos Zevenhoven 撰寫 PEP。</p>
+<dt><span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0519/"><strong>PEP 519</strong></a> -- Adding a file system path protocol</dt><dd><p>由 Brett Cannon 與 Koos Zevenhoven 撰寫 PEP。</p>
 </dd>
 </dl>
 </div>
@@ -669,7 +669,7 @@ are moved back.  In those times, intervals are introduced in which local
 clocks show the same time twice in the same day. In these situations, the
 information displayed on a local clock (or stored in a Python datetime
 instance) is insufficient to identify a particular moment in time.</p>
-<p><span class="target" id="index-17"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0495"><strong>PEP 495</strong></a> adds the new <em>fold</em> attribute to instances of
+<p><span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0495/"><strong>PEP 495</strong></a> adds the new <em>fold</em> attribute to instances of
 <a class="reference internal" href="../library/datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a> and <a class="reference internal" href="../library/datetime.html#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.time</span></code></a> classes to differentiate
 between two moments in time for which local times are the same:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u0</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
@@ -690,7 +690,7 @@ value <code class="docutils literal notranslate"><span class="pre">0</span></cod
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0495"><strong>PEP 495</strong></a> -- Local Time Disambiguation</dt><dd><p>PEP written by Alexander Belopolsky and Tim Peters, implementation
+<dt><span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0495/"><strong>PEP 495</strong></a> -- Local Time Disambiguation</dt><dd><p>PEP written by Alexander Belopolsky and Tim Peters, implementation
 by Alexander Belopolsky.</p>
 </dd>
 </dl>
@@ -710,7 +710,7 @@ provided those bytes are encoded with the encoding returned by
 correctly encoded. To revert to the previous behaviour, set
 <span class="target" id="index-19"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONLEGACYWINDOWSFSENCODING</span></code></a> or call
 <a class="reference internal" href="../library/sys.html#sys._enablelegacywindowsfsencoding" title="sys._enablelegacywindowsfsencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._enablelegacywindowsfsencoding()</span></code></a>.</p>
-<p>See <span class="target" id="index-20"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0529"><strong>PEP 529</strong></a> for more information and discussion of code modifications that
+<p>See <span class="target" id="index-20"></span><a class="pep reference external" href="https://peps.python.org/pep-0529/"><strong>PEP 529</strong></a> for more information and discussion of code modifications that
 may be required.</p>
 </section>
 <section id="pep-528-change-windows-console-encoding-to-utf-8">
@@ -724,7 +724,7 @@ console use, set <span class="target" id="index-21"></span><a class="reference i
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-22"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0528"><strong>PEP 528</strong></a> -- Change Windows console encoding to UTF-8</dt><dd><p>由 Steve Dower 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-22"></span><a class="pep reference external" href="https://peps.python.org/pep-0528/"><strong>PEP 528</strong></a> -- Change Windows console encoding to UTF-8</dt><dd><p>由 Steve Dower 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -740,7 +740,7 @@ mapping.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-23"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0520"><strong>PEP 520</strong></a> -- Preserving Class Attribute Definition Order</dt><dd><p>由 Eric Snow 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-23"></span><a class="pep reference external" href="https://peps.python.org/pep-0520/"><strong>PEP 520</strong></a> -- Preserving Class Attribute Definition Order</dt><dd><p>由 Eric Snow 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -752,7 +752,7 @@ insertion-order-preserving mapping.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-24"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0468"><strong>PEP 468</strong></a> -- Preserving Keyword Argument Order</dt><dd><p>由 Eric Snow 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0468/"><strong>PEP 468</strong></a> -- Preserving Keyword Argument Order</dt><dd><p>由 Eric Snow 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -782,7 +782,7 @@ executes, one place it has not done so is in the evaluation of frame
 objects.  If you wanted some way to intercept frame evaluation in
 Python there really wasn't any way without directly manipulating
 function pointers for defined functions.</p>
-<p><span class="target" id="index-25"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0523"><strong>PEP 523</strong></a> changes this by providing an API to make frame
+<p><span class="target" id="index-25"></span><a class="pep reference external" href="https://peps.python.org/pep-0523/"><strong>PEP 523</strong></a> changes this by providing an API to make frame
 evaluation pluggable at the C level. This will allow for tools such
 as debuggers and JITs to intercept frame evaluation before the
 execution of Python code begins. This enables the use of alternative
@@ -795,7 +795,7 @@ API will change with Python as necessary.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-26"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0523"><strong>PEP 523</strong></a> -- Adding a frame evaluation API to CPython</dt><dd><p>由 Brett Cannon 與 Dino Viehland 撰寫 PEP。</p>
+<dt><span class="target" id="index-26"></span><a class="pep reference external" href="https://peps.python.org/pep-0523/"><strong>PEP 523</strong></a> -- Adding a frame evaluation API to CPython</dt><dd><p>由 Brett Cannon 與 Dino Viehland 撰寫 PEP。</p>
 </dd>
 </dl>
 </div>
@@ -927,7 +927,7 @@ on Python 3.6+ and <a class="reference internal" href="../library/os.html#os.ura
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-28"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0506"><strong>PEP 506</strong></a> -- Adding A Secrets Module To The Standard Library</dt><dd><p>由 Steven D'Aprano 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0506/"><strong>PEP 506</strong></a> -- Adding A Secrets Module To The Standard Library</dt><dd><p>由 Steven D'Aprano 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -1028,7 +1028,7 @@ return value.
 <section id="cmath">
 <h3>cmath<a class="headerlink" href="#cmath" title="本標題的永久連結">¶</a></h3>
 <p>The new <a class="reference internal" href="../library/cmath.html#cmath.tau" title="cmath.tau"><code class="xref py py-const docutils literal notranslate"><span class="pre">cmath.tau</span></code></a> (<em>τ</em>) constant has been added.
-(Contributed by Lisa Roach in <a class="reference external" href="https://bugs.python.org/issue12345">bpo-12345</a>, see <span class="target" id="index-29"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0628"><strong>PEP 628</strong></a> for details.)</p>
+(Contributed by Lisa Roach in <a class="reference external" href="https://bugs.python.org/issue12345">bpo-12345</a>, see <span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0628/"><strong>PEP 628</strong></a> for details.)</p>
 <p>New constants: <a class="reference internal" href="../library/cmath.html#cmath.inf" title="cmath.inf"><code class="xref py py-const docutils literal notranslate"><span class="pre">cmath.inf</span></code></a> and <a class="reference internal" href="../library/cmath.html#cmath.nan" title="cmath.nan"><code class="xref py py-const docutils literal notranslate"><span class="pre">cmath.nan</span></code></a> to
 match <a class="reference internal" href="../library/math.html#math.inf" title="math.inf"><code class="xref py py-const docutils literal notranslate"><span class="pre">math.inf</span></code></a> and <a class="reference internal" href="../library/math.html#math.nan" title="math.nan"><code class="xref py py-const docutils literal notranslate"><span class="pre">math.nan</span></code></a>, and also <a class="reference internal" href="../library/cmath.html#cmath.infj" title="cmath.infj"><code class="xref py py-const docutils literal notranslate"><span class="pre">cmath.infj</span></code></a>
 and <a class="reference internal" href="../library/cmath.html#cmath.nanj" title="cmath.nanj"><code class="xref py py-const docutils literal notranslate"><span class="pre">cmath.nanj</span></code></a> to match the format used by complex repr.
@@ -1300,7 +1300,7 @@ be reopened.
 <h3>math<a class="headerlink" href="#math" title="本標題的永久連結">¶</a></h3>
 <p>The tau (<em>τ</em>) constant has been added to the <a class="reference internal" href="../library/math.html#module-math" title="math: Mathematical functions (sin() etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a> and <a class="reference internal" href="../library/cmath.html#module-cmath" title="cmath: Mathematical functions for complex numbers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a>
 modules.
-(Contributed by Lisa Roach in <a class="reference external" href="https://bugs.python.org/issue12345">bpo-12345</a>, see <span class="target" id="index-30"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0628"><strong>PEP 628</strong></a> for details.)</p>
+(Contributed by Lisa Roach in <a class="reference external" href="https://bugs.python.org/issue12345">bpo-12345</a>, see <span class="target" id="index-30"></span><a class="pep reference external" href="https://peps.python.org/pep-0628/"><strong>PEP 628</strong></a> for details.)</p>
 </section>
 <section id="multiprocessing">
 <h3>multiprocessing<a class="headerlink" href="#multiprocessing" title="本標題的永久連結">¶</a></h3>
@@ -1321,10 +1321,10 @@ iterator is neither exhausted nor explicitly closed a <a class="reference intern
 will be emitted in its destructor.
 (Contributed by Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue25994">bpo-25994</a>.)</p>
 <p>On Linux, <a class="reference internal" href="../library/os.html#os.urandom" title="os.urandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.urandom()</span></code></a> now blocks until the system urandom entropy pool
-is initialized to increase the security. See the <span class="target" id="index-31"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0524"><strong>PEP 524</strong></a> for the rationale.</p>
+is initialized to increase the security. See the <span class="target" id="index-31"></span><a class="pep reference external" href="https://peps.python.org/pep-0524/"><strong>PEP 524</strong></a> for the rationale.</p>
 <p>The Linux <code class="docutils literal notranslate"><span class="pre">getrandom()</span></code> syscall (get random bytes) is now exposed as the new
 <a class="reference internal" href="../library/os.html#os.getrandom" title="os.getrandom"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getrandom()</span></code></a> function.
-(Contributed by Victor Stinner, part of the <span class="target" id="index-32"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0524"><strong>PEP 524</strong></a>)</p>
+(Contributed by Victor Stinner, part of the <span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0524/"><strong>PEP 524</strong></a>)</p>
 </section>
 <section id="pathlib">
 <h3>pathlib<a class="headerlink" href="#pathlib" title="本標題的永久連結">¶</a></h3>
@@ -1574,7 +1574,7 @@ representing <a class="reference internal" href="../library/contextlib.html#cont
 representing <a class="reference internal" href="../library/collections.abc.html#collections.abc.Collection" title="collections.abc.Collection"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Collection</span></code></a>.
 (Contributed by Ivan Levkivskyi in <a class="reference external" href="https://bugs.python.org/issue27598">bpo-27598</a>.)</p>
 <p>The <a class="reference internal" href="../library/typing.html#typing.ClassVar" title="typing.ClassVar"><code class="xref py py-const docutils literal notranslate"><span class="pre">typing.ClassVar</span></code></a> type construct has been added to
-mark class variables.  As introduced in <span class="target" id="index-33"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0526"><strong>PEP 526</strong></a>, a variable annotation
+mark class variables.  As introduced in <span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a>, a variable annotation
 wrapped in ClassVar indicates that a given attribute is intended to be used as
 a class variable and should not be set on instances of that class.
 (Contributed by Ivan Levkivskyi in <a class="reference external" href="https://github.com/python/typing/pull/280">Github #280</a>.)</p>
@@ -1766,7 +1766,7 @@ decimals is now 2 to 3 times faster.
 <li><p>Python now requires some C99 support in the toolchain to build.
 Most notably, Python now uses standard integer types and macros in
 place of custom macros like <code class="docutils literal notranslate"><span class="pre">PY_LONG_LONG</span></code>.
-For more information, see <span class="target" id="index-34"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0007"><strong>PEP 7</strong></a> and <a class="reference external" href="https://bugs.python.org/issue17884">bpo-17884</a>.</p></li>
+For more information, see <span class="target" id="index-34"></span><a class="pep reference external" href="https://peps.python.org/pep-0007/"><strong>PEP 7</strong></a> and <a class="reference external" href="https://bugs.python.org/issue17884">bpo-17884</a>.</p></li>
 <li><p>Cross-compiling CPython with the Android NDK and the Android API level set to
 21 (Android 5.0 Lollipop) or greater runs successfully. While Android is not
 yet a supported platform, the Python test suite runs on the Android emulator
@@ -1818,7 +1818,7 @@ Python prints <a class="reference internal" href="../library/sys.html#sys.versio
 <section id="new-keywords">
 <h3>新關鍵字<a class="headerlink" href="#new-keywords" title="本標題的永久連結">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code> are not recommended to be used as variable, class,
-function or module names.  Introduced by <span class="target" id="index-35"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> in Python 3.5, they will
+function or module names.  Introduced by <span class="target" id="index-35"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a> in Python 3.5, they will
 become proper keywords in Python 3.7.  Starting in Python 3.6, the use of
 <code class="docutils literal notranslate"><span class="pre">async</span></code> or <code class="docutils literal notranslate"><span class="pre">await</span></code> as names will generate a <a class="reference internal" href="../library/exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a>.</p>
 </section>
@@ -2015,7 +2015,7 @@ Functions directly decoding <code class="docutils literal notranslate"><span cla
 8-bit integer type for the line number delta, but this is only required to
 support applications using a negative line number delta. See
 <code class="docutils literal notranslate"><span class="pre">Objects/lnotab_notes.txt</span></code> for the <code class="docutils literal notranslate"><span class="pre">co_lnotab</span></code> format and how to decode
-it, and see the <span class="target" id="index-36"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0511"><strong>PEP 511</strong></a> for the rationale.</p></li>
+it, and see the <span class="target" id="index-36"></span><a class="pep reference external" href="https://peps.python.org/pep-0511/"><strong>PEP 511</strong></a> for the rationale.</p></li>
 <li><p>The functions in the <a class="reference internal" href="../library/compileall.html#module-compileall" title="compileall: Tools for byte-compiling all Python source files in a directory tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">compileall</span></code></a> module now return booleans instead
 of <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> to represent success or failure, respectively. Thanks to
 booleans being a subclass of integers, this should only be an issue if you
@@ -2069,7 +2069,7 @@ constructors in the <a class="reference internal" href="../library/json.html#mod
 (Contributed by Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue18726">bpo-18726</a>.)</p></li>
 <li><p>Subclasses of <a class="reference internal" href="../library/functions.html#type" title="type"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a> which don't override <code class="docutils literal notranslate"><span class="pre">type.__new__</span></code> may no
 longer use the one-argument form to get the type of an object.</p></li>
-<li><p>As part of <span class="target" id="index-37"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0487"><strong>PEP 487</strong></a>, the handling of keyword arguments passed to
+<li><p>As part of <span class="target" id="index-37"></span><a class="pep reference external" href="https://peps.python.org/pep-0487/"><strong>PEP 487</strong></a>, the handling of keyword arguments passed to
 <a class="reference internal" href="../library/functions.html#type" title="type"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a> (other than the metaclass hint, <code class="docutils literal notranslate"><span class="pre">metaclass</span></code>) is now
 consistently delegated to <a class="reference internal" href="../reference/datamodel.html#object.__init_subclass__" title="object.__init_subclass__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">object.__init_subclass__()</span></code></a>. This means that
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">type.__new__()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">type.__init__()</span></code> both now accept arbitrary
@@ -2466,7 +2466,7 @@ documentation.
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -2502,11 +2502,11 @@ documentation.
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

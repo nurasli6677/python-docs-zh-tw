@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9. API 參照 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. API 參照 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -176,7 +176,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">發布 Python 模組（舊版）</a> &#187;</li>
@@ -354,7 +354,7 @@ script</p></td>
 </tr>
 <tr class="row-even"><td><p><em>keywords</em></p></td>
 <td><p>Descriptive meta-data, see
-<span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0314"><strong>PEP 314</strong></a></p></td>
+<span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0314/"><strong>PEP 314</strong></a></p></td>
 <td><p>a list of strings or a comma-separated string</p></td>
 </tr>
 <tr class="row-odd"><td><p><em>platforms</em></p></td>
@@ -1484,7 +1484,7 @@ are <code class="docutils literal notranslate"><span class="pre">n</span></code>
 <dt class="sig sig-object py" id="distutils.util.byte_compile">
 <span class="sig-prename descclassname"><span class="pre">distutils.util.</span></span><span class="sig-name descname"><span class="pre">byte_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">py_files</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">optimize=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_dir=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct=None</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#distutils.util.byte_compile" title="本定義的永久連結">¶</a></dt>
 <dd><p>Byte-compile a collection of Python source files to <code class="file docutils literal notranslate"><span class="pre">.pyc</span></code> files in a
-<code class="file docutils literal notranslate"><span class="pre">__pycache__</span></code> subdirectory (see <span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a> and <span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0488"><strong>PEP 488</strong></a>).
+<code class="file docutils literal notranslate"><span class="pre">__pycache__</span></code> subdirectory (see <span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-3147/"><strong>PEP 3147</strong></a> and <span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-0488/"><strong>PEP 488</strong></a>).
 <em>py_files</em> is a list of files to compile; any files that don't end in
 <code class="file docutils literal notranslate"><span class="pre">.py</span></code> are silently skipped.  <em>optimize</em> must be one of the following:</p>
 <ul class="simple">
@@ -1512,7 +1512,7 @@ doing, leave it set to <code class="docutils literal notranslate"><span class="p
 instead of files without tag in the current directory.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>Create <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files according to <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0488"><strong>PEP 488</strong></a>.</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Create <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files according to <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0488/"><strong>PEP 488</strong></a>.</p>
 </div>
 </dd></dl>
 
@@ -1625,7 +1625,7 @@ the option table for this <a class="reference internal" href="#distutils.fancy_g
 filesystem and building lists of files.</p>
 </section>
 <section id="module-distutils.log">
-<span id="distutils-log-simple-pep-282-style-logging"></span><h2><span class="section-number">9.18. </span><a class="reference internal" href="#module-distutils.log" title="distutils.log: A simple logging mechanism, :pep:`282`-style"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils.log</span></code></a> --- Simple <span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0282"><strong>PEP 282</strong></a>-style logging<a class="headerlink" href="#module-distutils.log" title="本標題的永久連結">¶</a></h2>
+<span id="distutils-log-simple-pep-282-style-logging"></span><h2><span class="section-number">9.18. </span><a class="reference internal" href="#module-distutils.log" title="distutils.log: A simple logging mechanism, :pep:`282`-style"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils.log</span></code></a> --- Simple <span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0282/"><strong>PEP 282</strong></a>-style logging<a class="headerlink" href="#module-distutils.log" title="本標題的永久連結">¶</a></h2>
 </section>
 <section id="module-distutils.spawn">
 <span id="distutils-spawn-spawn-a-sub-process"></span><h2><span class="section-number">9.19. </span><a class="reference internal" href="#module-distutils.spawn" title="distutils.spawn: Provides the spawn() function"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils.spawn</span></code></a> --- Spawn a sub-process<a class="headerlink" href="#module-distutils.spawn" title="本標題的永久連結">¶</a></h2>
@@ -2093,7 +2093,7 @@ will not be cleaned, as they are not in the build directory.</p>
 <section id="module-distutils.command.register">
 <span id="distutils-command-register-register-a-module-with-the-python-package-index"></span><h2><span class="section-number">9.44. </span><a class="reference internal" href="#module-distutils.command.register" title="distutils.command.register: Register a module with the Python Package Index"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils.command.register</span></code></a> --- Register a module with the Python Package Index<a class="headerlink" href="#module-distutils.command.register" title="本標題的永久連結">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">register</span></code> command registers the package with the Python Package  Index.
-This is described in more detail in <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0301"><strong>PEP 301</strong></a>.</p>
+This is described in more detail in <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0301/"><strong>PEP 301</strong></a>.</p>
 </section>
 <section id="module-distutils.command.check">
 <span id="distutils-command-check-check-the-meta-data-of-a-package"></span><h2><span class="section-number">9.45. </span><a class="reference internal" href="#module-distutils.command.check" title="distutils.command.check: Check the meta-data of a package"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils.command.check</span></code></a> --- Check the meta-data of a package<a class="headerlink" href="#module-distutils.command.check" title="本標題的永久連結">¶</a></h2>
@@ -2215,7 +2215,7 @@ the arguments passed to the <code class="xref py py-func docutils literal notran
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >發布 Python 模組（舊版）</a> &#187;</li>
@@ -2251,11 +2251,11 @@ the arguments passed to the <code class="xref py py-func docutils literal notran
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

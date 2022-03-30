@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Unicode物件與編碼 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode物件與編碼 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -157,7 +157,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -189,7 +189,7 @@
 <span id="unicodeobjects"></span><h1>Unicode物件與編碼<a class="headerlink" href="#unicode-objects-and-codecs" title="本標題的永久連結">¶</a></h1>
 <section id="unicode-objects">
 <h2>Unicode Objects<a class="headerlink" href="#unicode-objects" title="本標題的永久連結">¶</a></h2>
-<p>Since the implementation of <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0393"><strong>PEP 393</strong></a> in Python 3.3, Unicode objects internally
+<p>Since the implementation of <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0393/"><strong>PEP 393</strong></a> in Python 3.3, Unicode objects internally
 use a variety of representations, in order to allow handling the complete range
 of Unicode characters while staying memory efficient.  There are special cases
 for strings where all code points are below 128, 256, or 65536; otherwise, code
@@ -211,7 +211,7 @@ APIs (typically <a class="reference internal" href="#c.PyUnicode_FromUnicode" ti
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>The &quot;legacy&quot; Unicode object will be removed in Python 3.12 with deprecated
-APIs. All Unicode objects will be &quot;canonical&quot; since then. See <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0623"><strong>PEP 623</strong></a>
+APIs. All Unicode objects will be &quot;canonical&quot; since then. See <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0623/"><strong>PEP 623</strong></a>
 for more information.</p>
 </div>
 <section id="unicode-type">
@@ -949,7 +949,7 @@ null code point appended.</p>
 <div class="deprecated-removed">
 <p><span class="versionmodified">Deprecated since version 3.3, will be removed in version 3.12.</span></p>
 </div>
-<p>These API functions are deprecated with the implementation of <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0393"><strong>PEP 393</strong></a>.
+<p>These API functions are deprecated with the implementation of <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0393/"><strong>PEP 393</strong></a>.
 Extension modules can continue using them, as they will not be removed in Python
 3.x, but need to be aware that their use can now cause performance and memory hits.</p>
 <dl class="c function">
@@ -1050,7 +1050,7 @@ system.</p>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Decode a string from UTF-8 on Android and VxWorks, or from the current
 locale encoding on other platforms. The supported
 error handlers are <code class="docutils literal notranslate"><span class="pre">&quot;strict&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;surrogateescape&quot;</span></code>
-(<span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0383"><strong>PEP 383</strong></a>). The decoder uses <code class="docutils literal notranslate"><span class="pre">&quot;strict&quot;</span></code> error handler if
+(<span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0383/"><strong>PEP 383</strong></a>). The decoder uses <code class="docutils literal notranslate"><span class="pre">&quot;strict&quot;</span></code> error handler if
 <em>errors</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.  <em>str</em> must end with a null character but
 cannot contain embedded null characters.</p>
 <p>Use <a class="reference internal" href="#c.PyUnicode_DecodeFSDefaultAndSize" title="PyUnicode_DecodeFSDefaultAndSize"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyUnicode_DecodeFSDefaultAndSize()</span></code></a> to decode a string from
@@ -1088,7 +1088,7 @@ length using <code class="xref c c-func docutils literal notranslate"><span clas
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Encode a Unicode object to UTF-8 on Android and VxWorks, or to the current
 locale encoding on other platforms. The
 supported error handlers are <code class="docutils literal notranslate"><span class="pre">&quot;strict&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;surrogateescape&quot;</span></code>
-(<span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0383"><strong>PEP 383</strong></a>). The encoder uses <code class="docutils literal notranslate"><span class="pre">&quot;strict&quot;</span></code> error handler if
+(<span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-0383/"><strong>PEP 383</strong></a>). The encoder uses <code class="docutils literal notranslate"><span class="pre">&quot;strict&quot;</span></code> error handler if
 <em>errors</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>. Return a <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object. <em>unicode</em> cannot
 contain embedded null characters.</p>
 <p>Use <a class="reference internal" href="#c.PyUnicode_EncodeFSDefault" title="PyUnicode_EncodeFSDefault"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyUnicode_EncodeFSDefault()</span></code></a> to encode a string to
@@ -1117,7 +1117,7 @@ used for <code class="docutils literal notranslate"><span class="pre">strict</sp
 <p>To encode and decode file names and other environment strings,
 <code class="xref c c-data docutils literal notranslate"><span class="pre">Py_FileSystemDefaultEncoding</span></code> should be used as the encoding, and
 <code class="xref c c-data docutils literal notranslate"><span class="pre">Py_FileSystemDefaultEncodeErrors</span></code> should be used as the error handler
-(<span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0383"><strong>PEP 383</strong></a> and <span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0529"><strong>PEP 529</strong></a>). To encode file names to <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> during
+(<span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0383/"><strong>PEP 383</strong></a> and <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0529/"><strong>PEP 529</strong></a>). To encode file names to <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> during
 argument parsing, the <code class="docutils literal notranslate"><span class="pre">&quot;O&amp;&quot;</span></code> converter should be used, passing
 <a class="reference internal" href="#c.PyUnicode_FSConverter" title="PyUnicode_FSConverter"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyUnicode_FSConverter()</span></code></a> as the conversion function:</p>
 <dl class="c function">
@@ -2082,7 +2082,7 @@ interned string object with the same value.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -2119,11 +2119,11 @@ interned string object with the same value.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

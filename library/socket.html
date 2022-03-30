@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>socket --- Low-level networking interface &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socket --- Low-level networking interface &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -149,7 +149,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -214,7 +214,7 @@ created.  Socket addresses are represented as follows:</p>
 <ul>
 <li><p>The address of an <a class="reference internal" href="#socket.AF_UNIX" title="socket.AF_UNIX"><code class="xref py py-const docutils literal notranslate"><span class="pre">AF_UNIX</span></code></a> socket bound to a file system node
 is represented as a string, using the file system encoding and the
-<code class="docutils literal notranslate"><span class="pre">'surrogateescape'</span></code> error handler (see <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0383"><strong>PEP 383</strong></a>).  An address in
+<code class="docutils literal notranslate"><span class="pre">'surrogateescape'</span></code> error handler (see <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0383/"><strong>PEP 383</strong></a>).  An address in
 Linux's abstract namespace is returned as a <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> with
 an initial null byte; note that sockets in this namespace can
 communicate with normal file system sockets, so programs intended to
@@ -421,7 +421,7 @@ generalization of this based on timeouts is supported through
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">socket.</span></span><span class="sig-name descname"><span class="pre">error</span></span><a class="headerlink" href="#socket.error" title="本定義的永久連結">¶</a></dt>
 <dd><p>A deprecated alias of <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>Following <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3151"><strong>PEP 3151</strong></a>, this class was made an alias of <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>Following <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-3151/"><strong>PEP 3151</strong></a>, this class was made an alias of <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
 </div>
 </dd></dl>
 
@@ -1452,7 +1452,7 @@ connections. The return value is a pair <code class="docutils literal notranslat
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1504,7 +1504,7 @@ signal (or the exception raised by the signal handler).</p>
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>The method now waits until the connection completes instead of raising an
 <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception if the connection is interrupted by a
 signal, the signal handler doesn't raise an exception and the socket is
-blocking or has a timeout (see the <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+blocking or has a timeout (see the <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1679,7 +1679,7 @@ should be a relatively small power of 2, for example, 4096.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1694,7 +1694,7 @@ to zero. (The format of <em>address</em> depends on the address family --- see a
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>For multicast IPv6 address, first item of <em>address</em> does not contain
@@ -1768,7 +1768,7 @@ messages being received).  See also <a class="reference internal" href="#socket.
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1842,7 +1842,7 @@ information on this topic, consult the <a class="reference internal" href="../ho
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-10"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1862,7 +1862,7 @@ The socket timeout is now the maximum total duration to send all data.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-11"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1880,7 +1880,7 @@ above.)</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-12"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -1923,7 +1923,7 @@ over an <a class="reference internal" href="#socket.AF_UNIX" title="socket.AF_UN
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>If the system call is interrupted and the signal handler does not raise
 an exception, the method now retries the system call instead of raising
-an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p>
+an <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p>
 </div>
 </dd></dl>
 
@@ -2429,7 +2429,7 @@ want to refer to <span class="target" id="index-15"></span><a class="rfc referen
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2466,11 +2466,11 @@ want to refer to <span class="target" id="index-15"></span><a class="rfc referen
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

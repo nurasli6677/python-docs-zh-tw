@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python Initialization Configuration &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Initialization Configuration &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -144,7 +144,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python/C API 參考手冊</a> &#187;</li>
@@ -195,7 +195,7 @@ program.</p>
 <p>See also <a class="reference internal" href="init.html#initialization"><span class="std std-ref">Initialization, Finalization, and Threads</span></a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
-<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0587"><strong>PEP 587</strong></a> &quot;Python Initialization Configuration&quot;.</p>
+<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0587/"><strong>PEP 587</strong></a> &quot;Python Initialization Configuration&quot;.</p>
 </div>
 <section id="example">
 <h2>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
@@ -784,7 +784,7 @@ value of the 'check_source' flag.</p></li>
 determines invalidation.</p></li>
 </ul>
 <p>預設：<code class="docutils literal notranslate"><span class="pre">L&quot;default&quot;</span></code>。</p>
-<p>See also <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0552"><strong>PEP 552</strong></a> &quot;Deterministic pycs&quot;.</p>
+<p>See also <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0552/"><strong>PEP 552</strong></a> &quot;Deterministic pycs&quot;.</p>
 </dd></dl>
 
 <dl class="c member">
@@ -983,7 +983,7 @@ variable is set to a non-empty string.</p>
 <p>Only available on Windows. <code class="docutils literal notranslate"><span class="pre">#ifdef</span> <span class="pre">MS_WINDOWS</span></code> macro can be used for
 Windows specific code.</p>
 <p>預設：<code class="docutils literal notranslate"><span class="pre">0</span></code>。</p>
-<p>See also the <span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0528"><strong>PEP 528</strong></a> (Change Windows console encoding to UTF-8).</p>
+<p>See also the <span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0528/"><strong>PEP 528</strong></a> (Change Windows console encoding to UTF-8).</p>
 </dd></dl>
 
 <dl class="c member">
@@ -1455,9 +1455,9 @@ functions create a configuration to build a customized Python which behaves as
 the regular Python.</p>
 <p>Environments variables and command line arguments are used to configure
 Python, whereas global configuration variables are ignored.</p>
-<p>This function enables C locale coercion (<span class="target" id="index-28"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0538"><strong>PEP 538</strong></a>)
+<p>This function enables C locale coercion (<span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0538/"><strong>PEP 538</strong></a>)
 and <a class="reference internal" href="../library/os.html#utf8-mode"><span class="std std-ref">Python UTF-8 Mode</span></a>
-(<span class="target" id="index-29"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0540"><strong>PEP 540</strong></a>) depending on the LC_CTYPE locale, <span class="target" id="index-30"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONUTF8"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONUTF8</span></code></a> and
+(<span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0540/"><strong>PEP 540</strong></a>) depending on the LC_CTYPE locale, <span class="target" id="index-30"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONUTF8"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONUTF8</span></code></a> and
 <span class="target" id="index-31"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONCOERCECLOCALE"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONCOERCECLOCALE</span></code></a> environment variables.</p>
 </section>
 <section id="python-path-configuration">
@@ -1569,7 +1569,7 @@ customized Python always running in isolated mode using
 <section id="multi-phase-initialization-private-provisional-api">
 <h2>Multi-Phase Initialization Private Provisional API<a class="headerlink" href="#multi-phase-initialization-private-provisional-api" title="本標題的永久連結">¶</a></h2>
 <p>This section is a private provisional API introducing multi-phase
-initialization, the core feature of the <span class="target" id="index-32"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0432"><strong>PEP 432</strong></a>:</p>
+initialization, the core feature of the <span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0432/"><strong>PEP 432</strong></a>:</p>
 <ul class="simple">
 <li><p>&quot;Core&quot; initialization phase, &quot;bare minimum Python&quot;:</p>
 <ul>
@@ -1612,7 +1612,7 @@ applied during the &quot;Main&quot; phase. It may allow to customize Python in P
 override or tune the <a class="reference internal" href="#init-path-config"><span class="std std-ref">Path Configuration</span></a>, maybe
 install a custom <a class="reference internal" href="../library/sys.html#sys.meta_path" title="sys.meta_path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.meta_path</span></code></a> importer or an import hook, etc.</p>
 <p>It may become possible to calculatin the <a class="reference internal" href="#init-path-config"><span class="std std-ref">Path Configuration</span></a> in Python, after the Core phase and before the Main phase,
-which is one of the <span class="target" id="index-33"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0432"><strong>PEP 432</strong></a> motivation.</p>
+which is one of the <span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0432/"><strong>PEP 432</strong></a> motivation.</p>
 <p>The &quot;Core&quot; phase is not properly defined: what should be and what should
 not be available at this phase is not specified yet. The API is marked
 as private and provisional: the API can be modified or even be removed
@@ -1737,7 +1737,7 @@ phases:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -1773,11 +1773,11 @@ phases:</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

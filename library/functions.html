@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>內建函式 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>內建函式 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1520,7 +1520,7 @@ creation mode (<code class="docutils literal notranslate"><span class="pre">'x'<
 <div><ul class="simple">
 <li><p>If the system call is interrupted and the signal handler does not raise an
 exception, the function now retries the system call instead of raising an
-<a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0475"><strong>PEP 475</strong></a> for the rationale).</p></li>
+<a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a> exception (see <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0475/"><strong>PEP 475</strong></a> for the rationale).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">'namereplace'</span></code> error handler was added.</p></li>
 </ul>
 </div></blockquote>
@@ -1799,7 +1799,7 @@ compare equal --- this is helpful for sorting in multiple passes (for
 example, sort by department, then by salary grade).</p>
 <p>The sort algorithm uses only <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> comparisons between items.  While
 defining an <a class="reference internal" href="../reference/datamodel.html#object.__lt__" title="object.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code></a> method will suffice for sorting,
-<span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> recommends that all six <a class="reference internal" href="../reference/expressions.html#comparisons"><span class="std std-ref">rich comparisons</span></a> be implemented.  This will help avoid bugs when using
+<span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0008/"><strong>PEP 8</strong></a> recommends that all six <a class="reference internal" href="../reference/expressions.html#comparisons"><span class="std std-ref">rich comparisons</span></a> be implemented.  This will help avoid bugs when using
 the same data with other ordering tools such as <a class="reference internal" href="#max" title="max"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a> that rely
 on a different underlying method.  Implementing all six comparisons
 also helps avoid confusion for mixed type comparisons which can call
@@ -2089,7 +2089,7 @@ programming, unlike <a class="reference internal" href="importlib.html#importlib
 replaced (by importing the <a class="reference internal" href="builtins.html#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code></a> module and assigning to
 <code class="docutils literal notranslate"><span class="pre">builtins.__import__</span></code>) in order to change semantics of the
 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code> statement, but doing so is <strong>strongly</strong> discouraged as it
-is usually simpler to use import hooks (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a>) to attain the same
+is usually simpler to use import hooks (see <span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a>) to attain the same
 goals and does not cause issues with code which assumes the default import
 implementation is in use.  Direct use of <a class="reference internal" href="#import__" title="__import__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__import__()</span></code></a> is also
 discouraged in favor of <a class="reference internal" href="importlib.html#importlib.import_module" title="importlib.import_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.import_module()</span></code></a>.</p>
@@ -2102,7 +2102,7 @@ determine the package context of the <a class="reference internal" href="../refe
 <p><em>level</em> specifies whether to use absolute or relative imports. <code class="docutils literal notranslate"><span class="pre">0</span></code> (the
 default) means only perform absolute imports.  Positive values for
 <em>level</em> indicate the number of parent directories to search relative to the
-directory of the module calling <a class="reference internal" href="#import__" title="__import__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__import__()</span></code></a> (see <span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0328"><strong>PEP 328</strong></a> for the
+directory of the module calling <a class="reference internal" href="#import__" title="__import__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__import__()</span></code></a> (see <span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0328/"><strong>PEP 328</strong></a> for the
 details).</p>
 <p>When the <em>name</em> variable is of the form <code class="docutils literal notranslate"><span class="pre">package.module</span></code>, normally, the
 top-level package (the name up till the first dot) is returned, <em>not</em> the
@@ -2209,7 +2209,7 @@ mode to convert Windows or Mac-style newlines.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2245,11 +2245,11 @@ mode to convert Windows or Mac-style newlines.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

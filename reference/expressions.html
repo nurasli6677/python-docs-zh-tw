@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Expressions &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Expressions &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -176,7 +176,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 語言參考手冊</a> &#187;</li>
@@ -337,7 +337,7 @@ If a comprehension contains either <code class="xref std std-keyword docutils li
 or <code class="xref std std-keyword docutils literal notranslate"><span class="pre">await</span></code> expressions it is called an
 <em class="dfn">asynchronous comprehension</em>.  An asynchronous comprehension may
 suspend the execution of the coroutine function in which it appears.
-See also <span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0530"><strong>PEP 530</strong></a>.</p>
+See also <span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0530/"><strong>PEP 530</strong></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版本新加入: </span>Asynchronous comprehensions were introduced.</p>
 </div>
@@ -394,7 +394,7 @@ Its operand must be a <a class="reference internal" href="../glossary.html#term-
 to the new dictionary.  Later values replace values already set by
 earlier key/datum pairs and earlier dictionary unpackings.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.5 版本新加入: </span>Unpacking into dictionary displays, originally proposed by <span class="target" id="index-19"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0448"><strong>PEP 448</strong></a>.</p>
+<p><span class="versionmodified added">在 3.5 版本新加入: </span>Unpacking into dictionary displays, originally proposed by <span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0448/"><strong>PEP 448</strong></a>.</p>
 </div>
 <p>A dict comprehension, in contrast to list and set comprehensions, needs two
 expressions separated with a colon followed by the usual &quot;for&quot; and &quot;if&quot; clauses.
@@ -409,7 +409,7 @@ prevails.</p>
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>Prior to Python 3.8, in dict comprehensions, the evaluation order of key
 and value was not well-defined.  In CPython, the value was evaluated before
 the key.  Starting with 3.8, the key is evaluated before the value, as
-proposed by <span class="target" id="index-21"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0572"><strong>PEP 572</strong></a>.</p>
+proposed by <span class="target" id="index-21"></span><a class="pep reference external" href="https://peps.python.org/pep-0572/"><strong>PEP 572</strong></a>.</p>
 </div>
 </section>
 <section id="generator-expressions">
@@ -530,15 +530,15 @@ on the right hand side of an assignment statement.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-26"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0255"><strong>PEP 255</strong></a> - Simple Generators</dt><dd><p>The proposal for adding generators and the <a class="reference internal" href="simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> statement to Python.</p>
+<dt><span class="target" id="index-26"></span><a class="pep reference external" href="https://peps.python.org/pep-0255/"><strong>PEP 255</strong></a> - Simple Generators</dt><dd><p>The proposal for adding generators and the <a class="reference internal" href="simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> statement to Python.</p>
 </dd>
-<dt><span class="target" id="index-27"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0342"><strong>PEP 342</strong></a> - Coroutines via Enhanced Generators</dt><dd><p>The proposal to enhance the API and syntax of generators, making them
+<dt><span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0342/"><strong>PEP 342</strong></a> - Coroutines via Enhanced Generators</dt><dd><p>The proposal to enhance the API and syntax of generators, making them
 usable as simple coroutines.</p>
 </dd>
-<dt><span class="target" id="index-28"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0380"><strong>PEP 380</strong></a> - Syntax for Delegating to a Subgenerator</dt><dd><p>The proposal to introduce the <code class="xref std std-token docutils literal notranslate"><span class="pre">yield_from</span></code> syntax,
+<dt><span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0380/"><strong>PEP 380</strong></a> - Syntax for Delegating to a Subgenerator</dt><dd><p>The proposal to introduce the <code class="xref std std-token docutils literal notranslate"><span class="pre">yield_from</span></code> syntax,
 making delegation to subgenerators easy.</p>
 </dd>
-<dt><span class="target" id="index-29"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0525"><strong>PEP 525</strong></a> - Asynchronous Generators</dt><dd><p>The proposal that expanded on <span class="target" id="index-30"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> by adding generator capabilities to
+<dt><span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a> - Asynchronous Generators</dt><dd><p>The proposal that expanded on <span class="target" id="index-30"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a> by adding generator capabilities to
 coroutine functions.</p>
 </dd>
 </dl>
@@ -950,7 +950,7 @@ used as positional argument slots or as keyword argument names.</p>
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>Function calls accept any number of <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> unpackings,
 positional arguments may follow iterable unpackings (<code class="docutils literal notranslate"><span class="pre">*</span></code>),
 and keyword arguments may follow dictionary unpackings (<code class="docutils literal notranslate"><span class="pre">**</span></code>).
-Originally proposed by <span class="target" id="index-51"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0448"><strong>PEP 448</strong></a>.</p>
+Originally proposed by <span class="target" id="index-51"></span><a class="pep reference external" href="https://peps.python.org/pep-0448/"><strong>PEP 448</strong></a>.</p>
 </div>
 <p>A call always returns some value, possibly <code class="docutils literal notranslate"><span class="pre">None</span></code>, unless it raises an
 exception.  How this value is computed depends on the type of the callable
@@ -1193,7 +1193,7 @@ themselves.  For example, if <code class="docutils literal notranslate"><span cl
 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">x</span></code> are all false, while <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">x</span></code> is true.  This behavior is
 compliant with IEEE 754.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code> and <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> are singletons.  <span class="target" id="index-79"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> advises that
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code> and <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> are singletons.  <span class="target" id="index-79"></span><a class="pep reference external" href="https://peps.python.org/pep-0008/"><strong>PEP 8</strong></a> advises that
 comparisons for singletons should always be done with <code class="docutils literal notranslate"><span class="pre">is</span></code> or <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code>,
 never the equality operators.</p></li>
 <li><p>Binary sequences (instances of <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> or <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>) can be
@@ -1372,7 +1372,7 @@ returns a boolean value regardless of the type of its argument
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.8 版本新加入: </span>See <span class="target" id="index-86"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0572"><strong>PEP 572</strong></a> for more details about assignment expressions.</p>
+<p><span class="versionmodified added">在 3.8 版本新加入: </span>See <span class="target" id="index-86"></span><a class="pep reference external" href="https://peps.python.org/pep-0572/"><strong>PEP 572</strong></a> for more details about assignment expressions.</p>
 </div>
 </section>
 <section id="conditional-expressions">
@@ -1386,7 +1386,7 @@ priority of all Python operations.</p>
 <p>The expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">if</span> <span class="pre">C</span> <span class="pre">else</span> <span class="pre">y</span></code> first evaluates the condition, <em>C</em> rather than <em>x</em>.
 If <em>C</em> is true, <em>x</em> is evaluated and its value is returned; otherwise, <em>y</em> is
 evaluated and its value is returned.</p>
-<p>See <span class="target" id="index-88"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0308"><strong>PEP 308</strong></a> for more details about conditional expressions.</p>
+<p>See <span class="target" id="index-88"></span><a class="pep reference external" href="https://peps.python.org/pep-0308/"><strong>PEP 308</strong></a> for more details about conditional expressions.</p>
 </section>
 <section id="lambda">
 <span id="lambdas"></span><span id="id14"></span><h2><span class="section-number">6.14. </span>Lambdas<a class="headerlink" href="#lambda" title="本標題的永久連結">¶</a></h2>
@@ -1421,7 +1421,7 @@ an <a class="reference internal" href="../glossary.html#term-iterable"><span cla
 which are included in the new tuple, list, or set, at the site of
 the unpacking.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.5 版本新加入: </span>Iterable unpacking in expression lists, originally proposed by <span class="target" id="index-93"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0448"><strong>PEP 448</strong></a>.</p>
+<p><span class="versionmodified added">在 3.5 版本新加入: </span>Iterable unpacking in expression lists, originally proposed by <span class="target" id="index-93"></span><a class="pep reference external" href="https://peps.python.org/pep-0448/"><strong>PEP 448</strong></a>.</p>
 </div>
 <p id="index-94">The trailing comma is required only to create a single tuple (a.k.a. a
 <em>singleton</em>); it is optional in all other cases.  A single expression without a
@@ -1702,7 +1702,7 @@ precedence applies.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 語言參考手冊</a> &#187;</li>
@@ -1738,11 +1738,11 @@ precedence applies.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

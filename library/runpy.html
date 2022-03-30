@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>runpy --- Locating and executing Python modules &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>runpy --- Locating and executing Python modules &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -171,7 +171,7 @@ is likely to be a more suitable choice than this module.</p>
 <span class="sig-prename descclassname"><span class="pre">runpy.</span></span><span class="sig-name descname"><span class="pre">run_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mod_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alter_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#runpy.run_module" title="本定義的永久連結">¶</a></dt>
 <dd><p id="index-0">Execute the code of the specified module and return the resulting module
 globals dictionary. The module's code is first located using the standard
-import mechanism (refer to <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> for details) and then executed in a
+import mechanism (refer to <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a> for details) and then executed in a
 fresh module namespace.</p>
 <p>The <em>mod_name</em> argument should be an absolute module name.
 If the module name refers to a package rather than a normal
@@ -214,11 +214,11 @@ command line.</p>
 <p><span class="versionmodified changed">在 3.1 版本變更: </span>Added ability to execute packages by looking for a <code class="docutils literal notranslate"><span class="pre">__main__</span></code> submodule.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> global variable (see <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a>).</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> global variable (see <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-3147/"><strong>PEP 3147</strong></a>).</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span>Updated to take advantage of the module spec feature added by
-<span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a>. This allows <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> to be set correctly for modules
+<span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a>. This allows <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> to be set correctly for modules
 run this way, as well as ensuring the real module name is always
 accessible as <code class="docutils literal notranslate"><span class="pre">__spec__.name</span></code>.</p>
 </div>
@@ -281,7 +281,7 @@ command line (<code class="docutils literal notranslate"><span class="pre">pytho
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span>Updated to take advantage of the module spec feature added by
-<span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a>. This allows <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> to be set correctly in the
+<span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a>. This allows <code class="docutils literal notranslate"><span class="pre">__cached__</span></code> to be set correctly in the
 case where <code class="docutils literal notranslate"><span class="pre">__main__</span></code> is imported from a valid sys.path entry rather
 than being executed directly.</p>
 </div>
@@ -290,11 +290,11 @@ than being executed directly.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0338"><strong>PEP 338</strong></a> -- Executing modules as scripts</dt><dd><p>PEP written and implemented by Nick Coghlan.</p>
+<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0338/"><strong>PEP 338</strong></a> -- Executing modules as scripts</dt><dd><p>PEP written and implemented by Nick Coghlan.</p>
 </dd>
-<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0366"><strong>PEP 366</strong></a> -- Main module explicit relative imports</dt><dd><p>PEP written and implemented by Nick Coghlan.</p>
+<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0366/"><strong>PEP 366</strong></a> -- Main module explicit relative imports</dt><dd><p>PEP written and implemented by Nick Coghlan.</p>
 </dd>
-<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a> -- A ModuleSpec Type for the Import System</dt><dd><p>PEP written and implemented by Eric Snow</p>
+<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a> -- A ModuleSpec Type for the Import System</dt><dd><p>PEP written and implemented by Eric Snow</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="../using/cmdline.html#using-on-general"><span class="std std-ref">Command line and environment</span></a> - CPython command line details</p>
@@ -360,7 +360,7 @@ than being executed directly.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -397,11 +397,11 @@ than being executed directly.</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>

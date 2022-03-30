@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 3.4 有什麼新功能 &#8212; Python 3.10.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 3.4 有什麼新功能 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.3 說明文件 中搜尋"
+          title="在 Python 3.10.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -252,7 +252,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -291,7 +291,7 @@ Python 3.4 was released on March 16, 2014.  For full details, see the
 <a class="reference external" href="https://docs.python.org/3.4/whatsnew/changelog.html">changelog</a>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
-<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0429"><strong>PEP 429</strong></a> -- Python 3.4 Release Schedule</p>
+<p><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0429/"><strong>PEP 429</strong></a> -- Python 3.4 Release Schedule</p>
 </div>
 <section id="summary-release-highlights">
 <h2>Summary -- Release Highlights<a class="headerlink" href="#summary-release-highlights" title="本標題的永久連結">¶</a></h2>
@@ -301,36 +301,36 @@ Python 3.4 was released on March 16, 2014.  For full details, see the
 </ul>
 <p>Other new features:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#whatsnew-pep-453"><span class="std std-ref">pip should always be available</span></a> (<span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a>).</p></li>
+<li><p><a class="reference internal" href="#whatsnew-pep-453"><span class="std std-ref">pip should always be available</span></a> (<span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a>).</p></li>
 <li><p><a class="reference internal" href="#whatsnew-pep-446"><span class="std std-ref">Newly created file descriptors are non-inheritable</span></a>
-(<span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0446"><strong>PEP 446</strong></a>).</p></li>
+(<span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0446/"><strong>PEP 446</strong></a>).</p></li>
 <li><p>command line option for <a class="reference internal" href="#whatsnew-isolated-mode"><span class="std std-ref">isolated mode</span></a>
 (<a class="reference external" href="https://bugs.python.org/issue16499">bpo-16499</a>).</p></li>
 <li><p><a class="reference internal" href="#codec-handling-improvements"><span class="std std-ref">improvements in the handling of codecs</span></a>
 that are not text encodings (multiple issues).</p></li>
 <li><p><a class="reference internal" href="#whatsnew-pep-451"><span class="std std-ref">A ModuleSpec Type</span></a> for the Import System
-(<span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a>).  (Affects importer authors.)</p></li>
+(<span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a>).  (Affects importer authors.)</p></li>
 <li><p>The <a class="reference internal" href="../library/marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> format has been made <a class="reference internal" href="#whatsnew-marshal-3"><span class="std std-ref">more compact and efficient</span></a> (<a class="reference external" href="https://bugs.python.org/issue16475">bpo-16475</a>).</p></li>
 </ul>
 <p>New library modules:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a>: <a class="reference internal" href="#whatsnew-asyncio"><span class="std std-ref">New provisional API for asynchronous IO</span></a> (<span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3156"><strong>PEP 3156</strong></a>).</p></li>
+<li><p><a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a>: <a class="reference internal" href="#whatsnew-asyncio"><span class="std std-ref">New provisional API for asynchronous IO</span></a> (<span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-3156/"><strong>PEP 3156</strong></a>).</p></li>
 <li><p><a class="reference internal" href="../library/ensurepip.html#module-ensurepip" title="ensurepip: Bootstrapping the &quot;pip&quot; installer into an existing Python installation or virtual environment."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensurepip</span></code></a>: <a class="reference internal" href="#whatsnew-ensurepip"><span class="std std-ref">Bootstrapping the pip installer</span></a>
-(<span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a>).</p></li>
+(<span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a>).</p></li>
 <li><p><a class="reference internal" href="../library/enum.html#module-enum" title="enum: Implementation of an enumeration class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code></a>: <a class="reference internal" href="#whatsnew-enum"><span class="std std-ref">Support for enumeration types</span></a>
-(<span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0435"><strong>PEP 435</strong></a>).</p></li>
+(<span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0435/"><strong>PEP 435</strong></a>).</p></li>
 <li><p><a class="reference internal" href="../library/pathlib.html#module-pathlib" title="pathlib: Object-oriented filesystem paths"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code></a>: <a class="reference internal" href="#whatsnew-pathlib"><span class="std std-ref">Object-oriented filesystem paths</span></a>
-(<span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0428"><strong>PEP 428</strong></a>).</p></li>
+(<span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0428/"><strong>PEP 428</strong></a>).</p></li>
 <li><p><a class="reference internal" href="../library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a>: <a class="reference internal" href="#whatsnew-selectors"><span class="std std-ref">High-level and efficient I/O multiplexing</span></a>, built upon the <a class="reference internal" href="../library/select.html#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> module primitives (part
-of <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3156"><strong>PEP 3156</strong></a>).</p></li>
-<li><p><a class="reference internal" href="../library/statistics.html#module-statistics" title="statistics: Mathematical statistics functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">statistics</span></code></a>: A basic <a class="reference internal" href="#whatsnew-statistics"><span class="std std-ref">numerically stable statistics library</span></a> (<span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0450"><strong>PEP 450</strong></a>).</p></li>
-<li><p><a class="reference internal" href="../library/tracemalloc.html#module-tracemalloc" title="tracemalloc: Trace memory allocations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code></a>: <a class="reference internal" href="#whatsnew-tracemalloc"><span class="std std-ref">Trace Python memory allocations</span></a> (<span class="target" id="index-10"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0454"><strong>PEP 454</strong></a>).</p></li>
+of <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-3156/"><strong>PEP 3156</strong></a>).</p></li>
+<li><p><a class="reference internal" href="../library/statistics.html#module-statistics" title="statistics: Mathematical statistics functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">statistics</span></code></a>: A basic <a class="reference internal" href="#whatsnew-statistics"><span class="std std-ref">numerically stable statistics library</span></a> (<span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0450/"><strong>PEP 450</strong></a>).</p></li>
+<li><p><a class="reference internal" href="../library/tracemalloc.html#module-tracemalloc" title="tracemalloc: Trace memory allocations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code></a>: <a class="reference internal" href="#whatsnew-tracemalloc"><span class="std std-ref">Trace Python memory allocations</span></a> (<span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0454/"><strong>PEP 454</strong></a>).</p></li>
 </ul>
 <p>Significantly improved library modules:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#whatsnew-singledispatch"><span class="std std-ref">Single-dispatch generic functions</span></a> in
-<a class="reference internal" href="../library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> (<span class="target" id="index-11"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a>).</p></li>
-<li><p>New <a class="reference internal" href="../library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> <a class="reference internal" href="#whatsnew-protocol-4"><span class="std std-ref">protocol 4</span></a> (<span class="target" id="index-12"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3154"><strong>PEP 3154</strong></a>).</p></li>
+<a class="reference internal" href="../library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> (<span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0443/"><strong>PEP 443</strong></a>).</p></li>
+<li><p>New <a class="reference internal" href="../library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> <a class="reference internal" href="#whatsnew-protocol-4"><span class="std std-ref">protocol 4</span></a> (<span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-3154/"><strong>PEP 3154</strong></a>).</p></li>
 <li><p><a class="reference internal" href="../library/multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> now has <a class="reference internal" href="#whatsnew-multiprocessing-no-fork"><span class="std std-ref">an option to avoid using os.fork
 on Unix</span></a> (<a class="reference external" href="https://bugs.python.org/issue8713">bpo-8713</a>).</p></li>
 <li><p><a class="reference internal" href="../library/email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email</span></code></a> has a new submodule, <a class="reference internal" href="../library/email.contentmanager.html#module-email.contentmanager" title="email.contentmanager: Storing and Retrieving Content from MIME Parts"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contentmanager</span></code></a>, and
@@ -345,9 +345,9 @@ which improves the output of the Python <a class="reference internal" href="../l
 <p>Security improvements:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#whatsnew-pep-456"><span class="std std-ref">Secure and interchangeable hash algorithm</span></a>
-(<span class="target" id="index-13"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0456"><strong>PEP 456</strong></a>).</p></li>
+(<span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0456/"><strong>PEP 456</strong></a>).</p></li>
 <li><p><a class="reference internal" href="#whatsnew-pep-446"><span class="std std-ref">Make newly created file descriptors non-inheritable</span></a>
-(<span class="target" id="index-14"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0446"><strong>PEP 446</strong></a>) to avoid leaking file descriptors to child processes.</p></li>
+(<span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0446/"><strong>PEP 446</strong></a>) to avoid leaking file descriptors to child processes.</p></li>
 <li><p>New command line option for <a class="reference internal" href="#whatsnew-isolated-mode"><span class="std std-ref">isolated mode</span></a>,
 (<a class="reference external" href="https://bugs.python.org/issue16499">bpo-16499</a>).</p></li>
 <li><p><a class="reference internal" href="../library/multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> now has <a class="reference internal" href="#whatsnew-multiprocessing-no-fork"><span class="std std-ref">an option to avoid using os.fork
@@ -368,11 +368,11 @@ certificate verification, including hostname matching
 </ul>
 <p>CPython implementation improvements:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#whatsnew-pep-442"><span class="std std-ref">Safe object finalization</span></a> (<span class="target" id="index-15"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0442"><strong>PEP 442</strong></a>).</p></li>
-<li><p>Leveraging <span class="target" id="index-16"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0442"><strong>PEP 442</strong></a>, in most cases <a class="reference internal" href="#whatsnew-pep-442"><span class="std std-ref">module globals are no longer set
+<li><p><a class="reference internal" href="#whatsnew-pep-442"><span class="std std-ref">Safe object finalization</span></a> (<span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0442/"><strong>PEP 442</strong></a>).</p></li>
+<li><p>Leveraging <span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0442/"><strong>PEP 442</strong></a>, in most cases <a class="reference internal" href="#whatsnew-pep-442"><span class="std std-ref">module globals are no longer set
 to None during finalization</span></a> (<a class="reference external" href="https://bugs.python.org/issue18214">bpo-18214</a>).</p></li>
-<li><p><a class="reference internal" href="#whatsnew-pep-445"><span class="std std-ref">Configurable memory allocators</span></a> (<span class="target" id="index-17"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0445"><strong>PEP 445</strong></a>).</p></li>
-<li><p><a class="reference internal" href="#whatsnew-pep-436"><span class="std std-ref">Argument Clinic</span></a> (<span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0436"><strong>PEP 436</strong></a>).</p></li>
+<li><p><a class="reference internal" href="#whatsnew-pep-445"><span class="std std-ref">Configurable memory allocators</span></a> (<span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0445/"><strong>PEP 445</strong></a>).</p></li>
+<li><p><a class="reference internal" href="#whatsnew-pep-436"><span class="std std-ref">Argument Clinic</span></a> (<span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0436/"><strong>PEP 436</strong></a>).</p></li>
 </ul>
 <p>Please read on for a comprehensive list of user-facing changes, including many
 other smaller improvements, CPython optimizations, deprecations, and potential
@@ -384,7 +384,7 @@ porting issues.</p>
 <span id="whatsnew-pep-453"></span><h3>PEP 453: Explicit Bootstrapping of PIP in Python Installations<a class="headerlink" href="#pep-453-explicit-bootstrapping-of-pip-in-python-installations" title="本標題的永久連結">¶</a></h3>
 <section id="bootstrapping-pip-by-default">
 <h4>Bootstrapping pip By Default<a class="headerlink" href="#bootstrapping-pip-by-default" title="本標題的永久連結">¶</a></h4>
-<p>The new <a class="reference internal" href="../library/ensurepip.html#module-ensurepip" title="ensurepip: Bootstrapping the &quot;pip&quot; installer into an existing Python installation or virtual environment."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensurepip</span></code></a> module (defined in <span class="target" id="index-19"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a>) provides a standard
+<p>The new <a class="reference internal" href="../library/ensurepip.html#module-ensurepip" title="ensurepip: Bootstrapping the &quot;pip&quot; installer into an existing Python installation or virtual environment."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensurepip</span></code></a> module (defined in <span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a>) provides a standard
 cross-platform mechanism to bootstrap the pip installer into Python
 installations and virtual environments. The version of <code class="docutils literal notranslate"><span class="pre">pip</span></code> included
 with Python 3.4.0 is <code class="docutils literal notranslate"><span class="pre">pip</span></code> 1.5.4, and future 3.4.x maintenance releases
@@ -442,7 +442,7 @@ and <a class="reference internal" href="../distutils/index.html#distutils-index"
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-20"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a> -- Explicit bootstrapping of pip in Python installations</dt><dd><p>PEP written by Donald Stufft and Nick Coghlan, implemented by
+<dt><span class="target" id="index-20"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a> -- Explicit bootstrapping of pip in Python installations</dt><dd><p>PEP written by Donald Stufft and Nick Coghlan, implemented by
 Donald Stufft, Nick Coghlan, Martin von Löwis and Ned Deily.</p>
 </dd>
 </dl>
@@ -451,7 +451,7 @@ Donald Stufft, Nick Coghlan, Martin von Löwis and Ned Deily.</p>
 </section>
 <section id="pep-446-newly-created-file-descriptors-are-non-inheritable">
 <span id="whatsnew-pep-446"></span><h3>PEP 446: Newly Created File Descriptors Are Non-Inheritable<a class="headerlink" href="#pep-446-newly-created-file-descriptors-are-non-inheritable" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-21"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0446"><strong>PEP 446</strong></a> makes newly created file descriptors <a class="reference internal" href="../library/os.html#fd-inheritance"><span class="std std-ref">non-inheritable</span></a>.  In general, this is the behavior an application will
+<p><span class="target" id="index-21"></span><a class="pep reference external" href="https://peps.python.org/pep-0446/"><strong>PEP 446</strong></a> makes newly created file descriptors <a class="reference internal" href="../library/os.html#fd-inheritance"><span class="std std-ref">non-inheritable</span></a>.  In general, this is the behavior an application will
 want: when launching a new process, having currently open files also
 open in the new process can lead to all sorts of hard to find bugs,
 and potentially to security issues.</p>
@@ -465,7 +465,7 @@ these cases, the following new functions and methods are available:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-22"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0446"><strong>PEP 446</strong></a> -- Make newly created file descriptors non-inheritable</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-22"></span><a class="pep reference external" href="https://peps.python.org/pep-0446/"><strong>PEP 446</strong></a> -- Make newly created file descriptors non-inheritable</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -559,7 +559,7 @@ in <a class="reference internal" href="../library/codecs.html#binary-transforms"
 </section>
 <section id="pep-451-a-modulespec-type-for-the-import-system">
 <span id="whatsnew-pep-451"></span><h3>PEP 451: A ModuleSpec Type for the Import System<a class="headerlink" href="#pep-451-a-modulespec-type-for-the-import-system" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-23"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0451"><strong>PEP 451</strong></a> provides an encapsulation of the information about a module that the
+<p><span class="target" id="index-23"></span><a class="pep reference external" href="https://peps.python.org/pep-0451/"><strong>PEP 451</strong></a> provides an encapsulation of the information about a module that the
 import machinery will use to load it (that is, a module specification).  This
 helps simplify both the import implementation and several import-related APIs.
 The change is also a stepping stone for <a class="reference external" href="https://mail.python.org/pipermail/python-dev/2013-November/130111.html">several future import-related
@@ -612,7 +612,7 @@ and Claudiu Popa in <a class="reference external" href="https://bugs.python.org/
 several cases as a result of the introduction of Argument Clinic and other
 changes to the <a class="reference internal" href="../library/inspect.html#module-inspect" title="inspect: Extract information and source code from live objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">inspect</span></code></a> and <a class="reference internal" href="../library/pydoc.html#module-pydoc" title="pydoc: Documentation generator and online help system."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code></a> modules.</p></li>
 <li><p><a class="reference internal" href="../reference/datamodel.html#object.__length_hint__" title="object.__length_hint__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__length_hint__()</span></code></a> is now part of the formal language
-specification (see <span class="target" id="index-24"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0424"><strong>PEP 424</strong></a>).  (Contributed by Armin Ronacher in
+specification (see <span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0424/"><strong>PEP 424</strong></a>).  (Contributed by Armin Ronacher in
 <a class="reference external" href="https://bugs.python.org/issue16148">bpo-16148</a>.)</p></li>
 </ul>
 </section>
@@ -621,7 +621,7 @@ specification (see <span class="target" id="index-24"></span><a class="pep refer
 <h2>新模組<a class="headerlink" href="#new-modules" title="本標題的永久連結">¶</a></h2>
 <section id="asyncio">
 <span id="whatsnew-asyncio"></span><h3>asyncio<a class="headerlink" href="#asyncio" title="本標題的永久連結">¶</a></h3>
-<p>The new <a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> module (defined in <span class="target" id="index-25"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3156"><strong>PEP 3156</strong></a>) provides a standard
+<p>The new <a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> module (defined in <span class="target" id="index-25"></span><a class="pep reference external" href="https://peps.python.org/pep-3156/"><strong>PEP 3156</strong></a>) provides a standard
 pluggable event loop model for Python, providing solid asynchronous IO
 support in the standard library, and making it easier for other event loop
 implementations to interoperate with the standard library and each other.</p>
@@ -629,7 +629,7 @@ implementations to interoperate with the standard library and each other.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-26"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3156"><strong>PEP 3156</strong></a> -- Asynchronous IO Support Rebooted: the &quot;asyncio&quot; Module</dt><dd><p>由 Guido van Rossum 撰寫 PEP 與帶領實作。</p>
+<dt><span class="target" id="index-26"></span><a class="pep reference external" href="https://peps.python.org/pep-3156/"><strong>PEP 3156</strong></a> -- Asynchronous IO Support Rebooted: the &quot;asyncio&quot; Module</dt><dd><p>由 Guido van Rossum 撰寫 PEP 與帶領實作。</p>
 </dd>
 </dl>
 </div>
@@ -637,7 +637,7 @@ implementations to interoperate with the standard library and each other.</p>
 <section id="ensurepip">
 <span id="whatsnew-ensurepip"></span><h3>ensurepip<a class="headerlink" href="#ensurepip" title="本標題的永久連結">¶</a></h3>
 <p>The new <a class="reference internal" href="../library/ensurepip.html#module-ensurepip" title="ensurepip: Bootstrapping the &quot;pip&quot; installer into an existing Python installation or virtual environment."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensurepip</span></code></a> module is the primary infrastructure for the
-<span class="target" id="index-27"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a> implementation.  In the normal course of events end users will not
+<span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a> implementation.  In the normal course of events end users will not
 need to interact with this module, but it can be used to manually bootstrap
 <code class="docutils literal notranslate"><span class="pre">pip</span></code> if the automated bootstrapping into an installation or virtual
 environment was declined.</p>
@@ -656,7 +656,7 @@ version of <code class="docutils literal notranslate"><span class="pre">pip</spa
 </section>
 <section id="enum">
 <span id="whatsnew-enum"></span><h3>enum<a class="headerlink" href="#enum" title="本標題的永久連結">¶</a></h3>
-<p>The new <a class="reference internal" href="../library/enum.html#module-enum" title="enum: Implementation of an enumeration class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code></a> module (defined in <span class="target" id="index-28"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0435"><strong>PEP 435</strong></a>) provides a standard
+<p>The new <a class="reference internal" href="../library/enum.html#module-enum" title="enum: Implementation of an enumeration class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code></a> module (defined in <span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0435/"><strong>PEP 435</strong></a>) provides a standard
 implementation of enumeration types, allowing other modules (such as
 <a class="reference internal" href="../library/socket.html#module-socket" title="socket: Low-level networking interface."><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a>) to provide more informative error messages and better
 debugging support by replacing opaque integer constants with backwards
@@ -664,7 +664,7 @@ compatible enumeration values.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-29"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0435"><strong>PEP 435</strong></a> -- Adding an Enum type to the Python standard library</dt><dd><p>PEP written by Barry Warsaw, Eli Bendersky and Ethan Furman,
+<dt><span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0435/"><strong>PEP 435</strong></a> -- Adding an Enum type to the Python standard library</dt><dd><p>PEP written by Barry Warsaw, Eli Bendersky and Ethan Furman,
 implemented by Ethan Furman.</p>
 </dd>
 </dl>
@@ -681,34 +681,34 @@ provide I/O operations.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-30"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0428"><strong>PEP 428</strong></a> -- The pathlib module -- object-oriented filesystem paths</dt><dd><p>由 Antoine Pitrou 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-30"></span><a class="pep reference external" href="https://peps.python.org/pep-0428/"><strong>PEP 428</strong></a> -- The pathlib module -- object-oriented filesystem paths</dt><dd><p>由 Antoine Pitrou 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="selectors">
 <span id="whatsnew-selectors"></span><h3>selectors<a class="headerlink" href="#selectors" title="本標題的永久連結">¶</a></h3>
-<p>The new <a class="reference internal" href="../library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a> module (created as part of implementing <span class="target" id="index-31"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3156"><strong>PEP 3156</strong></a>)
+<p>The new <a class="reference internal" href="../library/selectors.html#module-selectors" title="selectors: High-level I/O multiplexing."><code class="xref py py-mod docutils literal notranslate"><span class="pre">selectors</span></code></a> module (created as part of implementing <span class="target" id="index-31"></span><a class="pep reference external" href="https://peps.python.org/pep-3156/"><strong>PEP 3156</strong></a>)
 allows high-level and efficient I/O multiplexing, built upon the
 <a class="reference internal" href="../library/select.html#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> module primitives.</p>
 </section>
 <section id="statistics">
 <span id="whatsnew-statistics"></span><h3>statistics<a class="headerlink" href="#statistics" title="本標題的永久連結">¶</a></h3>
-<p>The new <a class="reference internal" href="../library/statistics.html#module-statistics" title="statistics: Mathematical statistics functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">statistics</span></code></a> module (defined in <span class="target" id="index-32"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0450"><strong>PEP 450</strong></a>) offers some core
+<p>The new <a class="reference internal" href="../library/statistics.html#module-statistics" title="statistics: Mathematical statistics functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">statistics</span></code></a> module (defined in <span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0450/"><strong>PEP 450</strong></a>) offers some core
 statistics functionality directly in the standard library. This module
 supports calculation of the mean, median, mode, variance and standard
 deviation of a data series.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-33"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0450"><strong>PEP 450</strong></a> -- Adding A Statistics Module To The Standard Library</dt><dd><p>由 Steven D'Aprano 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0450/"><strong>PEP 450</strong></a> -- Adding A Statistics Module To The Standard Library</dt><dd><p>由 Steven D'Aprano 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="tracemalloc">
 <span id="whatsnew-tracemalloc"></span><h3>tracemalloc<a class="headerlink" href="#tracemalloc" title="本標題的永久連結">¶</a></h3>
-<p>The new <a class="reference internal" href="../library/tracemalloc.html#module-tracemalloc" title="tracemalloc: Trace memory allocations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code></a> module (defined in <span class="target" id="index-34"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0454"><strong>PEP 454</strong></a>) is a debug tool to
+<p>The new <a class="reference internal" href="../library/tracemalloc.html#module-tracemalloc" title="tracemalloc: Trace memory allocations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code></a> module (defined in <span class="target" id="index-34"></span><a class="pep reference external" href="https://peps.python.org/pep-0454/"><strong>PEP 454</strong></a>) is a debug tool to
 trace memory blocks allocated by Python. It provides the following information:</p>
 <ul class="simple">
 <li><p>Trace where an object was allocated</p></li>
@@ -719,7 +719,7 @@ total size, number and average size of allocated memory blocks</p></li>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-35"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0454"><strong>PEP 454</strong></a> -- Add a new tracemalloc module to trace Python memory allocations</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作</p>
+<dt><span class="target" id="index-35"></span><a class="pep reference external" href="https://peps.python.org/pep-0454/"><strong>PEP 454</strong></a> -- Add a new tracemalloc module to trace Python memory allocations</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作</p>
 </dd>
 </dl>
 </div>
@@ -953,7 +953,7 @@ multiple implementations of an operation that allows it to work with
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-36"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a> -- Single-dispatch generic functions</dt><dd><p>由 Łukasz Langa 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-36"></span><a class="pep reference external" href="https://peps.python.org/pep-0443/"><strong>PEP 443</strong></a> -- Single-dispatch generic functions</dt><dd><p>由 Łukasz Langa 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -1003,7 +1003,7 @@ future version of Python there will be no default value.  (Contributed by
 Christian Heimes in <a class="reference external" href="https://bugs.python.org/issue17276">bpo-17276</a>.)</p>
 <p>With the addition of <a class="reference internal" href="../library/hmac.html#hmac.HMAC.block_size" title="hmac.HMAC.block_size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">block_size</span></code></a> and <a class="reference internal" href="../library/hmac.html#hmac.HMAC.name" title="hmac.HMAC.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>
 attributes (and the formal documentation of the <a class="reference internal" href="../library/hmac.html#hmac.HMAC.digest_size" title="hmac.HMAC.digest_size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">digest_size</span></code></a>
-attribute), the <a class="reference internal" href="../library/hmac.html#module-hmac" title="hmac: Keyed-Hashing for Message Authentication (HMAC) implementation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hmac</span></code></a> module now conforms fully to the <span class="target" id="index-37"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0247"><strong>PEP 247</strong></a> API.
+attribute), the <a class="reference internal" href="../library/hmac.html#module-hmac" title="hmac: Keyed-Hashing for Message Authentication (HMAC) implementation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hmac</span></code></a> module now conforms fully to the <span class="target" id="index-37"></span><a class="pep reference external" href="https://peps.python.org/pep-0247/"><strong>PEP 247</strong></a> API.
 (Contributed by Christian Heimes in <a class="reference external" href="https://bugs.python.org/issue18775">bpo-18775</a>.)</p>
 </section>
 <section id="html">
@@ -1184,7 +1184,7 @@ processes.  (Contributed by Nick Coghlan in <a class="reference external" href="
 <h3>operator<a class="headerlink" href="#operator" title="本標題的永久連結">¶</a></h3>
 <p>New function <a class="reference internal" href="../library/operator.html#operator.length_hint" title="operator.length_hint"><code class="xref py py-func docutils literal notranslate"><span class="pre">length_hint()</span></code></a> provides an implementation of the
 specification for how the <a class="reference internal" href="../reference/datamodel.html#object.__length_hint__" title="object.__length_hint__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__length_hint__()</span></code></a> special method should
-be used, as part of the <span class="target" id="index-38"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0424"><strong>PEP 424</strong></a> formal specification of this language
+be used, as part of the <span class="target" id="index-38"></span><a class="pep reference external" href="https://peps.python.org/pep-0424/"><strong>PEP 424</strong></a> formal specification of this language
 feature.  (Contributed by Armin Ronacher in <a class="reference external" href="https://bugs.python.org/issue16148">bpo-16148</a>.)</p>
 <p>There is now a pure-python version of the <a class="reference internal" href="../library/operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> module available for
 reference and for use by alternate implementations of Python.  (Contributed by
@@ -1237,7 +1237,7 @@ keyword-only arguments.  It also provides some efficiency improvements.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-39"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3154"><strong>PEP 3154</strong></a> -- Pickle protocol 4</dt><dd><p>由 Antoine Pitrou 撰寫 PEP、Alexandre Vassalotti 實作。</p>
+<dt><span class="target" id="index-39"></span><a class="pep reference external" href="https://peps.python.org/pep-3154/"><strong>PEP 3154</strong></a> -- Pickle protocol 4</dt><dd><p>由 Antoine Pitrou 撰寫 PEP、Alexandre Vassalotti 實作。</p>
 </dd>
 </dl>
 </div>
@@ -1631,7 +1631,7 @@ shells.  (Contributed by Andrew Svetlov in <a class="reference external" href="h
 take a new keyword argument <em>with_pip</em>, which defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>, that
 controls whether or not <a class="reference internal" href="../library/venv.html#venv.EnvBuilder" title="venv.EnvBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnvBuilder</span></code></a> ensures that <code class="docutils literal notranslate"><span class="pre">pip</span></code> is
 installed in the virtual environment.  (Contributed by Nick Coghlan in
-<a class="reference external" href="https://bugs.python.org/issue19552">bpo-19552</a> as part of the <span class="target" id="index-42"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a> implementation.)</p>
+<a class="reference external" href="https://bugs.python.org/issue19552">bpo-19552</a> as part of the <span class="target" id="index-42"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a> implementation.)</p>
 </section>
 <section id="wave">
 <h3>wave<a class="headerlink" href="#wave" title="本標題的永久連結">¶</a></h3>
@@ -1688,19 +1688,19 @@ William Mallard in <a class="reference external" href="https://bugs.python.org/i
 <h2>CPython Implementation Changes<a class="headerlink" href="#cpython-implementation-changes" title="本標題的永久連結">¶</a></h2>
 <section id="pep-445-customization-of-cpython-memory-allocators">
 <span id="whatsnew-pep-445"></span><h3>PEP 445: Customization of CPython Memory Allocators<a class="headerlink" href="#pep-445-customization-of-cpython-memory-allocators" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-43"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0445"><strong>PEP 445</strong></a> adds new C level interfaces to customize memory allocation in
+<p><span class="target" id="index-43"></span><a class="pep reference external" href="https://peps.python.org/pep-0445/"><strong>PEP 445</strong></a> adds new C level interfaces to customize memory allocation in
 the CPython interpreter.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-44"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0445"><strong>PEP 445</strong></a> -- Add new APIs to customize Python memory allocators</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-44"></span><a class="pep reference external" href="https://peps.python.org/pep-0445/"><strong>PEP 445</strong></a> -- Add new APIs to customize Python memory allocators</dt><dd><p>由 Victor Stinner 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-442-safe-object-finalization">
 <span id="whatsnew-pep-442"></span><h3>PEP 442: Safe Object Finalization<a class="headerlink" href="#pep-442-safe-object-finalization" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-45"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0442"><strong>PEP 442</strong></a> removes the current limitations and quirks of object finalization
+<p><span class="target" id="index-45"></span><a class="pep reference external" href="https://peps.python.org/pep-0442/"><strong>PEP 442</strong></a> removes the current limitations and quirks of object finalization
 in CPython. With it, objects with <code class="xref py py-meth docutils literal notranslate"><span class="pre">__del__()</span></code> methods, as well as
 generators with <a class="reference internal" href="../reference/compound_stmts.html#finally"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code></a> clauses, can be finalized when they are
 part of a reference cycle.</p>
@@ -1713,14 +1713,14 @@ was first introduced.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-46"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0442"><strong>PEP 442</strong></a> -- Safe object finalization</dt><dd><p>由 Antoine Pitrou 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-46"></span><a class="pep reference external" href="https://peps.python.org/pep-0442/"><strong>PEP 442</strong></a> -- Safe object finalization</dt><dd><p>由 Antoine Pitrou 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="pep-456-secure-and-interchangeable-hash-algorithm">
 <span id="whatsnew-pep-456"></span><h3>PEP 456: Secure and Interchangeable Hash Algorithm<a class="headerlink" href="#pep-456-secure-and-interchangeable-hash-algorithm" title="本標題的永久連結">¶</a></h3>
-<p><span class="target" id="index-47"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0456"><strong>PEP 456</strong></a> follows up on earlier security fix work done on Python's hash
+<p><span class="target" id="index-47"></span><a class="pep reference external" href="https://peps.python.org/pep-0456/"><strong>PEP 456</strong></a> follows up on earlier security fix work done on Python's hash
 algorithm to address certain DOS attacks to which public facing APIs backed by
 dictionary lookups may be subject.  (See <a class="reference external" href="https://bugs.python.org/issue14621">bpo-14621</a> for the start of the
 current round of improvements.)  The PEP unifies CPython's hash code to make it
@@ -1734,7 +1734,7 @@ the PEP does not alter any existing CPython APIs.</p>
 </section>
 <section id="pep-436-argument-clinic">
 <span id="whatsnew-pep-436"></span><h3>PEP 436: Argument Clinic<a class="headerlink" href="#pep-436-argument-clinic" title="本標題的永久連結">¶</a></h3>
-<p>&quot;Argument Clinic&quot; (<span class="target" id="index-48"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0436"><strong>PEP 436</strong></a>) is now part of the CPython build process
+<p>&quot;Argument Clinic&quot; (<span class="target" id="index-48"></span><a class="pep reference external" href="https://peps.python.org/pep-0436/"><strong>PEP 436</strong></a>) is now part of the CPython build process
 and can be used to simplify the process of defining and maintaining
 accurate signatures for builtins and standard library extension modules
 implemented in C.</p>
@@ -1754,7 +1754,7 @@ be made available as a public API for third party use in Python 3.4.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-49"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0436"><strong>PEP 436</strong></a> -- The Argument Clinic DSL</dt><dd><p>由 Larry Hastings 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-49"></span><a class="pep reference external" href="https://peps.python.org/pep-0436/"><strong>PEP 436</strong></a> -- The Argument Clinic DSL</dt><dd><p>由 Larry Hastings 撰寫 PEP 與實作。</p>
 </dd>
 </dl>
 </div>
@@ -1834,7 +1834,7 @@ loading of free variables in class bodies that could be triggered by certain
 uses of <a class="reference internal" href="../reference/datamodel.html#prepare"><span class="std std-ref">__prepare__</span></a>.  (Contributed by Benjamin Peterson in
 <a class="reference external" href="https://bugs.python.org/issue17853">bpo-17853</a>.)</p></li>
 <li><p>A number of MemoryError-related crashes were identified and fixed by Victor
-Stinner using his <span class="target" id="index-52"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0445"><strong>PEP 445</strong></a>-based <code class="docutils literal notranslate"><span class="pre">pyfailmalloc</span></code> tool (<a class="reference external" href="https://bugs.python.org/issue18408">bpo-18408</a>,
+Stinner using his <span class="target" id="index-52"></span><a class="pep reference external" href="https://peps.python.org/pep-0445/"><strong>PEP 445</strong></a>-based <code class="docutils literal notranslate"><span class="pre">pyfailmalloc</span></code> tool (<a class="reference external" href="https://bugs.python.org/issue18408">bpo-18408</a>,
 <a class="reference external" href="https://bugs.python.org/issue18520">bpo-18520</a>).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">pyvenv</span></code> command now accepts a <code class="docutils literal notranslate"><span class="pre">--copies</span></code> option
 to use copies rather than symlinks even on systems where symlinks are the
@@ -1842,7 +1842,7 @@ default.  (Contributed by Vinay Sajip in <a class="reference external" href="htt
 <li><p>The <code class="docutils literal notranslate"><span class="pre">pyvenv</span></code> command also accepts a <code class="docutils literal notranslate"><span class="pre">--without-pip</span></code>
 option to suppress the otherwise-automatic bootstrapping of pip into
 the virtual environment.  (Contributed by Nick Coghlan in <a class="reference external" href="https://bugs.python.org/issue19552">bpo-19552</a>
-as part of the <span class="target" id="index-53"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0453"><strong>PEP 453</strong></a> implementation.)</p></li>
+as part of the <span class="target" id="index-53"></span><a class="pep reference external" href="https://peps.python.org/pep-0453/"><strong>PEP 453</strong></a> implementation.)</p></li>
 <li><p>The encoding name is now optional in the value set for the
 <span class="target" id="index-54"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONIOENCODING"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a> environment variable.  This makes it possible to
 set just the error handler, without changing the default encoding.
@@ -2494,7 +2494,7 @@ alternate context:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.3 Documentation</a> &#187;
+      <a href="../index.html">3.10.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -2530,11 +2530,11 @@ alternate context:</p>
 <br />
     <br />
 
-    最後更新於 3月 23, 2022。
+    最後更新於 3月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
     </div>
 
   </body>
