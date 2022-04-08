@@ -183,11 +183,11 @@
 <ul class="simple">
 <li><p>The <a class="reference internal" href="#init-python-config"><span class="std std-ref">Python Configuration</span></a> can be used to build a
 customized Python which behaves as the regular Python. For example,
-environments variables and command line arguments are used to configure
+environment variables and command line arguments are used to configure
 Python.</p></li>
 <li><p>The <a class="reference internal" href="#init-isolated-conf"><span class="std std-ref">Isolated Configuration</span></a> can be used to embed
 Python into an application. It isolates Python from the system. For example,
-environments variables are ignored, the LC_CTYPE locale is left unchanged and
+environment variables are ignored, the LC_CTYPE locale is left unchanged and
 no signal handler is registered.</p></li>
 </ul>
 <p>The <a class="reference internal" href="#c.Py_RunMain" title="Py_RunMain"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_RunMain()</span></code></a> function can be used to write a customized Python
@@ -1439,7 +1439,7 @@ configuration, and then override some parameters:</p>
 <code class="xref c c-func docutils literal notranslate"><span class="pre">PyConfig_InitIsolatedConfig()</span></code> functions create a configuration to
 isolate Python from the system. For example, to embed Python into an
 application.</p>
-<p>This configuration ignores global configuration variables, environments
+<p>This configuration ignores global configuration variables, environment
 variables, command line arguments (<a class="reference internal" href="#c.PyConfig.argv" title="PyConfig.argv"><code class="xref c c-member docutils literal notranslate"><span class="pre">PyConfig.argv</span></code></a> is not parsed)
 and user site directory. The C standard streams (ex: <code class="docutils literal notranslate"><span class="pre">stdout</span></code>) and the
 LC_CTYPE locale are left unchanged. Signal handlers are not installed.</p>
@@ -1569,7 +1569,7 @@ customized Python always running in isolated mode using
 <section id="multi-phase-initialization-private-provisional-api">
 <h2>Multi-Phase Initialization Private Provisional API<a class="headerlink" href="#multi-phase-initialization-private-provisional-api" title="本標題的永久連結">¶</a></h2>
 <p>This section is a private provisional API introducing multi-phase
-initialization, the core feature of the <span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0432/"><strong>PEP 432</strong></a>:</p>
+initialization, the core feature of <span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0432/"><strong>PEP 432</strong></a>:</p>
 <ul class="simple">
 <li><p>&quot;Core&quot; initialization phase, &quot;bare minimum Python&quot;:</p>
 <ul>
@@ -1773,7 +1773,7 @@ phases:</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

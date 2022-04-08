@@ -1792,7 +1792,7 @@ support, the method raises <a class="reference internal" href="exceptions.html#N
 <dt class="sig sig-object py" id="ssl.SSLSocket.version">
 <span class="sig-prename descclassname"><span class="pre">SSLSocket.</span></span><span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ssl.SSLSocket.version" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return the actual SSL protocol version negotiated by the connection
-as a string, or <code class="docutils literal notranslate"><span class="pre">None</span></code> is no secure connection is established.
+as a string, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no secure connection is established.
 As of this writing, possible return values include <code class="docutils literal notranslate"><span class="pre">&quot;SSLv2&quot;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">&quot;SSLv3&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TLSv1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TLSv1.1&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;TLSv1.2&quot;</span></code>.
 Recent OpenSSL versions may define more return values.</p>
@@ -2027,7 +2027,7 @@ lists as dictionary.</p>
 string must be the path to a single file in PEM format containing the
 certificate as well as any number of CA certificates needed to establish
 the certificate's authenticity.  The <em>keyfile</em> string, if present, must
-point to a file containing the private key in.  Otherwise the private
+point to a file containing the private key.  Otherwise the private
 key will be taken from <em>certfile</em> as well.  See the discussion of
 <a class="reference internal" href="#ssl-certificates"><span class="std std-ref">Certificates</span></a> for more information on how the certificate
 is stored in the <em>certfile</em>.</p>
@@ -3424,7 +3424,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

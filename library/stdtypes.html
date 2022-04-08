@@ -1573,7 +1573,8 @@ of string literals and cannot be combined with the <code class="docutils literal
 provided, returns the empty string.  Otherwise, the behavior of <code class="docutils literal notranslate"><span class="pre">str()</span></code>
 depends on whether <em>encoding</em> or <em>errors</em> is given, as follows.</p>
 <p>If neither <em>encoding</em> nor <em>errors</em> is given, <code class="docutils literal notranslate"><span class="pre">str(object)</span></code> returns
-<a class="reference internal" href="../reference/datamodel.html#object.__str__" title="object.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">object.__str__()</span></code></a>, which is the &quot;informal&quot; or nicely
+<a class="reference internal" href="../reference/datamodel.html#object.__str__" title="object.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">type(object).__str__(object)</span></code></a>,
+which is the &quot;informal&quot; or nicely
 printable string representation of <em>object</em>.  For string objects, this is
 the string itself.  If <em>object</em> does not have a <a class="reference internal" href="../reference/datamodel.html#object.__str__" title="object.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__str__()</span></code></a>
 method, then <a class="reference internal" href="#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> falls back to returning
@@ -2288,7 +2289,10 @@ boundaries, which may not be the desired result:</p>
 <span class="go">&quot;They&#39;Re Bill&#39;S Friends From The Uk&quot;</span>
 </pre></div>
 </div>
-<p>A workaround for apostrophes can be constructed using regular expressions:</p>
+<p>The <a class="reference internal" href="string.html#string.capwords" title="string.capwords"><code class="xref py py-func docutils literal notranslate"><span class="pre">string.capwords()</span></code></a> function does not have this problem, as it
+splits words on spaces only.</p>
+<p>Alternatively, a workaround for apostrophes can be constructed using regular
+expressions:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">re</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">titlecase</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[A-Za-z]+(&#39;[A-Za-z]+)?&quot;</span><span class="p">,</span>
@@ -3778,7 +3782,7 @@ be used for Python2/3 code bases.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'a'</span></code></p></td>
 <td><p>Bytes (converts any Python object using
-<code class="docutils literal notranslate"><span class="pre">repr(obj).encode('ascii','backslashreplace)</span></code>).</p></td>
+<code class="docutils literal notranslate"><span class="pre">repr(obj).encode('ascii',</span> <span class="pre">'backslashreplace')</span></code>).</p></td>
 <td><p>(5)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code></p></td>
@@ -5818,7 +5822,7 @@ element is the tuple to be formatted.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

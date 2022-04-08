@@ -251,7 +251,7 @@ example, <code class="docutils literal notranslate"><span class="pre">[abc]</spa
 is the same as <code class="docutils literal notranslate"><span class="pre">[a-c]</span></code>, which uses a range to express the same set of
 characters.  If you wanted to match only lowercase letters, your RE would be
 <code class="docutils literal notranslate"><span class="pre">[a-z]</span></code>.</p>
-<p>Metacharacters are not active inside classes.  For example, <code class="docutils literal notranslate"><span class="pre">[akm$]</span></code> will
+<p>Metacharacters (except <code class="docutils literal notranslate"><span class="pre">\</span></code>) are not active inside classes.  For example, <code class="docutils literal notranslate"><span class="pre">[akm$]</span></code> will
 match any of the characters <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'k'</span></code>, <code class="docutils literal notranslate"><span class="pre">'m'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'$'</span></code>; <code class="docutils literal notranslate"><span class="pre">'$'</span></code> is
 usually a metacharacter, but inside a character class it's stripped of its
 special nature.</p>
@@ -1673,7 +1673,7 @@ it out from your library.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

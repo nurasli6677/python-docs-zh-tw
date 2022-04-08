@@ -155,7 +155,7 @@
 <hr class="docutils" />
 <p>This module makes available standard <code class="docutils literal notranslate"><span class="pre">errno</span></code> system symbols. The value of each
 symbol is the corresponding integer value. The names and descriptions are
-borrowed from <code class="file docutils literal notranslate"><span class="pre">linux/include/errno.h</span></code>, which should be pretty
+borrowed from <code class="file docutils literal notranslate"><span class="pre">linux/include/errno.h</span></code>, which should be
 all-inclusive.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.errorcode">
@@ -172,29 +172,29 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EPERM">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EPERM</span></span><a class="headerlink" href="#errno.EPERM" title="本定義的永久連結">¶</a></dt>
-<dd><p>Operation not permitted</p>
+<dd><p>Operation not permitted. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#PermissionError" title="PermissionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PermissionError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ENOENT">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ENOENT</span></span><a class="headerlink" href="#errno.ENOENT" title="本定義的永久連結">¶</a></dt>
-<dd><p>No such file or directory</p>
+<dd><p>No such file or directory. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#FileNotFoundError" title="FileNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ESRCH">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ESRCH</span></span><a class="headerlink" href="#errno.ESRCH" title="本定義的永久連結">¶</a></dt>
-<dd><p>No such process</p>
+<dd><p>No such process. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#ProcessLookupError" title="ProcessLookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ProcessLookupError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EINTR">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EINTR</span></span><a class="headerlink" href="#errno.EINTR" title="本定義的永久連結">¶</a></dt>
-<dd><p>Interrupted system call.</p>
-<div class="admonition seealso">
-<p class="admonition-title">也參考</p>
-<p>This error is mapped to the exception <a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
-</div>
+<dd><p>Interrupted system call. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#InterruptedError" title="InterruptedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InterruptedError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -230,13 +230,14 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ECHILD">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ECHILD</span></span><a class="headerlink" href="#errno.ECHILD" title="本定義的永久連結">¶</a></dt>
-<dd><p>No child processes</p>
+<dd><p>No child processes. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#ChildProcessError" title="ChildProcessError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ChildProcessError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EAGAIN">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EAGAIN</span></span><a class="headerlink" href="#errno.EAGAIN" title="本定義的永久連結">¶</a></dt>
-<dd><p>Try again</p>
+<dd><p>Try again. This error is mapped to the exception <a class="reference internal" href="exceptions.html#BlockingIOError" title="BlockingIOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BlockingIOError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -248,7 +249,8 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EACCES">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EACCES</span></span><a class="headerlink" href="#errno.EACCES" title="本定義的永久連結">¶</a></dt>
-<dd><p>Permission denied</p>
+<dd><p>Permission denied.  This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#PermissionError" title="PermissionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PermissionError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -272,7 +274,8 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EEXIST">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EEXIST</span></span><a class="headerlink" href="#errno.EEXIST" title="本定義的永久連結">¶</a></dt>
-<dd><p>File exists</p>
+<dd><p>File exists. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -290,13 +293,15 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ENOTDIR">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ENOTDIR</span></span><a class="headerlink" href="#errno.ENOTDIR" title="本定義的永久連結">¶</a></dt>
-<dd><p>Not a directory</p>
+<dd><p>Not a directory. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#NotADirectoryError" title="NotADirectoryError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotADirectoryError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EISDIR">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EISDIR</span></span><a class="headerlink" href="#errno.EISDIR" title="本定義的永久連結">¶</a></dt>
-<dd><p>Is a directory</p>
+<dd><p>Is a directory. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#IsADirectoryError" title="IsADirectoryError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IsADirectoryError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -362,7 +367,8 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EPIPE">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EPIPE</span></span><a class="headerlink" href="#errno.EPIPE" title="本定義的永久連結">¶</a></dt>
-<dd><p>Broken pipe</p>
+<dd><p>Broken pipe. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#BrokenPipeError" title="BrokenPipeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BrokenPipeError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -416,7 +422,8 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EWOULDBLOCK">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EWOULDBLOCK</span></span><a class="headerlink" href="#errno.EWOULDBLOCK" title="本定義的永久連結">¶</a></dt>
-<dd><p>Operation would block</p>
+<dd><p>Operation would block. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#BlockingIOError" title="BlockingIOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BlockingIOError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -788,13 +795,15 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ECONNABORTED">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ECONNABORTED</span></span><a class="headerlink" href="#errno.ECONNABORTED" title="本定義的永久連結">¶</a></dt>
-<dd><p>Software caused connection abort</p>
+<dd><p>Software caused connection abort. This error is mapped to the
+exception <a class="reference internal" href="exceptions.html#ConnectionAbortedError" title="ConnectionAbortedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionAbortedError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ECONNRESET">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ECONNRESET</span></span><a class="headerlink" href="#errno.ECONNRESET" title="本定義的永久連結">¶</a></dt>
-<dd><p>Connection reset by peer</p>
+<dd><p>Connection reset by peer. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#ConnectionResetError" title="ConnectionResetError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionResetError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -818,7 +827,8 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ESHUTDOWN">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ESHUTDOWN</span></span><a class="headerlink" href="#errno.ESHUTDOWN" title="本定義的永久連結">¶</a></dt>
-<dd><p>Cannot send after transport endpoint shutdown</p>
+<dd><p>Cannot send after transport endpoint shutdown. This error is mapped
+to the exception <a class="reference internal" href="exceptions.html#BrokenPipeError" title="BrokenPipeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BrokenPipeError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -830,13 +840,15 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ETIMEDOUT">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ETIMEDOUT</span></span><a class="headerlink" href="#errno.ETIMEDOUT" title="本定義的永久連結">¶</a></dt>
-<dd><p>Connection timed out</p>
+<dd><p>Connection timed out. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#TimeoutError" title="TimeoutError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.ECONNREFUSED">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">ECONNREFUSED</span></span><a class="headerlink" href="#errno.ECONNREFUSED" title="本定義的永久連結">¶</a></dt>
-<dd><p>Connection refused</p>
+<dd><p>Connection refused. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#ConnectionRefusedError" title="ConnectionRefusedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionRefusedError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -854,13 +866,15 @@ defined by the module.  The specific list of defined symbols is available as
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EALREADY">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EALREADY</span></span><a class="headerlink" href="#errno.EALREADY" title="本定義的永久連結">¶</a></dt>
-<dd><p>Operation already in progress</p>
+<dd><p>Operation already in progress. This error is mapped to the
+exception <a class="reference internal" href="exceptions.html#BlockingIOError" title="BlockingIOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BlockingIOError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="errno.EINPROGRESS">
 <span class="sig-prename descclassname"><span class="pre">errno.</span></span><span class="sig-name descname"><span class="pre">EINPROGRESS</span></span><a class="headerlink" href="#errno.EINPROGRESS" title="本定義的永久連結">¶</a></dt>
-<dd><p>Operation now in progress</p>
+<dd><p>Operation now in progress. This error is mapped to the exception
+<a class="reference internal" href="exceptions.html#BlockingIOError" title="BlockingIOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BlockingIOError</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -1002,7 +1016,7 @@ defined by the module.  The specific list of defined symbols is available as
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

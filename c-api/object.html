@@ -245,7 +245,7 @@ plans to remove it.</p>
 <em>v</em>. Raise an exception and return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on failure;
 return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.  This is the equivalent of the Python statement
 <code class="docutils literal notranslate"><span class="pre">o.attr_name</span> <span class="pre">=</span> <span class="pre">v</span></code>.</p>
-<p>If <em>v</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the attribute is deleted, however this feature is
+<p>If <em>v</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the attribute is deleted, but this feature is
 deprecated in favour of using <a class="reference internal" href="#c.PyObject_DelAttrString" title="PyObject_DelAttrString"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_DelAttrString()</span></code></a>.</p>
 </dd></dl>
 
@@ -447,7 +447,7 @@ This is equivalent to the Python expression <code class="docutils literal notran
 of object <em>o</em>. On failure, raises <a class="reference internal" href="../library/exceptions.html#SystemError" title="SystemError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SystemError</span></code></a> and returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.  This
 is equivalent to the Python expression <code class="docutils literal notranslate"><span class="pre">type(o)</span></code>. This function increments the
 reference count of the return value. There's really no reason to use this
-function instead of the common expression <code class="docutils literal notranslate"><span class="pre">o-&gt;ob_type</span></code>, which returns a
+function instead of the <a class="reference internal" href="structures.html#c.Py_TYPE" title="Py_TYPE"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_TYPE()</span></code></a> function, which returns a
 pointer of type <span class="xref c c-texpr"><a class="reference internal" href="type.html#c.PyTypeObject" title="PyTypeObject"><span class="n">PyTypeObject</span></a><span class="p">*</span></span>, except when the incremented reference
 count is needed.</p>
 </dd></dl>
@@ -633,7 +633,7 @@ returns <code class="docutils literal notranslate"><span class="pre">NULL</span>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

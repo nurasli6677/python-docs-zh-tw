@@ -675,9 +675,9 @@ locale via <a class="reference internal" href="#locale.setlocale" title="locale.
 
 <dl class="py function">
 <dt class="sig sig-object py" id="locale.atof">
-<span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">atof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#locale.atof" title="本定義的永久連結">¶</a></dt>
-<dd><p>Converts a string to a floating point number, following the <a class="reference internal" href="#locale.LC_NUMERIC" title="locale.LC_NUMERIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code></a>
-settings.</p>
+<span class="sig-prename descclassname"><span class="pre">locale.</span></span><span class="sig-name descname"><span class="pre">atof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#locale.atof" title="本定義的永久連結">¶</a></dt>
+<dd><p>Converts a string to a number, following the <a class="reference internal" href="#locale.LC_NUMERIC" title="locale.LC_NUMERIC"><code class="xref py py-const docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code></a> settings,
+by calling <em>func</em> on the result of calling <a class="reference internal" href="#locale.delocalize" title="locale.delocalize"><code class="xref py py-func docutils literal notranslate"><span class="pre">delocalize()</span></code></a> on <em>string</em>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -955,7 +955,7 @@ their message catalogs.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

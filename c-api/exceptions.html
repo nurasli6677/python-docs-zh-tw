@@ -458,7 +458,7 @@ decoded from the <a class="reference internal" href="../glossary.html#term-files
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyErr_SyntaxLocation">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyErr_SyntaxLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">filename</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">lineno</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyErr_SyntaxLocation" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Like <a class="reference internal" href="#c.PyErr_SyntaxLocationEx" title="PyErr_SyntaxLocationEx"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_SyntaxLocationEx()</span></code></a>, but the col_offset parameter is
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Like <a class="reference internal" href="#c.PyErr_SyntaxLocationEx" title="PyErr_SyntaxLocationEx"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_SyntaxLocationEx()</span></code></a>, but the <em>col_offset</em> parameter is
 omitted.</p>
 </dd></dl>
 
@@ -510,7 +510,7 @@ documentation.  There is no C API for warning control.</p>
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyErr_WarnExplicitObject</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">category</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">message</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">filename</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">lineno</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">module</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">registry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyErr_WarnExplicitObject" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Issue a warning message with explicit control over all warning attributes.  This
 is a straightforward wrapper around the Python function
-<a class="reference internal" href="../library/warnings.html#warnings.warn_explicit" title="warnings.warn_explicit"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.warn_explicit()</span></code></a>, see there for more information.  The <em>module</em>
+<a class="reference internal" href="../library/warnings.html#warnings.warn_explicit" title="warnings.warn_explicit"><code class="xref py py-func docutils literal notranslate"><span class="pre">warnings.warn_explicit()</span></code></a>; see there for more information.  The <em>module</em>
 and <em>registry</em> arguments may be set to <code class="docutils literal notranslate"><span class="pre">NULL</span></code> to get the default effect
 described there.</p>
 <div class="versionadded">
@@ -1502,7 +1502,7 @@ the variables:</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

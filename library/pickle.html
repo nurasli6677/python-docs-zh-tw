@@ -289,7 +289,7 @@ backwards compatible with earlier versions of Python.</p></li>
 <li><p>Protocol version 1 is an old binary format which is also compatible with
 earlier versions of Python.</p></li>
 <li><p>Protocol version 2 was introduced in Python 2.3.  It provides much more
-efficient pickling of <a class="reference internal" href="../glossary.html#term-new-style-class"><span class="xref std std-term">new-style class</span></a>es.  Refer to <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0307/"><strong>PEP 307</strong></a> for
+efficient pickling of <a class="reference internal" href="../glossary.html#term-new-style-class"><span class="xref std std-term">new-style classes</span></a>.  Refer to <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0307/"><strong>PEP 307</strong></a> for
 information about improvements brought by protocol 2.</p></li>
 <li><p>Protocol version 3 was added in Python 3.0.  It has explicit support for
 <a class="reference internal" href="stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> objects and cannot be unpickled by Python 2.x.  This was
@@ -399,7 +399,7 @@ have the same meaning as in the <a class="reference internal" href="#pickle.Unpi
 <p>The protocol version of the pickle is detected automatically, so no
 protocol argument is needed.  Bytes past the pickled representation
 of the object are ignored.</p>
-<p>Arguments <em>file</em>, <em>fix_imports</em>, <em>encoding</em>, <em>errors</em>, <em>strict</em> and <em>buffers</em>
+<p>Arguments <em>fix_imports</em>, <em>encoding</em>, <em>errors</em>, <em>strict</em> and <em>buffers</em>
 have the same meaning as in the <a class="reference internal" href="#pickle.Unpickler" title="pickle.Unpickler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unpickler</span></code></a> constructor.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>buffer</em> 引數。</p>
@@ -506,7 +506,7 @@ default dispatch table for instances of that class.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pickle.Pickler.reducer_override">
-<span class="sig-name descname"><span class="pre">reducer_override</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pickle.Pickler.reducer_override" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reducer_override</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pickle.Pickler.reducer_override" title="本定義的永久連結">¶</a></dt>
 <dd><p>Special reducer that can be defined in <a class="reference internal" href="#pickle.Pickler" title="pickle.Pickler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pickler</span></code></a> subclasses. This
 method has priority over any reducer in the <a class="reference internal" href="#pickle.Pickler.dispatch_table" title="pickle.Pickler.dispatch_table"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dispatch_table</span></code></a>.  It
 should conform to the same interface as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">__reduce__()</span></code> method, and
@@ -635,14 +635,13 @@ the buffer is neither C- nor Fortran-contiguous.</p>
 <span id="pickle-picklable"></span><h2>What can be pickled and unpickled?<a class="headerlink" href="#what-can-be-pickled-and-unpickled" title="本標題的永久連結">¶</a></h2>
 <p>The following types can be pickled:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>、<code class="docutils literal notranslate"><span class="pre">True</span></code> 和 <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
-<li><p>integers, floating point numbers, complex numbers</p></li>
-<li><p>strings, bytes, bytearrays</p></li>
-<li><p>tuples, lists, sets, and dictionaries containing only picklable objects</p></li>
-<li><p>functions defined at the top level of a module (using <a class="reference internal" href="../reference/compound_stmts.html#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a>, not
-<a class="reference internal" href="../reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a>)</p></li>
-<li><p>built-in functions defined at the top level of a module</p></li>
-<li><p>classes that are defined at the top level of a module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code>, and <code class="docutils literal notranslate"><span class="pre">False</span></code>;</p></li>
+<li><p>integers, floating-point numbers, complex numbers;</p></li>
+<li><p>strings, bytes, bytearrays;</p></li>
+<li><p>tuples, lists, sets, and dictionaries containing only picklable objects;</p></li>
+<li><p>functions (built-in and user-defined) defined at the top level of a module
+(using <a class="reference internal" href="../reference/compound_stmts.html#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a>, not <a class="reference internal" href="../reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a>);</p></li>
+<li><p>classes defined at the top level of a module;</p></li>
 <li><p>instances of such classes whose <a class="reference internal" href="stdtypes.html#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> or the result of
 calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getstate__()</span></code> is picklable  (see section <a class="reference internal" href="#pickle-inst"><span class="std std-ref">Pickling Class Instances</span></a> for
 details).</p></li>
@@ -653,13 +652,13 @@ been written to the underlying file.  Trying to pickle a highly recursive data
 structure may exceed the maximum recursion depth, a <a class="reference internal" href="exceptions.html#RecursionError" title="RecursionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RecursionError</span></code></a> will be
 raised in this case.  You can carefully raise this limit with
 <a class="reference internal" href="sys.html#sys.setrecursionlimit" title="sys.setrecursionlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.setrecursionlimit()</span></code></a>.</p>
-<p>Note that functions (built-in and user-defined) are pickled by &quot;fully qualified&quot;
-name reference, not by value. <a class="footnote-reference brackets" href="#id8" id="id3">2</a>  This means that only the function name is
+<p>Note that functions (built-in and user-defined) are pickled by fully qualified
+name, not by value. <a class="footnote-reference brackets" href="#id8" id="id3">2</a>  This means that only the function name is
 pickled, along with the name of the module the function is defined in.  Neither
 the function's code, nor any of its function attributes are pickled.  Thus the
 defining module must be importable in the unpickling environment, and the module
 must contain the named object, otherwise an exception will be raised. <a class="footnote-reference brackets" href="#id9" id="id4">3</a></p>
-<p>Similarly, classes are pickled by named reference, so the same restrictions in
+<p>Similarly, classes are pickled by fully qualified name, so the same restrictions in
 the unpickling environment apply.  Note that none of the class's code or data is
 pickled, so in the following example the class attribute <code class="docutils literal notranslate"><span class="pre">attr</span></code> is not
 restored in the unpickling environment:</p>
@@ -669,7 +668,7 @@ restored in the unpickling environment:</p>
 <span class="n">picklestring</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>These restrictions are why picklable functions and classes must be defined in
+<p>These restrictions are why picklable functions and classes must be defined at
 the top level of a module.</p>
 <p>Similarly, when class instances are pickled, their class's code and data are not
 pickled along with them.  Only the instance data are pickled.  This is done on
@@ -692,7 +691,7 @@ implementation of this behaviour:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
     <span class="n">obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
     <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">obj</span>
@@ -973,14 +972,14 @@ the code</p>
 <span class="n">p</span> <span class="o">=</span> <span class="n">MyPickler</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>does the same, but all instances of <code class="docutils literal notranslate"><span class="pre">MyPickler</span></code> will by default
-share the same dispatch table.  The equivalent code using the
-<a class="reference internal" href="copyreg.html#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> module is</p>
+<p>does the same but all instances of <code class="docutils literal notranslate"><span class="pre">MyPickler</span></code> will by default
+share the private dispatch table.  On the other hand, the code</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">copyreg</span><span class="o">.</span><span class="n">pickle</span><span class="p">(</span><span class="n">SomeClass</span><span class="p">,</span> <span class="n">reduce_SomeClass</span><span class="p">)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">Pickler</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>modifies the global dispatch table shared by all users of the <a class="reference internal" href="copyreg.html#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> module.</p>
 </section>
 <section id="handling-stateful-objects">
 <span id="pickle-state"></span><h3>Handling Stateful Objects<a class="headerlink" href="#handling-stateful-objects" title="本標題的永久連結">¶</a></h3>
@@ -1256,7 +1255,7 @@ globals or restrict them to a safe subset.</p>
     <span class="k">return</span> <span class="n">RestrictedUnpickler</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>A sample usage of our unpickler working has intended:</p>
+<p>A sample usage of our unpickler working as intended:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">restricted_loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">)]))</span>
 <span class="go">[1, 2, range(0, 15)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">restricted_loads</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">(S&#39;echo hello world&#39;</span><span class="se">\n</span><span class="s2">tR.&quot;</span><span class="p">)</span>
@@ -1289,7 +1288,7 @@ Also, the <a class="reference internal" href="#module-pickle" title="pickle: Con
 
 <span class="c1"># An arbitrary collection of objects supported by pickle.</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">+</span><span class="mi">6</span><span class="n">j</span><span class="p">],</span>
+    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span><span class="p">],</span>
     <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;character string&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;byte string&quot;</span><span class="p">),</span>
     <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">{</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">}</span>
 <span class="p">}</span>
@@ -1342,9 +1341,9 @@ operations.</p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
 <dd><p>The limitation on alphanumeric characters is due to the fact
-the persistent IDs, in protocol 0, are delimited by the newline
+that persistent IDs in protocol 0 are delimited by the newline
 character.  Therefore if any kind of newline characters occurs in
-persistent IDs, the resulting pickle will become unreadable.</p>
+persistent IDs, the resulting pickled data will become unreadable.</p>
 </dd>
 </dl>
 </section>
@@ -1478,7 +1477,7 @@ persistent IDs, the resulting pickle will become unreadable.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

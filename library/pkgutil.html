@@ -175,7 +175,7 @@ use is to place the following code in a package's <code class="file docutils lit
 </pre></div>
 </div>
 <p>This will add to the package's <code class="docutils literal notranslate"><span class="pre">__path__</span></code> all subdirectories of directories
-on <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> named after the package.  This is useful if one wants to
+on <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> named after the package.  This is useful if one wants to
 distribute different parts of a single logical package as multiple
 directories.</p>
 <p>It also looks for <code class="file docutils literal notranslate"><span class="pre">*.pkg</span></code> files beginning where <code class="docutils literal notranslate"><span class="pre">*</span></code> matches the
@@ -274,9 +274,9 @@ on the package internal <span class="target" id="index-8"></span><a class="pep r
 <dt class="sig sig-object py" id="pkgutil.iter_importers">
 <span class="sig-prename descclassname"><span class="pre">pkgutil.</span></span><span class="sig-name descname"><span class="pre">iter_importers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fullname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgutil.iter_importers" title="本定義的永久連結">¶</a></dt>
 <dd><p>Yield <a class="reference internal" href="../glossary.html#term-finder"><span class="xref std std-term">finder</span></a> objects for the given module name.</p>
-<p>If fullname contains a '.', the finders will be for the package
+<p>If fullname contains a <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, the finders will be for the package
 containing fullname, otherwise they will be all registered top level
-finders (i.e. those on both sys.meta_path and sys.path_hooks).</p>
+finders (i.e. those on both <a class="reference internal" href="sys.html#sys.meta_path" title="sys.meta_path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.meta_path</span></code></a> and <a class="reference internal" href="sys.html#sys.path_hooks" title="sys.path_hooks"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path_hooks</span></code></a>).</p>
 <p>If the named module is in a package, that package is imported as a side
 effect of invoking this function.</p>
 <p>If no module name is specified, all top level finders are produced.</p>
@@ -290,7 +290,7 @@ on the package internal <span class="target" id="index-10"></span><a class="pep 
 <dt class="sig sig-object py" id="pkgutil.iter_modules">
 <span class="sig-prename descclassname"><span class="pre">pkgutil.</span></span><span class="sig-name descname"><span class="pre">iter_modules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgutil.iter_modules" title="本定義的永久連結">¶</a></dt>
 <dd><p>Yields <a class="reference internal" href="#pkgutil.ModuleInfo" title="pkgutil.ModuleInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleInfo</span></code></a> for all submodules on <em>path</em>, or, if
-<em>path</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, all top-level modules on <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>.</p>
+<em>path</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, all top-level modules on <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>.</p>
 <p><em>path</em> should be either <code class="docutils literal notranslate"><span class="pre">None</span></code> or a list of paths to look for modules in.</p>
 <p><em>prefix</em> is a string to output on the front of every module name on output.</p>
 <div class="admonition note">
@@ -500,7 +500,7 @@ hierarchy within the imported package to get to the desired object.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -854,8 +854,8 @@ depending on the system error code.</p>
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BlockingIOError</span></span><a class="headerlink" href="#BlockingIOError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when an operation would block on an object (e.g. socket) set
 for non-blocking operation.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">EAGAIN</span></code>, <code class="docutils literal notranslate"><span class="pre">EALREADY</span></code>,
-<code class="docutils literal notranslate"><span class="pre">EWOULDBLOCK</span></code> and <code class="docutils literal notranslate"><span class="pre">EINPROGRESS</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.EAGAIN" title="errno.EAGAIN"><code class="xref py py-data docutils literal notranslate"><span class="pre">EAGAIN</span></code></a>, <a class="reference internal" href="errno.html#errno.EALREADY" title="errno.EALREADY"><code class="xref py py-data docutils literal notranslate"><span class="pre">EALREADY</span></code></a>,
+<a class="reference internal" href="errno.html#errno.EWOULDBLOCK" title="errno.EWOULDBLOCK"><code class="xref py py-data docutils literal notranslate"><span class="pre">EWOULDBLOCK</span></code></a> and <a class="reference internal" href="errno.html#errno.EINPROGRESS" title="errno.EINPROGRESS"><code class="xref py py-data docutils literal notranslate"><span class="pre">EINPROGRESS</span></code></a>.</p>
 <p>In addition to those of <a class="reference internal" href="#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>, <a class="reference internal" href="#BlockingIOError" title="BlockingIOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BlockingIOError</span></code></a> can have
 one more attribute:</p>
 <dl class="py attribute">
@@ -872,7 +872,7 @@ buffered I/O classes from the <a class="reference internal" href="io.html#module
 <dt class="sig sig-object py" id="ChildProcessError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ChildProcessError</span></span><a class="headerlink" href="#ChildProcessError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when an operation on a child process failed.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ECHILD</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ECHILD" title="errno.ECHILD"><code class="xref py py-data docutils literal notranslate"><span class="pre">ECHILD</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -889,7 +889,7 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 <dd><p>A subclass of <a class="reference internal" href="#ConnectionError" title="ConnectionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionError</span></code></a>, raised when trying to write on a
 pipe while the other end has been closed, or trying to write on a socket
 which has been shutdown for writing.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">EPIPE</span></code> and <code class="docutils literal notranslate"><span class="pre">ESHUTDOWN</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.EPIPE" title="errno.EPIPE"><code class="xref py py-data docutils literal notranslate"><span class="pre">EPIPE</span></code></a> and <a class="reference internal" href="errno.html#errno.ESHUTDOWN" title="errno.ESHUTDOWN"><code class="xref py py-data docutils literal notranslate"><span class="pre">ESHUTDOWN</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -897,7 +897,7 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectionAbortedError</span></span><a class="headerlink" href="#ConnectionAbortedError" title="本定義的永久連結">¶</a></dt>
 <dd><p>A subclass of <a class="reference internal" href="#ConnectionError" title="ConnectionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionError</span></code></a>, raised when a connection attempt
 is aborted by the peer.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ECONNABORTED</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ECONNABORTED" title="errno.ECONNABORTED"><code class="xref py py-data docutils literal notranslate"><span class="pre">ECONNABORTED</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -905,7 +905,7 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectionRefusedError</span></span><a class="headerlink" href="#ConnectionRefusedError" title="本定義的永久連結">¶</a></dt>
 <dd><p>A subclass of <a class="reference internal" href="#ConnectionError" title="ConnectionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionError</span></code></a>, raised when a connection attempt
 is refused by the peer.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ECONNREFUSED</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ECONNREFUSED" title="errno.ECONNREFUSED"><code class="xref py py-data docutils literal notranslate"><span class="pre">ECONNREFUSED</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -913,21 +913,21 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectionResetError</span></span><a class="headerlink" href="#ConnectionResetError" title="本定義的永久連結">¶</a></dt>
 <dd><p>A subclass of <a class="reference internal" href="#ConnectionError" title="ConnectionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ConnectionError</span></code></a>, raised when a connection is
 reset by the peer.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ECONNRESET</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ECONNRESET" title="errno.ECONNRESET"><code class="xref py py-data docutils literal notranslate"><span class="pre">ECONNRESET</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="FileExistsError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileExistsError</span></span><a class="headerlink" href="#FileExistsError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when trying to create a file or directory which already exists.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">EEXIST</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.EEXIST" title="errno.EEXIST"><code class="xref py py-data docutils literal notranslate"><span class="pre">EEXIST</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="FileNotFoundError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileNotFoundError</span></span><a class="headerlink" href="#FileNotFoundError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when a file or directory is requested but doesn't exist.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ENOENT</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ENOENT" title="errno.ENOENT"><code class="xref py py-data docutils literal notranslate"><span class="pre">ENOENT</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -947,7 +947,7 @@ for the rationale), instead of raising <a class="reference internal" href="#Inte
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsADirectoryError</span></span><a class="headerlink" href="#IsADirectoryError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when a file operation (such as <a class="reference internal" href="os.html#os.remove" title="os.remove"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.remove()</span></code></a>) is requested
 on a directory.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">EISDIR</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.EISDIR" title="errno.EISDIR"><code class="xref py py-data docutils literal notranslate"><span class="pre">EISDIR</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -957,7 +957,7 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 something which is not a directory.  On most POSIX platforms, it may also be
 raised if an operation attempts to open or traverse a non-directory file as if
 it were a directory.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ENOTDIR</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ENOTDIR" title="errno.ENOTDIR"><code class="xref py py-data docutils literal notranslate"><span class="pre">ENOTDIR</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
@@ -965,21 +965,21 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PermissionError</span></span><a class="headerlink" href="#PermissionError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when trying to run an operation without the adequate access
 rights - for example filesystem permissions.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">EACCES</span></code> and <code class="docutils literal notranslate"><span class="pre">EPERM</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.EACCES" title="errno.EACCES"><code class="xref py py-data docutils literal notranslate"><span class="pre">EACCES</span></code></a> and <a class="reference internal" href="errno.html#errno.EPERM" title="errno.EPERM"><code class="xref py py-data docutils literal notranslate"><span class="pre">EPERM</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="ProcessLookupError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProcessLookupError</span></span><a class="headerlink" href="#ProcessLookupError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when a given process doesn't exist.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ESRCH</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ESRCH" title="errno.ESRCH"><code class="xref py py-data docutils literal notranslate"><span class="pre">ESRCH</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="TimeoutError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TimeoutError</span></span><a class="headerlink" href="#TimeoutError" title="本定義的永久連結">¶</a></dt>
 <dd><p>Raised when a system function timed out at the system level.
-Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <code class="docutils literal notranslate"><span class="pre">ETIMEDOUT</span></code>.</p>
+Corresponds to <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> <a class="reference internal" href="errno.html#errno.ETIMEDOUT" title="errno.ETIMEDOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">ETIMEDOUT</span></code></a>.</p>
 </dd></dl>
 
 <div class="versionadded">
@@ -1278,7 +1278,7 @@ Development Mode</span></a> shows this warning.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

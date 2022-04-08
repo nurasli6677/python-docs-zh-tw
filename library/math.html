@@ -187,8 +187,8 @@ noted otherwise, all return values are floats.</p>
 <dt class="sig sig-object py" id="math.ceil">
 <span class="sig-prename descclassname"><span class="pre">math.</span></span><span class="sig-name descname"><span class="pre">ceil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math.ceil" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return the ceiling of <em>x</em>, the smallest integer greater than or equal to <em>x</em>.
-If <em>x</em> is not a float, delegates to <code class="docutils literal notranslate"><span class="pre">x.__ceil__()</span></code>, which should return an
-<a class="reference internal" href="numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a> value.</p>
+If <em>x</em> is not a float, delegates to <a class="reference internal" href="../reference/datamodel.html#object.__ceil__" title="object.__ceil__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.__ceil__</span></code></a>,
+which should return an <a class="reference internal" href="numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a> value.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -235,9 +235,9 @@ is negative.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="math.floor">
 <span class="sig-prename descclassname"><span class="pre">math.</span></span><span class="sig-name descname"><span class="pre">floor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math.floor" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return the floor of <em>x</em>, the largest integer less than or equal to <em>x</em>.
-If <em>x</em> is not a float, delegates to <code class="docutils literal notranslate"><span class="pre">x.__floor__()</span></code>, which should return an
-<a class="reference internal" href="numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a> value.</p>
+<dd><p>Return the floor of <em>x</em>, the largest integer less than or equal to <em>x</em>.  If
+<em>x</em> is not a float, delegates to <a class="reference internal" href="../reference/datamodel.html#object.__floor__" title="object.__floor__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.__floor__</span></code></a>, which
+should return an <a class="reference internal" href="numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a> value.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -467,9 +467,10 @@ operation is always exactly representable: no rounding error is introduced.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="math.trunc">
 <span class="sig-prename descclassname"><span class="pre">math.</span></span><span class="sig-name descname"><span class="pre">trunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math.trunc" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return the <a class="reference internal" href="numbers.html#numbers.Real" title="numbers.Real"><code class="xref py py-class docutils literal notranslate"><span class="pre">Real</span></code></a> value <em>x</em> truncated to an
-<a class="reference internal" href="numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a> (usually an integer). Delegates to
-<a class="reference internal" href="../reference/datamodel.html#object.__trunc__" title="object.__trunc__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.__trunc__()</span></code></a>.</p>
+<dd><p>Return <em>x</em> with the fractional part
+removed, leaving the integer part.  This rounds toward 0: <code class="docutils literal notranslate"><span class="pre">trunc()</span></code> is
+equivalent to <a class="reference internal" href="#math.floor" title="math.floor"><code class="xref py py-func docutils literal notranslate"><span class="pre">floor()</span></code></a> for positive <em>x</em>, and equivalent to <a class="reference internal" href="#math.ceil" title="math.ceil"><code class="xref py py-func docutils literal notranslate"><span class="pre">ceil()</span></code></a>
+for negative <em>x</em>. If <em>x</em> is not a float, delegates to <a class="reference internal" href="../reference/datamodel.html#object.__trunc__" title="object.__trunc__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.__trunc__</span></code></a>, which should return an <a class="reference internal" href="numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a> value.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -831,8 +832,23 @@ Wrong</a>, and start celebrating
 <dl class="py data">
 <dt class="sig sig-object py" id="math.nan">
 <span class="sig-prename descclassname"><span class="pre">math.</span></span><span class="sig-name descname"><span class="pre">nan</span></span><a class="headerlink" href="#math.nan" title="本定義的永久連結">¶</a></dt>
-<dd><p>A floating-point &quot;not a number&quot; (NaN) value.  Equivalent to the output of
-<code class="docutils literal notranslate"><span class="pre">float('nan')</span></code>.</p>
+<dd><p>A floating-point &quot;not a number&quot; (NaN) value. Equivalent to the output of
+<code class="docutils literal notranslate"><span class="pre">float('nan')</span></code>. Due to the requirements of the <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE-754 standard</a>, <code class="docutils literal notranslate"><span class="pre">math.nan</span></code> and <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code> are
+not considered to equal to any other numeric value, including themselves. To check
+whether a number is a NaN, use the <a class="reference internal" href="#math.isnan" title="math.isnan"><code class="xref py py-func docutils literal notranslate"><span class="pre">isnan()</span></code></a> function to test
+for NaNs instead of <code class="docutils literal notranslate"><span class="pre">is</span></code> or <code class="docutils literal notranslate"><span class="pre">==</span></code>.
+Example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">nan</span> <span class="o">==</span> <span class="n">math</span><span class="o">.</span><span class="n">nan</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span>
+<span class="go">True</span>
+</pre></div>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
 </div>
@@ -975,7 +991,7 @@ Typical behavior is to treat all NaNs as though they were quiet.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

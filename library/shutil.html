@@ -603,42 +603,7 @@ file then shutil will silently fallback on using less efficient
 </section>
 <section id="copytree-example">
 <span id="shutil-copytree-example"></span><h3>copytree example<a class="headerlink" href="#copytree-example" title="本標題的永久連結">¶</a></h3>
-<p>This example is the implementation of the <a class="reference internal" href="#shutil.copytree" title="shutil.copytree"><code class="xref py py-func docutils literal notranslate"><span class="pre">copytree()</span></code></a> function, described
-above, with the docstring omitted.  It demonstrates many of the other functions
-provided by this module.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">copytree</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">symlinks</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="n">names</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dst</span><span class="p">)</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
-        <span class="n">srcname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="n">dstname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">symlinks</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">islink</span><span class="p">(</span><span class="n">srcname</span><span class="p">):</span>
-                <span class="n">linkto</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">readlink</span><span class="p">(</span><span class="n">srcname</span><span class="p">)</span>
-                <span class="n">os</span><span class="o">.</span><span class="n">symlink</span><span class="p">(</span><span class="n">linkto</span><span class="p">,</span> <span class="n">dstname</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">srcname</span><span class="p">):</span>
-                <span class="n">copytree</span><span class="p">(</span><span class="n">srcname</span><span class="p">,</span> <span class="n">dstname</span><span class="p">,</span> <span class="n">symlinks</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">copy2</span><span class="p">(</span><span class="n">srcname</span><span class="p">,</span> <span class="n">dstname</span><span class="p">)</span>
-            <span class="c1"># XXX What about devices, sockets etc.?</span>
-        <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">why</span><span class="p">:</span>
-            <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">srcname</span><span class="p">,</span> <span class="n">dstname</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">why</span><span class="p">)))</span>
-        <span class="c1"># catch the Error from the recursive copytree so that we can</span>
-        <span class="c1"># continue with other files</span>
-        <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-            <span class="n">errors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">copystat</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">why</span><span class="p">:</span>
-        <span class="c1"># can&#39;t copy file access times on Windows</span>
-        <span class="k">if</span> <span class="n">why</span><span class="o">.</span><span class="n">winerror</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">errors</span><span class="o">.</span><span class="n">extend</span><span class="p">((</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">why</span><span class="p">)))</span>
-    <span class="k">if</span> <span class="n">errors</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">Error</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Another example that uses the <a class="reference internal" href="#shutil.ignore_patterns" title="shutil.ignore_patterns"><code class="xref py py-func docutils literal notranslate"><span class="pre">ignore_patterns()</span></code></a> helper:</p>
+<p>An example that uses the <a class="reference internal" href="#shutil.ignore_patterns" title="shutil.ignore_patterns"><code class="xref py py-func docutils literal notranslate"><span class="pre">ignore_patterns()</span></code></a> helper:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">copytree</span><span class="p">,</span> <span class="n">ignore_patterns</span>
 
 <span class="n">copytree</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="n">ignore_patterns</span><span class="p">(</span><span class="s1">&#39;*.pyc&#39;</span><span class="p">,</span> <span class="s1">&#39;tmp*&#39;</span><span class="p">))</span>
@@ -1024,7 +989,7 @@ size used by many terminal emulators.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

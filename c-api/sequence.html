@@ -155,10 +155,10 @@
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PySequence_Check">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PySequence_Check</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PySequence_Check" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return <code class="docutils literal notranslate"><span class="pre">1</span></code> if the object provides sequence protocol, and <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return <code class="docutils literal notranslate"><span class="pre">1</span></code> if the object provides the sequence protocol, and <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.
 Note that it returns <code class="docutils literal notranslate"><span class="pre">1</span></code> for Python classes with a <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code>
-method unless they are <a class="reference internal" href="../library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> subclasses since in general case it
-is impossible to determine what the type of keys it supports.  This
+method, unless they are <a class="reference internal" href="../library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> subclasses, since in general it
+is impossible to determine what type of keys the class supports.  This
 function always succeeds.</p>
 </dd></dl>
 
@@ -222,7 +222,7 @@ failure. This is the equivalent of the Python expression <code class="docutils l
 and return <code class="docutils literal notranslate"><span class="pre">-1</span></code> on failure; return <code class="docutils literal notranslate"><span class="pre">0</span></code> on success.  This
 is the equivalent of the Python statement <code class="docutils literal notranslate"><span class="pre">o[i]</span> <span class="pre">=</span> <span class="pre">v</span></code>.  This function <em>does
 not</em> steal a reference to <em>v</em>.</p>
-<p>If <em>v</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the element is deleted, however this feature is
+<p>If <em>v</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the element is deleted, but this feature is
 deprecated in favour of using <a class="reference internal" href="#c.PySequence_DelItem" title="PySequence_DelItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySequence_DelItem()</span></code></a>.</p>
 </dd></dl>
 
@@ -306,7 +306,7 @@ will be returned.</p>
 <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PySequence_Fast_GET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PySequence_Fast_GET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Returns the length of <em>o</em>, assuming that <em>o</em> was returned by
 <a class="reference internal" href="#c.PySequence_Fast" title="PySequence_Fast"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySequence_Fast()</span></code></a> and that <em>o</em> is not <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.  The size can also be
-gotten by calling <a class="reference internal" href="#c.PySequence_Size" title="PySequence_Size"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySequence_Size()</span></code></a> on <em>o</em>, but
+retrieved by calling <a class="reference internal" href="#c.PySequence_Size" title="PySequence_Size"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySequence_Size()</span></code></a> on <em>o</em>, but
 <a class="reference internal" href="#c.PySequence_Fast_GET_SIZE" title="PySequence_Fast_GET_SIZE"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySequence_Fast_GET_SIZE()</span></code></a> is faster because it can assume <em>o</em> is a
 list or tuple.</p>
 </dd></dl>
@@ -434,7 +434,7 @@ indices.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

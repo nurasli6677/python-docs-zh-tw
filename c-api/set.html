@@ -153,7 +153,7 @@
   <section id="set-objects">
 <span id="setobjects"></span><h1>Set Objects<a class="headerlink" href="#set-objects" title="本標題的永久連結">¶</a></h1>
 <p id="index-0">This section details the public API for <a class="reference internal" href="../library/stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> and <a class="reference internal" href="../library/stdtypes.html#frozenset" title="frozenset"><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></a>
-objects.  Any functionality not listed below is best accessed using the either
+objects.  Any functionality not listed below is best accessed using either
 the abstract object protocol (including <a class="reference internal" href="call.html#c.PyObject_CallMethod" title="PyObject_CallMethod"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_CallMethod()</span></code></a>,
 <a class="reference internal" href="object.html#c.PyObject_RichCompareBool" title="PyObject_RichCompareBool"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_RichCompareBool()</span></code></a>, <a class="reference internal" href="object.html#c.PyObject_Hash" title="PyObject_Hash"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Hash()</span></code></a>,
 <a class="reference internal" href="object.html#c.PyObject_Repr" title="PyObject_Repr"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Repr()</span></code></a>, <a class="reference internal" href="object.html#c.PyObject_IsTrue" title="PyObject_IsTrue"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_IsTrue()</span></code></a>, <a class="reference internal" href="object.html#c.PyObject_Print" title="PyObject_Print"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Print()</span></code></a>, and
@@ -170,7 +170,7 @@ the abstract object protocol (including <a class="reference internal" href="call
 in that it is a fixed size for small sets (much like tuple storage) and will
 point to a separate, variable sized block of memory for medium and large sized
 sets (much like list storage). None of the fields of this structure should be
-considered public and are subject to change.  All access should be done through
+considered public and all are subject to change.  All access should be done through
 the documented API rather than by manipulating the values in the structure.</p>
 </dd></dl>
 
@@ -284,7 +284,7 @@ the <em>key</em> is unhashable. Raise <code class="xref py py-exc docutils liter
 <dt class="sig sig-object c" id="c.PySet_Add">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PySet_Add</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">set</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PySet_Add" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Add <em>key</em> to a <a class="reference internal" href="../library/stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> instance.  Also works with <a class="reference internal" href="../library/stdtypes.html#frozenset" title="frozenset"><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></a>
-instances (like <a class="reference internal" href="tuple.html#c.PyTuple_SetItem" title="PyTuple_SetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTuple_SetItem()</span></code></a> it can be used to fill-in the values
+instances (like <a class="reference internal" href="tuple.html#c.PyTuple_SetItem" title="PyTuple_SetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTuple_SetItem()</span></code></a> it can be used to fill in the values
 of brand new frozensets before they are exposed to other code).  Return <code class="docutils literal notranslate"><span class="pre">0</span></code> on
 success or <code class="docutils literal notranslate"><span class="pre">-1</span></code> on failure. Raise a <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> if the <em>key</em> is
 unhashable. Raise a <a class="reference internal" href="../library/exceptions.html#MemoryError" title="MemoryError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> if there is no room to grow.  Raise a
@@ -417,7 +417,7 @@ set is empty. Raise a <a class="reference internal" href="../library/exceptions.
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

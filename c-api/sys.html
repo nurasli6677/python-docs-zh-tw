@@ -343,7 +343,7 @@ handler</span></a>. If the error handler is <a class="reference internal" href="
 converted to bytes 0x80..0xFF.</p>
 <p>Return a pointer to a newly allocated byte string, use <a class="reference internal" href="memory.html#c.PyMem_Free" title="PyMem_Free"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Free()</span></code></a>
 to free the memory. Return <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on encoding error or memory allocation
-error</p>
+error.</p>
 <p>If error_pos is not <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, <code class="docutils literal notranslate"><span class="pre">*error_pos</span></code> is set to <code class="docutils literal notranslate"><span class="pre">(size_t)-1</span></code> on
 success,  or set to the index of the invalid character on encoding error.</p>
 <p>The <a class="reference internal" href="../glossary.html#term-filesystem-encoding-and-error-handler"><span class="xref std std-term">filesystem encoding and error handler</span></a> are selected by
@@ -369,7 +369,7 @@ the <a class="reference internal" href="init_config.html#c.Py_PreInitialize" tit
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>The function now uses the UTF-8 encoding on Windows if
-<a class="reference internal" href="init.html#c.Py_LegacyWindowsFSEncodingFlag" title="Py_LegacyWindowsFSEncodingFlag"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_LegacyWindowsFSEncodingFlag</span></code></a> is zero;</p>
+<a class="reference internal" href="init.html#c.Py_LegacyWindowsFSEncodingFlag" title="Py_LegacyWindowsFSEncodingFlag"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_LegacyWindowsFSEncodingFlag</span></code></a> is zero.</p>
 </div>
 </dd></dl>
 
@@ -521,7 +521,7 @@ unavoidable deprecation warning was raised.</p>
 <dt class="sig sig-object c" id="c.PySys_AddAuditHook">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PySys_AddAuditHook</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Py_AuditHookFunction</span></span><span class="w"> </span><span class="n"><span class="pre">hook</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">userData</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PySys_AddAuditHook" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Append the callable <em>hook</em> to the list of active auditing hooks.
-Return zero for success
+Return zero on success
 and non-zero on failure. If the runtime has been initialized, also set an
 error on failure. Hooks added through this API are called for all
 interpreters created by the runtime.</p>
@@ -699,7 +699,7 @@ the cleanup function, no Python APIs should be called by <em>func</em>.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

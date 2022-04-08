@@ -187,7 +187,7 @@ This is the same object as <a class="reference internal" href="../library/functi
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyLong_FromLong</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyLong_FromLong" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return a new <a class="reference internal" href="#c.PyLongObject" title="PyLongObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyLongObject</span></code></a> object from <em>v</em>, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on failure.</p>
 <p>The current implementation keeps an array of integer objects for all integers
-between <code class="docutils literal notranslate"><span class="pre">-5</span></code> and <code class="docutils literal notranslate"><span class="pre">256</span></code>, when you create an int in that range you actually
+between <code class="docutils literal notranslate"><span class="pre">-5</span></code> and <code class="docutils literal notranslate"><span class="pre">256</span></code>. When you create an int in that range you actually
 just get back a reference to the existing object.</p>
 </dd></dl>
 
@@ -539,7 +539,7 @@ with <a class="reference internal" href="#c.PyLong_FromVoidPtr" title="PyLong_Fr
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

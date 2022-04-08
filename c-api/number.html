@@ -197,7 +197,7 @@ failure.  This is the equivalent of the Python expression <code class="docutils 
 <dt class="sig sig-object c" id="c.PyNumber_FloorDivide">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyNumber_FloorDivide</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o1</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyNumber_FloorDivide" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return the floor of <em>o1</em> divided by <em>o2</em>, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on failure.  This is
-equivalent to the &quot;classic&quot; division of integers.</p>
+the equivalent of the Python expression <code class="docutils literal notranslate"><span class="pre">o1</span> <span class="pre">//</span> <span class="pre">o2</span></code>.</p>
 </dd></dl>
 
 <dl class="c function">
@@ -207,7 +207,7 @@ equivalent to the &quot;classic&quot; division of integers.</p>
 <em>o2</em>, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on failure.  The return value is &quot;approximate&quot; because binary
 floating point numbers are approximate; it is not possible to represent all real
 numbers in base two.  This function can return a floating point value when
-passed two integers.</p>
+passed two integers.  This is the equivalent of the Python expression <code class="docutils literal notranslate"><span class="pre">o1</span> <span class="pre">/</span> <span class="pre">o2</span></code>.</p>
 </dd></dl>
 
 <dl class="c function">
@@ -346,7 +346,8 @@ of the Python statement <code class="docutils literal notranslate"><span class="
 <em>o2</em>, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on failure.  The return value is &quot;approximate&quot; because binary
 floating point numbers are approximate; it is not possible to represent all real
 numbers in base two.  This function can return a floating point value when
-passed two integers.  The operation is done <em>in-place</em> when <em>o1</em> supports it.</p>
+passed two integers.  The operation is done <em>in-place</em> when <em>o1</em> supports it.
+This is the equivalent of the Python statement <code class="docutils literal notranslate"><span class="pre">o1</span> <span class="pre">/=</span> <span class="pre">o2</span></code>.</p>
 </dd></dl>
 
 <dl class="c function">
@@ -458,8 +459,8 @@ integer or <code class="docutils literal notranslate"><span class="pre">PY_SSIZE
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyIndex_Check">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyIndex_Check</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyIndex_Check" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.8.</em><p>Returns <code class="docutils literal notranslate"><span class="pre">1</span></code> if <em>o</em> is an index integer (has the nb_index slot of  the
-tp_as_number structure filled in), and <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.8.</em><p>Returns <code class="docutils literal notranslate"><span class="pre">1</span></code> if <em>o</em> is an index integer (has the <code class="docutils literal notranslate"><span class="pre">nb_index</span></code> slot of the
+<code class="docutils literal notranslate"><span class="pre">tp_as_number</span></code> structure filled in), and <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.
 This function always succeeds.</p>
 </dd></dl>
 
@@ -560,7 +561,7 @@ This function always succeeds.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

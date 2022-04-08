@@ -251,8 +251,7 @@ interface.  The optional <em>salt</em> is either a string as returned from
 <a class="reference internal" href="#crypt.mksalt" title="crypt.mksalt"><code class="xref py py-func docutils literal notranslate"><span class="pre">mksalt()</span></code></a>, one of the <code class="docutils literal notranslate"><span class="pre">crypt.METHOD_*</span></code> values (though not all
 may be available on all platforms), or a full encrypted password
 including salt, as returned by this function.  If <em>salt</em> is not
-provided, the strongest method will be used (as returned by
-<a class="reference internal" href="#crypt.methods" title="crypt.methods"><code class="xref py py-func docutils literal notranslate"><span class="pre">methods()</span></code></a>).</p>
+provided, the strongest method available in <a class="reference internal" href="#crypt.methods" title="crypt.methods"><code class="xref py py-attr docutils literal notranslate"><span class="pre">methods</span></code></a> will be used.</p>
 <p>Checking a password is usually done by passing the plain-text password
 as <em>word</em> and the full results of a previous <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-func docutils literal notranslate"><span class="pre">crypt()</span></code></a> call,
 which should be the same as the results of this call.</p>
@@ -275,8 +274,8 @@ password as salt when checking for a password.</p>
 <dt class="sig sig-object py" id="crypt.mksalt">
 <span class="sig-prename descclassname"><span class="pre">crypt.</span></span><span class="sig-name descname"><span class="pre">mksalt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#crypt.mksalt" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return a randomly generated salt of the specified method.  If no
-<em>method</em> is given, the strongest method available as returned by
-<a class="reference internal" href="#crypt.methods" title="crypt.methods"><code class="xref py py-func docutils literal notranslate"><span class="pre">methods()</span></code></a> is used.</p>
+<em>method</em> is given, the strongest method available in <a class="reference internal" href="#crypt.methods" title="crypt.methods"><code class="xref py py-attr docutils literal notranslate"><span class="pre">methods</span></code></a> is
+used.</p>
 <p>The return value is a string suitable for passing as the <em>salt</em> argument
 to <a class="reference internal" href="#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-func docutils literal notranslate"><span class="pre">crypt()</span></code></a>.</p>
 <p><em>rounds</em> specifies the number of rounds for <code class="docutils literal notranslate"><span class="pre">METHOD_SHA256</span></code>,
@@ -438,7 +437,7 @@ check it against the original:</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

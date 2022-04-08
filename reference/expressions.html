@@ -578,12 +578,24 @@ could receive the value.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="generator.throw">
-<span class="sig-prename descclassname"><span class="pre">generator.</span></span><span class="sig-name descname"><span class="pre">throw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#generator.throw" title="本定義的永久連結">¶</a></dt>
-<dd><p>Raises an exception of type <code class="docutils literal notranslate"><span class="pre">type</span></code> at the point where the generator was paused,
+<span class="sig-prename descclassname"><span class="pre">generator.</span></span><span class="sig-name descname"><span class="pre">throw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generator.throw" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">generator.</span></span><span class="sig-name descname"><span class="pre">throw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span></dt>
+<dd><p>Raises an exception at the point where the generator was paused,
 and returns the next value yielded by the generator function.  If the generator
 exits without yielding another value, a <a class="reference internal" href="../library/exceptions.html#StopIteration" title="StopIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> exception is
 raised.  If the generator function does not catch the passed-in exception, or
 raises a different exception, then that exception propagates to the caller.</p>
+<p>In typical use, this is called with a single exception instance similar to the
+way the <a class="reference internal" href="simple_stmts.html#raise"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">raise</span></code></a> keyword is used.</p>
+<p>For backwards compatability, however, the second signature is
+supported, following a convention from older versions of Python.
+The <em>type</em> argument should be an exception class, and <em>value</em>
+should be an exception instance. If the <em>value</em> is not provided, the
+<em>type</em> constructor is called to get an instance. If <em>traceback</em>
+is provided, it is set on the exception, otherwise any existing
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">__traceback__</span></code> attribute stored in <em>value</em> may
+be cleared.</p>
 </dd></dl>
 
 <span class="target" id="index-33"></span><dl class="py method">
@@ -1738,7 +1750,7 @@ precedence applies.</p>
 <br />
     <br />
 
-    最後更新於 3月 30, 2022。
+    最後更新於 4月 08, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
