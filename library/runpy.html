@@ -226,7 +226,7 @@ accessible as <code class="docutils literal notranslate"><span class="pre">__spe
 
 <dl class="py function">
 <dt class="sig sig-object py" id="runpy.run_path">
-<span class="sig-prename descclassname"><span class="pre">runpy.</span></span><span class="sig-name descname"><span class="pre">run_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#runpy.run_path" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">runpy.</span></span><span class="sig-name descname"><span class="pre">run_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#runpy.run_path" title="本定義的永久連結">¶</a></dt>
 <dd><p id="index-4">Execute the code at the named filesystem location and return the resulting
 module globals dictionary. As with a script name supplied to the CPython
 command line, the supplied path may refer to a Python source file, a
@@ -262,7 +262,7 @@ module (that is, <code class="docutils literal notranslate"><span class="pre">__
 <a class="reference internal" href="../reference/import.html#import-mod-attrs"><span class="std std-ref">set as normal</span></a> based on the module spec.</p>
 <p>A number of alterations are also made to the <a class="reference internal" href="sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> module. Firstly,
 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> may be altered as described above. <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> is updated
-with the value of <code class="docutils literal notranslate"><span class="pre">file_path</span></code> and <code class="docutils literal notranslate"><span class="pre">sys.modules[__name__]</span></code> is updated
+with the value of <code class="docutils literal notranslate"><span class="pre">path_name</span></code> and <code class="docutils literal notranslate"><span class="pre">sys.modules[__name__]</span></code> is updated
 with a temporary module object for the module being executed. All
 modifications to items in <a class="reference internal" href="sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> are reverted before the function
 returns.</p>
@@ -397,7 +397,7 @@ than being executed directly.</p>
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -1388,7 +1388,11 @@ platform-independent.</p>
 <p><em>buffering</em> is an optional integer used to set the buffering policy.  Pass 0
 to switch buffering off (only allowed in binary mode), 1 to select line
 buffering (only usable in text mode), and an integer &gt; 1 to indicate the size
-in bytes of a fixed-size chunk buffer.  When no <em>buffering</em> argument is
+in bytes of a fixed-size chunk buffer. Note that specifying a buffer size this
+way applies for binary buffered I/O, but <code class="docutils literal notranslate"><span class="pre">TextIOWrapper</span></code> (i.e., files opened
+with <code class="docutils literal notranslate"><span class="pre">mode='r+'</span></code>) would have another buffering. To disable buffering in
+<code class="docutils literal notranslate"><span class="pre">TextIOWrapper</span></code>, consider using the <code class="docutils literal notranslate"><span class="pre">write_through</span></code> flag for
+<a class="reference internal" href="io.html#io.TextIOWrapper.reconfigure" title="io.TextIOWrapper.reconfigure"><code class="xref py py-func docutils literal notranslate"><span class="pre">io.TextIOWrapper.reconfigure()</span></code></a>. When no <em>buffering</em> argument is
 given, the default buffering policy works as follows:</p>
 <ul class="simple">
 <li><p>Binary files are buffered in fixed-size chunks; the size of the buffer is
@@ -2245,7 +2249,7 @@ mode to convert Windows or Mac-style newlines.</p>
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

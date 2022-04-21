@@ -378,9 +378,8 @@ match one of the glob-style <em>patterns</em> provided.  See the example below.<
 <dt class="sig sig-object py" id="shutil.copytree">
 <span class="sig-prename descclassname"><span class="pre">shutil.</span></span><span class="sig-name descname"><span class="pre">copytree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symlinks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">copy2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_dangling_symlinks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dirs_exist_ok</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shutil.copytree" title="本定義的永久連結">¶</a></dt>
 <dd><p>Recursively copy an entire directory tree rooted at <em>src</em> to a directory
-named <em>dst</em> and return the destination directory. <em>dirs_exist_ok</em> dictates
-whether to raise an exception in case <em>dst</em> or any missing parent directory
-already exists.</p>
+named <em>dst</em> and return the destination directory.  All intermediate
+directories needed to contain <em>dst</em> will also be created by default.</p>
 <p>Permissions and times of directories are copied with <a class="reference internal" href="#shutil.copystat" title="shutil.copystat"><code class="xref py py-func docutils literal notranslate"><span class="pre">copystat()</span></code></a>,
 individual files are copied using <a class="reference internal" href="#shutil.copy2" title="shutil.copy2"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy2()</span></code></a>.</p>
 <p>If <em>symlinks</em> is true, symbolic links in the source tree are represented as
@@ -407,6 +406,11 @@ ignores names based on glob-style patterns.</p>
 each file. It will be called with the source path and the destination path
 as arguments. By default, <a class="reference internal" href="#shutil.copy2" title="shutil.copy2"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy2()</span></code></a> is used, but any function
 that supports the same signature (like <a class="reference internal" href="#shutil.copy" title="shutil.copy"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy()</span></code></a>) can be used.</p>
+<p>If <em>dirs_exist_ok</em> is false (the default) and <em>dst</em> already exists, a
+<a class="reference internal" href="exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a> is raised. If <em>dirs_exist_ok</em> is true, the copying
+operation will continue if it encounters existing directories, and files
+within the <em>dst</em> tree will be overwritten by corresponding files from the
+<em>src</em> tree.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">shutil.copytree</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">src</span></code>, <code class="docutils literal notranslate"><span class="pre">dst</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>Copy metadata when <em>symlinks</em> is false.
@@ -415,7 +419,7 @@ Now returns <em>dst</em>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <em>copy_function</em> argument to be able to provide a custom copy
 function.
-Added the <em>ignore_dangling_symlinks</em> argument to silent dangling symlinks
+Added the <em>ignore_dangling_symlinks</em> argument to silence dangling symlinks
 errors when <em>symlinks</em> is false.</p>
 </div>
 <div class="versionchanged">
@@ -989,7 +993,7 @@ size used by many terminal emulators.</p>
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

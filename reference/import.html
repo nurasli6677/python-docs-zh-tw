@@ -591,21 +591,19 @@ submodule.  Let's say you have the following directory structure:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">spam</span><span class="o">/</span>
     <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
     <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
-    <span class="n">bar</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>and <code class="docutils literal notranslate"><span class="pre">spam/__init__.py</span></code> has the following lines in it:</p>
+<p>and <code class="docutils literal notranslate"><span class="pre">spam/__init__.py</span></code> has the following line in it:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.foo</span> <span class="kn">import</span> <span class="n">Foo</span>
-<span class="kn">from</span> <span class="nn">.bar</span> <span class="kn">import</span> <span class="n">Bar</span>
 </pre></div>
 </div>
-<p>then executing the following puts a name binding to <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> in the
+<p>then executing the following puts name bindings for <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">Foo</span></code> in the
 <code class="docutils literal notranslate"><span class="pre">spam</span></code> module:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spam</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">spam</span><span class="o">.</span><span class="n">foo</span>
 <span class="go">&lt;module &#39;spam.foo&#39; from &#39;/tmp/imports/spam/foo.py&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">spam</span><span class="o">.</span><span class="n">bar</span>
-<span class="go">&lt;module &#39;spam.bar&#39; from &#39;/tmp/imports/spam/bar.py&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spam</span><span class="o">.</span><span class="n">Foo</span>
+<span class="go">&lt;class &#39;spam.foo.Foo&#39;&gt;</span>
 </pre></div>
 </div>
 <p>Given Python's familiar name binding rules this might seem surprising, but
@@ -1254,7 +1252,7 @@ is recommended that code be changed to use <code class="docutils literal notrans
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

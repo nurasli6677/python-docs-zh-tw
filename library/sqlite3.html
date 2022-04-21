@@ -603,28 +603,25 @@ calling <a class="reference internal" href="#sqlite3.Connection.commit" title="s
 <dl class="py method">
 <dt class="sig sig-object py" id="sqlite3.Connection.execute">
 <span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlite3.Connection.execute" title="本定義的永久連結">¶</a></dt>
-<dd><p>This is a nonstandard shortcut that creates a cursor object by calling
-the <a class="reference internal" href="#sqlite3.Connection.cursor" title="sqlite3.Connection.cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cursor()</span></code></a> method, calls the cursor's
-<a class="reference internal" href="#sqlite3.Cursor.execute" title="sqlite3.Cursor.execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">execute()</span></code></a> method with the <em>parameters</em> given, and returns
-the cursor.</p>
+<dd><p>Create a new <a class="reference internal" href="#sqlite3.Cursor" title="sqlite3.Cursor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cursor</span></code></a> object and call
+<a class="reference internal" href="#sqlite3.Cursor.execute" title="sqlite3.Cursor.execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">execute()</span></code></a> on it with the given <em>sql</em> and <em>parameters</em>.
+Return the new cursor object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sqlite3.Connection.executemany">
 <span class="sig-name descname"><span class="pre">executemany</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlite3.Connection.executemany" title="本定義的永久連結">¶</a></dt>
-<dd><p>This is a nonstandard shortcut that creates a cursor object by
-calling the <a class="reference internal" href="#sqlite3.Connection.cursor" title="sqlite3.Connection.cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cursor()</span></code></a> method, calls the cursor's
-<a class="reference internal" href="#sqlite3.Cursor.executemany" title="sqlite3.Cursor.executemany"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executemany()</span></code></a> method with the <em>parameters</em> given, and
-returns the cursor.</p>
+<dd><p>Create a new <a class="reference internal" href="#sqlite3.Cursor" title="sqlite3.Cursor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cursor</span></code></a> object and call
+<a class="reference internal" href="#sqlite3.Cursor.executemany" title="sqlite3.Cursor.executemany"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executemany()</span></code></a> on it with the given <em>sql</em> and <em>parameters</em>.
+Return the new cursor object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sqlite3.Connection.executescript">
 <span class="sig-name descname"><span class="pre">executescript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql_script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sqlite3.Connection.executescript" title="本定義的永久連結">¶</a></dt>
-<dd><p>This is a nonstandard shortcut that creates a cursor object by
-calling the <a class="reference internal" href="#sqlite3.Connection.cursor" title="sqlite3.Connection.cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cursor()</span></code></a> method, calls the cursor's
-<a class="reference internal" href="#sqlite3.Cursor.executescript" title="sqlite3.Cursor.executescript"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executescript()</span></code></a> method with the given <em>sql_script</em>, and
-returns the cursor.</p>
+<dd><p>Create a new <a class="reference internal" href="#sqlite3.Cursor" title="sqlite3.Cursor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cursor</span></code></a> object and call
+<a class="reference internal" href="#sqlite3.Cursor.executescript" title="sqlite3.Cursor.executescript"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executescript()</span></code></a> on it with the given <em>sql_script</em>.
+Return the new cursor object.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1920,7 +1917,7 @@ extension support, you must pass the
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

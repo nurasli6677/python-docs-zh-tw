@@ -298,7 +298,7 @@ include the patchlevel (it defaults to <code class="docutils literal notranslate
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.release">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#platform.release" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns the system's release, e.g. <code class="docutils literal notranslate"><span class="pre">'2.2.0'</span></code> or <code class="docutils literal notranslate"><span class="pre">'NT'</span></code> An empty string is
+<dd><p>Returns the system's release, e.g. <code class="docutils literal notranslate"><span class="pre">'2.2.0'</span></code> or <code class="docutils literal notranslate"><span class="pre">'NT'</span></code>. An empty string is
 returned if the value cannot be determined.</p>
 </dd></dl>
 
@@ -336,7 +336,7 @@ for the first two attributes; <a class="reference internal" href="os.html#os.una
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">sysname</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">nodename</span></code>.</p>
 <p>Entries which cannot be determined are set to <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>Result changed from a tuple to a namedtuple.</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>Result changed from a tuple to a <a class="reference internal" href="collections.html#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a>.</p>
 </div>
 </dd></dl>
 
@@ -361,7 +361,9 @@ the defaults given as parameters (which all default to <code class="docutils lit
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">win32_ver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#platform.win32_ver" title="本定義的永久連結">¶</a></dt>
 <dd><p>Get additional version information from the Windows Registry and return a tuple
 <code class="docutils literal notranslate"><span class="pre">(release,</span> <span class="pre">version,</span> <span class="pre">csd,</span> <span class="pre">ptype)</span></code> referring to OS release, version number,
-CSD level (service pack) and OS type (multi/single processor).</p>
+CSD level (service pack) and OS type (multi/single processor). Values which
+cannot be determined are set to the defaults given as parameters (which all
+default to an empty string).</p>
 <p>As a hint: <em>ptype</em> is <code class="docutils literal notranslate"><span class="pre">'Uniprocessor</span> <span class="pre">Free'</span></code> on single processor NT machines
 and <code class="docutils literal notranslate"><span class="pre">'Multiprocessor</span> <span class="pre">Free'</span></code> on multi processor machines. The <em>'Free'</em> refers
 to the OS version being free of debugging code. It could also state <em>'Checked'</em>
@@ -372,9 +374,9 @@ ranges, etc.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="platform.win32_edition">
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">win32_edition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#platform.win32_edition" title="本定義的永久連結">¶</a></dt>
-<dd><p>Returns a string representing the current Windows edition.  Possible
-values include but are not limited to <code class="docutils literal notranslate"><span class="pre">'Enterprise'</span></code>, <code class="docutils literal notranslate"><span class="pre">'IoTUAP'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'ServerStandard'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'nanoserver'</span></code>.</p>
+<dd><p>Returns a string representing the current Windows edition, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the
+value cannot be determined.  Possible values include but are not limited to
+<code class="docutils literal notranslate"><span class="pre">'Enterprise'</span></code>, <code class="docutils literal notranslate"><span class="pre">'IoTUAP'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ServerStandard'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'nanoserver'</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
@@ -567,7 +569,7 @@ Linux distributions.</p>
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

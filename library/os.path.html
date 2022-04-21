@@ -154,16 +154,10 @@
 <span id="os-path-common-pathname-manipulations"></span><h1><a class="reference internal" href="#module-os.path" title="os.path: Operations on pathnames."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path</span></code></a> --- Common pathname manipulations<a class="headerlink" href="#module-os.path" title="本標題的永久連結">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/posixpath.py">Lib/posixpath.py</a>（對於 POSIX）與 <a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/ntpath.py">Lib/ntpath.py</a>（對於 Windows NT）。</p>
 <hr class="docutils" id="index-0" />
-<p>This module implements some useful functions on pathnames. To read or
-write files see <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>, and for accessing the filesystem see the
-<a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module. The path parameters can be passed as either strings,
-or bytes. Applications are encouraged to represent file names as
-(Unicode) character strings. Unfortunately, some file names may not be
-representable as strings on Unix, so applications that need to support
-arbitrary file names on Unix should use bytes objects to represent
-path names. Vice versa, using bytes objects cannot represent all file
-names on Windows (in the standard <code class="docutils literal notranslate"><span class="pre">mbcs</span></code> encoding), hence Windows
-applications should use string objects to access all files.</p>
+<p>This module implements some useful functions on pathnames. To read or write
+files see <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>, and for accessing the filesystem see the <a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a>
+module. The path parameters can be passed as strings, or bytes, or any object
+implementing the <a class="reference internal" href="os.html#os.PathLike" title="os.PathLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">os.PathLike</span></code></a> protocol.</p>
 <p>Unlike a unix shell, Python does not do any <em>automatic</em> path expansions.
 Functions such as <a class="reference internal" href="#os.path.expanduser" title="os.path.expanduser"><code class="xref py py-func docutils literal notranslate"><span class="pre">expanduser()</span></code></a> and <a class="reference internal" href="#os.path.expandvars" title="os.path.expandvars"><code class="xref py py-func docutils literal notranslate"><span class="pre">expandvars()</span></code></a> can be invoked
 explicitly when an application desires shell-like path expansion.  (See also
@@ -771,7 +765,7 @@ imposed by the file system).</p>
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

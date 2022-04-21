@@ -3698,8 +3698,8 @@ Python signal handler registered for <code class="xref py py-const docutils lite
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">add_dll_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#os.add_dll_directory" title="本定義的永久連結">¶</a></dt>
 <dd><p>Add a path to the DLL search path.</p>
 <p>This search path is used when resolving dependencies for imported
-extension modules (the module itself is resolved through sys.path),
-and also by <a class="reference internal" href="ctypes.html#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a>.</p>
+extension modules (the module itself is resolved through
+<a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>), and also by <a class="reference internal" href="ctypes.html#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a>.</p>
 <p>Remove the directory by calling <strong>close()</strong> on the returned object
 or using it in a <a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement.</p>
 <p>See the <a class="reference external" href="https://msdn.microsoft.com/44228cf2-6306-466c-8f16-f513cd3ba8b5">Microsoft documentation</a>
@@ -5186,7 +5186,7 @@ block in these cases, but instead immediately raises <a class="reference interna
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

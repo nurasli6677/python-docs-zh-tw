@@ -851,10 +851,11 @@ case, wrap your entry point to catch this exception as follows:</p>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Do not set <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a>'s disposition to <a class="reference internal" href="#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_DFL</span></code></a>
-in order to avoid <a class="reference internal" href="exceptions.html#BrokenPipeError" title="BrokenPipeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BrokenPipeError</span></code></a>.  Doing that would cause
-your program to exit unexpectedly also whenever any socket connection
-is interrupted while your program is still writing to it.</p>
+<p>Do not set <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a>'s disposition to <a class="reference internal" href="#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_DFL</span></code></a> in
+order to avoid <a class="reference internal" href="exceptions.html#BrokenPipeError" title="BrokenPipeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BrokenPipeError</span></code></a>.  Doing that would cause
+your program to exit unexpectedly whenever any socket
+connection is interrupted while your program is still writing to
+it.</p>
 </section>
 <section id="note-on-signal-handlers-and-exceptions">
 <span id="handlers-and-exceptions"></span><h2>Note on Signal Handlers and Exceptions<a class="headerlink" href="#note-on-signal-handlers-and-exceptions" title="本標題的永久連結">¶</a></h2>
@@ -1035,7 +1036,7 @@ of gracefully shutting down.  Instead, they should install their own
 <br />
     <br />
 
-    最後更新於 4月 08, 2022。
+    最後更新於 4月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
