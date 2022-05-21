@@ -253,7 +253,7 @@ non-<code class="docutils literal notranslate"><span class="pre">NULL</span></co
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyWideStringList.PyWideStringList_Insert">
-<a class="reference internal" href="#c.PyStatus" title="PyStatus"><span class="n"><span class="pre">PyStatus</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyWideStringList_Insert</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyWideStringList" title="PyWideStringList"><span class="n"><span class="pre">PyWideStringList</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">list</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">wchar_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">item</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyWideStringList.PyWideStringList_Insert" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="#c.PyStatus" title="PyStatus"><span class="n"><span class="pre">PyStatus</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyWideStringList_Insert</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyWideStringList" title="PyWideStringList"><span class="n"><span class="pre">PyWideStringList</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">list</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">wchar_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">item</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyWideStringList.PyWideStringList_Insert" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Insert <em>item</em> into <em>list</em> at <em>index</em>.</p>
 <p>If <em>index</em> is greater than or equal to <em>list</em> length, append <em>item</em> to
 <em>list</em>.</p>
@@ -264,7 +264,7 @@ non-<code class="docutils literal notranslate"><span class="pre">NULL</span></co
 <p>Structure fields:</p>
 <dl class="c member">
 <dt class="sig sig-object c" id="c.PyWideStringList.length">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><a class="headerlink" href="#c.PyWideStringList.length" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><a class="headerlink" href="#c.PyWideStringList.length" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>List length.</p>
 </dd></dl>
 
@@ -648,7 +648,7 @@ configuration memory.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyConfig.PyConfig_SetWideStringList">
-<a class="reference internal" href="#c.PyStatus" title="PyStatus"><span class="n"><span class="pre">PyStatus</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyConfig_SetWideStringList</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyConfig" title="PyConfig"><span class="n"><span class="pre">PyConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">config</span></span>, <a class="reference internal" href="#c.PyWideStringList" title="PyWideStringList"><span class="n"><span class="pre">PyWideStringList</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">list</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">length</span></span>, <span class="n"><span class="pre">wchar_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">items</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyConfig.PyConfig_SetWideStringList" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="#c.PyStatus" title="PyStatus"><span class="n"><span class="pre">PyStatus</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyConfig_SetWideStringList</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyConfig" title="PyConfig"><span class="n"><span class="pre">PyConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">config</span></span>, <a class="reference internal" href="#c.PyWideStringList" title="PyWideStringList"><span class="n"><span class="pre">PyWideStringList</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">list</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">length</span></span>, <span class="n"><span class="pre">wchar_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">items</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyConfig.PyConfig_SetWideStringList" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Set the list of wide strings <em>list</em> to <em>length</em> and <em>items</em>.</p>
 <p><a class="reference internal" href="#c-preinit"><span class="std std-ref">Preinitialize Python</span></a> if needed.</p>
 </dd></dl>
@@ -1773,7 +1773,7 @@ phases:</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -82,7 +82,6 @@
 <li><a class="reference internal" href="#modifying-an-xml-file">Modifying an XML File</a></li>
 <li><a class="reference internal" href="#building-xml-documents">Building XML documents</a></li>
 <li><a class="reference internal" href="#parsing-xml-with-namespaces">Parsing XML with Namespaces</a></li>
-<li><a class="reference internal" href="#additional-resources">Additional resources</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#xpath-support">XPath support</a><ul>
@@ -519,11 +518,6 @@ dictionary with your own prefixes and use those in the search functions:</p>
  <span class="o">|--&gt;</span> <span class="n">Commander</span> <span class="n">Clement</span>
 </pre></div>
 </div>
-</section>
-<section id="additional-resources">
-<h3>Additional resources<a class="headerlink" href="#additional-resources" title="本標題的永久連結">¶</a></h3>
-<p>See <a class="reference external" href="http://effbot.org/zone/element-index.htm">http://effbot.org/zone/element-index.htm</a> for tutorials and links to other
-docs.</p>
 </section>
 </section>
 <section id="xpath-support">
@@ -1014,8 +1008,8 @@ data.  <em>parser</em> is an optional parser instance.  If not given, the standa
 <section id="elementinclude-functions">
 <span id="id5"></span><h3>函式<a class="headerlink" href="#elementinclude-functions" title="本標題的永久連結">¶</a></h3>
 <dl class="py function">
-<dt class="sig sig-object py" id="xml.etree.ElementTree.xml.etree.ElementInclude.default_loader">
-<span class="sig-prename descclassname"><span class="pre">xml.etree.ElementInclude.</span></span><span class="sig-name descname"><span class="pre">default_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.etree.ElementTree.xml.etree.ElementInclude.default_loader" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="xml.etree.ElementInclude.default_loader">
+<span class="sig-prename descclassname"><span class="pre">xml.etree.ElementInclude.</span></span><span class="sig-name descname"><span class="pre">default_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.etree.ElementInclude.default_loader" title="本定義的永久連結">¶</a></dt>
 <dd><p>Default loader. This default loader reads an included resource from disk.  <em>href</em> is a URL.
 <em>parse</em> is for parse mode either &quot;xml&quot; or &quot;text&quot;.  <em>encoding</em>
 is an optional text encoding.  If not given, encoding is <code class="docutils literal notranslate"><span class="pre">utf-8</span></code>.  Returns the
@@ -1025,12 +1019,12 @@ loader fails, it can return None or raise an exception.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="xml.etree.ElementTree.xml.etree.ElementInclude.include">
-<span class="sig-prename descclassname"><span class="pre">xml.etree.ElementInclude.</span></span><span class="sig-name descname"><span class="pre">include</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.etree.ElementTree.xml.etree.ElementInclude.include" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="xml.etree.ElementInclude.include">
+<span class="sig-prename descclassname"><span class="pre">xml.etree.ElementInclude.</span></span><span class="sig-name descname"><span class="pre">include</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.etree.ElementInclude.include" title="本定義的永久連結">¶</a></dt>
 <dd><p>This function expands XInclude directives.  <em>elem</em> is the root element.  <em>loader</em> is
-an optional resource loader.  If omitted, it defaults to <a class="reference internal" href="#xml.etree.ElementTree.xml.etree.ElementInclude.default_loader" title="xml.etree.ElementTree.xml.etree.ElementInclude.default_loader"><code class="xref py py-func docutils literal notranslate"><span class="pre">default_loader()</span></code></a>.
+an optional resource loader.  If omitted, it defaults to <a class="reference internal" href="#xml.etree.ElementInclude.default_loader" title="xml.etree.ElementInclude.default_loader"><code class="xref py py-func docutils literal notranslate"><span class="pre">default_loader()</span></code></a>.
 If given, it should be a callable that implements the same interface as
-<a class="reference internal" href="#xml.etree.ElementTree.xml.etree.ElementInclude.default_loader" title="xml.etree.ElementTree.xml.etree.ElementInclude.default_loader"><code class="xref py py-func docutils literal notranslate"><span class="pre">default_loader()</span></code></a>.  <em>base_url</em> is base URL of the original file, to resolve
+<a class="reference internal" href="#xml.etree.ElementInclude.default_loader" title="xml.etree.ElementInclude.default_loader"><code class="xref py py-func docutils literal notranslate"><span class="pre">default_loader()</span></code></a>.  <em>base_url</em> is base URL of the original file, to resolve
 relative include file references.  <em>max_depth</em> is the maximum number of recursive
 inclusions.  Limited to reduce the risk of malicious content explosion. Pass a
 negative value to disable the limitation.</p>
@@ -1743,7 +1737,6 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
 <li><a class="reference internal" href="#modifying-an-xml-file">Modifying an XML File</a></li>
 <li><a class="reference internal" href="#building-xml-documents">Building XML documents</a></li>
 <li><a class="reference internal" href="#parsing-xml-with-namespaces">Parsing XML with Namespaces</a></li>
-<li><a class="reference internal" href="#additional-resources">Additional resources</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#xpath-support">XPath support</a><ul>
@@ -1863,7 +1856,7 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

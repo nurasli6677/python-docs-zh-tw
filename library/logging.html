@@ -1314,18 +1314,6 @@ message. This function should only be called from an exception handler.</p>
 <span class="sig-prename descclassname"><span class="pre">logging.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logging.log" title="本定義的永久連結">¶</a></dt>
 <dd><p>Logs a message with level <em>level</em> on the root logger. The other arguments are
 interpreted as for <a class="reference internal" href="#logging.debug" title="logging.debug"><code class="xref py py-func docutils literal notranslate"><span class="pre">debug()</span></code></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">備註</p>
-<p>The above module-level convenience functions, which delegate to the
-root logger, call <a class="reference internal" href="#logging.basicConfig" title="logging.basicConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">basicConfig()</span></code></a> to ensure that at least one handler
-is available. Because of this, they should <em>not</em> be used in threads,
-in versions of Python earlier than 2.7.1 and 3.2, unless at least one
-handler has been added to the root logger <em>before</em> the threads are
-started. In earlier versions of Python, due to a thread safety shortcoming
-in <a class="reference internal" href="#logging.basicConfig" title="logging.basicConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">basicConfig()</span></code></a>, this can (under rare circumstances) lead to
-handlers being added multiple times to the root logger, which can in turn
-lead to multiple messages for the same event.</p>
-</div>
 </dd></dl>
 
 <dl class="py function">
@@ -1347,7 +1335,7 @@ default value for the <em>level</em> parameter, but will have to explicitly supp
 suitable value.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>level</em> parameter was defaulted to level <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>. See
-<a class="reference external" href="https://bugs.python.org/issue28524">bpo-28524</a> for more information about this change.</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=28524">bpo-28524</a> for more information about this change.</p>
 </div>
 </dd></dl>
 
@@ -1780,7 +1768,7 @@ library.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

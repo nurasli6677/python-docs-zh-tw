@@ -313,7 +313,8 @@ is unavailable, when asked to modify a symbolic link,
 <dd><p>Copies the file <em>src</em> to the file or directory <em>dst</em>.  <em>src</em> and <em>dst</em>
 should be <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like objects</span></a> or strings.  If
 <em>dst</em> specifies a directory, the file will be copied into <em>dst</em> using the
-base filename from <em>src</em>.  Returns the path to the newly created file.</p>
+base filename from <em>src</em>. If <em>dst</em> specifies a file that already exists,
+it will be replaced. Returns the path to the newly created file.</p>
 <p>If <em>follow_symlinks</em> is false, and <em>src</em> is a symbolic link,
 <em>dst</em> will be created as a symbolic link.  If <em>follow_symlinks</em>
 is true and <em>src</em> is a symbolic link, <em>dst</em> will be a copy of
@@ -590,7 +591,7 @@ operation. For <a class="reference internal" href="#shutil.copytree" title="shut
 (<a class="reference internal" href="#shutil.copyfile" title="shutil.copyfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">copyfile()</span></code></a>, <a class="reference internal" href="#shutil.copy" title="shutil.copy"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy()</span></code></a>, <a class="reference internal" href="#shutil.copy2" title="shutil.copy2"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy2()</span></code></a>,
 <a class="reference internal" href="#shutil.copytree" title="shutil.copytree"><code class="xref py py-func docutils literal notranslate"><span class="pre">copytree()</span></code></a>, and <a class="reference internal" href="#shutil.move" title="shutil.move"><code class="xref py py-func docutils literal notranslate"><span class="pre">move()</span></code></a>) may use
 platform-specific &quot;fast-copy&quot; syscalls in order to copy the file more
-efficiently (see <a class="reference external" href="https://bugs.python.org/issue33671">bpo-33671</a>).
+efficiently (see <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=33671">bpo-33671</a>).
 &quot;fast-copy&quot; means that the copying operation occurs within the kernel, avoiding
 the use of userspace buffers in Python as in &quot;<code class="docutils literal notranslate"><span class="pre">outfd.write(infd.read())</span></code>&quot;.</p>
 <p>On macOS <a class="reference external" href="http://www.manpagez.com/man/3/copyfile/">fcopyfile</a> is used to copy the file content (not metadata).</p>
@@ -743,6 +744,13 @@ will use the archive file name extension and see if an unpacker was
 registered for that extension.  In case none is found,
 a <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> is raised.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">shutil.unpack_archive</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">filename</span></code>, <code class="docutils literal notranslate"><span class="pre">extract_dir</span></code>, <code class="docutils literal notranslate"><span class="pre">format</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Never extract archives from untrusted sources without prior inspection.
+It is possible that files are created outside of the path specified in
+the <em>extract_dir</em> argument, e.g. members that have absolute filenames
+starting with &quot;/&quot; or filenames with two dots &quot;..&quot;.</p>
+</div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>Accepts a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a> for <em>filename</em> and <em>extract_dir</em>.</p>
 </div>
@@ -993,7 +1001,7 @@ size used by many terminal emulators.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -288,7 +288,7 @@ Equivalent to: <code class="docutils literal notranslate"><span class="pre">Py_T
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_REFCNT">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_REFCNT</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_REFCNT" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_REFCNT</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_REFCNT" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Get the reference count of the Python object <em>o</em>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.10 版本變更: </span><a class="reference internal" href="#c.Py_REFCNT" title="Py_REFCNT"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_REFCNT()</span></code></a> is changed to the inline static function.
@@ -298,7 +298,7 @@ Use <a class="reference internal" href="#c.Py_SET_REFCNT" title="Py_SET_REFCNT">
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_SET_REFCNT">
-<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SET_REFCNT</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">refcnt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SET_REFCNT" title="本定義的永久連結">¶</a><br /></dt>
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SET_REFCNT</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">refcnt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SET_REFCNT" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Set the object <em>o</em> reference counter to <em>refcnt</em>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.9 版本新加入.</span></p>
@@ -307,14 +307,14 @@ Use <a class="reference internal" href="#c.Py_SET_REFCNT" title="Py_SET_REFCNT">
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_SIZE">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SIZE</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SIZE" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SIZE</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SIZE" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Get the size of the Python object <em>o</em>.</p>
 <p>The <a class="reference internal" href="#c.Py_SET_SIZE" title="Py_SET_SIZE"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_SET_SIZE()</span></code></a> function must be used to set an object size.</p>
 </dd></dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_SET_SIZE">
-<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyVarObject" title="PyVarObject"><span class="n"><span class="pre">PyVarObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Set the object <em>o</em> size to <em>size</em>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.9 版本新加入.</span></p>
@@ -929,7 +929,7 @@ Should return <code class="docutils literal notranslate"><span class="pre">0</sp
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

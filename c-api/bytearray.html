@@ -205,7 +205,7 @@ subtype of the bytearray type.  This function always succeeds.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_FromStringAndSize">
-<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_FromStringAndSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">string</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_FromStringAndSize" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_FromStringAndSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">string</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_FromStringAndSize" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Create a new bytearray object from <em>string</em> and its length, <em>len</em>.  On
 failure, <code class="docutils literal notranslate"><span class="pre">NULL</span></code> is returned.</p>
 </dd></dl>
@@ -218,7 +218,7 @@ failure, <code class="docutils literal notranslate"><span class="pre">NULL</span
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_Size">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_Size</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytearray</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_Size" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_Size</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytearray</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_Size" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return the size of <em>bytearray</em> after checking for a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointer.</p>
 </dd></dl>
 
@@ -232,7 +232,7 @@ null byte appended.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_Resize">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_Resize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytearray</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_Resize" title="本定義的永久連結">¶</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_Resize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytearray</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_Resize" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Resize the internal buffer of <em>bytearray</em> to <em>len</em>.</p>
 </dd></dl>
 
@@ -248,7 +248,7 @@ null byte appended.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_GET_SIZE">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_GET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytearray</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_GET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_GET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytearray</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_GET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Macro version of <a class="reference internal" href="#c.PyByteArray_Size" title="PyByteArray_Size"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyByteArray_Size()</span></code></a>.</p>
 </dd></dl>
 
@@ -362,7 +362,7 @@ null byte appended.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

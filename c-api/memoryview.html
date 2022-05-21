@@ -165,7 +165,7 @@ discretion of the exporter.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyMemoryView_FromMemory">
-<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyMemoryView_FromMemory</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">mem</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">size</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyMemoryView_FromMemory" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyMemoryView_FromMemory</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">mem</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">size</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyMemoryView_FromMemory" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Create a memoryview object using <em>mem</em> as the underlying buffer.
 <em>flags</em> can be one of <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyBUF_READ</span></code> or <code class="xref c c-macro docutils literal notranslate"><span class="pre">PyBUF_WRITE</span></code>.</p>
 <div class="versionadded">
@@ -313,7 +313,7 @@ on or <code class="docutils literal notranslate"><span class="pre">NULL</span></
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

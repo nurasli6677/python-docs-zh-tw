@@ -576,7 +576,14 @@ the strong reference before exiting the scope of the strong reference, to
 avoid leaking one reference.</p>
 <p>另請參閱 <a class="reference internal" href="#term-borrowed-reference"><span class="xref std std-term">borrowed reference</span></a>。</p>
 </dd>
-<dt id="term-text-encoding">text encoding（文字編碼）<a class="headerlink" href="#term-text-encoding" title="本術語的永久連結">¶</a></dt><dd><p>將 Unicode 字串編碼為位元組的一個編解碼器 (codec)。</p>
+<dt id="term-text-encoding">text encoding（文字編碼）<a class="headerlink" href="#term-text-encoding" title="本術語的永久連結">¶</a></dt><dd><p>A string in Python is a sequence of Unicode code points (in range
+<code class="docutils literal notranslate"><span class="pre">U+0000</span></code>--<code class="docutils literal notranslate"><span class="pre">U+10FFFF</span></code>). To store or transfer a string, it needs to be
+serialized as a sequence of bytes.</p>
+<p>Serializing a string into a sequence of bytes is known as &quot;encoding&quot;, and
+recreating the string from the sequence of bytes is known as &quot;decoding&quot;.</p>
+<p>There are a variety of different text serialization
+<a class="reference internal" href="library/codecs.html#standard-encodings"><span class="std std-ref">codecs</span></a>, which are collectively referred to as
+&quot;text encodings&quot;.</p>
 </dd>
 <dt id="term-text-file">text file（文字檔案）<a class="headerlink" href="#term-text-file" title="本術語的永久連結">¶</a></dt><dd><p>一個能夠讀取和寫入 <a class="reference internal" href="library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 物件的一個 <a class="reference internal" href="#term-file-object"><span class="xref std std-term">file object</span></a>（檔案物件）。通常，文字檔案實際上是存取位元組導向的資料流 (byte-oriented datastream) 並會自動處理 <a class="reference internal" href="#term-text-encoding"><span class="xref std std-term">text encoding</span></a>（文字編碼）。文字檔案的例子有：以文字模式（<code class="docutils literal notranslate"><span class="pre">'r'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'w'</span></code>）開啟的檔案、<a class="reference internal" href="library/sys.html#sys.stdin" title="sys.stdin"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stdin</span></code></a>、<a class="reference internal" href="library/sys.html#sys.stdout" title="sys.stdout"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stdout</span></code></a> 以及 <a class="reference internal" href="library/io.html#io.StringIO" title="io.StringIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.StringIO</span></code></a> 的實例。</p>
 <p>另請參閱 <a class="reference internal" href="#term-binary-file"><span class="xref std std-term">binary file</span></a>（二進制檔案），它是一個能夠讀取和寫入<a class="reference internal" href="#term-bytes-like-object"><span class="xref std std-term">類位元組串物件 (bytes-like object)</span></a> 的檔案物件。</p>
@@ -724,7 +731,7 @@ avoid leaking one reference.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

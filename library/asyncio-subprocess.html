@@ -222,7 +222,7 @@ to modify the above example to run several commands simultaneously:</p>
 <p>The <em>limit</em> argument sets the buffer limit for <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>
 wrappers for <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdout</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stderr</span></code>
 (if <a class="reference internal" href="subprocess.html#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">subprocess.PIPE</span></code></a> is passed to <em>stdout</em> and <em>stderr</em> arguments).</p>
-<p>Return a <a class="reference internal" href="#asyncio.asyncio.subprocess.Process" title="asyncio.asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> instance.</p>
+<p>Return a <a class="reference internal" href="#asyncio.subprocess.Process" title="asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> instance.</p>
 <p>See the documentation of <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_exec" title="asyncio.loop.subprocess_exec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_exec()</span></code></a> for other
 parameters.</p>
 <div class="versionchanged">
@@ -237,7 +237,7 @@ parameters.</p>
 <p>The <em>limit</em> argument sets the buffer limit for <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>
 wrappers for <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdout</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stderr</span></code>
 (if <a class="reference internal" href="subprocess.html#subprocess.PIPE" title="subprocess.PIPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">subprocess.PIPE</span></code></a> is passed to <em>stdout</em> and <em>stderr</em> arguments).</p>
-<p>Return a <a class="reference internal" href="#asyncio.asyncio.subprocess.Process" title="asyncio.asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> instance.</p>
+<p>Return a <a class="reference internal" href="#asyncio.subprocess.Process" title="asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> instance.</p>
 <p>See the documentation of <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_shell" title="asyncio.loop.subprocess_shell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_shell()</span></code></a> for other
 parameters.</p>
 <div class="admonition important">
@@ -271,28 +271,28 @@ and <a class="reference internal" href="asyncio-protocol.html#asyncio-subprocess
 <section id="constants">
 <h2>常數<a class="headerlink" href="#constants" title="本標題的永久連結">¶</a></h2>
 <dl class="py data">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.PIPE">
-<span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">PIPE</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.PIPE" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.PIPE">
+<span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">PIPE</span></span><a class="headerlink" href="#asyncio.subprocess.PIPE" title="本定義的永久連結">¶</a></dt>
 <dd><p>Can be passed to the <em>stdin</em>, <em>stdout</em> or <em>stderr</em> parameters.</p>
 <p>If <em>PIPE</em> is passed to <em>stdin</em> argument, the
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.stdin" title="asyncio.asyncio.subprocess.Process.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdin</span></code></a> attribute
-will point to a <a class="reference internal" href="asyncio-stream.html#asyncio.StreamWriter" title="asyncio.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a> instance.</p>
+<a class="reference internal" href="#asyncio.subprocess.Process.stdin" title="asyncio.subprocess.Process.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdin</span></code></a> attribute
+will point to a <code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code> instance.</p>
 <p>If <em>PIPE</em> is passed to <em>stdout</em> or <em>stderr</em> arguments, the
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.stdout" title="asyncio.asyncio.subprocess.Process.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdout</span></code></a> and
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.stderr" title="asyncio.asyncio.subprocess.Process.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stderr</span></code></a>
-attributes will point to <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> instances.</p>
+<a class="reference internal" href="#asyncio.subprocess.Process.stdout" title="asyncio.subprocess.Process.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdout</span></code></a> and
+<a class="reference internal" href="#asyncio.subprocess.Process.stderr" title="asyncio.subprocess.Process.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stderr</span></code></a>
+attributes will point to <code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code> instances.</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.STDOUT">
-<span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">STDOUT</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.STDOUT" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.STDOUT">
+<span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">STDOUT</span></span><a class="headerlink" href="#asyncio.subprocess.STDOUT" title="本定義的永久連結">¶</a></dt>
 <dd><p>Special value that can be used as the <em>stderr</em> argument and indicates
 that standard error should be redirected into standard output.</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.DEVNULL">
-<span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">DEVNULL</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.DEVNULL" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.DEVNULL">
+<span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">DEVNULL</span></span><a class="headerlink" href="#asyncio.subprocess.DEVNULL" title="本定義的永久連結">¶</a></dt>
 <dd><p>Special value that can be used as the <em>stdin</em>, <em>stdout</em> or <em>stderr</em> argument
 to process creation functions.  It indicates that the special file
 <a class="reference internal" href="os.html#os.devnull" title="os.devnull"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.devnull</span></code></a> will be used for the corresponding subprocess stream.</p>
@@ -306,10 +306,10 @@ functions return instances of the <em>Process</em> class.  <em>Process</em> is a
 wrapper that allows communicating with subprocesses and watching for
 their completion.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">Process</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">Process</span></span><a class="headerlink" href="#asyncio.subprocess.Process" title="本定義的永久連結">¶</a></dt>
 <dd><p>An object that wraps OS processes created by the
-<a class="reference internal" href="#asyncio.create_subprocess_exec" title="asyncio.create_subprocess_exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_exec()</span></code></a> and <a class="reference internal" href="#asyncio.create_subprocess_shell" title="asyncio.create_subprocess_shell"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_shell()</span></code></a>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_exec()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_shell()</span></code>
 functions.</p>
 <p>This class is designed to have a similar API to the
 <a class="reference internal" href="subprocess.html#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">subprocess.Popen</span></code></a> class, but there are some
@@ -317,10 +317,10 @@ notable differences:</p>
 <ul class="simple">
 <li><p>unlike Popen, Process instances do not have an equivalent to
 the <a class="reference internal" href="subprocess.html#subprocess.Popen.poll" title="subprocess.Popen.poll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poll()</span></code></a> method;</p></li>
-<li><p>the <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.communicate" title="asyncio.asyncio.subprocess.Process.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> and
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.wait" title="asyncio.asyncio.subprocess.Process.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> methods don't have a
-<em>timeout</em> parameter: use the <a class="reference internal" href="asyncio-task.html#asyncio.wait_for" title="asyncio.wait_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait_for()</span></code></a> function;</p></li>
-<li><p>the <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.wait" title="asyncio.asyncio.subprocess.Process.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Process.wait()</span></code></a> method
+<li><p>the <a class="reference internal" href="#asyncio.subprocess.Process.communicate" title="asyncio.subprocess.Process.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> and
+<a class="reference internal" href="#asyncio.subprocess.Process.wait" title="asyncio.subprocess.Process.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait()</span></code></a> methods don't have a
+<em>timeout</em> parameter: use the <code class="xref py py-func docutils literal notranslate"><span class="pre">wait_for()</span></code> function;</p></li>
+<li><p>the <a class="reference internal" href="#asyncio.subprocess.Process.wait" title="asyncio.subprocess.Process.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Process.wait()</span></code></a> method
 is asynchronous, whereas <a class="reference internal" href="subprocess.html#subprocess.Popen.wait" title="subprocess.Popen.wait"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subprocess.Popen.wait()</span></code></a> method
 is implemented as a blocking busy loop;</p></li>
 <li><p>the <em>universal_newlines</em> parameter is not supported.</p></li>
@@ -329,23 +329,23 @@ is implemented as a blocking busy loop;</p></li>
 <p>See also the <a class="reference internal" href="#asyncio-subprocess-threads"><span class="std std-ref">Subprocess and Threads</span></a>
 section.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.wait">
-<em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.wait" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.wait">
+<em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.subprocess.Process.wait" title="本定義的永久連結">¶</a></dt>
 <dd><p>Wait for the child process to terminate.</p>
-<p>Set and return the <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.returncode" title="asyncio.asyncio.subprocess.Process.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> attribute.</p>
+<p>Set and return the <a class="reference internal" href="#asyncio.subprocess.Process.returncode" title="asyncio.subprocess.Process.returncode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">returncode</span></code></a> attribute.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>This method can deadlock when using <code class="docutils literal notranslate"><span class="pre">stdout=PIPE</span></code> or
 <code class="docutils literal notranslate"><span class="pre">stderr=PIPE</span></code> and the child process generates so much output
 that it blocks waiting for the OS pipe buffer to accept
-more data. Use the <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.communicate" title="asyncio.asyncio.subprocess.Process.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> method when using pipes
+more data. Use the <a class="reference internal" href="#asyncio.subprocess.Process.communicate" title="asyncio.subprocess.Process.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> method when using pipes
 to avoid this condition.</p>
 </div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.communicate">
-<em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">communicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.communicate" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.communicate">
+<em class="property"><span class="pre">coroutine</span> </em><span class="sig-name descname"><span class="pre">communicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.subprocess.Process.communicate" title="本定義的永久連結">¶</a></dt>
 <dd><p>Interact with process:</p>
 <ol class="arabic simple">
 <li><p>send data to <em>stdin</em> (if <em>input</em> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>);</p></li>
@@ -369,12 +369,12 @@ this method if the data size is large or unlimited.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.send_signal">
-<span class="sig-name descname"><span class="pre">send_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.send_signal" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.send_signal">
+<span class="sig-name descname"><span class="pre">send_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.subprocess.Process.send_signal" title="本定義的永久連結">¶</a></dt>
 <dd><p>Sends the signal <em>signal</em> to the child process.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>On Windows, <code class="xref py py-data docutils literal notranslate"><span class="pre">SIGTERM</span></code> is an alias for <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.terminate" title="asyncio.asyncio.subprocess.Process.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a>.
+<p>On Windows, <code class="xref py py-data docutils literal notranslate"><span class="pre">SIGTERM</span></code> is an alias for <a class="reference internal" href="#asyncio.subprocess.Process.terminate" title="asyncio.subprocess.Process.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a>.
 <code class="docutils literal notranslate"><span class="pre">CTRL_C_EVENT</span></code> and <code class="docutils literal notranslate"><span class="pre">CTRL_BREAK_EVENT</span></code> can be sent to processes
 started with a <em>creationflags</em> parameter which includes
 <code class="docutils literal notranslate"><span class="pre">CREATE_NEW_PROCESS_GROUP</span></code>.</p>
@@ -382,8 +382,8 @@ started with a <em>creationflags</em> parameter which includes
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.terminate">
-<span class="sig-name descname"><span class="pre">terminate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.terminate" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.terminate">
+<span class="sig-name descname"><span class="pre">terminate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.subprocess.Process.terminate" title="本定義的永久連結">¶</a></dt>
 <dd><p>Stop the child process.</p>
 <p>On POSIX systems this method sends <a class="reference internal" href="signal.html#signal.SIGTERM" title="signal.SIGTERM"><code class="xref py py-data docutils literal notranslate"><span class="pre">signal.SIGTERM</span></code></a> to the
 child process.</p>
@@ -392,55 +392,55 @@ called to stop the child process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.kill">
-<span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.kill" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.kill">
+<span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.subprocess.Process.kill" title="本定義的永久連結">¶</a></dt>
 <dd><p>Kill the child process.</p>
 <p>On POSIX systems this method sends <code class="xref py py-data docutils literal notranslate"><span class="pre">SIGKILL</span></code> to the child
 process.</p>
-<p>On Windows this method is an alias for <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.terminate" title="asyncio.asyncio.subprocess.Process.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a>.</p>
+<p>On Windows this method is an alias for <a class="reference internal" href="#asyncio.subprocess.Process.terminate" title="asyncio.subprocess.Process.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.stdin">
-<span class="sig-name descname"><span class="pre">stdin</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.stdin" title="本定義的永久連結">¶</a></dt>
-<dd><p>Standard input stream (<a class="reference internal" href="asyncio-stream.html#asyncio.StreamWriter" title="asyncio.StreamWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code></a>) or <code class="docutils literal notranslate"><span class="pre">None</span></code>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.stdin">
+<span class="sig-name descname"><span class="pre">stdin</span></span><a class="headerlink" href="#asyncio.subprocess.Process.stdin" title="本定義的永久連結">¶</a></dt>
+<dd><p>Standard input stream (<code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code>) or <code class="docutils literal notranslate"><span class="pre">None</span></code>
 if the process was created with <code class="docutils literal notranslate"><span class="pre">stdin=None</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.stdout">
-<span class="sig-name descname"><span class="pre">stdout</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.stdout" title="本定義的永久連結">¶</a></dt>
-<dd><p>Standard output stream (<a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>) or <code class="docutils literal notranslate"><span class="pre">None</span></code>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.stdout">
+<span class="sig-name descname"><span class="pre">stdout</span></span><a class="headerlink" href="#asyncio.subprocess.Process.stdout" title="本定義的永久連結">¶</a></dt>
+<dd><p>Standard output stream (<code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code>) or <code class="docutils literal notranslate"><span class="pre">None</span></code>
 if the process was created with <code class="docutils literal notranslate"><span class="pre">stdout=None</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.stderr">
-<span class="sig-name descname"><span class="pre">stderr</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.stderr" title="本定義的永久連結">¶</a></dt>
-<dd><p>Standard error stream (<a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>) or <code class="docutils literal notranslate"><span class="pre">None</span></code>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.stderr">
+<span class="sig-name descname"><span class="pre">stderr</span></span><a class="headerlink" href="#asyncio.subprocess.Process.stderr" title="本定義的永久連結">¶</a></dt>
+<dd><p>Standard error stream (<code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code>) or <code class="docutils literal notranslate"><span class="pre">None</span></code>
 if the process was created with <code class="docutils literal notranslate"><span class="pre">stderr=None</span></code>.</p>
 </dd></dl>
 
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Use the <a class="reference internal" href="#asyncio.asyncio.subprocess.Process.communicate" title="asyncio.asyncio.subprocess.Process.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> method rather than
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.stdin" title="asyncio.asyncio.subprocess.Process.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">process.stdin.write()</span></code></a>,
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.stdout" title="asyncio.asyncio.subprocess.Process.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">await</span> <span class="pre">process.stdout.read()</span></code></a> or
-<a class="reference internal" href="#asyncio.asyncio.subprocess.Process.stderr" title="asyncio.asyncio.subprocess.Process.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">await</span> <span class="pre">process.stderr.read</span></code></a>.
+<p>Use the <a class="reference internal" href="#asyncio.subprocess.Process.communicate" title="asyncio.subprocess.Process.communicate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">communicate()</span></code></a> method rather than
+<a class="reference internal" href="#asyncio.subprocess.Process.stdin" title="asyncio.subprocess.Process.stdin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">process.stdin.write()</span></code></a>,
+<a class="reference internal" href="#asyncio.subprocess.Process.stdout" title="asyncio.subprocess.Process.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">await</span> <span class="pre">process.stdout.read()</span></code></a> or
+<a class="reference internal" href="#asyncio.subprocess.Process.stderr" title="asyncio.subprocess.Process.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">await</span> <span class="pre">process.stderr.read()</span></code></a>.
 This avoids deadlocks due to streams pausing reading or writing
 and blocking the child process.</p>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.pid">
-<span class="sig-name descname"><span class="pre">pid</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.pid" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.pid">
+<span class="sig-name descname"><span class="pre">pid</span></span><a class="headerlink" href="#asyncio.subprocess.Process.pid" title="本定義的永久連結">¶</a></dt>
 <dd><p>Process identification number (PID).</p>
-<p>Note that for processes created by the <a class="reference internal" href="#asyncio.create_subprocess_shell" title="asyncio.create_subprocess_shell"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_shell()</span></code></a>
+<p>Note that for processes created by the <code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_shell()</span></code>
 function, this attribute is the PID of the spawned shell.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="asyncio.asyncio.subprocess.Process.returncode">
-<span class="sig-name descname"><span class="pre">returncode</span></span><a class="headerlink" href="#asyncio.asyncio.subprocess.Process.returncode" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="asyncio.subprocess.Process.returncode">
+<span class="sig-name descname"><span class="pre">returncode</span></span><a class="headerlink" href="#asyncio.subprocess.Process.returncode" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return code of the process when it exits.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">None</span></code> value indicates that the process has not terminated yet.</p>
 <p>A negative value <code class="docutils literal notranslate"><span class="pre">-N</span></code> indicates that the child was terminated
@@ -472,7 +472,7 @@ please refer to their documentation.</p>
 </section>
 <section id="examples">
 <h3>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h3>
-<p>An example using the <a class="reference internal" href="#asyncio.asyncio.subprocess.Process" title="asyncio.asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> class to
+<p>An example using the <a class="reference internal" href="#asyncio.subprocess.Process" title="asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> class to
 control a subprocess and the <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> class to read from
 its standard output.</p>
 <p id="asyncio-example-create-subprocess-exec">The subprocess is created by the <a class="reference internal" href="#asyncio.create_subprocess_exec" title="asyncio.create_subprocess_exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_exec()</span></code></a>
@@ -619,7 +619,7 @@ written using low-level APIs.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

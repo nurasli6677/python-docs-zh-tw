@@ -246,7 +246,7 @@ would do.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyType_GenericAlloc">
-<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyType_GenericAlloc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">nitems</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericAlloc" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyType_GenericAlloc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">nitems</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyType_GenericAlloc" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Generic handler for the <a class="reference internal" href="typeobj.html#c.PyTypeObject.tp_alloc" title="PyTypeObject.tp_alloc"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_alloc</span></code></a> slot of a type object.  Use
 Python's default memory allocation mechanism to allocate a new instance and
 initialize all its contents to <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
@@ -584,7 +584,7 @@ to a function.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

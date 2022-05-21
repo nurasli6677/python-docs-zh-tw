@@ -191,7 +191,7 @@ checked.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyBytes_FromStringAndSize">
-<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_FromStringAndSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">v</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_FromStringAndSize" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_FromStringAndSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">v</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_FromStringAndSize" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return a new bytes object with a copy of the string <em>v</em> as value and length
 <em>len</em> on success, and <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on failure.  If <em>v</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the contents of
 the bytes object are uninitialized.</p>
@@ -244,7 +244,7 @@ represented as a C int.</p></td>
 <td><p>等價於 <code class="docutils literal notranslate"><span class="pre">printf(&quot;%lu&quot;)</span></code>. <a class="footnote-reference brackets" href="#id9" id="id4">1</a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">%zd</span></code></p></td>
-<td><p>Py_ssize_t</p></td>
+<td><p><a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a></p></td>
 <td><p>等價於 <code class="docutils literal notranslate"><span class="pre">printf(&quot;%zd&quot;)</span></code>. <a class="footnote-reference brackets" href="#id9" id="id5">1</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">%zu</span></code></p></td>
@@ -302,13 +302,13 @@ protocol.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyBytes_Size">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_Size</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_Size" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_Size</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_Size" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return the length of the bytes in bytes object <em>o</em>.</p>
 </dd></dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyBytes_GET_SIZE">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_GET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_GET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_GET_SIZE</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_GET_SIZE" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>Macro form of <a class="reference internal" href="#c.PyBytes_Size" title="PyBytes_Size"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyBytes_Size()</span></code></a> but without error checking.</p>
 </dd></dl>
 
@@ -333,7 +333,7 @@ and raises <a class="reference internal" href="../library/exceptions.html#TypeEr
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyBytes_AsStringAndSize">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_AsStringAndSize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_AsStringAndSize" title="本定義的永久連結">¶</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyBytes_AsStringAndSize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">buffer</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyBytes_AsStringAndSize" title="本定義的永久連結">¶</a><br /></dt>
 <dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return the null-terminated contents of the object <em>obj</em>
 through the output variables <em>buffer</em> and <em>length</em>.</p>
 <p>If <em>length</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the bytes object
@@ -371,7 +371,7 @@ appended to <em>bytes</em>.  This version decrements the reference count of
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c._PyBytes_Resize">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_PyBytes_Resize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytes</span></span>, <span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">newsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c._PyBytes_Resize" title="本定義的永久連結">¶</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_PyBytes_Resize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bytes</span></span>, <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">newsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c._PyBytes_Resize" title="本定義的永久連結">¶</a><br /></dt>
 <dd><p>A way to resize a bytes object even though it is &quot;immutable&quot;. Only use this
 to build up a brand new bytes object; don't use this if the bytes may already
 be known in other parts of the code.  It is an error to call this function if
@@ -481,7 +481,7 @@ returned.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

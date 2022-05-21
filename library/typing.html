@@ -326,7 +326,7 @@ the binary-or operator <code class="docutils literal notranslate"><span class="p
 </section>
 <section id="newtype">
 <span id="distinct"></span><h2>NewType<a class="headerlink" href="#newtype" title="本標題的永久連結">¶</a></h2>
-<p>Use the <a class="reference internal" href="#typing.NewType" title="typing.NewType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NewType</span></code></a> helper class to create distinct types:</p>
+<p>Use the <a class="reference internal" href="#typing.NewType" title="typing.NewType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NewType</span></code></a> helper to create distinct types:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">NewType</span>
 
 <span class="n">UserId</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s1">&#39;UserId&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
@@ -355,7 +355,7 @@ accidentally creating a <code class="docutils literal notranslate"><span class="
 </div>
 <p>Note that these checks are enforced only by the static type checker. At runtime,
 the statement <code class="docutils literal notranslate"><span class="pre">Derived</span> <span class="pre">=</span> <span class="pre">NewType('Derived',</span> <span class="pre">Base)</span></code> will make <code class="docutils literal notranslate"><span class="pre">Derived</span></code> a
-class that immediately returns whatever parameter you pass it. That means
+callable that immediately returns whatever parameter you pass it. That means
 the expression <code class="docutils literal notranslate"><span class="pre">Derived(some_value)</span></code> does not create a new class or introduce
 much overhead beyond that of a regular function call.</p>
 <p>More precisely, the expression <code class="docutils literal notranslate"><span class="pre">some_value</span> <span class="pre">is</span> <span class="pre">Derived(some_value)</span></code> is always
@@ -414,6 +414,10 @@ type hinted using <code class="docutils literal notranslate"><span class="pre">C
 <span class="k">def</span> <span class="nf">async_query</span><span class="p">(</span><span class="n">on_success</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
                 <span class="n">on_error</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="c1"># Body</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_update</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># Body</span>
+<span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Awaitable</span><span class="p">[</span><span class="kc">None</span><span class="p">]]</span> <span class="o">=</span> <span class="n">on_update</span>
 </pre></div>
 </div>
 <p>It is possible to declare the return type of a callable without specifying
@@ -432,7 +436,7 @@ See <span class="target" id="index-16"></span><a class="pep reference external" 
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
-<p>The documentation for <a class="reference internal" href="#typing.ParamSpec" title="typing.ParamSpec"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpec</span></code></a> and <a class="reference internal" href="#typing.Concatenate" title="typing.Concatenate"><code class="xref py py-class docutils literal notranslate"><span class="pre">Concatenate</span></code></a> provide
+<p>The documentation for <a class="reference internal" href="#typing.ParamSpec" title="typing.ParamSpec"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpec</span></code></a> and <a class="reference internal" href="#typing.Concatenate" title="typing.Concatenate"><code class="xref py py-class docutils literal notranslate"><span class="pre">Concatenate</span></code></a> provides
 examples of usage in <code class="docutils literal notranslate"><span class="pre">Callable</span></code>.</p>
 </div>
 </section>
@@ -588,7 +592,7 @@ to this is that a list of types can be used to substitute a <a class="reference 
 <p>Furthermore, a generic with only one parameter specification variable will accept
 parameter lists in the forms <code class="docutils literal notranslate"><span class="pre">X[[Type1,</span> <span class="pre">Type2,</span> <span class="pre">...]]</span></code> and also
 <code class="docutils literal notranslate"><span class="pre">X[Type1,</span> <span class="pre">Type2,</span> <span class="pre">...]</span></code> for aesthetic reasons.  Internally, the latter is converted
-to the former and are thus equivalent:</p>
+to the former, so the following are equivalent:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">X</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">P</span><span class="p">]):</span> <span class="o">...</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
@@ -683,7 +687,7 @@ manner. Use <a class="reference internal" href="#typing.Any" title="typing.Any">
 </section>
 <section id="nominal-vs-structural-subtyping">
 <h2>Nominal vs structural subtyping<a class="headerlink" href="#nominal-vs-structural-subtyping" title="本標題的永久連結">¶</a></h2>
-<p>Initially <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> defined Python static type system as using
+<p>Initially <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> defined the Python static type system as using
 <em>nominal subtyping</em>. This means that a class <code class="docutils literal notranslate"><span class="pre">A</span></code> is allowed where
 a class <code class="docutils literal notranslate"><span class="pre">B</span></code> is expected if and only if <code class="docutils literal notranslate"><span class="pre">A</span></code> is a subclass of <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
 <p>This requirement previously also applied to abstract base classes, such as
@@ -940,7 +944,6 @@ callable being passed in:</p>
 
 <span class="k">def</span> <span class="nf">with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">Concatenate</span><span class="p">[</span><span class="n">Lock</span><span class="p">,</span> <span class="n">P</span><span class="p">],</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]:</span>
     <span class="sd">&#39;&#39;&#39;A type-safe decorator which provides a lock.&#39;&#39;&#39;</span>
-    <span class="k">global</span> <span class="n">my_lock</span>
     <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">:</span>
         <span class="c1"># Provide the lock as the first argument.</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">my_lock</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -1112,7 +1115,7 @@ should ignore it and simply treat the type as <code class="docutils literal notr
 <code class="docutils literal notranslate"><span class="pre">no_type_check</span></code> functionality that currently exists in the <code class="docutils literal notranslate"><span class="pre">typing</span></code>
 module which completely disables typechecking annotations on a function
 or a class, the <code class="docutils literal notranslate"><span class="pre">Annotated</span></code> type allows for both static typechecking
-of <code class="docutils literal notranslate"><span class="pre">T</span></code> (e.g., via mypy or Pyre, which can safely ignore <code class="docutils literal notranslate"><span class="pre">x</span></code>)
+of <code class="docutils literal notranslate"><span class="pre">T</span></code> (which can safely ignore <code class="docutils literal notranslate"><span class="pre">x</span></code>)
 together with runtime access to <code class="docutils literal notranslate"><span class="pre">x</span></code> within a specific application.</p>
 <p>Ultimately, the responsibility of how to interpret the annotations (if
 at all) is the responsibility of the tool or library encountering the
@@ -1211,10 +1214,11 @@ as a type guard.  Such a function should use <code class="docutils literal notra
 return type to alert static type checkers to this intention.</p>
 <p>Using  <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">TypeGuard</span></code> tells the static type checker that for a given
 function:</p>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>The return value is a boolean.</p></li>
 <li><p>If the return value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the type of its argument
-is the type inside <code class="docutils literal notranslate"><span class="pre">TypeGuard</span></code>.</p>
+is the type inside <code class="docutils literal notranslate"><span class="pre">TypeGuard</span></code>.</p></li>
+</ol>
 <p>舉例來說：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_str_list</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">TypeGuard</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
     <span class="sd">&#39;&#39;&#39;Determines whether all objects in the list are strings&#39;&#39;&#39;</span>
@@ -1229,8 +1233,6 @@ is the type inside <code class="docutils literal notranslate"><span class="pre">
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not a list of strings!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-</ol>
 <p>If <code class="docutils literal notranslate"><span class="pre">is_str_list</span></code> is a class or instance method, then the type in
 <code class="docutils literal notranslate"><span class="pre">TypeGuard</span></code> maps to the type of the second parameter after <code class="docutils literal notranslate"><span class="pre">cls</span></code> or
 <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
@@ -1428,15 +1430,13 @@ new callable returned by it have inter-dependent type parameters:</p>
 <p>Without <code class="docutils literal notranslate"><span class="pre">ParamSpec</span></code>, the simplest way to annotate this previously was to
 use a <a class="reference internal" href="#typing.TypeVar" title="typing.TypeVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code></a> with bound <code class="docutils literal notranslate"><span class="pre">Callable[...,</span> <span class="pre">Any]</span></code>.  However this
 causes two problems:</p>
-<blockquote>
-<div><ol class="arabic simple">
+<ol class="arabic simple">
 <li><p>The type checker can't type check the <code class="docutils literal notranslate"><span class="pre">inner</span></code> function because
 <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> have to be typed <a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>.</p></li>
 <li><p><a class="reference internal" href="#typing.cast" title="typing.cast"><code class="xref py py-func docutils literal notranslate"><span class="pre">cast()</span></code></a> may be required in the body of the <code class="docutils literal notranslate"><span class="pre">add_logging</span></code>
 decorator when returning the <code class="docutils literal notranslate"><span class="pre">inner</span></code> function, or the static type
 checker must be told to ignore the <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">inner</span></code>.</p></li>
 </ol>
-</div></blockquote>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="typing.ParamSpec.args">
 <span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#typing.ParamSpec.args" title="本定義的永久連結">¶</a></dt>
@@ -1617,7 +1617,7 @@ it impossible to call (instantiate) <a class="reference internal" href="ssl.html
 <p>The resulting class has an extra attribute <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code> giving a
 dict that maps the field names to the field types.  (The field names are in
 the <code class="docutils literal notranslate"><span class="pre">_fields</span></code> attribute and the default values are in the
-<code class="docutils literal notranslate"><span class="pre">_field_defaults</span></code> attribute both of which are part of the namedtuple
+<code class="docutils literal notranslate"><span class="pre">_field_defaults</span></code> attribute, both of which are part of the <a class="reference internal" href="collections.html#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a>
 API.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">NamedTuple</span></code> subclasses can also have docstrings and methods:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
@@ -1697,7 +1697,7 @@ syntactic forms:</p>
 </pre></div>
 </div>
 <p>The functional syntax should also be used when any of the keys are not valid
-<a class="reference internal" href="../reference/lexical_analysis.html#identifiers"><span class="std std-ref">Identifiers and keywords</span></a>, for example because they are keywords or contain hyphens.
+<a class="reference internal" href="../reference/lexical_analysis.html#identifiers"><span class="std std-ref">identifiers</span></a>, for example because they are keywords or contain hyphens.
 Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># raises SyntaxError</span>
 <span class="k">class</span> <span class="nc">Point2D</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
@@ -1735,7 +1735,7 @@ definition:</p>
     <span class="n">z</span><span class="p">:</span> <span class="nb">int</span>
 </pre></div>
 </div>
-<p>A <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> cannot inherit from a non-TypedDict class,
+<p>A <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> cannot inherit from a non-<code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> class,
 notably including <a class="reference internal" href="#typing.Generic" title="typing.Generic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>. For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">X</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
     <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
@@ -2229,7 +2229,7 @@ and <a class="reference internal" href="stdtypes.html#types-genericalias"><span 
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.Hashable">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">Hashable</span></span><a class="headerlink" href="#typing.Hashable" title="本定義的永久連結">¶</a></dt>
-<dd><p>An alias to <a class="reference internal" href="collections.abc.html#collections.abc.Hashable" title="collections.abc.Hashable"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Hashable</span></code></a></p>
+<dd><p>An alias to <a class="reference internal" href="collections.abc.html#collections.abc.Hashable" title="collections.abc.Hashable"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Hashable</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -2245,7 +2245,7 @@ and <a class="reference internal" href="stdtypes.html#types-genericalias"><span 
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.Sized">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">Sized</span></span><a class="headerlink" href="#typing.Sized" title="本定義的永久連結">¶</a></dt>
-<dd><p>An alias to <a class="reference internal" href="collections.abc.html#collections.abc.Sized" title="collections.abc.Sized"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Sized</span></code></a></p>
+<dd><p>An alias to <a class="reference internal" href="collections.abc.html#collections.abc.Sized" title="collections.abc.Sized"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Sized</span></code></a>.</p>
 </dd></dl>
 
 </section>
@@ -2494,7 +2494,7 @@ For example:</p>
         <span class="o">...</span>
 <span class="k">class</span> <span class="nc">Sub</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">done</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># Error reported by type checker</span>
-          <span class="o">...</span>
+        <span class="o">...</span>
 
 <span class="nd">@final</span>
 <span class="k">class</span> <span class="nc">Leaf</span><span class="p">:</span>
@@ -2673,10 +2673,10 @@ interpreter runtime.  Type annotations for local variables are not
 evaluated, so the second annotation does not need to be enclosed in quotes.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code> is used in Python 3.7 or later,
+<p>If <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code> is used,
 annotations are not evaluated at function definition time.
-Instead, they are stored as strings in <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code>,
-This makes it unnecessary to use quotes around the annotation.
+Instead, they are stored as strings in <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code>.
+This makes it unnecessary to use quotes around the annotation
 (see <span class="target" id="index-79"></span><a class="pep reference external" href="https://peps.python.org/pep-0563/"><strong>PEP 563</strong></a>).</p>
 </div>
 <div class="versionadded">
@@ -2827,7 +2827,7 @@ This makes it unnecessary to use quotes around the annotation.
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

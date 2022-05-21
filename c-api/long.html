@@ -200,8 +200,8 @@ just get back a reference to the existing object.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyLong_FromSsize_t">
-<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyLong_FromSsize_t</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="n"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyLong_FromSsize_t" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return a new <a class="reference internal" href="#c.PyLongObject" title="PyLongObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyLongObject</span></code></a> object from a C <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>, or
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyLong_FromSsize_t</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyLong_FromSsize_t" title="本定義的永久連結">¶</a><br /></dt>
+<dd><em class="refcount">Return value: New reference.</em><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Return a new <a class="reference internal" href="#c.PyLongObject" title="PyLongObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyLongObject</span></code></a> object from a C <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>, or
 <code class="docutils literal notranslate"><span class="pre">NULL</span></code> on failure.</p>
 </dd></dl>
 
@@ -341,11 +341,11 @@ exception occurs set <em>*overflow</em> to <code class="docutils literal notrans
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyLong_AsSsize_t">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyLong_AsSsize_t</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pylong</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyLong_AsSsize_t" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p id="index-3">Return a C <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> representation of <em>pylong</em>.  <em>pylong</em> must
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyLong_AsSsize_t</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pylong</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyLong_AsSsize_t" title="本定義的永久連結">¶</a><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p id="index-3">Return a C <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> representation of <em>pylong</em>.  <em>pylong</em> must
 be an instance of <a class="reference internal" href="#c.PyLongObject" title="PyLongObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyLongObject</span></code></a>.</p>
 <p>Raise <a class="reference internal" href="../library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> if the value of <em>pylong</em> is out of range for a
-<code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>.</p>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">-1</span></code> on error.  Use <a class="reference internal" href="exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a> to disambiguate.</p>
 </dd></dl>
 
@@ -539,7 +539,7 @@ with <a class="reference internal" href="#c.PyLong_FromVoidPtr" title="PyLong_Fr
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

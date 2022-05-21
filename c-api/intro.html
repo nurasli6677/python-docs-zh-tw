@@ -630,6 +630,15 @@ describe static tables used to list the functions exported  by a module or the
 data attributes of a new object type, and another is used to describe the value
 of a complex number.  These will  be discussed together with the functions that
 use them.</p>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.Py_ssize_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_ssize_t</span></span></span><a class="headerlink" href="#c.Py_ssize_t" title="本定義的永久連結">¶</a><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>A signed integral type such that <code class="docutils literal notranslate"><span class="pre">sizeof(Py_ssize_t)</span> <span class="pre">==</span> <span class="pre">sizeof(size_t)</span></code>.
+C99 doesn't define such a thing directly (size_t is an unsigned integral type).
+See <span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0353/"><strong>PEP 353</strong></a> for details. <code class="docutils literal notranslate"><span class="pre">PY_SSIZE_T_MAX</span></code> is the largest positive value
+of type <a class="reference internal" href="#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.</p>
+</dd></dl>
+
 </section>
 </section>
 <section id="exceptions">
@@ -639,7 +648,7 @@ handling is required; unhandled exceptions are automatically  propagated to the
 caller, then to the caller's caller, and so on, until they reach the top-level
 interpreter, where they are reported to the  user accompanied by a stack
 traceback.</p>
-<p id="index-15">For C programmers, however, error checking always has to be explicit.  All
+<p id="index-16">For C programmers, however, error checking always has to be explicit.  All
 functions in the Python/C API can raise exceptions, unless an explicit claim is
 made otherwise in a function's documentation.  In general, when a function
 encounters an error, it sets an exception, discards any object references that
@@ -649,7 +658,7 @@ A few functions return a Boolean true/false result, with false indicating an
 error.  Very few functions return no explicit error indicator or have an
 ambiguous return value, and require explicit testing for errors with
 <a class="reference internal" href="exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a>.  These exceptions are always explicitly documented.</p>
-<p id="index-16">Exception state is maintained in per-thread storage (this is  equivalent to
+<p id="index-17">Exception state is maintained in per-thread storage (this is  equivalent to
 using global storage in an unthreaded application).  A  thread can be in one of
 two states: an exception has occurred, or not. The function
 <a class="reference internal" href="exceptions.html#c.PyErr_Occurred" title="PyErr_Occurred"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Occurred()</span></code></a> can be used to check for this: it returns a borrowed
@@ -667,7 +676,7 @@ the last exception being handled by a Python  <a class="reference internal" href
 an exception is being passed on between C functions until it reaches the Python
 bytecode interpreter's  main loop, which takes care of transferring it to
 <code class="docutils literal notranslate"><span class="pre">sys.exc_info()</span></code> and friends.</p>
-<p id="index-17">Note that starting with Python 1.5, the preferred, thread-safe way to access the
+<p id="index-18">Note that starting with Python 1.5, the preferred, thread-safe way to access the
 exception state from Python code is to call the function <a class="reference internal" href="../library/sys.html#sys.exc_info" title="sys.exc_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exc_info()</span></code></a>,
 which returns the per-thread exception state for Python code.  Also, the
 semantics of both ways to access the exception state have changed so that a
@@ -683,7 +692,7 @@ pass the exception state on to its caller.  It  should discard any object
 references that it owns, and return an  error indicator, but it should <em>not</em> set
 another exception --- that would overwrite the exception that was just raised,
 and lose important information about the exact cause of the error.</p>
-<p id="index-18">A simple example of detecting exceptions and passing them on is shown in the
+<p id="index-19">A simple example of detecting exceptions and passing them on is shown in the
 <code class="xref c c-func docutils literal notranslate"><span class="pre">sum_sequence()</span></code> example above.  It so happens that this example doesn't
 need to clean up any owned references when it detects an error.  The following
 example function shows some error cleanup.  First, to remind you why you like
@@ -696,7 +705,7 @@ Python, we show the equivalent Python code:</p>
 <span class="w">    </span><span class="n">dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 </pre></div>
 </div>
-<p id="index-19">Here is the corresponding C code, in all its glory:</p>
+<p id="index-20">Here is the corresponding C code, in all its glory:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"></span>
 <span class="nf">incr_item</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">dict</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">key</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -741,7 +750,7 @@ Python, we show the equivalent Python code:</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<span class="target" id="index-20"></span><p id="index-21">This example represents an endorsed use of the <code class="docutils literal notranslate"><span class="pre">goto</span></code> statement  in C!
+<span class="target" id="index-21"></span><p id="index-22">This example represents an endorsed use of the <code class="docutils literal notranslate"><span class="pre">goto</span></code> statement  in C!
 It illustrates the use of <a class="reference internal" href="exceptions.html#c.PyErr_ExceptionMatches" title="PyErr_ExceptionMatches"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_ExceptionMatches()</span></code></a> and
 <a class="reference internal" href="exceptions.html#c.PyErr_Clear" title="PyErr_Clear"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyErr_Clear()</span></code></a> to handle specific exceptions, and the use of
 <a class="reference internal" href="refcounting.html#c.Py_XDECREF" title="Py_XDECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XDECREF()</span></code></a> to dispose of owned references that may be <code class="docutils literal notranslate"><span class="pre">NULL</span></code> (note the
@@ -757,11 +766,11 @@ the final call made is successful.</p>
 the Python interpreter have to worry about is the initialization, and possibly
 the finalization, of the Python interpreter.  Most functionality of the
 interpreter can only be used after the interpreter has been initialized.</p>
-<p id="index-22">The basic initialization function is <a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a>. This initializes
+<p id="index-23">The basic initialization function is <a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a>. This initializes
 the table of loaded modules, and creates the fundamental modules
 <a class="reference internal" href="../library/builtins.html#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code></a>, <a class="reference internal" href="../library/__main__.html#module-__main__" title="__main__: The environment where top-level code is run. Covers command-line interfaces, import-time behavior, and ``__name__ == '__main__'``."><code class="xref py py-mod docutils literal notranslate"><span class="pre">__main__</span></code></a>, and <a class="reference internal" href="../library/sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a>.  It also
 initializes the module search path (<code class="docutils literal notranslate"><span class="pre">sys.path</span></code>).</p>
-<p id="index-23"><a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a> does not set the &quot;script argument list&quot;  (<code class="docutils literal notranslate"><span class="pre">sys.argv</span></code>).
+<p id="index-24"><a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a> does not set the &quot;script argument list&quot;  (<code class="docutils literal notranslate"><span class="pre">sys.argv</span></code>).
 If this variable is needed by Python code that will be executed later, it must
 be set explicitly with a call to  <code class="docutils literal notranslate"><span class="pre">PySys_SetArgvEx(argc,</span> <span class="pre">argv,</span> <span class="pre">updatepath)</span></code>
 after the call to <a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a>.</p>
@@ -772,22 +781,22 @@ executable, assuming that the Python library is found in a fixed location
 relative to the Python interpreter executable.  In particular, it looks for a
 directory named <code class="file docutils literal notranslate"><span class="pre">lib/python</span><em><span class="pre">X.Y</span></em></code> relative to the parent directory
 where the executable named <code class="file docutils literal notranslate"><span class="pre">python</span></code> is found on the shell command search
-path (the environment variable <span class="target" id="index-24"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>).</p>
+path (the environment variable <span class="target" id="index-25"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>).</p>
 <p>For instance, if the Python executable is found in
 <code class="file docutils literal notranslate"><span class="pre">/usr/local/bin/python</span></code>, it will assume that the libraries are in
 <code class="file docutils literal notranslate"><span class="pre">/usr/local/lib/python</span><em><span class="pre">X.Y</span></em></code>.  (In fact, this particular path is also
 the &quot;fallback&quot; location, used when no executable file named <code class="file docutils literal notranslate"><span class="pre">python</span></code> is
-found along <span class="target" id="index-25"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>.)  The user can override this behavior by setting the
-environment variable <span class="target" id="index-26"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONHOME"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONHOME</span></code></a>, or insert additional directories in
-front of the standard path by setting <span class="target" id="index-27"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a>.</p>
-<p id="index-28">The embedding application can steer the search by calling
+found along <span class="target" id="index-26"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>.)  The user can override this behavior by setting the
+environment variable <span class="target" id="index-27"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONHOME"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONHOME</span></code></a>, or insert additional directories in
+front of the standard path by setting <span class="target" id="index-28"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a>.</p>
+<p id="index-29">The embedding application can steer the search by calling
 <code class="docutils literal notranslate"><span class="pre">Py_SetProgramName(file)</span></code> <em>before</em> calling  <a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a>.  Note that
-<span class="target" id="index-29"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONHOME"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONHOME</span></code></a> still overrides this and <span class="target" id="index-30"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> is still
+<span class="target" id="index-30"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONHOME"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONHOME</span></code></a> still overrides this and <span class="target" id="index-31"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> is still
 inserted in front of the standard path.  An application that requires total
 control has to provide its own implementation of <a class="reference internal" href="init.html#c.Py_GetPath" title="Py_GetPath"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_GetPath()</span></code></a>,
 <a class="reference internal" href="init.html#c.Py_GetPrefix" title="Py_GetPrefix"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_GetPrefix()</span></code></a>, <a class="reference internal" href="init.html#c.Py_GetExecPrefix" title="Py_GetExecPrefix"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_GetExecPrefix()</span></code></a>, and
 <a class="reference internal" href="init.html#c.Py_GetProgramFullPath" title="Py_GetProgramFullPath"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_GetProgramFullPath()</span></code></a> (all defined in <code class="file docutils literal notranslate"><span class="pre">Modules/getpath.c</span></code>).</p>
-<p id="index-31">Sometimes, it is desirable to &quot;uninitialize&quot; Python.  For instance,  the
+<p id="index-32">Sometimes, it is desirable to &quot;uninitialize&quot; Python.  For instance,  the
 application may want to start over (make another call to
 <a class="reference internal" href="init.html#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a>) or the application is simply done with its  use of
 Python and wants to free memory allocated by Python.  This can be accomplished
@@ -944,7 +953,7 @@ for more detailed information.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

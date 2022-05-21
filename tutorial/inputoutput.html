@@ -355,15 +355,25 @@
 </section>
 <section id="reading-and-writing-files">
 <span id="tut-files"></span><h2><span class="section-number">7.2. </span>讀寫檔案<a class="headerlink" href="#reading-and-writing-files" title="本標題的永久連結">¶</a></h2>
-<p id="index-0"><a class="reference internal" href="../library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 回傳一個 <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>，而它最常使用的兩個引數是：<code class="docutils literal notranslate"><span class="pre">open(filename,</span> <span class="pre">mode)</span></code>。</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<p id="index-0"><a class="reference internal" href="../library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> returns a <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>, and is most commonly used with
+two positional arguments and one keyword argument:
+<code class="docutils literal notranslate"><span class="pre">open(filename,</span> <span class="pre">mode,</span> <span class="pre">encoding=None)</span></code></p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>第一個引數是一個包含檔案名稱的字串。第二個引數是另一個字串，包含了描述檔案使用方式的幾個字元。<em>mode</em> 為 <code class="docutils literal notranslate"><span class="pre">'r'</span></code> 時，表示以唯讀模式開啟檔案；為 <code class="docutils literal notranslate"><span class="pre">'w'</span></code> 時，表示以唯寫模式開啟檔案（已存在的同名檔案會被抹除）；為 <code class="docutils literal notranslate"><span class="pre">'a'</span></code> 時，以附加內容為目的開啟檔案，任何寫入檔案的資料會自動被加入到檔案的結尾。<code class="docutils literal notranslate"><span class="pre">'r+'</span></code> 可以開啟檔案並進行讀取和寫入。<em>mode</em> 引數是選擇性的，若省略時會預設為 <code class="docutils literal notranslate"><span class="pre">'r'</span></code>。</p>
-<p>通常，檔案以 <em class="dfn">text mode</em> 開啟，意即，從檔案中讀取或寫入字串時，都以特定編碼方式進行編碼。如未指定編碼方式，則預設值會取決於系統平台（見 <a class="reference internal" href="../library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>）。在 mode 加上 <code class="docutils literal notranslate"><span class="pre">'b'</span></code> 會以 <em class="dfn">binary mode</em> 開啟檔案：此時，資料以位元組串物件 (bytes object) 的形式被讀寫。此模式應該使用於所有不含文字的檔案。</p>
+<p>Normally, files are opened in <em class="dfn">text mode</em>, that means, you read and write
+strings from and to the file, which are encoded in a specific <em>encoding</em>.
+If <em>encoding</em> is not specified, the default is platform dependent
+(see <a class="reference internal" href="../library/functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>).
+Because UTF-8 is the modern de-facto standard, <code class="docutils literal notranslate"><span class="pre">encoding=&quot;utf-8&quot;</span></code> is
+recommended unless you know that you need to use a different encoding.
+Appending a <code class="docutils literal notranslate"><span class="pre">'b'</span></code> to the mode opens the file in <em class="dfn">binary mode</em>.
+Binary mode data is read and written as <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> objects.
+You can not specify <em>encoding</em> when opening file in binary mode.</p>
 <p>在文字模式 (text mode) 下，讀取時會預設把平台特定的行尾符號（Unix 上為 <code class="docutils literal notranslate"><span class="pre">\n</span></code>，Windows 上為 <code class="docutils literal notranslate"><span class="pre">\r\n</span></code>）轉換為 <code class="docutils literal notranslate"><span class="pre">\n</span></code>。在文字模式下寫入時，預設會把 <code class="docutils literal notranslate"><span class="pre">\n</span></code> 出現之處轉換回平台特定的行尾符號。這種在幕後對檔案資料的修改方式對文字檔案來說沒有問題，但會毀壞像是 <code class="file docutils literal notranslate"><span class="pre">JPEG</span></code> 或 <code class="file docutils literal notranslate"><span class="pre">EXE</span></code> 檔案中的二進制資料。在讀寫此類檔案時，注意一定要使用二進制模式。</p>
 <p>在處理檔案物件時，使用 <a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> 關鍵字是個好習慣。優點是，當它的套件結束後，即使在某個時刻引發了例外，檔案仍會正確地被關閉。使用 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code> 也比寫等效的 <a class="reference internal" href="../reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a>-<a class="reference internal" href="../reference/compound_stmts.html#finally"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code></a> 區塊，來得簡短許多：</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">read_data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># We can check that the file has been automatically closed.</span>
@@ -461,9 +471,15 @@
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>若 <code class="docutils literal notranslate"><span class="pre">f</span></code> 是一個已開啟、可讀取的 <a class="reference internal" href="../glossary.html#term-text-file"><span class="xref std std-term">text file</span></a> 物件，要再次解碼物件的話：</p>
+<p>To decode the object again, if <code class="docutils literal notranslate"><span class="pre">f</span></code> is a <a class="reference internal" href="../glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a> or
+<a class="reference internal" href="../glossary.html#term-text-file"><span class="xref std std-term">text file</span></a> object which has been opened for reading:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>JSON files must be encoded in UTF-8. Use <code class="docutils literal notranslate"><span class="pre">encoding=&quot;utf-8&quot;</span></code> when opening
+JSON file as a <a class="reference internal" href="../glossary.html#term-text-file"><span class="xref std std-term">text file</span></a> for both of reading and writing.</p>
 </div>
 <p>這種簡單的序列化技術可以處理 list 和 dictionary，但要在 JSON 中序列化任意的 class（類別）實例，則需要一些額外的工作。<a class="reference internal" href="../library/json.html#module-json" title="json: Encode and decode the JSON format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code></a> 模組的參考資料包含對此的說明。</p>
 <div class="admonition seealso">
@@ -590,7 +606,7 @@
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

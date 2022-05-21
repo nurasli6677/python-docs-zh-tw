@@ -159,8 +159,10 @@ according to the rules used by the Unix shell, although results are returned in
 arbitrary order.  No tilde expansion is done, but <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, and character
 ranges expressed with <code class="docutils literal notranslate"><span class="pre">[]</span></code> will be correctly matched.  This is done by using
 the <a class="reference internal" href="os.html#os.scandir" title="os.scandir"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a> and <a class="reference internal" href="fnmatch.html#fnmatch.fnmatch" title="fnmatch.fnmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">fnmatch.fnmatch()</span></code></a> functions in concert, and
-not by actually invoking a subshell.  Note that unlike <a class="reference internal" href="fnmatch.html#fnmatch.fnmatch" title="fnmatch.fnmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">fnmatch.fnmatch()</span></code></a>,
-<a class="reference internal" href="#module-glob" title="glob: Unix shell style pathname pattern expansion."><code class="xref py py-mod docutils literal notranslate"><span class="pre">glob</span></code></a> treats filenames beginning with a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) as special cases.
+not by actually invoking a subshell.</p>
+<p>Note that files beginning with a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) can only be matched by
+patterns that also start with a dot,
+unlike <a class="reference internal" href="fnmatch.html#fnmatch.fnmatch" title="fnmatch.fnmatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">fnmatch.fnmatch()</span></code></a> or <a class="reference internal" href="pathlib.html#pathlib.Path.glob" title="pathlib.Path.glob"><code class="xref py py-func docutils literal notranslate"><span class="pre">pathlib.Path.glob()</span></code></a>.
 (For tilde and shell variable expansion, use <a class="reference internal" href="os.path.html#os.path.expanduser" title="os.path.expanduser"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.expanduser()</span></code></a> and
 <a class="reference internal" href="os.path.html#os.path.expandvars" title="os.path.expandvars"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.expandvars()</span></code></a>.)</p>
 <p>For a literal match, wrap the meta-characters in brackets.
@@ -365,7 +367,7 @@ default. For example, consider a directory containing <code class="file docutils
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -250,10 +250,20 @@ before decrementing its reference count.</p>
 count of an object that might be traversed during garbage collection.</p>
 </dd></dl>
 
-<p>The following functions are for runtime dynamic embedding of Python:
-<code class="docutils literal notranslate"><span class="pre">Py_IncRef(PyObject</span> <span class="pre">*o)</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_DecRef(PyObject</span> <span class="pre">*o)</span></code>. They are
-simply exported function versions of <a class="reference internal" href="#c.Py_XINCREF" title="Py_XINCREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XINCREF()</span></code></a> and
-<a class="reference internal" href="#c.Py_XDECREF" title="Py_XDECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XDECREF()</span></code></a>, respectively.</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.Py_IncRef">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_IncRef</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_IncRef" title="本定義的永久連結">¶</a><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Increment the reference count for object <em>o</em>. A function version of <a class="reference internal" href="#c.Py_XINCREF" title="Py_XINCREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XINCREF()</span></code></a>.
+It can be used for runtime dynamic embedding of Python.</p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.Py_DecRef">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_DecRef</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_DecRef" title="本定義的永久連結">¶</a><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Decrement the reference count for object <em>o</em>. A function version of <a class="reference internal" href="#c.Py_XDECREF" title="Py_XDECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_XDECREF()</span></code></a>.
+It can be used for runtime dynamic embedding of Python.</p>
+</dd></dl>
+
 <p>The following functions or macros are only for use within the interpreter core:
 <code class="xref c c-func docutils literal notranslate"><span class="pre">_Py_Dealloc()</span></code>, <code class="xref c c-func docutils literal notranslate"><span class="pre">_Py_ForgetReference()</span></code>, <code class="xref c c-func docutils literal notranslate"><span class="pre">_Py_NewReference()</span></code>,
 as well as the global variable <code class="xref c c-data docutils literal notranslate"><span class="pre">_Py_RefTotal</span></code>.</p>
@@ -353,7 +363,7 @@ as well as the global variable <code class="xref c c-data docutils literal notra
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

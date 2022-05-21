@@ -394,7 +394,7 @@ shape of C-contiguous arrays.</p></li>
 <li><p>Multi-dimensional list representations are supported for any array type.</p></li>
 <li><p>Multi-dimensional comparisons are supported for any array type.</p></li>
 <li><p>One-dimensional memoryviews of hashable (read-only) types with formats B,
-b or c are now hashable.  (Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue13411">bpo-13411</a>.)</p></li>
+b or c are now hashable.  (Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13411">bpo-13411</a>.)</p></li>
 <li><p>Arbitrary slicing of any 1-D arrays type is supported. For example, it
 is now possible to reverse a memoryview in O(1) by using a negative step.</p></li>
 </ul>
@@ -415,7 +415,7 @@ are still permitted, but will always compare as unequal, regardless
 of view contents.</p></li>
 <li><p>For further changes see <a class="reference internal" href="#build-and-c-api-changes">Build and C API Changes</a> and <a class="reference internal" href="#porting-c-code">Porting C code</a>.</p></li>
 </ul>
-<p>(Contributed by Stefan Krah in <a class="reference external" href="https://bugs.python.org/issue10181">bpo-10181</a>.)</p>
+<p>(Contributed by Stefan Krah in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10181">bpo-10181</a>.)</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <p><span class="target" id="index-40"></span><a class="pep reference external" href="https://peps.python.org/pep-3118/"><strong>PEP 3118</strong></a> - 修訂緩衝協定</p>
@@ -460,7 +460,7 @@ non-BMP code points.</p></li>
 <li><p>The value of <a class="reference internal" href="../library/sys.html#sys.maxunicode" title="sys.maxunicode"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.maxunicode</span></code></a> is now always <code class="docutils literal notranslate"><span class="pre">1114111</span></code> (<code class="docutils literal notranslate"><span class="pre">0x10FFFF</span></code>
 in hexadecimal).  The <code class="xref c c-func docutils literal notranslate"><span class="pre">PyUnicode_GetMax()</span></code> function still returns
 either <code class="docutils literal notranslate"><span class="pre">0xFFFF</span></code> or <code class="docutils literal notranslate"><span class="pre">0x10FFFF</span></code> for backward compatibility, and it should
-not be used with the new Unicode API (see <a class="reference external" href="https://bugs.python.org/issue13054">bpo-13054</a>).</p></li>
+not be used with the new Unicode API (see <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13054">bpo-13054</a>).</p></li>
 <li><p>The <code class="file docutils literal notranslate"><span class="pre">./configure</span></code> flag <code class="docutils literal notranslate"><span class="pre">--with-wide-unicode</span></code> has been removed.</p></li>
 </ul>
 </section>
@@ -510,7 +510,7 @@ Python 2 is also installed, or <code class="docutils literal notranslate"><span 
 Python version when a more recent version is installed).</p>
 <p>In addition to the launcher, the Windows installer now includes an
 option to add the newly installed Python to the system PATH.  (Contributed
-by Brian Curtin in <a class="reference external" href="https://bugs.python.org/issue3561">bpo-3561</a>.)</p>
+by Brian Curtin in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=3561">bpo-3561</a>.)</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
@@ -868,10 +868,10 @@ through normal attribute access.</p>
 </section>
 <section id="using-importlib-as-the-implementation-of-import">
 <span id="importlib"></span><h2>Using importlib as the Implementation of Import<a class="headerlink" href="#using-importlib-as-the-implementation-of-import" title="本標題的永久連結">¶</a></h2>
-<p><a class="reference external" href="https://bugs.python.org/issue2377">bpo-2377</a> - Replace __import__ w/ importlib.__import__
-<a class="reference external" href="https://bugs.python.org/issue13959">bpo-13959</a> - Re-implement parts of <a class="reference internal" href="../library/imp.html#module-imp" title="imp: Access the implementation of the import statement.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code></a> in pure Python
-<a class="reference external" href="https://bugs.python.org/issue14605">bpo-14605</a> - Make import machinery explicit
-<a class="reference external" href="https://bugs.python.org/issue14646">bpo-14646</a> - Require loaders set __loader__ and __package__</p>
+<p><a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=2377">bpo-2377</a> - Replace __import__ w/ importlib.__import__
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13959">bpo-13959</a> - Re-implement parts of <a class="reference internal" href="../library/imp.html#module-imp" title="imp: Access the implementation of the import statement.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code></a> in pure Python
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14605">bpo-14605</a> - Make import machinery explicit
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14646">bpo-14646</a> - Require loaders set __loader__ and __package__</p>
 <p>The <a class="reference internal" href="../library/functions.html#import__" title="__import__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__import__()</span></code></a> function is now powered by <a class="reference internal" href="../library/importlib.html#importlib.__import__" title="importlib.__import__"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.__import__()</span></code></a>.
 This work leads to the completion of &quot;phase 2&quot; of <span class="target" id="index-20"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a>. There are
 multiple benefits to this change. First, it has allowed for more of the
@@ -949,30 +949,30 @@ in the <a class="reference internal" href="#porting-python-code">Porting Python 
 <li><p>Added support for Unicode name aliases and named sequences.
 Both <a class="reference internal" href="../library/unicodedata.html#unicodedata.lookup" title="unicodedata.lookup"><code class="xref py py-func docutils literal notranslate"><span class="pre">unicodedata.lookup()</span></code></a> and <code class="docutils literal notranslate"><span class="pre">'\N{...}'</span></code> now resolve name aliases,
 and <a class="reference internal" href="../library/unicodedata.html#unicodedata.lookup" title="unicodedata.lookup"><code class="xref py py-func docutils literal notranslate"><span class="pre">unicodedata.lookup()</span></code></a> resolves named sequences too.</p>
-<p>(Contributed by Ezio Melotti in <a class="reference external" href="https://bugs.python.org/issue12753">bpo-12753</a>.)</p>
+<p>(Contributed by Ezio Melotti in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12753">bpo-12753</a>.)</p>
 </li>
 <li><p>Unicode database updated to UCD version 6.1.0</p></li>
 <li><p>Equality comparisons on <a class="reference internal" href="../library/stdtypes.html#range" title="range"><code class="xref py py-func docutils literal notranslate"><span class="pre">range()</span></code></a> objects now return a result reflecting
 the equality of the underlying sequences generated by those range objects.
-(<a class="reference external" href="https://bugs.python.org/issue13201">bpo-13201</a>)</p></li>
+(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13201">bpo-13201</a>)</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">count()</span></code>, <code class="docutils literal notranslate"><span class="pre">find()</span></code>, <code class="docutils literal notranslate"><span class="pre">rfind()</span></code>, <code class="docutils literal notranslate"><span class="pre">index()</span></code> and <code class="docutils literal notranslate"><span class="pre">rindex()</span></code>
 methods of <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> objects now accept an
 integer between 0 and 255 as their first argument.</p>
-<p>(Contributed by Petri Lehtinen in <a class="reference external" href="https://bugs.python.org/issue12170">bpo-12170</a>.)</p>
+<p>(Contributed by Petri Lehtinen in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12170">bpo-12170</a>.)</p>
 </li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">rjust()</span></code>, <code class="docutils literal notranslate"><span class="pre">ljust()</span></code>, and <code class="docutils literal notranslate"><span class="pre">center()</span></code> methods of <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
 and <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> now accept a <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> for the <code class="docutils literal notranslate"><span class="pre">fill</span></code>
-argument.  (Contributed by Petri Lehtinen in <a class="reference external" href="https://bugs.python.org/issue12380">bpo-12380</a>.)</p></li>
+argument.  (Contributed by Petri Lehtinen in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12380">bpo-12380</a>.)</p></li>
 <li><p>New methods have been added to <a class="reference internal" href="../library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> and <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>:
-<code class="docutils literal notranslate"><span class="pre">copy()</span></code> and <code class="docutils literal notranslate"><span class="pre">clear()</span></code> (<a class="reference external" href="https://bugs.python.org/issue10516">bpo-10516</a>).  Consequently,
+<code class="docutils literal notranslate"><span class="pre">copy()</span></code> and <code class="docutils literal notranslate"><span class="pre">clear()</span></code> (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10516">bpo-10516</a>).  Consequently,
 <a class="reference internal" href="../library/collections.abc.html#collections.abc.MutableSequence" title="collections.abc.MutableSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">MutableSequence</span></code></a> now also defines a
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code> method (<a class="reference external" href="https://bugs.python.org/issue11388">bpo-11388</a>).</p></li>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code> method (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11388">bpo-11388</a>).</p></li>
 <li><p>Raw bytes literals can now be written <code class="docutils literal notranslate"><span class="pre">rb&quot;...&quot;</span></code> as well as <code class="docutils literal notranslate"><span class="pre">br&quot;...&quot;</span></code>.</p>
-<p>(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue13748">bpo-13748</a>.)</p>
+<p>(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13748">bpo-13748</a>.)</p>
 </li>
 <li><p><a class="reference internal" href="../library/stdtypes.html#dict.setdefault" title="dict.setdefault"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.setdefault()</span></code></a> now does only one lookup for the given key, making
 it atomic when used with built-in types.</p>
-<p>(Contributed by Filip Gruszczyński in <a class="reference external" href="https://bugs.python.org/issue13521">bpo-13521</a>.)</p>
+<p>(Contributed by Filip Gruszczyński in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13521">bpo-13521</a>.)</p>
 </li>
 <li><p>The error messages produced when a function call does not match the function
 signature have been significantly improved.</p>
@@ -991,7 +991,7 @@ Clumsy workarounds were sometimes employed, such as the
 serializes importation of a given module from multiple threads (preventing
 the exposure of incompletely initialized modules), while eliminating the
 aforementioned annoyances.</p>
-<p>(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue9260">bpo-9260</a>.)</p>
+<p>(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=9260">bpo-9260</a>.)</p>
 </section>
 <section id="builtin-functions-and-types">
 <h2>Builtin functions and types<a class="headerlink" href="#builtin-functions-and-types" title="本標題的永久連結">¶</a></h2>
@@ -1011,7 +1011,7 @@ matching. For example, <code class="docutils literal notranslate"><span class="p
 <li><p>The sequence documentation has been substantially rewritten to better
 explain the binary/text sequence distinction and to provide specific
 documentation sections for the individual builtin sequence types
-(<a class="reference external" href="https://bugs.python.org/issue4966">bpo-4966</a>).</p></li>
+(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=4966">bpo-4966</a>).</p></li>
 </ul>
 </section>
 <section id="new-modules">
@@ -1050,7 +1050,7 @@ an IP address associated with a specific IP subnet).</p>
 <p>The newly-added <a class="reference internal" href="../library/lzma.html#module-lzma" title="lzma: A Python wrapper for the liblzma compression library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">lzma</span></code></a> module provides data compression and decompression
 using the LZMA algorithm, including support for the <code class="docutils literal notranslate"><span class="pre">.xz</span></code> and <code class="docutils literal notranslate"><span class="pre">.lzma</span></code>
 file formats.</p>
-<p>(Contributed by Nadeem Vawda and Per Øyvind Karlsen in <a class="reference external" href="https://bugs.python.org/issue6715">bpo-6715</a>.)</p>
+<p>(Contributed by Nadeem Vawda and Per Øyvind Karlsen in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=6715">bpo-6715</a>.)</p>
 </section>
 </section>
 <section id="improved-modules">
@@ -1071,27 +1071,27 @@ with <a class="reference internal" href="../library/abc.html#abc.abstractmethod"
 <a class="reference internal" href="../library/functions.html#staticmethod" title="staticmethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">staticmethod</span></code></a> with <a class="reference internal" href="../library/abc.html#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">abc.abstractmethod()</span></code></a> instead.</p></li>
 </ul>
 </div></blockquote>
-<p>(Contributed by Darren Dale in <a class="reference external" href="https://bugs.python.org/issue11610">bpo-11610</a>.)</p>
+<p>(Contributed by Darren Dale in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11610">bpo-11610</a>.)</p>
 <p><a class="reference internal" href="../library/abc.html#abc.ABCMeta.register" title="abc.ABCMeta.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">abc.ABCMeta.register()</span></code></a> now returns the registered subclass, which means
-it can now be used as a class decorator (<a class="reference external" href="https://bugs.python.org/issue10868">bpo-10868</a>).</p>
+it can now be used as a class decorator (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10868">bpo-10868</a>).</p>
 </section>
 <section id="array">
 <h3>array<a class="headerlink" href="#array" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/array.html#module-array" title="array: Space efficient arrays of uniformly typed numeric values."><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> module supports the <span class="xref c c-texpr"><span class="kt">long</span><span class="w"> </span><span class="kt">long</span></span> type using <code class="docutils literal notranslate"><span class="pre">q</span></code> and
 <code class="docutils literal notranslate"><span class="pre">Q</span></code> type codes.</p>
-<p>(Contributed by Oren Tirosh and Hirokazu Yamamoto in <a class="reference external" href="https://bugs.python.org/issue1172711">bpo-1172711</a>.)</p>
+<p>(Contributed by Oren Tirosh and Hirokazu Yamamoto in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1172711">bpo-1172711</a>.)</p>
 </section>
 <section id="base64">
 <h3>base64<a class="headerlink" href="#base64" title="本標題的永久連結">¶</a></h3>
 <p>ASCII-only Unicode strings are now accepted by the decoding functions of the
 <a class="reference internal" href="../library/base64.html#module-base64" title="base64: RFC 4648: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a> modern interface. For example, <code class="docutils literal notranslate"><span class="pre">base64.b64decode('YWJj')</span></code>
-returns <code class="docutils literal notranslate"><span class="pre">b'abc'</span></code>.  (Contributed by Catalin Iacob in <a class="reference external" href="https://bugs.python.org/issue13641">bpo-13641</a>.)</p>
+returns <code class="docutils literal notranslate"><span class="pre">b'abc'</span></code>.  (Contributed by Catalin Iacob in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13641">bpo-13641</a>.)</p>
 </section>
 <section id="binascii">
 <h3>binascii<a class="headerlink" href="#binascii" title="本標題的永久連結">¶</a></h3>
 <p>In addition to the binary objects they normally accept, the <code class="docutils literal notranslate"><span class="pre">a2b_</span></code> functions
 now all also accept ASCII-only strings as input.  (Contributed by Antoine
-Pitrou in <a class="reference external" href="https://bugs.python.org/issue13637">bpo-13637</a>.)</p>
+Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13637">bpo-13637</a>.)</p>
 </section>
 <section id="bz2">
 <h3>bz2<a class="headerlink" href="#bz2" title="本標題的永久連結">¶</a></h3>
@@ -1102,13 +1102,13 @@ new features have been added:</p>
 text mode.</p></li>
 <li><p><a class="reference internal" href="../library/bz2.html#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">bz2.BZ2File</span></code></a> can now read from and write to arbitrary file-like
 objects, by means of its constructor's <em>fileobj</em> argument.</p>
-<p>(Contributed by Nadeem Vawda in <a class="reference external" href="https://bugs.python.org/issue5863">bpo-5863</a>.)</p>
+<p>(Contributed by Nadeem Vawda in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=5863">bpo-5863</a>.)</p>
 </li>
 <li><p><a class="reference internal" href="../library/bz2.html#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">bz2.BZ2File</span></code></a> and <a class="reference internal" href="../library/bz2.html#bz2.decompress" title="bz2.decompress"><code class="xref py py-func docutils literal notranslate"><span class="pre">bz2.decompress()</span></code></a> can now decompress
 multi-stream inputs (such as those produced by the <strong class="program">pbzip2</strong> tool).
 <a class="reference internal" href="../library/bz2.html#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">bz2.BZ2File</span></code></a> can now also be used to create this type of file, using
 the <code class="docutils literal notranslate"><span class="pre">'a'</span></code> (append) mode.</p>
-<p>(Contributed by Nir Aides in <a class="reference external" href="https://bugs.python.org/issue1625">bpo-1625</a>.)</p>
+<p>(Contributed by Nir Aides in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1625">bpo-1625</a>.)</p>
 </li>
 <li><p><a class="reference internal" href="../library/bz2.html#bz2.BZ2File" title="bz2.BZ2File"><code class="xref py py-class docutils literal notranslate"><span class="pre">bz2.BZ2File</span></code></a> now implements all of the <a class="reference internal" href="../library/io.html#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedIOBase</span></code></a> API,
 except for the <code class="xref py py-meth docutils literal notranslate"><span class="pre">detach()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">truncate()</span></code> methods.</p></li>
@@ -1120,14 +1120,14 @@ except for the <code class="xref py py-meth docutils literal notranslate"><span 
 <code class="docutils literal notranslate"><span class="pre">replace</span></code> and <code class="docutils literal notranslate"><span class="pre">ignore</span></code> error handlers on all Windows versions.  The
 <a class="reference internal" href="../library/codecs.html#module-encodings.mbcs" title="encodings.mbcs: Windows ANSI codepage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mbcs</span></code></a> codec now supports all error handlers, instead of only
 <code class="docutils literal notranslate"><span class="pre">replace</span></code> to encode and <code class="docutils literal notranslate"><span class="pre">ignore</span></code> to decode.</p>
-<p>A new Windows-only codec has been added: <code class="docutils literal notranslate"><span class="pre">cp65001</span></code> (<a class="reference external" href="https://bugs.python.org/issue13216">bpo-13216</a>). It is the
+<p>A new Windows-only codec has been added: <code class="docutils literal notranslate"><span class="pre">cp65001</span></code> (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13216">bpo-13216</a>). It is the
 Windows code page 65001 (Windows UTF-8, <code class="docutils literal notranslate"><span class="pre">CP_UTF8</span></code>).  For example, it is used
 by <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code> if the console output code page is set to cp65001 (e.g., using
 <code class="docutils literal notranslate"><span class="pre">chcp</span> <span class="pre">65001</span></code> command).</p>
 <p>Multibyte CJK decoders now resynchronize faster.  They only ignore the first
 byte of an invalid byte sequence. For example, <code class="docutils literal notranslate"><span class="pre">b'\xff\n'.decode('gb2312',</span>
 <span class="pre">'replace')</span></code> now returns a <code class="docutils literal notranslate"><span class="pre">\n</span></code> after the replacement character.</p>
-<p>(<a class="reference external" href="https://bugs.python.org/issue12016">bpo-12016</a>)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12016">bpo-12016</a>)</p>
 <p>Incremental CJK codec encoders are no longer reset at each call to their
 encode() methods. For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">codecs</span>
@@ -1138,21 +1138,21 @@ encode() methods. For example:</p>
 </div>
 <p>This example gives <code class="docutils literal notranslate"><span class="pre">b'~{Np~}~{J)~}~{l6~}~{HK~}~{!#~}</span> <span class="pre">Bye.'</span></code> with older Python
 versions.</p>
-<p>(<a class="reference external" href="https://bugs.python.org/issue12100">bpo-12100</a>)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12100">bpo-12100</a>)</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">unicode_internal</span></code> codec has been deprecated.</p>
 </section>
 <section id="collections">
 <h3>collections<a class="headerlink" href="#collections" title="本標題的永久連結">¶</a></h3>
 <p>Addition of a new <a class="reference internal" href="../library/collections.html#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> class to allow treating a
 number of mappings as a single unit.  (Written by Raymond Hettinger for
-<a class="reference external" href="https://bugs.python.org/issue11089">bpo-11089</a>, made public in <a class="reference external" href="https://bugs.python.org/issue11297">bpo-11297</a>.)</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11089">bpo-11089</a>, made public in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11297">bpo-11297</a>.)</p>
 <p>The abstract base classes have been moved in a new <a class="reference internal" href="../library/collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a>
 module, to better differentiate between the abstract and the concrete
 collections classes.  Aliases for ABCs are still present in the
-<a class="reference internal" href="../library/collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> module to preserve existing imports.  (<a class="reference external" href="https://bugs.python.org/issue11085">bpo-11085</a>)</p>
+<a class="reference internal" href="../library/collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> module to preserve existing imports.  (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11085">bpo-11085</a>)</p>
 <p>The <a class="reference internal" href="../library/collections.html#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> class now supports the unary <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code>
 operators, as well as the in-place operators <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">|=</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">&amp;=</span></code>.  (Contributed by Raymond Hettinger in <a class="reference external" href="https://bugs.python.org/issue13121">bpo-13121</a>.)</p>
+<code class="docutils literal notranslate"><span class="pre">&amp;=</span></code>.  (Contributed by Raymond Hettinger in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13121">bpo-13121</a>.)</p>
 </section>
 <section id="contextlib">
 <h3>contextlib<a class="headerlink" href="#contextlib" title="本標題的永久連結">¶</a></h3>
@@ -1164,13 +1164,13 @@ regardless of whether context managers acquire their resources in
 their <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method (for example, file objects) or in their
 <code class="docutils literal notranslate"><span class="pre">__enter__</span></code> method (for example, synchronisation objects from the
 <a class="reference internal" href="../library/threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> module).</p>
-<p>(<a class="reference external" href="https://bugs.python.org/issue13585">bpo-13585</a>)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13585">bpo-13585</a>)</p>
 </section>
 <section id="crypt">
 <h3>crypt<a class="headerlink" href="#crypt" title="本標題的永久連結">¶</a></h3>
 <p>Addition of salt and modular crypt format (hashing method) and the <a class="reference internal" href="../library/crypt.html#crypt.mksalt" title="crypt.mksalt"><code class="xref py py-func docutils literal notranslate"><span class="pre">mksalt()</span></code></a>
 function to the <a class="reference internal" href="../library/crypt.html#module-crypt" title="crypt: The crypt() function used to check Unix passwords.（已棄用） (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">crypt</span></code></a> module.</p>
-<p>(<a class="reference external" href="https://bugs.python.org/issue10924">bpo-10924</a>)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10924">bpo-10924</a>)</p>
 </section>
 <section id="curses">
 <h3>curses<a class="headerlink" href="#curses" title="本標題的永久連結">¶</a></h3>
@@ -1188,7 +1188,7 @@ push a wide character so the next <a class="reference internal" href="../library
 it</p></li>
 </ul>
 </div></blockquote>
-<p>(Contributed by Iñigo Serna in <a class="reference external" href="https://bugs.python.org/issue6755">bpo-6755</a>.)</p>
+<p>(Contributed by Iñigo Serna in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=6755">bpo-6755</a>.)</p>
 </section>
 <section id="datetime">
 <h3>datetime<a class="headerlink" href="#datetime" title="本標題的永久連結">¶</a></h3>
@@ -1196,7 +1196,7 @@ it</p></li>
 <div><ul class="simple">
 <li><p>Equality comparisons between naive and aware <a class="reference internal" href="../library/datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>
 instances now return <a class="reference internal" href="../library/constants.html#False" title="False"><code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code></a> instead of raising <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>
-(<a class="reference external" href="https://bugs.python.org/issue15006">bpo-15006</a>).</p></li>
+(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15006">bpo-15006</a>).</p></li>
 <li><p>New <a class="reference internal" href="../library/datetime.html#datetime.datetime.timestamp" title="datetime.datetime.timestamp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">datetime.datetime.timestamp()</span></code></a> method: Return POSIX timestamp
 corresponding to the <a class="reference internal" href="../library/datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> instance.</p></li>
 <li><p>The <a class="reference internal" href="../library/datetime.html#datetime.datetime.strftime" title="datetime.datetime.strftime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">datetime.datetime.strftime()</span></code></a> method supports formatting years
@@ -1210,7 +1210,7 @@ timezone.</p></li>
 <section id="decimal">
 <span id="new-decimal"></span><h3>decimal<a class="headerlink" href="#decimal" title="本標題的永久連結">¶</a></h3>
 <dl class="simple">
-<dt><a class="reference external" href="https://bugs.python.org/issue7652">bpo-7652</a> - integrate fast native decimal arithmetic.</dt><dd><p>C-module and libmpdec written by Stefan Krah.</p>
+<dt><a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=7652">bpo-7652</a> - integrate fast native decimal arithmetic.</dt><dd><p>C-module and libmpdec written by Stefan Krah.</p>
 </dd>
 </dl>
 <p>The new C version of the decimal module integrates the high speed libmpdec
@@ -1524,15 +1524,15 @@ local <a class="reference internal" href="../library/datetime.html#datetime.time
 <li><p><a class="reference internal" href="../library/ftplib.html#ftplib.FTP" title="ftplib.FTP"><code class="xref py py-class docutils literal notranslate"><span class="pre">ftplib.FTP</span></code></a> now accepts a <code class="docutils literal notranslate"><span class="pre">source_address</span></code> keyword argument to
 specify the <code class="docutils literal notranslate"><span class="pre">(host,</span> <span class="pre">port)</span></code> to use as the source address in the bind call
 when creating the outgoing socket.  (Contributed by Giampaolo Rodolà
-in <a class="reference external" href="https://bugs.python.org/issue8594">bpo-8594</a>.)</p></li>
+in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8594">bpo-8594</a>.)</p></li>
 <li><p>The <a class="reference internal" href="../library/ftplib.html#ftplib.FTP_TLS" title="ftplib.FTP_TLS"><code class="xref py py-class docutils literal notranslate"><span class="pre">FTP_TLS</span></code></a> class now provides a new
 <a class="reference internal" href="../library/ftplib.html#ftplib.FTP_TLS.ccc" title="ftplib.FTP_TLS.ccc"><code class="xref py py-func docutils literal notranslate"><span class="pre">ccc()</span></code></a> function to revert control channel back to
 plaintext.  This can be useful to take advantage of firewalls that know how
 to handle NAT with non-secure FTP without opening fixed ports.  (Contributed
-by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue12139">bpo-12139</a>.)</p></li>
+by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12139">bpo-12139</a>.)</p></li>
 <li><p>Added <a class="reference internal" href="../library/ftplib.html#ftplib.FTP.mlsd" title="ftplib.FTP.mlsd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.mlsd()</span></code></a> method which provides a parsable directory
 listing format and deprecates <a class="reference internal" href="../library/ftplib.html#ftplib.FTP.nlst" title="ftplib.FTP.nlst"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.nlst()</span></code></a> and
-<a class="reference internal" href="../library/ftplib.html#ftplib.FTP.dir" title="ftplib.FTP.dir"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.dir()</span></code></a>.  (Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue11072">bpo-11072</a>.)</p></li>
+<a class="reference internal" href="../library/ftplib.html#ftplib.FTP.dir" title="ftplib.FTP.dir"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.dir()</span></code></a>.  (Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11072">bpo-11072</a>.)</p></li>
 </ul>
 </section>
 <section id="functools">
@@ -1540,7 +1540,7 @@ listing format and deprecates <a class="reference internal" href="../library/ftp
 <p>The <a class="reference internal" href="../library/functools.html#functools.lru_cache" title="functools.lru_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.lru_cache()</span></code></a> decorator now accepts a <code class="docutils literal notranslate"><span class="pre">typed</span></code> keyword
 argument (that defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code> to ensure that it caches values of
 different types that compare equal in separate cache slots.  (Contributed
-by Raymond Hettinger in <a class="reference external" href="https://bugs.python.org/issue13227">bpo-13227</a>.)</p>
+by Raymond Hettinger in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13227">bpo-13227</a>.)</p>
 </section>
 <section id="gc">
 <h3>gc<a class="headerlink" href="#gc" title="本標題的永久連結">¶</a></h3>
@@ -1551,7 +1551,7 @@ before and after collection using the new <a class="reference internal" href="..
 <h3>hmac<a class="headerlink" href="#hmac" title="本標題的永久連結">¶</a></h3>
 <p>A new <a class="reference internal" href="../library/hmac.html#hmac.compare_digest" title="hmac.compare_digest"><code class="xref py py-func docutils literal notranslate"><span class="pre">compare_digest()</span></code></a> function has been added to prevent side
 channel attacks on digests through timing analysis.  (Contributed by Nick
-Coghlan and Christian Heimes in <a class="reference external" href="https://bugs.python.org/issue15061">bpo-15061</a>.)</p>
+Coghlan and Christian Heimes in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15061">bpo-15061</a>.)</p>
 </section>
 <section id="http">
 <h3>http<a class="headerlink" href="#http" title="本標題的永久連結">¶</a></h3>
@@ -1559,13 +1559,13 @@ Coghlan and Christian Heimes in <a class="reference external" href="https://bugs
 them all at once when <a class="reference internal" href="../library/http.server.html#http.server.BaseHTTPRequestHandler.end_headers" title="http.server.BaseHTTPRequestHandler.end_headers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">end_headers()</span></code></a> is
 called.  A new method <a class="reference internal" href="../library/http.server.html#http.server.BaseHTTPRequestHandler.flush_headers" title="http.server.BaseHTTPRequestHandler.flush_headers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush_headers()</span></code></a>
 can be used to directly manage when the accumulated headers are sent.
-(Contributed by Andrew Schaaf in <a class="reference external" href="https://bugs.python.org/issue3709">bpo-3709</a>.)</p>
+(Contributed by Andrew Schaaf in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=3709">bpo-3709</a>.)</p>
 <p><a class="reference internal" href="../library/http.server.html#module-http.server" title="http.server: HTTP server and request handlers."><code class="xref py py-class docutils literal notranslate"><span class="pre">http.server</span></code></a> now produces valid <code class="docutils literal notranslate"><span class="pre">HTML</span> <span class="pre">4.01</span> <span class="pre">strict</span></code> output.
-(Contributed by Ezio Melotti in <a class="reference external" href="https://bugs.python.org/issue13295">bpo-13295</a>.)</p>
+(Contributed by Ezio Melotti in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13295">bpo-13295</a>.)</p>
 <p><a class="reference internal" href="../library/http.client.html#http.client.HTTPResponse" title="http.client.HTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPResponse</span></code></a> now has a
 <a class="reference internal" href="../library/http.client.html#http.client.HTTPResponse.readinto" title="http.client.HTTPResponse.readinto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readinto()</span></code></a> method, which means it can be used
 as an <a class="reference internal" href="../library/io.html#io.RawIOBase" title="io.RawIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.RawIOBase</span></code></a> class.  (Contributed by John Kuhn in
-<a class="reference external" href="https://bugs.python.org/issue13464">bpo-13464</a>.)</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13464">bpo-13464</a>.)</p>
 </section>
 <section id="html">
 <h3>html<a class="headerlink" href="#html" title="本標題的永久連結">¶</a></h3>
@@ -1574,21 +1574,21 @@ raising errors, therefore the <em>strict</em> argument of the constructor and th
 <code class="xref py py-exc docutils literal notranslate"><span class="pre">HTMLParseError</span></code> exception are now deprecated.
 The ability to parse broken markup is the result of a number of bug fixes that
 are also available on the latest bug fix releases of Python 2.7/3.2.
-(Contributed by Ezio Melotti in <a class="reference external" href="https://bugs.python.org/issue15114">bpo-15114</a>, and <a class="reference external" href="https://bugs.python.org/issue14538">bpo-14538</a>,
-<a class="reference external" href="https://bugs.python.org/issue13993">bpo-13993</a>, <a class="reference external" href="https://bugs.python.org/issue13960">bpo-13960</a>, <a class="reference external" href="https://bugs.python.org/issue13358">bpo-13358</a>, <a class="reference external" href="https://bugs.python.org/issue1745761">bpo-1745761</a>,
-<a class="reference external" href="https://bugs.python.org/issue755670">bpo-755670</a>, <a class="reference external" href="https://bugs.python.org/issue13357">bpo-13357</a>, <a class="reference external" href="https://bugs.python.org/issue12629">bpo-12629</a>, <a class="reference external" href="https://bugs.python.org/issue1200313">bpo-1200313</a>,
-<a class="reference external" href="https://bugs.python.org/issue670664">bpo-670664</a>, <a class="reference external" href="https://bugs.python.org/issue13273">bpo-13273</a>, <a class="reference external" href="https://bugs.python.org/issue12888">bpo-12888</a>, <a class="reference external" href="https://bugs.python.org/issue7311">bpo-7311</a>.)</p>
+(Contributed by Ezio Melotti in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15114">bpo-15114</a>, and <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14538">bpo-14538</a>,
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13993">bpo-13993</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13960">bpo-13960</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13358">bpo-13358</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1745761">bpo-1745761</a>,
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=755670">bpo-755670</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13357">bpo-13357</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12629">bpo-12629</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1200313">bpo-1200313</a>,
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=670664">bpo-670664</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13273">bpo-13273</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12888">bpo-12888</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=7311">bpo-7311</a>.)</p>
 <p>A new <a class="reference internal" href="../library/html.entities.html#html.entities.html5" title="html.entities.html5"><code class="xref py py-data docutils literal notranslate"><span class="pre">html5</span></code></a> dictionary that maps HTML5 named character
 references to the equivalent Unicode character(s) (e.g. <code class="docutils literal notranslate"><span class="pre">html5['gt;']</span> <span class="pre">==</span>
 <span class="pre">'&gt;'</span></code>) has been added to the <a class="reference internal" href="../library/html.entities.html#module-html.entities" title="html.entities: Definitions of HTML general entities."><code class="xref py py-mod docutils literal notranslate"><span class="pre">html.entities</span></code></a> module.  The dictionary is
 now also used by <a class="reference internal" href="../library/html.parser.html#html.parser.HTMLParser" title="html.parser.HTMLParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLParser</span></code></a>.  (Contributed by Ezio
-Melotti in <a class="reference external" href="https://bugs.python.org/issue11113">bpo-11113</a> and <a class="reference external" href="https://bugs.python.org/issue15156">bpo-15156</a>.)</p>
+Melotti in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11113">bpo-11113</a> and <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15156">bpo-15156</a>.)</p>
 </section>
 <section id="imaplib">
 <h3>imaplib<a class="headerlink" href="#imaplib" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/imaplib.html#imaplib.IMAP4_SSL" title="imaplib.IMAP4_SSL"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMAP4_SSL</span></code></a> constructor now accepts an SSLContext
 parameter to control parameters of the secure channel.</p>
-<p>(Contributed by Sijin Joseph in <a class="reference external" href="https://bugs.python.org/issue8808">bpo-8808</a>.)</p>
+<p>(Contributed by Sijin Joseph in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8808">bpo-8808</a>.)</p>
 </section>
 <section id="inspect">
 <h3>inspect<a class="headerlink" href="#inspect" title="本標題的永久連結">¶</a></h3>
@@ -1596,19 +1596,19 @@ parameter to control parameters of the secure channel.</p>
 reports the current binding of all names referenced from the function body and
 where those names were resolved, making it easier to verify correct internal
 state when testing code that relies on stateful closures.</p>
-<p>(Contributed by Meador Inge and Nick Coghlan in <a class="reference external" href="https://bugs.python.org/issue13062">bpo-13062</a>.)</p>
+<p>(Contributed by Meador Inge and Nick Coghlan in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13062">bpo-13062</a>.)</p>
 <p>A new <a class="reference internal" href="../library/inspect.html#inspect.getgeneratorlocals" title="inspect.getgeneratorlocals"><code class="xref py py-func docutils literal notranslate"><span class="pre">getgeneratorlocals()</span></code></a> function has been added. This
 function reports the current binding of local variables in the generator's
 stack frame, making it easier to verify correct internal state when testing
 generators.</p>
-<p>(Contributed by Meador Inge in <a class="reference external" href="https://bugs.python.org/issue15153">bpo-15153</a>.)</p>
+<p>(Contributed by Meador Inge in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15153">bpo-15153</a>.)</p>
 </section>
 <section id="io">
 <h3>io<a class="headerlink" href="#io" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/io.html#io.open" title="io.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function has a new <code class="docutils literal notranslate"><span class="pre">'x'</span></code> mode that can be used to
 exclusively create a new file, and raise a <a class="reference internal" href="../library/exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a> if the file
 already exists. It is based on the C11 'x' mode to fopen().</p>
-<p>(Contributed by David Townshend in <a class="reference external" href="https://bugs.python.org/issue12760">bpo-12760</a>.)</p>
+<p>(Contributed by David Townshend in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12760">bpo-12760</a>.)</p>
 <p>The constructor of the <a class="reference internal" href="../library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextIOWrapper</span></code></a> class has a new
 <em>write_through</em> optional argument. If <em>write_through</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, calls to
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> are guaranteed not to be buffered: any data
@@ -1633,26 +1633,26 @@ daemons it is required while for others it is passed through to the log.</p>
 <h3>math<a class="headerlink" href="#math" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/math.html#module-math" title="math: Mathematical functions (sin() etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a> module has a new function, <a class="reference internal" href="../library/math.html#math.log2" title="math.log2"><code class="xref py py-func docutils literal notranslate"><span class="pre">log2()</span></code></a>,  which returns
 the base-2 logarithm of <em>x</em>.</p>
-<p>(Written by Mark Dickinson in <a class="reference external" href="https://bugs.python.org/issue11888">bpo-11888</a>.)</p>
+<p>(Written by Mark Dickinson in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11888">bpo-11888</a>.)</p>
 </section>
 <section id="mmap">
 <h3>mmap<a class="headerlink" href="#mmap" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/mmap.html#mmap.mmap.read" title="mmap.mmap.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> method is now more compatible with other file-like
 objects: if the argument is omitted or specified as <code class="docutils literal notranslate"><span class="pre">None</span></code>, it returns the
 bytes from the current file position to the end of the mapping.  (Contributed
-by Petri Lehtinen in <a class="reference external" href="https://bugs.python.org/issue12021">bpo-12021</a>.)</p>
+by Petri Lehtinen in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12021">bpo-12021</a>.)</p>
 </section>
 <section id="multiprocessing">
 <h3>multiprocessing<a class="headerlink" href="#multiprocessing" title="本標題的永久連結">¶</a></h3>
 <p>The new <a class="reference internal" href="../library/multiprocessing.html#multiprocessing.connection.wait" title="multiprocessing.connection.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">multiprocessing.connection.wait()</span></code></a> function allows polling
 multiple objects (such as connections, sockets and pipes) with a timeout.
-(Contributed by Richard Oudkerk in <a class="reference external" href="https://bugs.python.org/issue12328">bpo-12328</a>.)</p>
+(Contributed by Richard Oudkerk in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12328">bpo-12328</a>.)</p>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.Connection</span></code> objects can now be transferred over
 multiprocessing connections.
-(Contributed by Richard Oudkerk in <a class="reference external" href="https://bugs.python.org/issue4892">bpo-4892</a>.)</p>
+(Contributed by Richard Oudkerk in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=4892">bpo-4892</a>.)</p>
 <p><a class="reference internal" href="../library/multiprocessing.html#multiprocessing.Process" title="multiprocessing.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.Process</span></code></a> now accepts a <code class="docutils literal notranslate"><span class="pre">daemon</span></code> keyword argument
 to override the default behavior of inheriting the <code class="docutils literal notranslate"><span class="pre">daemon</span></code> flag from
-the parent process (<a class="reference external" href="https://bugs.python.org/issue6064">bpo-6064</a>).</p>
+the parent process (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=6064">bpo-6064</a>).</p>
 <p>New attribute <a class="reference internal" href="../library/multiprocessing.html#multiprocessing.Process.sentinel" title="multiprocessing.Process.sentinel"><code class="xref py py-data docutils literal notranslate"><span class="pre">multiprocessing.Process.sentinel</span></code></a> allows a
 program to wait on multiple <a class="reference internal" href="../library/multiprocessing.html#multiprocessing.Process" title="multiprocessing.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> objects at one
 time using the appropriate OS primitives (for example, <a class="reference internal" href="../library/select.html#module-select" title="select: Wait for I/O completion on multiple streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code></a> on
@@ -1662,7 +1662,7 @@ posix systems).</p>
 <a class="reference internal" href="../library/itertools.html#itertools.starmap" title="itertools.starmap"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.starmap()</span></code></a> equivalents to the existing
 <a class="reference internal" href="../library/multiprocessing.html#multiprocessing.pool.Pool.map" title="multiprocessing.pool.Pool.map"><code class="xref py py-meth docutils literal notranslate"><span class="pre">multiprocessing.pool.Pool.map()</span></code></a> and
 <a class="reference internal" href="../library/multiprocessing.html#multiprocessing.pool.Pool.map_async" title="multiprocessing.pool.Pool.map_async"><code class="xref py py-meth docutils literal notranslate"><span class="pre">map_async()</span></code></a> functions.  (Contributed by Hynek
-Schlawack in <a class="reference external" href="https://bugs.python.org/issue12708">bpo-12708</a>.)</p>
+Schlawack in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12708">bpo-12708</a>.)</p>
 </section>
 <section id="nntplib">
 <h3>nntplib<a class="headerlink" href="#nntplib" title="本標題的永久連結">¶</a></h3>
@@ -1677,7 +1677,7 @@ connection when done:</p>
 <span class="go">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<p>(Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue9795">bpo-9795</a>.)</p>
+<p>(Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=9795">bpo-9795</a>.)</p>
 </section>
 <section id="os">
 <h3>os<a class="headerlink" href="#os" title="本標題的永久連結">¶</a></h3>
@@ -1693,13 +1693,13 @@ the copying of data between the two descriptors is done entirely by the
 kernel, with no copying of data into userspace buffers. <a class="reference internal" href="../library/os.html#os.sendfile" title="os.sendfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">sendfile()</span></code></a>
 can be used to efficiently copy data from a file on disk to a network socket,
 e.g. for downloading a file.</p>
-<p>(Patch submitted by Ross Lagerwall and Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue10882">bpo-10882</a>.)</p>
+<p>(Patch submitted by Ross Lagerwall and Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10882">bpo-10882</a>.)</p>
 </li>
 <li><p>To avoid race conditions like symlink attacks and issues with temporary
 files and directories, it is more reliable (and also faster) to manipulate
 file descriptors instead of file names. Python 3.3 enhances existing functions
-and introduces new functions to work on file descriptors (<a class="reference external" href="https://bugs.python.org/issue4761">bpo-4761</a>,
-<a class="reference external" href="https://bugs.python.org/issue10755">bpo-10755</a> and <a class="reference external" href="https://bugs.python.org/issue14626">bpo-14626</a>).</p>
+and introduces new functions to work on file descriptors (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=4761">bpo-4761</a>,
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10755">bpo-10755</a> and <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14626">bpo-14626</a>).</p>
 <ul class="simple">
 <li><p>The <a class="reference internal" href="../library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module has a new <a class="reference internal" href="../library/os.html#os.fwalk" title="os.fwalk"><code class="xref py py-func docutils literal notranslate"><span class="pre">fwalk()</span></code></a> function similar to
 <a class="reference internal" href="../library/os.html#os.walk" title="os.walk"><code class="xref py py-func docutils literal notranslate"><span class="pre">walk()</span></code></a> except that it also yields file descriptors referring to the
@@ -1729,25 +1729,25 @@ Platform support for this can be checked via the
 <a class="reference internal" href="../library/os.html#os.setpriority" title="os.setpriority"><code class="xref py py-func docutils literal notranslate"><span class="pre">setpriority()</span></code></a>. They can be used to get or set process
 niceness/priority in a fashion similar to <a class="reference internal" href="../library/os.html#os.nice" title="os.nice"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.nice()</span></code></a> but extended to all
 processes instead of just the current one.</p>
-<p>(Patch submitted by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue10784">bpo-10784</a>.)</p>
+<p>(Patch submitted by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10784">bpo-10784</a>.)</p>
 </li>
 <li><p>The new <a class="reference internal" href="../library/os.html#os.replace" title="os.replace"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.replace()</span></code></a> function allows cross-platform renaming of a
 file with overwriting the destination.  With <a class="reference internal" href="../library/os.html#os.rename" title="os.rename"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.rename()</span></code></a>, an existing
 destination file is overwritten under POSIX, but raises an error under
 Windows.
-(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue8828">bpo-8828</a>.)</p></li>
+(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8828">bpo-8828</a>.)</p></li>
 <li><p>The stat family of functions (<a class="reference internal" href="../library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">stat()</span></code></a>, <a class="reference internal" href="../library/os.html#os.fstat" title="os.fstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">fstat()</span></code></a>,
 and <a class="reference internal" href="../library/os.html#os.lstat" title="os.lstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">lstat()</span></code></a>) now support reading a file's timestamps
 with nanosecond precision.  Symmetrically, <a class="reference internal" href="../library/os.html#os.utime" title="os.utime"><code class="xref py py-func docutils literal notranslate"><span class="pre">utime()</span></code></a>
 can now write file timestamps with nanosecond precision.  (Contributed by
-Larry Hastings in <a class="reference external" href="https://bugs.python.org/issue14127">bpo-14127</a>.)</p></li>
+Larry Hastings in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14127">bpo-14127</a>.)</p></li>
 <li><p>The new <a class="reference internal" href="../library/os.html#os.get_terminal_size" title="os.get_terminal_size"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.get_terminal_size()</span></code></a> function queries the size of the
 terminal attached to a file descriptor. See also
 <a class="reference internal" href="../library/shutil.html#shutil.get_terminal_size" title="shutil.get_terminal_size"><code class="xref py py-func docutils literal notranslate"><span class="pre">shutil.get_terminal_size()</span></code></a>.
-(Contributed by Zbigniew Jędrzejewski-Szmek in <a class="reference external" href="https://bugs.python.org/issue13609">bpo-13609</a>.)</p></li>
+(Contributed by Zbigniew Jędrzejewski-Szmek in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13609">bpo-13609</a>.)</p></li>
 </ul>
 <ul class="simple">
-<li><p>New functions to support Linux extended attributes (<a class="reference external" href="https://bugs.python.org/issue12720">bpo-12720</a>):
+<li><p>New functions to support Linux extended attributes (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12720">bpo-12720</a>):
 <a class="reference internal" href="../library/os.html#os.getxattr" title="os.getxattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getxattr()</span></code></a>, <a class="reference internal" href="../library/os.html#os.listxattr" title="os.listxattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">listxattr()</span></code></a>, <a class="reference internal" href="../library/os.html#os.removexattr" title="os.removexattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">removexattr()</span></code></a>,
 <a class="reference internal" href="../library/os.html#os.setxattr" title="os.setxattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">setxattr()</span></code></a>.</p></li>
 <li><p>New interface to the scheduler. These functions
@@ -1780,7 +1780,7 @@ it is at most <em>length</em> bytes in size.</p></li>
 <li><p><a class="reference internal" href="../library/os.html#os.waitid" title="os.waitid"><code class="xref py py-func docutils literal notranslate"><span class="pre">waitid()</span></code></a>: Wait for the completion of one or more child processes.</p></li>
 <li><p><a class="reference internal" href="../library/os.html#os.writev" title="os.writev"><code class="xref py py-func docutils literal notranslate"><span class="pre">writev()</span></code></a>: Write the contents of <em>buffers</em> to a file descriptor,
 where <em>buffers</em> is an arbitrary sequence of buffers.</p></li>
-<li><p><a class="reference internal" href="../library/os.html#os.getgrouplist" title="os.getgrouplist"><code class="xref py py-func docutils literal notranslate"><span class="pre">getgrouplist()</span></code></a> (<a class="reference external" href="https://bugs.python.org/issue9344">bpo-9344</a>): Return list of group ids that
+<li><p><a class="reference internal" href="../library/os.html#os.getgrouplist" title="os.getgrouplist"><code class="xref py py-func docutils literal notranslate"><span class="pre">getgrouplist()</span></code></a> (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=9344">bpo-9344</a>): Return list of group ids that
 specified user belongs to.</p></li>
 </ul>
 </li>
@@ -1794,7 +1794,7 @@ function, such as <code class="docutils literal notranslate"><span class="pre">o
 platforms that support them.   These are for use with the
 <a class="reference internal" href="../library/sys.html#sys.setdlopenflags" title="sys.setdlopenflags"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.setdlopenflags()</span></code></a> function, and supersede the similar constants
 defined in <a class="reference internal" href="../library/ctypes.html#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">DLFCN</span></code>.  (Contributed by Victor Stinner
-in <a class="reference external" href="https://bugs.python.org/issue13226">bpo-13226</a>.)</p></li>
+in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13226">bpo-13226</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/os.html#os.symlink" title="os.symlink"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.symlink()</span></code></a> now accepts (and ignores) the <code class="docutils literal notranslate"><span class="pre">target_is_directory</span></code>
 keyword argument on non-Windows platforms, to ease cross-platform support.</p></li>
 </ul>
@@ -1804,14 +1804,14 @@ keyword argument on non-Windows platforms, to ease cross-platform support.</p></
 <p>Tab-completion is now available not only for command names, but also their
 arguments.  For example, for the <code class="docutils literal notranslate"><span class="pre">break</span></code> command, function and file names
 are completed.</p>
-<p>(Contributed by Georg Brandl in <a class="reference external" href="https://bugs.python.org/issue14210">bpo-14210</a>)</p>
+<p>(Contributed by Georg Brandl in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14210">bpo-14210</a>)</p>
 </section>
 <section id="pickle">
 <h3>pickle<a class="headerlink" href="#pickle" title="本標題的永久連結">¶</a></h3>
 <p><a class="reference internal" href="../library/pickle.html#pickle.Pickler" title="pickle.Pickler"><code class="xref py py-class docutils literal notranslate"><span class="pre">pickle.Pickler</span></code></a> objects now have an optional
 <a class="reference internal" href="../library/pickle.html#pickle.Pickler.dispatch_table" title="pickle.Pickler.dispatch_table"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dispatch_table</span></code></a> attribute allowing per-pickler
 reduction functions to be set.</p>
-<p>(Contributed by Richard Oudkerk in <a class="reference external" href="https://bugs.python.org/issue14166">bpo-14166</a>.)</p>
+<p>(Contributed by Richard Oudkerk in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14166">bpo-14166</a>.)</p>
 </section>
 <section id="pydoc">
 <h3>pydoc<a class="headerlink" href="#pydoc" title="本標題的永久連結">¶</a></h3>
@@ -1822,7 +1822,7 @@ in Python 3.2.</p>
 <section id="re">
 <h3>re<a class="headerlink" href="#re" title="本標題的永久連結">¶</a></h3>
 <p><a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> regular expressions now support <code class="docutils literal notranslate"><span class="pre">\u</span></code> and <code class="docutils literal notranslate"><span class="pre">\U</span></code> escapes.</p>
-<p>(Contributed by Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue3665">bpo-3665</a>.)</p>
+<p>(Contributed by Serhiy Storchaka in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=3665">bpo-3665</a>.)</p>
 </section>
 <section id="sched">
 <h3>sched<a class="headerlink" href="#sched" title="本標題的永久連結">¶</a></h3>
@@ -1831,27 +1831,27 @@ in Python 3.2.</p>
 set to false makes the method execute the scheduled events due to expire
 soonest (if any) and then return immediately.
 This is useful in case you want to use the <a class="reference internal" href="../library/sched.html#sched.scheduler" title="sched.scheduler"><code class="xref py py-class docutils literal notranslate"><span class="pre">scheduler</span></code></a> in
-non-blocking applications.  (Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue13449">bpo-13449</a>.)</p></li>
+non-blocking applications.  (Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13449">bpo-13449</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/sched.html#sched.scheduler" title="sched.scheduler"><code class="xref py py-class docutils literal notranslate"><span class="pre">scheduler</span></code></a> class can now be safely used in multi-threaded
 environments.  (Contributed by Josiah Carlson and Giampaolo Rodolà in
-<a class="reference external" href="https://bugs.python.org/issue8684">bpo-8684</a>.)</p></li>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8684">bpo-8684</a>.)</p></li>
 <li><p><em>timefunc</em> and <em>delayfunct</em> parameters of <a class="reference internal" href="../library/sched.html#sched.scheduler" title="sched.scheduler"><code class="xref py py-class docutils literal notranslate"><span class="pre">scheduler</span></code></a> class
 constructor are now optional and defaults to <a class="reference internal" href="../library/time.html#time.time" title="time.time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.time()</span></code></a> and
 <a class="reference internal" href="../library/time.html#time.sleep" title="time.sleep"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.sleep()</span></code></a> respectively.  (Contributed by Chris Clark in
-<a class="reference external" href="https://bugs.python.org/issue13245">bpo-13245</a>.)</p></li>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13245">bpo-13245</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/sched.html#sched.scheduler.enter" title="sched.scheduler.enter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enter()</span></code></a> and <a class="reference internal" href="../library/sched.html#sched.scheduler.enterabs" title="sched.scheduler.enterabs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enterabs()</span></code></a>
 <em>argument</em> parameter is now optional.  (Contributed by Chris Clark in
-<a class="reference external" href="https://bugs.python.org/issue13245">bpo-13245</a>.)</p></li>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13245">bpo-13245</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/sched.html#sched.scheduler.enter" title="sched.scheduler.enter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enter()</span></code></a> and <a class="reference internal" href="../library/sched.html#sched.scheduler.enterabs" title="sched.scheduler.enterabs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enterabs()</span></code></a>
 now accept a <em>kwargs</em> parameter.  (Contributed by Chris Clark in
-<a class="reference external" href="https://bugs.python.org/issue13245">bpo-13245</a>.)</p></li>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13245">bpo-13245</a>.)</p></li>
 </ul>
 </section>
 <section id="select">
 <h3>select<a class="headerlink" href="#select" title="本標題的永久連結">¶</a></h3>
 <p>Solaris and derivative platforms have a new class <a class="reference internal" href="../library/select.html#select.devpoll" title="select.devpoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">select.devpoll</span></code></a>
 for high performance asynchronous sockets via <code class="file docutils literal notranslate"><span class="pre">/dev/poll</span></code>.
-(Contributed by Jesús Cea Avión in <a class="reference external" href="https://bugs.python.org/issue6397">bpo-6397</a>.)</p>
+(Contributed by Jesús Cea Avión in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=6397">bpo-6397</a>.)</p>
 </section>
 <section id="shlex">
 <h3>shlex<a class="headerlink" href="#shlex" title="本標題的永久連結">¶</a></h3>
@@ -1866,32 +1866,32 @@ that might be otherwise given special meaning by the shell.</p>
 <li><p>New functions:</p>
 <ul>
 <li><p><a class="reference internal" href="../library/shutil.html#shutil.disk_usage" title="shutil.disk_usage"><code class="xref py py-func docutils literal notranslate"><span class="pre">disk_usage()</span></code></a>: provides total, used and free disk space
-statistics.  (Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue12442">bpo-12442</a>.)</p></li>
+statistics.  (Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12442">bpo-12442</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/shutil.html#shutil.chown" title="shutil.chown"><code class="xref py py-func docutils literal notranslate"><span class="pre">chown()</span></code></a>: allows one to change user and/or group of the given
 path also specifying the user/group names and not only their numeric
-ids.  (Contributed by Sandro Tosi in <a class="reference external" href="https://bugs.python.org/issue12191">bpo-12191</a>.)</p></li>
+ids.  (Contributed by Sandro Tosi in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12191">bpo-12191</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/shutil.html#shutil.get_terminal_size" title="shutil.get_terminal_size"><code class="xref py py-func docutils literal notranslate"><span class="pre">shutil.get_terminal_size()</span></code></a>: returns the size of the terminal window
 to which the interpreter is attached.  (Contributed by Zbigniew
-Jędrzejewski-Szmek in <a class="reference external" href="https://bugs.python.org/issue13609">bpo-13609</a>.)</p></li>
+Jędrzejewski-Szmek in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13609">bpo-13609</a>.)</p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="../library/shutil.html#shutil.copy2" title="shutil.copy2"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy2()</span></code></a> and <a class="reference internal" href="../library/shutil.html#shutil.copystat" title="shutil.copystat"><code class="xref py py-func docutils literal notranslate"><span class="pre">copystat()</span></code></a> now preserve file
 timestamps with nanosecond precision on platforms that support it.
 They also preserve file &quot;extended attributes&quot; on Linux.  (Contributed
-by Larry Hastings in <a class="reference external" href="https://bugs.python.org/issue14127">bpo-14127</a> and  <a class="reference external" href="https://bugs.python.org/issue15238">bpo-15238</a>.)</p></li>
+by Larry Hastings in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14127">bpo-14127</a> and  <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15238">bpo-15238</a>.)</p></li>
 <li><p>Several functions now take an optional <code class="docutils literal notranslate"><span class="pre">symlinks</span></code> argument: when that
 parameter is true, symlinks aren't dereferenced and the operation instead
 acts on the symlink itself (or creates one, if relevant).
-(Contributed by Hynek Schlawack in <a class="reference external" href="https://bugs.python.org/issue12715">bpo-12715</a>.)</p></li>
+(Contributed by Hynek Schlawack in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12715">bpo-12715</a>.)</p></li>
 <li><p>When copying files to a different file system, <a class="reference internal" href="../library/shutil.html#shutil.move" title="shutil.move"><code class="xref py py-func docutils literal notranslate"><span class="pre">move()</span></code></a> now
 handles symlinks the way the posix <code class="docutils literal notranslate"><span class="pre">mv</span></code> command does, recreating the
 symlink rather than copying the target file contents.  (Contributed by
-Jonathan Niehof in <a class="reference external" href="https://bugs.python.org/issue9993">bpo-9993</a>.)  <a class="reference internal" href="../library/shutil.html#shutil.move" title="shutil.move"><code class="xref py py-func docutils literal notranslate"><span class="pre">move()</span></code></a> now also returns
+Jonathan Niehof in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=9993">bpo-9993</a>.)  <a class="reference internal" href="../library/shutil.html#shutil.move" title="shutil.move"><code class="xref py py-func docutils literal notranslate"><span class="pre">move()</span></code></a> now also returns
 the <code class="docutils literal notranslate"><span class="pre">dst</span></code> argument as its result.</p></li>
 <li><p><a class="reference internal" href="../library/shutil.html#shutil.rmtree" title="shutil.rmtree"><code class="xref py py-func docutils literal notranslate"><span class="pre">rmtree()</span></code></a> is now resistant to symlink attacks on platforms
 which support the new <code class="docutils literal notranslate"><span class="pre">dir_fd</span></code> parameter in <a class="reference internal" href="../library/os.html#os.open" title="os.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.open()</span></code></a> and
 <a class="reference internal" href="../library/os.html#os.unlink" title="os.unlink"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.unlink()</span></code></a>.  (Contributed by Martin von Löwis and Hynek Schlawack
-in <a class="reference external" href="https://bugs.python.org/issue4489">bpo-4489</a>.)</p></li>
+in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=4489">bpo-4489</a>.)</p></li>
 </ul>
 </section>
 <section id="signal">
@@ -1900,7 +1900,7 @@ in <a class="reference external" href="https://bugs.python.org/issue4489">bpo-44
 <li><p><a class="reference internal" href="../library/signal.html#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> 模組有了新的函式：</p>
 <ul>
 <li><p><a class="reference internal" href="../library/signal.html#signal.pthread_sigmask" title="signal.pthread_sigmask"><code class="xref py py-func docutils literal notranslate"><span class="pre">pthread_sigmask()</span></code></a>: fetch and/or change the signal mask of the
-calling thread (Contributed by Jean-Paul Calderone in <a class="reference external" href="https://bugs.python.org/issue8407">bpo-8407</a>);</p></li>
+calling thread (Contributed by Jean-Paul Calderone in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8407">bpo-8407</a>);</p></li>
 <li><p><a class="reference internal" href="../library/signal.html#signal.pthread_kill" title="signal.pthread_kill"><code class="xref py py-func docutils literal notranslate"><span class="pre">pthread_kill()</span></code></a>: send a signal to a thread;</p></li>
 <li><p><a class="reference internal" href="../library/signal.html#signal.sigpending" title="signal.sigpending"><code class="xref py py-func docutils literal notranslate"><span class="pre">sigpending()</span></code></a>: examine pending functions;</p></li>
 <li><p><a class="reference internal" href="../library/signal.html#signal.sigwait" title="signal.sigwait"><code class="xref py py-func docutils literal notranslate"><span class="pre">sigwait()</span></code></a>: wait a signal;</p></li>
@@ -1924,7 +1924,7 @@ instead of a RuntimeError: OSError has an errno attribute.</p></li>
 if the client initiates the session with an <code class="docutils literal notranslate"><span class="pre">EHLO</span></code> command.</p>
 <p>(Initial <code class="docutils literal notranslate"><span class="pre">ELHO</span></code> support by Alberto Trevino.  Size extension by Juhana
 Jauhiainen.  Substantial additional work on the patch contributed by Michele
-Orrù and Dan Boswell.  <a class="reference external" href="https://bugs.python.org/issue8739">bpo-8739</a>)</p>
+Orrù and Dan Boswell.  <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8739">bpo-8739</a>)</p>
 </section>
 <section id="smtplib">
 <h3>smtplib<a class="headerlink" href="#smtplib" title="本標題的永久連結">¶</a></h3>
@@ -1932,13 +1932,13 @@ Orrù and Dan Boswell.  <a class="reference external" href="https://bugs.python.
 <a class="reference internal" href="../library/smtplib.html#smtplib.LMTP" title="smtplib.LMTP"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMTP</span></code></a> classes now accept a <code class="docutils literal notranslate"><span class="pre">source_address</span></code> keyword argument
 to specify the <code class="docutils literal notranslate"><span class="pre">(host,</span> <span class="pre">port)</span></code> to use as the source address in the bind call
 when creating the outgoing socket.  (Contributed by Paulo Scardine in
-<a class="reference external" href="https://bugs.python.org/issue11281">bpo-11281</a>.)</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11281">bpo-11281</a>.)</p>
 <p><a class="reference internal" href="../library/smtplib.html#smtplib.SMTP" title="smtplib.SMTP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTP</span></code></a> now supports the context management protocol, allowing an
 <code class="docutils literal notranslate"><span class="pre">SMTP</span></code> instance to be used in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement.  (Contributed
-by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue11289">bpo-11289</a>.)</p>
+by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11289">bpo-11289</a>.)</p>
 <p>The <a class="reference internal" href="../library/smtplib.html#smtplib.SMTP_SSL" title="smtplib.SMTP_SSL"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTP_SSL</span></code></a> constructor and the <a class="reference internal" href="../library/smtplib.html#smtplib.SMTP.starttls" title="smtplib.SMTP.starttls"><code class="xref py py-meth docutils literal notranslate"><span class="pre">starttls()</span></code></a>
 method now accept an SSLContext parameter to control parameters of the secure
-channel.  (Contributed by Kasun Herath in <a class="reference external" href="https://bugs.python.org/issue8809">bpo-8809</a>.)</p>
+channel.  (Contributed by Kasun Herath in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8809">bpo-8809</a>.)</p>
 </section>
 <section id="socket">
 <h3>socket<a class="headerlink" href="#socket" title="本標題的永久連結">¶</a></h3>
@@ -1950,22 +1950,22 @@ ancillary data when supported by the underlying platform:</p>
 <li><p><a class="reference internal" href="../library/socket.html#socket.socket.recvmsg" title="socket.socket.recvmsg"><code class="xref py py-func docutils literal notranslate"><span class="pre">recvmsg()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../library/socket.html#socket.socket.recvmsg_into" title="socket.socket.recvmsg_into"><code class="xref py py-func docutils literal notranslate"><span class="pre">recvmsg_into()</span></code></a></p></li>
 </ul>
-<p>(Contributed by David Watson in <a class="reference external" href="https://bugs.python.org/issue6560">bpo-6560</a>, based on an earlier patch by
+<p>(Contributed by David Watson in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=6560">bpo-6560</a>, based on an earlier patch by
 Heiko Wundram)</p>
 </li>
 <li><p>The <a class="reference internal" href="../library/socket.html#socket.socket" title="socket.socket"><code class="xref py py-class docutils literal notranslate"><span class="pre">socket</span></code></a> class now supports the PF_CAN protocol family
 (<a class="reference external" href="https://en.wikipedia.org/wiki/Socketcan">https://en.wikipedia.org/wiki/Socketcan</a>), on Linux
 (<a class="reference external" href="https://lwn.net/Articles/253425">https://lwn.net/Articles/253425</a>).</p>
-<p>(Contributed by Matthias Fuchs, updated by Tiago Gonçalves in <a class="reference external" href="https://bugs.python.org/issue10141">bpo-10141</a>.)</p>
+<p>(Contributed by Matthias Fuchs, updated by Tiago Gonçalves in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10141">bpo-10141</a>.)</p>
 </li>
 <li><p>The <a class="reference internal" href="../library/socket.html#socket.socket" title="socket.socket"><code class="xref py py-class docutils literal notranslate"><span class="pre">socket</span></code></a> class now supports the PF_RDS protocol family
 (<a class="reference external" href="https://en.wikipedia.org/wiki/Reliable_Datagram_Sockets">https://en.wikipedia.org/wiki/Reliable_Datagram_Sockets</a> and
 <a class="reference external" href="https://oss.oracle.com/projects/rds/">https://oss.oracle.com/projects/rds/</a>).</p></li>
 <li><p>The <a class="reference internal" href="../library/socket.html#socket.socket" title="socket.socket"><code class="xref py py-class docutils literal notranslate"><span class="pre">socket</span></code></a> class now supports the <code class="docutils literal notranslate"><span class="pre">PF_SYSTEM</span></code> protocol
-family on OS X.  (Contributed by Michael Goderbauer in <a class="reference external" href="https://bugs.python.org/issue13777">bpo-13777</a>.)</p></li>
+family on OS X.  (Contributed by Michael Goderbauer in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13777">bpo-13777</a>.)</p></li>
 <li><p>New function <a class="reference internal" href="../library/socket.html#socket.sethostname" title="socket.sethostname"><code class="xref py py-func docutils literal notranslate"><span class="pre">sethostname()</span></code></a> allows the hostname to be set
 on unix systems if the calling process has sufficient privileges.
-(Contributed by Ross Lagerwall in <a class="reference external" href="https://bugs.python.org/issue10866">bpo-10866</a>.)</p></li>
+(Contributed by Ross Lagerwall in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10866">bpo-10866</a>.)</p></li>
 </ul>
 </section>
 <section id="socketserver">
@@ -1974,14 +1974,14 @@ on unix systems if the calling process has sufficient privileges.
 <a class="reference internal" href="../library/socketserver.html#socketserver.BaseServer.service_actions" title="socketserver.BaseServer.service_actions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">service_actions()</span></code></a> that is called by the
 <a class="reference internal" href="../library/socketserver.html#socketserver.BaseServer.serve_forever" title="socketserver.BaseServer.serve_forever"><code class="xref py py-meth docutils literal notranslate"><span class="pre">serve_forever()</span></code></a> method in the service loop.
 <a class="reference internal" href="../library/socketserver.html#socketserver.ForkingMixIn" title="socketserver.ForkingMixIn"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForkingMixIn</span></code></a> now uses this to clean up zombie
-child processes.  (Contributed by Justin Warkentin in <a class="reference external" href="https://bugs.python.org/issue11109">bpo-11109</a>.)</p>
+child processes.  (Contributed by Justin Warkentin in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11109">bpo-11109</a>.)</p>
 </section>
 <section id="sqlite3">
 <h3>sqlite3<a class="headerlink" href="#sqlite3" title="本標題的永久連結">¶</a></h3>
 <p>New <a class="reference internal" href="../library/sqlite3.html#sqlite3.Connection" title="sqlite3.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlite3.Connection</span></code></a> method
 <a class="reference internal" href="../library/sqlite3.html#sqlite3.Connection.set_trace_callback" title="sqlite3.Connection.set_trace_callback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_trace_callback()</span></code></a> can be used to capture a trace of
 all sql commands processed by sqlite.  (Contributed by Torsten Landschoff
-in <a class="reference external" href="https://bugs.python.org/issue11688">bpo-11688</a>.)</p>
+in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11688">bpo-11688</a>.)</p>
 </section>
 <section id="ssl">
 <h3>ssl<a class="headerlink" href="#ssl" title="本標題的永久連結">¶</a></h3>
@@ -1992,36 +1992,36 @@ in <a class="reference external" href="https://bugs.python.org/issue11688">bpo-1
 pseudo-random bytes.</p></li>
 <li><p><a class="reference internal" href="../library/ssl.html#ssl.RAND_pseudo_bytes" title="ssl.RAND_pseudo_bytes"><code class="xref py py-func docutils literal notranslate"><span class="pre">RAND_pseudo_bytes()</span></code></a>: generate pseudo-random bytes.</p></li>
 </ul>
-<p>(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue12049">bpo-12049</a>.)</p>
+<p>(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12049">bpo-12049</a>.)</p>
 </li>
 <li><p>The <a class="reference internal" href="../library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> module now exposes a finer-grained exception hierarchy
 in order to make it easier to inspect the various kinds of errors.
-(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue11183">bpo-11183</a>.)</p></li>
+(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11183">bpo-11183</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/ssl.html#ssl.SSLContext.load_cert_chain" title="ssl.SSLContext.load_cert_chain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_cert_chain()</span></code></a> now accepts a <em>password</em> argument
 to be used if the private key is encrypted.
-(Contributed by Adam Simpkins in <a class="reference external" href="https://bugs.python.org/issue12803">bpo-12803</a>.)</p></li>
+(Contributed by Adam Simpkins in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12803">bpo-12803</a>.)</p></li>
 <li><p>Diffie-Hellman key exchange, both regular and Elliptic Curve-based, is
 now supported through the <a class="reference internal" href="../library/ssl.html#ssl.SSLContext.load_dh_params" title="ssl.SSLContext.load_dh_params"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_dh_params()</span></code></a> and
 <a class="reference internal" href="../library/ssl.html#ssl.SSLContext.set_ecdh_curve" title="ssl.SSLContext.set_ecdh_curve"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_ecdh_curve()</span></code></a> methods.
-(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue13626">bpo-13626</a> and <a class="reference external" href="https://bugs.python.org/issue13627">bpo-13627</a>.)</p></li>
+(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13626">bpo-13626</a> and <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13627">bpo-13627</a>.)</p></li>
 <li><p>SSL sockets have a new <a class="reference internal" href="../library/ssl.html#ssl.SSLSocket.get_channel_binding" title="ssl.SSLSocket.get_channel_binding"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_channel_binding()</span></code></a> method
 allowing the implementation of certain authentication mechanisms such as
-SCRAM-SHA-1-PLUS.  (Contributed by Jacek Konieczny in <a class="reference external" href="https://bugs.python.org/issue12551">bpo-12551</a>.)</p></li>
+SCRAM-SHA-1-PLUS.  (Contributed by Jacek Konieczny in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12551">bpo-12551</a>.)</p></li>
 <li><p>You can query the SSL compression algorithm used by an SSL socket, thanks
 to its new <a class="reference internal" href="../library/ssl.html#ssl.SSLSocket.compression" title="ssl.SSLSocket.compression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compression()</span></code></a> method.  The new attribute
 <a class="reference internal" href="../library/ssl.html#ssl.OP_NO_COMPRESSION" title="ssl.OP_NO_COMPRESSION"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OP_NO_COMPRESSION</span></code></a> can be used to disable compression.
-(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue13634">bpo-13634</a>.)</p></li>
+(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13634">bpo-13634</a>.)</p></li>
 <li><p>Support has been added for the Next Protocol Negotiation extension using
 the <a class="reference internal" href="../library/ssl.html#ssl.SSLContext.set_npn_protocols" title="ssl.SSLContext.set_npn_protocols"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ssl.SSLContext.set_npn_protocols()</span></code></a> method.
-(Contributed by Colin Marc in <a class="reference external" href="https://bugs.python.org/issue14204">bpo-14204</a>.)</p></li>
+(Contributed by Colin Marc in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14204">bpo-14204</a>.)</p></li>
 <li><p>SSL errors can now be introspected more easily thanks to
 <a class="reference internal" href="../library/ssl.html#ssl.SSLError.library" title="ssl.SSLError.library"><code class="xref py py-attr docutils literal notranslate"><span class="pre">library</span></code></a> and <a class="reference internal" href="../library/ssl.html#ssl.SSLError.reason" title="ssl.SSLError.reason"><code class="xref py py-attr docutils literal notranslate"><span class="pre">reason</span></code></a> attributes.
-(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue14837">bpo-14837</a>.)</p></li>
+(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14837">bpo-14837</a>.)</p></li>
 <li><p>The <a class="reference internal" href="../library/ssl.html#ssl.get_server_certificate" title="ssl.get_server_certificate"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_server_certificate()</span></code></a> function now supports IPv6.
-(Contributed by Charles-François Natali in <a class="reference external" href="https://bugs.python.org/issue11811">bpo-11811</a>.)</p></li>
+(Contributed by Charles-François Natali in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11811">bpo-11811</a>.)</p></li>
 <li><p>New attribute <a class="reference internal" href="../library/ssl.html#ssl.OP_CIPHER_SERVER_PREFERENCE" title="ssl.OP_CIPHER_SERVER_PREFERENCE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OP_CIPHER_SERVER_PREFERENCE</span></code></a> allows setting
 SSLv3 server sockets to use the server's cipher ordering preference rather
-than the client's (<a class="reference external" href="https://bugs.python.org/issue13635">bpo-13635</a>).</p></li>
+than the client's (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13635">bpo-13635</a>).</p></li>
 </ul>
 </section>
 <section id="stat">
@@ -2029,44 +2029,44 @@ than the client's (<a class="reference external" href="https://bugs.python.org/i
 <p>The undocumented tarfile.filemode function has been moved to
 <a class="reference internal" href="../library/stat.html#stat.filemode" title="stat.filemode"><code class="xref py py-func docutils literal notranslate"><span class="pre">stat.filemode()</span></code></a>. It can be used to convert a file's mode to a string of
 the form '-rwxrwxrwx'.</p>
-<p>(Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue14807">bpo-14807</a>.)</p>
+<p>(Contributed by Giampaolo Rodolà in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14807">bpo-14807</a>.)</p>
 </section>
 <section id="struct">
 <h3>struct<a class="headerlink" href="#struct" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/struct.html#module-struct" title="struct: Interpret bytes as packed binary data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">struct</span></code></a> module now supports <code class="docutils literal notranslate"><span class="pre">ssize_t</span></code> and <code class="docutils literal notranslate"><span class="pre">size_t</span></code> via the
 new codes <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">N</span></code>, respectively.  (Contributed by Antoine Pitrou
-in <a class="reference external" href="https://bugs.python.org/issue3163">bpo-3163</a>.)</p>
+in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=3163">bpo-3163</a>.)</p>
 </section>
 <section id="subprocess">
 <h3>subprocess<a class="headerlink" href="#subprocess" title="本標題的永久連結">¶</a></h3>
 <p>Command strings can now be bytes objects on posix platforms.  (Contributed by
-Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue8513">bpo-8513</a>.)</p>
+Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8513">bpo-8513</a>.)</p>
 <p>A new constant <a class="reference internal" href="../library/subprocess.html#subprocess.DEVNULL" title="subprocess.DEVNULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEVNULL</span></code></a> allows suppressing output in a
 platform-independent fashion.  (Contributed by Ross Lagerwall in
-<a class="reference external" href="https://bugs.python.org/issue5870">bpo-5870</a>.)</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=5870">bpo-5870</a>.)</p>
 </section>
 <section id="sys">
 <h3>sys<a class="headerlink" href="#sys" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> module has a new <a class="reference internal" href="../library/sys.html#sys.thread_info" title="sys.thread_info"><code class="xref py py-data docutils literal notranslate"><span class="pre">thread_info</span></code></a> <a class="reference internal" href="../glossary.html#term-named-tuple"><span class="xref std std-term">named
 tuple</span></a> holding information about the thread implementation
-(<a class="reference external" href="https://bugs.python.org/issue11223">bpo-11223</a>).</p>
+(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11223">bpo-11223</a>).</p>
 </section>
 <section id="tarfile">
 <h3>tarfile<a class="headerlink" href="#tarfile" title="本標題的永久連結">¶</a></h3>
 <p><a class="reference internal" href="../library/tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> now supports <code class="docutils literal notranslate"><span class="pre">lzma</span></code> encoding via the <a class="reference internal" href="../library/lzma.html#module-lzma" title="lzma: A Python wrapper for the liblzma compression library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">lzma</span></code></a> module.
-(Contributed by Lars Gustäbel in <a class="reference external" href="https://bugs.python.org/issue5689">bpo-5689</a>.)</p>
+(Contributed by Lars Gustäbel in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=5689">bpo-5689</a>.)</p>
 </section>
 <section id="tempfile">
 <h3>tempfile<a class="headerlink" href="#tempfile" title="本標題的永久連結">¶</a></h3>
 <p><a class="reference internal" href="../library/tempfile.html#tempfile.SpooledTemporaryFile" title="tempfile.SpooledTemporaryFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">tempfile.SpooledTemporaryFile</span></code></a>'s
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">truncate()</span></code> method now accepts
-a <code class="docutils literal notranslate"><span class="pre">size</span></code> parameter.  (Contributed by Ryan Kelly in <a class="reference external" href="https://bugs.python.org/issue9957">bpo-9957</a>.)</p>
+a <code class="docutils literal notranslate"><span class="pre">size</span></code> parameter.  (Contributed by Ryan Kelly in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=9957">bpo-9957</a>.)</p>
 </section>
 <section id="textwrap">
 <h3>textwrap<a class="headerlink" href="#textwrap" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/textwrap.html#module-textwrap" title="textwrap: Text wrapping and filling"><code class="xref py py-mod docutils literal notranslate"><span class="pre">textwrap</span></code></a> module has a new <a class="reference internal" href="../library/textwrap.html#textwrap.indent" title="textwrap.indent"><code class="xref py py-func docutils literal notranslate"><span class="pre">indent()</span></code></a> that makes
 it straightforward to add a common prefix to selected lines in a block
-of text  (<a class="reference external" href="https://bugs.python.org/issue13857">bpo-13857</a>).</p>
+of text  (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13857">bpo-13857</a>).</p>
 </section>
 <section id="threading">
 <h3>threading<a class="headerlink" href="#threading" title="本標題的永久連結">¶</a></h3>
@@ -2074,10 +2074,10 @@ of text  (<a class="reference external" href="https://bugs.python.org/issue13857
 <a class="reference internal" href="../library/threading.html#threading.BoundedSemaphore" title="threading.BoundedSemaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.BoundedSemaphore</span></code></a>, <a class="reference internal" href="../library/threading.html#threading.Event" title="threading.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.Event</span></code></a>, and
 <a class="reference internal" href="../library/threading.html#threading.Timer" title="threading.Timer"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.Timer</span></code></a>, all of which used to be factory functions returning a
 class instance, are now classes and may be subclassed.  (Contributed by Éric
-Araujo in <a class="reference external" href="https://bugs.python.org/issue10968">bpo-10968</a>.)</p>
+Araujo in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10968">bpo-10968</a>.)</p>
 <p>The <a class="reference internal" href="../library/threading.html#threading.Thread" title="threading.Thread"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.Thread</span></code></a> constructor now accepts a <code class="docutils literal notranslate"><span class="pre">daemon</span></code> keyword
 argument to override the default behavior of inheriting the <code class="docutils literal notranslate"><span class="pre">daemon</span></code> flag
-value from the parent thread (<a class="reference external" href="https://bugs.python.org/issue6064">bpo-6064</a>).</p>
+value from the parent thread (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=6064">bpo-6064</a>).</p>
 <p>The formerly private function <code class="docutils literal notranslate"><span class="pre">_thread.get_ident</span></code> is now available as the
 public function <a class="reference internal" href="../library/threading.html#threading.get_ident" title="threading.get_ident"><code class="xref py py-func docutils literal notranslate"><span class="pre">threading.get_ident()</span></code></a>.  This eliminates several cases of
 direct access to the <code class="docutils literal notranslate"><span class="pre">_thread</span></code> module in the stdlib.  Third party code that
@@ -2100,7 +2100,7 @@ current process.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../library/time.html#time.clock_getres" title="time.clock_getres"><code class="xref py py-func docutils literal notranslate"><span class="pre">clock_getres()</span></code></a>, <a class="reference internal" href="../library/time.html#time.clock_gettime" title="time.clock_gettime"><code class="xref py py-func docutils literal notranslate"><span class="pre">clock_gettime()</span></code></a> and
 <a class="reference internal" href="../library/time.html#time.clock_settime" title="time.clock_settime"><code class="xref py py-func docutils literal notranslate"><span class="pre">clock_settime()</span></code></a> functions with <code class="docutils literal notranslate"><span class="pre">CLOCK_xxx</span></code> constants.
-(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue10278">bpo-10278</a>.)</p></li>
+(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10278">bpo-10278</a>.)</p></li>
 </ul>
 <p>To improve cross platform consistency, <a class="reference internal" href="../library/time.html#time.sleep" title="time.sleep"><code class="xref py py-func docutils literal notranslate"><span class="pre">sleep()</span></code></a> now raises a
 <a class="reference internal" href="../library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> when passed a negative sleep value.  Previously this was an
@@ -2109,16 +2109,16 @@ error on posix, but produced an infinite sleep on Windows.</p>
 <section id="types">
 <h3>types<a class="headerlink" href="#types" title="本標題的永久連結">¶</a></h3>
 <p>Add a new <a class="reference internal" href="../library/types.html#types.MappingProxyType" title="types.MappingProxyType"><code class="xref py py-class docutils literal notranslate"><span class="pre">types.MappingProxyType</span></code></a> class: Read-only proxy of a mapping.
-(<a class="reference external" href="https://bugs.python.org/issue14386">bpo-14386</a>)</p>
+(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14386">bpo-14386</a>)</p>
 <p>The new functions <a class="reference internal" href="../library/types.html#types.new_class" title="types.new_class"><code class="xref py py-func docutils literal notranslate"><span class="pre">types.new_class()</span></code></a> and <a class="reference internal" href="../library/types.html#types.prepare_class" title="types.prepare_class"><code class="xref py py-func docutils literal notranslate"><span class="pre">types.prepare_class()</span></code></a> provide support
-for <span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-3115/"><strong>PEP 3115</strong></a> compliant dynamic type creation. (<a class="reference external" href="https://bugs.python.org/issue14588">bpo-14588</a>)</p>
+for <span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-3115/"><strong>PEP 3115</strong></a> compliant dynamic type creation. (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14588">bpo-14588</a>)</p>
 </section>
 <section id="unittest">
 <h3>unittest<a class="headerlink" href="#unittest" title="本標題的永久連結">¶</a></h3>
 <p><a class="reference internal" href="../library/unittest.html#unittest.TestCase.assertRaises" title="unittest.TestCase.assertRaises"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertRaises()</span></code></a>, <a class="reference internal" href="../library/unittest.html#unittest.TestCase.assertRaisesRegex" title="unittest.TestCase.assertRaisesRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertRaisesRegex()</span></code></a>, <a class="reference internal" href="../library/unittest.html#unittest.TestCase.assertWarns" title="unittest.TestCase.assertWarns"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertWarns()</span></code></a>, and
 <a class="reference internal" href="../library/unittest.html#unittest.TestCase.assertWarnsRegex" title="unittest.TestCase.assertWarnsRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertWarnsRegex()</span></code></a> now accept a keyword argument <em>msg</em> when used as
 context managers.  (Contributed by Ezio Melotti and Winston Ewert in
-<a class="reference external" href="https://bugs.python.org/issue10775">bpo-10775</a>.)</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10775">bpo-10775</a>.)</p>
 <p><a class="reference internal" href="../library/unittest.html#unittest.TestCase.run" title="unittest.TestCase.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unittest.TestCase.run()</span></code></a> now returns the <a class="reference internal" href="../library/unittest.html#unittest.TestResult" title="unittest.TestResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestResult</span></code></a>
 object.</p>
 </section>
@@ -2130,7 +2130,7 @@ should be used.  For example, this will send a <code class="docutils literal not
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;https://www.python.org&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;HEAD&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href="https://bugs.python.org/issue1673007">bpo-1673007</a>)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1673007">bpo-1673007</a>)</p>
 </section>
 <section id="webbrowser">
 <h3>webbrowser<a class="headerlink" href="#webbrowser" title="本標題的永久連結">¶</a></h3>
@@ -2139,8 +2139,8 @@ should be used.  For example, this will send a <code class="docutils literal not
 <strong class="program">chromium-browser</strong> depending on the version and operating system),
 and the generic launchers <strong class="program">xdg-open</strong>, from the FreeDesktop.org
 project, and <strong class="program">gvfs-open</strong>, which is the default URI handler for GNOME
-3.  (The former contributed by Arnaud Calmettes in <a class="reference external" href="https://bugs.python.org/issue13620">bpo-13620</a>, the latter
-by Matthias Klose in <a class="reference external" href="https://bugs.python.org/issue14493">bpo-14493</a>.)</p>
+3.  (The former contributed by Arnaud Calmettes in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13620">bpo-13620</a>, the latter
+by Matthias Klose in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14493">bpo-14493</a>.)</p>
 </section>
 <section id="xml-etree-elementtree">
 <h3>xml.etree.ElementTree<a class="headerlink" href="#xml-etree-elementtree" title="本標題的永久連結">¶</a></h3>
@@ -2156,10 +2156,10 @@ and a more detailed reference.</p>
 <h3>zlib<a class="headerlink" href="#zlib" title="本標題的永久連結">¶</a></h3>
 <p>New attribute <a class="reference internal" href="../library/zlib.html#zlib.Decompress.eof" title="zlib.Decompress.eof"><code class="xref py py-attr docutils literal notranslate"><span class="pre">zlib.Decompress.eof</span></code></a> makes it possible to distinguish
 between a properly-formed compressed stream and an incomplete or truncated one.
-(Contributed by Nadeem Vawda in <a class="reference external" href="https://bugs.python.org/issue12646">bpo-12646</a>.)</p>
+(Contributed by Nadeem Vawda in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12646">bpo-12646</a>.)</p>
 <p>New attribute <a class="reference internal" href="../library/zlib.html#zlib.ZLIB_RUNTIME_VERSION" title="zlib.ZLIB_RUNTIME_VERSION"><code class="xref py py-attr docutils literal notranslate"><span class="pre">zlib.ZLIB_RUNTIME_VERSION</span></code></a> reports the version string of
 the underlying <code class="docutils literal notranslate"><span class="pre">zlib</span></code> library that is loaded at runtime.  (Contributed by
-Torsten Landschoff in <a class="reference external" href="https://bugs.python.org/issue12306">bpo-12306</a>.)</p>
+Torsten Landschoff in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12306">bpo-12306</a>.)</p>
 </section>
 </section>
 <section id="optimizations">
@@ -2177,8 +2177,8 @@ is 4 times faster</p></li>
 </ul>
 </li>
 <li><p>UTF-8 is now 2x to 4x faster.  UTF-16 encoding is now up to 10x faster.</p>
-<p>(Contributed by Serhiy Storchaka, <a class="reference external" href="https://bugs.python.org/issue14624">bpo-14624</a>, <a class="reference external" href="https://bugs.python.org/issue14738">bpo-14738</a> and
-<a class="reference external" href="https://bugs.python.org/issue15026">bpo-15026</a>.)</p>
+<p>(Contributed by Serhiy Storchaka, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14624">bpo-14624</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14738">bpo-14738</a> and
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=15026">bpo-15026</a>.)</p>
 </li>
 </ul>
 </section>
@@ -2222,7 +2222,7 @@ is 4 times faster</p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyArg_ParseTuple</span></code></a> now accepts a <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> for the <code class="docutils literal notranslate"><span class="pre">c</span></code>
-format (<a class="reference external" href="https://bugs.python.org/issue12380">bpo-12380</a>).</p></li>
+format (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12380">bpo-12380</a>).</p></li>
 </ul>
 </section>
 <section id="deprecated">
@@ -2238,18 +2238,18 @@ are no longer supported due to maintenance burden.</p>
 <h3>Deprecated Python modules, functions and methods<a class="headerlink" href="#deprecated-python-modules-functions-and-methods" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
 <li><p>Passing a non-empty string to <code class="docutils literal notranslate"><span class="pre">object.__format__()</span></code> is deprecated, and
-will produce a <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> in Python 3.4 (<a class="reference external" href="https://bugs.python.org/issue9856">bpo-9856</a>).</p></li>
+will produce a <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> in Python 3.4 (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=9856">bpo-9856</a>).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">unicode_internal</span></code> codec has been deprecated because of the
 <span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0393/"><strong>PEP 393</strong></a>, use UTF-8, UTF-16 (<code class="docutils literal notranslate"><span class="pre">utf-16-le</span></code> or <code class="docutils literal notranslate"><span class="pre">utf-16-be</span></code>), or UTF-32
 (<code class="docutils literal notranslate"><span class="pre">utf-32-le</span></code> or <code class="docutils literal notranslate"><span class="pre">utf-32-be</span></code>)</p></li>
 <li><p><a class="reference internal" href="../library/ftplib.html#ftplib.FTP.nlst" title="ftplib.FTP.nlst"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.nlst()</span></code></a> and <a class="reference internal" href="../library/ftplib.html#ftplib.FTP.dir" title="ftplib.FTP.dir"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.dir()</span></code></a>: use
 <a class="reference internal" href="../library/ftplib.html#ftplib.FTP.mlsd" title="ftplib.FTP.mlsd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ftplib.FTP.mlsd()</span></code></a></p></li>
 <li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">platform.popen()</span></code>: use the <a class="reference internal" href="../library/subprocess.html#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> module. Check especially
-the <a class="reference internal" href="../library/subprocess.html#subprocess-replacements"><span class="std std-ref">Replacing Older Functions with the subprocess Module</span></a> section (<a class="reference external" href="https://bugs.python.org/issue11377">bpo-11377</a>).</p></li>
-<li><p><a class="reference external" href="https://bugs.python.org/issue13374">bpo-13374</a>: The Windows bytes API has been deprecated in the <a class="reference internal" href="../library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a>
+the <a class="reference internal" href="../library/subprocess.html#subprocess-replacements"><span class="std std-ref">Replacing Older Functions with the subprocess Module</span></a> section (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11377">bpo-11377</a>).</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13374">bpo-13374</a>: The Windows bytes API has been deprecated in the <a class="reference internal" href="../library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a>
 module. Use Unicode filenames, instead of bytes filenames, to not depend on
 the ANSI code page anymore and to support any filename.</p></li>
-<li><p><a class="reference external" href="https://bugs.python.org/issue13988">bpo-13988</a>: The <code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.etree.cElementTree</span></code> module is deprecated.  The
+<li><p><a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13988">bpo-13988</a>: The <code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.etree.cElementTree</span></code> module is deprecated.  The
 accelerator is used automatically whenever available.</p></li>
 <li><p>The behaviour of <code class="xref py py-func docutils literal notranslate"><span class="pre">time.clock()</span></code> depends on the platform: use the new
 <a class="reference internal" href="../library/time.html#time.perf_counter" title="time.perf_counter"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></a> or <a class="reference internal" href="../library/time.html#time.process_time" title="time.process_time"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.process_time()</span></code></a> function instead,
@@ -2351,12 +2351,12 @@ that may require changes to your code.</p>
 <li><p>Hash randomization is enabled by default. Set the <span class="target" id="index-35"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONHASHSEED"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONHASHSEED</span></code></a>
 environment variable to <code class="docutils literal notranslate"><span class="pre">0</span></code> to disable hash randomization. See also the
 <a class="reference internal" href="../reference/datamodel.html#object.__hash__" title="object.__hash__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">object.__hash__()</span></code></a> method.</p></li>
-<li><p><a class="reference external" href="https://bugs.python.org/issue12326">bpo-12326</a>: On Linux, sys.platform doesn't contain the major version
+<li><p><a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=12326">bpo-12326</a>: On Linux, sys.platform doesn't contain the major version
 anymore. It is now always 'linux', instead of 'linux2' or 'linux3' depending
 on the Linux version used to build Python. Replace sys.platform == 'linux2'
 with sys.platform.startswith('linux'), or directly sys.platform == 'linux' if
 you don't need to support older Python versions.</p></li>
-<li><p><a class="reference external" href="https://bugs.python.org/issue13847">bpo-13847</a>, <a class="reference external" href="https://bugs.python.org/issue14180">bpo-14180</a>: <a class="reference internal" href="../library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> and <a class="reference internal" href="../library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a>:
+<li><p><a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13847">bpo-13847</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14180">bpo-14180</a>: <a class="reference internal" href="../library/time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> and <a class="reference internal" href="../library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a>:
 <a class="reference internal" href="../library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> is now raised instead of <a class="reference internal" href="../library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if a
 timestamp is out of range. <a class="reference internal" href="../library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> is now raised if C functions
 <code class="xref c c-func docutils literal notranslate"><span class="pre">gmtime()</span></code> or <code class="xref c c-func docutils literal notranslate"><span class="pre">localtime()</span></code> failed.</p></li>
@@ -2399,7 +2399,7 @@ import emulation itself is still present, but is now deprecated. The
 <a class="reference internal" href="../library/pkgutil.html#pkgutil.iter_importers" title="pkgutil.iter_importers"><code class="xref py py-func docutils literal notranslate"><span class="pre">pkgutil.iter_importers()</span></code></a> and <a class="reference internal" href="../library/pkgutil.html#pkgutil.walk_packages" title="pkgutil.walk_packages"><code class="xref py py-func docutils literal notranslate"><span class="pre">pkgutil.walk_packages()</span></code></a> functions
 special case the standard import hooks so they are still supported even
 though they do not provide the non-standard <code class="docutils literal notranslate"><span class="pre">iter_modules()</span></code> method.</p></li>
-<li><p>A longstanding RFC-compliance bug (<a class="reference external" href="https://bugs.python.org/issue1079">bpo-1079</a>) in the parsing done by
+<li><p>A longstanding RFC-compliance bug (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1079">bpo-1079</a>) in the parsing done by
 <a class="reference internal" href="../library/email.header.html#email.header.decode_header" title="email.header.decode_header"><code class="xref py py-func docutils literal notranslate"><span class="pre">email.header.decode_header()</span></code></a> has been fixed.  Code that uses the
 standard idiom to convert encoded headers into unicode
 (<code class="docutils literal notranslate"><span class="pre">str(make_header(decode_header(h))</span></code>) will see no change, but code that
@@ -2412,11 +2412,11 @@ present in the input strings.</p></li>
 <li><p><a class="reference internal" href="../library/email.utils.html#email.utils.formataddr" title="email.utils.formataddr"><code class="xref py py-func docutils literal notranslate"><span class="pre">email.utils.formataddr()</span></code></a> now does the correct content transfer
 encoding when passed non-<code class="docutils literal notranslate"><span class="pre">ASCII</span></code> display names.  Any code that depended on
 the previous buggy behavior that preserved the non-<code class="docutils literal notranslate"><span class="pre">ASCII</span></code> unicode in the
-formatted output string will need to be changed (<a class="reference external" href="https://bugs.python.org/issue1690608">bpo-1690608</a>).</p></li>
+formatted output string will need to be changed (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=1690608">bpo-1690608</a>).</p></li>
 <li><p><a class="reference internal" href="../library/poplib.html#poplib.POP3.quit" title="poplib.POP3.quit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">poplib.POP3.quit()</span></code></a> may now raise protocol errors like all other
 <code class="docutils literal notranslate"><span class="pre">poplib</span></code> methods.  Code that assumes <code class="docutils literal notranslate"><span class="pre">quit</span></code> does not raise
 <a class="reference internal" href="../library/poplib.html#poplib.error_proto" title="poplib.error_proto"><code class="xref py py-exc docutils literal notranslate"><span class="pre">poplib.error_proto</span></code></a> errors may need to be changed if errors on <code class="docutils literal notranslate"><span class="pre">quit</span></code>
-are encountered by a particular application (<a class="reference external" href="https://bugs.python.org/issue11291">bpo-11291</a>).</p></li>
+are encountered by a particular application (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11291">bpo-11291</a>).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">strict</span></code> argument to <a class="reference internal" href="../library/email.parser.html#email.parser.Parser" title="email.parser.Parser"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.parser.Parser</span></code></a>, deprecated since
 Python 2.4, has finally been removed.</p></li>
 <li><p>The deprecated method <code class="docutils literal notranslate"><span class="pre">unittest.TestCase.assertSameElements</span></code> has been
@@ -2424,7 +2424,7 @@ removed.</p></li>
 <li><p>The deprecated variable <code class="docutils literal notranslate"><span class="pre">time.accept2dyear</span></code> has been removed.</p></li>
 <li><p>The deprecated <code class="docutils literal notranslate"><span class="pre">Context._clamp</span></code> attribute has been removed from the
 <a class="reference internal" href="../library/decimal.html#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> module.  It was previously replaced by the public attribute
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">clamp</span></code>.  (See <a class="reference external" href="https://bugs.python.org/issue8540">bpo-8540</a>.)</p></li>
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">clamp</span></code>.  (See <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=8540">bpo-8540</a>.)</p></li>
 <li><p>The undocumented internal helper class <code class="docutils literal notranslate"><span class="pre">SSLFakeFile</span></code> has been removed
 from <a class="reference internal" href="../library/smtplib.html#module-smtplib" title="smtplib: SMTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtplib</span></code></a>, since its functionality has long been provided directly
 by <a class="reference internal" href="../library/socket.html#socket.socket.makefile" title="socket.socket.makefile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">socket.socket.makefile()</span></code></a>.</p></li>
@@ -2439,7 +2439,7 @@ subclass the now-public classes.</p></li>
 <li><p>The undocumented debugging machinery in the threading module has been
 removed, simplifying the code.  This should have no effect on production
 code, but is mentioned here in case any application debug frameworks were
-interacting with it (<a class="reference external" href="https://bugs.python.org/issue13550">bpo-13550</a>).</p></li>
+interacting with it (<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13550">bpo-13550</a>).</p></li>
 </ul>
 </section>
 <section id="porting-c-code">
@@ -2480,7 +2480,7 @@ named <code class="docutils literal notranslate"><span class="pre">xxxmodule.so<
 the <code class="docutils literal notranslate"><span class="pre">xxx</span></code> module.  If you had been generating such files, you have
 to switch to the other spellings (i.e., remove the <code class="docutils literal notranslate"><span class="pre">module</span></code> string
 from the file names).</p>
-<p>(implemented in <a class="reference external" href="https://bugs.python.org/issue14040">bpo-14040</a>.)</p>
+<p>(implemented in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=14040">bpo-14040</a>.)</p>
 </li>
 </ul>
 </section>
@@ -2489,12 +2489,12 @@ from the file names).</p>
 <ul>
 <li><p>The -Q command-line flag and related artifacts have been removed.  Code
 checking sys.flags.division_warning will need updating.</p>
-<p>(<a class="reference external" href="https://bugs.python.org/issue10998">bpo-10998</a>, contributed by Éric Araujo.)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10998">bpo-10998</a>, contributed by Éric Araujo.)</p>
 </li>
 <li><p>When <strong class="program">python</strong> is started with <a class="reference internal" href="../using/cmdline.html#cmdoption-S"><code class="xref std std-option docutils literal notranslate"><span class="pre">-S</span></code></a>, <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">site</span></code>
 will no longer add site-specific paths to the module search paths.  In
 previous versions, it did.</p>
-<p>(<a class="reference external" href="https://bugs.python.org/issue11591">bpo-11591</a>, contributed by Carl Meyer with editions by Éric Araujo.)</p>
+<p>(<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=11591">bpo-11591</a>, contributed by Carl Meyer with editions by Éric Araujo.)</p>
 </li>
 </ul>
 </section>
@@ -2730,7 +2730,7 @@ previous versions, it did.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

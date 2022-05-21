@@ -2700,7 +2700,7 @@ called, then any cleanup functions added will still be called.</p>
 <dd><p>This function is called unconditionally after <code class="xref py py-func docutils literal notranslate"><span class="pre">tearDownModule()</span></code>, or
 after <code class="xref py py-func docutils literal notranslate"><span class="pre">setUpModule()</span></code> if <code class="xref py py-func docutils literal notranslate"><span class="pre">setUpModule()</span></code> raises an exception.</p>
 <p>It is responsible for calling all the cleanup functions added by
-<code class="xref py py-func docutils literal notranslate"><span class="pre">addCleanupModule()</span></code>. If you need cleanup functions to be called
+<a class="reference internal" href="#unittest.addModuleCleanup" title="unittest.addModuleCleanup"><code class="xref py py-func docutils literal notranslate"><span class="pre">addModuleCleanup()</span></code></a>. If you need cleanup functions to be called
 <em>prior</em> to <code class="xref py py-func docutils literal notranslate"><span class="pre">tearDownModule()</span></code> then you can call
 <a class="reference internal" href="#unittest.doModuleCleanups" title="unittest.doModuleCleanups"><code class="xref py py-func docutils literal notranslate"><span class="pre">doModuleCleanups()</span></code></a> yourself.</p>
 <p><a class="reference internal" href="#unittest.doModuleCleanups" title="unittest.doModuleCleanups"><code class="xref py py-func docutils literal notranslate"><span class="pre">doModuleCleanups()</span></code></a> pops methods off the stack of cleanup
@@ -2908,7 +2908,7 @@ to temporarily remove the handler while the test is being executed:</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

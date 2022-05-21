@@ -1238,8 +1238,9 @@ meaning as in <a class="reference internal" href="functions.html#open" title="op
 <span class="sig-prename descclassname"><span class="pre">Path.</span></span><span class="sig-name descname"><span class="pre">rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathlib.Path.rename" title="本定義的永久連結">¶</a></dt>
 <dd><p>Rename this file or directory to the given <em>target</em>, and return a new Path
 instance pointing to <em>target</em>.  On Unix, if <em>target</em> exists and is a file,
-it will be replaced silently if the user has permission.  <em>target</em> can be
-either a string or another path object:</p>
+it will be replaced silently if the user has permission.
+On Windows, if <em>target</em> exists, <a class="reference internal" href="exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a> will be raised.
+<em>target</em> can be either a string or another path object:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;some text&#39;</span><span class="p">)</span>
 <span class="go">9</span>
@@ -1263,7 +1264,7 @@ object.</p>
 <span class="sig-prename descclassname"><span class="pre">Path.</span></span><span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathlib.Path.replace" title="本定義的永久連結">¶</a></dt>
 <dd><p>Rename this file or directory to the given <em>target</em>, and return a new Path
 instance pointing to <em>target</em>.  If <em>target</em> points to an existing file or
-directory, it will be unconditionally replaced.</p>
+empty directory, it will be unconditionally replaced.</p>
 <p>The target path may be absolute or relative. Relative paths are interpreted
 relative to the current working directory, <em>not</em> the directory of the Path
 object.</p>
@@ -1700,7 +1701,7 @@ include <a class="reference internal" href="os.path.html#os.path.abspath" title=
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

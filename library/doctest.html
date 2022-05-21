@@ -424,10 +424,6 @@ strings are treated as if they were docstrings.  In output, a key <code class="d
 </div>
 <p>Any classes found are recursively searched similarly, to test docstrings in
 their contained methods and nested classes.</p>
-<div class="impl-detail compound">
-<p><strong>CPython implementation detail:</strong> Prior to version 3.4, extension modules written in C were not fully
-searched by doctest.</p>
-</div>
 </section>
 <section id="how-are-docstring-examples-recognized">
 <span id="doctest-finding-examples"></span><h3>How are Docstring Examples Recognized?<a class="headerlink" href="#how-are-docstring-examples-recognized" title="本標題的永久連結">¶</a></h3>
@@ -673,39 +669,32 @@ surprises that <code class="docutils literal notranslate"><span class="pre">.*</
 <dl class="py data">
 <dt class="sig sig-object py" id="doctest.IGNORE_EXCEPTION_DETAIL">
 <span class="sig-prename descclassname"><span class="pre">doctest.</span></span><span class="sig-name descname"><span class="pre">IGNORE_EXCEPTION_DETAIL</span></span><a class="headerlink" href="#doctest.IGNORE_EXCEPTION_DETAIL" title="本定義的永久連結">¶</a></dt>
-<dd><p>When specified, an example that expects an exception passes if an exception of
-the expected type is raised, even if the exception detail does not match.  For
-example, an example expecting <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">42</span></code> will pass if the actual
-exception raised is <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">3*14</span></code>, but will fail, e.g., if
-<a class="reference internal" href="exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> is raised.</p>
-<p>It will also ignore the module name used in Python 3 doctest reports. Hence
-both of these variations will work with the flag specified, regardless of
-whether the test is run under Python 2.7 or Python 3.2 (or later versions):</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="n">CustomError</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<dd><p>When specified, doctests expecting exceptions pass so long as an exception
+of the expected type is raised, even if the details
+(message and fully-qualified exception name) don't match.</p>
+<p>For example, an example expecting <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">42</span></code> will pass if the actual
+exception raised is <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">3*14</span></code>, but will fail if, say, a
+<a class="reference internal" href="exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> is raised instead.
+It will also ignore any fully-qualified name included before the
+exception class, which can vary between implementations and versions
+of Python and the code/libraries in use.
+Hence, all three of these variations will work with the flag specified:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
-<span class="gr">CustomError</span>: <span class="n">message</span>
+<span class="gr">Exception</span>: <span class="n">message</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="n">CustomError</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
-<span class="gr">my_module.CustomError</span>: <span class="n">message</span>
+<span class="gr">builtins.Exception</span>: <span class="n">message</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">__main__.Exception</span>: <span class="n">message</span>
 </pre></div>
 </div>
 <p>Note that <a class="reference internal" href="#doctest.ELLIPSIS" title="doctest.ELLIPSIS"><code class="xref py py-const docutils literal notranslate"><span class="pre">ELLIPSIS</span></code></a> can also be used to ignore the
 details of the exception message, but such a test may still fail based
-on whether or not the module details are printed as part of the
-exception name. Using <a class="reference internal" href="#doctest.IGNORE_EXCEPTION_DETAIL" title="doctest.IGNORE_EXCEPTION_DETAIL"><code class="xref py py-const docutils literal notranslate"><span class="pre">IGNORE_EXCEPTION_DETAIL</span></code></a> and the details
-from Python 2.3 is also the only clear way to write a doctest that doesn't
-care about the exception detail yet continues to pass under Python 2.3 or
-earlier (those releases do not support <a class="reference internal" href="#doctest-directives"><span class="std std-ref">doctest directives</span></a> and ignore them as irrelevant comments). For example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;moo&#39;</span>
-<span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
-<span class="gr">TypeError</span>: <span class="n">object doesn&#39;t support item assignment</span>
-</pre></div>
-</div>
-<p>passes under Python 2.3 and later Python versions with the flag specified,
-even though the detail
-changed in Python 2.4 to say &quot;does not&quot; instead of &quot;doesn't&quot;.</p>
+on whether the module name is present or matches exactly.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span><a class="reference internal" href="#doctest.IGNORE_EXCEPTION_DETAIL" title="doctest.IGNORE_EXCEPTION_DETAIL"><code class="xref py py-const docutils literal notranslate"><span class="pre">IGNORE_EXCEPTION_DETAIL</span></code></a> now also ignores any information relating
 to the module containing the exception under test.</p>
@@ -819,7 +808,7 @@ above.</p>
 <p>An example's doctest directives modify doctest's behavior for that single
 example.  Use <code class="docutils literal notranslate"><span class="pre">+</span></code> to enable the named behavior, or <code class="docutils literal notranslate"><span class="pre">-</span></code> to disable it.</p>
 <p>For example, this test passes:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span> 
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span>  <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
 <span class="go">[0,   1,  2,  3,  4,  5,  6,  7,  8,  9,</span>
 <span class="go">10,  11, 12, 13, 14, 15, 16, 17, 18, 19]</span>
 </pre></div>
@@ -828,28 +817,28 @@ example.  Use <code class="docutils literal notranslate"><span class="pre">+</sp
 two blanks before the single-digit list elements, and because the actual output
 is on a single line.  This test also passes, and also requires a directive to do
 so:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span> 
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span>  <span class="c1"># doctest: +ELLIPSIS</span>
 <span class="go">[0, 1, ..., 18, 19]</span>
 </pre></div>
 </div>
 <p>Multiple directives can be used on a single physical line, separated by
 commas:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span> 
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span>  <span class="c1"># doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE</span>
 <span class="go">[0,    1, ...,   18,    19]</span>
 </pre></div>
 </div>
 <p>If multiple directive comments are used for a single example, then they are
 combined:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span> 
-<span class="gp">... </span>                       
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span>  <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="gp">... </span>                        <span class="c1"># doctest: +NORMALIZE_WHITESPACE</span>
 <span class="go">[0,    1, ...,   18,    19]</span>
 </pre></div>
 </div>
 <p>As the previous example shows, you can add <code class="docutils literal notranslate"><span class="pre">...</span></code> lines to your example
 containing only directives.  This can be useful when an example is too long for
 a directive to comfortably fit on the same line:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)))</span>
-<span class="gp">... </span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)))</span>
+<span class="gp">... </span><span class="c1"># doctest: +ELLIPSIS</span>
 <span class="go">[0, ..., 4, 10, ..., 19, 30, ..., 39]</span>
 </pre></div>
 </div>
@@ -881,23 +870,18 @@ guarantee that the element is printed in any particular order, so a test like</p
 <span class="go">[&#39;Harry&#39;, &#39;Hermione&#39;]</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">備註</p>
-<p>Before Python 3.6, when printing a dict, Python did not guarantee that
-the key-value pairs was printed in any particular order.</p>
-</div>
 <p>There are others, but you get the idea.</p>
 <p>Another bad idea is to print things that embed an object address, like</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># certain to fail some of the time</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># certain to fail some of the time  </span>
 <span class="go">7948648</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">C</span><span class="p">:</span> <span class="k">pass</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">()</span>   <span class="c1"># the default repr() for instances embeds an address</span>
-<span class="go">&lt;__main__.C instance at 0x00AC18F0&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">()</span>  <span class="c1"># the default repr() for instances embeds an address   </span>
+<span class="go">&lt;C object at 0x00AC18F0&gt;</span>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="#doctest.ELLIPSIS" title="doctest.ELLIPSIS"><code class="xref py py-const docutils literal notranslate"><span class="pre">ELLIPSIS</span></code></a> directive gives a nice approach for the last example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">()</span> 
-<span class="go">&lt;__main__.C instance at 0x...&gt;</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">()</span>  <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">&lt;C object at 0x...&gt;</span>
 </pre></div>
 </div>
 <p>Floating-point numbers are also subject to small output variations across
@@ -1992,7 +1976,7 @@ also makes for a confusing test.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -337,7 +337,7 @@ additional validation or preprocessing of the file.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="io.text_encoding">
-<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">text_encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stacklevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.text_encoding" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">text_encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stacklevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.text_encoding" title="本定義的永久連結">¶</a></dt>
 <dd><p>This is a helper function for callables that use <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> or
 <a class="reference internal" href="#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextIOWrapper</span></code></a> and have an <code class="docutils literal notranslate"><span class="pre">encoding=None</span></code> parameter.</p>
 <p>This function returns <em>encoding</em> if it is not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;locale&quot;</span></code> if
@@ -544,7 +544,7 @@ will raise <a class="reference internal" href="exceptions.html#OSError" title="O
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.IOBase.readline">
-<span class="sig-name descname"><span class="pre">readline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.readline" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.readline" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return one line from the stream.  If <em>size</em> is specified, at
 most <em>size</em> bytes will be read.</p>
 <p>The line terminator is always <code class="docutils literal notranslate"><span class="pre">b'\n'</span></code> for binary files; for text files,
@@ -554,7 +554,7 @@ terminator(s) recognized.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.IOBase.readlines">
-<span class="sig-name descname"><span class="pre">readlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.readlines" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.readlines" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return a list of lines from the stream.  <em>hint</em> can be specified
 to control the number of lines read: no more lines will be read if the
 total size (in bytes/characters) of all lines so far exceeds <em>hint</em>.</p>
@@ -566,7 +566,7 @@ hint.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.IOBase.seek">
-<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SEEK_SET</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.seek" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SEEK_SET</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.seek" title="本定義的永久連結">¶</a></dt>
 <dd><p>Change the stream position to the given byte <em>offset</em>.  <em>offset</em> is
 interpreted relative to the position indicated by <em>whence</em>.  The default
 value for <em>whence</em> is <code class="xref py py-data docutils literal notranslate"><span class="pre">SEEK_SET</span></code>.  Values for <em>whence</em> are:</p>
@@ -604,7 +604,7 @@ for a file could depend on it being open in text or binary mode.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.IOBase.truncate">
-<span class="sig-name descname"><span class="pre">truncate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.truncate" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">truncate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.truncate" title="本定義的永久連結">¶</a></dt>
 <dd><p>Resize the stream to the given <em>size</em> in bytes (or the current position
 if <em>size</em> is not specified).  The current stream position isn't changed.
 This resizing can extend or reduce the current file size.  In case of
@@ -625,7 +625,7 @@ is returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.IOBase.writelines">
-<span class="sig-name descname"><span class="pre">writelines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.writelines" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">writelines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.IOBase.writelines" title="本定義的永久連結">¶</a></dt>
 <dd><p>Write a list of lines to the stream.  Line separators are not added, so it
 is usual for each of the lines provided to have a line separator at the
 end.</p>
@@ -653,7 +653,7 @@ in this page).</p>
 <a class="reference internal" href="#io.IOBase" title="io.IOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">IOBase</span></code></a>:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="io.RawIOBase.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.RawIOBase.read" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.RawIOBase.read" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read up to <em>size</em> bytes from the object and return them.  As a convenience,
 if <em>size</em> is unspecified or -1, all bytes until EOF are returned.
 Otherwise, only one system call is ever made.  Fewer than <em>size</em> bytes may
@@ -674,7 +674,7 @@ calls to the stream if necessary.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.RawIOBase.readinto">
-<span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.RawIOBase.readinto" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.RawIOBase.readinto" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read bytes into a pre-allocated, writable
 <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> <em>b</em>, and return the
 number of bytes read.  For example, <em>b</em> might be a <a class="reference internal" href="stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>.
@@ -684,7 +684,7 @@ are available, <code class="docutils literal notranslate"><span class="pre">None
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.RawIOBase.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.RawIOBase.write" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.RawIOBase.write" title="本定義的永久連結">¶</a></dt>
 <dd><p>Write the given <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>, <em>b</em>, to the
 underlying raw stream, and return the number of
 bytes written.  This can be less than the length of <em>b</em> in
@@ -742,7 +742,7 @@ raw stream to return from this method.  They raise
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedIOBase.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.read" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.read" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return up to <em>size</em> bytes.  If the argument is omitted, <code class="docutils literal notranslate"><span class="pre">None</span></code>,
 or negative, data is read and returned until EOF is reached.  An empty
 <a class="reference internal" href="stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object is returned if the stream is already at EOF.</p>
@@ -757,7 +757,7 @@ non blocking-mode, and has no data available at the moment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedIOBase.read1">
-<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.read1" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.read1" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return up to <em>size</em> bytes, with at most one call to the
 underlying raw stream's <a class="reference internal" href="#io.RawIOBase.read" title="io.RawIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> (or
 <a class="reference internal" href="#io.RawIOBase.readinto" title="io.RawIOBase.readinto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readinto()</span></code></a>) method.  This can be useful if you are
@@ -769,7 +769,7 @@ returned (more than zero unless EOF is reached).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedIOBase.readinto">
-<span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.readinto" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.readinto" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read bytes into a pre-allocated, writable
 <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> <em>b</em> and return the number of bytes read.
 For example, <em>b</em> might be a <a class="reference internal" href="stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>.</p>
@@ -781,7 +781,7 @@ blocking-mode, and has no data available at the moment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedIOBase.readinto1">
-<span class="sig-name descname"><span class="pre">readinto1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.readinto1" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readinto1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.readinto1" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read bytes into a pre-allocated, writable
 <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a> <em>b</em>, using at most one call to
 the underlying raw stream's <a class="reference internal" href="#io.RawIOBase.read" title="io.RawIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> (or
@@ -795,7 +795,7 @@ blocking-mode, and has no data available at the moment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedIOBase.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.write" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedIOBase.write" title="本定義的永久連結">¶</a></dt>
 <dd><p>Write the given <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>, <em>b</em>, and return the number
 of bytes written (always equal to the length of <em>b</em> in bytes, since if
 the write fails an <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> will be raised).  Depending on the
@@ -877,7 +877,7 @@ given in the constructor.</p>
 than raw I/O does.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="io.BytesIO">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">BytesIO</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">initial_bytes</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#io.BytesIO" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">BytesIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_bytes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">b''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BytesIO" title="本定義的永久連結">¶</a></dt>
 <dd><p>A binary stream using an in-memory bytes buffer.  It inherits
 <a class="reference internal" href="#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BufferedIOBase</span></code></a>.  The buffer is discarded when the
 <a class="reference internal" href="#io.IOBase.close" title="io.IOBase.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> method is called.</p>
@@ -916,7 +916,7 @@ resized or closed.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BytesIO.read1">
-<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#io.BytesIO.read1" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BytesIO.read1" title="本定義的永久連結">¶</a></dt>
 <dd><p>In <a class="reference internal" href="#io.BytesIO" title="io.BytesIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BytesIO</span></code></a>, this is the same as <a class="reference internal" href="#io.BufferedIOBase.read" title="io.BufferedIOBase.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>size</em> argument is now optional.</p>
@@ -925,7 +925,7 @@ resized or closed.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BytesIO.readinto1">
-<span class="sig-name descname"><span class="pre">readinto1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BytesIO.readinto1" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readinto1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BytesIO.readinto1" title="本定義的永久連結">¶</a></dt>
 <dd><p>In <a class="reference internal" href="#io.BytesIO" title="io.BytesIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BytesIO</span></code></a>, this is the same as <a class="reference internal" href="#io.BufferedIOBase.readinto" title="io.BufferedIOBase.readinto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readinto()</span></code></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
@@ -950,7 +950,7 @@ The buffered data can then be returned directly on subsequent reads.</p>
 those from <a class="reference internal" href="#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BufferedIOBase</span></code></a> and <a class="reference internal" href="#io.IOBase" title="io.IOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">IOBase</span></code></a>:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedReader.peek">
-<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedReader.peek" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedReader.peek" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return bytes from the stream without advancing the position.  At most one
 single read on the raw stream is done to satisfy the call. The number of
 bytes returned may be less or more than requested.</p>
@@ -958,14 +958,14 @@ bytes returned may be less or more than requested.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedReader.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedReader.read" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedReader.read" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return <em>size</em> bytes, or if <em>size</em> is not given or negative, until
 EOF or if the read call would block in non-blocking mode.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedReader.read1">
-<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedReader.read1" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedReader.read1" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return up to <em>size</em> bytes with only one call on the raw stream.
 If at least one byte is buffered, only buffered bytes are returned.
 Otherwise, one raw stream read call is made.</p>
@@ -1005,7 +1005,7 @@ those from <a class="reference internal" href="#io.BufferedIOBase" title="io.Buf
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.BufferedWriter.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedWriter.write" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedWriter.write" title="本定義的永久連結">¶</a></dt>
 <dd><p>Write the <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>, <em>b</em>, and return the
 number of bytes written.  When in non-blocking mode, a
 <a class="reference internal" href="exceptions.html#BlockingIOError" title="BlockingIOError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BlockingIOError</span></code></a> is raised if the buffer needs to be written out but
@@ -1030,7 +1030,7 @@ are guaranteed to be implemented.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="io.BufferedRWPair">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">BufferedRWPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_BUFFER_SIZE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedRWPair" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">BufferedRWPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_BUFFER_SIZE</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.BufferedRWPair" title="本定義的永久連結">¶</a></dt>
 <dd><p>A buffered binary stream providing higher-level access to two non seekable
 <a class="reference internal" href="#io.RawIOBase" title="io.RawIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawIOBase</span></code></a> raw binary streams---one readable, the other writeable.
 It inherits <a class="reference internal" href="#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BufferedIOBase</span></code></a>.</p>
@@ -1104,14 +1104,14 @@ raise <a class="reference internal" href="#io.UnsupportedOperation" title="io.Un
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.TextIOBase.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.read" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.read" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read and return at most <em>size</em> characters from the stream as a single
 <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.  If <em>size</em> is negative or <code class="docutils literal notranslate"><span class="pre">None</span></code>, reads until EOF.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.TextIOBase.readline">
-<span class="sig-name descname"><span class="pre">readline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.readline" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">readline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.readline" title="本定義的永久連結">¶</a></dt>
 <dd><p>Read until newline or EOF and return a single <code class="docutils literal notranslate"><span class="pre">str</span></code>.  If the stream is
 already at EOF, an empty string is returned.</p>
 <p>If <em>size</em> is specified, at most <em>size</em> characters will be read.</p>
@@ -1119,7 +1119,7 @@ already at EOF, an empty string is returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.TextIOBase.seek">
-<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SEEK_SET</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.seek" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SEEK_SET</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.seek" title="本定義的永久連結">¶</a></dt>
 <dd><p>Change the stream position to the given <em>offset</em>.  Behaviour depends on
 the <em>whence</em> parameter.  The default value for <em>whence</em> is
 <code class="xref py py-data docutils literal notranslate"><span class="pre">SEEK_SET</span></code>.</p>
@@ -1150,7 +1150,7 @@ binary storage.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="io.TextIOBase.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.write" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.TextIOBase.write" title="本定義的永久連結">¶</a></dt>
 <dd><p>Write the string <em>s</em> to the stream and return the number of characters
 written.</p>
 </dd></dl>
@@ -1485,7 +1485,7 @@ well.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

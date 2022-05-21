@@ -371,7 +371,8 @@ examination.</p>
 single <code class="docutils literal notranslate"><span class="pre">;</span></code> is not used as it is the separator for multiple commands in a line
 that is passed to the Python parser.)  No intelligence is applied to separating
 the commands; the input is split at the first <code class="docutils literal notranslate"><span class="pre">;;</span></code> pair, even if it is in the
-middle of a quoted string.</p>
+middle of a quoted string. A workaround for strings with double semicolons
+is to use implicit string concatenation <code class="docutils literal notranslate"><span class="pre">';'';'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;;&quot;&quot;;&quot;</span></code>.</p>
 <p id="index-2">If a file <code class="file docutils literal notranslate"><span class="pre">.pdbrc</span></code> exists in the user's home directory or in the current
 directory, it is read in and executed as if it had been typed at the debugger
 prompt.  This is particularly useful for aliases.  If both files exist, the one
@@ -849,7 +850,7 @@ is determined by the <code class="docutils literal notranslate"><span class="pre
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

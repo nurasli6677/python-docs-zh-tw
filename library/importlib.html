@@ -378,8 +378,8 @@ are also provided to help in implementing the core ABCs.</p>
 <p>ABC hierarchy:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">object</span>
  <span class="o">+--</span> <span class="n">Finder</span> <span class="p">(</span><span class="n">deprecated</span><span class="p">)</span>
- <span class="o">|</span>    <span class="o">+--</span> <span class="n">MetaPathFinder</span>
- <span class="o">|</span>    <span class="o">+--</span> <span class="n">PathEntryFinder</span>
+ <span class="o">+--</span> <span class="n">MetaPathFinder</span>
+ <span class="o">+--</span> <span class="n">PathEntryFinder</span>
  <span class="o">+--</span> <span class="n">Loader</span>
       <span class="o">+--</span> <span class="n">ResourceLoader</span> <span class="o">--------+</span>
       <span class="o">+--</span> <span class="n">InspectLoader</span>          <span class="o">|</span>
@@ -416,8 +416,7 @@ for use in <a class="reference internal" href="sys.html#sys.meta_path" title="sy
 <dl class="py class">
 <dt class="sig sig-object py" id="importlib.abc.MetaPathFinder">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">importlib.abc.</span></span><span class="sig-name descname"><span class="pre">MetaPathFinder</span></span><a class="headerlink" href="#importlib.abc.MetaPathFinder" title="本定義的永久連結">¶</a></dt>
-<dd><p>An abstract base class representing a <a class="reference internal" href="../glossary.html#term-meta-path-finder"><span class="xref std std-term">meta path finder</span></a>. For
-compatibility, this is a subclass of <a class="reference internal" href="#importlib.abc.Finder" title="importlib.abc.Finder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Finder</span></code></a>.</p>
+<dd><p>An abstract base class representing a <a class="reference internal" href="../glossary.html#term-meta-path-finder"><span class="xref std std-term">meta path finder</span></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
@@ -2360,7 +2359,7 @@ Python 3.6 and newer for other parts of the code).</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

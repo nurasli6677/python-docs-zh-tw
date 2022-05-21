@@ -189,8 +189,8 @@
 <span id="faq-run-program-under-windows"></span><h2><a class="toc-backref" href="#id3">在 Windows 作業系統裡我想執行 Python 程式，要怎麼做？</a><a class="headerlink" href="#how-do-i-run-a-python-program-under-windows" title="本標題的永久連結">¶</a></h2>
 <p>這個問題的答案可能有點複雜。如果你經常使用「命令提示字元」執行程式，那這對你來說不會是什麼難事。如果不然，那就需要更仔細的說明了。</p>
 <p>Unless you use some sort of integrated development environment, you will end up
-<em>typing</em> Windows commands into what is variously referred to as a &quot;DOS window&quot;
-or &quot;Command prompt window&quot;.  Usually you can create such a window from your
+<em>typing</em> Windows commands into what is referred to as a
+&quot;Command prompt window&quot;.  Usually you can create such a window from your
 search bar by searching for <code class="docutils literal notranslate"><span class="pre">cmd</span></code>.  You should be able to recognize
 when you have started such a window because you will see a Windows &quot;command
 prompt&quot;, which usually looks like this:</p>
@@ -322,8 +322,6 @@ time.  Your code must load <code class="file docutils literal notranslate"><span
 in <code class="file docutils literal notranslate"><span class="pre">python</span><em><span class="pre">NN</span></em><span class="pre">.dll</span></code> (that is, Python's C API's) using pointers obtained
 by the Windows <code class="docutils literal notranslate"><span class="pre">GetProcAddress()</span></code> routine.  Macros can make using these
 pointers transparent to any C code that calls routines in Python's C API.</p>
-<p>Borland note: convert <code class="file docutils literal notranslate"><span class="pre">python</span><em><span class="pre">NN</span></em><span class="pre">.lib</span></code> to OMF format using Coff2Omf.exe
-first.</p>
 </li>
 <li><p>If you use SWIG, it is easy to create a Python &quot;extension module&quot; that will
 make the app's data and methods available to Python.  SWIG will handle just
@@ -514,7 +512,7 @@ present, and <code class="docutils literal notranslate"><span class="pre">getch(
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

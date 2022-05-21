@@ -315,7 +315,7 @@ over Unix pipes.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>On macOS, the <em>spawn</em> start method is now the default.  The <em>fork</em> start
 method should be considered unsafe as it can lead to crashes of the
-subprocess. See <a class="reference external" href="https://bugs.python.org/issue33725">bpo-33725</a>.</p>
+subprocess. See <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=33725">bpo-33725</a>.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span><em>spawn</em> added on all unix platforms, and <em>forkserver</em> added for
@@ -506,10 +506,10 @@ arbitrary ctypes objects allocated from shared memory.</p>
 </div></blockquote>
 <p><strong>Server process</strong></p>
 <blockquote>
-<div><p>A manager object returned by <code class="xref py py-func docutils literal notranslate"><span class="pre">Manager()</span></code> controls a server process which
+<div><p>A manager object returned by <a class="reference internal" href="#multiprocessing.Manager" title="multiprocessing.Manager"><code class="xref py py-func docutils literal notranslate"><span class="pre">Manager()</span></code></a> controls a server process which
 holds Python objects and allows other processes to manipulate them using
 proxies.</p>
-<p>A manager returned by <code class="xref py py-func docutils literal notranslate"><span class="pre">Manager()</span></code> will support types
+<p>A manager returned by <a class="reference internal" href="#multiprocessing.Manager" title="multiprocessing.Manager"><code class="xref py py-func docutils literal notranslate"><span class="pre">Manager()</span></code></a> will support types
 <a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>, <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>, <a class="reference internal" href="#multiprocessing.managers.Namespace" title="multiprocessing.managers.Namespace"><code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></a>, <a class="reference internal" href="#multiprocessing.Lock" title="multiprocessing.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lock</span></code></a>,
 <a class="reference internal" href="#multiprocessing.RLock" title="multiprocessing.RLock"><code class="xref py py-class docutils literal notranslate"><span class="pre">RLock</span></code></a>, <a class="reference internal" href="#multiprocessing.Semaphore" title="multiprocessing.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a>, <a class="reference internal" href="#multiprocessing.BoundedSemaphore" title="multiprocessing.BoundedSemaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BoundedSemaphore</span></code></a>,
 <a class="reference internal" href="#multiprocessing.Condition" title="multiprocessing.Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition</span></code></a>, <a class="reference internal" href="#multiprocessing.Event" title="multiprocessing.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>, <a class="reference internal" href="#multiprocessing.Barrier" title="multiprocessing.Barrier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Barrier</span></code></a>,
@@ -1060,7 +1060,7 @@ underlying pipe, and you don't care about lost data.</p>
 implementation on the host operating system. Without one, the
 functionality in this class will be disabled, and attempts to
 instantiate a <a class="reference internal" href="#multiprocessing.Queue" title="multiprocessing.Queue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Queue</span></code></a> will result in an <a class="reference internal" href="exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a>. See
-<a class="reference external" href="https://bugs.python.org/issue3770">bpo-3770</a> for additional information.  The same holds true for any
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=3770">bpo-3770</a> for additional information.  The same holds true for any
 of the specialized queue types listed below.</p>
 </div>
 </dd></dl>
@@ -1246,7 +1246,7 @@ the default on Windows and macOS.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>On macOS, the <em>spawn</em> start method is now the default.  The <em>fork</em> start
 method should be considered unsafe as it can lead to crashes of the
-subprocess. See <a class="reference external" href="https://bugs.python.org/issue33725">bpo-33725</a>.</p>
+subprocess. See <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=33725">bpo-33725</a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -1612,7 +1612,7 @@ ignored while the equivalent blocking calls are in progress.</p>
 implementation on the host operating system. Without one, the
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing.synchronize</span></code> module will be disabled, and attempts to
 import it will result in an <a class="reference internal" href="exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a>. See
-<a class="reference external" href="https://bugs.python.org/issue3770">bpo-3770</a> for additional information.</p>
+<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=3770">bpo-3770</a> for additional information.</p>
 </div>
 </section>
 <section id="shared-ctypes-objects">
@@ -1854,8 +1854,8 @@ different machines. A manager object controls a server process which manages
 <em>shared objects</em>.  Other processes can access the shared objects by using
 proxies.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="multiprocessing.sharedctypes.multiprocessing.Manager">
-<span class="sig-prename descclassname"><span class="pre">multiprocessing.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.sharedctypes.multiprocessing.Manager" title="本定義的永久連結">¶</a></dt>
+<dt class="sig sig-object py" id="multiprocessing.Manager">
+<span class="sig-prename descclassname"><span class="pre">multiprocessing.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.Manager" title="本定義的永久連結">¶</a></dt>
 <dd><p>Returns a started <a class="reference internal" href="#multiprocessing.managers.SyncManager" title="multiprocessing.managers.SyncManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">SyncManager</span></code></a> object which
 can be used for sharing objects between processes.  The returned manager
 object corresponds to a spawned child process and has methods which will
@@ -1974,7 +1974,7 @@ manager's server process if it was not already started.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multiprocessing.managers.</span></span><span class="sig-name descname"><span class="pre">SyncManager</span></span><a class="headerlink" href="#multiprocessing.managers.SyncManager" title="本定義的永久連結">¶</a></dt>
 <dd><p>A subclass of <a class="reference internal" href="#multiprocessing.managers.BaseManager" title="multiprocessing.managers.BaseManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseManager</span></code></a> which can be used for the synchronization
 of processes.  Objects of this type are returned by
-<code class="xref py py-func docutils literal notranslate"><span class="pre">multiprocessing.Manager()</span></code>.</p>
+<a class="reference internal" href="#multiprocessing.Manager" title="multiprocessing.Manager"><code class="xref py py-func docutils literal notranslate"><span class="pre">multiprocessing.Manager()</span></code></a>.</p>
 <p>Its methods create and return <a class="reference internal" href="#multiprocessing-proxy-objects"><span class="std std-ref">Proxy Objects</span></a> for a
 number of commonly used data types to be synchronized across processes.
 This notably includes shared lists and dictionaries.</p>
@@ -3080,7 +3080,7 @@ and discarding the cache when the pid changes. For example:</p>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span>
 </pre></div>
 </div>
-<p>For more information, see <a class="reference external" href="https://bugs.python.org/issue5155">bpo-5155</a>, <a class="reference external" href="https://bugs.python.org/issue5313">bpo-5313</a> and <a class="reference external" href="https://bugs.python.org/issue5331">bpo-5331</a></p>
+<p>For more information, see <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=5155">bpo-5155</a>, <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=5313">bpo-5313</a> and <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=5331">bpo-5331</a></p>
 </div></blockquote>
 </section>
 <section id="the-spawn-and-forkserver-start-methods">
@@ -3623,7 +3623,7 @@ processes and collect the results:</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

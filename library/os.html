@@ -322,8 +322,8 @@ of your home directory (on some platforms), and is equivalent to
 <code class="docutils literal notranslate"><span class="pre">getenv(&quot;HOME&quot;)</span></code> in C.</p>
 <p>This mapping is captured the first time the <a class="reference internal" href="#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module is imported,
 typically during Python startup as part of processing <code class="file docutils literal notranslate"><span class="pre">site.py</span></code>.  Changes
-to the environment made after this time are not reflected in <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>,
-except for changes made by modifying <code class="docutils literal notranslate"><span class="pre">os.environ</span></code> directly.</p>
+to the environment made after this time are not reflected in <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>,
+except for changes made by modifying <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a> directly.</p>
 <p>This mapping may be used to modify the environment as well as query the
 environment.  <a class="reference internal" href="#os.putenv" title="os.putenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">putenv()</span></code></a> will be called automatically when the mapping
 is modified.</p>
@@ -332,8 +332,8 @@ is modified.</p>
 to use a different encoding.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Calling <a class="reference internal" href="#os.putenv" title="os.putenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">putenv()</span></code></a> directly does not change <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>, so it's better
-to modify <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>.</p>
+<p>Calling <a class="reference internal" href="#os.putenv" title="os.putenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">putenv()</span></code></a> directly does not change <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>, so it's better
+to modify <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -343,7 +343,7 @@ cause memory leaks.  Refer to the system documentation for
 </div>
 <p>You can delete items in this mapping to unset environment variables.
 <a class="reference internal" href="#os.unsetenv" title="os.unsetenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">unsetenv()</span></code></a> will be called automatically when an item is deleted from
-<code class="docutils literal notranslate"><span class="pre">os.environ</span></code>, and when one of the <code class="xref py py-meth docutils literal notranslate"><span class="pre">pop()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code> methods is
+<a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>, and when one of the <code class="xref py py-meth docutils literal notranslate"><span class="pre">pop()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code> methods is
 called.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>Updated to support <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0584/"><strong>PEP 584</strong></a>'s merge (<code class="docutils literal notranslate"><span class="pre">|</span></code>) and update (<code class="docutils literal notranslate"><span class="pre">|=</span></code>) operators.</p>
@@ -444,7 +444,10 @@ with the preference being for <a class="reference internal" href="stdtypes.html#
 <dt class="sig sig-object py" id="os.getenv">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">getenv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#os.getenv" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return the value of the environment variable <em>key</em> if it exists, or
-<em>default</em> if it doesn't. <em>key</em>, <em>default</em> and the result are str.</p>
+<em>default</em> if it doesn't. <em>key</em>, <em>default</em> and the result are str. Note that
+since <a class="reference internal" href="#os.getenv" title="os.getenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenv()</span></code></a> uses <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>, the mapping of <a class="reference internal" href="#os.getenv" title="os.getenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenv()</span></code></a> is
+similarly also captured on import, and the function may not reflect
+future environment changes.</p>
 <p>On Unix, keys and values are decoded with <a class="reference internal" href="sys.html#sys.getfilesystemencoding" title="sys.getfilesystemencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.getfilesystemencoding()</span></code></a>
 and <code class="docutils literal notranslate"><span class="pre">'surrogateescape'</span></code> error handler. Use <a class="reference internal" href="#os.getenvb" title="os.getenvb"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getenvb()</span></code></a> if you
 would like to use a different encoding.</p>
@@ -455,7 +458,10 @@ would like to use a different encoding.</p>
 <dt class="sig sig-object py" id="os.getenvb">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">getenvb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#os.getenvb" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return the value of the environment variable <em>key</em> if it exists, or
-<em>default</em> if it doesn't. <em>key</em>, <em>default</em> and the result are bytes.</p>
+<em>default</em> if it doesn't. <em>key</em>, <em>default</em> and the result are bytes. Note that
+since <a class="reference internal" href="#os.getenvb" title="os.getenvb"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenvb()</span></code></a> uses <a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environb</span></code></a>, the mapping of <a class="reference internal" href="#os.getenvb" title="os.getenvb"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenvb()</span></code></a> is
+similarly also captured on import, and the function may not reflect
+future environment changes.</p>
 <p><a class="reference internal" href="#os.getenvb" title="os.getenvb"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenvb()</span></code></a> is only available if <a class="reference internal" href="#os.supports_bytes_environ" title="os.supports_bytes_environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">supports_bytes_environ</span></code></a>
 is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：大部分的 Unix。</p>
@@ -656,10 +662,11 @@ group id.</p>
 <dd><p id="index-16">Set the environment variable named <em>key</em> to the string <em>value</em>.  Such
 changes to the environment affect subprocesses started with <a class="reference internal" href="#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>,
 <a class="reference internal" href="#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">popen()</span></code></a> or <a class="reference internal" href="#os.fork" title="os.fork"><code class="xref py py-func docutils literal notranslate"><span class="pre">fork()</span></code></a> and <a class="reference internal" href="#os.execv" title="os.execv"><code class="xref py py-func docutils literal notranslate"><span class="pre">execv()</span></code></a>.</p>
-<p>Assignments to items in <code class="docutils literal notranslate"><span class="pre">os.environ</span></code> are automatically translated into
+<p>Assignments to items in <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a> are automatically translated into
 corresponding calls to <a class="reference internal" href="#os.putenv" title="os.putenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">putenv()</span></code></a>; however, calls to <a class="reference internal" href="#os.putenv" title="os.putenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">putenv()</span></code></a>
-don't update <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>, so it is actually preferable to assign to items
-of <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>.</p>
+don't update <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>, so it is actually preferable to assign to items
+of <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>. This also applies to <a class="reference internal" href="#os.getenv" title="os.getenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenv()</span></code></a> and <a class="reference internal" href="#os.getenvb" title="os.getenvb"><code class="xref py py-func docutils literal notranslate"><span class="pre">getenvb()</span></code></a>, which
+respectively use <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a> and <a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environb</span></code></a> in their implementations.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>On some platforms, including FreeBSD and macOS, setting <code class="docutils literal notranslate"><span class="pre">environ</span></code> may
@@ -855,10 +862,10 @@ with named attributes.</p>
 <dd><p id="index-20">Unset (delete) the environment variable named <em>key</em>. Such changes to the
 environment affect subprocesses started with <a class="reference internal" href="#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>, <a class="reference internal" href="#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">popen()</span></code></a> or
 <a class="reference internal" href="#os.fork" title="os.fork"><code class="xref py py-func docutils literal notranslate"><span class="pre">fork()</span></code></a> and <a class="reference internal" href="#os.execv" title="os.execv"><code class="xref py py-func docutils literal notranslate"><span class="pre">execv()</span></code></a>.</p>
-<p>Deletion of items in <code class="docutils literal notranslate"><span class="pre">os.environ</span></code> is automatically translated into a
+<p>Deletion of items in <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a> is automatically translated into a
 corresponding call to <a class="reference internal" href="#os.unsetenv" title="os.unsetenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">unsetenv()</span></code></a>; however, calls to <a class="reference internal" href="#os.unsetenv" title="os.unsetenv"><code class="xref py py-func docutils literal notranslate"><span class="pre">unsetenv()</span></code></a>
-don't update <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>, so it is actually preferable to delete items of
-<code class="docutils literal notranslate"><span class="pre">os.environ</span></code>.</p>
+don't update <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>, so it is actually preferable to delete items of
+<a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">os.unsetenv</span></code> with argument <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>The function is now always available and is also available on Windows.</p>
@@ -2247,7 +2254,7 @@ include <a class="reference internal" href="#os.pardir" title="os.pardir"><code 
 <p><span class="versionmodified changed">在 3.4.1 版本變更: </span>Before Python 3.4.1, if <em>exist_ok</em> was <code class="docutils literal notranslate"><span class="pre">True</span></code> and the directory existed,
 <a class="reference internal" href="#os.makedirs" title="os.makedirs"><code class="xref py py-func docutils literal notranslate"><span class="pre">makedirs()</span></code></a> would still raise an error if <em>mode</em> did not match the
 mode of the existing directory. Since this behavior was impossible to
-implement safely, it was removed in Python 3.4.1. See <a class="reference external" href="https://bugs.python.org/issue21082">bpo-21082</a>.</p>
+implement safely, it was removed in Python 3.4.1. See <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=21082">bpo-21082</a>.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>Accepts a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
@@ -2467,7 +2474,7 @@ permissions needed to remove the leaf directory or file.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="os.replace">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_dir_fd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir_fd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#os.replace" title="本定義的永久連結">¶</a></dt>
-<dd><p>Rename the file or directory <em>src</em> to <em>dst</em>.  If <em>dst</em> is a directory,
+<dd><p>Rename the file or directory <em>src</em> to <em>dst</em>.  If <em>dst</em> is a non-empty directory,
 <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> will be raised.  If <em>dst</em> exists and is a file, it will
 be replaced silently if the user has permission.  The operation may fail
 if <em>src</em> and <em>dst</em> are on different filesystems.  If successful,
@@ -5186,7 +5193,7 @@ block in these cases, but instead immediately raises <a class="reference interna
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

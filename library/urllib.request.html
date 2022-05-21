@@ -619,7 +619,8 @@ to the server.  Note that there cannot be more than one header with the same
 name, and later calls will overwrite previous calls in case the <em>key</em> collides.
 Currently, this is no loss of HTTP functionality, since all headers which have
 meaning when used more than once have a (header-specific) way of gaining the
-same functionality using only one header.</p>
+same functionality using only one header.  Note that headers added using
+this method are also added to redirected requests.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -803,7 +804,7 @@ protocol, or handle errors.</p>
 define it if they want to catch all URLs.</p>
 <p>This method, if implemented, will be called by the parent
 <a class="reference internal" href="#urllib.request.OpenerDirector" title="urllib.request.OpenerDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenerDirector</span></code></a>.  It should return a file-like object as described in
-the return value of the <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code></a> of <a class="reference internal" href="#urllib.request.OpenerDirector" title="urllib.request.OpenerDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenerDirector</span></code></a>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.
+the return value of the <a class="reference internal" href="#urllib.request.OpenerDirector.open" title="urllib.request.OpenerDirector.open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code></a> method of <a class="reference internal" href="#urllib.request.OpenerDirector" title="urllib.request.OpenerDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenerDirector</span></code></a>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.
 It should raise <a class="reference internal" href="urllib.error.html#urllib.error.URLError" title="urllib.error.URLError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">URLError</span></code></a>, unless a truly exceptional
 thing happens (for example, <a class="reference internal" href="exceptions.html#MemoryError" title="MemoryError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> should not be mapped to
 <code class="xref py py-exc docutils literal notranslate"><span class="pre">URLError</span></code>).</p>
@@ -1768,7 +1769,7 @@ The typical response object is a <a class="reference internal" href="#urllib.res
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

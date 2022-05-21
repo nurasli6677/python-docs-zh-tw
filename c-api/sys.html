@@ -506,13 +506,13 @@ option consumes a reference, but since there is no way to know whether
 arguments to this function will be consumed, using it may cause reference
 leaks.)</p>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">#</span></code> format characters should always be treated as
-<code class="docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>, regardless of whether <code class="docutils literal notranslate"><span class="pre">PY_SSIZE_T_CLEAN</span></code> was defined.</p>
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>, regardless of whether <code class="docutils literal notranslate"><span class="pre">PY_SSIZE_T_CLEAN</span></code> was defined.</p>
 <p><a class="reference internal" href="../library/sys.html#sys.audit" title="sys.audit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.audit()</span></code></a> performs the same function from Python code.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8.2 版本變更: </span>Require <code class="docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> for <code class="docutils literal notranslate"><span class="pre">#</span></code> format characters. Previously, an
+<p><span class="versionmodified changed">在 3.8.2 版本變更: </span>Require <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> for <code class="docutils literal notranslate"><span class="pre">#</span></code> format characters. Previously, an
 unavoidable deprecation warning was raised.</p>
 </div>
 </dd></dl>
@@ -699,7 +699,7 @@ the cleanup function, no Python APIs should be called by <em>func</em>.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

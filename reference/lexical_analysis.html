@@ -528,9 +528,11 @@ declaration is given in the source file; see section <a class="reference interna
 <p id="index-18">In plain English: Both types of literals can be enclosed in matching single quotes
 (<code class="docutils literal notranslate"><span class="pre">'</span></code>) or double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>).  They can also be enclosed in matching groups
 of three single or double quotes (these are generally referred to as
-<em>triple-quoted strings</em>).  The backslash (<code class="docutils literal notranslate"><span class="pre">\</span></code>) character is used to escape
-characters that otherwise have a special meaning, such as newline, backslash
-itself, or the quote character.</p>
+<em>triple-quoted strings</em>). The backslash (<code class="docutils literal notranslate"><span class="pre">\</span></code>) character is used to give special
+meaning to otherwise ordinary characters like <code class="docutils literal notranslate"><span class="pre">n</span></code>, which means 'newline' when
+escaped (<code class="docutils literal notranslate"><span class="pre">\n</span></code>). It can also be used to escape characters that otherwise have a
+special meaning, such as newline, backslash itself, or the quote character.
+See <a class="reference internal" href="#escape-sequences"><span class="std std-ref">escape sequences</span></a> below for examples.</p>
 <p id="index-19">Bytes literals are always prefixed with <code class="docutils literal notranslate"><span class="pre">'b'</span></code> or <code class="docutils literal notranslate"><span class="pre">'B'</span></code>; they produce an
 instance of the <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> type instead of the <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> type.  They
 may only contain ASCII characters; bytes with a numeric value of 128 or greater
@@ -557,7 +559,7 @@ formatted strings are possible, but formatted bytes literals are not.</p>
 <p>In triple-quoted literals, unescaped newlines and quotes are allowed (and are
 retained), except that three unescaped quotes in a row terminate the literal.  (A
 &quot;quote&quot; is the character used to open the literal, i.e. either <code class="docutils literal notranslate"><span class="pre">'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.)</p>
-<p id="index-23">Unless an <code class="docutils literal notranslate"><span class="pre">'r'</span></code> or <code class="docutils literal notranslate"><span class="pre">'R'</span></code> prefix is present, escape sequences in string and
+<p id="escape-sequences"><span id="index-23"></span>Unless an <code class="docutils literal notranslate"><span class="pre">'r'</span></code> or <code class="docutils literal notranslate"><span class="pre">'R'</span></code> prefix is present, escape sequences in string and
 bytes literals are interpreted according to rules similar to those used by
 Standard C.  The recognized escape sequences are:</p>
 <table class="docutils align-default">
@@ -1102,7 +1104,7 @@ occurrence outside string literals and comments is an unconditional error:</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

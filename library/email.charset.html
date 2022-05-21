@@ -198,9 +198,9 @@ their <em>official</em> email names (e.g. <code class="docutils literal notransl
 <dt class="sig sig-object py" id="email.charset.Charset.header_encoding">
 <span class="sig-name descname"><span class="pre">header_encoding</span></span><a class="headerlink" href="#email.charset.Charset.header_encoding" title="本定義的永久連結">¶</a></dt>
 <dd><p>If the character set must be encoded before it can be used in an email
-header, this attribute will be set to <code class="docutils literal notranslate"><span class="pre">Charset.QP</span></code> (for
-quoted-printable), <code class="docutils literal notranslate"><span class="pre">Charset.BASE64</span></code> (for base64 encoding), or
-<code class="docutils literal notranslate"><span class="pre">Charset.SHORTEST</span></code> for the shortest of QP or BASE64 encoding. Otherwise,
+header, this attribute will be set to <code class="docutils literal notranslate"><span class="pre">charset.QP</span></code> (for
+quoted-printable), <code class="docutils literal notranslate"><span class="pre">charset.BASE64</span></code> (for base64 encoding), or
+<code class="docutils literal notranslate"><span class="pre">charset.SHORTEST</span></code> for the shortest of QP or BASE64 encoding. Otherwise,
 it will be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
@@ -209,7 +209,7 @@ it will be <code class="docutils literal notranslate"><span class="pre">None</sp
 <span class="sig-name descname"><span class="pre">body_encoding</span></span><a class="headerlink" href="#email.charset.Charset.body_encoding" title="本定義的永久連結">¶</a></dt>
 <dd><p>Same as <em>header_encoding</em>, but describes the encoding for the mail
 message's body, which indeed may be different than the header encoding.
-<code class="docutils literal notranslate"><span class="pre">Charset.SHORTEST</span></code> is not allowed for <em>body_encoding</em>.</p>
+<code class="docutils literal notranslate"><span class="pre">charset.SHORTEST</span></code> is not allowed for <em>body_encoding</em>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -319,9 +319,9 @@ new entries to the global character set, alias, and codec registries:</p>
 <dd><p>Add character properties to the global registry.</p>
 <p><em>charset</em> is the input character set, and must be the canonical name of a
 character set.</p>
-<p>Optional <em>header_enc</em> and <em>body_enc</em> is either <code class="docutils literal notranslate"><span class="pre">Charset.QP</span></code> for
-quoted-printable, <code class="docutils literal notranslate"><span class="pre">Charset.BASE64</span></code> for base64 encoding,
-<code class="docutils literal notranslate"><span class="pre">Charset.SHORTEST</span></code> for the shortest of quoted-printable or base64 encoding,
+<p>Optional <em>header_enc</em> and <em>body_enc</em> is either <code class="docutils literal notranslate"><span class="pre">charset.QP</span></code> for
+quoted-printable, <code class="docutils literal notranslate"><span class="pre">charset.BASE64</span></code> for base64 encoding,
+<code class="docutils literal notranslate"><span class="pre">charset.SHORTEST</span></code> for the shortest of quoted-printable or base64 encoding,
 or <code class="docutils literal notranslate"><span class="pre">None</span></code> for no encoding.  <code class="docutils literal notranslate"><span class="pre">SHORTEST</span></code> is only valid for
 <em>header_enc</em>. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code> for no encoding.</p>
 <p>Optional <em>output_charset</em> is the character set that the output should be in.
@@ -452,7 +452,7 @@ Python codec, as appropriate for the second argument to the <a class="reference 
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

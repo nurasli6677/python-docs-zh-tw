@@ -639,9 +639,9 @@ the buffer is neither C- nor Fortran-contiguous.</p>
 <li><p>integers, floating-point numbers, complex numbers;</p></li>
 <li><p>strings, bytes, bytearrays;</p></li>
 <li><p>tuples, lists, sets, and dictionaries containing only picklable objects;</p></li>
-<li><p>functions (built-in and user-defined) defined at the top level of a module
-(using <a class="reference internal" href="../reference/compound_stmts.html#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a>, not <a class="reference internal" href="../reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a>);</p></li>
-<li><p>classes defined at the top level of a module;</p></li>
+<li><p>functions (built-in and user-defined) accessible from the top level of a
+module (using <a class="reference internal" href="../reference/compound_stmts.html#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a>, not <a class="reference internal" href="../reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a>);</p></li>
+<li><p>classes accessible from the top level of a module;</p></li>
 <li><p>instances of such classes whose <a class="reference internal" href="stdtypes.html#object.__dict__" title="object.__dict__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__dict__</span></code></a> or the result of
 calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getstate__()</span></code> is picklable  (see section <a class="reference internal" href="#pickle-inst"><span class="std std-ref">Pickling Class Instances</span></a> for
 details).</p></li>
@@ -652,9 +652,9 @@ been written to the underlying file.  Trying to pickle a highly recursive data
 structure may exceed the maximum recursion depth, a <a class="reference internal" href="exceptions.html#RecursionError" title="RecursionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RecursionError</span></code></a> will be
 raised in this case.  You can carefully raise this limit with
 <a class="reference internal" href="sys.html#sys.setrecursionlimit" title="sys.setrecursionlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.setrecursionlimit()</span></code></a>.</p>
-<p>Note that functions (built-in and user-defined) are pickled by fully qualified
-name, not by value. <a class="footnote-reference brackets" href="#id8" id="id3">2</a>  This means that only the function name is
-pickled, along with the name of the module the function is defined in.  Neither
+<p>Note that functions (built-in and user-defined) are pickled by fully
+<a class="reference internal" href="../glossary.html#term-qualified-name"><span class="xref std std-term">qualified name</span></a>, not by value. <a class="footnote-reference brackets" href="#id8" id="id3">2</a>  This means that only the function name is
+pickled, along with the name of the containing module and classes.  Neither
 the function's code, nor any of its function attributes are pickled.  Thus the
 defining module must be importable in the unpickling environment, and the module
 must contain the named object, otherwise an exception will be raised. <a class="footnote-reference brackets" href="#id9" id="id4">3</a></p>
@@ -1477,7 +1477,7 @@ persistent IDs, the resulting pickled data will become unreadable.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

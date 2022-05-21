@@ -445,11 +445,11 @@ returned string is prefixed with a base marker of <code class="docutils literal 
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyNumber_AsSsize_t">
-<span class="n"><span class="pre">Py_ssize_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyNumber_AsSsize_t</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyNumber_AsSsize_t" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Returns <em>o</em> converted to a Py_ssize_t value if <em>o</em> can be interpreted as an
+<a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyNumber_AsSsize_t</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">exc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyNumber_AsSsize_t" title="本定義的永久連結">¶</a><br /></dt>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Returns <em>o</em> converted to a <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> value if <em>o</em> can be interpreted as an
 integer.  If the call fails, an exception is raised and <code class="docutils literal notranslate"><span class="pre">-1</span></code> is returned.</p>
 <p>If <em>o</em> can be converted to a Python int but the attempt to
-convert to a Py_ssize_t value would raise an <a class="reference internal" href="../library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>, then the
+convert to a <a class="reference internal" href="intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> value would raise an <a class="reference internal" href="../library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>, then the
 <em>exc</em> argument is the type of exception that will be raised (usually
 <a class="reference internal" href="../library/exceptions.html#IndexError" title="IndexError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> or <a class="reference internal" href="../library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>).  If <em>exc</em> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, then the
 exception is cleared and the value is clipped to <code class="docutils literal notranslate"><span class="pre">PY_SSIZE_T_MIN</span></code> for a negative
@@ -561,7 +561,7 @@ This function always succeeds.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

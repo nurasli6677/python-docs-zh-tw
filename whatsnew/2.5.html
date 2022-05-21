@@ -945,7 +945,7 @@ to be able to remove the string-exception feature in a few releases.</p>
 </section>
 <section id="pep-353-using-ssize-t-as-the-index-type">
 <span id="pep-353"></span><h2>PEP 353: Using ssize_t as the index type<a class="headerlink" href="#pep-353-using-ssize-t-as-the-index-type" title="本標題的永久連結">¶</a></h2>
-<p>A wide-ranging change to Python's C API, using a new  <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> type
+<p>A wide-ranging change to Python's C API, using a new  <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> type
 definition instead of <span class="xref c c-texpr"><span class="kt">int</span></span>,  will permit the interpreter to handle more
 data on 64-bit platforms. This change doesn't affect Python's capacity on 32-bit
 platforms.</p>
@@ -973,14 +973,14 @@ the transition now, while the number of 64-bit users is still relatively small.
 be more painful then.)</p>
 <p>This change most strongly affects authors of C extension modules.   Python
 strings and container types such as lists and tuples  now use
-<code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> to store their size.   Functions such as
-<a class="reference internal" href="../c-api/list.html#c.PyList_Size" title="PyList_Size"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyList_Size()</span></code></a>  now return <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>.  Code in extension modules
-may therefore need to have some variables changed to <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>.</p>
+<a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> to store their size.   Functions such as
+<a class="reference internal" href="../c-api/list.html#c.PyList_Size" title="PyList_Size"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyList_Size()</span></code></a>  now return <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.  Code in extension modules
+may therefore need to have some variables changed to <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.</p>
 <p>The <a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a> and <a class="reference internal" href="../c-api/arg.html#c.Py_BuildValue" title="Py_BuildValue"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_BuildValue()</span></code></a> functions have a new
-conversion code, <code class="docutils literal notranslate"><span class="pre">n</span></code>, for <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>.   <a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a>'s
+conversion code, <code class="docutils literal notranslate"><span class="pre">n</span></code>, for <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.   <a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a>'s
 <code class="docutils literal notranslate"><span class="pre">s#</span></code> and <code class="docutils literal notranslate"><span class="pre">t#</span></code> still output <span class="xref c c-texpr"><span class="kt">int</span></span> by default, but you can define the
 macro  <code class="xref c c-macro docutils literal notranslate"><span class="pre">PY_SSIZE_T_CLEAN</span></code> before including <code class="file docutils literal notranslate"><span class="pre">Python.h</span></code>  to make
-them return <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>.</p>
+them return <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.</p>
 <p><span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0353/"><strong>PEP 353</strong></a> has a section on conversion guidelines that  extension authors should
 read to learn about supporting 64-bit platforms.</p>
 <div class="admonition seealso">
@@ -1699,7 +1699,7 @@ ElementTree 1.2.6.    The <code class="xref py py-mod docutils literal notransla
 included.</p>
 <p>The rest of this section will provide a brief overview of using ElementTree.
 Full documentation for ElementTree is available at
-<a class="reference external" href="http://effbot.org/zone/element-index.htm">http://effbot.org/zone/element-index.htm</a>.</p>
+<a class="reference external" href="https://web.archive.org/web/20201124024954/http://effbot.org/zone/element-index.htm">https://web.archive.org/web/20201124024954/http://effbot.org/zone/element-index.htm</a>.</p>
 <p>ElementTree represents an XML document as a tree of element nodes. The text
 content of the document is stored as the <code class="xref py py-attr docutils literal notranslate"><span class="pre">text</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">tail</span></code>
 attributes of  (This is one of the major differences between ElementTree and
@@ -1812,7 +1812,7 @@ read the package's official documentation for more details.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference external" href="http://effbot.org/zone/element-index.htm">http://effbot.org/zone/element-index.htm</a></dt><dd><p>Official documentation for ElementTree.</p>
+<dt><a class="reference external" href="https://web.archive.org/web/20201124024954/http://effbot.org/zone/element-index.htm">https://web.archive.org/web/20201124024954/http://effbot.org/zone/element-index.htm</a></dt><dd><p>Official documentation for ElementTree.</p>
 </dd>
 </dl>
 </div>
@@ -2002,7 +2002,7 @@ analysis found about 60 bugs that  were quickly fixed.  Many of the bugs were
 refcounting problems, often occurring in error-handling code.  See
 <a class="reference external" href="https://scan.coverity.com">https://scan.coverity.com</a> for the statistics.</p></li>
 <li><p>The largest change to the C API came from <span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0353/"><strong>PEP 353</strong></a>, which modifies the
-interpreter to use a <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code> type definition instead of
+interpreter to use a <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a> type definition instead of
 <span class="xref c c-texpr"><span class="kt">int</span></span>.  See the earlier section <a class="reference internal" href="#pep-353"><span class="std std-ref">PEP 353: Using ssize_t as the index type</span></a> for a discussion of this
 change.</p></li>
 <li><p>The design of the bytecode compiler has changed a great deal,  no longer
@@ -2105,7 +2105,7 @@ the following:</p>
 <li><p>MacOS X: an <code class="xref std std-option docutils literal notranslate"><span class="pre">--enable-universalsdk</span></code> switch was added to the
 <strong class="program">configure</strong> script that compiles the interpreter as a universal binary
 able to run on both PowerPC and Intel processors. (Contributed by Ronald
-Oussoren; <a class="reference external" href="https://bugs.python.org/issue2573">bpo-2573</a>.)</p></li>
+Oussoren; <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=2573">bpo-2573</a>.)</p></li>
 <li><p>Windows: <code class="file docutils literal notranslate"><span class="pre">.dll</span></code> is no longer supported as a filename extension for
 extension modules.  <code class="file docutils literal notranslate"><span class="pre">.pyd</span></code> is now the only filename extension that will be
 searched for.</p></li>
@@ -2144,7 +2144,7 @@ have a <code class="xref py py-attr docutils literal notranslate"><span class="p
 limited set of URL paths; the default is to allow only <code class="docutils literal notranslate"><span class="pre">'/'</span></code> and <code class="docutils literal notranslate"><span class="pre">'/RPC2'</span></code>.
 Setting  <code class="xref py py-attr docutils literal notranslate"><span class="pre">rpc_paths</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code> or an empty tuple disables  this path
 checking.</p></li>
-<li><p>C API: Many functions now use <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>  instead of <span class="xref c c-texpr"><span class="kt">int</span></span> to
+<li><p>C API: Many functions now use <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>  instead of <span class="xref c c-texpr"><span class="kt">int</span></span> to
 allow processing more data on 64-bit machines.  Extension code may need to make
 the same change to avoid warnings and to support 64-bit machines.  See the
 earlier section <a class="reference internal" href="#pep-353"><span class="std std-ref">PEP 353: Using ssize_t as the index type</span></a> for a discussion of this change.</p></li>
@@ -2302,7 +2302,7 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

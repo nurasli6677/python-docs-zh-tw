@@ -699,14 +699,15 @@ bytes, str, int, float and <code class="docutils literal notranslate"><span clas
 <dl class="py method">
 <dt class="sig sig-object py" id="sqlite3.Connection.create_collation">
 <span class="sig-name descname"><span class="pre">create_collation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sqlite3.Connection.create_collation" title="本定義的永久連結">¶</a></dt>
-<dd><p>Creates a collation with the specified <em>name</em> and <em>callable</em>. The callable will
-be passed two string arguments. It should return -1 if the first is ordered
-lower than the second, 0 if they are ordered equal and 1 if the first is ordered
-higher than the second.  Note that this controls sorting (ORDER BY in SQL) so
-your comparisons don't affect other SQL operations.</p>
-<p>Note that the callable will get its parameters as Python bytestrings, which will
-normally be encoded in UTF-8.</p>
-<p>The following example shows a custom collation that sorts &quot;the wrong way&quot;:</p>
+<dd><p>Create a collation named <em>name</em> using the collating function <em>callable</em>.
+<em>callable</em> is passed two <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></a> arguments,
+and it should return an <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">integer</span></code></a>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> if the first is ordered higher than the second</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-1</span></code> if the first is ordered lower than the second</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> if they are ordered equal</p></li>
+</ul>
+<p>The following example shows a reverse sorting collation:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">collate_reverse</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">):</span>
@@ -729,10 +730,7 @@ normally be encoded in UTF-8.</p>
 <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>To remove a collation, call <code class="docutils literal notranslate"><span class="pre">create_collation</span></code> with <code class="docutils literal notranslate"><span class="pre">None</span></code> as callable:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">con</span><span class="o">.</span><span class="n">create_collation</span><span class="p">(</span><span class="s2">&quot;reverse&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>Remove a collation function by setting <em>callable</em> to <a class="reference internal" href="constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1917,7 +1915,7 @@ extension support, you must pass the
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

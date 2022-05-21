@@ -121,7 +121,6 @@
 <li><a class="reference internal" href="#additional-modules">4.10. Additional modules</a><ul>
 <li><a class="reference internal" href="#pywin32">4.10.1. PyWin32</a></li>
 <li><a class="reference internal" href="#cx-freeze">4.10.2. cx_Freeze</a></li>
-<li><a class="reference internal" href="#wconio">4.10.3. WConio</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#compiling-python-on-windows">4.11. 編譯 Python 在 Windows</a></li>
@@ -570,13 +569,13 @@ subdirectory. By default, the subdirectory is named the same as the package,
 and without the <code class="docutils literal notranslate"><span class="pre">-ExcludeVersion</span></code> option this name will include the specific
 version installed. Inside the subdirectory is a <code class="docutils literal notranslate"><span class="pre">tools</span></code> directory that
 contains the Python installation:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Without -ExcludeVersion
-&gt; .\python.3.5.2\tools\python.exe -V
-Python 3.5.2
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="go"># Without -ExcludeVersion</span>
+<span class="gp">&gt;</span> .\python.3.5.2\tools\python.exe -V
+<span class="go">Python 3.5.2</span>
 
-# With -ExcludeVersion
-&gt; .\python\tools\python.exe -V
-Python 3.5.2
+<span class="go"># With -ExcludeVersion</span>
+<span class="gp">&gt;</span> .\python\tools\python.exe -V
+<span class="go">Python 3.5.2</span>
 </pre></div>
 </div>
 <p>In general, nuget packages are not upgradeable, and newer versions should be
@@ -607,7 +606,7 @@ optimized <code class="docutils literal notranslate"><span class="pre">.pyc</spa
 dependants, such as Idle), pip and the Python documentation are not included.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>The embedded distribution does not include the <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Microsoft C Runtime</a> and it is
+<p>The embedded distribution does not include the <a class="reference external" href="https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist#visual-studio-2015-2017-2019-and-2022">Microsoft C Runtime</a> and it is
 the responsibility of the application installer to provide this. The
 runtime may have already been installed on a user's system previously or
 automatically via Windows Update, and can be detected by finding
@@ -714,23 +713,19 @@ System variables, you need non-restricted access to your machine
 <p class="admonition-title">備註</p>
 <p>Windows will concatenate User variables <em>after</em> System variables, which may
 cause unexpected results when modifying <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>.</p>
-<p>The <span class="target" id="index-7"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> variable is used by all versions of Python 2 and
-Python 3, so you should not permanently configure this variable unless it
-only includes code that is compatible with all of your installed Python
+<p>The <span class="target" id="index-7"></span><a class="reference internal" href="cmdline.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a> variable is used by all versions of Python,
+so you should not permanently configure it unless the listed paths
+only include code that is compatible with all of your installed Python
 versions.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://www.microsoft.com/en-us/wdsi/help/folder-variables">https://www.microsoft.com/en-us/wdsi/help/folder-variables</a></dt><dd><p>環境變數於 Windows NT</p>
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables</a></dt><dd><p>Overview of environment variables on Windows</p>
 </dd>
-<dt><a class="reference external" href="https://technet.microsoft.com/en-us/library/cc754250.aspx">https://technet.microsoft.com/en-us/library/cc754250.aspx</a></dt><dd><p>The SET command, for temporarily modifying environment variables</p>
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1</a></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">set</span></code> command, for temporarily modifying environment variables</p>
 </dd>
-<dt><a class="reference external" href="https://technet.microsoft.com/en-us/library/cc755104.aspx">https://technet.microsoft.com/en-us/library/cc755104.aspx</a></dt><dd><p>The SETX command, for permanently modifying environment variables</p>
-</dd>
-<dt><a class="reference external" href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp">https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp</a></dt><dd><p>如何管理環境變數於 Windows XP</p>
-</dd>
-<dt><a class="reference external" href="https://www.chem.gla.ac.uk/~louis/software/faq/q1.html">https://www.chem.gla.ac.uk/~louis/software/faq/q1.html</a></dt><dd><p>設定環境變數－Louis J. Farrugia</p>
+<dt><a class="reference external" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx</a></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">setx</span></code> command, for permanently modifying environment variables</p>
 </dd>
 </dl>
 </div>
@@ -825,18 +820,18 @@ launcher is available, execute the following command in Command Prompt:</p>
 <p>You should find that the latest version of Python you have installed is
 started - it can be exited as normal, and any additional command-line
 arguments specified will be sent directly to Python.</p>
-<p>If you have multiple versions of Python installed (e.g., 2.7 and 3.10) you
-will have noticed that Python 3.10 was started - to launch Python 2.7, try
+<p>If you have multiple versions of Python installed (e.g., 3.7 and 3.10) you
+will have noticed that Python 3.10 was started - to launch Python 3.7, try
 the command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>py -2.7
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>py -3.7
 </pre></div>
 </div>
-<p>If you want the latest version of Python 2.x you have installed, try the
+<p>If you want the latest version of Python 2 you have installed, try the
 command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>py -2
 </pre></div>
 </div>
-<p>You should find the latest version of Python 2.x starts.</p>
+<p>You should find the latest version of Python 3.x starts.</p>
 <p>If you see the following error, you do not have the launcher installed:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;py&#39; is not recognized as an internal or external command,
 operable program or batch file.
@@ -844,10 +839,11 @@ operable program or batch file.
 </div>
 <p>Per-user installations of Python do not add the launcher to <span class="target" id="index-17"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>
 unless the option was selected on installation.</p>
+<p>The command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>py --list
 </pre></div>
 </div>
-<p>You should see the currently installed versions of Python.</p>
+<p>displays the currently installed version(s) of Python.</p>
 </section>
 <section id="virtual-environments">
 <h4><span class="section-number">4.8.1.2. </span>虛擬環境（Virtual environment）<a class="headerlink" href="#virtual-environments" title="本標題的永久連結">¶</a></h4>
@@ -881,9 +877,9 @@ is printed.  Now try changing the first line to be:</p>
 </div>
 <p>Re-executing the command should now print the latest Python 3.x information.
 As with the above command-line examples, you can specify a more explicit
-version qualifier.  Assuming you have Python 2.6 installed, try changing the
-first line to <code class="docutils literal notranslate"><span class="pre">#!</span> <span class="pre">python2.6</span></code> and you should find the 2.6 version
-information printed.</p>
+version qualifier.  Assuming you have Python 3.7 installed, try changing
+the first line to <code class="docutils literal notranslate"><span class="pre">#!</span> <span class="pre">python3.7</span></code> and you should find the 3.10
+version information printed.</p>
 <p>Note that unlike interactive use, a bare &quot;python&quot; will use the latest
 version of Python 2.x that you have installed.  This is for backward
 compatibility and for compatibility with Unix, where the command <code class="docutils literal notranslate"><span class="pre">python</span></code>
@@ -929,8 +925,8 @@ shebang lines starting with <code class="docutils literal notranslate"><span cla
 <p>Any of the above virtual commands can be suffixed with an explicit version
 (either just the major version, or the major and minor version).
 Furthermore the 32-bit version can be requested by adding &quot;-32&quot; after the
-minor version. I.e. <code class="docutils literal notranslate"><span class="pre">/usr/bin/python2.7-32</span></code> will request usage of the
-32-bit python 2.7.</p>
+minor version. I.e. <code class="docutils literal notranslate"><span class="pre">/usr/bin/python3.7-32</span></code> will request usage of the
+32-bit python 3.7.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入: </span>Beginning with python launcher 3.7 it is possible to request 64-bit version
 by the &quot;-64&quot; suffix. Furthermore it is possible to specify a major and
@@ -1001,16 +997,16 @@ used on a version specifier to change this behaviour.</p>
 <li><p>If no relevant options are set, the commands <code class="docutils literal notranslate"><span class="pre">python</span></code> and
 <code class="docutils literal notranslate"><span class="pre">python2</span></code> will use the latest Python 2.x version installed and
 the command <code class="docutils literal notranslate"><span class="pre">python3</span></code> will use the latest Python 3.x installed.</p></li>
-<li><p>The commands <code class="docutils literal notranslate"><span class="pre">python3.1</span></code> and <code class="docutils literal notranslate"><span class="pre">python2.7</span></code> will not consult any
+<li><p>The command <code class="docutils literal notranslate"><span class="pre">python3.7</span></code> will not consult any
 options at all as the versions are fully specified.</p></li>
 <li><p>If <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3</span></code>, the commands <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">python3</span></code> will both use
 the latest installed Python 3 version.</p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3.1-32</span></code>, the command <code class="docutils literal notranslate"><span class="pre">python</span></code> will use the 32-bit
-implementation of 3.1 whereas the command <code class="docutils literal notranslate"><span class="pre">python3</span></code> will use the latest
+<li><p>If <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3.7-32</span></code>, the command <code class="docutils literal notranslate"><span class="pre">python</span></code> will use the 32-bit
+implementation of 3.7 whereas the command <code class="docutils literal notranslate"><span class="pre">python3</span></code> will use the latest
 installed Python (PY_PYTHON was not considered at all as a major
 version was specified.)</p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3</span></code> and <code class="docutils literal notranslate"><span class="pre">PY_PYTHON3=3.1</span></code>, the commands
-<code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">python3</span></code> will both use specifically 3.1</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3</span></code> and <code class="docutils literal notranslate"><span class="pre">PY_PYTHON3=3.7</span></code>, the commands
+<code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">python3</span></code> will both use specifically 3.7</p></li>
 </ul>
 <p>In addition to environment variables, the same settings can be configured
 in the .INI file used by the launcher.  The section in the INI file is
@@ -1020,19 +1016,19 @@ the key names in the INI file are case insensitive.)  The contents of
 an environment variable will override things specified in the INI file.</p>
 <p>For example:</p>
 <ul class="simple">
-<li><p>Setting <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3.1</span></code> is equivalent to the INI file containing:</p></li>
+<li><p>Setting <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3.7</span></code> is equivalent to the INI file containing:</p></li>
 </ul>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[defaults]</span><span class="w"></span>
-<span class="na">python</span><span class="o">=</span><span class="s">3.1</span><span class="w"></span>
+<span class="na">python</span><span class="o">=</span><span class="s">3.7</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Setting <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3</span></code> and <code class="docutils literal notranslate"><span class="pre">PY_PYTHON3=3.1</span></code> is equivalent to the INI file
+<li><p>Setting <code class="docutils literal notranslate"><span class="pre">PY_PYTHON=3</span></code> and <code class="docutils literal notranslate"><span class="pre">PY_PYTHON3=3.7</span></code> is equivalent to the INI file
 containing:</p></li>
 </ul>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[defaults]</span><span class="w"></span>
 <span class="na">python</span><span class="o">=</span><span class="s">3</span><span class="w"></span>
-<span class="na">python3</span><span class="o">=</span><span class="s">3.1</span><span class="w"></span>
+<span class="na">python3</span><span class="o">=</span><span class="s">3.7</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1170,13 +1166,13 @@ and external, and snippets exist to use these features.</p>
 is a collection of modules for advanced Windows-specific support.  This includes
 utilities for:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/desktop/com/component-object-model--com--portal">Component Object Model</a>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/win32/com/component-object-model--com--portal">Component Object Model</a>
 (COM)</p></li>
 <li><p>Win32 API calls</p></li>
 <li><p>登錄檔（Registry）</p></li>
 <li><p>事件日誌（Event log）</p></li>
-<li><p><a class="reference external" href="https://msdn.microsoft.com/en-us/library/fe1cf721%28VS.80%29.aspx">Microsoft Foundation Classes</a> (MFC)
-user interfaces</p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/cpp/mfc/mfc-desktop-applications">Microsoft Foundation Classes</a>
+(MFC) user interfaces</p></li>
 </ul>
 <p><a class="reference external" href="https://web.archive.org/web/20060524042422/https://www.python.org/windows/pythonwin/">PythonWin</a> is a sample MFC application
 shipped with PyWin32.  It is an embeddable IDE with a built-in debugger.</p>
@@ -1185,7 +1181,7 @@ shipped with PyWin32.  It is an embeddable IDE with a built-in debugger.</p>
 <dl class="simple">
 <dt><a class="reference external" href="http://timgolden.me.uk/python/win32_how_do_i.html">Win32 How Do I...?</a></dt><dd><p>由 Tim Golden 所著</p>
 </dd>
-<dt><a class="reference external" href="http://www.boddie.org.uk/python/COM.html">Python and COM</a></dt><dd><p>由 David 與 Paul Boddie 所著</p>
+<dt><a class="reference external" href="https://www.boddie.org.uk/python/COM.html">Python and COM</a></dt><dd><p>由 David 與 Paul Boddie 所著</p>
 </dd>
 </dl>
 </div>
@@ -1198,14 +1194,6 @@ executable Windows programs (<code class="file docutils literal notranslate"><em
 you can distribute your application without requiring your users to install
 Python.</p>
 </section>
-<section id="wconio">
-<h3><span class="section-number">4.10.3. </span>WConio<a class="headerlink" href="#wconio" title="本標題的永久連結">¶</a></h3>
-<p>Since Python's advanced terminal handling layer, <a class="reference internal" href="../library/curses.html#module-curses" title="curses: An interface to the curses library, providing portable terminal handling. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a>, is restricted to
-Unix-like systems, there is a library exclusive to Windows as well: Windows
-Console I/O for Python.</p>
-<p><a class="reference external" href="http://newcenturycomputers.net/projects/wconio.html">WConio</a> is a wrapper for
-Turbo-C's <code class="file docutils literal notranslate"><span class="pre">CONIO.H</span></code>, used to create text user interfaces.</p>
-</section>
 </section>
 <section id="compiling-python-on-windows">
 <h2><span class="section-number">4.11. </span>編譯 Python 在 Windows<a class="headerlink" href="#compiling-python-on-windows" title="本標題的永久連結">¶</a></h2>
@@ -1213,19 +1201,10 @@ Turbo-C's <code class="file docutils literal notranslate"><span class="pre">CONI
 <a class="reference external" href="https://www.python.org/downloads/source/">source</a>. You can download either the
 latest release's source or just grab a fresh <a class="reference external" href="https://devguide.python.org/setup/#getting-the-source-code">checkout</a>.</p>
 <p>The source tree contains a build solution and project files for Microsoft
-Visual Studio 2015, which is the compiler used to build the official Python
+Visual Studio, which is the compiler used to build the official Python
 releases. These files are in the <code class="file docutils literal notranslate"><span class="pre">PCbuild</span></code> directory.</p>
 <p>Check <code class="file docutils literal notranslate"><span class="pre">PCbuild/readme.txt</span></code> for general information on the build process.</p>
 <p>For extension modules, consult <a class="reference internal" href="../extending/windows.html#building-on-windows"><span class="std std-ref">Building C and C++ Extensions on Windows</span></a>.</p>
-<div class="admonition seealso">
-<p class="admonition-title">也參考</p>
-<dl class="simple">
-<dt><a class="reference external" href="http://sebsauvage.net/python/mingw.html">Python + Windows + distutils + SWIG + gcc MinGW</a></dt><dd><p>or &quot;Creating Python extensions in C/C++ with SWIG and compiling them with
-MinGW gcc under Windows&quot; or &quot;Installing Python extension with distutils
-and without Microsoft Visual C++&quot; by Sébastien Sauvage, 2003</p>
-</dd>
-</dl>
-</div>
 </section>
 <section id="other-platforms">
 <h2><span class="section-number">4.12. </span>其他平台<a class="headerlink" href="#other-platforms" title="本標題的永久連結">¶</a></h2>
@@ -1233,9 +1212,12 @@ and without Microsoft Visual C++&quot; by Sébastien Sauvage, 2003</p>
 earlier are no longer supported (due to the lack of users or developers).
 Check <span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0011/"><strong>PEP 11</strong></a> for details on all unsupported platforms.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://pythonce.sourceforge.net/">Windows CE</a> is still supported.</p></li>
-<li><p>The <a class="reference external" href="https://cygwin.com/">Cygwin</a> installer offers to install the Python
-interpreter as well (cf. <a class="reference external" href="ftp://ftp.uni-erlangen.de/pub/pc/gnuwin32/cygwin/mirrors/cygnus/release/python">Cygwin package source</a>, <a class="reference external" href="http://www.tishler.net/jason/software/python/">Maintainer releases</a>)</p></li>
+<li><p><a class="reference external" href="http://pythonce.sourceforge.net/">Windows CE</a> is
+<a class="reference external" href="https://github.com/python/cpython/issues/71542">no longer supported</a>
+since Python 3 (if it ever was).</p></li>
+<li><p>The <a class="reference external" href="https://cygwin.com/">Cygwin</a> installer offers to install the
+<a class="reference external" href="https://cygwin.com/packages/summary/python3.html">Python interpreter</a>
+as well</p></li>
 </ul>
 <p>See <a class="reference external" href="https://www.python.org/downloads/windows/">Python for Windows</a>
 for detailed information about platforms with pre-compiled installers.</p>
@@ -1300,7 +1282,6 @@ for detailed information about platforms with pre-compiled installers.</p>
 <li><a class="reference internal" href="#additional-modules">4.10. Additional modules</a><ul>
 <li><a class="reference internal" href="#pywin32">4.10.1. PyWin32</a></li>
 <li><a class="reference internal" href="#cx-freeze">4.10.2. cx_Freeze</a></li>
-<li><a class="reference internal" href="#wconio">4.10.3. WConio</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#compiling-python-on-windows">4.11. 編譯 Python 在 Windows</a></li>
@@ -1397,7 +1378,7 @@ for detailed information about platforms with pre-compiled installers.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

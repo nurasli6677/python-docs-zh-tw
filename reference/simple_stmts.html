@@ -722,9 +722,9 @@ otherwise using the attribute name</p></li>
 </ol>
 <p>範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">foo</span>                 <span class="c1"># foo imported and bound locally</span>
-<span class="kn">import</span> <span class="nn">foo.bar.baz</span>         <span class="c1"># foo.bar.baz imported, foo bound locally</span>
-<span class="kn">import</span> <span class="nn">foo.bar.baz</span> <span class="k">as</span> <span class="nn">fbb</span>  <span class="c1"># foo.bar.baz imported and bound as fbb</span>
-<span class="kn">from</span> <span class="nn">foo.bar</span> <span class="kn">import</span> <span class="n">baz</span>    <span class="c1"># foo.bar.baz imported and bound as baz</span>
+<span class="kn">import</span> <span class="nn">foo.bar.baz</span>         <span class="c1"># foo, foo.bar, and foo.bar.baz imported, foo bound locally</span>
+<span class="kn">import</span> <span class="nn">foo.bar.baz</span> <span class="k">as</span> <span class="nn">fbb</span>  <span class="c1"># foo, foo.bar, and foo.bar.baz imported, foo.bar.baz bound as fbb</span>
+<span class="kn">from</span> <span class="nn">foo.bar</span> <span class="kn">import</span> <span class="n">baz</span>    <span class="c1"># foo, foo.bar, and foo.bar.baz imported, foo.bar.baz bound as baz</span>
 <span class="kn">from</span> <span class="nn">foo</span> <span class="kn">import</span> <span class="n">attr</span>       <span class="c1"># foo imported and foo.attr bound as attr</span>
 </pre></div>
 </div>
@@ -1008,7 +1008,7 @@ pre-existing bindings in the local scope.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

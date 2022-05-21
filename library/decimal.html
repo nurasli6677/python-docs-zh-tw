@@ -706,8 +706,9 @@ given number.  The result is correctly rounded using the
 
 <dl class="py method">
 <dt class="sig sig-object py" id="decimal.Decimal.from_float">
-<span class="sig-name descname"><span class="pre">from_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decimal.Decimal.from_float" title="本定義的永久連結">¶</a></dt>
-<dd><p>Classmethod that converts a float to a decimal number, exactly.</p>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decimal.Decimal.from_float" title="本定義的永久連結">¶</a></dt>
+<dd><p>Alternative constructor that only accepts instances of <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> or
+<a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.</p>
 <p>Note <cite>Decimal.from_float(0.1)</cite> is not the same as <cite>Decimal('0.1')</cite>.
 Since 0.1 is not exactly representable in binary floating point, the
 value is stored as the nearest representable value which is
@@ -2576,7 +2577,7 @@ are expected to be exact.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

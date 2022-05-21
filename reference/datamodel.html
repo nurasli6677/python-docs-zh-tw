@@ -1231,7 +1231,7 @@ hashing the tuple. Example:</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p><a class="reference internal" href="../library/functions.html#hash" title="hash"><code class="xref py py-func docutils literal notranslate"><span class="pre">hash()</span></code></a> truncates the value returned from an object's custom
-<a class="reference internal" href="#object.__hash__" title="object.__hash__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__hash__()</span></code></a> method to the size of a <code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code>.  This is
+<a class="reference internal" href="#object.__hash__" title="object.__hash__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__hash__()</span></code></a> method to the size of a <a class="reference internal" href="../c-api/intro.html#c.Py_ssize_t" title="Py_ssize_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_ssize_t</span></code></a>.  This is
 typically 8 bytes on 64-bit builds and 4 bytes on 32-bit builds.  If an
 object's   <a class="reference internal" href="#object.__hash__" title="object.__hash__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__hash__()</span></code></a> must interoperate on builds of different bit
 sizes, be sure to check the width on all supported builds.  An easy way
@@ -2850,7 +2850,7 @@ supported, which is why the reflected method is not called.</p>
 <br />
     <br />
 
-    最後更新於 4月 21, 2022。
+    最後更新於 5月 21, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
