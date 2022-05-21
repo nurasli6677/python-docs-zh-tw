@@ -859,12 +859,7 @@ with the result after successfully reading input.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="issubclass">
 <span class="sig-name descname"><span class="pre">issubclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classinfo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#issubclass" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>class</em> is a subclass (direct, indirect, or <a class="reference internal" href="../glossary.html#term-abstract-base-class"><span class="xref std std-term">virtual</span></a>) of <em>classinfo</em>.  A
-class is considered a subclass of itself. <em>classinfo</em> may be a tuple of class
-objects (or recursively, other such tuples)
-or a <a class="reference internal" href="stdtypes.html#types-union"><span class="std std-ref">Union Type</span></a>, in which case return <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>class</em> is a
-subclass of any entry in <em>classinfo</em>.  In any other case, a <a class="reference internal" href="exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>
-exception is raised.</p>
+<dd><p>如果 <em>class</em> 是 <em>classinfo</em> 的 subclass（直接、間接或 <a class="reference internal" href="../glossary.html#term-abstract-base-class"><span class="xref std std-term">virtual</span></a>），則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。<em>classinfo</em> 可以是 class 物件的 tuple（或遞迴地其他類似 tuple）或是一個 <a class="reference internal" href="stdtypes.html#types-union"><span class="std std-ref">Union Type</span></a>，此時若 <em>class</em> 是 <em>classinfo</em> 中任一元素的 subclass 時則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。其他情況，會觸發 <a class="reference internal" href="exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.10 版本變更: </span><em>classinfo</em> can be a <a class="reference internal" href="stdtypes.html#types-union"><span class="std std-ref">Union Type</span></a>.</p>
 </div>

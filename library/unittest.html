@@ -193,12 +193,9 @@
 <hr class="docutils" />
 <p>（假如你已經熟悉相關基礎的測試概念，你可能會希望跳過以下段落，直接參考 <a class="reference internal" href="#assert-methods"><span class="std std-ref">assert 方法清單</span></a>。）</p>
 <p><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 原生的單元測試框架最初由 JUnit 開發，和其他程式語言相似有主要的單元測試框架。支援自動化測試，對測試分享安裝與關閉程式碼，集合所有匯總的測試，並且獨立各個測試報告框架。</p>
-<p><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 用來作為實現支援一些重要的物件導向方法的概念。</p>
+<p><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 用來作為實現支援一些重要的物件導向方法的概念：</p>
 <dl class="simple">
-<dt>test fixture</dt><dd><p>A <em class="dfn">test fixture</em> represents the preparation needed to perform one or more
-tests, and any associated cleanup actions.  This may involve, for example,
-creating temporary or proxy databases, directories, or starting a server
-process.</p>
+<dt>test fixture</dt><dd><p>一個 <em class="dfn">test fixture</em> 代表執行一個或多個測試所需要的準備，以及其他相關清理操作，例如可以是建立臨時性的或是代理用 (proxy) 資料庫、目錄、或是啟動一個伺服器程序。</p>
 </dd>
 <dt>test case（測試用例）</dt><dd><p>一個 <em class="dfn">test case</em> 是一個獨立的單元測試。這是用來確認一個特定設定的輸入的特殊回饋。 <a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 提供一個基礎類別，類別 <a class="reference internal" href="#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a>，可以用來建立一個新的測試條例。</p>
 </dd>
@@ -214,8 +211,7 @@ process.</p>
 </dd>
 <dt><a class="reference external" href="https://web.archive.org/web/20150315073817/http://www.xprogramming.com/testfram.htm">Simple Smalltalk Testing: With Patterns</a></dt><dd><p>Kent Beck 的原始論文討論使用 <a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 這樣模式的測試框架。</p>
 </dd>
-<dt><a class="reference external" href="https://docs.pytest.org/">pytest</a></dt><dd><p>Third-party unittest framework with a lighter-weight syntax for writing
-tests.  For example, <code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">func(10)</span> <span class="pre">==</span> <span class="pre">42</span></code>.</p>
+<dt><a class="reference external" href="https://docs.pytest.org/">pytest</a></dt><dd><p>第三方的單元測試框架，但在撰寫測試時使用更輕量的語法。例如： <code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">func(10)</span> <span class="pre">==</span> <span class="pre">42</span></code>。</p>
 </dd>
 <dt><a class="reference external" href="https://wiki.python.org/moin/PythonTestingToolsTaxonomy">The Python Testing Tools Taxonomy</a></dt><dd><p>一份詳細的 Python 測試工具列表，包含 functional testing 框架和mock object 函式庫。</p>
 </dd>
@@ -312,7 +308,7 @@ They are covered in more detail in the section <a class="reference internal" hre
 </div>
 <section id="command-line-options">
 <h3>命令列模式選項<a class="headerlink" href="#command-line-options" title="本標題的永久連結">¶</a></h3>
-<p><strong class="program">unittest</strong> supports these command-line options:</p>
+<p><strong class="program">unittest</strong> 支援以下命令列選項：</p>
 <dl class="std cmdoption">
 <dt class="sig sig-object std" id="cmdoption-unittest-b">
 <span id="cmdoption-unittest-buffer"></span><span class="sig-name descname"><span class="pre">-b</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--buffer</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-unittest-b" title="本定義的永久連結">¶</a></dt>
