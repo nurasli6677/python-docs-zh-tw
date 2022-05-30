@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Developing with asyncio &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -167,13 +168,13 @@
           <div class="body" role="main">
             
   <section id="developing-with-asyncio">
-<span id="asyncio-dev"></span><h1>Developing with asyncio<a class="headerlink" href="#developing-with-asyncio" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-dev"></span><h1>Developing with asyncio<a class="headerlink" href="#developing-with-asyncio" title="Permalink to this heading">¶</a></h1>
 <p>Asynchronous programming is different from classic &quot;sequential&quot;
 programming.</p>
 <p>This page lists common mistakes and traps and explains how
 to avoid them.</p>
 <section id="debug-mode">
-<span id="asyncio-debug-mode"></span><h2>Debug Mode<a class="headerlink" href="#debug-mode" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-debug-mode"></span><h2>Debug Mode<a class="headerlink" href="#debug-mode" title="Permalink to this heading">¶</a></h2>
 <p>By default asyncio runs in production mode.  In order to ease
 the development asyncio has a <em>debug mode</em>.</p>
 <p>There are several ways to enable asyncio debug mode:</p>
@@ -211,7 +212,7 @@ minimum execution duration in seconds that is considered &quot;slow&quot;.</p></
 </ul>
 </section>
 <section id="concurrency-and-multithreading">
-<span id="asyncio-multithreading"></span><h2>Concurrency and Multithreading<a class="headerlink" href="#concurrency-and-multithreading" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-multithreading"></span><h2>Concurrency and Multithreading<a class="headerlink" href="#concurrency-and-multithreading" title="Permalink to this heading">¶</a></h2>
 <p>An event loop runs in a thread (typically the main thread) and executes
 all callbacks and Tasks in its thread.  While a Task is running in the
 event loop, no other Tasks can run in the same thread.  When a Task
@@ -261,7 +262,7 @@ with a <a class="reference internal" href="concurrent.futures.html#concurrent.fu
 code in a different process.</p>
 </section>
 <section id="running-blocking-code">
-<span id="asyncio-handle-blocking"></span><h2>Running Blocking Code<a class="headerlink" href="#running-blocking-code" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-handle-blocking"></span><h2>Running Blocking Code<a class="headerlink" href="#running-blocking-code" title="Permalink to this heading">¶</a></h2>
 <p>Blocking (CPU-bound) code should not be called directly.  For example,
 if a function performs a CPU-intensive calculation for 1 second,
 all concurrent asyncio Tasks and IO operations would be delayed
@@ -272,7 +273,7 @@ event loop.  See the <a class="reference internal" href="asyncio-eventloop.html#
 details.</p>
 </section>
 <section id="logging">
-<span id="asyncio-logger"></span><h2>Logging<a class="headerlink" href="#logging" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-logger"></span><h2>Logging<a class="headerlink" href="#logging" title="Permalink to this heading">¶</a></h2>
 <p>asyncio uses the <a class="reference internal" href="logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> module and all logging is performed
 via the <code class="docutils literal notranslate"><span class="pre">&quot;asyncio&quot;</span></code> logger.</p>
 <p>The default log level is <code class="xref py py-data docutils literal notranslate"><span class="pre">logging.INFO</span></code>, which can be easily
@@ -282,7 +283,7 @@ adjusted:</p>
 </div>
 </section>
 <section id="detect-never-awaited-coroutines">
-<span id="asyncio-coroutine-not-scheduled"></span><h2>Detect never-awaited coroutines<a class="headerlink" href="#detect-never-awaited-coroutines" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-coroutine-not-scheduled"></span><h2>Detect never-awaited coroutines<a class="headerlink" href="#detect-never-awaited-coroutines" title="Permalink to this heading">¶</a></h2>
 <p>When a coroutine function is called, but not awaited
 (e.g. <code class="docutils literal notranslate"><span class="pre">coro()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">coro()</span></code>)
 or the coroutine is not scheduled with <a class="reference internal" href="asyncio-task.html#asyncio.create_task" title="asyncio.create_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.create_task()</span></code></a>, asyncio
@@ -324,7 +325,7 @@ will emit a <a class="reference internal" href="exceptions.html#RuntimeWarning" 
 </div>
 </section>
 <section id="detect-never-retrieved-exceptions">
-<h2>Detect never-retrieved exceptions<a class="headerlink" href="#detect-never-retrieved-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>Detect never-retrieved exceptions<a class="headerlink" href="#detect-never-retrieved-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>If a <a class="reference internal" href="asyncio-future.html#asyncio.Future.set_exception" title="asyncio.Future.set_exception"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Future.set_exception()</span></code></a> is called but the Future object is
 never awaited on, the exception would never be propagated to the
 user code.  In this case, asyncio would emit a log message when the
@@ -421,6 +422,10 @@ traceback where the task was created:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -488,11 +493,11 @@ traceback where the task was created:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>re --- Regular expression operations &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -75,7 +76,12 @@
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code> --- Regular expression operations</a><ul>
 <li><a class="reference internal" href="#regular-expression-syntax">Regular Expression Syntax</a></li>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">模組內容</a><ul>
+<li><a class="reference internal" href="#flags">Flags</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#regular-expression-objects">Regular Expression Objects</a></li>
 <li><a class="reference internal" href="#match-objects">Match Objects</a></li>
 <li><a class="reference internal" href="#regular-expression-examples">Regular Expression Examples</a><ul>
@@ -176,7 +182,7 @@
           <div class="body" role="main">
             
   <section id="module-re">
-<span id="re-regular-expression-operations"></span><h1><a class="reference internal" href="#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> --- Regular expression operations<a class="headerlink" href="#module-re" title="本標題的永久連結">¶</a></h1>
+<span id="re-regular-expression-operations"></span><h1><a class="reference internal" href="#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> --- Regular expression operations<a class="headerlink" href="#module-re" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/re.py">Lib/re.py</a></p>
 <hr class="docutils" />
 <p>This module provides regular expression matching operations similar to
@@ -216,7 +222,7 @@ which has an API compatible with the standard library <a class="reference intern
 but offers additional functionality and a more thorough Unicode support.</p>
 </div>
 <section id="regular-expression-syntax">
-<span id="re-syntax"></span><h2>Regular Expression Syntax<a class="headerlink" href="#regular-expression-syntax" title="本標題的永久連結">¶</a></h2>
+<span id="re-syntax"></span><h2>Regular Expression Syntax<a class="headerlink" href="#regular-expression-syntax" title="Permalink to this heading">¶</a></h2>
 <p>A regular expression (or RE) specifies a set of strings that matches it; the
 functions in this module let you check if a particular string matches a given
 regular expression (or if a given regular expression matches a particular
@@ -459,10 +465,6 @@ the group were not named.</p>
 <code class="docutils literal notranslate"><span class="pre">(?P&lt;quote&gt;['&quot;]).*?(?P=quote)</span></code> (i.e. matching a string quoted with either
 single or double quotes):</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 47%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Context of reference to group &quot;quote&quot;</p></th>
 <th class="head"><p>Ways to reference it</p></th>
@@ -695,45 +697,17 @@ it expands to the named Unicode character (e.g. <code class="docutils literal no
 </div>
 </section>
 <section id="module-contents">
-<span id="contents-of-module-re"></span><h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<span id="contents-of-module-re"></span><h2>模組內容<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
 <p>The module defines several functions, constants, and an exception. Some of the
 functions are simplified versions of the full featured methods for compiled
 regular expressions.  Most non-trivial applications always use the compiled
 form.</p>
+<section id="flags">
+<h3>Flags<a class="headerlink" href="#flags" title="Permalink to this heading">¶</a></h3>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>Flag constants are now instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">RegexFlag</span></code>, which is a subclass of
 <a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a>.</p>
 </div>
-<dl class="py function">
-<dt class="sig sig-object py" id="re.compile">
-<span class="sig-prename descclassname"><span class="pre">re.</span></span><span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#re.compile" title="本定義的永久連結">¶</a></dt>
-<dd><p>Compile a regular expression pattern into a <a class="reference internal" href="#re-objects"><span class="std std-ref">regular expression object</span></a>, which can be used for matching using its
-<a class="reference internal" href="#re.Pattern.match" title="re.Pattern.match"><code class="xref py py-func docutils literal notranslate"><span class="pre">match()</span></code></a>, <a class="reference internal" href="#re.Pattern.search" title="re.Pattern.search"><code class="xref py py-func docutils literal notranslate"><span class="pre">search()</span></code></a> and other methods, described
-below.</p>
-<p>The expression's behaviour can be modified by specifying a <em>flags</em> value.
-Values can be any of the following variables, combined using bitwise OR (the
-<code class="docutils literal notranslate"><span class="pre">|</span></code> operator).</p>
-<p>The sequence</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">prog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>等價於：</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>but using <a class="reference internal" href="#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> and saving the resulting regular expression
-object for reuse is more efficient when the expression will be used several
-times in a single program.</p>
-<div class="admonition note">
-<p class="admonition-title">備註</p>
-<p>The compiled versions of the most recent patterns passed to
-<a class="reference internal" href="#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> and the module-level matching functions are cached, so
-programs that use only a few regular expressions at a time needn't worry
-about compiling regular expressions.</p>
-</div>
-</dd></dl>
-
 <dl class="py data">
 <dt class="sig sig-object py" id="re.A">
 <span class="sig-prename descclassname"><span class="pre">re.</span></span><span class="sig-name descname"><span class="pre">A</span></span><a class="headerlink" href="#re.A" title="本定義的永久連結">¶</a></dt>
@@ -847,6 +821,39 @@ decimal number are functionally equal:</p>
 </pre></div>
 </div>
 <p>Corresponds to the inline flag <code class="docutils literal notranslate"><span class="pre">(?x)</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="re.compile">
+<span class="sig-prename descclassname"><span class="pre">re.</span></span><span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#re.compile" title="本定義的永久連結">¶</a></dt>
+<dd><p>Compile a regular expression pattern into a <a class="reference internal" href="#re-objects"><span class="std std-ref">regular expression object</span></a>, which can be used for matching using its
+<a class="reference internal" href="#re.Pattern.match" title="re.Pattern.match"><code class="xref py py-func docutils literal notranslate"><span class="pre">match()</span></code></a>, <a class="reference internal" href="#re.Pattern.search" title="re.Pattern.search"><code class="xref py py-func docutils literal notranslate"><span class="pre">search()</span></code></a> and other methods, described
+below.</p>
+<p>The expression's behaviour can be modified by specifying a <em>flags</em> value.
+Values can be any of the following variables, combined using bitwise OR (the
+<code class="docutils literal notranslate"><span class="pre">|</span></code> operator).</p>
+<p>The sequence</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">prog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>等價於：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>but using <a class="reference internal" href="#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> and saving the resulting regular expression
+object for reuse is more efficient when the expression will be used several
+times in a single program.</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>The compiled versions of the most recent patterns passed to
+<a class="reference internal" href="#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> and the module-level matching functions are cached, so
+programs that use only a few regular expressions at a time needn't worry
+about compiling regular expressions.</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -1084,6 +1091,9 @@ are escaped. As a result, <code class="docutils literal notranslate"><span class
 <dd><p>Clear the regular expression cache.</p>
 </dd></dl>
 
+</section>
+<section id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h3>
 <dl class="py exception">
 <dt class="sig sig-object py" id="re.error">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">re.</span></span><span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#re.error" title="本定義的永久連結">¶</a></dt>
@@ -1128,8 +1138,9 @@ the following additional attributes:</p>
 </dd></dl>
 
 </section>
+</section>
 <section id="regular-expression-objects">
-<span id="re-objects"></span><h2>Regular Expression Objects<a class="headerlink" href="#regular-expression-objects" title="本標題的永久連結">¶</a></h2>
+<span id="re-objects"></span><h2>Regular Expression Objects<a class="headerlink" href="#regular-expression-objects" title="Permalink to this heading">¶</a></h2>
 <p>Compiled regular expression objects support the following methods and
 attributes:</p>
 <dl class="py method">
@@ -1265,7 +1276,7 @@ regular expression objects are considered atomic.</p>
 </div>
 </section>
 <section id="match-objects">
-<span id="id2"></span><h2>Match Objects<a class="headerlink" href="#match-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Match Objects<a class="headerlink" href="#match-objects" title="Permalink to this heading">¶</a></h2>
 <p>Match objects always have a boolean value of <code class="docutils literal notranslate"><span class="pre">True</span></code>.
 Since <a class="reference internal" href="#re.Pattern.match" title="re.Pattern.match"><code class="xref py py-meth docutils literal notranslate"><span class="pre">match()</span></code></a> and <a class="reference internal" href="#re.Pattern.search" title="re.Pattern.search"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search()</span></code></a> return <code class="docutils literal notranslate"><span class="pre">None</span></code>
 when there is no match, you can test whether there was a match with a simple
@@ -1484,9 +1495,9 @@ are considered atomic.</p>
 </div>
 </section>
 <section id="regular-expression-examples">
-<span id="re-examples"></span><h2>Regular Expression Examples<a class="headerlink" href="#regular-expression-examples" title="本標題的永久連結">¶</a></h2>
+<span id="re-examples"></span><h2>Regular Expression Examples<a class="headerlink" href="#regular-expression-examples" title="Permalink to this heading">¶</a></h2>
 <section id="checking-for-a-pair">
-<h3>Checking for a Pair<a class="headerlink" href="#checking-for-a-pair" title="本標題的永久連結">¶</a></h3>
+<h3>Checking for a Pair<a class="headerlink" href="#checking-for-a-pair" title="Permalink to this heading">¶</a></h3>
 <p>In this example, we'll use the following helper function to display match
 objects a little more gracefully:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">displaymatch</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
@@ -1538,17 +1549,13 @@ To match this with a regular expression, one could use backreferences as such:</
 </div>
 </section>
 <section id="simulating-scanf">
-<h3>Simulating scanf()<a class="headerlink" href="#simulating-scanf" title="本標題的永久連結">¶</a></h3>
+<h3>Simulating scanf()<a class="headerlink" href="#simulating-scanf" title="Permalink to this heading">¶</a></h3>
 <p id="index-38">Python does not currently have an equivalent to <code class="xref c c-func docutils literal notranslate"><span class="pre">scanf()</span></code>.  Regular
 expressions are generally more powerful, though also more verbose, than
 <code class="xref c c-func docutils literal notranslate"><span class="pre">scanf()</span></code> format strings.  The table below offers some more-or-less
 equivalent mappings between <code class="xref c c-func docutils literal notranslate"><span class="pre">scanf()</span></code> format tokens and regular
 expressions.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><code class="xref c c-func docutils literal notranslate"><span class="pre">scanf()</span></code> Token</p></th>
 <th class="head"><p>Regular Expression</p></th>
@@ -1598,7 +1605,7 @@ expressions.</p>
 </div>
 </section>
 <section id="search-vs-match">
-<span id="id3"></span><h3>search() vs. match()<a class="headerlink" href="#search-vs-match" title="本標題的永久連結">¶</a></h3>
+<span id="id3"></span><h3>search() vs. match()<a class="headerlink" href="#search-vs-match" title="Permalink to this heading">¶</a></h3>
 <p>Python offers two different primitive operations based on regular expressions:
 <a class="reference internal" href="#re.match" title="re.match"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.match()</span></code></a> checks for a match only at the beginning of the string, while
 <a class="reference internal" href="#re.search" title="re.search"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.search()</span></code></a> checks for a match anywhere in the string (this is what Perl
@@ -1627,7 +1634,7 @@ beginning with <code class="docutils literal notranslate"><span class="pre">'^'<
 </div>
 </section>
 <section id="making-a-phonebook">
-<h3>Making a Phonebook<a class="headerlink" href="#making-a-phonebook" title="本標題的永久連結">¶</a></h3>
+<h3>Making a Phonebook<a class="headerlink" href="#making-a-phonebook" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference internal" href="#re.split" title="re.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">split()</span></code></a> splits a string into a list delimited by the passed pattern.  The
 method is invaluable for converting textual data into data structures that can be
 easily read and modified by Python as demonstrated in the following example that
@@ -1675,7 +1682,7 @@ house number from the street name:</p>
 </div>
 </section>
 <section id="text-munging">
-<h3>Text Munging<a class="headerlink" href="#text-munging" title="本標題的永久連結">¶</a></h3>
+<h3>Text Munging<a class="headerlink" href="#text-munging" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference internal" href="#re.sub" title="re.sub"><code class="xref py py-func docutils literal notranslate"><span class="pre">sub()</span></code></a> replaces every occurrence of a pattern with a string or the
 result of a function.  This example demonstrates using <a class="reference internal" href="#re.sub" title="re.sub"><code class="xref py py-func docutils literal notranslate"><span class="pre">sub()</span></code></a> with
 a function to &quot;munge&quot; text, or randomize the order of all the characters
@@ -1693,7 +1700,7 @@ in each word of a sentence except for the first and last characters:</p>
 </div>
 </section>
 <section id="finding-all-adverbs">
-<h3>Finding all Adverbs<a class="headerlink" href="#finding-all-adverbs" title="本標題的永久連結">¶</a></h3>
+<h3>Finding all Adverbs<a class="headerlink" href="#finding-all-adverbs" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference internal" href="#re.findall" title="re.findall"><code class="xref py py-func docutils literal notranslate"><span class="pre">findall()</span></code></a> matches <em>all</em> occurrences of a pattern, not just the first
 one as <a class="reference internal" href="#re.search" title="re.search"><code class="xref py py-func docutils literal notranslate"><span class="pre">search()</span></code></a> does.  For example, if a writer wanted to
 find all of the adverbs in some text, they might use <a class="reference internal" href="#re.findall" title="re.findall"><code class="xref py py-func docutils literal notranslate"><span class="pre">findall()</span></code></a> in
@@ -1705,7 +1712,7 @@ the following manner:</p>
 </div>
 </section>
 <section id="finding-all-adverbs-and-their-positions">
-<h3>Finding all Adverbs and their Positions<a class="headerlink" href="#finding-all-adverbs-and-their-positions" title="本標題的永久連結">¶</a></h3>
+<h3>Finding all Adverbs and their Positions<a class="headerlink" href="#finding-all-adverbs-and-their-positions" title="Permalink to this heading">¶</a></h3>
 <p>If one wants more information about all matches of a pattern than the matched
 text, <a class="reference internal" href="#re.finditer" title="re.finditer"><code class="xref py py-func docutils literal notranslate"><span class="pre">finditer()</span></code></a> is useful as it provides <a class="reference internal" href="#match-objects"><span class="std std-ref">match objects</span></a> instead of strings.  Continuing with the previous example, if
 a writer wanted to find all of the adverbs <em>and their positions</em> in
@@ -1719,7 +1726,7 @@ some text, they would use <a class="reference internal" href="#re.finditer" titl
 </div>
 </section>
 <section id="raw-string-notation">
-<h3>Raw String Notation<a class="headerlink" href="#raw-string-notation" title="本標題的永久連結">¶</a></h3>
+<h3>Raw String Notation<a class="headerlink" href="#raw-string-notation" title="Permalink to this heading">¶</a></h3>
 <p>Raw string notation (<code class="docutils literal notranslate"><span class="pre">r&quot;text&quot;</span></code>) keeps regular expressions sane.  Without it,
 every backslash (<code class="docutils literal notranslate"><span class="pre">'\'</span></code>) in a regular expression would have to be prefixed with
 another one to escape it.  For example, the two following lines of code are
@@ -1742,7 +1749,7 @@ functionally identical:</p>
 </div>
 </section>
 <section id="writing-a-tokenizer">
-<h3>Writing a Tokenizer<a class="headerlink" href="#writing-a-tokenizer" title="本標題的永久連結">¶</a></h3>
+<h3>Writing a Tokenizer<a class="headerlink" href="#writing-a-tokenizer" title="Permalink to this heading">¶</a></h3>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Lexical_analysis">tokenizer or scanner</a>
 analyzes a string to categorize groups of characters.  This is a useful first
 step in writing a compiler or interpreter.</p>
@@ -1824,14 +1831,15 @@ successive matches:</p>
 <span class="n">Token</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="citation">
-<dt class="label" id="frie09"><span class="brackets"><a class="fn-backref" href="#id1">Frie09</a></span></dt>
-<dd><p>Friedl, Jeffrey. Mastering Regular Expressions. 3rd ed., O'Reilly
+<div role="list" class="citation-list">
+<div class="citation" id="frie09" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Frie09</a><span class="fn-bracket">]</span></span>
+<p>Friedl, Jeffrey. Mastering Regular Expressions. 3rd ed., O'Reilly
 Media, 2009. The third edition of the book no longer covers Python at all,
 but the first edition covered writing good regular expression patterns in
 great detail.</p>
-</dd>
-</dl>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1848,7 +1856,12 @@ great detail.</p>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code> --- Regular expression operations</a><ul>
 <li><a class="reference internal" href="#regular-expression-syntax">Regular Expression Syntax</a></li>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">模組內容</a><ul>
+<li><a class="reference internal" href="#flags">Flags</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#regular-expression-objects">Regular Expression Objects</a></li>
 <li><a class="reference internal" href="#match-objects">Match Objects</a></li>
 <li><a class="reference internal" href="#regular-expression-examples">Regular Expression Examples</a><ul>
@@ -1890,6 +1903,10 @@ great detail.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1956,11 +1973,11 @@ great detail.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

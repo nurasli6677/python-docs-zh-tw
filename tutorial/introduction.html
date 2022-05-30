@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3. 一個非正式的 Python 簡介 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="an-informal-introduction-to-python">
-<span id="tut-informal"></span><h1><span class="section-number">3. </span>一個非正式的 Python 簡介<a class="headerlink" href="#an-informal-introduction-to-python" title="本標題的永久連結">¶</a></h1>
+<span id="tut-informal"></span><h1><span class="section-number">3. </span>一個非正式的 Python 簡介<a class="headerlink" href="#an-informal-introduction-to-python" title="Permalink to this heading">¶</a></h1>
 <p>在下面的例子中，輸入與輸出的區別在於有無提示符（prompt，<a class="reference internal" href="../glossary.html#term-0"><span class="xref std std-term">&gt;&gt;&gt;</span></a> 和 <a class="reference internal" href="../glossary.html#term-..."><span class="xref std std-term">...</span></a>）：如果要重做範例，你必須在提示符出現的時候，輸入提示符後方的所有內容；那些非提示符開始的文字行是直譯器的輸出。注意到在範例中，若出現單行只有次提示符時，代表該行你必須直接換行；這被使用在多行指令結束輸入時。</p>
 <p>You can toggle the display of prompts and output by clicking on <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>
 in the upper-right corner of an example box.  If you hide the prompts
@@ -181,10 +182,10 @@ lines into your interpreter.</p>
 </pre></div>
 </div>
 <section id="using-python-as-a-calculator">
-<span id="tut-calculator"></span><h2><span class="section-number">3.1. </span>把 Python 當作計算機使用<a class="headerlink" href="#using-python-as-a-calculator" title="本標題的永久連結">¶</a></h2>
+<span id="tut-calculator"></span><h2><span class="section-number">3.1. </span>把 Python 當作計算機使用<a class="headerlink" href="#using-python-as-a-calculator" title="Permalink to this heading">¶</a></h2>
 <p>讓我們來試試一些簡單的 Python 指令。啟動直譯器並等待第一個主提示符 <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> 出現。（應該不會等太久）</p>
 <section id="numbers">
-<span id="tut-numbers"></span><h3><span class="section-number">3.1.1. </span>數字 (Number)<a class="headerlink" href="#numbers" title="本標題的永久連結">¶</a></h3>
+<span id="tut-numbers"></span><h3><span class="section-number">3.1.1. </span>數字 (Number)<a class="headerlink" href="#numbers" title="Permalink to this heading">¶</a></h3>
 <p>直譯器如同一台簡單的計算機：你可以輸入一個 expression（運算式），它會寫出該式的值。Expression 的語法很使用：運算子 <code class="docutils literal notranslate"><span class="pre">+</span></code>、<code class="docutils literal notranslate"><span class="pre">-</span></code>、<code class="docutils literal notranslate"><span class="pre">*</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/</span></code> 的行為如同大多數的程式語言（例如：Pascal 或 C）；括號 <code class="docutils literal notranslate"><span class="pre">()</span></code> 可以用來分群。例如：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="go">4</span>
@@ -209,7 +210,7 @@ lines into your interpreter.</p>
 <span class="go">17</span>
 </pre></div>
 </div>
-<p>在 Python 中，計算冪次 (powers) 可以使用 <code class="docutils literal notranslate"><span class="pre">**</span></code> 運算子 <a class="footnote-reference brackets" href="#id3" id="id1">1</a>：</p>
+<p>在 Python 中，計算冪次 (powers) 可以使用 <code class="docutils literal notranslate"><span class="pre">**</span></code> 運算子 <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># 5 squared</span>
 <span class="go">25</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">7</span>  <span class="c1"># 2 to the power of 7</span>
@@ -250,8 +251,8 @@ lines into your interpreter.</p>
 <p>除了 <a class="reference internal" href="../library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> 和 <a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>，Python 還支援了其他的數字型態，包含 <a class="reference internal" href="../library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 和 <a class="reference internal" href="../library/fractions.html#fractions.Fraction" title="fractions.Fraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fraction</span></code></a>。Python 亦內建支援<a class="reference internal" href="../library/stdtypes.html#typesnumeric"><span class="std std-ref">複數 (complex numbers)</span></a>，並使用 <code class="docutils literal notranslate"><span class="pre">j</span></code> 和 <code class="docutils literal notranslate"><span class="pre">J</span></code> 後綴來指定虛數的部份（即 <code class="docutils literal notranslate"><span class="pre">3+5j</span></code>）。</p>
 </section>
 <section id="strings">
-<span id="tut-strings"></span><h3><span class="section-number">3.1.2. </span>字串 (String)<a class="headerlink" href="#strings" title="本標題的永久連結">¶</a></h3>
-<p>除了數字之外，Python 也可以操作字串，而表達字串有數種方式。它們可以用包含在單引號 (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) 或雙引號 (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) 之中，兩者會得到相同的結果<a class="footnote-reference brackets" href="#id4" id="id2">2</a>。使用 <code class="docutils literal notranslate"><span class="pre">\</span></code> 跳脫出現於字串中的引號：</p>
+<span id="tut-strings"></span><h3><span class="section-number">3.1.2. </span>字串 (String)<a class="headerlink" href="#strings" title="Permalink to this heading">¶</a></h3>
+<p>除了數字之外，Python 也可以操作字串，而表達字串有數種方式。它們可以用包含在單引號 (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) 或雙引號 (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) 之中，兩者會得到相同的結果<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>。使用 <code class="docutils literal notranslate"><span class="pre">\</span></code> 跳脫出現於字串中的引號：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;spam eggs&#39;</span>  <span class="c1"># single quotes</span>
 <span class="go">&#39;spam eggs&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t&#39;</span>  <span class="c1"># use \&#39; to escape the single quote...</span>
@@ -444,7 +445,7 @@ lines into your interpreter.</p>
 </div>
 </section>
 <section id="lists">
-<span id="tut-lists"></span><h3><span class="section-number">3.1.3. </span>List（串列）<a class="headerlink" href="#lists" title="本標題的永久連結">¶</a></h3>
+<span id="tut-lists"></span><h3><span class="section-number">3.1.3. </span>List（串列）<a class="headerlink" href="#lists" title="Permalink to this heading">¶</a></h3>
 <p>Python 理解數種複合型資料型別，用來組合不同的數值。當中最多樣變化的型別為 <em>list</em>，可以寫成一系列以逗號分隔的數值（稱之元素，即 item），包含在方括號之中。List 可以包合不同型別的元素，但通常這些元素會有相同的型別：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span>
@@ -525,7 +526,7 @@ lines into your interpreter.</p>
 </section>
 </section>
 <section id="first-steps-towards-programming">
-<span id="tut-firststeps"></span><h2><span class="section-number">3.2. </span>初探程式設計的前幾步<a class="headerlink" href="#first-steps-towards-programming" title="本標題的永久連結">¶</a></h2>
+<span id="tut-firststeps"></span><h2><span class="section-number">3.2. </span>初探程式設計的前幾步<a class="headerlink" href="#first-steps-towards-programming" title="Permalink to this heading">¶</a></h2>
 <p>當然，我們可以用 Python 來處理比 2 加 2 更複雜的工作。例如，我們可以印出<a class="reference external" href="https://zh.wikipedia.org/zh-tw/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97">費氏數列</a>的首幾項序列：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Fibonacci series:</span>
 <span class="gp">... </span><span class="c1"># the sum of two elements defines the next</span>
@@ -566,14 +567,14 @@ lines into your interpreter.</p>
 </li>
 </ul>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>因為 <code class="docutils literal notranslate"><span class="pre">**</span></code> 擁有較 <code class="docutils literal notranslate"><span class="pre">-</span></code> 高的優先次序，<code class="docutils literal notranslate"><span class="pre">-3**2</span></code> 會被解釋為 <code class="docutils literal notranslate"><span class="pre">-(3**2)</span></code> 並得到 <code class="docutils literal notranslate"><span class="pre">-9</span></code>。如果要避免這樣的優先順序以得到 <code class="docutils literal notranslate"><span class="pre">9</span></code>，你可以使用 <code class="docutils literal notranslate"><span class="pre">(-3)**2</span></code>。</p>
-</dd>
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>不像其他語言，特殊符號如 <code class="docutils literal notranslate"><span class="pre">\n</span></code> 在單 (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) 和雙 (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) 引號中有相同的意思。兩種引號的唯一差別，在於使用單引號時，不需要跳脫 <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>（但必須跳脫 <code class="docutils literal notranslate"><span class="pre">\'</span></code>），反之亦同。</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>因為 <code class="docutils literal notranslate"><span class="pre">**</span></code> 擁有較 <code class="docutils literal notranslate"><span class="pre">-</span></code> 高的優先次序，<code class="docutils literal notranslate"><span class="pre">-3**2</span></code> 會被解釋為 <code class="docutils literal notranslate"><span class="pre">-(3**2)</span></code> 並得到 <code class="docutils literal notranslate"><span class="pre">-9</span></code>。如果要避免這樣的優先順序以得到 <code class="docutils literal notranslate"><span class="pre">9</span></code>，你可以使用 <code class="docutils literal notranslate"><span class="pre">(-3)**2</span></code>。</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>不像其他語言，特殊符號如 <code class="docutils literal notranslate"><span class="pre">\n</span></code> 在單 (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) 和雙 (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) 引號中有相同的意思。兩種引號的唯一差別，在於使用單引號時，不需要跳脫 <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>（但必須跳脫 <code class="docutils literal notranslate"><span class="pre">\'</span></code>），反之亦同。</p>
+</aside>
 </section>
 </section>
 
@@ -622,6 +623,10 @@ lines into your interpreter.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -687,11 +692,11 @@ lines into your interpreter.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

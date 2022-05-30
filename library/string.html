@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>string --- Common string operations &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -169,7 +170,7 @@
           <div class="body" role="main">
             
   <section id="module-string">
-<span id="string-common-string-operations"></span><h1><a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> --- Common string operations<a class="headerlink" href="#module-string" title="本標題的永久連結">¶</a></h1>
+<span id="string-common-string-operations"></span><h1><a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> --- Common string operations<a class="headerlink" href="#module-string" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/string.py">Lib/string.py</a></p>
 <hr class="docutils" />
 <div class="admonition seealso">
@@ -178,7 +179,7 @@
 <p><a class="reference internal" href="stdtypes.html#string-methods"><span class="std std-ref">String Methods</span></a></p>
 </div>
 <section id="string-constants">
-<h2>String constants<a class="headerlink" href="#string-constants" title="本標題的永久連結">¶</a></h2>
+<h2>String constants<a class="headerlink" href="#string-constants" title="Permalink to this heading">¶</a></h2>
 <p>The constants defined in this module are:</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="string.ascii_letters">
@@ -244,7 +245,7 @@ vertical tab.</p>
 
 </section>
 <section id="custom-string-formatting">
-<span id="string-formatting"></span><h2>Custom String Formatting<a class="headerlink" href="#custom-string-formatting" title="本標題的永久連結">¶</a></h2>
+<span id="string-formatting"></span><h2>Custom String Formatting<a class="headerlink" href="#custom-string-formatting" title="Permalink to this heading">¶</a></h2>
 <p>The built-in string class provides the ability to do complex variable
 substitutions and value formatting via the <a class="reference internal" href="stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a> method described in
 <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-3101/"><strong>PEP 3101</strong></a>.  The <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class in the <a class="reference internal" href="#module-string" title="string: Common string operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code></a> module allows
@@ -358,7 +359,7 @@ types.</p>
 
 </section>
 <section id="format-string-syntax">
-<span id="formatstrings"></span><h2>Format String Syntax<a class="headerlink" href="#format-string-syntax" title="本標題的永久連結">¶</a></h2>
+<span id="formatstrings"></span><h2>Format String Syntax<a class="headerlink" href="#format-string-syntax" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> method and the <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class share the same
 syntax for format strings (although in the case of <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a>,
 subclasses can define their own format string syntax).  The syntax is
@@ -371,14 +372,14 @@ literal text, it can be escaped by doubling: <code class="docutils literal notra
 <p>The grammar for a replacement field is as follows:</p>
 <blockquote>
 <div><pre>
-<strong id="grammar-token-format-string-replacement_field"><span id="grammar-token-replacement-field"></span>replacement_field</strong> ::=  &quot;{&quot; [<a class="reference internal" href="#grammar-token-format-string-field_name"><code class="xref docutils literal notranslate"><span class="pre">field_name</span></code></a>] [&quot;!&quot; <a class="reference internal" href="#grammar-token-format-string-conversion"><code class="xref docutils literal notranslate"><span class="pre">conversion</span></code></a>] [&quot;:&quot; <a class="reference internal" href="#grammar-token-format-string-format_spec"><code class="xref docutils literal notranslate"><span class="pre">format_spec</span></code></a>] &quot;}&quot;
-<strong id="grammar-token-format-string-field_name"><span id="grammar-token-field-name"></span>field_name       </strong> ::=  arg_name (&quot;.&quot; <a class="reference internal" href="#grammar-token-format-string-attribute_name"><code class="xref docutils literal notranslate"><span class="pre">attribute_name</span></code></a> | &quot;[&quot; <a class="reference internal" href="#grammar-token-format-string-element_index"><code class="xref docutils literal notranslate"><span class="pre">element_index</span></code></a> &quot;]&quot;)*
-<strong id="grammar-token-format-string-arg_name"><span id="grammar-token-arg-name"></span>arg_name         </strong> ::=  [<code class="xref docutils literal notranslate"><span class="pre">identifier</span></code> | <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+]
-<strong id="grammar-token-format-string-attribute_name"><span id="grammar-token-attribute-name"></span>attribute_name   </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">identifier</span></code>
-<strong id="grammar-token-format-string-element_index"><span id="grammar-token-element-index"></span>element_index    </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+ | <a class="reference internal" href="#grammar-token-format-string-index_string"><code class="xref docutils literal notranslate"><span class="pre">index_string</span></code></a>
-<strong id="grammar-token-format-string-index_string"><span id="grammar-token-index-string"></span>index_string     </strong> ::=  &lt;any source character except &quot;]&quot;&gt; +
-<strong id="grammar-token-format-string-conversion"><span id="grammar-token-conversion"></span>conversion       </strong> ::=  &quot;r&quot; | &quot;s&quot; | &quot;a&quot;
-<strong id="grammar-token-format-string-format_spec"><span id="grammar-token-format-spec"></span>format_spec      </strong> ::=  &lt;described in the next section&gt;
+<strong id="grammar-token-format-string-replacement_field">replacement_field</strong> ::=  &quot;{&quot; [<a class="reference internal" href="#grammar-token-format-string-field_name"><code class="xref docutils literal notranslate"><span class="pre">field_name</span></code></a>] [&quot;!&quot; <a class="reference internal" href="#grammar-token-format-string-conversion"><code class="xref docutils literal notranslate"><span class="pre">conversion</span></code></a>] [&quot;:&quot; <a class="reference internal" href="#grammar-token-format-string-format_spec"><code class="xref docutils literal notranslate"><span class="pre">format_spec</span></code></a>] &quot;}&quot;
+<strong id="grammar-token-format-string-field_name">field_name       </strong> ::=  arg_name (&quot;.&quot; <a class="reference internal" href="#grammar-token-format-string-attribute_name"><code class="xref docutils literal notranslate"><span class="pre">attribute_name</span></code></a> | &quot;[&quot; <a class="reference internal" href="#grammar-token-format-string-element_index"><code class="xref docutils literal notranslate"><span class="pre">element_index</span></code></a> &quot;]&quot;)*
+<strong id="grammar-token-format-string-arg_name">arg_name         </strong> ::=  [<code class="xref docutils literal notranslate"><span class="pre">identifier</span></code> | <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+]
+<strong id="grammar-token-format-string-attribute_name">attribute_name   </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">identifier</span></code>
+<strong id="grammar-token-format-string-element_index">element_index    </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+ | <a class="reference internal" href="#grammar-token-format-string-index_string"><code class="xref docutils literal notranslate"><span class="pre">index_string</span></code></a>
+<strong id="grammar-token-format-string-index_string">index_string     </strong> ::=  &lt;any source character except &quot;]&quot;&gt; +
+<strong id="grammar-token-format-string-conversion">conversion       </strong> ::=  &quot;r&quot; | &quot;s&quot; | &quot;a&quot;
+<strong id="grammar-token-format-string-format_spec">format_spec      </strong> ::=  &lt;described in the next section&gt;
 </pre>
 </div></blockquote>
 <p>In less formal terms, the replacement field can start with a <em>field_name</em> that specifies
@@ -444,7 +445,7 @@ format_spec are substituted before the <em>format_spec</em> string is interprete
 This allows the formatting of a value to be dynamically specified.</p>
 <p>範例請見 <a class="reference internal" href="#formatexamples"><span class="std std-ref">Format examples</span></a>。</p>
 <section id="format-specification-mini-language">
-<span id="formatspec"></span><h3>Format Specification Mini-Language<a class="headerlink" href="#format-specification-mini-language" title="本標題的永久連結">¶</a></h3>
+<span id="formatspec"></span><h3>Format Specification Mini-Language<a class="headerlink" href="#format-specification-mini-language" title="Permalink to this heading">¶</a></h3>
 <p>&quot;Format specifications&quot; are used within replacement fields contained within a
 format string to define how individual values are presented (see
 <a class="reference internal" href="#formatstrings"><span class="std std-ref">Format String Syntax</span></a> and <a class="reference internal" href="../reference/lexical_analysis.html#f-strings"><span class="std std-ref">Formatted string literals</span></a>).
@@ -459,13 +460,13 @@ non-empty format specification typically modifies the result.</p>
 <p>The general form of a <em>standard format specifier</em> is:</p>
 <pre>
 <strong id="grammar-token-format-spec-format_spec">format_spec    </strong> ::=  [[<a class="reference internal" href="#grammar-token-format-spec-fill"><code class="xref docutils literal notranslate"><span class="pre">fill</span></code></a>]<a class="reference internal" href="#grammar-token-format-spec-align"><code class="xref docutils literal notranslate"><span class="pre">align</span></code></a>][<a class="reference internal" href="#grammar-token-format-spec-sign"><code class="xref docutils literal notranslate"><span class="pre">sign</span></code></a>][#][0][<a class="reference internal" href="#grammar-token-format-spec-width"><code class="xref docutils literal notranslate"><span class="pre">width</span></code></a>][<a class="reference internal" href="#grammar-token-format-spec-grouping_option"><code class="xref docutils literal notranslate"><span class="pre">grouping_option</span></code></a>][.<a class="reference internal" href="#grammar-token-format-spec-precision"><code class="xref docutils literal notranslate"><span class="pre">precision</span></code></a>][<a class="reference internal" href="#grammar-token-format-spec-type"><code class="xref docutils literal notranslate"><span class="pre">type</span></code></a>]
-<strong id="grammar-token-format-spec-fill"><span id="grammar-token-fill"></span>fill           </strong> ::=  &lt;any character&gt;
-<strong id="grammar-token-format-spec-align"><span id="grammar-token-align"></span>align          </strong> ::=  &quot;&lt;&quot; | &quot;&gt;&quot; | &quot;=&quot; | &quot;^&quot;
-<strong id="grammar-token-format-spec-sign"><span id="grammar-token-sign"></span>sign           </strong> ::=  &quot;+&quot; | &quot;-&quot; | &quot; &quot;
-<strong id="grammar-token-format-spec-width"><span id="grammar-token-width"></span>width          </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+
-<strong id="grammar-token-format-spec-grouping_option"><span id="grammar-token-grouping-option"></span>grouping_option</strong> ::=  &quot;_&quot; | &quot;,&quot;
-<strong id="grammar-token-format-spec-precision"><span id="grammar-token-precision"></span>precision      </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+
-<strong id="grammar-token-format-spec-type"><span id="grammar-token-type"></span>type           </strong> ::=  &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quot; | &quot;E&quot; | &quot;f&quot; | &quot;F&quot; | &quot;g&quot; | &quot;G&quot; | &quot;n&quot; | &quot;o&quot; | &quot;s&quot; | &quot;x&quot; | &quot;X&quot; | &quot;%&quot;
+<strong id="grammar-token-format-spec-fill">fill           </strong> ::=  &lt;any character&gt;
+<strong id="grammar-token-format-spec-align">align          </strong> ::=  &quot;&lt;&quot; | &quot;&gt;&quot; | &quot;=&quot; | &quot;^&quot;
+<strong id="grammar-token-format-spec-sign">sign           </strong> ::=  &quot;+&quot; | &quot;-&quot; | &quot; &quot;
+<strong id="grammar-token-format-spec-width">width          </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+
+<strong id="grammar-token-format-spec-grouping_option">grouping_option</strong> ::=  &quot;_&quot; | &quot;,&quot;
+<strong id="grammar-token-format-spec-precision">precision      </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">digit</span></code>+
+<strong id="grammar-token-format-spec-type">type           </strong> ::=  &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quot; | &quot;E&quot; | &quot;f&quot; | &quot;F&quot; | &quot;g&quot; | &quot;G&quot; | &quot;n&quot; | &quot;o&quot; | &quot;s&quot; | &quot;x&quot; | &quot;X&quot; | &quot;%&quot;
 </pre>
 <p>If a valid <em>align</em> value is specified, it can be preceded by a <em>fill</em>
 character that can be any character and defaults to a space if omitted.
@@ -477,10 +478,6 @@ affect the <a class="reference internal" href="functions.html#format" title="for
 <p>The meaning of the various alignment options is as follows:</p>
 <blockquote>
 <div><table class="docutils align-default" id="index-3">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Option</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -516,10 +513,6 @@ meaning in this case.</p>
 following:</p>
 <blockquote>
 <div><table class="docutils align-default" id="index-4">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Option</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -589,10 +582,6 @@ presentation types.</p>
 <p>The available string presentation types are:</p>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -612,10 +601,6 @@ may be omitted.</p></td>
 <p>The available integer presentation types are:</p>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -664,10 +649,6 @@ integer to a floating point number before formatting.</p>
 <a class="reference internal" href="decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> values are:</p>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -771,7 +752,7 @@ as altered by the other format modifiers.</p>
 </div></blockquote>
 </section>
 <section id="format-examples">
-<span id="formatexamples"></span><h3>Format examples<a class="headerlink" href="#format-examples" title="本標題的永久連結">¶</a></h3>
+<span id="formatexamples"></span><h3>Format examples<a class="headerlink" href="#format-examples" title="Permalink to this heading">¶</a></h3>
 <p>This section contains examples of the <a class="reference internal" href="stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> syntax and
 comparison with the old <code class="docutils literal notranslate"><span class="pre">%</span></code>-formatting.</p>
 <p>In most of the cases the syntax is similar to the old <code class="docutils literal notranslate"><span class="pre">%</span></code>-formatting, with the
@@ -906,7 +887,7 @@ following examples.</p>
 </section>
 </section>
 <section id="template-strings">
-<span id="id1"></span><h2>Template strings<a class="headerlink" href="#template-strings" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Template strings<a class="headerlink" href="#template-strings" title="Permalink to this heading">¶</a></h2>
 <p>Template strings provide simpler string substitutions as described in
 <span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0292/"><strong>PEP 292</strong></a>.  A primary use case for template strings is for
 internationalization (i18n) since in that context, the simpler syntax and
@@ -1051,7 +1032,7 @@ delimiter), and it should appear last in the regular expression.</p></li>
 </ul>
 </section>
 <section id="helper-functions">
-<h2>Helper functions<a class="headerlink" href="#helper-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="string.capwords">
 <span class="sig-prename descclassname"><span class="pre">string.</span></span><span class="sig-name descname"><span class="pre">capwords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#string.capwords" title="本定義的永久連結">¶</a></dt>
@@ -1113,6 +1094,10 @@ split and join the words.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1179,11 +1164,11 @@ split and join the words.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

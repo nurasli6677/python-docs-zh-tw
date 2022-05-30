@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>itertools --- Functions creating iterators for efficient looping &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="module-itertools">
-<span id="itertools-functions-creating-iterators-for-efficient-looping"></span><h1><a class="reference internal" href="#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> --- Functions creating iterators for efficient looping<a class="headerlink" href="#module-itertools" title="本標題的永久連結">¶</a></h1>
+<span id="itertools-functions-creating-iterators-for-efficient-looping"></span><h1><a class="reference internal" href="#module-itertools" title="itertools: Functions creating iterators for efficient looping."><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> --- Functions creating iterators for efficient looping<a class="headerlink" href="#module-itertools" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <p>This module implements a number of <a class="reference internal" href="../glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a> building blocks inspired
 by constructs from APL, Haskell, and SML.  Each has been recast in a form
@@ -180,12 +181,6 @@ operator can be mapped across two vectors to form an efficient dot-product:
 <code class="docutils literal notranslate"><span class="pre">sum(map(operator.mul,</span> <span class="pre">vector1,</span> <span class="pre">vector2))</span></code>.</p>
 <p><strong>Infinite iterators:</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 39%" />
-<col style="width: 33%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Iterator</p></th>
 <th class="head"><p>引數</p></th>
@@ -213,12 +208,6 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </table>
 <p><strong>Iterators terminating on the shortest input sequence:</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 30%" />
-<col style="width: 37%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Iterator</p></th>
 <th class="head"><p>引數</p></th>
@@ -296,11 +285,6 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </table>
 <p><strong>Combinatoric iterators:</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 36%" />
-<col style="width: 16%" />
-<col style="width: 48%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Iterator</p></th>
 <th class="head"><p>引數</p></th>
@@ -327,10 +311,6 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tbody>
 </table>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 43%" />
-<col style="width: 57%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Examples</p></th>
 <th class="head"><p>結果</p></th>
@@ -352,7 +332,7 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tbody>
 </table>
 <section id="itertool-functions">
-<span id="itertools-functions"></span><h2>Itertool functions<a class="headerlink" href="#itertool-functions" title="本標題的永久連結">¶</a></h2>
+<span id="itertools-functions"></span><h2>Itertool functions<a class="headerlink" href="#itertool-functions" title="Permalink to this heading">¶</a></h2>
 <p>The following module functions all construct and return iterators. Some provide
 streams of infinite length, so they should only be accessed by functions or
 loops that truncate the stream.</p>
@@ -992,7 +972,7 @@ function should be wrapped with something that limits the number of calls
 
 </section>
 <section id="itertools-recipes">
-<span id="id1"></span><h2>Itertools Recipes<a class="headerlink" href="#itertools-recipes" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Itertools Recipes<a class="headerlink" href="#itertools-recipes" title="Permalink to this heading">¶</a></h2>
 <p>This section shows recipes for creating an extended toolset using the existing
 itertools as building blocks.</p>
 <p>Substantially all of these recipes and many, many others can be installed from
@@ -1330,6 +1310,10 @@ which incur interpreter overhead.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1396,11 +1380,11 @@ which incur interpreter overhead.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

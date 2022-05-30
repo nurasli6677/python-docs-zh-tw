@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>FAQ：在 Windows 使用 Python &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -167,8 +168,8 @@
           <div class="body" role="main">
             
   <section id="python-on-windows-faq">
-<span id="windows-faq"></span><h1><a class="toc-backref" href="#id2">FAQ：在 Windows 使用 Python</a><a class="headerlink" href="#python-on-windows-faq" title="本標題的永久連結">¶</a></h1>
-<div class="contents topic" id="id1">
+<span id="windows-faq"></span><h1><a class="toc-backref" href="#id2" role="doc-backlink">FAQ：在 Windows 使用 Python</a><a class="headerlink" href="#python-on-windows-faq" title="Permalink to this heading">¶</a></h1>
+<nav class="contents" id="id1">
 <p class="topic-title">目錄</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#python-on-windows-faq" id="id2">FAQ：在 Windows 使用 Python</a></p>
@@ -184,9 +185,9 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <section id="how-do-i-run-a-python-program-under-windows">
-<span id="faq-run-program-under-windows"></span><h2><a class="toc-backref" href="#id3">在 Windows 作業系統裡我想執行 Python 程式，要怎麼做？</a><a class="headerlink" href="#how-do-i-run-a-python-program-under-windows" title="本標題的永久連結">¶</a></h2>
+<span id="faq-run-program-under-windows"></span><h2><a class="toc-backref" href="#id3" role="doc-backlink">在 Windows 作業系統裡我想執行 Python 程式，要怎麼做？</a><a class="headerlink" href="#how-do-i-run-a-python-program-under-windows" title="Permalink to this heading">¶</a></h2>
 <p>這個問題的答案可能有點複雜。如果你經常使用「命令提示字元」執行程式，那這對你來說不會是什麼難事。如果不然，那就需要更仔細的說明了。</p>
 <p>Unless you use some sort of integrated development environment, you will end up
 <em>typing</em> Windows commands into what is referred to as a
@@ -260,7 +261,7 @@ hello
 </div>
 </section>
 <section id="how-do-i-make-python-scripts-executable">
-<h2><a class="toc-backref" href="#id4">How do I make Python scripts executable?</a><a class="headerlink" href="#how-do-i-make-python-scripts-executable" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">How do I make Python scripts executable?</a><a class="headerlink" href="#how-do-i-make-python-scripts-executable" title="Permalink to this heading">¶</a></h2>
 <p>On Windows, the standard Python installer already associates the .py
 extension with a file type (Python.File) and gives that file type an open
 command that runs the interpreter (<code class="docutils literal notranslate"><span class="pre">D:\Program</span> <span class="pre">Files\Python\python.exe</span> <span class="pre">&quot;%1&quot;</span>
@@ -269,7 +270,7 @@ command that runs the interpreter (<code class="docutils literal notranslate"><s
 with no extension you need to add .py to the PATHEXT environment variable.</p>
 </section>
 <section id="why-does-python-sometimes-take-so-long-to-start">
-<h2><a class="toc-backref" href="#id5">Why does Python sometimes take so long to start?</a><a class="headerlink" href="#why-does-python-sometimes-take-so-long-to-start" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Why does Python sometimes take so long to start?</a><a class="headerlink" href="#why-does-python-sometimes-take-so-long-to-start" title="Permalink to this heading">¶</a></h2>
 <p>Usually Python starts very quickly on Windows, but occasionally there are bug
 reports that Python suddenly begins to take a long time to start up.  This is
 made even more puzzling because Python will work fine on other Windows systems
@@ -283,12 +284,12 @@ McAfee, when configured to scan all file system read activity, is a particular
 offender.</p>
 </section>
 <section id="how-do-i-make-an-executable-from-a-python-script">
-<h2><a class="toc-backref" href="#id6">How do I make an executable from a Python script?</a><a class="headerlink" href="#how-do-i-make-an-executable-from-a-python-script" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">How do I make an executable from a Python script?</a><a class="headerlink" href="#how-do-i-make-an-executable-from-a-python-script" title="Permalink to this heading">¶</a></h2>
 <p>See <a class="reference internal" href="programming.html#faq-create-standalone-binary"><span class="std std-ref">How can I create a stand-alone binary from a Python script?</span></a> for a list of tools that can be used to
 make executables.</p>
 </section>
 <section id="is-a-pyd-file-the-same-as-a-dll">
-<h2><a class="toc-backref" href="#id7">Is a <code class="docutils literal notranslate"><span class="pre">*.pyd</span></code> file the same as a DLL?</a><a class="headerlink" href="#is-a-pyd-file-the-same-as-a-dll" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Is a <code class="docutils literal notranslate"><span class="pre">*.pyd</span></code> file the same as a DLL?</a><a class="headerlink" href="#is-a-pyd-file-the-same-as-a-dll" title="Permalink to this heading">¶</a></h2>
 <p>Yes, .pyd files are dll's, but there are a few differences.  If you have a DLL
 named <code class="docutils literal notranslate"><span class="pre">foo.pyd</span></code>, then it must have a function <code class="docutils literal notranslate"><span class="pre">PyInit_foo()</span></code>.  You can then
 write Python &quot;import foo&quot;, and Python will search for foo.pyd (as well as
@@ -303,7 +304,7 @@ a DLL, linkage is declared in the source code with <code class="docutils literal
 In a .pyd, linkage is defined in a list of available functions.</p>
 </section>
 <section id="how-can-i-embed-python-into-a-windows-application">
-<h2><a class="toc-backref" href="#id8">How can I embed Python into a Windows application?</a><a class="headerlink" href="#how-can-i-embed-python-into-a-windows-application" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">How can I embed Python into a Windows application?</a><a class="headerlink" href="#how-can-i-embed-python-into-a-windows-application" title="Permalink to this heading">¶</a></h2>
 <p>Embedding the Python interpreter in a Windows app can be summarized as follows:</p>
 <ol class="arabic">
 <li><p>Do _not_ build Python into your .exe file directly.  On Windows, Python must
@@ -380,7 +381,7 @@ object that supports read and write, so all you need is a Python object
 </ol>
 </section>
 <section id="how-do-i-keep-editors-from-inserting-tabs-into-my-python-source">
-<h2><a class="toc-backref" href="#id9">How do I keep editors from inserting tabs into my Python source?</a><a class="headerlink" href="#how-do-i-keep-editors-from-inserting-tabs-into-my-python-source" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">How do I keep editors from inserting tabs into my Python source?</a><a class="headerlink" href="#how-do-i-keep-editors-from-inserting-tabs-into-my-python-source" title="Permalink to this heading">¶</a></h2>
 <p>The FAQ does not recommend using tabs, and the Python style guide, <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0008/"><strong>PEP 8</strong></a>,
 recommends 4 spaces for distributed Python code; this is also the Emacs
 python-mode default.</p>
@@ -394,7 +395,7 @@ You may also run the <a class="reference internal" href="../library/tabnanny.htm
 in batch mode.</p>
 </section>
 <section id="how-do-i-check-for-a-keypress-without-blocking">
-<h2><a class="toc-backref" href="#id10">How do I check for a keypress without blocking?</a><a class="headerlink" href="#how-do-i-check-for-a-keypress-without-blocking" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">How do I check for a keypress without blocking?</a><a class="headerlink" href="#how-do-i-check-for-a-keypress-without-blocking" title="Permalink to this heading">¶</a></h2>
 <p>Use the <a class="reference internal" href="../library/msvcrt.html#module-msvcrt" title="msvcrt: Miscellaneous useful routines from the MS VC++ runtime. (Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msvcrt</span></code></a> module.  This is a standard Windows-specific extension module.
 It defines a function <code class="docutils literal notranslate"><span class="pre">kbhit()</span></code> which checks whether a keyboard hit is
 present, and <code class="docutils literal notranslate"><span class="pre">getch()</span></code> which gets one character without echoing it.</p>
@@ -447,6 +448,10 @@ present, and <code class="docutils literal notranslate"><span class="pre">getch(
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -512,11 +517,11 @@ present, and <code class="docutils literal notranslate"><span class="pre">getch(
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

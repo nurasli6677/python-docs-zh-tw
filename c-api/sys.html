@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>作業系統工具 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -160,7 +161,7 @@
           <div class="body" role="main">
             
   <section id="operating-system-utilities">
-<span id="os"></span><h1>作業系統工具<a class="headerlink" href="#operating-system-utilities" title="本標題的永久連結">¶</a></h1>
+<span id="os"></span><h1>作業系統工具<a class="headerlink" href="#operating-system-utilities" title="Permalink to this heading">¶</a></h1>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyOS_FSPath">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyOS_FSPath</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyOS_FSPath" title="本定義的永久連結">¶</a><br /></dt>
@@ -375,7 +376,7 @@ the <a class="reference internal" href="init_config.html#c.Py_PreInitialize" tit
 
 </section>
 <section id="system-functions">
-<span id="systemfunctions"></span><h1>系統函式<a class="headerlink" href="#system-functions" title="本標題的永久連結">¶</a></h1>
+<span id="systemfunctions"></span><h1>系統函式<a class="headerlink" href="#system-functions" title="Permalink to this heading">¶</a></h1>
 <p>These are utility functions that make functionality from the <a class="reference internal" href="../library/sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> module
 accessible to C code.  They all work with the current interpreter thread's
 <a class="reference internal" href="../library/sys.html#module-sys" title="sys: Access system-specific parameters and functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> module's dict, which is contained in the internal thread state structure.</p>
@@ -552,7 +553,7 @@ that their hook has been added unless they control all existing hooks.</p>
 
 </section>
 <section id="process-control">
-<span id="processcontrol"></span><h1>行程（Process）控制<a class="headerlink" href="#process-control" title="本標題的永久連結">¶</a></h1>
+<span id="processcontrol"></span><h1>行程（Process）控制<a class="headerlink" href="#process-control" title="Permalink to this heading">¶</a></h1>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_FatalError">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_FatalError</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_FatalError" title="本定義的永久連結">¶</a><br /></dt>
@@ -633,6 +634,10 @@ the cleanup function, no Python APIs should be called by <em>func</em>.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -699,11 +704,11 @@ the cleanup function, no Python APIs should be called by <em>func</em>.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

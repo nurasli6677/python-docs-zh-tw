@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Socket Programming HOWTO &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -176,22 +177,22 @@
           <div class="body" role="main">
             
   <section id="socket-programming-howto">
-<span id="socket-howto"></span><h1>Socket Programming HOWTO<a class="headerlink" href="#socket-programming-howto" title="本標題的永久連結">¶</a></h1>
+<span id="socket-howto"></span><h1>Socket Programming HOWTO<a class="headerlink" href="#socket-programming-howto" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Gordon McMillan</p>
 </dd>
 </dl>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">摘要</p>
 <p>Sockets are used nearly everywhere, but are one of the most severely
 misunderstood technologies around. This is a 10,000 foot overview of sockets.
 It's not really a tutorial - you'll still have work to do in getting things
 operational. It doesn't cover the fine points (and there are a lot of them), but
 I hope it will give you enough background to begin using them decently.</p>
-</div>
+</aside>
 <section id="sockets">
-<h2>Sockets<a class="headerlink" href="#sockets" title="本標題的永久連結">¶</a></h2>
+<h2>Sockets<a class="headerlink" href="#sockets" title="Permalink to this heading">¶</a></h2>
 <p>I'm only going to talk about INET (i.e. IPv4) sockets, but they account for at least 99% of
 the sockets in use. And I'll only talk about STREAM (i.e. TCP) sockets - unless you really
 know what you're doing (in which case this HOWTO isn't for you!), you'll get
@@ -207,7 +208,7 @@ distinction between a &quot;client&quot; socket - an endpoint of a conversation,
 application (your browser, for example) uses &quot;client&quot; sockets exclusively; the
 web server it's talking to uses both &quot;server&quot; sockets and &quot;client&quot; sockets.</p>
 <section id="history">
-<h3>History<a class="headerlink" href="#history" title="本標題的永久連結">¶</a></h3>
+<h3>History<a class="headerlink" href="#history" title="Permalink to this heading">¶</a></h3>
 <p>Of the various forms of <abbr title="Inter Process Communication">IPC</abbr>,
 sockets are by far the most popular.  On any given platform, there are
 likely to be other forms of IPC that are faster, but for
@@ -219,7 +220,7 @@ with INET makes talking to arbitrary machines around the world unbelievably easy
 </section>
 </section>
 <section id="creating-a-socket">
-<h2>Creating a Socket<a class="headerlink" href="#creating-a-socket" title="本標題的永久連結">¶</a></h2>
+<h2>Creating a Socket<a class="headerlink" href="#creating-a-socket" title="Permalink to this heading">¶</a></h2>
 <p>Roughly speaking, when you clicked on the link that brought you to this page,
 your browser did something like the following:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an INET, STREAMing socket</span>
@@ -279,7 +280,7 @@ go back to listening for more connections. The two &quot;clients&quot; are free 
 up - they are using some dynamically allocated port which will be recycled when
 the conversation ends.</p>
 <section id="ipc">
-<h3>IPC<a class="headerlink" href="#ipc" title="本標題的永久連結">¶</a></h3>
+<h3>IPC<a class="headerlink" href="#ipc" title="Permalink to this heading">¶</a></h3>
 <p>If you need fast IPC between two processes on one machine, you should look into
 pipes or shared memory.  If you do decide to use AF_INET sockets, bind the
 &quot;server&quot; socket to <code class="docutils literal notranslate"><span class="pre">'localhost'</span></code>. On most platforms, this will take a
@@ -292,7 +293,7 @@ API.</p>
 </section>
 </section>
 <section id="using-a-socket">
-<h2>Using a Socket<a class="headerlink" href="#using-a-socket" title="本標題的永久連結">¶</a></h2>
+<h2>Using a Socket<a class="headerlink" href="#using-a-socket" title="Permalink to this heading">¶</a></h2>
 <p>The first thing to note, is that the web browser's &quot;client&quot; socket and the web
 server's &quot;client&quot; socket are identical beasts. That is, this is a &quot;peer to peer&quot;
 conversation. Or to put it another way, <em>as the designer, you will have to
@@ -397,7 +398,7 @@ get bit by it!</p>
 competitive position), these enhancements are left as an exercise for the
 reader. Lets move on to cleaning up.</p>
 <section id="binary-data">
-<h3>Binary Data<a class="headerlink" href="#binary-data" title="本標題的永久連結">¶</a></h3>
+<h3>Binary Data<a class="headerlink" href="#binary-data" title="Permalink to this heading">¶</a></h3>
 <p>It is perfectly possible to send binary data over a socket. The major problem is
 that not all machines use the same formats for binary data. For example, a
 Motorola chip will represent a 16 bit integer with the value 1 as the two hex
@@ -415,7 +416,7 @@ fixed-length messages. Decisions, decisions.</p>
 </section>
 </section>
 <section id="disconnecting">
-<h2>Disconnecting<a class="headerlink" href="#disconnecting" title="本標題的永久連結">¶</a></h2>
+<h2>Disconnecting<a class="headerlink" href="#disconnecting" title="Permalink to this heading">¶</a></h2>
 <p>Strictly speaking, you're supposed to use <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> on a socket before you
 <code class="docutils literal notranslate"><span class="pre">close</span></code> it.  The <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> is an advisory to the socket at the other end.
 Depending on the argument you pass it, it can mean &quot;I'm not going to send
@@ -435,7 +436,7 @@ relying on this is a very bad habit. If your socket just disappears without
 doing a <code class="docutils literal notranslate"><span class="pre">close</span></code>, the socket at the other end may hang indefinitely, thinking
 you're just being slow. <em>Please</em> <code class="docutils literal notranslate"><span class="pre">close</span></code> your sockets when you're done.</p>
 <section id="when-sockets-die">
-<h3>When Sockets Die<a class="headerlink" href="#when-sockets-die" title="本標題的永久連結">¶</a></h3>
+<h3>When Sockets Die<a class="headerlink" href="#when-sockets-die" title="Permalink to this heading">¶</a></h3>
 <p>Probably the worst thing about using blocking sockets is what happens when the
 other side comes down hard (without doing a <code class="docutils literal notranslate"><span class="pre">close</span></code>). Your socket is likely to
 hang. TCP is a reliable protocol, and it will wait a long, long time
@@ -450,7 +451,7 @@ process is likely to be screwed up.</p>
 </section>
 </section>
 <section id="non-blocking-sockets">
-<h2>Non-blocking Sockets<a class="headerlink" href="#non-blocking-sockets" title="本標題的永久連結">¶</a></h2>
+<h2>Non-blocking Sockets<a class="headerlink" href="#non-blocking-sockets" title="Permalink to this heading">¶</a></h2>
 <p>If you've understood the preceding, you already know most of what you need to
 know about the mechanics of using sockets. You'll still use the same calls, in
 much the same ways. It's just that, if you do it right, your app will be almost
@@ -567,6 +568,10 @@ very, very well) with my sockets.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -632,11 +637,11 @@ very, very well) with my sockets.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

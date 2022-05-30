@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>collections --- 容器資料型態 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -181,15 +182,11 @@
           <div class="body" role="main">
             
   <section id="module-collections">
-<span id="collections-container-datatypes"></span><h1><a class="reference internal" href="#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> --- 容器資料型態<a class="headerlink" href="#module-collections" title="本標題的永久連結">¶</a></h1>
+<span id="collections-container-datatypes"></span><h1><a class="reference internal" href="#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> --- 容器資料型態<a class="headerlink" href="#module-collections" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/collections/__init__.py">Lib/collections/__init__.py</a></p>
 <hr class="docutils" />
 <p>這個模組實作了一些特別的容器資料型態，用來替代 Python 一般內建的容器，例如 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>（字典）、<a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>（串列）、<a class="reference internal" href="stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>（集合）和 <a class="reference internal" href="stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>（元組）。</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a></p></td>
 <td><p>用來建立具名欄位的 tuple 子類別的工廠函式</p></td>
@@ -221,7 +218,7 @@
 </tbody>
 </table>
 <section id="chainmap-objects">
-<h2><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 物件<a class="headerlink" href="#chainmap-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 物件<a class="headerlink" href="#chainmap-objects" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
@@ -288,7 +285,7 @@
 </ul>
 </div>
 <section id="chainmap-examples-and-recipes">
-<h3><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 範例和用法<a class="headerlink" href="#chainmap-examples-and-recipes" title="本標題的永久連結">¶</a></h3>
+<h3><a class="reference internal" href="#collections.ChainMap" title="collections.ChainMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainMap</span></code></a> 範例和用法<a class="headerlink" href="#chainmap-examples-and-recipes" title="Permalink to this heading">¶</a></h3>
 <p>此章節提供了多種操作 ChainMap 的案例。</p>
 <p>模擬 Python 內部檢索鏈結的例子：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
@@ -358,7 +355,7 @@
 </section>
 </section>
 <section id="counter-objects">
-<h2><a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 物件<a class="headerlink" href="#counter-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> 物件<a class="headerlink" href="#counter-objects" title="Permalink to this heading">¶</a></h2>
 <p>提供一個支援方便且快速計數的計數器工具，例如：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Tally occurrences of words in a list</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cnt</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
@@ -544,7 +541,7 @@
 </div>
 </section>
 <section id="deque-objects">
-<h2><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a> 物件<a class="headerlink" href="#deque-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a> 物件<a class="headerlink" href="#deque-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="collections.deque">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">collections.</span></span><span class="sig-name descname"><span class="pre">deque</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">maxlen</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque" title="本定義的永久連結">¶</a></dt>
@@ -722,7 +719,7 @@
 </pre></div>
 </div>
 <section id="deque-recipes">
-<h3><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a> 用法<a class="headerlink" href="#deque-recipes" title="本標題的永久連結">¶</a></h3>
+<h3><a class="reference internal" href="#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a> 用法<a class="headerlink" href="#deque-recipes" title="Permalink to this heading">¶</a></h3>
 <p>這一章節提供了多種操作 deque 的案例。</p>
 <p>被限制長度的 deque 功能類似 Unix 中的 <code class="docutils literal notranslate"><span class="pre">tail</span></code> filter：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -770,7 +767,7 @@
 </section>
 </section>
 <section id="defaultdict-objects">
-<h2><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 物件<a class="headerlink" href="#defaultdict-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 物件<a class="headerlink" href="#defaultdict-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="collections.defaultdict">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">collections.</span></span><span class="sig-name descname"><span class="pre">defaultdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_factory=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.defaultdict" title="本定義的永久連結">¶</a></dt>
@@ -800,7 +797,7 @@
 </dd></dl>
 
 <section id="defaultdict-examples">
-<h3><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 範例<a class="headerlink" href="#defaultdict-examples" title="本標題的永久連結">¶</a></h3>
+<h3><a class="reference internal" href="#collections.defaultdict" title="collections.defaultdict"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> 範例<a class="headerlink" href="#defaultdict-examples" title="Permalink to this heading">¶</a></h3>
 <p>使用 <a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 作為 <a class="reference internal" href="#collections.defaultdict.default_factory" title="collections.defaultdict.default_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">default_factory</span></code></a> 可以很輕鬆地將鍵值對序列轉換為包含 list 之字典：</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
@@ -853,7 +850,7 @@
 </section>
 </section>
 <section id="namedtuple-factory-function-for-tuples-with-named-fields">
-<h2><a class="reference internal" href="#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a> 擁有具名欄位之 tuple 的工廠函式<a class="headerlink" href="#namedtuple-factory-function-for-tuples-with-named-fields" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></a> 擁有具名欄位之 tuple 的工廠函式<a class="headerlink" href="#namedtuple-factory-function-for-tuples-with-named-fields" title="Permalink to this heading">¶</a></h2>
 <p>Named tuple（具名元組）賦予 tuple 中各個位置意義，使程式碼更有可讀性與自我文件性。它們可以用於任何普通 tuple 可使用的場合，賦予其透過名稱（而非位置索引）來存取欄位的能力。</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="collections.namedtuple">
@@ -1042,7 +1039,7 @@
 </div>
 </section>
 <section id="ordereddict-objects">
-<h2><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 物件<a class="headerlink" href="#ordereddict-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 物件<a class="headerlink" href="#ordereddict-objects" title="Permalink to this heading">¶</a></h2>
 <p>Ordered dictionary（有序字典）就像常規字典一樣，但有一些與排序操作相關的額外功能，但由於內建的 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 類別現在已經有記憶插入順序的能力（Python 3.7 中確保了這種新行為），它們變得不那麼重要了。</p>
 <p>仍存在一些與 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 的不同之處：</p>
 <ul>
@@ -1107,7 +1104,7 @@
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>新增合併 (<code class="docutils literal notranslate"><span class="pre">|</span></code>) 和更新 (<code class="docutils literal notranslate"><span class="pre">|=</span></code>) 運算子，請見 <span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0584/"><strong>PEP 584</strong></a>。</p>
 </div>
 <section id="ordereddict-examples-and-recipes">
-<h3><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 範例與用法<a class="headerlink" href="#ordereddict-examples-and-recipes" title="本標題的永久連結">¶</a></h3>
+<h3><a class="reference internal" href="#collections.OrderedDict" title="collections.OrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code></a> 範例與用法<a class="headerlink" href="#ordereddict-examples-and-recipes" title="Permalink to this heading">¶</a></h3>
 <p>建立一個能夠記住鍵<em>最後</em>插入順序的 ordered dictionary 變體很簡單。如果新條目覆蓋了現有條目，則原本插入位置會被更改並移動至末端：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LastUpdatedOrderedDict</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">):</span>
     <span class="s1">&#39;Store items in the order the keys were last added&#39;</span>
@@ -1180,7 +1177,7 @@
 </section>
 </section>
 <section id="userdict-objects">
-<h2><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 物件<a class="headerlink" href="#userdict-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 物件<a class="headerlink" href="#userdict-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#collections.UserDict" title="collections.UserDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserDict</span></code></a> 類別是作為 dict 物件的包裝器。因為已經可以直接自 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> 建立子類別，這個類別的需求已部分被滿足，不過這個類別使用起來更方便，因為被包裝的字典可以作為其屬性來存取。</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="collections.UserDict">
@@ -1197,7 +1194,7 @@
 
 </section>
 <section id="userlist-objects">
-<h2><a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a> 物件<a class="headerlink" href="#userlist-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.UserList" title="collections.UserList"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserList</span></code></a> 物件<a class="headerlink" href="#userlist-objects" title="Permalink to this heading">¶</a></h2>
 <p>此類別是 list 物件的包裝器。它是個方便的基礎類別，可繼承它並覆寫現有方法或加入新方法來定義你所需的一個類似於 list 的類別。如此一來，我們可以為 list 加入新的特性。</p>
 <p>因為已經可以直接自 <a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> 建立子類別，這個類別的需求已部分被滿足，不過這個類別使用起來更方便，因為被包裝的 list 可以作為其屬性來存取。</p>
 <dl class="py class">
@@ -1217,7 +1214,7 @@
 <p>如果希望一個自此獲得的子類別不遵從上述要求，那所有該類別支援的特殊方法則必須被覆寫；請參考原始碼來理解在這情況下哪些方法是必須提供的。</p>
 </section>
 <section id="userstring-objects">
-<h2><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 物件<a class="headerlink" href="#userstring-objects" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 物件<a class="headerlink" href="#userstring-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#collections.UserString" title="collections.UserString"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code></a> 類別是字串物件的包裝器，因為已經可以從 <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 直接建立子類別，這個類別的需求已經部分被滿足，不過這個類別使用起來更方便，因為被包裝的字串可以作為其屬性來存取。</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="collections.UserString">
@@ -1297,6 +1294,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1363,11 +1364,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

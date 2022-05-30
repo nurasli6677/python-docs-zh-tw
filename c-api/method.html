@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>實例方法物件 (Instance Method Objects) &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -159,7 +160,7 @@
           <div class="body" role="main">
             
   <section id="instance-method-objects">
-<span id="instancemethod-objects"></span><h1>實例方法物件 (Instance Method Objects)<a class="headerlink" href="#instance-method-objects" title="本標題的永久連結">¶</a></h1>
+<span id="instancemethod-objects"></span><h1>實例方法物件 (Instance Method Objects)<a class="headerlink" href="#instance-method-objects" title="Permalink to this heading">¶</a></h1>
 <p id="index-0">實例方法是 <a class="reference internal" href="structures.html#c.PyCFunction" title="PyCFunction"><code class="xref c c-data docutils literal notranslate"><span class="pre">PyCFunction</span></code></a> 的包裝器 (wrapper)，也是將 <a class="reference internal" href="structures.html#c.PyCFunction" title="PyCFunction"><code class="xref c c-data docutils literal notranslate"><span class="pre">PyCFunction</span></code></a> 繫結 (bind) 到類別物件的一種新方式。它替代了原先對 <code class="docutils literal notranslate"><span class="pre">PyMethod_New(func,</span> <span class="pre">NULL,</span> <span class="pre">class)</span></code> 的呼叫。</p>
 <dl class="c var">
 <dt class="sig sig-object c" id="c.PyInstanceMethod_Type">
@@ -193,7 +194,7 @@
 
 </section>
 <section id="method-objects">
-<span id="id1"></span><h1>方法物件 (Method Objects)<a class="headerlink" href="#method-objects" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1>方法物件 (Method Objects)<a class="headerlink" href="#method-objects" title="Permalink to this heading">¶</a></h1>
 <p id="index-1">方法為繫結函式 (bound function) 物件。方法總是會被繫結到一個使用者定義類別的實例。未繫結方法（繫結到一個類別的方法）已不可用。</p>
 <dl class="c var">
 <dt class="sig sig-object c" id="c.PyMethod_Type">
@@ -276,6 +277,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -342,11 +347,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

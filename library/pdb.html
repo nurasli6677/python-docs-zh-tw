@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>pdb --- The Python Debugger &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -161,7 +162,7 @@
           <div class="body" role="main">
             
   <section id="module-pdb">
-<span id="pdb-the-python-debugger"></span><span id="debugger"></span><h1><a class="reference internal" href="#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a> --- The Python Debugger<a class="headerlink" href="#module-pdb" title="本標題的永久連結">¶</a></h1>
+<span id="pdb-the-python-debugger"></span><span id="debugger"></span><h1><a class="reference internal" href="#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a> --- The Python Debugger<a class="headerlink" href="#module-pdb" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/pdb.py">Lib/pdb.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The module <a class="reference internal" href="#module-pdb" title="pdb: The Python debugger for interactive interpreters."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code></a> defines an interactive source code debugger for Python
@@ -309,7 +310,7 @@ access further features, you have to do this yourself:</p>
 underlying <a class="reference internal" href="cmd.html#cmd.Cmd" title="cmd.Cmd"><code class="xref py py-class docutils literal notranslate"><span class="pre">cmd.Cmd</span></code></a> class; see the description there.</p>
 <p>The <em>skip</em> argument, if given, must be an iterable of glob-style module name
 patterns.  The debugger will not step into frames that originate in a module
-that matches one of these patterns. <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
+that matches one of these patterns. <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>By default, Pdb sets a handler for the SIGINT signal (which is sent when the
 user presses <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> on the console) when you give a <code class="docutils literal notranslate"><span class="pre">continue</span></code> command.
 This allows you to break into the debugger again by pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd>.  If you
@@ -346,7 +347,7 @@ Pdb.</p>
 </dd></dl>
 
 <section id="debugger-commands">
-<span id="id2"></span><h2>Debugger Commands<a class="headerlink" href="#debugger-commands" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Debugger Commands<a class="headerlink" href="#debugger-commands" title="Permalink to this heading">¶</a></h2>
 <p>The commands recognized by the debugger are listed below.  Most commands can be
 abbreviated to one or two letters as indicated; e.g. <code class="docutils literal notranslate"><span class="pre">h(elp)</span></code> means that
 either <code class="docutils literal notranslate"><span class="pre">h</span></code> or <code class="docutils literal notranslate"><span class="pre">help</span></code> can be used to enter the help command (but not <code class="docutils literal notranslate"><span class="pre">he</span></code>
@@ -692,7 +693,7 @@ in the line are left alone.</p>
 
 <dl class="std pdbcommand">
 <dt class="sig sig-object std" id="pdbcommand-0">
-<span id="pdbcommand-!"></span><span class="sig-name descname"><span class="pre">!</span></span><span class="sig-prename descclassname"> <span class="pre">statement</span></span><a class="headerlink" href="#pdbcommand-0" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">!</span></span><span class="sig-prename descclassname"> <span class="pre">statement</span></span><a class="headerlink" href="#pdbcommand-0" title="本定義的永久連結">¶</a></dt>
 <dd><p>Execute the (one-line) <em>statement</em> in the context of the current stack frame.
 The exclamation point can be omitted unless the first word of the statement
 resembles a debugger command.  To set a global variable, you can prefix the
@@ -736,12 +737,11 @@ executed in the current environment).</p>
 </dd></dl>
 
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Whether a frame is considered to originate in a certain module
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Whether a frame is considered to originate in a certain module
 is determined by the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> in the frame globals.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -784,6 +784,10 @@ is determined by the <code class="docutils literal notranslate"><span class="pre
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -850,11 +854,11 @@ is determined by the <code class="docutils literal notranslate"><span class="pre
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

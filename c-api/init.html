@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Initialization, Finalization, and Threads &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -187,10 +188,10 @@
           <div class="body" role="main">
             
   <section id="initialization-finalization-and-threads">
-<span id="initialization"></span><h1>Initialization, Finalization, and Threads<a class="headerlink" href="#initialization-finalization-and-threads" title="本標題的永久連結">¶</a></h1>
+<span id="initialization"></span><h1>Initialization, Finalization, and Threads<a class="headerlink" href="#initialization-finalization-and-threads" title="Permalink to this heading">¶</a></h1>
 <p>See also <a class="reference internal" href="init_config.html#init-config"><span class="std std-ref">Python Initialization Configuration</span></a>.</p>
 <section id="before-python-initialization">
-<span id="pre-init-safe"></span><h2>Before Python Initialization<a class="headerlink" href="#before-python-initialization" title="本標題的永久連結">¶</a></h2>
+<span id="pre-init-safe"></span><h2>Before Python Initialization<a class="headerlink" href="#before-python-initialization" title="Permalink to this heading">¶</a></h2>
 <p>In an application embedding  Python, the <a class="reference internal" href="#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a> function must
 be called before using any other Python/C API functions; with the exception of
 a few functions and the <a class="reference internal" href="#global-conf-vars"><span class="std std-ref">global configuration variables</span></a>.</p>
@@ -249,7 +250,7 @@ a few functions and the <a class="reference internal" href="#global-conf-vars"><
 </div>
 </section>
 <section id="global-configuration-variables">
-<span id="global-conf-vars"></span><h2>Global configuration variables<a class="headerlink" href="#global-configuration-variables" title="本標題的永久連結">¶</a></h2>
+<span id="global-conf-vars"></span><h2>Global configuration variables<a class="headerlink" href="#global-configuration-variables" title="Permalink to this heading">¶</a></h2>
 <p>Python has variables for the global configuration to control different features
 and options. By default, these flags are controlled by <a class="reference internal" href="../using/cmdline.html#using-on-interface-options"><span class="std std-ref">command line
 options</span></a>.</p>
@@ -415,7 +416,7 @@ variable.</p>
 
 </section>
 <section id="initializing-and-finalizing-the-interpreter">
-<h2>Initializing and finalizing the interpreter<a class="headerlink" href="#initializing-and-finalizing-the-interpreter" title="本標題的永久連結">¶</a></h2>
+<h2>Initializing and finalizing the interpreter<a class="headerlink" href="#initializing-and-finalizing-the-interpreter" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_Initialize">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_Initialize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_Initialize" title="本定義的永久連結">¶</a><br /></dt>
@@ -495,7 +496,7 @@ disregards the return value.</p>
 
 </section>
 <section id="process-wide-parameters">
-<h2>Process-wide parameters<a class="headerlink" href="#process-wide-parameters" title="本標題的永久連結">¶</a></h2>
+<h2>Process-wide parameters<a class="headerlink" href="#process-wide-parameters" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.Py_SetStandardStreamEncoding">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Py_SetStandardStreamEncoding</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">encoding</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">errors</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_SetStandardStreamEncoding" title="本定義的永久連結">¶</a><br /></dt>
@@ -808,7 +809,7 @@ it returns <code class="docutils literal notranslate"><span class="pre">NULL</sp
 
 </section>
 <section id="thread-state-and-the-global-interpreter-lock">
-<span id="threads"></span><h2>Thread State and the Global Interpreter Lock<a class="headerlink" href="#thread-state-and-the-global-interpreter-lock" title="本標題的永久連結">¶</a></h2>
+<span id="threads"></span><h2>Thread State and the Global Interpreter Lock<a class="headerlink" href="#thread-state-and-the-global-interpreter-lock" title="Permalink to this heading">¶</a></h2>
 <p id="index-33">The Python interpreter is not fully thread-safe.  In order to support
 multi-threaded Python programs, there's a global lock, called the <a class="reference internal" href="../glossary.html#term-global-interpreter-lock"><span class="xref std std-term">global
 interpreter lock</span></a> or <a class="reference internal" href="../glossary.html#term-GIL"><span class="xref std std-term">GIL</span></a>, that must be held by the current thread before
@@ -827,7 +828,7 @@ inside a data structure called <a class="reference internal" href="#c.PyThreadSt
 global variable pointing to the current <a class="reference internal" href="#c.PyThreadState" title="PyThreadState"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyThreadState</span></code></a>: it can
 be retrieved using <a class="reference internal" href="#c.PyThreadState_Get" title="PyThreadState_Get"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyThreadState_Get()</span></code></a>.</p>
 <section id="releasing-the-gil-from-extension-code">
-<h3>Releasing the GIL from extension code<a class="headerlink" href="#releasing-the-gil-from-extension-code" title="本標題的永久連結">¶</a></h3>
+<h3>Releasing the GIL from extension code<a class="headerlink" href="#releasing-the-gil-from-extension-code" title="Permalink to this heading">¶</a></h3>
 <p>Most extension code manipulating the <a class="reference internal" href="../glossary.html#term-GIL"><span class="xref std std-term">GIL</span></a> has the following simple
 structure:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Save</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="kr">thread</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">variable</span><span class="p">.</span><span class="w"></span>
@@ -872,7 +873,7 @@ compressing or hashing data.</p>
 </div>
 </section>
 <section id="non-python-created-threads">
-<span id="gilstate"></span><h3>Non-Python created threads<a class="headerlink" href="#non-python-created-threads" title="本標題的永久連結">¶</a></h3>
+<span id="gilstate"></span><h3>Non-Python created threads<a class="headerlink" href="#non-python-created-threads" title="Permalink to this heading">¶</a></h3>
 <p>When threads are created using the dedicated Python APIs (such as the
 <a class="reference internal" href="../library/threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> module), a thread state is automatically associated to them
 and the code showed above is therefore correct.  However, when threads are
@@ -907,7 +908,7 @@ supports the creation of additional interpreters (using
 <span class="xref c c-texpr"><span class="n">PyGILState_</span><span class="p">*</span></span> API is unsupported.</p>
 </section>
 <section id="cautions-about-fork">
-<span id="fork-and-threads"></span><h3>Cautions about fork()<a class="headerlink" href="#cautions-about-fork" title="本標題的永久連結">¶</a></h3>
+<span id="fork-and-threads"></span><h3>Cautions about fork()<a class="headerlink" href="#cautions-about-fork" title="Permalink to this heading">¶</a></h3>
 <p>Another important thing to note about threads is their behaviour in the face
 of the C <code class="xref c c-func docutils literal notranslate"><span class="pre">fork()</span></code> call. On most systems with <code class="xref c c-func docutils literal notranslate"><span class="pre">fork()</span></code>, after a
 process forks only the thread that issued the fork will exist.  This has a
@@ -939,7 +940,7 @@ The only exception is if <code class="xref c c-func docutils literal notranslate
 after.</p>
 </section>
 <section id="high-level-api">
-<h3>High-level API<a class="headerlink" href="#high-level-api" title="本標題的永久連結">¶</a></h3>
+<h3>High-level API<a class="headerlink" href="#high-level-api" title="Permalink to this heading">¶</a></h3>
 <p>These are the most commonly used types and functions when writing C extension
 code, or when embedding the Python interpreter:</p>
 <dl class="c type">
@@ -1144,7 +1145,7 @@ declaration.</p>
 
 </section>
 <section id="low-level-api">
-<h3>Low-level API<a class="headerlink" href="#low-level-api" title="本標題的永久連結">¶</a></h3>
+<h3>Low-level API<a class="headerlink" href="#low-level-api" title="Permalink to this heading">¶</a></h3>
 <p>All of the following functions must be called after <a class="reference internal" href="#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span><a class="reference internal" href="#c.Py_Initialize" title="Py_Initialize"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_Initialize()</span></code></a> now initializes the <a class="reference internal" href="../glossary.html#term-GIL"><span class="xref std std-term">GIL</span></a>.</p>
@@ -1410,7 +1411,7 @@ instead.</p>
 </section>
 </section>
 <section id="sub-interpreter-support">
-<span id="id1"></span><h2>Sub-interpreter support<a class="headerlink" href="#sub-interpreter-support" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Sub-interpreter support<a class="headerlink" href="#sub-interpreter-support" title="Permalink to this heading">¶</a></h2>
 <p>While in most uses, you will only embed a single Python interpreter, there
 are cases where you need to create several independent interpreters in the
 same process and perhaps even in the same thread. Sub-interpreters allow
@@ -1485,7 +1486,7 @@ haven't been explicitly destroyed at that point.</p>
 </dd></dl>
 
 <section id="bugs-and-caveats">
-<h3>Bugs and caveats<a class="headerlink" href="#bugs-and-caveats" title="本標題的永久連結">¶</a></h3>
+<h3>Bugs and caveats<a class="headerlink" href="#bugs-and-caveats" title="Permalink to this heading">¶</a></h3>
 <p>Because sub-interpreters (and the main interpreter) are part of the same
 process, the insulation between them isn't perfect --- for example, using
 low-level file operations like  <a class="reference internal" href="../library/os.html#os.close" title="os.close"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.close()</span></code></a> they can
@@ -1511,7 +1512,7 @@ sub-interpreters.</p>
 </section>
 </section>
 <section id="asynchronous-notifications">
-<h2>Asynchronous Notifications<a class="headerlink" href="#asynchronous-notifications" title="本標題的永久連結">¶</a></h2>
+<h2>Asynchronous Notifications<a class="headerlink" href="#asynchronous-notifications" title="Permalink to this heading">¶</a></h2>
 <p>A mechanism is provided to make asynchronous notifications to the main
 interpreter thread.  These notifications take the form of a function
 pointer and a void pointer argument.</p>
@@ -1561,7 +1562,7 @@ list of scheduled calls.</p>
 
 </section>
 <section id="profiling-and-tracing">
-<span id="profiling"></span><h2>Profiling and Tracing<a class="headerlink" href="#profiling-and-tracing" title="本標題的永久連結">¶</a></h2>
+<span id="profiling"></span><h2>Profiling and Tracing<a class="headerlink" href="#profiling-and-tracing" title="Permalink to this heading">¶</a></h2>
 <p>The Python interpreter provides some low-level support for attaching profiling
 and execution tracing facilities.  These are used for profiling, debugging, and
 coverage analysis tools.</p>
@@ -1582,10 +1583,6 @@ pertains, <em>what</em> is one of the constants <code class="xref py py-const do
 <code class="xref py py-const docutils literal notranslate"><span class="pre">PyTrace_C_CALL</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">PyTrace_C_EXCEPTION</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">PyTrace_C_RETURN</span></code>,
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">PyTrace_OPCODE</span></code>, and <em>arg</em> depends on the value of <em>what</em>:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 43%" />
-<col style="width: 57%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Value of <em>what</em></p></th>
 <th class="head"><p>Meaning of <em>arg</em></p></th>
@@ -1715,7 +1712,7 @@ will not receive <code class="xref py py-const docutils literal notranslate"><sp
 
 </section>
 <section id="advanced-debugger-support">
-<span id="advanced-debugging"></span><h2>Advanced Debugger Support<a class="headerlink" href="#advanced-debugger-support" title="本標題的永久連結">¶</a></h2>
+<span id="advanced-debugging"></span><h2>Advanced Debugger Support<a class="headerlink" href="#advanced-debugger-support" title="Permalink to this heading">¶</a></h2>
 <p>These functions are only intended to be used by advanced debugging tools.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyInterpreterState_Head">
@@ -1752,7 +1749,7 @@ objects belonging to the same <a class="reference internal" href="#c.PyInterpret
 
 </section>
 <section id="thread-local-storage-support">
-<span id="thread-local-storage"></span><h2>Thread Local Storage Support<a class="headerlink" href="#thread-local-storage-support" title="本標題的永久連結">¶</a></h2>
+<span id="thread-local-storage"></span><h2>Thread Local Storage Support<a class="headerlink" href="#thread-local-storage-support" title="Permalink to this heading">¶</a></h2>
 <p>The Python interpreter provides low-level support for thread-local storage
 (TLS) which wraps the underlying native TLS implementation to support the
 Python-level thread local storage API (<a class="reference internal" href="../library/threading.html#threading.local" title="threading.local"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.local</span></code></a>).  The
@@ -1771,7 +1768,7 @@ If the <span class="xref c c-texpr"><span class="kt">void</span><span class="p">
 functions don't do refcount operations on them either.</p>
 </div>
 <section id="thread-specific-storage-tss-api">
-<span id="thread-specific-storage-api"></span><h3>Thread Specific Storage (TSS) API<a class="headerlink" href="#thread-specific-storage-tss-api" title="本標題的永久連結">¶</a></h3>
+<span id="thread-specific-storage-api"></span><h3>Thread Specific Storage (TSS) API<a class="headerlink" href="#thread-specific-storage-tss-api" title="Permalink to this heading">¶</a></h3>
 <p>TSS API is introduced to supersede the use of the existing TLS API within the
 CPython interpreter.  This API uses a new type <a class="reference internal" href="#c.Py_tss_t" title="Py_tss_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_tss_t</span></code></a> instead of
 <span class="xref c c-texpr"><span class="kt">int</span></span> to represent thread keys.</p>
@@ -1801,7 +1798,7 @@ Note that this macro won't be defined with <a class="reference internal" href="s
 </dd></dl>
 
 <section id="dynamic-allocation">
-<h4>Dynamic Allocation<a class="headerlink" href="#dynamic-allocation" title="本標題的永久連結">¶</a></h4>
+<h4>Dynamic Allocation<a class="headerlink" href="#dynamic-allocation" title="Permalink to this heading">¶</a></h4>
 <p>Dynamic allocation of the <a class="reference internal" href="#c.Py_tss_t" title="Py_tss_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_tss_t</span></code></a>, required in extension modules
 built with <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Py_LIMITED_API</span></a>, where static allocation of this type
 is not possible due to its implementation being opaque at build time.</p>
@@ -1829,7 +1826,7 @@ argument is <cite>NULL</cite>.</p>
 
 </section>
 <section id="methods">
-<h4>Methods<a class="headerlink" href="#methods" title="本標題的永久連結">¶</a></h4>
+<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h4>
 <p>The parameter <em>key</em> of these functions must not be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.  Moreover, the
 behaviors of <a class="reference internal" href="#c.PyThread_tss_set" title="PyThread_tss_set"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyThread_tss_set()</span></code></a> and <a class="reference internal" href="#c.PyThread_tss_get" title="PyThread_tss_get"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyThread_tss_get()</span></code></a> are
 undefined if the given <a class="reference internal" href="#c.Py_tss_t" title="Py_tss_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_tss_t</span></code></a> has not been initialized by
@@ -1880,7 +1877,7 @@ current thread.</p>
 </section>
 </section>
 <section id="thread-local-storage-tls-api">
-<span id="thread-local-storage-api"></span><h3>Thread Local Storage (TLS) API<a class="headerlink" href="#thread-local-storage-tls-api" title="本標題的永久連結">¶</a></h3>
+<span id="thread-local-storage-api"></span><h3>Thread Local Storage (TLS) API<a class="headerlink" href="#thread-local-storage-tls-api" title="Permalink to this heading">¶</a></h3>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.7 版本開始棄用: </span>This API is superseded by
 <a class="reference internal" href="#thread-specific-storage-api"><span class="std std-ref">Thread Specific Storage (TSS) API</span></a>.</p>
@@ -1994,6 +1991,10 @@ be used in new code.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -2059,11 +2060,11 @@ be used in new code.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

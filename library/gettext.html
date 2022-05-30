@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>gettext --- Multilingual internationalization services &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -176,7 +177,7 @@
           <div class="body" role="main">
             
   <section id="module-gettext">
-<span id="gettext-multilingual-internationalization-services"></span><h1><a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> --- Multilingual internationalization services<a class="headerlink" href="#module-gettext" title="本標題的永久連結">¶</a></h1>
+<span id="gettext-multilingual-internationalization-services"></span><h1><a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> --- Multilingual internationalization services<a class="headerlink" href="#module-gettext" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/gettext.py">Lib/gettext.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> module provides internationalization (I18N) and localization
@@ -188,7 +189,7 @@ provide a catalog of translated messages for running under different natural
 languages.</p>
 <p>Some hints on localizing your Python modules and applications are also given.</p>
 <section id="gnu-gettext-api">
-<h2>GNU <strong class="program">gettext</strong> API<a class="headerlink" href="#gnu-gettext-api" title="本標題的永久連結">¶</a></h2>
+<h2>GNU <strong class="program">gettext</strong> API<a class="headerlink" href="#gnu-gettext-api" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> module defines the following API, which is very similar to
 the GNU <strong class="program">gettext</strong> API.  If you use this API you will affect the
 translation of your entire application globally.  Often this is what you want if
@@ -205,7 +206,7 @@ the path (on Unix): <code class="file docutils literal notranslate"><em><span cl
 <em>language</em> is searched for in the environment variables <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LANGUAGE</span></code>,
 <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LC_ALL</span></code>, <span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code>, and <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LANG</span></code> respectively.</p>
 <p>If <em>localedir</em> is omitted or <code class="docutils literal notranslate"><span class="pre">None</span></code>, then the current binding for <em>domain</em> is
-returned. <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
+returned. <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 </dd></dl>
 
 <dl class="py function">
@@ -339,7 +340,7 @@ this was deemed not useful and so it is currently unimplemented.</p>
 </div>
 </section>
 <section id="class-based-api">
-<h2>Class-based API<a class="headerlink" href="#class-based-api" title="本標題的永久連結">¶</a></h2>
+<h2>Class-based API<a class="headerlink" href="#class-based-api" title="Permalink to this heading">¶</a></h2>
 <p>The class-based API of the <a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> module gives you more flexibility and
 greater convenience than the GNU <strong class="program">gettext</strong> API.  It is the recommended
 way of localizing your Python applications and modules.  <code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code> defines
@@ -354,7 +355,7 @@ takes a <em>domain</em>, identical to what <a class="reference internal" href="#
 <em>localedir</em> is as in <a class="reference internal" href="#gettext.bindtextdomain" title="gettext.bindtextdomain"><code class="xref py py-func docutils literal notranslate"><span class="pre">bindtextdomain()</span></code></a>. Optional <em>languages</em> is a list of
 strings, where each string is a language code.</p>
 <p>If <em>localedir</em> is not given, then the default system locale directory is used.
-<a class="footnote-reference brackets" href="#id4" id="id2">2</a>  If <em>languages</em> is not given, then the following environment variables are
+<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>  If <em>languages</em> is not given, then the following environment variables are
 searched: <span class="target" id="index-5"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LANGUAGE</span></code>, <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LC_ALL</span></code>, <span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code>, and
 <span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LANG</span></code>.  The first one returning a non-empty value is used for the
 <em>languages</em> variable. The environment variables should contain a colon separated
@@ -419,7 +420,7 @@ application.</p>
 </dd></dl>
 
 <section id="the-nulltranslations-class">
-<h3>The <a class="reference internal" href="#gettext.NullTranslations" title="gettext.NullTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullTranslations</span></code></a> class<a class="headerlink" href="#the-nulltranslations-class" title="本標題的永久連結">¶</a></h3>
+<h3>The <a class="reference internal" href="#gettext.NullTranslations" title="gettext.NullTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullTranslations</span></code></a> class<a class="headerlink" href="#the-nulltranslations-class" title="Permalink to this heading">¶</a></h3>
 <p>Translation classes are what actually implement the translation of original
 source file message strings to translated message strings. The base class used
 by all translation classes is <a class="reference internal" href="#gettext.NullTranslations" title="gettext.NullTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullTranslations</span></code></a>; this provides the basic
@@ -569,7 +570,7 @@ affects calls within this module.</p>
 
 </section>
 <section id="the-gnutranslations-class">
-<h3>The <a class="reference internal" href="#gettext.GNUTranslations" title="gettext.GNUTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">GNUTranslations</span></code></a> class<a class="headerlink" href="#the-gnutranslations-class" title="本標題的永久連結">¶</a></h3>
+<h3>The <a class="reference internal" href="#gettext.GNUTranslations" title="gettext.GNUTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">GNUTranslations</span></code></a> class<a class="headerlink" href="#the-gnutranslations-class" title="Permalink to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> module provides one additional class derived from
 <a class="reference internal" href="#gettext.NullTranslations" title="gettext.NullTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullTranslations</span></code></a>: <a class="reference internal" href="#gettext.GNUTranslations" title="gettext.GNUTranslations"><code class="xref py py-class docutils literal notranslate"><span class="pre">GNUTranslations</span></code></a>.  This class overrides
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">_parse()</span></code> to enable reading GNU <strong class="program">gettext</strong> format <code class="file docutils literal notranslate"><span class="pre">.mo</span></code> files
@@ -679,13 +680,13 @@ if no encoding  was explicitly set with
 
 </section>
 <section id="solaris-message-catalog-support">
-<h3>Solaris message catalog support<a class="headerlink" href="#solaris-message-catalog-support" title="本標題的永久連結">¶</a></h3>
+<h3>Solaris message catalog support<a class="headerlink" href="#solaris-message-catalog-support" title="Permalink to this heading">¶</a></h3>
 <p>The Solaris operating system defines its own binary <code class="file docutils literal notranslate"><span class="pre">.mo</span></code> file format, but
 since no documentation can be found on this format, it is not supported at this
 time.</p>
 </section>
 <section id="the-catalog-constructor">
-<h3>The Catalog constructor<a class="headerlink" href="#the-catalog-constructor" title="本標題的永久連結">¶</a></h3>
+<h3>The Catalog constructor<a class="headerlink" href="#the-catalog-constructor" title="Permalink to this heading">¶</a></h3>
 <p id="index-10">GNOME uses a version of the <a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> module by James Henstridge, but this
 version has a slightly different API.  Its documented usage was:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gettext</span>
@@ -702,7 +703,7 @@ not currently supported.</p>
 </section>
 </section>
 <section id="internationalizing-your-programs-and-modules">
-<h2>Internationalizing your programs and modules<a class="headerlink" href="#internationalizing-your-programs-and-modules" title="本標題的永久連結">¶</a></h2>
+<h2>Internationalizing your programs and modules<a class="headerlink" href="#internationalizing-your-programs-and-modules" title="Permalink to this heading">¶</a></h2>
 <p>Internationalization (I18N) refers to the operation by which a program is made
 aware of multiple languages.  Localization (L10N) refers to the adaptation of
 your program, once internationalized, to the local language and cultural habits.
@@ -762,7 +763,7 @@ run-time.</p>
 internationalizing a single module or your entire application. The next two
 sections will discuss each case.</p>
 <section id="localizing-your-module">
-<h3>Localizing your module<a class="headerlink" href="#localizing-your-module" title="本標題的永久連結">¶</a></h3>
+<h3>Localizing your module<a class="headerlink" href="#localizing-your-module" title="Permalink to this heading">¶</a></h3>
 <p>If you are localizing your module, you must take care not to make global
 changes, e.g. to the built-in namespace. You should not use the GNU <strong class="program">gettext</strong>
 API but instead the class-based API.</p>
@@ -777,7 +778,7 @@ module:</p>
 </div>
 </section>
 <section id="localizing-your-application">
-<h3>Localizing your application<a class="headerlink" href="#localizing-your-application" title="本標題的永久連結">¶</a></h3>
+<h3>Localizing your application<a class="headerlink" href="#localizing-your-application" title="Permalink to this heading">¶</a></h3>
 <p>If you are localizing your application, you can install the <code class="xref py py-func docutils literal notranslate"><span class="pre">_()</span></code> function
 globally into the built-in namespace, usually in the main driver file of your
 application.  This will let all your application-specific files just use
@@ -796,7 +797,7 @@ driver file of your application:</p>
 </div>
 </section>
 <section id="changing-languages-on-the-fly">
-<h3>Changing languages on the fly<a class="headerlink" href="#changing-languages-on-the-fly" title="本標題的永久連結">¶</a></h3>
+<h3>Changing languages on the fly<a class="headerlink" href="#changing-languages-on-the-fly" title="Permalink to this heading">¶</a></h3>
 <p>If your program needs to support many languages at the same time, you may want
 to create multiple translation instances and then switch between them
 explicitly, like so:</p>
@@ -818,7 +819,7 @@ explicitly, like so:</p>
 </div>
 </section>
 <section id="deferred-translations">
-<h3>Deferred translations<a class="headerlink" href="#deferred-translations" title="本標題的永久連結">¶</a></h3>
+<h3>Deferred translations<a class="headerlink" href="#deferred-translations" title="Permalink to this heading">¶</a></h3>
 <p>In most coding situations, strings are translated where they are coded.
 Occasionally however, you need to mark strings for translation, but defer actual
 translation until later.  A classic example is:</p>
@@ -884,7 +885,7 @@ as easily been <code class="xref py py-func docutils literal notranslate"><span 
 </section>
 </section>
 <section id="acknowledgements">
-<h2>致謝<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
+<h2>致謝<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">¶</a></h2>
 <p>The following people contributed code, feedback, design suggestions, previous
 implementations, and valuable experience to the creation of this module:</p>
 <ul class="simple">
@@ -898,20 +899,20 @@ implementations, and valuable experience to the creation of this module:</p>
 <li><p>Gustavo Niemeyer</p></li>
 </ul>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>The default locale directory is system dependent; for example, on RedHat Linux
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The default locale directory is system dependent; for example, on RedHat Linux
 it is <code class="file docutils literal notranslate"><span class="pre">/usr/share/locale</span></code>, but on Solaris it is <code class="file docutils literal notranslate"><span class="pre">/usr/lib/locale</span></code>.
 The <a class="reference internal" href="#module-gettext" title="gettext: Multilingual internationalization services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code></a> module does not try to support these system dependent
 defaults; instead its default is <code class="file docutils literal notranslate"><em><span class="pre">sys.base_prefix</span></em><span class="pre">/share/locale</span></code> (see
 <a class="reference internal" href="sys.html#sys.base_prefix" title="sys.base_prefix"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.base_prefix</span></code></a>). For this reason, it is always best to call
 <a class="reference internal" href="#gettext.bindtextdomain" title="gettext.bindtextdomain"><code class="xref py py-func docutils literal notranslate"><span class="pre">bindtextdomain()</span></code></a> with an explicit absolute path at the start of your
 application.</p>
-</dd>
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>請見上方 <a class="reference internal" href="#gettext.bindtextdomain" title="gettext.bindtextdomain"><code class="xref py py-func docutils literal notranslate"><span class="pre">bindtextdomain()</span></code></a> 之註解。</p>
-</dd>
-</dl>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>請見上方 <a class="reference internal" href="#gettext.bindtextdomain" title="gettext.bindtextdomain"><code class="xref py py-func docutils literal notranslate"><span class="pre">bindtextdomain()</span></code></a> 之註解。</p>
+</aside>
 </section>
 </section>
 
@@ -969,6 +970,10 @@ application.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1035,11 +1040,11 @@ application.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

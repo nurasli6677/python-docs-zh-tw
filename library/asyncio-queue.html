@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Queues &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="queues">
-<span id="asyncio-queues"></span><h1>Queues<a class="headerlink" href="#queues" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-queues"></span><h1>Queues<a class="headerlink" href="#queues" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/queues.py">Lib/asyncio/queues.py</a></p>
 <hr class="docutils" />
 <p>asyncio queues are designed to be similar to classes of the
@@ -177,7 +178,7 @@ use <a class="reference internal" href="asyncio-task.html#asyncio.wait_for" titl
 timeout.</p>
 <p>另請參閱下方<a class="reference internal" href="#examples">Examples</a>。</p>
 <section id="queue">
-<h2>Queue<a class="headerlink" href="#queue" title="本標題的永久連結">¶</a></h2>
+<h2>Queue<a class="headerlink" href="#queue" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Queue">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Queue" title="本定義的永久連結">¶</a></dt>
@@ -277,7 +278,7 @@ items placed in the queue.</p>
 
 </section>
 <section id="priority-queue">
-<h2>Priority Queue<a class="headerlink" href="#priority-queue" title="本標題的永久連結">¶</a></h2>
+<h2>Priority Queue<a class="headerlink" href="#priority-queue" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.PriorityQueue">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">PriorityQueue</span></span><a class="headerlink" href="#asyncio.PriorityQueue" title="本定義的永久連結">¶</a></dt>
@@ -289,7 +290,7 @@ items placed in the queue.</p>
 
 </section>
 <section id="lifo-queue">
-<h2>LIFO Queue<a class="headerlink" href="#lifo-queue" title="本標題的永久連結">¶</a></h2>
+<h2>LIFO Queue<a class="headerlink" href="#lifo-queue" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.LifoQueue">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">LifoQueue</span></span><a class="headerlink" href="#asyncio.LifoQueue" title="本定義的永久連結">¶</a></dt>
@@ -299,7 +300,7 @@ entries first (last in, first out).</p>
 
 </section>
 <section id="exceptions">
-<h2>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>例外<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="asyncio.QueueEmpty">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">QueueEmpty</span></span><a class="headerlink" href="#asyncio.QueueEmpty" title="本定義的永久連結">¶</a></dt>
@@ -316,7 +317,7 @@ on a queue that has reached its <em>maxsize</em>.</p>
 
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p id="asyncio-example-queue-dist">Queues can be used to distribute workload between several
 concurrent tasks:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -420,6 +421,10 @@ concurrent tasks:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -487,11 +492,11 @@ concurrent tasks:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

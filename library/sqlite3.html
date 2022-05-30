@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>sqlite3 --- DB-API 2.0 interface for SQLite databases &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -183,7 +184,7 @@
           <div class="body" role="main">
             
   <section id="module-sqlite3">
-<span id="sqlite3-db-api-2-0-interface-for-sqlite-databases"></span><h1><a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> --- DB-API 2.0 interface for SQLite databases<a class="headerlink" href="#module-sqlite3" title="本標題的永久連結">¶</a></h1>
+<span id="sqlite3-db-api-2-0-interface-for-sqlite-databases"></span><h1><a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> --- DB-API 2.0 interface for SQLite databases<a class="headerlink" href="#module-sqlite3" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/sqlite3/">Lib/sqlite3/</a></p>
 <hr class="docutils" />
 <p>SQLite is a C library that provides a lightweight disk-based database that
@@ -301,7 +302,7 @@ available data types for the supported SQL dialect.</p>
 </dl>
 </div>
 <section id="module-functions-and-constants">
-<span id="sqlite3-module-contents"></span><h2>Module functions and constants<a class="headerlink" href="#module-functions-and-constants" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-module-contents"></span><h2>Module functions and constants<a class="headerlink" href="#module-functions-and-constants" title="Permalink to this heading">¶</a></h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="sqlite3.apilevel">
 <span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">apilevel</span></span><a class="headerlink" href="#sqlite3.apilevel" title="本定義的永久連結">¶</a></dt>
@@ -545,7 +546,7 @@ disable the feature again.</p>
 
 </section>
 <section id="connection-objects">
-<span id="sqlite3-connection-objects"></span><h2>Connection Objects<a class="headerlink" href="#connection-objects" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-connection-objects"></span><h2>Connection Objects<a class="headerlink" href="#connection-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="sqlite3.Connection">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">Connection</span></span><a class="headerlink" href="#sqlite3.Connection" title="本定義的永久連結">¶</a></dt>
@@ -807,7 +808,7 @@ tracebacks from exceptions raised in the trace callback.</p>
 from shared libraries.  SQLite extensions can define new functions,
 aggregates or whole new virtual table implementations.  One well-known
 extension is the fulltext-search extension distributed with SQLite.</p>
-<p>Loadable extensions are disabled by default. See <a class="footnote-reference brackets" href="#f1" id="id1">1</a>.</p>
+<p>Loadable extensions are disabled by default. See <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.enable_load_extension</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">connection</span></code>, <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
@@ -853,7 +854,7 @@ extension is the fulltext-search extension distributed with SQLite.</p>
 <dd><p>This routine loads an SQLite extension from a shared library.  You have to
 enable extension loading with <a class="reference internal" href="#sqlite3.Connection.enable_load_extension" title="sqlite3.Connection.enable_load_extension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enable_load_extension()</span></code></a> before you can
 use this routine.</p>
-<p>Loadable extensions are disabled by default. See <a class="footnote-reference brackets" href="#f1" id="id2">1</a>.</p>
+<p>Loadable extensions are disabled by default. See <a class="footnote-reference brackets" href="#f1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.load_extension</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">connection</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
@@ -1019,7 +1020,7 @@ integer or a floating point value.</p>
 
 </section>
 <section id="cursor-objects">
-<span id="sqlite3-cursor-objects"></span><h2>Cursor Objects<a class="headerlink" href="#cursor-objects" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-cursor-objects"></span><h2>Cursor Objects<a class="headerlink" href="#cursor-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="sqlite3.Cursor">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">Cursor</span></span><a class="headerlink" href="#sqlite3.Cursor" title="本定義的永久連結">¶</a></dt>
@@ -1249,7 +1250,7 @@ calling <a class="reference internal" href="#sqlite3.Connection.cursor" title="s
 
 </section>
 <section id="row-objects">
-<span id="sqlite3-row-objects"></span><h2>Row Objects<a class="headerlink" href="#row-objects" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-row-objects"></span><h2>Row Objects<a class="headerlink" href="#row-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="sqlite3.Row">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">Row</span></span><a class="headerlink" href="#sqlite3.Row" title="本定義的永久連結">¶</a></dt>
@@ -1314,7 +1315,7 @@ it is the first member of each tuple in <a class="reference internal" href="#sql
 </div>
 </section>
 <section id="exceptions">
-<span id="sqlite3-exceptions"></span><h2>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-exceptions"></span><h2>例外<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="sqlite3.Warning">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">Warning</span></span><a class="headerlink" href="#sqlite3.Warning" title="本定義的永久連結">¶</a></dt>
@@ -1369,17 +1370,13 @@ transactions turned off.  It is a subclass of <a class="reference internal" href
 
 </section>
 <section id="sqlite-and-python-types">
-<span id="sqlite3-types"></span><h2>SQLite and Python types<a class="headerlink" href="#sqlite-and-python-types" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-types"></span><h2>SQLite and Python types<a class="headerlink" href="#sqlite-and-python-types" title="Permalink to this heading">¶</a></h2>
 <section id="introduction">
-<h3>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h3>
+<h3>簡介<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h3>
 <p>SQLite natively supports the following types: <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, <code class="docutils literal notranslate"><span class="pre">INTEGER</span></code>,
 <code class="docutils literal notranslate"><span class="pre">REAL</span></code>, <code class="docutils literal notranslate"><span class="pre">TEXT</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOB</span></code>.</p>
 <p>The following Python types can thus be sent to SQLite without any problem:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 70%" />
-<col style="width: 30%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Python type</p></th>
 <th class="head"><p>SQLite type</p></th>
@@ -1405,10 +1402,6 @@ transactions turned off.  It is a subclass of <a class="reference internal" href
 </table>
 <p>This is how SQLite types are converted to Python types by default:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>SQLite type</p></th>
 <th class="head"><p>Python type</p></th>
@@ -1439,7 +1432,7 @@ you can let the <a class="reference internal" href="#module-sqlite3" title="sqli
 types via converters.</p>
 </section>
 <section id="using-adapters-to-store-additional-python-types-in-sqlite-databases">
-<h3>Using adapters to store additional Python types in SQLite databases<a class="headerlink" href="#using-adapters-to-store-additional-python-types-in-sqlite-databases" title="本標題的永久連結">¶</a></h3>
+<h3>Using adapters to store additional Python types in SQLite databases<a class="headerlink" href="#using-adapters-to-store-additional-python-types-in-sqlite-databases" title="Permalink to this heading">¶</a></h3>
 <p>As described before, SQLite supports only a limited set of types natively. To
 use other Python types with SQLite, you must <strong>adapt</strong> them to one of the
 sqlite3 module's supported types for SQLite: one of NoneType, int, float,
@@ -1447,7 +1440,7 @@ str, bytes.</p>
 <p>There are two ways to enable the <a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> module to adapt a custom Python
 type to one of the supported ones.</p>
 <section id="letting-your-object-adapt-itself">
-<h4>Letting your object adapt itself<a class="headerlink" href="#letting-your-object-adapt-itself" title="本標題的永久連結">¶</a></h4>
+<h4>Letting your object adapt itself<a class="headerlink" href="#letting-your-object-adapt-itself" title="Permalink to this heading">¶</a></h4>
 <p>This is a good approach if you write the class yourself. Let's suppose you have
 a class like this:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
@@ -1482,7 +1475,7 @@ the converted value. The parameter <em>protocol</em> will be <code class="xref p
 </div>
 </section>
 <section id="registering-an-adapter-callable">
-<h4>Registering an adapter callable<a class="headerlink" href="#registering-an-adapter-callable" title="本標題的永久連結">¶</a></h4>
+<h4>Registering an adapter callable<a class="headerlink" href="#registering-an-adapter-callable" title="Permalink to this heading">¶</a></h4>
 <p>The other possibility is to create a function that converts the type to the
 string representation and register the function with <a class="reference internal" href="#sqlite3.register_adapter" title="sqlite3.register_adapter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_adapter()</span></code></a>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -1532,7 +1525,7 @@ but as a Unix timestamp.</p>
 </section>
 </section>
 <section id="converting-sqlite-values-to-custom-python-types">
-<h3>Converting SQLite values to custom Python types<a class="headerlink" href="#converting-sqlite-values-to-custom-python-types" title="本標題的永久連結">¶</a></h3>
+<h3>Converting SQLite values to custom Python types<a class="headerlink" href="#converting-sqlite-values-to-custom-python-types" title="Permalink to this heading">¶</a></h3>
 <p>Writing an adapter lets you send custom Python types to SQLite. But to make it
 really useful we need to make the Python to SQLite to Python roundtrip work.</p>
 <p>Enter converters.</p>
@@ -1610,7 +1603,7 @@ for the constants <a class="reference internal" href="#sqlite3.PARSE_DECLTYPES" 
 </div>
 </section>
 <section id="default-adapters-and-converters">
-<h3>Default adapters and converters<a class="headerlink" href="#default-adapters-and-converters" title="本標題的永久連結">¶</a></h3>
+<h3>Default adapters and converters<a class="headerlink" href="#default-adapters-and-converters" title="Permalink to this heading">¶</a></h3>
 <p>There are default adapters for the date and datetime types in the datetime
 module. They will be sent as ISO dates/ISO timestamps to SQLite.</p>
 <p>The default converters are registered under the name &quot;date&quot; for
@@ -1657,7 +1650,7 @@ offset-aware converter with <a class="reference internal" href="#sqlite3.registe
 </section>
 </section>
 <section id="controlling-transactions">
-<span id="sqlite3-controlling-transactions"></span><h2>Controlling Transactions<a class="headerlink" href="#controlling-transactions" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-controlling-transactions"></span><h2>Controlling Transactions<a class="headerlink" href="#controlling-transactions" title="Permalink to this heading">¶</a></h2>
 <p>The underlying <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> library operates in <code class="docutils literal notranslate"><span class="pre">autocommit</span></code> mode by default,
 but the Python <a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> module by default does not.</p>
 <p><code class="docutils literal notranslate"><span class="pre">autocommit</span></code> mode means that statements that modify the database take effect
@@ -1686,9 +1679,9 @@ statements.  This is no longer the case.</p>
 </div>
 </section>
 <section id="using-sqlite3-efficiently">
-<h2>Using <a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> efficiently<a class="headerlink" href="#using-sqlite3-efficiently" title="本標題的永久連結">¶</a></h2>
+<h2>Using <a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> efficiently<a class="headerlink" href="#using-sqlite3-efficiently" title="Permalink to this heading">¶</a></h2>
 <section id="using-shortcut-methods">
-<h3>Using shortcut methods<a class="headerlink" href="#using-shortcut-methods" title="本標題的永久連結">¶</a></h3>
+<h3>Using shortcut methods<a class="headerlink" href="#using-shortcut-methods" title="Permalink to this heading">¶</a></h3>
 <p>Using the nonstandard <code class="xref py py-meth docutils literal notranslate"><span class="pre">execute()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">executemany()</span></code> and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">executescript()</span></code> methods of the <a class="reference internal" href="#sqlite3.Connection" title="sqlite3.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a> object, your code can
 be written more concisely because you don't have to create the (often
@@ -1724,7 +1717,7 @@ directly using only a single call on the <a class="reference internal" href="#sq
 </div>
 </section>
 <section id="accessing-columns-by-name-instead-of-by-index">
-<h3>Accessing columns by name instead of by index<a class="headerlink" href="#accessing-columns-by-name-instead-of-by-index" title="本標題的永久連結">¶</a></h3>
+<h3>Accessing columns by name instead of by index<a class="headerlink" href="#accessing-columns-by-name-instead-of-by-index" title="Permalink to this heading">¶</a></h3>
 <p>One useful feature of the <a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> module is the built-in
 <a class="reference internal" href="#sqlite3.Row" title="sqlite3.Row"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlite3.Row</span></code></a> class designed to be used as a row factory.</p>
 <p>Rows wrapped with this class can be accessed both by index (like tuples) and
@@ -1747,7 +1740,7 @@ case-insensitively by name:</p>
 </div>
 </section>
 <section id="using-the-connection-as-a-context-manager">
-<h3>Using the connection as a context manager<a class="headerlink" href="#using-the-connection-as-a-context-manager" title="本標題的永久連結">¶</a></h3>
+<h3>Using the connection as a context manager<a class="headerlink" href="#using-the-connection-as-a-context-manager" title="Permalink to this heading">¶</a></h3>
 <p>Connection objects can be used as context managers
 that automatically commit or rollback transactions.  In the event of an
 exception, the transaction is rolled back; otherwise, the transaction is
@@ -1775,15 +1768,15 @@ committed:</p>
 </pre></div>
 </div>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
-<dd><p>The sqlite3 module is not built with loadable extension support by
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>The sqlite3 module is not built with loadable extension support by
 default, because some platforms (notably macOS) have SQLite
 libraries which are compiled without this feature. To get loadable
 extension support, you must pass the
 <a class="reference internal" href="../using/configure.html#cmdoption-enable-loadable-sqlite-extensions"><code class="xref std std-option docutils literal notranslate"><span class="pre">--enable-loadable-sqlite-extensions</span></code></a> option to configure.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 </section>
@@ -1849,6 +1842,10 @@ extension support, you must pass the
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1915,11 +1912,11 @@ extension support, you must pass the
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

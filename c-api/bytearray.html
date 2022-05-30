@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Byte Array Objects &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -163,7 +164,7 @@
           <div class="body" role="main">
             
   <section id="byte-array-objects">
-<span id="bytearrayobjects"></span><h1>Byte Array Objects<a class="headerlink" href="#byte-array-objects" title="本標題的永久連結">¶</a></h1>
+<span id="bytearrayobjects"></span><h1>Byte Array Objects<a class="headerlink" href="#byte-array-objects" title="Permalink to this heading">¶</a></h1>
 <span class="target" id="index-0"></span><dl class="c type">
 <dt class="sig sig-object c" id="c.PyByteArrayObject">
 <span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArrayObject</span></span></span><a class="headerlink" href="#c.PyByteArrayObject" title="本定義的永久連結">¶</a><br /></dt>
@@ -178,7 +179,7 @@ it is the same object as <a class="reference internal" href="../library/stdtypes
 </dd></dl>
 
 <section id="type-check-macros">
-<h2>Type check macros<a class="headerlink" href="#type-check-macros" title="本標題的永久連結">¶</a></h2>
+<h2>Type check macros<a class="headerlink" href="#type-check-macros" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_Check">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_Check</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_Check" title="本定義的永久連結">¶</a><br /></dt>
@@ -195,7 +196,7 @@ subtype of the bytearray type.  This function always succeeds.</p>
 
 </section>
 <section id="direct-api-functions">
-<h2>Direct API functions<a class="headerlink" href="#direct-api-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Direct API functions<a class="headerlink" href="#direct-api-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_FromObject">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyByteArray_FromObject</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyByteArray_FromObject" title="本定義的永久連結">¶</a><br /></dt>
@@ -238,7 +239,7 @@ null byte appended.</p>
 
 </section>
 <section id="macros">
-<h2>Macros<a class="headerlink" href="#macros" title="本標題的永久連結">¶</a></h2>
+<h2>Macros<a class="headerlink" href="#macros" title="Permalink to this heading">¶</a></h2>
 <p>These macros trade safety for speed and they don't check pointers.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyByteArray_AS_STRING">
@@ -296,6 +297,10 @@ null byte appended.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -362,11 +367,11 @@ null byte appended.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

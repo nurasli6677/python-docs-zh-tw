@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>concurrent.futures -- 啟動平行任務 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -172,7 +173,7 @@
           <div class="body" role="main">
             
   <section id="module-concurrent.futures">
-<span id="concurrent-futures-launching-parallel-tasks"></span><h1><a class="reference internal" href="#module-concurrent.futures" title="concurrent.futures: Execute computations concurrently using threads or processes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code></a> -- 啟動平行任務<a class="headerlink" href="#module-concurrent.futures" title="本標題的永久連結">¶</a></h1>
+<span id="concurrent-futures-launching-parallel-tasks"></span><h1><a class="reference internal" href="#module-concurrent.futures" title="concurrent.futures: Execute computations concurrently using threads or processes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code></a> -- 啟動平行任務<a class="headerlink" href="#module-concurrent.futures" title="Permalink to this heading">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -185,7 +186,7 @@ asynchronously executing callables.</p>
 <a class="reference internal" href="#concurrent.futures.ProcessPoolExecutor" title="concurrent.futures.ProcessPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessPoolExecutor</span></code></a>.  Both implement the same interface, which is
 defined by the abstract <a class="reference internal" href="#concurrent.futures.Executor" title="concurrent.futures.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> class.</p>
 <section id="executor-objects">
-<h2>Executor Objects<a class="headerlink" href="#executor-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Executor Objects<a class="headerlink" href="#executor-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="concurrent.futures.Executor">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">concurrent.futures.</span></span><span class="sig-name descname"><span class="pre">Executor</span></span><a class="headerlink" href="#concurrent.futures.Executor" title="本定義的永久連結">¶</a></dt>
@@ -276,7 +277,7 @@ returning. The remaining futures are cancelled.</p>
 
 </section>
 <section id="threadpoolexecutor">
-<h2>ThreadPoolExecutor<a class="headerlink" href="#threadpoolexecutor" title="本標題的永久連結">¶</a></h2>
+<h2>ThreadPoolExecutor<a class="headerlink" href="#threadpoolexecutor" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#concurrent.futures.ThreadPoolExecutor" title="concurrent.futures.ThreadPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThreadPoolExecutor</span></code></a> is an <a class="reference internal" href="#concurrent.futures.Executor" title="concurrent.futures.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> subclass that uses a pool of
 threads to execute calls asynchronously.</p>
 <p>Deadlocks can occur when the callable associated with a <a class="reference internal" href="#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a> waits on
@@ -346,7 +347,7 @@ And it avoids using very large resources implicitly on many-core machines.</p>
 </dd></dl>
 
 <section id="threadpoolexecutor-example">
-<span id="id1"></span><h3>ThreadPoolExecutor 範例<a class="headerlink" href="#threadpoolexecutor-example" title="本標題的永久連結">¶</a></h3>
+<span id="id1"></span><h3>ThreadPoolExecutor 範例<a class="headerlink" href="#threadpoolexecutor-example" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">concurrent.futures</span>
 <span class="kn">import</span> <span class="nn">urllib.request</span>
 
@@ -378,7 +379,7 @@ And it avoids using very large resources implicitly on many-core machines.</p>
 </section>
 </section>
 <section id="processpoolexecutor">
-<h2>ProcessPoolExecutor<a class="headerlink" href="#processpoolexecutor" title="本標題的永久連結">¶</a></h2>
+<h2>ProcessPoolExecutor<a class="headerlink" href="#processpoolexecutor" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#concurrent.futures.ProcessPoolExecutor" title="concurrent.futures.ProcessPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessPoolExecutor</span></code></a> class is an <a class="reference internal" href="#concurrent.futures.Executor" title="concurrent.futures.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> subclass that
 uses a pool of processes to execute calls asynchronously.
 <a class="reference internal" href="#concurrent.futures.ProcessPoolExecutor" title="concurrent.futures.ProcessPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessPoolExecutor</span></code></a> uses the <a class="reference internal" href="multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> module, which
@@ -422,7 +423,7 @@ start_method for worker processes created by the pool.</p>
 </dd></dl>
 
 <section id="processpoolexecutor-example">
-<span id="id2"></span><h3>ProcessPoolExecutor 範例<a class="headerlink" href="#processpoolexecutor-example" title="本標題的永久連結">¶</a></h3>
+<span id="id2"></span><h3>ProcessPoolExecutor 範例<a class="headerlink" href="#processpoolexecutor-example" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">concurrent.futures</span>
 <span class="kn">import</span> <span class="nn">math</span>
 
@@ -460,7 +461,7 @@ start_method for worker processes created by the pool.</p>
 </section>
 </section>
 <section id="future-objects">
-<h2>Future Objects<a class="headerlink" href="#future-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Future Objects<a class="headerlink" href="#future-objects" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a> class encapsulates the asynchronous execution of a callable.
 <a class="reference internal" href="#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a> instances are created by <a class="reference internal" href="#concurrent.futures.Executor.submit" title="concurrent.futures.Executor.submit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Executor.submit()</span></code></a>.</p>
 <dl class="py class">
@@ -597,7 +598,7 @@ already done.</p>
 
 </section>
 <section id="module-functions">
-<h2>模組函式<a class="headerlink" href="#module-functions" title="本標題的永久連結">¶</a></h2>
+<h2>模組函式<a class="headerlink" href="#module-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="concurrent.futures.wait">
 <span class="sig-prename descclassname"><span class="pre">concurrent.futures.</span></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_when</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ALL_COMPLETED</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#concurrent.futures.wait" title="本定義的永久連結">¶</a></dt>
@@ -614,10 +615,6 @@ or <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <p><em>return_when</em> indicates when this function should return.  It must be one of
 the following constants:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>常數</p></th>
 <th class="head"><p>描述</p></th>
@@ -667,7 +664,7 @@ standard library.</p>
 </div>
 </section>
 <section id="exception-classes">
-<h2>Exception classes<a class="headerlink" href="#exception-classes" title="本標題的永久連結">¶</a></h2>
+<h2>Exception classes<a class="headerlink" href="#exception-classes" title="Permalink to this heading">¶</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="concurrent.futures.CancelledError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">concurrent.futures.</span></span><span class="sig-name descname"><span class="pre">CancelledError</span></span><a class="headerlink" href="#concurrent.futures.CancelledError" title="本定義的永久連結">¶</a></dt>
@@ -777,6 +774,10 @@ fashion (for example, if it was killed from the outside).</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -843,11 +844,11 @@ fashion (for example, if it was killed from the outside).</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

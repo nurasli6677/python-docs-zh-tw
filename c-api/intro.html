@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>簡介 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -173,7 +174,7 @@
           <div class="body" role="main">
             
   <section id="introduction">
-<span id="api-intro"></span><h1>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h1>
+<span id="api-intro"></span><h1>簡介<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
 <p>The Application Programmer's Interface to Python gives C and C++ programmers
 access to the Python interpreter at a variety of levels.  The API is equally
 usable from C++, but for brevity it is generally referred to as the Python/C
@@ -194,7 +195,7 @@ provide a custom extension as well, so it's probably a  good idea to become
 familiar with writing an extension before  attempting to embed Python in a real
 application.</p>
 <section id="coding-standards">
-<h2>Coding standards<a class="headerlink" href="#coding-standards" title="本標題的永久連結">¶</a></h2>
+<h2>Coding standards<a class="headerlink" href="#coding-standards" title="Permalink to this heading">¶</a></h2>
 <p>If you're writing C code for inclusion in CPython, you <strong>must</strong> follow the
 guidelines and standards defined in <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0007/"><strong>PEP 7</strong></a>.  These guidelines apply
 regardless of the version of Python you are contributing to.  Following these
@@ -202,7 +203,7 @@ conventions is not necessary for your own third party extension modules,
 unless you eventually expect to contribute them to Python.</p>
 </section>
 <section id="include-files">
-<span id="api-includes"></span><h2>Include Files<a class="headerlink" href="#include-files" title="本標題的永久連結">¶</a></h2>
+<span id="api-includes"></span><h2>Include Files<a class="headerlink" href="#include-files" title="Permalink to this heading">¶</a></h2>
 <p>All function, type and macro definitions needed to use the Python/C API are
 included in your code by the following line:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PY_SSIZE_T_CLEAN</span>
@@ -250,7 +251,7 @@ header files properly declare the entry points to be <code class="docutils liter
 there is no need to do anything special to use the API from C++.</p>
 </section>
 <section id="useful-macros">
-<h2>Useful macros<a class="headerlink" href="#useful-macros" title="本標題的永久連結">¶</a></h2>
+<h2>Useful macros<a class="headerlink" href="#useful-macros" title="Permalink to this heading">¶</a></h2>
 <p>Several useful macros are defined in the Python header files.  Many are
 defined closer to where they are useful (e.g. <a class="reference internal" href="none.html#c.Py_RETURN_NONE" title="Py_RETURN_NONE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_RETURN_NONE</span></code></a>).
 Others of a more general utility are defined here.  This is not necessarily a
@@ -399,7 +400,7 @@ building Python without docstrings, as specified in <span class="target" id="ind
 
 </section>
 <section id="objects-types-and-reference-counts">
-<span id="api-objects"></span><h2>Objects, Types and Reference Counts<a class="headerlink" href="#objects-types-and-reference-counts" title="本標題的永久連結">¶</a></h2>
+<span id="api-objects"></span><h2>Objects, Types and Reference Counts<a class="headerlink" href="#objects-types-and-reference-counts" title="Permalink to this heading">¶</a></h2>
 <p id="index-8">Most Python/C API functions have one or more arguments as well as a return value
 of type <span class="xref c c-texpr"><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n">PyObject</span></a><span class="p">*</span></span>.  This type is a pointer to an opaque data type
 representing an arbitrary Python object.  Since all Python object types are
@@ -417,7 +418,7 @@ explained in <a class="reference internal" href="../reference/datamodel.html#typ
 to check whether an object is of that type; for instance, <code class="docutils literal notranslate"><span class="pre">PyList_Check(a)</span></code> is
 true if (and only if) the object pointed to by <em>a</em> is a Python list.</p>
 <section id="reference-counts">
-<span id="api-refcounts"></span><h3>Reference Counts<a class="headerlink" href="#reference-counts" title="本標題的永久連結">¶</a></h3>
+<span id="api-refcounts"></span><h3>Reference Counts<a class="headerlink" href="#reference-counts" title="Permalink to this heading">¶</a></h3>
 <p>The reference count is important because today's computers have a  finite (and
 often severely limited) memory size; it counts how many  different places there
 are that have a reference to an object.  Such a  place could be another object,
@@ -467,7 +468,7 @@ These operations always increment the reference count of the object they return.
 This leaves the caller with the responsibility to call <a class="reference internal" href="refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a> when
 they are done with the result; this soon becomes second nature.</p>
 <section id="reference-count-details">
-<span id="api-refcountdetails"></span><h4>Reference Count Details<a class="headerlink" href="#reference-count-details" title="本標題的永久連結">¶</a></h4>
+<span id="api-refcountdetails"></span><h4>Reference Count Details<a class="headerlink" href="#reference-count-details" title="Permalink to this heading">¶</a></h4>
 <p>The reference count behavior of functions in the Python/C API is best  explained
 in terms of <em>ownership of references</em>.  Ownership pertains to references, never
 to objects (objects are not owned: they are always shared).  &quot;Owning a
@@ -622,7 +623,7 @@ using <a class="reference internal" href="sequence.html#c.PySequence_GetItem" ti
 </section>
 </section>
 <section id="types">
-<span id="api-types"></span><span id="index-14"></span><h3>Types<a class="headerlink" href="#types" title="本標題的永久連結">¶</a></h3>
+<span id="api-types"></span><span id="index-14"></span><h3>Types<a class="headerlink" href="#types" title="Permalink to this heading">¶</a></h3>
 <p>There are few other data types that play a significant role in  the Python/C
 API; most are simple C types such as <span class="xref c c-texpr"><span class="kt">int</span></span>,  <span class="xref c c-texpr"><span class="kt">long</span></span>,
 <span class="xref c c-texpr"><span class="kt">double</span></span> and <span class="xref c c-texpr"><span class="kt">char</span><span class="p">*</span></span>.  A few structure types  are used to
@@ -642,7 +643,7 @@ of type <a class="reference internal" href="#c.Py_ssize_t" title="Py_ssize_t"><c
 </section>
 </section>
 <section id="exceptions">
-<span id="api-exceptions"></span><h2>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="api-exceptions"></span><h2>例外<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h2>
 <p>The Python programmer only needs to deal with exceptions if specific  error
 handling is required; unhandled exceptions are automatically  propagated to the
 caller, then to the caller's caller, and so on, until they reach the top-level
@@ -761,7 +762,7 @@ return value is initialized to <code class="docutils literal notranslate"><span 
 the final call made is successful.</p>
 </section>
 <section id="embedding-python">
-<span id="api-embedding"></span><h2>嵌入式Python<a class="headerlink" href="#embedding-python" title="本標題的永久連結">¶</a></h2>
+<span id="api-embedding"></span><h2>嵌入式Python<a class="headerlink" href="#embedding-python" title="Permalink to this heading">¶</a></h2>
 <p>The one important task that only embedders (as opposed to extension writers) of
 the Python interpreter have to worry about is the initialization, and possibly
 the finalization, of the Python interpreter.  Most functionality of the
@@ -807,7 +808,7 @@ does <em>not</em> free all memory allocated by the Python interpreter, e.g. memo
 allocated by extension modules currently cannot be released.</p>
 </section>
 <section id="debugging-builds">
-<span id="api-debugging"></span><h2>Debugging Builds<a class="headerlink" href="#debugging-builds" title="本標題的永久連結">¶</a></h2>
+<span id="api-debugging"></span><h2>Debugging Builds<a class="headerlink" href="#debugging-builds" title="Permalink to this heading">¶</a></h2>
 <p>Python can be built with several macros to enable extra checks of the
 interpreter and extension modules.  These checks tend to add a large amount of
 overhead to the runtime so they are not enabled by default.</p>
@@ -888,6 +889,10 @@ for more detailed information.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -953,11 +958,11 @@ for more detailed information.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

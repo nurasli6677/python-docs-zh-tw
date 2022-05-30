@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3. Writing the Setup Configuration File &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -150,7 +151,7 @@
           <div class="body" role="main">
             
   <section id="writing-the-setup-configuration-file">
-<span id="setup-config"></span><h1><span class="section-number">3. </span>Writing the Setup Configuration File<a class="headerlink" href="#writing-the-setup-configuration-file" title="本標題的永久連結">¶</a></h1>
+<span id="setup-config"></span><h1><span class="section-number">3. </span>Writing the Setup Configuration File<a class="headerlink" href="#writing-the-setup-configuration-file" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>This document is being retained solely until the <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> documentation
@@ -166,7 +167,7 @@ edit is a cheap and easy way to solicit it.  Configuration files also let you
 provide default values for any command option, which the installer can then
 override either on the command-line or by editing the config file.</p>
 <p>The setup configuration file is a useful middle-ground between the setup
-script---which, ideally, would be opaque to installers <a class="footnote-reference brackets" href="#id2" id="id1">1</a>---and the command-line to
+script---which, ideally, would be opaque to installers <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>---and the command-line to
 the setup script, which is outside of your control and entirely up to the
 installer.  In fact, <code class="file docutils literal notranslate"><span class="pre">setup.cfg</span></code> (and any other Distutils configuration
 files present on the target system) are processed after the contents of the
@@ -264,12 +265,11 @@ system administrators.</p>
 </dl>
 </div>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>This ideal probably won't be achieved until auto-configuration is fully
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This ideal probably won't be achieved until auto-configuration is fully
 supported by the Distutils.</p>
-</dd>
-</dl>
+</aside>
 </section>
 
 
@@ -301,6 +301,10 @@ supported by the Distutils.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -366,11 +370,11 @@ supported by the Distutils.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

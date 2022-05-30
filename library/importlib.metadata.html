@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Using importlib.metadata &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -172,7 +173,7 @@
           <div class="body" role="main">
             
   <section id="module-importlib.metadata">
-<span id="using-importlib-metadata"></span><span id="using"></span><h1>Using <code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.metadata</span></code><a class="headerlink" href="#module-importlib.metadata" title="本標題的永久連結">¶</a></h1>
+<span id="using-importlib-metadata"></span><span id="using"></span><h1>Using <code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.metadata</span></code><a class="headerlink" href="#module-importlib.metadata" title="Permalink to this heading">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
@@ -196,7 +197,7 @@ By default, package metadata can live on the file system or in zip archives on
 <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>.  Through an extension mechanism, the metadata can live almost
 anywhere.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="本標題的永久連結">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>Let's say you wanted to get the version string for a package you've installed
 using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.  We start by creating a virtual environment and installing
 something into it:</p>
@@ -225,10 +226,10 @@ sequence of <a class="reference internal" href="#entry-points"><span class="std 
 <a class="reference internal" href="#requirements"><span class="std std-ref">Distribution requirements</span></a>.</p>
 </section>
 <section id="functional-api">
-<h2>Functional API<a class="headerlink" href="#functional-api" title="本標題的永久連結">¶</a></h2>
+<h2>Functional API<a class="headerlink" href="#functional-api" title="Permalink to this heading">¶</a></h2>
 <p>This package provides the following functionality via its public API.</p>
 <section id="entry-points">
-<span id="id1"></span><h3>Entry points<a class="headerlink" href="#entry-points" title="本標題的永久連結">¶</a></h3>
+<span id="id1"></span><h3>Entry points<a class="headerlink" href="#entry-points" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">entry_points()</span></code> function returns a collection of entry points.
 Entry points are represented by <code class="docutils literal notranslate"><span class="pre">EntryPoint</span></code> instances;
 each <code class="docutils literal notranslate"><span class="pre">EntryPoint</span></code> has a <code class="docutils literal notranslate"><span class="pre">.name</span></code>, <code class="docutils literal notranslate"><span class="pre">.group</span></code>, and <code class="docutils literal notranslate"><span class="pre">.value</span></code> attributes and
@@ -297,7 +298,7 @@ will return an <code class="docutils literal notranslate"><span class="pre">Entr
 interface to retrieve entry points by group.</p>
 </section>
 <section id="distribution-metadata">
-<span id="metadata"></span><h3>Distribution metadata<a class="headerlink" href="#distribution-metadata" title="本標題的永久連結">¶</a></h3>
+<span id="metadata"></span><h3>Distribution metadata<a class="headerlink" href="#distribution-metadata" title="Permalink to this heading">¶</a></h3>
 <p>Every distribution includes some metadata, which you can extract using the
 <code class="docutils literal notranslate"><span class="pre">metadata()</span></code> function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wheel_metadata</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">(</span><span class="s1">&#39;wheel&#39;</span><span class="p">)</span>  
@@ -325,7 +326,7 @@ through the payload. Line continuation characters have been removed.</p>
 </div>
 </section>
 <section id="distribution-versions">
-<span id="version"></span><h3>Distribution versions<a class="headerlink" href="#distribution-versions" title="本標題的永久連結">¶</a></h3>
+<span id="version"></span><h3>Distribution versions<a class="headerlink" href="#distribution-versions" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">version()</span></code> function is the quickest way to get a distribution's version
 number, as a string:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">(</span><span class="s1">&#39;wheel&#39;</span><span class="p">)</span>  
@@ -334,7 +335,7 @@ number, as a string:</p>
 </div>
 </section>
 <section id="distribution-files">
-<span id="files"></span><h3>Distribution files<a class="headerlink" href="#distribution-files" title="本標題的永久連結">¶</a></h3>
+<span id="files"></span><h3>Distribution files<a class="headerlink" href="#distribution-files" title="Permalink to this heading">¶</a></h3>
 <p>You can also get the full set of files contained within a distribution.  The
 <code class="docutils literal notranslate"><span class="pre">files()</span></code> function takes a distribution package name and returns all of the
 files installed by this distribution.  Each file object returned is a
@@ -376,7 +377,7 @@ or otherwise guard against this condition if the target
 distribution is not known to have the metadata present.</p>
 </section>
 <section id="distribution-requirements">
-<span id="requirements"></span><h3>Distribution requirements<a class="headerlink" href="#distribution-requirements" title="本標題的永久連結">¶</a></h3>
+<span id="requirements"></span><h3>Distribution requirements<a class="headerlink" href="#distribution-requirements" title="Permalink to this heading">¶</a></h3>
 <p>To get the full set of requirements for a distribution, use the <code class="docutils literal notranslate"><span class="pre">requires()</span></code>
 function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requires</span><span class="p">(</span><span class="s1">&#39;wheel&#39;</span><span class="p">)</span>  
@@ -385,7 +386,7 @@ function:</p>
 </div>
 </section>
 <section id="package-distributions">
-<h3>Package distributions<a class="headerlink" href="#package-distributions" title="本標題的永久連結">¶</a></h3>
+<h3>Package distributions<a class="headerlink" href="#package-distributions" title="Permalink to this heading">¶</a></h3>
 <p>A convenience method to resolve the distribution or
 distributions (in the case of a namespace package) for top-level
 Python packages or modules:</p>
@@ -399,7 +400,7 @@ Python packages or modules:</p>
 </section>
 </section>
 <section id="distributions">
-<span id="id2"></span><h2>Distributions<a class="headerlink" href="#distributions" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Distributions<a class="headerlink" href="#distributions" title="Permalink to this heading">¶</a></h2>
 <p>While the above API is the most common and convenient usage, you can get all
 of that information from the <code class="docutils literal notranslate"><span class="pre">Distribution</span></code> class.  A <code class="docutils literal notranslate"><span class="pre">Distribution</span></code> is an
 abstract object that represents the metadata for a Python package.  You can
@@ -426,7 +427,7 @@ instance:</p>
 for additional details.</p>
 </section>
 <section id="extending-the-search-algorithm">
-<h2>Extending the search algorithm<a class="headerlink" href="#extending-the-search-algorithm" title="本標題的永久連結">¶</a></h2>
+<h2>Extending the search algorithm<a class="headerlink" href="#extending-the-search-algorithm" title="Permalink to this heading">¶</a></h2>
 <p>Because package metadata is not available through <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> searches, or
 package loaders directly, the metadata for a package is found through import
 system <a class="reference internal" href="../reference/import.html#finders-and-loaders"><span class="std std-ref">finders</span></a>.  To find a distribution package's metadata,
@@ -510,6 +511,10 @@ a custom finder, return instances of this derived <code class="docutils literal 
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -576,11 +581,11 @@ a custom finder, return instances of this derived <code class="docutils literal 
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

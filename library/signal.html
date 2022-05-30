@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>signal --- Set handlers for asynchronous events &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -169,11 +170,11 @@
           <div class="body" role="main">
             
   <section id="module-signal">
-<span id="signal-set-handlers-for-asynchronous-events"></span><h1><a class="reference internal" href="#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> --- Set handlers for asynchronous events<a class="headerlink" href="#module-signal" title="本標題的永久連結">¶</a></h1>
+<span id="signal-set-handlers-for-asynchronous-events"></span><h1><a class="reference internal" href="#module-signal" title="signal: Set handlers for asynchronous events."><code class="xref py py-mod docutils literal notranslate"><span class="pre">signal</span></code></a> --- Set handlers for asynchronous events<a class="headerlink" href="#module-signal" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <p>This module provides mechanisms to use signal handlers in Python.</p>
 <section id="general-rules">
-<h2>General rules<a class="headerlink" href="#general-rules" title="本標題的永久連結">¶</a></h2>
+<h2>General rules<a class="headerlink" href="#general-rules" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#signal.signal" title="signal.signal"><code class="xref py py-func docutils literal notranslate"><span class="pre">signal.signal()</span></code></a> function allows defining custom handlers to be
 executed when a signal is received.  A small number of default handlers are
 installed: <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a> is ignored (so write errors on pipes and sockets
@@ -185,7 +186,7 @@ explicitly reset (Python emulates the BSD style interface regardless of the
 underlying implementation), with the exception of the handler for
 <a class="reference internal" href="#signal.SIGCHLD" title="signal.SIGCHLD"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGCHLD</span></code></a>, which follows the underlying implementation.</p>
 <section id="execution-of-python-signal-handlers">
-<h3>Execution of Python signal handlers<a class="headerlink" href="#execution-of-python-signal-handlers" title="本標題的永久連結">¶</a></h3>
+<h3>Execution of Python signal handlers<a class="headerlink" href="#execution-of-python-signal-handlers" title="Permalink to this heading">¶</a></h3>
 <p>A Python signal handler does not get executed inside the low-level (C) signal
 handler.  Instead, the low-level signal handler sets a flag which tells the
 <a class="reference internal" href="../glossary.html#term-virtual-machine"><span class="xref std std-term">virtual machine</span></a> to execute the corresponding Python signal handler
@@ -208,7 +209,7 @@ discussion.</p></li>
 </ul>
 </section>
 <section id="signals-and-threads">
-<span id="id1"></span><h3>Signals and threads<a class="headerlink" href="#signals-and-threads" title="本標題的永久連結">¶</a></h3>
+<span id="id1"></span><h3>Signals and threads<a class="headerlink" href="#signals-and-threads" title="Permalink to this heading">¶</a></h3>
 <p>Python signal handlers are always executed in the main Python thread of the main interpreter,
 even if the signal was received in another thread.  This means that signals
 can't be used as a means of inter-thread communication.  You can use
@@ -217,7 +218,7 @@ the synchronization primitives from the <a class="reference internal" href="thre
 </section>
 </section>
 <section id="module-contents">
-<h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<h2>模組內容<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>signal (SIG*), handler (<a class="reference internal" href="#signal.SIG_DFL" title="signal.SIG_DFL"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_DFL</span></code></a>, <a class="reference internal" href="#signal.SIG_IGN" title="signal.SIG_IGN"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_IGN</span></code></a>) and sigmask
 (<a class="reference internal" href="#signal.SIG_BLOCK" title="signal.SIG_BLOCK"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_BLOCK</span></code></a>, <a class="reference internal" href="#signal.SIG_UNBLOCK" title="signal.SIG_UNBLOCK"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_UNBLOCK</span></code></a>, <a class="reference internal" href="#signal.SIG_SETMASK" title="signal.SIG_SETMASK"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIG_SETMASK</span></code></a>)
@@ -798,7 +799,7 @@ exception (see <span class="target" id="index-1"></span><a class="pep reference 
 
 </section>
 <section id="example">
-<span id="signal-example"></span><h2>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
+<span id="signal-example"></span><h2>範例<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p>Here is a minimal example program. It uses the <a class="reference internal" href="#signal.alarm" title="signal.alarm"><code class="xref py py-func docutils literal notranslate"><span class="pre">alarm()</span></code></a> function to limit
 the time spent waiting to open a file; this is useful if the file is for a
 serial device that may not be turned on, which would normally cause the
@@ -823,7 +824,7 @@ be sent, and the handler raises an exception.</p>
 </div>
 </section>
 <section id="note-on-sigpipe">
-<h2>Note on SIGPIPE<a class="headerlink" href="#note-on-sigpipe" title="本標題的永久連結">¶</a></h2>
+<h2>Note on SIGPIPE<a class="headerlink" href="#note-on-sigpipe" title="Permalink to this heading">¶</a></h2>
 <p>Piping output of your program to tools like <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/head(1)">head(1)</a></em> will
 cause a <a class="reference internal" href="#signal.SIGPIPE" title="signal.SIGPIPE"><code class="xref py py-const docutils literal notranslate"><span class="pre">SIGPIPE</span></code></a> signal to be sent to your process when the receiver
 of its standard output closes early.  This results in an exception
@@ -858,7 +859,7 @@ connection is interrupted while your program is still writing to
 it.</p>
 </section>
 <section id="note-on-signal-handlers-and-exceptions">
-<span id="handlers-and-exceptions"></span><h2>Note on Signal Handlers and Exceptions<a class="headerlink" href="#note-on-signal-handlers-and-exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="handlers-and-exceptions"></span><h2>Note on Signal Handlers and Exceptions<a class="headerlink" href="#note-on-signal-handlers-and-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>If a signal handler raises an exception, the exception will be propagated to
 the main thread and may be raised after any <a class="reference internal" href="../glossary.html#term-bytecode"><span class="xref std std-term">bytecode</span></a> instruction. Most
 notably, a <a class="reference internal" href="exceptions.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a> may appear at any point during execution.
@@ -970,6 +971,10 @@ of gracefully shutting down.  Instead, they should install their own
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1036,11 +1041,11 @@ of gracefully shutting down.  Instead, they should install their own
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

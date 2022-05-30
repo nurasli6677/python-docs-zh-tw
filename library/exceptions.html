@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>內建的例外 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -168,7 +169,7 @@
           <div class="body" role="main">
             
   <section id="built-in-exceptions">
-<span id="bltin-exceptions"></span><h1>內建的例外<a class="headerlink" href="#built-in-exceptions" title="本標題的永久連結">¶</a></h1>
+<span id="bltin-exceptions"></span><h1>內建的例外<a class="headerlink" href="#built-in-exceptions" title="Permalink to this heading">¶</a></h1>
 <p id="index-0">In Python, all exceptions must be instances of a class that derives from
 <a class="reference internal" href="#BaseException" title="BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>.  In a <a class="reference internal" href="../reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> statement with an <a class="reference internal" href="../reference/compound_stmts.html#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a>
 clause that mentions a particular class, that clause also handles any exception
@@ -191,7 +192,7 @@ class or one of its subclasses, and not from <a class="reference internal" href=
 information on defining exceptions is available in the Python Tutorial under
 <a class="reference internal" href="../tutorial/errors.html#tut-userexceptions"><span class="std std-ref">使用者自定的例外</span></a>.</p>
 <section id="exception-context">
-<h2>Exception context<a class="headerlink" href="#exception-context" title="本標題的永久連結">¶</a></h2>
+<h2>Exception context<a class="headerlink" href="#exception-context" title="Permalink to this heading">¶</a></h2>
 <p>When raising a new exception while another exception
 is already being handled, the new exception's
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">__context__</span></code> attribute is automatically set to the handled
@@ -221,7 +222,7 @@ exceptions so that the final line of the traceback always shows the last
 exception that was raised.</p>
 </section>
 <section id="inheriting-from-built-in-exceptions">
-<h2>繼承自內建的例外<a class="headerlink" href="#inheriting-from-built-in-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>繼承自內建的例外<a class="headerlink" href="#inheriting-from-built-in-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>User code can create subclasses that inherit from an exception type.
 It's recommended to only subclass one exception type at a time to avoid
 any possible conflicts between how the bases handle the <code class="docutils literal notranslate"><span class="pre">args</span></code>
@@ -237,7 +238,7 @@ subclassing multiple exception types altogether.</p>
 </div>
 </section>
 <section id="base-classes">
-<h2>Base classes<a class="headerlink" href="#base-classes" title="本標題的永久連結">¶</a></h2>
+<h2>Base classes<a class="headerlink" href="#base-classes" title="Permalink to this heading">¶</a></h2>
 <p>The following exceptions are used mostly as base classes for other exceptions.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="BaseException">
@@ -310,7 +311,7 @@ can be raised directly by <a class="reference internal" href="codecs.html#codecs
 
 </section>
 <section id="concrete-exceptions">
-<h2>Concrete exceptions<a class="headerlink" href="#concrete-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>Concrete exceptions<a class="headerlink" href="#concrete-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>The following exceptions are the exceptions that are usually raised.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="AssertionError">
@@ -846,7 +847,7 @@ starting from Python 3.3, they are aliases of <a class="reference internal" href
 </dd></dl>
 
 <section id="os-exceptions">
-<h3>OS exceptions<a class="headerlink" href="#os-exceptions" title="本標題的永久連結">¶</a></h3>
+<h3>OS exceptions<a class="headerlink" href="#os-exceptions" title="Permalink to this heading">¶</a></h3>
 <p>The following exceptions are subclasses of <a class="reference internal" href="#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>, they get raised
 depending on the system error code.</p>
 <dl class="py exception">
@@ -992,7 +993,7 @@ Corresponds to <code class="xref c c-data docutils literal notranslate"><span cl
 </section>
 </section>
 <section id="warnings">
-<span id="warning-categories-as-exceptions"></span><h2>警告<a class="headerlink" href="#warnings" title="本標題的永久連結">¶</a></h2>
+<span id="warning-categories-as-exceptions"></span><h2>警告<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
 <p>The following exceptions are used as warning categories; see the
 <a class="reference internal" href="warnings.html#warning-categories"><span class="std std-ref">Warning Categories</span></a> documentation for more details.</p>
 <dl class="py exception">
@@ -1094,7 +1095,7 @@ Development Mode</span></a> shows this warning.</p>
 
 </section>
 <section id="exception-hierarchy">
-<h2>Exception hierarchy<a class="headerlink" href="#exception-hierarchy" title="本標題的永久連結">¶</a></h2>
+<h2>Exception hierarchy<a class="headerlink" href="#exception-hierarchy" title="Permalink to this heading">¶</a></h2>
 <p>The class hierarchy for built-in exceptions is:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="ne">BaseException</span>
  <span class="o">+--</span> <span class="ne">SystemExit</span>
@@ -1213,6 +1214,10 @@ Development Mode</span></a> shows this warning.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1278,11 +1283,11 @@ Development Mode</span></a> shows this warning.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>urllib.request --- 用來開啟 URLs 的可擴充函式庫 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -186,7 +187,7 @@
           <div class="body" role="main">
             
   <section id="module-urllib.request">
-<span id="urllib-request-extensible-library-for-opening-urls"></span><h1><a class="reference internal" href="#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> --- 用來開啟 URLs 的可擴充函式庫<a class="headerlink" href="#module-urllib.request" title="本標題的永久連結">¶</a></h1>
+<span id="urllib-request-extensible-library-for-opening-urls"></span><h1><a class="reference internal" href="#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> --- 用來開啟 URLs 的可擴充函式庫<a class="headerlink" href="#module-urllib.request" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/urllib/request.py">Lib/urllib/request.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> module（模組）定義了一些函式與 class（類別）用以開啟 URLs（大部分是 HTTP），並處理各式複雜情況如：basic 驗證與 digest 驗證、重新導向、cookies。</p>
@@ -519,7 +520,7 @@ have the same meaning as in <a class="reference internal" href="http.client.html
 </dd></dl>
 
 <section id="request-objects">
-<span id="id1"></span><h2>Request Objects<a class="headerlink" href="#request-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Request Objects<a class="headerlink" href="#request-objects" title="Permalink to this heading">¶</a></h2>
 <p>The following methods describe <a class="reference internal" href="#urllib.request.Request" title="urllib.request.Request"><code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code></a>'s public interface,
 and so all may be overridden in subclasses.  It also defines several
 public attributes that can be used by clients to inspect the parsed
@@ -684,7 +685,7 @@ since 3.3 have been removed.</p>
 </div>
 </section>
 <section id="openerdirector-objects">
-<span id="opener-director-objects"></span><h2>OpenerDirector 物件<a class="headerlink" href="#openerdirector-objects" title="本標題的永久連結">¶</a></h2>
+<span id="opener-director-objects"></span><h2>OpenerDirector 物件<a class="headerlink" href="#openerdirector-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#urllib.request.OpenerDirector" title="urllib.request.OpenerDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenerDirector</span></code></a> instances have the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.OpenerDirector.add_handler">
@@ -766,7 +767,7 @@ method called to post-process the response.</p></li>
 </ol>
 </section>
 <section id="basehandler-objects">
-<span id="base-handler-objects"></span><h2>BaseHandler 物件<a class="headerlink" href="#basehandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="base-handler-objects"></span><h2>BaseHandler 物件<a class="headerlink" href="#basehandler-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#urllib.request.BaseHandler" title="urllib.request.BaseHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseHandler</span></code></a> objects provide a couple of methods that are directly
 useful, and others that are meant to be used by derived classes.  These are
 intended for direct use:</p>
@@ -881,7 +882,7 @@ return value should implement the same interface as the return value of
 
 </section>
 <section id="httpredirecthandler-objects">
-<span id="http-redirect-handler"></span><h2>HTTPRedirectHandler 物件<a class="headerlink" href="#httpredirecthandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-redirect-handler"></span><h2>HTTPRedirectHandler 物件<a class="headerlink" href="#httpredirecthandler-objects" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>Some HTTP redirections require action from this module's client code.  If this
@@ -939,7 +940,7 @@ response.</p>
 
 </section>
 <section id="httpcookieprocessor-objects">
-<span id="http-cookie-processor"></span><h2>HTTPCookieProcessor 物件<a class="headerlink" href="#httpcookieprocessor-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-cookie-processor"></span><h2>HTTPCookieProcessor 物件<a class="headerlink" href="#httpcookieprocessor-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#urllib.request.HTTPCookieProcessor" title="urllib.request.HTTPCookieProcessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPCookieProcessor</span></code></a> instances have one attribute:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="urllib.request.HTTPCookieProcessor.cookiejar">
@@ -949,7 +950,7 @@ response.</p>
 
 </section>
 <section id="proxyhandler-objects">
-<span id="proxy-handler"></span><h2>ProxyHandler 物件<a class="headerlink" href="#proxyhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="proxy-handler"></span><h2>ProxyHandler 物件<a class="headerlink" href="#proxyhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">ProxyHandler.&lt;protocol&gt;_open(request)</span></span></dt>
@@ -962,7 +963,7 @@ actually execute the protocol.</p>
 
 </section>
 <section id="httppasswordmgr-objects">
-<span id="http-password-mgr"></span><h2>HTTPPasswordMgr 物件<a class="headerlink" href="#httppasswordmgr-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-password-mgr"></span><h2>HTTPPasswordMgr 物件<a class="headerlink" href="#httppasswordmgr-objects" title="Permalink to this heading">¶</a></h2>
 <p>These methods are available on <a class="reference internal" href="#urllib.request.HTTPPasswordMgr" title="urllib.request.HTTPPasswordMgr"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPPasswordMgr</span></code></a> and
 <a class="reference internal" href="#urllib.request.HTTPPasswordMgrWithDefaultRealm" title="urllib.request.HTTPPasswordMgrWithDefaultRealm"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPPasswordMgrWithDefaultRealm</span></code></a> objects.</p>
 <dl class="py method">
@@ -985,7 +986,7 @@ searched if the given <em>realm</em> has no matching user/password.</p>
 
 </section>
 <section id="httppasswordmgrwithpriorauth-objects">
-<span id="http-password-mgr-with-prior-auth"></span><h2>HTTPPasswordMgrWithPriorAuth 物件<a class="headerlink" href="#httppasswordmgrwithpriorauth-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-password-mgr-with-prior-auth"></span><h2>HTTPPasswordMgrWithPriorAuth 物件<a class="headerlink" href="#httppasswordmgrwithpriorauth-objects" title="Permalink to this heading">¶</a></h2>
 <p>This password manager extends <a class="reference internal" href="#urllib.request.HTTPPasswordMgrWithDefaultRealm" title="urllib.request.HTTPPasswordMgrWithDefaultRealm"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPPasswordMgrWithDefaultRealm</span></code></a> to support
 tracking URIs for which authentication credentials should always be sent.</p>
 <dl class="py method">
@@ -1019,7 +1020,7 @@ the given URI.</p>
 
 </section>
 <section id="abstractbasicauthhandler-objects">
-<span id="abstract-basic-auth-handler"></span><h2>AbstractBasicAuthHandler 物件<a class="headerlink" href="#abstractbasicauthhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="abstract-basic-auth-handler"></span><h2>AbstractBasicAuthHandler 物件<a class="headerlink" href="#abstractbasicauthhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.AbstractBasicAuthHandler.http_error_auth_reqed">
 <span class="sig-prename descclassname"><span class="pre">AbstractBasicAuthHandler.</span></span><span class="sig-name descname"><span class="pre">http_error_auth_reqed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authreq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">req</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.AbstractBasicAuthHandler.http_error_auth_reqed" title="本定義的永久連結">¶</a></dt>
@@ -1036,7 +1037,7 @@ authority must not contain a userinfo component (so, <code class="docutils liter
 
 </section>
 <section id="httpbasicauthhandler-objects">
-<span id="http-basic-auth-handler"></span><h2>HTTPBasicAuthHandler 物件<a class="headerlink" href="#httpbasicauthhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-basic-auth-handler"></span><h2>HTTPBasicAuthHandler 物件<a class="headerlink" href="#httpbasicauthhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.HTTPBasicAuthHandler.http_error_401">
 <span class="sig-prename descclassname"><span class="pre">HTTPBasicAuthHandler.</span></span><span class="sig-name descname"><span class="pre">http_error_401</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.HTTPBasicAuthHandler.http_error_401" title="本定義的永久連結">¶</a></dt>
@@ -1045,7 +1046,7 @@ authority must not contain a userinfo component (so, <code class="docutils liter
 
 </section>
 <section id="proxybasicauthhandler-objects">
-<span id="proxy-basic-auth-handler"></span><h2>ProxyBasicAuthHandler 物件<a class="headerlink" href="#proxybasicauthhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="proxy-basic-auth-handler"></span><h2>ProxyBasicAuthHandler 物件<a class="headerlink" href="#proxybasicauthhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.ProxyBasicAuthHandler.http_error_407">
 <span class="sig-prename descclassname"><span class="pre">ProxyBasicAuthHandler.</span></span><span class="sig-name descname"><span class="pre">http_error_407</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.ProxyBasicAuthHandler.http_error_407" title="本定義的永久連結">¶</a></dt>
@@ -1054,7 +1055,7 @@ authority must not contain a userinfo component (so, <code class="docutils liter
 
 </section>
 <section id="abstractdigestauthhandler-objects">
-<span id="abstract-digest-auth-handler"></span><h2>AbstractDigestAuthHandler 物件<a class="headerlink" href="#abstractdigestauthhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="abstract-digest-auth-handler"></span><h2>AbstractDigestAuthHandler 物件<a class="headerlink" href="#abstractdigestauthhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.AbstractDigestAuthHandler.http_error_auth_reqed">
 <span class="sig-prename descclassname"><span class="pre">AbstractDigestAuthHandler.</span></span><span class="sig-name descname"><span class="pre">http_error_auth_reqed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authreq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">req</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.AbstractDigestAuthHandler.http_error_auth_reqed" title="本定義的永久連結">¶</a></dt>
@@ -1066,7 +1067,7 @@ error headers.</p>
 
 </section>
 <section id="httpdigestauthhandler-objects">
-<span id="http-digest-auth-handler"></span><h2>HTTPDigestAuthHandler 物件<a class="headerlink" href="#httpdigestauthhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-digest-auth-handler"></span><h2>HTTPDigestAuthHandler 物件<a class="headerlink" href="#httpdigestauthhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.HTTPDigestAuthHandler.http_error_401">
 <span class="sig-prename descclassname"><span class="pre">HTTPDigestAuthHandler.</span></span><span class="sig-name descname"><span class="pre">http_error_401</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.HTTPDigestAuthHandler.http_error_401" title="本定義的永久連結">¶</a></dt>
@@ -1075,7 +1076,7 @@ error headers.</p>
 
 </section>
 <section id="proxydigestauthhandler-objects">
-<span id="proxy-digest-auth-handler"></span><h2>ProxyDigestAuthHandler 物件<a class="headerlink" href="#proxydigestauthhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="proxy-digest-auth-handler"></span><h2>ProxyDigestAuthHandler 物件<a class="headerlink" href="#proxydigestauthhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.ProxyDigestAuthHandler.http_error_407">
 <span class="sig-prename descclassname"><span class="pre">ProxyDigestAuthHandler.</span></span><span class="sig-name descname"><span class="pre">http_error_407</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.ProxyDigestAuthHandler.http_error_407" title="本定義的永久連結">¶</a></dt>
@@ -1084,7 +1085,7 @@ error headers.</p>
 
 </section>
 <section id="httphandler-objects">
-<span id="http-handler-objects"></span><h2>HTTPHandler 物件<a class="headerlink" href="#httphandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-handler-objects"></span><h2>HTTPHandler 物件<a class="headerlink" href="#httphandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.HTTPHandler.http_open">
 <span class="sig-prename descclassname"><span class="pre">HTTPHandler.</span></span><span class="sig-name descname"><span class="pre">http_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.HTTPHandler.http_open" title="本定義的永久連結">¶</a></dt>
@@ -1094,7 +1095,7 @@ error headers.</p>
 
 </section>
 <section id="httpshandler-objects">
-<span id="https-handler-objects"></span><h2>HTTPSHandler 物件<a class="headerlink" href="#httpshandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="https-handler-objects"></span><h2>HTTPSHandler 物件<a class="headerlink" href="#httpshandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.HTTPSHandler.https_open">
 <span class="sig-prename descclassname"><span class="pre">HTTPSHandler.</span></span><span class="sig-name descname"><span class="pre">https_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.HTTPSHandler.https_open" title="本定義的永久連結">¶</a></dt>
@@ -1104,7 +1105,7 @@ error headers.</p>
 
 </section>
 <section id="filehandler-objects">
-<span id="file-handler-objects"></span><h2>FileHandler 物件<a class="headerlink" href="#filehandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="file-handler-objects"></span><h2>FileHandler 物件<a class="headerlink" href="#filehandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.FileHandler.file_open">
 <span class="sig-prename descclassname"><span class="pre">FileHandler.</span></span><span class="sig-name descname"><span class="pre">file_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.FileHandler.file_open" title="本定義的永久連結">¶</a></dt>
@@ -1118,7 +1119,7 @@ hostname is given, an <a class="reference internal" href="urllib.error.html#urll
 
 </section>
 <section id="datahandler-objects">
-<span id="data-handler-objects"></span><h2>DataHandler 物件<a class="headerlink" href="#datahandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="data-handler-objects"></span><h2>DataHandler 物件<a class="headerlink" href="#datahandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.DataHandler.data_open">
 <span class="sig-prename descclassname"><span class="pre">DataHandler.</span></span><span class="sig-name descname"><span class="pre">data_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.DataHandler.data_open" title="本定義的永久連結">¶</a></dt>
@@ -1132,7 +1133,7 @@ implementation will raise an <a class="reference internal" href="exceptions.html
 
 </section>
 <section id="ftphandler-objects">
-<span id="ftp-handler-objects"></span><h2>FTPHandler 物件<a class="headerlink" href="#ftphandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="ftp-handler-objects"></span><h2>FTPHandler 物件<a class="headerlink" href="#ftphandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.FTPHandler.ftp_open">
 <span class="sig-prename descclassname"><span class="pre">FTPHandler.</span></span><span class="sig-name descname"><span class="pre">ftp_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.FTPHandler.ftp_open" title="本定義的永久連結">¶</a></dt>
@@ -1142,7 +1143,7 @@ username and password.</p>
 
 </section>
 <section id="cacheftphandler-objects">
-<span id="cacheftp-handler-objects"></span><h2>CacheFTPHandler 物件<a class="headerlink" href="#cacheftphandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="cacheftp-handler-objects"></span><h2>CacheFTPHandler 物件<a class="headerlink" href="#cacheftphandler-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#urllib.request.CacheFTPHandler" title="urllib.request.CacheFTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">CacheFTPHandler</span></code></a> objects are <a class="reference internal" href="#urllib.request.FTPHandler" title="urllib.request.FTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FTPHandler</span></code></a> objects with the
 following additional methods:</p>
 <dl class="py method">
@@ -1159,7 +1160,7 @@ following additional methods:</p>
 
 </section>
 <section id="unknownhandler-objects">
-<span id="unknown-handler-objects"></span><h2>UnknownHandler 物件<a class="headerlink" href="#unknownhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="unknown-handler-objects"></span><h2>UnknownHandler 物件<a class="headerlink" href="#unknownhandler-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.UnknownHandler.unknown_open">
 <span class="sig-prename descclassname"><span class="pre">UnknownHandler.</span></span><span class="sig-name descname"><span class="pre">unknown_open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.UnknownHandler.unknown_open" title="本定義的永久連結">¶</a></dt>
@@ -1168,7 +1169,7 @@ following additional methods:</p>
 
 </section>
 <section id="httperrorprocessor-objects">
-<span id="http-error-processor-objects"></span><h2>HTTPErrorProcessor 物件<a class="headerlink" href="#httperrorprocessor-objects" title="本標題的永久連結">¶</a></h2>
+<span id="http-error-processor-objects"></span><h2>HTTPErrorProcessor 物件<a class="headerlink" href="#httperrorprocessor-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="urllib.request.HTTPErrorProcessor.http_response">
 <span class="sig-prename descclassname"><span class="pre">HTTPErrorProcessor.</span></span><span class="sig-name descname"><span class="pre">http_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib.request.HTTPErrorProcessor.http_response" title="本定義的永久連結">¶</a></dt>
@@ -1189,7 +1190,7 @@ Eventually, <a class="reference internal" href="#urllib.request.HTTPDefaultError
 
 </section>
 <section id="examples">
-<span id="urllib-request-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="urllib-request-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>In addition to the examples below, more examples are given in
 <a class="reference internal" href="../howto/urllib2.html#urllib-howto"><span class="std std-ref">如何使用urllib套件取得網路資源</span></a>.</p>
 <p>This example gets the python.org main page and displays the first 300 bytes of
@@ -1355,7 +1356,7 @@ environment settings:</p>
 </div>
 </section>
 <section id="legacy-interface">
-<h2>Legacy interface<a class="headerlink" href="#legacy-interface" title="本標題的永久連結">¶</a></h2>
+<h2>Legacy interface<a class="headerlink" href="#legacy-interface" title="Permalink to this heading">¶</a></h2>
 <p>The following functions and classes are ported from the Python 2 module
 <code class="docutils literal notranslate"><span class="pre">urllib</span></code> (as opposed to <code class="docutils literal notranslate"><span class="pre">urllib2</span></code>).  They might become deprecated at
 some point in the future.</p>
@@ -1529,7 +1530,7 @@ environment.</p>
 
 </section>
 <section id="urllib-request-restrictions">
-<h2><a class="reference internal" href="#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> Restrictions<a class="headerlink" href="#urllib-request-restrictions" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> Restrictions<a class="headerlink" href="#urllib-request-restrictions" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div></div></blockquote>
 <ul id="index-11">
@@ -1574,7 +1575,7 @@ using the <a class="reference internal" href="ftplib.html#module-ftplib" title="
 </section>
 </section>
 <section id="module-urllib.response">
-<span id="urllib-response-response-classes-used-by-urllib"></span><h1><a class="reference internal" href="#module-urllib.response" title="urllib.response: Response classes used by urllib."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.response</span></code></a> --- Response classes used by urllib<a class="headerlink" href="#module-urllib.response" title="本標題的永久連結">¶</a></h1>
+<span id="urllib-response-response-classes-used-by-urllib"></span><h1><a class="reference internal" href="#module-urllib.response" title="urllib.response: Response classes used by urllib."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.response</span></code></a> --- Response classes used by urllib<a class="headerlink" href="#module-urllib.response" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-urllib.response" title="urllib.response: Response classes used by urllib."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.response</span></code></a> module defines functions and classes which define a
 minimal file-like interface, including <code class="docutils literal notranslate"><span class="pre">read()</span></code> and <code class="docutils literal notranslate"><span class="pre">readline()</span></code>.
 Functions defined by this module are used internally by the <a class="reference internal" href="#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> module.
@@ -1703,6 +1704,10 @@ The typical response object is a <a class="reference internal" href="#urllib.res
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1769,11 +1774,11 @@ The typical response object is a <a class="reference internal" href="#urllib.res
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

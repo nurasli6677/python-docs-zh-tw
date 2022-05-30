@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>resource --- Resource usage information &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="module-resource">
-<span id="resource-resource-usage-information"></span><h1><a class="reference internal" href="#module-resource" title="resource: An interface to provide resource usage information on the current process. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code></a> --- Resource usage information<a class="headerlink" href="#module-resource" title="本標題的永久連結">¶</a></h1>
+<span id="resource-resource-usage-information"></span><h1><a class="reference internal" href="#module-resource" title="resource: An interface to provide resource usage information on the current process. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource</span></code></a> --- Resource usage information<a class="headerlink" href="#module-resource" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <p>This module provides basic mechanisms for measuring and controlling system
 resources utilized by a program.</p>
@@ -179,7 +180,7 @@ request usage information about either the current process or its children.</p>
 </dd></dl>
 
 <section id="resource-limits">
-<h2>Resource Limits<a class="headerlink" href="#resource-limits" title="本標題的永久連結">¶</a></h2>
+<h2>Resource Limits<a class="headerlink" href="#resource-limits" title="Permalink to this heading">¶</a></h2>
 <p>Resources usage can be limited using the <a class="reference internal" href="#resource.setrlimit" title="resource.setrlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">setrlimit()</span></code></a> function described
 below. Each resource is controlled by a pair of limits: a soft limit and a hard
 limit. The soft limit is the current limit, and may be lowered or raised by a
@@ -434,7 +435,7 @@ for a complete description of this sysctl.</p>
 
 </section>
 <section id="resource-usage">
-<h2>Resource Usage<a class="headerlink" href="#resource-usage" title="本標題的永久連結">¶</a></h2>
+<h2>Resource Usage<a class="headerlink" href="#resource-usage" title="Permalink to this heading">¶</a></h2>
 <p>These functions are used to retrieve resource usage information:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="resource.getrusage">
@@ -469,11 +470,6 @@ mode and the amount of time spent executing in system mode, respectively. The
 remaining values are integers. Consult the <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/getrusage(2)">getrusage(2)</a></em> man page for
 detailed information about these values. A brief summary is presented here:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 31%" />
-<col style="width: 57%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Index</p></th>
 <th class="head"><p>Field</p></th>
@@ -634,6 +630,10 @@ thread.  May not be available on all systems.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -700,11 +700,11 @@ thread.  May not be available on all systems.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

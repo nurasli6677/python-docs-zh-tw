@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>http.client --- HTTP protocol client &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -164,7 +165,7 @@
           <div class="body" role="main">
             
   <section id="module-http.client">
-<span id="http-client-http-protocol-client"></span><h1><a class="reference internal" href="#module-http.client" title="http.client: HTTP and HTTPS protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.client</span></code></a> --- HTTP protocol client<a class="headerlink" href="#module-http.client" title="本標題的永久連結">¶</a></h1>
+<span id="http-client-http-protocol-client"></span><h1><a class="reference internal" href="#module-http.client" title="http.client: HTTP and HTTPS protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.client</span></code></a> --- HTTP protocol client<a class="headerlink" href="#module-http.client" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/http/client.py">Lib/http/client.py</a></p>
 <span class="target" id="index-0"></span><hr class="docutils" id="index-1" />
 <p>This module defines classes which implement the client side of the HTTP and
@@ -411,7 +412,7 @@ has closed the connection.</p>
 <p>See <a class="reference internal" href="http.html#http-status-codes"><span class="std std-ref">HTTP status codes</span></a> for a list of HTTP status codes that are
 available in this module as constants.</p>
 <section id="httpconnection-objects">
-<span id="id1"></span><h2>HTTPConnection 物件<a class="headerlink" href="#httpconnection-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>HTTPConnection 物件<a class="headerlink" href="#httpconnection-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#http.client.HTTPConnection" title="http.client.HTTPConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPConnection</span></code></a> instances have the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="http.client.HTTPConnection.request">
@@ -605,7 +606,7 @@ called.</p>
 
 </section>
 <section id="httpresponse-objects">
-<span id="id2"></span><h2>HTTPResponse 物件<a class="headerlink" href="#httpresponse-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>HTTPResponse 物件<a class="headerlink" href="#httpresponse-objects" title="Permalink to this heading">¶</a></h2>
 <p>An <a class="reference internal" href="#http.client.HTTPResponse" title="http.client.HTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code></a> instance wraps the HTTP response from the
 server.  It provides access to the request headers and the entity
 body.  The response is an iterable object and can be used in a with
@@ -728,7 +729,7 @@ will be printed to stdout as the response is read and parsed.</p>
 
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>Here is an example session that uses the <code class="docutils literal notranslate"><span class="pre">GET</span></code> method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">http.client</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;www.python.org&quot;</span><span class="p">)</span>
@@ -806,7 +807,7 @@ request using http.client:</p>
 </div>
 </section>
 <section id="httpmessage-objects">
-<span id="id3"></span><h2>HTTPMessage 物件<a class="headerlink" href="#httpmessage-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id3"></span><h2>HTTPMessage 物件<a class="headerlink" href="#httpmessage-objects" title="Permalink to this heading">¶</a></h2>
 <p>An <code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPMessage</span></code> instance holds the headers from an HTTP
 response.  It is implemented using the <a class="reference internal" href="email.compat32-message.html#email.message.Message" title="email.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a> class.</p>
 </section>
@@ -854,6 +855,10 @@ response.  It is implemented using the <a class="reference internal" href="email
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -920,11 +925,11 @@ response.  It is implemented using the <a class="reference internal" href="email
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

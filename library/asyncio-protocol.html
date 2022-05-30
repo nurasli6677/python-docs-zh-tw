@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Transports and Protocols &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -188,7 +189,7 @@
           <div class="body" role="main">
             
   <section id="transports-and-protocols">
-<span id="asyncio-transports-protocols"></span><h1>Transports and Protocols<a class="headerlink" href="#transports-and-protocols" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-transports-protocols"></span><h1>Transports and Protocols<a class="headerlink" href="#transports-and-protocols" title="Permalink to this heading">¶</a></h1>
 <p class="rubric">Preface</p>
 <p>Transports and Protocols are used by the <strong>low-level</strong> event loop
 APIs such as <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_connection" title="asyncio.loop.create_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_connection()</span></code></a>.  They use
@@ -232,7 +233,7 @@ classes.</p></li>
 protocols, and low-level event loop APIs.</p></li>
 </ul>
 <section id="transports">
-<span id="asyncio-transport"></span><h2>Transports<a class="headerlink" href="#transports" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-transport"></span><h2>Transports<a class="headerlink" href="#transports" title="Permalink to this heading">¶</a></h2>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/transports.py">Lib/asyncio/transports.py</a></p>
 <hr class="docutils" />
 <p>Transports are classes provided by <a class="reference internal" href="asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> in order to abstract
@@ -243,7 +244,7 @@ various kinds of communication channels.</p>
 The methods available on a transport depend on the transport's kind.</p>
 <p>The transport classes are <a class="reference internal" href="asyncio-dev.html#asyncio-multithreading"><span class="std std-ref">not thread safe</span></a>.</p>
 <section id="transports-hierarchy">
-<h3>Transports Hierarchy<a class="headerlink" href="#transports-hierarchy" title="本標題的永久連結">¶</a></h3>
+<h3>Transports Hierarchy<a class="headerlink" href="#transports-hierarchy" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.BaseTransport">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">BaseTransport</span></span><a class="headerlink" href="#asyncio.BaseTransport" title="本定義的永久連結">¶</a></dt>
@@ -305,7 +306,7 @@ event loop methods <a class="reference internal" href="asyncio-eventloop.html#as
 
 </section>
 <section id="base-transport">
-<h3>Base Transport<a class="headerlink" href="#base-transport" title="本標題的永久連結">¶</a></h3>
+<h3>Base Transport<a class="headerlink" href="#base-transport" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.BaseTransport.close">
 <span class="sig-prename descclassname"><span class="pre">BaseTransport.</span></span><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.BaseTransport.close" title="本定義的永久連結">¶</a></dt>
@@ -398,7 +399,7 @@ protocols are documented to support the switch.</p>
 
 </section>
 <section id="read-only-transports">
-<h3>Read-only Transports<a class="headerlink" href="#read-only-transports" title="本標題的永久連結">¶</a></h3>
+<h3>Read-only Transports<a class="headerlink" href="#read-only-transports" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.ReadTransport.is_reading">
 <span class="sig-prename descclassname"><span class="pre">ReadTransport.</span></span><span class="sig-name descname"><span class="pre">is_reading</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.ReadTransport.is_reading" title="本定義的永久連結">¶</a></dt>
@@ -434,7 +435,7 @@ transport is already reading.</p>
 
 </section>
 <section id="write-only-transports">
-<h3>Write-only Transports<a class="headerlink" href="#write-only-transports" title="本標題的永久連結">¶</a></h3>
+<h3>Write-only Transports<a class="headerlink" href="#write-only-transports" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.WriteTransport.abort">
 <span class="sig-prename descclassname"><span class="pre">WriteTransport.</span></span><span class="sig-name descname"><span class="pre">abort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.WriteTransport.abort" title="本定義的永久連結">¶</a></dt>
@@ -526,7 +527,7 @@ Data may still be received.</p>
 
 </section>
 <section id="datagram-transports">
-<h3>Datagram Transports<a class="headerlink" href="#datagram-transports" title="本標題的永久連結">¶</a></h3>
+<h3>Datagram Transports<a class="headerlink" href="#datagram-transports" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.DatagramTransport.sendto">
 <span class="sig-prename descclassname"><span class="pre">DatagramTransport.</span></span><span class="sig-name descname"><span class="pre">sendto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.DatagramTransport.sendto" title="本定義的永久連結">¶</a></dt>
@@ -550,7 +551,7 @@ method will eventually be called with <a class="reference internal" href="consta
 
 </section>
 <section id="subprocess-transports">
-<span id="asyncio-subprocess-transports"></span><h3>Subprocess Transports<a class="headerlink" href="#subprocess-transports" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-subprocess-transports"></span><h3>Subprocess Transports<a class="headerlink" href="#subprocess-transports" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="asyncio.SubprocessTransport.get_pid">
 <span class="sig-prename descclassname"><span class="pre">SubprocessTransport.</span></span><span class="sig-name descname"><span class="pre">get_pid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.SubprocessTransport.get_pid" title="本定義的永久連結">¶</a></dt>
@@ -618,7 +619,7 @@ stop the subprocess.</p>
 </section>
 </section>
 <section id="protocols">
-<span id="asyncio-protocol"></span><h2>Protocols<a class="headerlink" href="#protocols" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-protocol"></span><h2>Protocols<a class="headerlink" href="#protocols" title="Permalink to this heading">¶</a></h2>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/protocols.py">Lib/asyncio/protocols.py</a></p>
 <hr class="docutils" />
 <p>asyncio provides a set of abstract base classes that should be used
@@ -629,7 +630,7 @@ all methods.  All these methods are callbacks: they are called by
 transports on certain events, for example when some data is received.
 A base protocol method should be called by the corresponding transport.</p>
 <section id="base-protocols">
-<h3>Base Protocols<a class="headerlink" href="#base-protocols" title="本標題的永久連結">¶</a></h3>
+<h3>Base Protocols<a class="headerlink" href="#base-protocols" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.BaseProtocol">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">BaseProtocol</span></span><a class="headerlink" href="#asyncio.BaseProtocol" title="本定義的永久連結">¶</a></dt>
@@ -665,7 +666,7 @@ processes (unidirectional pipes).</p>
 
 </section>
 <section id="base-protocol">
-<h3>Base Protocol<a class="headerlink" href="#base-protocol" title="本標題的永久連結">¶</a></h3>
+<h3>Base Protocol<a class="headerlink" href="#base-protocol" title="Permalink to this heading">¶</a></h3>
 <p>All asyncio protocols can implement Base Protocol callbacks.</p>
 <p class="rubric">Connection Callbacks</p>
 <p>Connection callbacks are called on all protocols, exactly once per
@@ -715,7 +716,7 @@ conditions are important to ensure that things go as expected when
 either mark is zero.</p>
 </section>
 <section id="streaming-protocols">
-<h3>Streaming Protocols<a class="headerlink" href="#streaming-protocols" title="本標題的永久連結">¶</a></h3>
+<h3>Streaming Protocols<a class="headerlink" href="#streaming-protocols" title="Permalink to this heading">¶</a></h3>
 <p>Event methods, such as <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_server" title="asyncio.loop.create_server"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_server()</span></code></a>,
 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_unix_server" title="asyncio.loop.create_unix_server"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_unix_server()</span></code></a>, <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_connection" title="asyncio.loop.create_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_connection()</span></code></a>,
 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_unix_connection" title="asyncio.loop.create_unix_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_unix_connection()</span></code></a>, <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.connect_accepted_socket" title="asyncio.loop.connect_accepted_socket"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.connect_accepted_socket()</span></code></a>,
@@ -762,7 +763,7 @@ being closed.</p>
 </div>
 </section>
 <section id="buffered-streaming-protocols">
-<h3>Buffered Streaming Protocols<a class="headerlink" href="#buffered-streaming-protocols" title="本標題的永久連結">¶</a></h3>
+<h3>Buffered Streaming Protocols<a class="headerlink" href="#buffered-streaming-protocols" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
@@ -816,7 +817,7 @@ and, if called, <a class="reference internal" href="#asyncio.BufferedProtocol.ge
 </div>
 </section>
 <section id="datagram-protocols">
-<h3>Datagram Protocols<a class="headerlink" href="#datagram-protocols" title="本標題的永久連結">¶</a></h3>
+<h3>Datagram Protocols<a class="headerlink" href="#datagram-protocols" title="Permalink to this heading">¶</a></h3>
 <p>Datagram Protocol instances should be constructed by protocol
 factories passed to the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_datagram_endpoint" title="asyncio.loop.create_datagram_endpoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_datagram_endpoint()</span></code></a> method.</p>
 <dl class="py method">
@@ -850,7 +851,7 @@ or may not be raised; if it is raised, it will be reported to
 </div>
 </section>
 <section id="subprocess-protocols">
-<span id="asyncio-subprocess-protocols"></span><h3>Subprocess Protocols<a class="headerlink" href="#subprocess-protocols" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-subprocess-protocols"></span><h3>Subprocess Protocols<a class="headerlink" href="#subprocess-protocols" title="Permalink to this heading">¶</a></h3>
 <p>Subprocess Protocol instances should be constructed by protocol
 factories passed to the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_exec" title="asyncio.loop.subprocess_exec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_exec()</span></code></a> and
 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_shell" title="asyncio.loop.subprocess_shell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_shell()</span></code></a> methods.</p>
@@ -880,9 +881,9 @@ is closed.</p>
 </section>
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="tcp-echo-server">
-<span id="asyncio-example-tcp-echo-server-protocol"></span><h3>TCP Echo Server<a class="headerlink" href="#tcp-echo-server" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-example-tcp-echo-server-protocol"></span><h3>TCP Echo Server<a class="headerlink" href="#tcp-echo-server" title="Permalink to this heading">¶</a></h3>
 <p>Create a TCP echo server using the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_server" title="asyncio.loop.create_server"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_server()</span></code></a> method, send back
 received data, and close the connection:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -928,7 +929,7 @@ example uses the high-level <a class="reference internal" href="asyncio-stream.h
 </div>
 </section>
 <section id="tcp-echo-client">
-<span id="asyncio-example-tcp-echo-client-protocol"></span><h3>TCP Echo Client<a class="headerlink" href="#tcp-echo-client" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-example-tcp-echo-client-protocol"></span><h3>TCP Echo Client<a class="headerlink" href="#tcp-echo-client" title="Permalink to this heading">¶</a></h3>
 <p>A TCP echo client using the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_connection" title="asyncio.loop.create_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_connection()</span></code></a> method, sends
 data, and waits until the connection is closed:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -981,7 +982,7 @@ example uses the high-level <a class="reference internal" href="asyncio-stream.h
 </div>
 </section>
 <section id="udp-echo-server">
-<span id="asyncio-udp-echo-server-protocol"></span><h3>UDP Echo Server<a class="headerlink" href="#udp-echo-server" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-udp-echo-server-protocol"></span><h3>UDP Echo Server<a class="headerlink" href="#udp-echo-server" title="Permalink to this heading">¶</a></h3>
 <p>A UDP echo server, using the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_datagram_endpoint" title="asyncio.loop.create_datagram_endpoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_datagram_endpoint()</span></code></a>
 method, sends back received data:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -1022,7 +1023,7 @@ method, sends back received data:</p>
 </div>
 </section>
 <section id="udp-echo-client">
-<span id="asyncio-udp-echo-client-protocol"></span><h3>UDP Echo Client<a class="headerlink" href="#udp-echo-client" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-udp-echo-client-protocol"></span><h3>UDP Echo Client<a class="headerlink" href="#udp-echo-client" title="Permalink to this heading">¶</a></h3>
 <p>A UDP echo client, using the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_datagram_endpoint" title="asyncio.loop.create_datagram_endpoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_datagram_endpoint()</span></code></a>
 method, sends data and closes the transport when it receives the answer:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -1076,7 +1077,7 @@ method, sends data and closes the transport when it receives the answer:</p>
 </div>
 </section>
 <section id="connecting-existing-sockets">
-<span id="asyncio-example-create-connection"></span><h3>Connecting Existing Sockets<a class="headerlink" href="#connecting-existing-sockets" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-example-create-connection"></span><h3>Connecting Existing Sockets<a class="headerlink" href="#connecting-existing-sockets" title="Permalink to this heading">¶</a></h3>
 <p>Wait until a socket receives data using the
 <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.create_connection" title="asyncio.loop.create_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_connection()</span></code></a> method with a protocol:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -1138,7 +1139,7 @@ created by the <a class="reference internal" href="asyncio-stream.html#asyncio.o
 </div>
 </section>
 <section id="loop-subprocess-exec-and-subprocessprotocol">
-<span id="asyncio-example-subprocess-proto"></span><h3>loop.subprocess_exec() and SubprocessProtocol<a class="headerlink" href="#loop-subprocess-exec-and-subprocessprotocol" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-example-subprocess-proto"></span><h3>loop.subprocess_exec() and SubprocessProtocol<a class="headerlink" href="#loop-subprocess-exec-and-subprocessprotocol" title="Permalink to this heading">¶</a></h3>
 <p>An example of a subprocess protocol used to get the output of a
 subprocess and to wait for the subprocess exit.</p>
 <p>The subprocess is created by the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_exec" title="asyncio.loop.subprocess_exec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_exec()</span></code></a> method:</p>
@@ -1258,6 +1259,10 @@ written using high-level APIs.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1325,11 +1330,11 @@ written using high-level APIs.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

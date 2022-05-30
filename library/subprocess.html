@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>subprocess --- Subprocess management &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -187,7 +188,7 @@
           <div class="body" role="main">
             
   <section id="module-subprocess">
-<span id="subprocess-subprocess-management"></span><h1><a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> --- Subprocess management<a class="headerlink" href="#module-subprocess" title="本標題的永久連結">¶</a></h1>
+<span id="subprocess-subprocess-management"></span><h1><a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> --- Subprocess management<a class="headerlink" href="#module-subprocess" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/subprocess.py">Lib/subprocess.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> module allows you to spawn new processes, connect to their
@@ -204,7 +205,7 @@ modules and functions can be found in the following sections.</p>
 <p><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0324/"><strong>PEP 324</strong></a> -- PEP proposing the subprocess module</p>
 </div>
 <section id="using-the-subprocess-module">
-<h2>Using the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> Module<a class="headerlink" href="#using-the-subprocess-module" title="本標題的永久連結">¶</a></h2>
+<h2>Using the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> Module<a class="headerlink" href="#using-the-subprocess-module" title="Permalink to this heading">¶</a></h2>
 <p>The recommended approach to invoking subprocesses is to use the <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a>
 function for all use cases it can handle. For more advanced use cases, the
 underlying <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> interface can be used directly.</p>
@@ -448,7 +449,7 @@ Otherwise, <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <section id="frequently-used-arguments">
-<span id="id1"></span><h3>Frequently Used Arguments<a class="headerlink" href="#frequently-used-arguments" title="本標題的永久連結">¶</a></h3>
+<span id="id1"></span><h3>Frequently Used Arguments<a class="headerlink" href="#frequently-used-arguments" title="Permalink to this heading">¶</a></h3>
 <p>To support a wide variety of use cases, the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> constructor (and
 the convenience functions) accept a large number of optional arguments. For
 most typical use cases, many of these arguments can be safely left at their
@@ -520,7 +521,7 @@ instead of <code class="docutils literal notranslate"><span class="pre">locale.g
 detail in the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> constructor documentation.</p>
 </section>
 <section id="popen-constructor">
-<h3>Popen Constructor<a class="headerlink" href="#popen-constructor" title="本標題的永久連結">¶</a></h3>
+<h3>Popen Constructor<a class="headerlink" href="#popen-constructor" title="Permalink to this heading">¶</a></h3>
 <p>The underlying process creation and management in this module is handled by
 the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> class. It offers a lot of flexibility so that developers
 are able to handle the less common cases not covered by the convenience
@@ -847,7 +848,7 @@ with a non-zero <a class="reference internal" href="#subprocess.Popen.returncode
 
 </section>
 <section id="exceptions">
-<h3>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h3>
+<h3>例外<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h3>
 <p>Exceptions raised in the child process, before the new program has started to
 execute, will be re-raised in the parent.</p>
 <p>The most common exception raised is <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.  This occurs, for example,
@@ -873,7 +874,7 @@ the timeout expires before the process exits.</p>
 </section>
 </section>
 <section id="security-considerations">
-<span id="subprocess-security"></span><h2>Security Considerations<a class="headerlink" href="#security-considerations" title="本標題的永久連結">¶</a></h2>
+<span id="subprocess-security"></span><h2>Security Considerations<a class="headerlink" href="#security-considerations" title="Permalink to this heading">¶</a></h2>
 <p>Unlike some other popen functions, this implementation will never
 implicitly call a system shell.  This means that all characters,
 including shell metacharacters, can safely be passed to child processes.
@@ -885,7 +886,7 @@ vulnerabilities. On <a class="reference internal" href="shlex.html#shlex-quote-w
 to use <a class="reference internal" href="shlex.html#shlex.quote" title="shlex.quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">shlex.quote()</span></code></a> for this escaping.</p>
 </section>
 <section id="popen-objects">
-<h2>Popen Objects<a class="headerlink" href="#popen-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Popen Objects<a class="headerlink" href="#popen-objects" title="Permalink to this heading">¶</a></h2>
 <p>Instances of the <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a> class have the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="subprocess.Popen.poll">
@@ -1058,7 +1059,7 @@ hasn't terminated yet.</p>
 
 </section>
 <section id="windows-popen-helpers">
-<h2>Windows Popen Helpers<a class="headerlink" href="#windows-popen-helpers" title="本標題的永久連結">¶</a></h2>
+<h2>Windows Popen Helpers<a class="headerlink" href="#windows-popen-helpers" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#subprocess.STARTUPINFO" title="subprocess.STARTUPINFO"><code class="xref py py-class docutils literal notranslate"><span class="pre">STARTUPINFO</span></code></a> class and following constants are only available
 on Windows.</p>
 <dl class="py class">
@@ -1154,7 +1155,7 @@ handles.</p>
 </dd></dl>
 
 <section id="windows-constants">
-<h3>Windows Constants<a class="headerlink" href="#windows-constants" title="本標題的永久連結">¶</a></h3>
+<h3>Windows Constants<a class="headerlink" href="#windows-constants" title="Permalink to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> module exposes the following constants.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="subprocess.STD_INPUT_HANDLE">
@@ -1325,7 +1326,7 @@ is not associated with the job.</p>
 </section>
 </section>
 <section id="older-high-level-api">
-<span id="call-function-trio"></span><h2>Older high-level API<a class="headerlink" href="#older-high-level-api" title="本標題的永久連結">¶</a></h2>
+<span id="call-function-trio"></span><h2>Older high-level API<a class="headerlink" href="#older-high-level-api" title="Permalink to this heading">¶</a></h2>
 <p>Prior to Python 3.5, these three functions comprised the high level API to
 subprocess. You can now use <a class="reference internal" href="#subprocess.run" title="subprocess.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> in many cases, but lots of existing code
 calls these functions.</p>
@@ -1437,7 +1438,7 @@ or <em>universal_newlines</em> to <code class="docutils literal notranslate"><sp
 
 </section>
 <section id="replacing-older-functions-with-the-subprocess-module">
-<span id="subprocess-replacements"></span><h2>Replacing Older Functions with the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> Module<a class="headerlink" href="#replacing-older-functions-with-the-subprocess-module" title="本標題的永久連結">¶</a></h2>
+<span id="subprocess-replacements"></span><h2>Replacing Older Functions with the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> Module<a class="headerlink" href="#replacing-older-functions-with-the-subprocess-module" title="Permalink to this heading">¶</a></h2>
 <p>In this section, &quot;a becomes b&quot; means that b can be used as a replacement for a.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -1452,7 +1453,7 @@ return code. The output is still available as the
 <p>In the following examples, we assume that the relevant functions have already
 been imported from the <a class="reference internal" href="#module-subprocess" title="subprocess: Subprocess management."><code class="xref py py-mod docutils literal notranslate"><span class="pre">subprocess</span></code></a> module.</p>
 <section id="replacing-bin-sh-shell-command-substitution">
-<h3>Replacing <strong class="program">/bin/sh</strong> shell command substitution<a class="headerlink" href="#replacing-bin-sh-shell-command-substitution" title="本標題的永久連結">¶</a></h3>
+<h3>Replacing <strong class="program">/bin/sh</strong> shell command substitution<a class="headerlink" href="#replacing-bin-sh-shell-command-substitution" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>mycmd myarg<span class="k">)</span>
 </pre></div>
 </div>
@@ -1462,7 +1463,7 @@ been imported from the <a class="reference internal" href="#module-subprocess" t
 </div>
 </section>
 <section id="replacing-shell-pipeline">
-<h3>Replacing shell pipeline<a class="headerlink" href="#replacing-shell-pipeline" title="本標題的永久連結">¶</a></h3>
+<h3>Replacing shell pipeline<a class="headerlink" href="#replacing-shell-pipeline" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>dmesg <span class="p">|</span> grep hda<span class="k">)</span>
 </pre></div>
 </div>
@@ -1486,7 +1487,7 @@ be used directly:</p>
 </div>
 </section>
 <section id="replacing-os-system">
-<h3>Replacing <a class="reference internal" href="os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a><a class="headerlink" href="#replacing-os-system" title="本標題的永久連結">¶</a></h3>
+<h3>Replacing <a class="reference internal" href="os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a><a class="headerlink" href="#replacing-os-system" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">sts</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;mycmd&quot;</span> <span class="o">+</span> <span class="s2">&quot; myarg&quot;</span><span class="p">)</span>
 <span class="c1"># becomes</span>
 <span class="n">retcode</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="s2">&quot;mycmd&quot;</span> <span class="o">+</span> <span class="s2">&quot; myarg&quot;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1514,7 +1515,7 @@ using the <a class="reference internal" href="#module-subprocess" title="subproc
 </div>
 </section>
 <section id="replacing-the-os-spawn-family">
-<h3>Replacing the <a class="reference internal" href="os.html#os.spawnl" title="os.spawnl"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.spawn</span></code></a> family<a class="headerlink" href="#replacing-the-os-spawn-family" title="本標題的永久連結">¶</a></h3>
+<h3>Replacing the <a class="reference internal" href="os.html#os.spawnl" title="os.spawnl"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.spawn</span></code></a> family<a class="headerlink" href="#replacing-the-os-spawn-family" title="Permalink to this heading">¶</a></h3>
 <p>P_NOWAIT 範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pid</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">spawnlp</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">P_NOWAIT</span><span class="p">,</span> <span class="s2">&quot;/bin/mycmd&quot;</span><span class="p">,</span> <span class="s2">&quot;mycmd&quot;</span><span class="p">,</span> <span class="s2">&quot;myarg&quot;</span><span class="p">)</span>
 <span class="o">==&gt;</span>
@@ -1541,7 +1542,7 @@ using the <a class="reference internal" href="#module-subprocess" title="subproc
 </div>
 </section>
 <section id="replacing-os-popen-os-popen2-os-popen3">
-<h3>Replacing <a class="reference internal" href="os.html#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code></a>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen3()</span></code><a class="headerlink" href="#replacing-os-popen-os-popen2-os-popen3" title="本標題的永久連結">¶</a></h3>
+<h3>Replacing <a class="reference internal" href="os.html#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code></a>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen2()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen3()</span></code><a class="headerlink" href="#replacing-os-popen-os-popen2-os-popen3" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">child_stdin</span><span class="p">,</span> <span class="n">child_stdout</span><span class="p">)</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen2</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">)</span>
 <span class="o">==&gt;</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bufsize</span><span class="o">=</span><span class="n">bufsize</span><span class="p">,</span>
@@ -1583,7 +1584,7 @@ using the <a class="reference internal" href="#module-subprocess" title="subproc
 </div>
 </section>
 <section id="replacing-functions-from-the-popen2-module">
-<h3>Replacing functions from the <code class="xref py py-mod docutils literal notranslate"><span class="pre">popen2</span></code> module<a class="headerlink" href="#replacing-functions-from-the-popen2-module" title="本標題的永久連結">¶</a></h3>
+<h3>Replacing functions from the <code class="xref py py-mod docutils literal notranslate"><span class="pre">popen2</span></code> module<a class="headerlink" href="#replacing-functions-from-the-popen2-module" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>If the cmd argument to popen2 functions is a string, the command is executed
@@ -1616,7 +1617,7 @@ all platforms or past Python versions.</p></li>
 </section>
 </section>
 <section id="legacy-shell-invocation-functions">
-<h2>Legacy Shell Invocation Functions<a class="headerlink" href="#legacy-shell-invocation-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Legacy Shell Invocation Functions<a class="headerlink" href="#legacy-shell-invocation-functions" title="Permalink to this heading">¶</a></h2>
 <p>This module also provides the following legacy functions from the 2.x
 <code class="docutils literal notranslate"><span class="pre">commands</span></code> module. These operations implicitly invoke the system shell and
 none of the guarantees described above regarding security and exception
@@ -1668,9 +1669,9 @@ value is a string containing the command's output.  Example:</p>
 
 </section>
 <section id="notes">
-<h2>註解<a class="headerlink" href="#notes" title="本標題的永久連結">¶</a></h2>
+<h2>註解<a class="headerlink" href="#notes" title="Permalink to this heading">¶</a></h2>
 <section id="converting-an-argument-sequence-to-a-string-on-windows">
-<span id="converting-argument-sequence"></span><h3>Converting an argument sequence to a string on Windows<a class="headerlink" href="#converting-an-argument-sequence-to-a-string-on-windows" title="本標題的永久連結">¶</a></h3>
+<span id="converting-argument-sequence"></span><h3>Converting an argument sequence to a string on Windows<a class="headerlink" href="#converting-an-argument-sequence-to-a-string-on-windows" title="Permalink to this heading">¶</a></h3>
 <p>On Windows, an <em>args</em> sequence is converted to a string that can be parsed
 using the following rules (which correspond to the rules used by the MS C
 runtime):</p>
@@ -1767,6 +1768,10 @@ described in rule 3.</p></li>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1833,11 +1838,11 @@ described in rule 3.</p></li>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

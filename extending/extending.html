@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. 以 C 或 C++ 擴充 Python &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -177,7 +178,7 @@
           <div class="body" role="main">
             
   <section id="extending-python-with-c-or-c">
-<span id="extending-intro"></span><h1><span class="section-number">1. </span>以 C 或 C++ 擴充 Python<a class="headerlink" href="#extending-python-with-c-or-c" title="本標題的永久連結">¶</a></h1>
+<span id="extending-intro"></span><h1><span class="section-number">1. </span>以 C 或 C++ 擴充 Python<a class="headerlink" href="#extending-python-with-c-or-c" title="Permalink to this heading">¶</a></h1>
 <p>It is quite easy to add new built-in modules to Python, if you know how to
 program in C.  Such <em class="dfn">extension modules</em> can do two things that can't be
 done directly in Python: they can implement new built-in object types, and they
@@ -201,10 +202,10 @@ portable between implementations of Python than writing and compiling a C
 extension module.</p>
 </div>
 <section id="a-simple-example">
-<span id="extending-simpleexample"></span><h2><span class="section-number">1.1. </span>一個簡單範例<a class="headerlink" href="#a-simple-example" title="本標題的永久連結">¶</a></h2>
+<span id="extending-simpleexample"></span><h2><span class="section-number">1.1. </span>一個簡單範例<a class="headerlink" href="#a-simple-example" title="Permalink to this heading">¶</a></h2>
 <p>Let's create an extension module called <code class="docutils literal notranslate"><span class="pre">spam</span></code> (the favorite food of Monty
 Python fans...) and let's say we want to create a Python interface to the C
-library function <code class="xref c c-func docutils literal notranslate"><span class="pre">system()</span></code> <a class="footnote-reference brackets" href="#id5" id="id1">1</a>. This function takes a null-terminated
+library function <code class="xref c c-func docutils literal notranslate"><span class="pre">system()</span></code> <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. This function takes a null-terminated
 character string as argument and returns an integer.  We want this function to
 be callable from Python as follows:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spam</span>
@@ -274,7 +275,7 @@ latter case it also raises an appropriate exception so the calling function can
 return <code class="docutils literal notranslate"><span class="pre">NULL</span></code> immediately (as we saw in the example).</p>
 </section>
 <section id="intermezzo-errors-and-exceptions">
-<span id="extending-errors"></span><h2><span class="section-number">1.2. </span>Intermezzo: Errors and Exceptions<a class="headerlink" href="#intermezzo-errors-and-exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="extending-errors"></span><h2><span class="section-number">1.2. </span>Intermezzo: Errors and Exceptions<a class="headerlink" href="#intermezzo-errors-and-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>An important convention throughout the Python interpreter is the following: when
 a function fails, it should set an exception condition and return an error value
 (usually <code class="docutils literal notranslate"><span class="pre">-1</span></code> or a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointer).  Exception information is stored in
@@ -401,7 +402,7 @@ call to <a class="reference internal" href="../c-api/exceptions.html#c.PyErr_Set
 </div>
 </section>
 <section id="back-to-the-example">
-<span id="backtoexample"></span><h2><span class="section-number">1.3. </span>回到範例<a class="headerlink" href="#back-to-the-example" title="本標題的永久連結">¶</a></h2>
+<span id="backtoexample"></span><h2><span class="section-number">1.3. </span>回到範例<a class="headerlink" href="#back-to-the-example" title="Permalink to this heading">¶</a></h2>
 <p>Going back to our example function, you should now be able to understand this
 statement:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">command</span><span class="p">))</span><span class="w"></span>
@@ -440,7 +441,7 @@ genuine Python object rather than a <code class="docutils literal notranslate"><
 contexts, as we have seen.</p>
 </section>
 <section id="the-module-s-method-table-and-initialization-function">
-<span id="methodtable"></span><h2><span class="section-number">1.4. </span>The Module's Method Table and Initialization Function<a class="headerlink" href="#the-module-s-method-table-and-initialization-function" title="本標題的永久連結">¶</a></h2>
+<span id="methodtable"></span><h2><span class="section-number">1.4. </span>The Module's Method Table and Initialization Function<a class="headerlink" href="#the-module-s-method-table-and-initialization-function" title="Permalink to this heading">¶</a></h2>
 <p>I promised to show how <code class="xref c c-func docutils literal notranslate"><span class="pre">spam_system()</span></code> is called from Python programs.
 First, we need to list its name and address in a &quot;method table&quot;:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyMethodDef</span><span class="w"> </span><span class="n">SpamMethods</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -561,7 +562,7 @@ For details on multi-phase initialization, see <span class="target" id="index-0"
 </div>
 </section>
 <section id="compilation-and-linkage">
-<span id="compilation"></span><h2><span class="section-number">1.5. </span>Compilation and Linkage<a class="headerlink" href="#compilation-and-linkage" title="本標題的永久連結">¶</a></h2>
+<span id="compilation"></span><h2><span class="section-number">1.5. </span>Compilation and Linkage<a class="headerlink" href="#compilation-and-linkage" title="Permalink to this heading">¶</a></h2>
 <p>There are two more things to do before you can use your new extension: compiling
 and linking it with the Python system.  If you use dynamic loading, the details
 may depend on the style of dynamic loading your system uses; see the chapters
@@ -589,7 +590,7 @@ on the line in the configuration file as well, for instance:</p>
 </div>
 </section>
 <section id="calling-python-functions-from-c">
-<span id="callingpython"></span><h2><span class="section-number">1.6. </span>Calling Python Functions from C<a class="headerlink" href="#calling-python-functions-from-c" title="本標題的永久連結">¶</a></h2>
+<span id="callingpython"></span><h2><span class="section-number">1.6. </span>Calling Python Functions from C<a class="headerlink" href="#calling-python-functions-from-c" title="Permalink to this heading">¶</a></h2>
 <p>So far we have concentrated on making C functions callable from Python.  The
 reverse is also useful: calling Python functions from C. This is especially the
 case for libraries that support so-called &quot;callback&quot; functions.  If a C
@@ -722,7 +723,7 @@ the above example, we use <a class="reference internal" href="../c-api/arg.html#
 </div>
 </section>
 <section id="extracting-parameters-in-extension-functions">
-<span id="parsetuple"></span><h2><span class="section-number">1.7. </span>Extracting Parameters in Extension Functions<a class="headerlink" href="#extracting-parameters-in-extension-functions" title="本標題的永久連結">¶</a></h2>
+<span id="parsetuple"></span><h2><span class="section-number">1.7. </span>Extracting Parameters in Extension Functions<a class="headerlink" href="#extracting-parameters-in-extension-functions" title="Permalink to this heading">¶</a></h2>
 <p id="index-2">The <a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a> function is declared as follows:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">PyArg_ParseTuple</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
 </pre></div>
@@ -799,7 +800,7 @@ at least overwrite random bits in memory.  So be careful!</p>
 </div>
 </section>
 <section id="keyword-parameters-for-extension-functions">
-<span id="parsetupleandkeywords"></span><h2><span class="section-number">1.8. </span>Keyword Parameters for Extension Functions<a class="headerlink" href="#keyword-parameters-for-extension-functions" title="本標題的永久連結">¶</a></h2>
+<span id="parsetupleandkeywords"></span><h2><span class="section-number">1.8. </span>Keyword Parameters for Extension Functions<a class="headerlink" href="#keyword-parameters-for-extension-functions" title="Permalink to this heading">¶</a></h2>
 <p id="index-3">The <a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTupleAndKeywords" title="PyArg_ParseTupleAndKeywords"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTupleAndKeywords()</span></code></a> function is declared as follows:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">PyArg_ParseTupleAndKeywords</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">kwdict</span><span class="p">,</span><span class="w"></span>
 <span class="w">                                </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">kwlist</span><span class="p">[],</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
@@ -871,7 +872,7 @@ Philbrick (<a class="reference external" href="mailto:philbrick&#37;&#52;&#48;hk
 </div>
 </section>
 <section id="building-arbitrary-values">
-<span id="buildvalue"></span><h2><span class="section-number">1.9. </span>Building Arbitrary Values<a class="headerlink" href="#building-arbitrary-values" title="本標題的永久連結">¶</a></h2>
+<span id="buildvalue"></span><h2><span class="section-number">1.9. </span>Building Arbitrary Values<a class="headerlink" href="#building-arbitrary-values" title="Permalink to this heading">¶</a></h2>
 <p>This function is the counterpart to <a class="reference internal" href="../c-api/arg.html#c.PyArg_ParseTuple" title="PyArg_ParseTuple"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArg_ParseTuple()</span></code></a>.  It is declared
 as follows:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">Py_BuildValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
@@ -910,7 +911,7 @@ Py_BuildValue(&quot;((ii)(ii)) (ii)&quot;,
 </div>
 </section>
 <section id="reference-counts">
-<span id="refcounts"></span><h2><span class="section-number">1.10. </span>Reference Counts<a class="headerlink" href="#reference-counts" title="本標題的永久連結">¶</a></h2>
+<span id="refcounts"></span><h2><span class="section-number">1.10. </span>Reference Counts<a class="headerlink" href="#reference-counts" title="Permalink to this heading">¶</a></h2>
 <p>In languages like C or C++, the programmer is responsible for dynamic allocation
 and deallocation of memory on the heap.  In C, this is done using the functions
 <code class="xref c c-func docutils literal notranslate"><span class="pre">malloc()</span></code> and <code class="xref c c-func docutils literal notranslate"><span class="pre">free()</span></code>.  In C++, the operators <code class="docutils literal notranslate"><span class="pre">new</span></code> and
@@ -971,7 +972,7 @@ The <a class="reference internal" href="../library/gc.html#module-gc" title="gc:
 <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code></a> function), as well as configuration
 interfaces and the ability to disable the detector at runtime.</p>
 <section id="reference-counting-in-python">
-<span id="refcountsinpython"></span><h3><span class="section-number">1.10.1. </span>Reference Counting in Python<a class="headerlink" href="#reference-counting-in-python" title="本標題的永久連結">¶</a></h3>
+<span id="refcountsinpython"></span><h3><span class="section-number">1.10.1. </span>Reference Counting in Python<a class="headerlink" href="#reference-counting-in-python" title="Permalink to this heading">¶</a></h3>
 <p>There are two macros, <code class="docutils literal notranslate"><span class="pre">Py_INCREF(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">Py_DECREF(x)</span></code>, which handle the
 incrementing and decrementing of the reference count. <a class="reference internal" href="../c-api/refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a> also
 frees the object when the count reaches zero. For flexibility, it doesn't call
@@ -986,11 +987,11 @@ responsible for calling <a class="reference internal" href="../c-api/refcounting
 needed.  Ownership of a reference can be transferred.  There are three ways to
 dispose of an owned reference: pass it on, store it, or call <a class="reference internal" href="../c-api/refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a>.
 Forgetting to dispose of an owned reference creates a memory leak.</p>
-<p>It is also possible to <em class="dfn">borrow</em> <a class="footnote-reference brackets" href="#id6" id="id2">2</a> a reference to an object.  The
+<p>It is also possible to <em class="dfn">borrow</em> <a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> a reference to an object.  The
 borrower of a reference should not call <a class="reference internal" href="../c-api/refcounting.html#c.Py_DECREF" title="Py_DECREF"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code></a>.  The borrower must
 not hold on to the object longer than the owner from which it was borrowed.
 Using a borrowed reference after the owner has disposed of it risks using freed
-memory and should be avoided completely <a class="footnote-reference brackets" href="#id7" id="id3">3</a>.</p>
+memory and should be avoided completely <a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <p>The advantage of borrowing over owning a reference is that you don't need to
 take care of disposing of the reference on all possible paths through the code
 --- in other words, with a borrowed reference you don't run the risk of leaking
@@ -1005,7 +1006,7 @@ owner responsibilities (the new owner must dispose of the reference properly, as
 well as the previous owner).</p>
 </section>
 <section id="ownership-rules">
-<span id="ownershiprules"></span><h3><span class="section-number">1.10.2. </span>Ownership Rules<a class="headerlink" href="#ownership-rules" title="本標題的永久連結">¶</a></h3>
+<span id="ownershiprules"></span><h3><span class="section-number">1.10.2. </span>Ownership Rules<a class="headerlink" href="#ownership-rules" title="Permalink to this heading">¶</a></h3>
 <p>Whenever an object reference is passed into or out of a function, it is part of
 the function's interface specification whether ownership is transferred with the
 reference or not.</p>
@@ -1042,7 +1043,7 @@ be an owned reference --- ownership is transferred from the function to its
 caller.</p>
 </section>
 <section id="thin-ice">
-<span id="thinice"></span><h3><span class="section-number">1.10.3. </span>Thin Ice<a class="headerlink" href="#thin-ice" title="本標題的永久連結">¶</a></h3>
+<span id="thinice"></span><h3><span class="section-number">1.10.3. </span>Thin Ice<a class="headerlink" href="#thin-ice" title="Permalink to this heading">¶</a></h3>
 <p>There are a few situations where seemingly harmless use of a borrowed reference
 can lead to problems.  These all have to do with implicit invocations of the
 interpreter, which can cause the owner of a reference to dispose of it.</p>
@@ -1112,7 +1113,7 @@ Obviously, the following function has the same problem as the previous one:</p>
 </div>
 </section>
 <section id="null-pointers">
-<span id="nullpointers"></span><h3><span class="section-number">1.10.4. </span>NULL Pointers<a class="headerlink" href="#null-pointers" title="本標題的永久連結">¶</a></h3>
+<span id="nullpointers"></span><h3><span class="section-number">1.10.4. </span>NULL Pointers<a class="headerlink" href="#null-pointers" title="Permalink to this heading">¶</a></h3>
 <p>In general, functions that take object references as arguments do not expect you
 to pass them <code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointers, and will dump core (or cause later core dumps) if
 you do so.  Functions that return object references generally return <code class="docutils literal notranslate"><span class="pre">NULL</span></code> only
@@ -1133,12 +1134,12 @@ this would generate redundant tests.  There are no variants with <code class="do
 checking.</p>
 <p>The C function calling mechanism guarantees that the argument list passed to C
 functions (<code class="docutils literal notranslate"><span class="pre">args</span></code> in the examples) is never <code class="docutils literal notranslate"><span class="pre">NULL</span></code> --- in fact it guarantees
-that it is always a tuple <a class="footnote-reference brackets" href="#id8" id="id4">4</a>.</p>
+that it is always a tuple <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
 <p>It is a severe error to ever let a <code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointer &quot;escape&quot; to the Python user.</p>
 </section>
 </section>
 <section id="writing-extensions-in-c">
-<span id="cplusplus"></span><h2><span class="section-number">1.11. </span>Writing Extensions in C++<a class="headerlink" href="#writing-extensions-in-c" title="本標題的永久連結">¶</a></h2>
+<span id="cplusplus"></span><h2><span class="section-number">1.11. </span>Writing Extensions in C++<a class="headerlink" href="#writing-extensions-in-c" title="Permalink to this heading">¶</a></h2>
 <p>It is possible to write extension modules in C++.  Some restrictions apply.  If
 the main program (the Python interpreter) is compiled and linked by the C
 compiler, global or static objects with constructors cannot be used.  This is
@@ -1150,7 +1151,7 @@ already if the symbol <code class="docutils literal notranslate"><span class="pr
 define this symbol).</p>
 </section>
 <section id="providing-a-c-api-for-an-extension-module">
-<span id="using-capsules"></span><h2><span class="section-number">1.12. </span>Providing a C API for an Extension Module<a class="headerlink" href="#providing-a-c-api-for-an-extension-module" title="本標題的永久連結">¶</a></h2>
+<span id="using-capsules"></span><h2><span class="section-number">1.12. </span>Providing a C API for an Extension Module<a class="headerlink" href="#providing-a-c-api-for-an-extension-module" title="Permalink to this heading">¶</a></h2>
 <p>Many extension modules just provide new functions and types to be used from
 Python, but sometimes the code in an extension module can be useful for other
 extension modules. For example, an extension module could implement a type
@@ -1358,25 +1359,27 @@ Manual in the section <a class="reference internal" href="../c-api/capsule.html#
 <code class="file docutils literal notranslate"><span class="pre">Include/pycapsule.h</span></code> and <code class="file docutils literal notranslate"><span class="pre">Objects/pycapsule.c</span></code> in the Python source
 code distribution).</p>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>An interface for this function already exists in the standard module <a class="reference internal" href="../library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>An interface for this function already exists in the standard module <a class="reference internal" href="../library/os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a>
 --- it was chosen as a simple and straightforward example.</p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>The metaphor of &quot;borrowing&quot; a reference is not completely correct: the owner
+</aside>
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>The metaphor of &quot;borrowing&quot; a reference is not completely correct: the owner
 still has a copy of the reference.</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Checking that the reference count is at least 1 <strong>does not work</strong> --- the
+</aside>
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Checking that the reference count is at least 1 <strong>does not work</strong> --- the
 reference count itself could be in freed memory and may thus be reused for
 another object!</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>These guarantees don't hold when you use the &quot;old&quot; style calling convention ---
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>These guarantees don't hold when you use the &quot;old&quot; style calling convention ---
 this is still found in much existing code.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -1436,6 +1439,10 @@ this is still found in much existing code.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1501,11 +1508,11 @@ this is still found in much existing code.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

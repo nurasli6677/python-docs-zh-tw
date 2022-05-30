@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Policies &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -165,7 +166,7 @@
           <div class="body" role="main">
             
   <section id="policies">
-<span id="asyncio-policies"></span><h1>Policies<a class="headerlink" href="#policies" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-policies"></span><h1>Policies<a class="headerlink" href="#policies" title="Permalink to this heading">¶</a></h1>
 <p>An event loop policy is a global per-process object that controls
 the management of the event loop. Each event loop has a default
 policy, which can be changed and customized using the policy API.</p>
@@ -178,7 +179,7 @@ defines <em>context</em> to be the current thread.</p>
 <p>Policy objects should implement the APIs defined
 in the <a class="reference internal" href="#asyncio.AbstractEventLoopPolicy" title="asyncio.AbstractEventLoopPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractEventLoopPolicy</span></code></a> abstract base class.</p>
 <section id="getting-and-setting-the-policy">
-<h2>Getting and Setting the Policy<a class="headerlink" href="#getting-and-setting-the-policy" title="本標題的永久連結">¶</a></h2>
+<h2>Getting and Setting the Policy<a class="headerlink" href="#getting-and-setting-the-policy" title="Permalink to this heading">¶</a></h2>
 <p>The following functions can be used to get and set the policy
 for the current process:</p>
 <dl class="py function">
@@ -196,7 +197,7 @@ for the current process:</p>
 
 </section>
 <section id="policy-objects">
-<h2>Policy Objects<a class="headerlink" href="#policy-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Policy Objects<a class="headerlink" href="#policy-objects" title="Permalink to this heading">¶</a></h2>
 <p>The abstract event loop policy base class is defined as follows:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.AbstractEventLoopPolicy">
@@ -276,7 +277,7 @@ is configured to use the default policy automatically.</p>
 
 </section>
 <section id="process-watchers">
-<span id="asyncio-watchers"></span><h2>Process Watchers<a class="headerlink" href="#process-watchers" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-watchers"></span><h2>Process Watchers<a class="headerlink" href="#process-watchers" title="Permalink to this heading">¶</a></h2>
 <p>A process watcher allows customization of how an event loop monitors
 child processes on Unix. Specifically, the event loop needs to know
 when a child process has exited.</p>
@@ -436,7 +437,7 @@ only work on recent (5.3+) kernels.</p>
 
 </section>
 <section id="custom-policies">
-<h2>Custom Policies<a class="headerlink" href="#custom-policies" title="本標題的永久連結">¶</a></h2>
+<h2>Custom Policies<a class="headerlink" href="#custom-policies" title="Permalink to this heading">¶</a></h2>
 <p>To implement a new event loop policy, it is recommended to subclass
 <a class="reference internal" href="#asyncio.DefaultEventLoopPolicy" title="asyncio.DefaultEventLoopPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultEventLoopPolicy</span></code></a> and override the methods for which
 custom behavior is wanted, e.g.:</p>
@@ -499,6 +500,10 @@ custom behavior is wanted, e.g.:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -566,11 +571,11 @@ custom behavior is wanted, e.g.:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

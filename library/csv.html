@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>csv --- CSV File Reading and Writing &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -165,7 +166,7 @@
           <div class="body" role="main">
             
   <section id="module-csv">
-<span id="csv-csv-file-reading-and-writing"></span><h1><a class="reference internal" href="#module-csv" title="csv: Write and read tabular data to and from delimited files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code></a> --- CSV File Reading and Writing<a class="headerlink" href="#module-csv" title="本標題的永久連結">¶</a></h1>
+<span id="csv-csv-file-reading-and-writing"></span><h1><a class="reference internal" href="#module-csv" title="csv: Write and read tabular data to and from delimited files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code></a> --- CSV File Reading and Writing<a class="headerlink" href="#module-csv" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/csv.py">Lib/csv.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The so-called CSV (Comma Separated Values) format is the most common import and
@@ -195,7 +196,7 @@ using the <a class="reference internal" href="#csv.DictReader" title="csv.DictRe
 </dl>
 </div>
 <section id="module-contents">
-<span id="csv-contents"></span><h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<span id="csv-contents"></span><h2>模組內容<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#module-csv" title="csv: Write and read tabular data to and from delimited files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code></a> 模組定義了以下函式：</p>
 <span class="target" id="index-3"></span><dl class="py function">
 <dt class="sig sig-object py" id="csv.reader">
@@ -203,7 +204,7 @@ using the <a class="reference internal" href="#csv.DictReader" title="csv.DictRe
 <dd><p>Return a reader object which will iterate over lines in the given <em>csvfile</em>.
 <em>csvfile</em> can be any object which supports the <a class="reference internal" href="../glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a> protocol and returns a
 string each time its <code class="xref py py-meth docutils literal notranslate"><span class="pre">__next__()</span></code> method is called --- <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file objects</span></a> and list objects are both suitable.   If <em>csvfile</em> is a file object,
-it should be opened with <code class="docutils literal notranslate"><span class="pre">newline=''</span></code>. <a class="footnote-reference brackets" href="#id3" id="id1">1</a>  An optional
+it should be opened with <code class="docutils literal notranslate"><span class="pre">newline=''</span></code>. <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>  An optional
 <em>dialect</em> parameter can be given which is used to define a set of parameters
 specific to a particular CSV dialect.  It may be an instance of a subclass of
 the <a class="reference internal" href="#csv.Dialect" title="csv.Dialect"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code></a> class or one of the strings returned by the
@@ -232,7 +233,7 @@ option is specified (in which case unquoted fields are transformed into floats).
 <dd><p>Return a writer object responsible for converting the user's data into delimited
 strings on the given file-like object.  <em>csvfile</em> can be any object with a
 <code class="xref py py-func docutils literal notranslate"><span class="pre">write()</span></code> method.  If <em>csvfile</em> is a file object, it should be opened with
-<code class="docutils literal notranslate"><span class="pre">newline=''</span></code> <a class="footnote-reference brackets" href="#id3" id="id2">1</a>.  An optional <em>dialect</em>
+<code class="docutils literal notranslate"><span class="pre">newline=''</span></code> <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.  An optional <em>dialect</em>
 parameter can be given which is used to define a set of parameters specific to a
 particular CSV dialect.  It may be an instance of a subclass of the
 <a class="reference internal" href="#csv.Dialect" title="csv.Dialect"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code></a> class or one of the strings returned by the
@@ -500,7 +501,7 @@ any characters that require escaping are encountered.</p>
 
 </section>
 <section id="dialects-and-formatting-parameters">
-<span id="csv-fmt-params"></span><h2>Dialects and Formatting Parameters<a class="headerlink" href="#dialects-and-formatting-parameters" title="本標題的永久連結">¶</a></h2>
+<span id="csv-fmt-params"></span><h2>Dialects and Formatting Parameters<a class="headerlink" href="#dialects-and-formatting-parameters" title="Permalink to this heading">¶</a></h2>
 <p>To make it easier to specify the format of input and output records, specific
 formatting parameters are grouped together into dialects.  A dialect is a
 subclass of the <a class="reference internal" href="#csv.Dialect" title="csv.Dialect"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code></a> class having a set of specific methods and a
@@ -582,7 +583,7 @@ The default is <code class="docutils literal notranslate"><span class="pre">Fals
 
 </section>
 <section id="reader-objects">
-<h2>Reader Objects<a class="headerlink" href="#reader-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Reader Objects<a class="headerlink" href="#reader-objects" title="Permalink to this heading">¶</a></h2>
 <p>Reader objects (<a class="reference internal" href="#csv.DictReader" title="csv.DictReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DictReader</span></code></a> instances and objects returned by the
 <a class="reference internal" href="#csv.reader" title="csv.reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">reader()</span></code></a> function) have the following public methods:</p>
 <dl class="py method">
@@ -619,7 +620,7 @@ file.</p>
 
 </section>
 <section id="writer-objects">
-<h2>Writer Objects<a class="headerlink" href="#writer-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Writer Objects<a class="headerlink" href="#writer-objects" title="Permalink to this heading">¶</a></h2>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">Writer</span></code> objects (<a class="reference internal" href="#csv.DictWriter" title="csv.DictWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">DictWriter</span></code></a> instances and objects returned by
 the <a class="reference internal" href="#csv.writer" title="csv.writer"><code class="xref py py-func docutils literal notranslate"><span class="pre">writer()</span></code></a> function) have the following public methods.  A <em>row</em> must be
 an iterable of strings or numbers for <code class="xref py py-class docutils literal notranslate"><span class="pre">Writer</span></code> objects and a dictionary
@@ -671,7 +672,7 @@ the <a class="reference internal" href="#csv.csvwriter.writerow" title="csv.csvw
 
 </section>
 <section id="examples">
-<span id="csv-examples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="csv-examples"></span><h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>The simplest example of reading a CSV file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;some.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -735,15 +736,15 @@ done:</p>
 </pre></div>
 </div>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
-<dd><p>If <code class="docutils literal notranslate"><span class="pre">newline=''</span></code> is not specified, newlines embedded inside quoted fields
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>If <code class="docutils literal notranslate"><span class="pre">newline=''</span></code> is not specified, newlines embedded inside quoted fields
 will not be interpreted correctly, and on platforms that use <code class="docutils literal notranslate"><span class="pre">\r\n</span></code> linendings
 on write an extra <code class="docutils literal notranslate"><span class="pre">\r</span></code> will be added.  It should always be safe to specify
 <code class="docutils literal notranslate"><span class="pre">newline=''</span></code>, since the csv module does its own
 (<a class="reference internal" href="../glossary.html#term-universal-newlines"><span class="xref std std-term">universal</span></a>) newline handling.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -790,6 +791,10 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -856,11 +861,11 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

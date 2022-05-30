@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>XML 處理模組 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="module-xml">
-<span id="xml-processing-modules"></span><span id="xml"></span><h1>XML 處理模組<a class="headerlink" href="#module-xml" title="本標題的永久連結">¶</a></h1>
+<span id="xml-processing-modules"></span><span id="xml"></span><h1>XML 處理模組<a class="headerlink" href="#module-xml" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/xml/">Lib/xml/</a></p>
 <hr class="docutils" />
 <p>Python's interfaces for processing XML are grouped in the <code class="docutils literal notranslate"><span class="pre">xml</span></code> package.</p>
@@ -194,7 +195,7 @@ XML processor</p></li>
 <li><p><a class="reference internal" href="pyexpat.html#module-xml.parsers.expat" title="xml.parsers.expat: An interface to the Expat non-validating XML parser."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.parsers.expat</span></code></a>: the Expat parser binding</p></li>
 </ul>
 <section id="xml-vulnerabilities">
-<span id="id1"></span><h2>XML vulnerabilities<a class="headerlink" href="#xml-vulnerabilities" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>XML vulnerabilities<a class="headerlink" href="#xml-vulnerabilities" title="Permalink to this heading">¶</a></h2>
 <p>The XML processing modules are not secure against maliciously constructed data.
 An attacker can abuse XML features to carry out denial of service attacks,
 access local files, generate network connections to other machines, or
@@ -202,14 +203,6 @@ circumvent firewalls.</p>
 <p>The following table gives an overview of the known attacks and whether
 the various modules are vulnerable to them.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>kind</p></th>
 <th class="head"><p>sax</p></th>
@@ -302,7 +295,7 @@ magnitudes or more.</p>
 all known attack vectors with examples and references.</p>
 </section>
 <section id="the-defusedxml-package">
-<span id="defusedxml-package"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> 套件<a class="headerlink" href="#the-defusedxml-package" title="本標題的永久連結">¶</a></h2>
+<span id="defusedxml-package"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> 套件<a class="headerlink" href="#the-defusedxml-package" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="https://pypi.org/project/defusedxml/">defusedxml</a> is a pure Python package with modified subclasses of all stdlib
 XML parsers that prevent any potentially malicious operation. Use of this
 package is recommended for any server code that parses untrusted XML data. The
@@ -351,6 +344,10 @@ XML exploits such as XPath injection.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -417,11 +414,11 @@ XML exploits such as XPath injection.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>內建函式 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -150,15 +151,9 @@
           <div class="body" role="main">
             
   <section id="built-in-functions">
-<span id="built-in-funcs"></span><h1>內建函式<a class="headerlink" href="#built-in-functions" title="本標題的永久連結">¶</a></h1>
+<span id="built-in-funcs"></span><h1>內建函式<a class="headerlink" href="#built-in-functions" title="Permalink to this heading">¶</a></h1>
 <p>Python 直譯器有內建多個可隨時使用的函式和型別。以下按照英文字母排序列出。</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 24%" />
-<col style="width: 24%" />
-<col style="width: 26%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="4"><p>內建函式</p></th>
 </tr>
@@ -637,7 +632,7 @@ as the argument. Code compilation events may also be raised.</p>
 <span class="target" id="index-1"></span><dl class="py function">
 <dt class="sig sig-object py" id="exec">
 <span class="sig-name descname"><span class="pre">exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">globals</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">locals</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#exec" title="本定義的永久連結">¶</a></dt>
-<dd><p>這個函式支援動態執行 Python 程式碼。<em>object</em> 必須是字串或者程式碼物件。如果是字串，那麼該字串將被剖析為一系列 Python 陳述式並執行（除非發生語法錯誤）。<a class="footnote-reference brackets" href="#id2" id="id1">1</a> 如果是程式碼物件，它將被直接執行。無論哪種情況，被執行的程式碼都需要和檔案輸入一樣是有效的（可參考手冊中關於 <a class="reference internal" href="../reference/toplevel_components.html#file-input"><span class="std std-ref">File input</span></a> 的章節）。請注意，即使在傳遞給 <a class="reference internal" href="#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a> 函式的程式碼的上下文中，<a class="reference internal" href="../reference/simple_stmts.html#nonlocal"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">nonlocal</span></code></a>、<a class="reference internal" href="../reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> 和 <a class="reference internal" href="../reference/simple_stmts.html#return"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code></a> 陳述式也不能在函式之外使用。該函式回傳值是 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
+<dd><p>這個函式支援動態執行 Python 程式碼。<em>object</em> 必須是字串或者程式碼物件。如果是字串，那麼該字串將被剖析為一系列 Python 陳述式並執行（除非發生語法錯誤）。<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> 如果是程式碼物件，它將被直接執行。無論哪種情況，被執行的程式碼都需要和檔案輸入一樣是有效的（可參考手冊中關於 <a class="reference internal" href="../reference/toplevel_components.html#file-input"><span class="std std-ref">File input</span></a> 的章節）。請注意，即使在傳遞給 <a class="reference internal" href="#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a> 函式的程式碼的上下文中，<a class="reference internal" href="../reference/simple_stmts.html#nonlocal"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">nonlocal</span></code></a>、<a class="reference internal" href="../reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> 和 <a class="reference internal" href="../reference/simple_stmts.html#return"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code></a> 陳述式也不能在函式之外使用。該函式回傳值是 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 <p>無論哪種情況，如果省略了選擇性引數，程式碼將在當前作用域內執行。如果只提供了 <em>globals</em> 引數，就必須是 dictionary 型別，而且會被用作全域性和本地變數。如果同時提供了 <em>globals</em> 和 <em>locals</em> 引數，它們分別被用作全域性和本地變數。如果提供了 <em>locals</em> 引數，則它可以是任何映射物件。請記住在 module 層級中全域性和本地變數是相同的 dictionary。如果 exec 有兩個不同的 <em>globals</em> 和 <em>locals</em> 物件，程式碼就像嵌入在 class 定義中一樣執行。</p>
 <p>如果 <em>globals</em> dictionary 不包含 <code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> 鍵值，則將為該鍵插入對內建 <a class="reference internal" href="builtins.html#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code></a> module dictionary 的引用。因此，在將執行的程式碼傳遞給 <a class="reference internal" href="#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a> 之前，可以通過將自己的 <code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> dictionary 插入到 <em>globals</em> 中來控制可以使用哪些內建程式碼。</p>
 <p class="audit-hook"><p>Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">exec</span></code> with the code object
@@ -667,11 +662,11 @@ as the argument. Code compilation events may also be raised.</p>
 <dd><p id="index-2">回傳從數字或字串 <em>x</em> 生成的浮點數。</p>
 <p>如果引數是字串，則它必須是包含十進位制數字的字串，字串前面可以有符號，之前也可以有空格。選擇性的符號有 <code class="docutils literal notranslate"><span class="pre">'+'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'-'</span></code>；<code class="docutils literal notranslate"><span class="pre">'+'</span></code> 對建立的值沒有影響。引數也可以是 NaN（非數字）或正負無窮大的字串。確切地說，除去首尾的空格後，輸入必須遵循以下語法：</p>
 <pre>
-<strong id="grammar-token-float-sign"><span id="grammar-token-sign"></span>sign          </strong> ::=  &quot;+&quot; | &quot;-&quot;
-<strong id="grammar-token-float-infinity"><span id="grammar-token-infinity"></span>infinity      </strong> ::=  &quot;Infinity&quot; | &quot;inf&quot;
-<strong id="grammar-token-float-nan"><span id="grammar-token-nan"></span>nan           </strong> ::=  &quot;nan&quot;
-<strong id="grammar-token-float-numeric_value"><span id="grammar-token-numeric-value"></span>numeric_value </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">floatnumber</span></code> | <a class="reference internal" href="#grammar-token-float-infinity"><code class="xref docutils literal notranslate"><span class="pre">infinity</span></code></a> | <a class="reference internal" href="#grammar-token-float-nan"><code class="xref docutils literal notranslate"><span class="pre">nan</span></code></a>
-<strong id="grammar-token-float-numeric_string"><span id="grammar-token-numeric-string"></span>numeric_string</strong> ::=  [<a class="reference internal" href="#grammar-token-float-sign"><code class="xref docutils literal notranslate"><span class="pre">sign</span></code></a>] <a class="reference internal" href="#grammar-token-float-numeric_value"><code class="xref docutils literal notranslate"><span class="pre">numeric_value</span></code></a>
+<strong id="grammar-token-float-sign">sign          </strong> ::=  &quot;+&quot; | &quot;-&quot;
+<strong id="grammar-token-float-infinity">infinity      </strong> ::=  &quot;Infinity&quot; | &quot;inf&quot;
+<strong id="grammar-token-float-nan">nan           </strong> ::=  &quot;nan&quot;
+<strong id="grammar-token-float-numeric_value">numeric_value </strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">floatnumber</span></code> | <a class="reference internal" href="#grammar-token-float-infinity"><code class="xref docutils literal notranslate"><span class="pre">infinity</span></code></a> | <a class="reference internal" href="#grammar-token-float-nan"><code class="xref docutils literal notranslate"><span class="pre">nan</span></code></a>
+<strong id="grammar-token-float-numeric_string">numeric_string</strong> ::=  [<a class="reference internal" href="#grammar-token-float-sign"><code class="xref docutils literal notranslate"><span class="pre">sign</span></code></a>] <a class="reference internal" href="#grammar-token-float-numeric_value"><code class="xref docutils literal notranslate"><span class="pre">numeric_value</span></code></a>
 </pre>
 <p><code class="docutils literal notranslate"><span class="pre">floatnumber</span></code> 是 Python 浮點數的字串形式，詳見 <a class="reference internal" href="../reference/lexical_analysis.html#floating"><span class="std std-ref">Floating point literals</span></a>。字母大小寫都可以，例如，&quot;inf&quot;、&quot;Inf&quot;、&quot;INFINITY&quot;、&quot;iNfINity&quot; 都可以表示正無窮大。</p>
 <p>否則，如果引數是整數或浮點數，則回傳具有相同值（在 Python 浮點精度範圍內）的浮點數。如果引數在 Python 浮點精度範圍外，則會觸發 <a class="reference internal" href="exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>。</p>
@@ -1000,10 +995,6 @@ database file until the end of file is reached:</p>
 <p><em>file</em> 是一個 <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>，是將被開啟之檔案的路徑（絕對路徑或者當前工作目錄的相當路徑），或是被封裝的整數檔案描述器 (file descriptor)。（如果有提供檔案描述器，它會隨著回傳的 I/O 物件關閉而關閉，除非 <em>closefd</em> 被設為 <code class="docutils literal notranslate"><span class="pre">False</span></code>。）</p>
 <p><em>mode</em> 是一個選擇性字串，用於指定開啟檔案的模式。預設值是 <code class="docutils literal notranslate"><span class="pre">'r'</span></code>，這意味著它以文字模式開啟並讀取。其他常見模式有：寫入 <code class="docutils literal notranslate"><span class="pre">'w'</span></code>（會捨去已經存在的檔案）、唯一性創建 <code class="docutils literal notranslate"><span class="pre">'x'</span></code>、追加寫入 <code class="docutils literal notranslate"><span class="pre">'a'</span></code>（在<em>一些</em> Unix 系統上，無論當前的檔案指標在什麼位置，<em>所有</em> 寫入都會追加到檔案末尾）。在文字模式，如果沒有指定 <em>encoding</em>，則根據電腦平臺來決定使用的編碼：呼叫 <code class="docutils literal notranslate"><span class="pre">locale.getpreferredencoding(False)</span></code> 來獲取當前的本地編碼。（要讀取和寫入原始 bytes，請使用二進位制模式且不要指定 <em>encoding</em>。）可用的模式有：</p>
 <span class="target" id="filemodes"></span><table class="docutils align-default" id="index-5">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 88%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>字元</p></th>
 <th class="head"><p>意義</p></th>
@@ -1736,7 +1727,7 @@ list:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="import__">
-<span id="__import__"></span><span class="sig-name descname"><span class="pre">__import__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fromlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#import__" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__import__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fromlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#import__" title="本定義的永久連結">¶</a></dt>
 <dd><div class="admonition note" id="index-12">
 <p class="admonition-title">備註</p>
 <p>This is an advanced function that is not needed in everyday Python
@@ -1799,11 +1790,10 @@ the environment variable <span class="target" id="index-15"></span><a class="ref
 </dd></dl>
 
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>剖析器只接受 Unix 風格的行結束符。如果您從檔案中讀取程式碼，請確保用換行符轉換模式轉換 Windows 或 Mac 風格的換行符。</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>剖析器只接受 Unix 風格的行結束符。如果您從檔案中讀取程式碼，請確保用換行符轉換模式轉換 Windows 或 Mac 風格的換行符。</p>
+</aside>
 </section>
 
 
@@ -1835,6 +1825,10 @@ the environment variable <span class="target" id="index-15"></span><a class="ref
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1900,11 +1894,11 @@ the environment variable <span class="target" id="index-15"></span><a class="ref
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

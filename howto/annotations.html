@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Annotations Best Practices &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -164,13 +165,13 @@
           <div class="body" role="main">
             
   <section id="annotations-best-practices">
-<span id="annotations-howto"></span><h1>Annotations Best Practices<a class="headerlink" href="#annotations-best-practices" title="本標題的永久連結">¶</a></h1>
+<span id="annotations-howto"></span><h1>Annotations Best Practices<a class="headerlink" href="#annotations-best-practices" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Larry Hastings</p>
 </dd>
 </dl>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">摘要</p>
 <p>This document is designed to encapsulate the best practices
 for working with annotations dicts.  If you write Python code
@@ -189,9 +190,9 @@ quirks of <code class="docutils literal notranslate"><span class="pre">__annotat
 <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code>, not uses <em>for</em> annotations.
 If you're looking for information on how to use &quot;type hints&quot;
 in your code, please see the <a class="reference internal" href="../library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> module.</p>
-</div>
+</aside>
 <section id="accessing-the-annotations-dict-of-an-object-in-python-3-10-and-newer">
-<h2>Accessing The Annotations Dict Of An Object In Python 3.10 And Newer<a class="headerlink" href="#accessing-the-annotations-dict-of-an-object-in-python-3-10-and-newer" title="本標題的永久連結">¶</a></h2>
+<h2>Accessing The Annotations Dict Of An Object In Python 3.10 And Newer<a class="headerlink" href="#accessing-the-annotations-dict-of-an-object-in-python-3-10-and-newer" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>Python 3.10 adds a new function to the standard library:
 <a class="reference internal" href="../library/inspect.html#inspect.get_annotations" title="inspect.get_annotations"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect.get_annotations()</span></code></a>.  In Python versions 3.10
@@ -218,7 +219,7 @@ for example <code class="docutils literal notranslate"><span class="pre">getattr
 </div></blockquote>
 </section>
 <section id="accessing-the-annotations-dict-of-an-object-in-python-3-9-and-older">
-<h2>Accessing The Annotations Dict Of An Object In Python 3.9 And Older<a class="headerlink" href="#accessing-the-annotations-dict-of-an-object-in-python-3-9-and-older" title="本標題的永久連結">¶</a></h2>
+<h2>Accessing The Annotations Dict Of An Object In Python 3.9 And Older<a class="headerlink" href="#accessing-the-annotations-dict-of-an-object-in-python-3-9-and-older" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>In Python 3.9 and older, accessing the annotations dict
 of an object is much more complicated than in newer versions.
@@ -274,7 +275,7 @@ to use <a class="reference internal" href="../library/functions.html#getattr" ti
 </div></blockquote>
 </section>
 <section id="manually-un-stringizing-stringized-annotations">
-<h2>Manually Un-Stringizing Stringized Annotations<a class="headerlink" href="#manually-un-stringizing-stringized-annotations" title="本標題的永久連結">¶</a></h2>
+<h2>Manually Un-Stringizing Stringized Annotations<a class="headerlink" href="#manually-un-stringizing-stringized-annotations" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>In situations where some annotations may be &quot;stringized&quot;,
 and you wish to evaluate those strings to produce the
@@ -321,7 +322,7 @@ to by the caller.</p>
 </div></blockquote>
 </section>
 <section id="best-practices-for-annotations-in-any-python-version">
-<h2>Best Practices For <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code> In Any Python Version<a class="headerlink" href="#best-practices-for-annotations-in-any-python-version" title="本標題的永久連結">¶</a></h2>
+<h2>Best Practices For <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code> In Any Python Version<a class="headerlink" href="#best-practices-for-annotations-in-any-python-version" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>You should avoid assigning to the <code class="docutils literal notranslate"><span class="pre">__annotations__</span></code> member
@@ -338,7 +339,7 @@ of an object.</p></li>
 </div></blockquote>
 </section>
 <section id="annotations-quirks">
-<h2><code class="docutils literal notranslate"><span class="pre">__annotations__</span></code> Quirks<a class="headerlink" href="#annotations-quirks" title="本標題的永久連結">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">__annotations__</span></code> Quirks<a class="headerlink" href="#annotations-quirks" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>In all versions of Python 3, function
 objects lazy-create an annotations dict if no annotations
@@ -418,6 +419,10 @@ a &quot;quirk&quot;; it's mentioned here simply because it might be surprising.<
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -483,11 +488,11 @@ a &quot;quirk&quot;; it's mentioned here simply because it might be surprising.<
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>緩衝協定 (Buffer Protocol) &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -175,7 +176,7 @@
           <div class="body" role="main">
             
   <section id="buffer-protocol">
-<span id="bufferobjects"></span><span id="index-0"></span><h1>緩衝協定 (Buffer Protocol)<a class="headerlink" href="#buffer-protocol" title="本標題的永久連結">¶</a></h1>
+<span id="bufferobjects"></span><span id="index-0"></span><h1>緩衝協定 (Buffer Protocol)<a class="headerlink" href="#buffer-protocol" title="Permalink to this heading">¶</a></h1>
 <p>Certain objects available in Python wrap access to an underlying memory
 array or <em>buffer</em>.  Such objects include the built-in <a class="reference internal" href="../library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and
 <a class="reference internal" href="../library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>, and some extension types like <a class="reference internal" href="../library/array.html#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array.array</span></code></a>.
@@ -215,7 +216,7 @@ over a target object:</p>
 isn't needed anymore.  Failure to do so could lead to various issues such as
 resource leaks.</p>
 <section id="buffer-structure">
-<span id="id1"></span><h2>Buffer structure<a class="headerlink" href="#buffer-structure" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Buffer structure<a class="headerlink" href="#buffer-structure" title="Permalink to this heading">¶</a></h2>
 <p>Buffer structures (or simply &quot;buffers&quot;) are useful as a way to expose the
 binary data from another object to the Python programmer.  They can also be
 used as a zero-copy slicing mechanism.  Using their ability to reference a
@@ -372,7 +373,7 @@ value.</p>
 
 </section>
 <section id="buffer-request-types">
-<span id="id2"></span><h2>Buffer request types<a class="headerlink" href="#buffer-request-types" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Buffer request types<a class="headerlink" href="#buffer-request-types" title="Permalink to this heading">¶</a></h2>
 <p>Buffers are usually obtained by sending a buffer request to an exporting
 object via <a class="reference internal" href="#c.PyObject_GetBuffer" title="PyObject_GetBuffer"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_GetBuffer()</span></code></a>. Since the complexity of the logical
 structure of the memory can vary drastically, the consumer uses the <em>flags</em>
@@ -380,13 +381,13 @@ argument to specify the exact buffer type it can handle.</p>
 <p>All <a class="reference internal" href="#c.Py_buffer" title="Py_buffer"><code class="xref c c-data docutils literal notranslate"><span class="pre">Py_buffer</span></code></a> fields are unambiguously defined by the request
 type.</p>
 <section id="request-independent-fields">
-<h3>request-independent fields<a class="headerlink" href="#request-independent-fields" title="本標題的永久連結">¶</a></h3>
+<h3>request-independent fields<a class="headerlink" href="#request-independent-fields" title="Permalink to this heading">¶</a></h3>
 <p>The following fields are not influenced by <em>flags</em> and must always be filled in
 with the correct values: <a class="reference internal" href="#c.Py_buffer.obj" title="Py_buffer.obj"><code class="xref c c-member docutils literal notranslate"><span class="pre">obj</span></code></a>, <a class="reference internal" href="#c.Py_buffer.buf" title="Py_buffer.buf"><code class="xref c c-member docutils literal notranslate"><span class="pre">buf</span></code></a>,
 <a class="reference internal" href="#c.Py_buffer.len" title="Py_buffer.len"><code class="xref c c-member docutils literal notranslate"><span class="pre">len</span></code></a>, <a class="reference internal" href="#c.Py_buffer.itemsize" title="Py_buffer.itemsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">itemsize</span></code></a>, <a class="reference internal" href="#c.Py_buffer.ndim" title="Py_buffer.ndim"><code class="xref c c-member docutils literal notranslate"><span class="pre">ndim</span></code></a>.</p>
 </section>
 <section id="readonly-format">
-<h3>readonly, format<a class="headerlink" href="#readonly-format" title="本標題的永久連結">¶</a></h3>
+<h3>readonly, format<a class="headerlink" href="#readonly-format" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><dl class="c macro">
 <dt class="sig sig-object c" id="c.PyBUF_WRITABLE">
@@ -412,17 +413,11 @@ can be used as a stand-alone flag to request a simple writable buffer.</p>
 The latter already implies format <code class="docutils literal notranslate"><span class="pre">B</span></code> (unsigned bytes).</p>
 </section>
 <section id="shape-strides-suboffsets">
-<h3>shape, strides, suboffsets<a class="headerlink" href="#shape-strides-suboffsets" title="本標題的永久連結">¶</a></h3>
+<h3>shape, strides, suboffsets<a class="headerlink" href="#shape-strides-suboffsets" title="Permalink to this heading">¶</a></h3>
 <p>The flags that control the logical structure of the memory are listed
 in decreasing order of complexity. Note that each flag contains all bits
 of the flags below it.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 51%" />
-<col style="width: 12%" />
-<col style="width: 16%" />
-<col style="width: 21%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Request</p></th>
 <th class="head"><p>shape</p></th>
@@ -475,18 +470,11 @@ of the flags below it.</p>
 </table>
 </section>
 <section id="contiguity-requests">
-<span id="index-2"></span><h3>contiguity requests<a class="headerlink" href="#contiguity-requests" title="本標題的永久連結">¶</a></h3>
+<span id="index-2"></span><h3>contiguity requests<a class="headerlink" href="#contiguity-requests" title="Permalink to this heading">¶</a></h3>
 <p>C or Fortran <a class="reference internal" href="../glossary.html#term-contiguous"><span class="xref std std-term">contiguity</span></a> can be explicitly requested,
 with and without stride information. Without stride information, the buffer
 must be C-contiguous.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 10%" />
-<col style="width: 13%" />
-<col style="width: 17%" />
-<col style="width: 11%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Request</p></th>
 <th class="head"><p>shape</p></th>
@@ -539,22 +527,13 @@ must be C-contiguous.</p>
 </table>
 </section>
 <section id="compound-requests">
-<h3>compound requests<a class="headerlink" href="#compound-requests" title="本標題的永久連結">¶</a></h3>
+<h3>compound requests<a class="headerlink" href="#compound-requests" title="Permalink to this heading">¶</a></h3>
 <p>All possible requests are fully defined by some combination of the flags in
 the previous section. For convenience, the buffer protocol provides frequently
 used combinations as single flags.</p>
 <p>In the following table <em>U</em> stands for undefined contiguity. The consumer would
 have to call <a class="reference internal" href="#c.PyBuffer_IsContiguous" title="PyBuffer_IsContiguous"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyBuffer_IsContiguous()</span></code></a> to determine contiguity.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 36%" />
-<col style="width: 8%" />
-<col style="width: 11%" />
-<col style="width: 14%" />
-<col style="width: 9%" />
-<col style="width: 12%" />
-<col style="width: 9%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Request</p></th>
 <th class="head"><p>shape</p></th>
@@ -675,9 +654,9 @@ have to call <a class="reference internal" href="#c.PyBuffer_IsContiguous" title
 </section>
 </section>
 <section id="complex-arrays">
-<h2>Complex arrays<a class="headerlink" href="#complex-arrays" title="本標題的永久連結">¶</a></h2>
+<h2>Complex arrays<a class="headerlink" href="#complex-arrays" title="Permalink to this heading">¶</a></h2>
 <section id="numpy-style-shape-and-strides">
-<h3>NumPy-style: shape and strides<a class="headerlink" href="#numpy-style-shape-and-strides" title="本標題的永久連結">¶</a></h3>
+<h3>NumPy-style: shape and strides<a class="headerlink" href="#numpy-style-shape-and-strides" title="Permalink to this heading">¶</a></h3>
 <p>The logical structure of NumPy-style arrays is defined by <a class="reference internal" href="#c.Py_buffer.itemsize" title="Py_buffer.itemsize"><code class="xref c c-member docutils literal notranslate"><span class="pre">itemsize</span></code></a>,
 <a class="reference internal" href="#c.Py_buffer.ndim" title="Py_buffer.ndim"><code class="xref c c-member docutils literal notranslate"><span class="pre">ndim</span></code></a>, <a class="reference internal" href="#c.Py_buffer.shape" title="Py_buffer.shape"><code class="xref c c-member docutils literal notranslate"><span class="pre">shape</span></code></a> and <a class="reference internal" href="#c.Py_buffer.strides" title="Py_buffer.strides"><code class="xref c c-member docutils literal notranslate"><span class="pre">strides</span></code></a>.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ndim</span> <span class="pre">==</span> <span class="pre">0</span></code>, the memory location pointed to by <a class="reference internal" href="#c.Py_buffer.buf" title="Py_buffer.buf"><code class="xref c c-member docutils literal notranslate"><span class="pre">buf</span></code></a> is
@@ -722,7 +701,7 @@ this function:</p>
 </div>
 </section>
 <section id="pil-style-shape-strides-and-suboffsets">
-<h3>PIL-style: shape, strides and suboffsets<a class="headerlink" href="#pil-style-shape-strides-and-suboffsets" title="本標題的永久連結">¶</a></h3>
+<h3>PIL-style: shape, strides and suboffsets<a class="headerlink" href="#pil-style-shape-strides-and-suboffsets" title="Permalink to this heading">¶</a></h3>
 <p>In addition to the regular items, PIL-style arrays can contain pointers
 that must be followed in order to get to the next element in a dimension.
 For example, the regular three-dimensional C-array <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">v[2][2][3]</span></code> can
@@ -750,7 +729,7 @@ and suboffsets:</p>
 </section>
 </section>
 <section id="buffer-related-functions">
-<h2>Buffer-related functions<a class="headerlink" href="#buffer-related-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Buffer-related functions<a class="headerlink" href="#buffer-related-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyObject_CheckBuffer">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyObject_CheckBuffer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyObject_CheckBuffer" title="本定義的永久連結">¶</a><br /></dt>
@@ -909,6 +888,10 @@ unmodified. Otherwise, <em>exporter</em> MUST be <code class="docutils literal n
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -975,11 +958,11 @@ unmodified. Otherwise, <em>exporter</em> MUST be <code class="docutils literal n
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

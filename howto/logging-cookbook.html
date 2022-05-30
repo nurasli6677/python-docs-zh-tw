@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Logging Cookbook &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -213,16 +214,16 @@
           <div class="body" role="main">
             
   <section id="logging-cookbook">
-<span id="id1"></span><h1>Logging Cookbook<a class="headerlink" href="#logging-cookbook" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1>Logging Cookbook<a class="headerlink" href="#logging-cookbook" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</p>
 </dd>
 </dl>
 <p>This page contains a number of recipes related to logging, which have been found
 useful in the past.</p>
 <section id="using-logging-in-multiple-modules">
-<h2>Using logging in multiple modules<a class="headerlink" href="#using-logging-in-multiple-modules" title="本標題的永久連結">¶</a></h2>
+<h2>Using logging in multiple modules<a class="headerlink" href="#using-logging-in-multiple-modules" title="Permalink to this heading">¶</a></h2>
 <p>Multiple calls to <code class="docutils literal notranslate"><span class="pre">logging.getLogger('someLogger')</span></code> return a reference to the
 same logger object.  This is true not only within the same module, but also
 across modules as long as it is in the same Python interpreter process.  It is
@@ -306,7 +307,7 @@ child will pass up to the parent.  Here is a main module:</p>
 </div>
 </section>
 <section id="logging-from-multiple-threads">
-<h2>Logging from multiple threads<a class="headerlink" href="#logging-from-multiple-threads" title="本標題的永久連結">¶</a></h2>
+<h2>Logging from multiple threads<a class="headerlink" href="#logging-from-multiple-threads" title="Permalink to this heading">¶</a></h2>
 <p>Logging from multiple threads requires no special effort. The following example
 shows logging from the main (initial) thread and another thread:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
@@ -360,7 +361,7 @@ shows logging from the main (initial) thread and another thread:</p>
 works for more threads than shown here, of course.</p>
 </section>
 <section id="multiple-handlers-and-formatters">
-<h2>Multiple handlers and formatters<a class="headerlink" href="#multiple-handlers-and-formatters" title="本標題的永久連結">¶</a></h2>
+<h2>Multiple handlers and formatters<a class="headerlink" href="#multiple-handlers-and-formatters" title="Permalink to this heading">¶</a></h2>
 <p>Loggers are plain Python objects.  The <a class="reference internal" href="../library/logging.html#logging.Logger.addHandler" title="logging.Logger.addHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addHandler()</span></code></a> method has no
 minimum or maximum quota for the number of handlers you may add.  Sometimes it
 will be beneficial for an application to log all messages of all severities to a
@@ -405,7 +406,7 @@ need them again.  At that time, the only change that needs to happen is to
 modify the severity level of the logger and/or handler to debug.</p>
 </section>
 <section id="logging-to-multiple-destinations">
-<span id="multiple-destinations"></span><h2>Logging to multiple destinations<a class="headerlink" href="#logging-to-multiple-destinations" title="本標題的永久連結">¶</a></h2>
+<span id="multiple-destinations"></span><h2>Logging to multiple destinations<a class="headerlink" href="#logging-to-multiple-destinations" title="Permalink to this heading">¶</a></h2>
 <p>Let's say you want to log to console and file with different message formats and
 in differing circumstances. Say you want to log messages with levels of DEBUG
 and higher to file, and those messages at level INFO and higher to the console.
@@ -465,7 +466,7 @@ are sent to both destinations.</p>
 combination of handlers you choose.</p>
 </section>
 <section id="configuration-server-example">
-<h2>Configuration server example<a class="headerlink" href="#configuration-server-example" title="本標題的永久連結">¶</a></h2>
+<h2>Configuration server example<a class="headerlink" href="#configuration-server-example" title="Permalink to this heading">¶</a></h2>
 <p>Here is an example of a module using the logging configuration server:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">logging.config</span>
@@ -520,7 +521,7 @@ configuration:</p>
 </div>
 </section>
 <section id="dealing-with-handlers-that-block">
-<h2>Dealing with handlers that block<a class="headerlink" href="#dealing-with-handlers-that-block" title="本標題的永久連結">¶</a></h2>
+<h2>Dealing with handlers that block<a class="headerlink" href="#dealing-with-handlers-that-block" title="Permalink to this heading">¶</a></h2>
 <p>Sometimes you have to get your logging handlers to do their work without
 blocking the thread you're logging from. This is common in web applications,
 though of course it also occurs in other scenarios.</p>
@@ -586,7 +587,7 @@ handler if it's appropriate to do so.</p>
 </div>
 </section>
 <section id="sending-and-receiving-logging-events-across-a-network">
-<span id="network-logging"></span><h2>Sending and receiving logging events across a network<a class="headerlink" href="#sending-and-receiving-logging-events-across-a-network" title="本標題的永久連結">¶</a></h2>
+<span id="network-logging"></span><h2>Sending and receiving logging events across a network<a class="headerlink" href="#sending-and-receiving-logging-events-across-a-network" title="Permalink to this heading">¶</a></h2>
 <p>Let's say you want to send logging events across a network, and handle them at
 the receiving end. A simple way of doing this is attaching a
 <a class="reference internal" href="../library/logging.handlers.html#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> instance to the root logger at the sending end:</p>
@@ -719,7 +720,7 @@ the <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 alternative there, as well as adapting the above script to use your alternative
 serialization.</p>
 <section id="running-a-logging-socket-listener-in-production">
-<h3>Running a logging socket listener in production<a class="headerlink" href="#running-a-logging-socket-listener-in-production" title="本標題的永久連結">¶</a></h3>
+<h3>Running a logging socket listener in production<a class="headerlink" href="#running-a-logging-socket-listener-in-production" title="Permalink to this heading">¶</a></h3>
 <p>To run a logging listener in production, you may need to use a process-management tool
 such as <a class="reference external" href="http://supervisord.org/">Supervisor</a>. <a class="reference external" href="https://gist.github.com/vsajip/4b227eeec43817465ca835ca66f75e2b">Here</a> is a Gist which
 provides the bare-bones files to run the above functionality using Supervisor: you
@@ -728,7 +729,7 @@ want to use.</p>
 </section>
 </section>
 <section id="adding-contextual-information-to-your-logging-output">
-<span id="context-info"></span><h2>Adding contextual information to your logging output<a class="headerlink" href="#adding-contextual-information-to-your-logging-output" title="本標題的永久連結">¶</a></h2>
+<span id="context-info"></span><h2>Adding contextual information to your logging output<a class="headerlink" href="#adding-contextual-information-to-your-logging-output" title="Permalink to this heading">¶</a></h2>
 <p>Sometimes you want logging output to contain contextual information in
 addition to the parameters passed to the logging call. For example, in a
 networked application, it may be desirable to log client-specific information
@@ -742,7 +743,7 @@ level of granularity you want to use in logging an application, it could
 be hard to manage if the number of <code class="xref py py-class docutils literal notranslate"><span class="pre">Logger</span></code> instances becomes
 effectively unbounded.</p>
 <section id="using-loggeradapters-to-impart-contextual-information">
-<h3>Using LoggerAdapters to impart contextual information<a class="headerlink" href="#using-loggeradapters-to-impart-contextual-information" title="本標題的永久連結">¶</a></h3>
+<h3>Using LoggerAdapters to impart contextual information<a class="headerlink" href="#using-loggeradapters-to-impart-contextual-information" title="Permalink to this heading">¶</a></h3>
 <p>An easy way in which you can pass contextual information to be output along
 with logging event information is to use the <code class="xref py py-class docutils literal notranslate"><span class="pre">LoggerAdapter</span></code> class.
 This class is designed to look like a <code class="xref py py-class docutils literal notranslate"><span class="pre">Logger</span></code>, so that you can call
@@ -798,7 +799,7 @@ you just need to subclass <code class="xref py py-class docutils literal notrans
 <p>Then any events that you log to the adapter will have the value of
 <code class="docutils literal notranslate"><span class="pre">some_conn_id</span></code> prepended to the log messages.</p>
 <section id="using-objects-other-than-dicts-to-pass-contextual-information">
-<h4>Using objects other than dicts to pass contextual information<a class="headerlink" href="#using-objects-other-than-dicts-to-pass-contextual-information" title="本標題的永久連結">¶</a></h4>
+<h4>Using objects other than dicts to pass contextual information<a class="headerlink" href="#using-objects-other-than-dicts-to-pass-contextual-information" title="Permalink to this heading">¶</a></h4>
 <p>You don't need to pass an actual dict to a <code class="xref py py-class docutils literal notranslate"><span class="pre">LoggerAdapter</span></code> - you could
 pass an instance of a class which implements <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code> and <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> so
 that it looks like a dict to logging. This would be useful if you want to
@@ -806,7 +807,7 @@ generate values dynamically (whereas the values in a dict would be constant).</p
 </section>
 </section>
 <section id="using-filters-to-impart-contextual-information">
-<span id="filters-contextual"></span><h3>Using Filters to impart contextual information<a class="headerlink" href="#using-filters-to-impart-contextual-information" title="本標題的永久連結">¶</a></h3>
+<span id="filters-contextual"></span><h3>Using Filters to impart contextual information<a class="headerlink" href="#using-filters-to-impart-contextual-information" title="Permalink to this heading">¶</a></h3>
 <p>You can also add contextual information to log output using a user-defined
 <code class="xref py py-class docutils literal notranslate"><span class="pre">Filter</span></code>. <code class="docutils literal notranslate"><span class="pre">Filter</span></code> instances are allowed to modify the <code class="docutils literal notranslate"><span class="pre">LogRecords</span></code>
 passed to them, including adding additional attributes which can then be output
@@ -875,7 +876,7 @@ script:</p>
 </section>
 </section>
 <section id="logging-to-a-single-file-from-multiple-processes">
-<span id="multiple-processes"></span><h2>Logging to a single file from multiple processes<a class="headerlink" href="#logging-to-a-single-file-from-multiple-processes" title="本標題的永久連結">¶</a></h2>
+<span id="multiple-processes"></span><h2>Logging to a single file from multiple processes<a class="headerlink" href="#logging-to-a-single-file-from-multiple-processes" title="Permalink to this heading">¶</a></h2>
 <p>Although logging is thread-safe, and logging to a single file from multiple
 threads in a single process <em>is</em> supported, logging to a single file from
 <em>multiple processes</em> is <em>not</em> supported, because there is no standard way to
@@ -1112,7 +1113,7 @@ separate thread:</p>
 machinery in the main process (even though the logging events are generated in
 the worker processes) to direct the messages to the appropriate destinations.</p>
 <section id="using-concurrent-futures-processpoolexecutor">
-<h3>Using concurrent.futures.ProcessPoolExecutor<a class="headerlink" href="#using-concurrent-futures-processpoolexecutor" title="本標題的永久連結">¶</a></h3>
+<h3>Using concurrent.futures.ProcessPoolExecutor<a class="headerlink" href="#using-concurrent-futures-processpoolexecutor" title="Permalink to this heading">¶</a></h3>
 <p>If you want to use <a class="reference internal" href="../library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor" title="concurrent.futures.ProcessPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">concurrent.futures.ProcessPoolExecutor</span></code></a> to start
 your worker processes, you need to create the queue slightly differently.
 Instead of</p>
@@ -1142,7 +1143,7 @@ Instead of</p>
 </div>
 </section>
 <section id="deploying-web-applications-using-gunicorn-and-uwsgi">
-<h3>Deploying Web applications using Gunicorn and uWSGI<a class="headerlink" href="#deploying-web-applications-using-gunicorn-and-uwsgi" title="本標題的永久連結">¶</a></h3>
+<h3>Deploying Web applications using Gunicorn and uWSGI<a class="headerlink" href="#deploying-web-applications-using-gunicorn-and-uwsgi" title="Permalink to this heading">¶</a></h3>
 <p>When deploying Web applications using <a class="reference external" href="https://gunicorn.org/">Gunicorn</a> or <a class="reference external" href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a> (or similar), multiple worker
 processes are created to handle client requests. In such environments, avoid creating
 file-based handlers directly in your web application. Instead, use a
@@ -1152,7 +1153,7 @@ process. This can be set up using a process management tool such as Supervisor -
 </section>
 </section>
 <section id="using-file-rotation">
-<h2>Using file rotation<a class="headerlink" href="#using-file-rotation" title="本標題的永久連結">¶</a></h2>
+<h2>Using file rotation<a class="headerlink" href="#using-file-rotation" title="Permalink to this heading">¶</a></h2>
 <p>Sometimes you want to let a log file grow to a certain size, then open a new
 file and log to that. You may want to keep a certain number of these files, and
 when that many files have been created, rotate the files so that the number of
@@ -1203,7 +1204,7 @@ and each time it reaches the size limit it is renamed with the suffix
 example.  You would want to set <em>maxBytes</em> to an appropriate value.</p>
 </section>
 <section id="use-of-alternative-formatting-styles">
-<span id="format-styles"></span><h2>Use of alternative formatting styles<a class="headerlink" href="#use-of-alternative-formatting-styles" title="本標題的永久連結">¶</a></h2>
+<span id="format-styles"></span><h2>Use of alternative formatting styles<a class="headerlink" href="#use-of-alternative-formatting-styles" title="Permalink to this heading">¶</a></h2>
 <p>When logging was added to the Python standard library, the only way of
 formatting messages with variable content was to use the %-formatting
 method. Since then, Python has gained two new formatting approaches:
@@ -1357,7 +1358,7 @@ to the above, as in the following example:</p>
 Python 3.2 or later.</p>
 </section>
 <section id="customizing-logrecord">
-<span id="custom-logrecord"></span><h2>Customizing <code class="docutils literal notranslate"><span class="pre">LogRecord</span></code><a class="headerlink" href="#customizing-logrecord" title="本標題的永久連結">¶</a></h2>
+<span id="custom-logrecord"></span><h2>Customizing <code class="docutils literal notranslate"><span class="pre">LogRecord</span></code><a class="headerlink" href="#customizing-logrecord" title="Permalink to this heading">¶</a></h2>
 <p>Every logging event is represented by a <a class="reference internal" href="../library/logging.html#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> instance.
 When an event is logged and not filtered out by a logger's level, a
 <a class="reference internal" href="../library/logging.html#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> is created, populated with information about the event and
@@ -1428,7 +1429,7 @@ overhead to all logging operations, and the technique should only be used when
 the use of a <a class="reference internal" href="../library/logging.html#logging.Filter" title="logging.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Filter</span></code></a> does not provide the desired result.</p>
 </section>
 <section id="subclassing-queuehandler-a-zeromq-example">
-<span id="zeromq-handlers"></span><h2>Subclassing QueueHandler - a ZeroMQ example<a class="headerlink" href="#subclassing-queuehandler-a-zeromq-example" title="本標題的永久連結">¶</a></h2>
+<span id="zeromq-handlers"></span><h2>Subclassing QueueHandler - a ZeroMQ example<a class="headerlink" href="#subclassing-queuehandler-a-zeromq-example" title="Permalink to this heading">¶</a></h2>
 <p>You can use a <code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code> subclass to send messages to other kinds
 of queues, for example a ZeroMQ 'publish' socket. In the example below,the
 socket is created separately and passed to the handler (as its 'queue'):</p>
@@ -1465,7 +1466,7 @@ data needed by the handler to create the socket:</p>
 </div>
 </section>
 <section id="subclassing-queuelistener-a-zeromq-example">
-<h2>Subclassing QueueListener - a ZeroMQ example<a class="headerlink" href="#subclassing-queuelistener-a-zeromq-example" title="本標題的永久連結">¶</a></h2>
+<h2>Subclassing QueueListener - a ZeroMQ example<a class="headerlink" href="#subclassing-queuelistener-a-zeromq-example" title="Permalink to this heading">¶</a></h2>
 <p>You can also subclass <code class="xref py py-class docutils literal notranslate"><span class="pre">QueueListener</span></code> to get messages from other kinds
 of queues, for example a ZeroMQ 'subscribe' socket. Here's an example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ZeroMQSocketListener</span><span class="p">(</span><span class="n">QueueListener</span><span class="p">):</span>
@@ -1496,7 +1497,7 @@ of queues, for example a ZeroMQ 'subscribe' socket. Here's an example:</p>
 </div>
 </section>
 <section id="an-example-dictionary-based-configuration">
-<h2>An example dictionary-based configuration<a class="headerlink" href="#an-example-dictionary-based-configuration" title="本標題的永久連結">¶</a></h2>
+<h2>An example dictionary-based configuration<a class="headerlink" href="#an-example-dictionary-based-configuration" title="Permalink to this heading">¶</a></h2>
 <p>Below is an example of a logging configuration dictionary - it's taken from
 the <a class="reference external" href="https://docs.djangoproject.com/en/stable/topics/logging/#configuring-logging">documentation on the Django project</a>.
 This dictionary is passed to <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> to put the configuration into effect:</p>
@@ -1558,7 +1559,7 @@ section</a>
 of the Django documentation.</p>
 </section>
 <section id="using-a-rotator-and-namer-to-customize-log-rotation-processing">
-<span id="cookbook-rotator-namer"></span><h2>Using a rotator and namer to customize log rotation processing<a class="headerlink" href="#using-a-rotator-and-namer-to-customize-log-rotation-processing" title="本標題的永久連結">¶</a></h2>
+<span id="cookbook-rotator-namer"></span><h2>Using a rotator and namer to customize log rotation processing<a class="headerlink" href="#using-a-rotator-and-namer-to-customize-log-rotation-processing" title="Permalink to this heading">¶</a></h2>
 <p>An example of how you can define a namer and rotator is given in the following
 snippet, which shows zlib-based compression of the log file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">namer</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
@@ -1582,7 +1583,7 @@ snippet, which shows zlib-based compression of the log file:</p>
 for illustration purposes.</p>
 </section>
 <section id="a-more-elaborate-multiprocessing-example">
-<h2>A more elaborate multiprocessing example<a class="headerlink" href="#a-more-elaborate-multiprocessing-example" title="本標題的永久連結">¶</a></h2>
+<h2>A more elaborate multiprocessing example<a class="headerlink" href="#a-more-elaborate-multiprocessing-example" title="Permalink to this heading">¶</a></h2>
 <p>The following working example shows how logging can be used with multiprocessing
 using configuration files. The configurations are fairly simple, but serve to
 illustrate how more complex ones could be implemented in a real multiprocessing
@@ -1808,7 +1809,7 @@ works:</p>
 </div>
 </section>
 <section id="inserting-a-bom-into-messages-sent-to-a-sysloghandler">
-<h2>Inserting a BOM into messages sent to a SysLogHandler<a class="headerlink" href="#inserting-a-bom-into-messages-sent-to-a-sysloghandler" title="本標題的永久連結">¶</a></h2>
+<h2>Inserting a BOM into messages sent to a SysLogHandler<a class="headerlink" href="#inserting-a-bom-into-messages-sent-to-a-sysloghandler" title="Permalink to this heading">¶</a></h2>
 <p><span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc5424.html"><strong>RFC 5424</strong></a> requires that a
 Unicode message be sent to a syslog daemon as a set of bytes which have the
 following structure: an optional pure-ASCII component, followed by a UTF-8 Byte
@@ -1847,7 +1848,7 @@ range, that's fine -- it will be encoded using UTF-8.</p></li>
 messages will not be RFC 5424-compliant, and your syslog daemon may complain.</p>
 </section>
 <section id="implementing-structured-logging">
-<h2>Implementing structured logging<a class="headerlink" href="#implementing-structured-logging" title="本標題的永久連結">¶</a></h2>
+<h2>Implementing structured logging<a class="headerlink" href="#implementing-structured-logging" title="Permalink to this heading">¶</a></h2>
 <p>Although most logging messages are intended for reading by humans, and thus not
 readily machine-parseable, there might be circumstances where you want to output
 messages in a structured format which <em>is</em> capable of being parsed by a program
@@ -1926,7 +1927,7 @@ as in the following complete example:</p>
 Python used.</p>
 </section>
 <section id="customizing-handlers-with-dictconfig">
-<span id="custom-handlers"></span><h2>Customizing handlers with <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a><a class="headerlink" href="#customizing-handlers-with-dictconfig" title="本標題的永久連結">¶</a></h2>
+<span id="custom-handlers"></span><h2>Customizing handlers with <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a><a class="headerlink" href="#customizing-handlers-with-dictconfig" title="Permalink to this heading">¶</a></h2>
 <p>There are times when you want to customize logging handlers in particular ways,
 and if you use <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> you may be able to do this without
 subclassing. As an example, consider that you may want to set the ownership of a
@@ -2055,7 +2056,7 @@ same way, using <a class="reference internal" href="../library/os.html#os.chmod"
 or a different type of handler altogether.</p>
 </section>
 <section id="using-particular-formatting-styles-throughout-your-application">
-<span id="formatting-styles"></span><h2>Using particular formatting styles throughout your application<a class="headerlink" href="#using-particular-formatting-styles-throughout-your-application" title="本標題的永久連結">¶</a></h2>
+<span id="formatting-styles"></span><h2>Using particular formatting styles throughout your application<a class="headerlink" href="#using-particular-formatting-styles-throughout-your-application" title="Permalink to this heading">¶</a></h2>
 <p>In Python 3.2, the <a class="reference internal" href="../library/logging.html#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> gained a <code class="docutils literal notranslate"><span class="pre">style</span></code> keyword
 parameter which, while defaulting to <code class="docutils literal notranslate"><span class="pre">%</span></code> for backward compatibility, allowed
 the specification of <code class="docutils literal notranslate"><span class="pre">{</span></code> or <code class="docutils literal notranslate"><span class="pre">$</span></code> to support the formatting approaches
@@ -2081,7 +2082,7 @@ code, decisions about formatting need to be made at the level of the
 individual logging call. This opens up a couple of ways in which alternative
 formatting styles can be accommodated.</p>
 <section id="using-logrecord-factories">
-<h3>Using LogRecord factories<a class="headerlink" href="#using-logrecord-factories" title="本標題的永久連結">¶</a></h3>
+<h3>Using LogRecord factories<a class="headerlink" href="#using-logrecord-factories" title="Permalink to this heading">¶</a></h3>
 <p>In Python 3.2, along with the <a class="reference internal" href="../library/logging.html#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> changes mentioned
 above, the logging package gained the ability to allow users to set their own
 <a class="reference internal" href="../library/logging.html#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> subclasses, using the <a class="reference internal" href="../library/logging.html#logging.setLogRecordFactory" title="logging.setLogRecordFactory"><code class="xref py py-func docutils literal notranslate"><span class="pre">setLogRecordFactory()</span></code></a> function.
@@ -2096,7 +2097,7 @@ taken to call <code class="docutils literal notranslate"><span class="pre">str(s
 <a class="reference internal" href="../library/logging.html#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> for more information.</p>
 </section>
 <section id="using-custom-message-objects">
-<h3>Using custom message objects<a class="headerlink" href="#using-custom-message-objects" title="本標題的永久連結">¶</a></h3>
+<h3>Using custom message objects<a class="headerlink" href="#using-custom-message-objects" title="Permalink to this heading">¶</a></h3>
 <p>There is another, perhaps simpler way that you can use {}- and $- formatting to
 construct your individual log messages. You may recall (from
 <a class="reference internal" href="logging.html#arbitrary-object-messages"><span class="std std-ref">Using arbitrary objects as messages</span></a>) that when logging you can use an arbitrary
@@ -2160,7 +2161,7 @@ call to one of the <code class="docutils literal notranslate"><span class="pre">
 </section>
 </section>
 <section id="configuring-filters-with-dictconfig">
-<span id="filters-dictconfig"></span><h2>Configuring filters with <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a><a class="headerlink" href="#configuring-filters-with-dictconfig" title="本標題的永久連結">¶</a></h2>
+<span id="filters-dictconfig"></span><h2>Configuring filters with <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a><a class="headerlink" href="#configuring-filters-with-dictconfig" title="Permalink to this heading">¶</a></h2>
 <p>You <em>can</em> configure filters using <a class="reference internal" href="../library/logging.config.html#logging.config.dictConfig" title="logging.config.dictConfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a>, though it
 might not be obvious at first glance how to do it (hence this recipe). Since
 <a class="reference internal" href="../library/logging.html#logging.Filter" title="logging.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Filter</span></code></a> is the only filter class included in the standard
@@ -2236,7 +2237,7 @@ configuration, and see the other cookbook recipe <a class="reference internal" h
 </ul>
 </section>
 <section id="customized-exception-formatting">
-<span id="custom-format-exception"></span><h2>Customized exception formatting<a class="headerlink" href="#customized-exception-formatting" title="本標題的永久連結">¶</a></h2>
+<span id="custom-format-exception"></span><h2>Customized exception formatting<a class="headerlink" href="#customized-exception-formatting" title="Permalink to this heading">¶</a></h2>
 <p>There might be times when you want to do customized exception formatting - for
 argument's sake, let's say you want exactly one line per logged event, even
 when exception information is present. You can do this with a custom formatter
@@ -2288,7 +2289,7 @@ information can be formatted to your liking. The <a class="reference internal" h
 helpful for more specialized needs.</p>
 </section>
 <section id="speaking-logging-messages">
-<span id="spoken-messages"></span><h2>Speaking logging messages<a class="headerlink" href="#speaking-logging-messages" title="本標題的永久連結">¶</a></h2>
+<span id="spoken-messages"></span><h2>Speaking logging messages<a class="headerlink" href="#speaking-logging-messages" title="Permalink to this heading">¶</a></h2>
 <p>There might be situations when it is desirable to have logging messages rendered
 in an audible rather than a visible format. This is easy to do if you have
 text-to-speech (TTS) functionality available in your system, even if it doesn't have
@@ -2337,7 +2338,7 @@ other systems altogether which can process messages via external programs run
 from a command line.</p>
 </section>
 <section id="buffering-logging-messages-and-outputting-them-conditionally">
-<span id="buffered-logging"></span><h2>Buffering logging messages and outputting them conditionally<a class="headerlink" href="#buffering-logging-messages-and-outputting-them-conditionally" title="本標題的永久連結">¶</a></h2>
+<span id="buffered-logging"></span><h2>Buffering logging messages and outputting them conditionally<a class="headerlink" href="#buffering-logging-messages-and-outputting-them-conditionally" title="Permalink to this heading">¶</a></h2>
 <p>There might be situations where you want to log messages in a temporary area
 and only output them if a certain condition occurs. For example, you may want to
 start logging debug events in a function, and if the function completes without
@@ -2467,7 +2468,7 @@ severities are also logged.</p>
 </div>
 </section>
 <section id="formatting-times-using-utc-gmt-via-configuration">
-<span id="utc-formatting"></span><h2>Formatting times using UTC (GMT) via configuration<a class="headerlink" href="#formatting-times-using-utc-gmt-via-configuration" title="本標題的永久連結">¶</a></h2>
+<span id="utc-formatting"></span><h2>Formatting times using UTC (GMT) via configuration<a class="headerlink" href="#formatting-times-using-utc-gmt-via-configuration" title="Permalink to this heading">¶</a></h2>
 <p>Sometimes you want to format times using UTC, which can be done using a class
 such as <cite>UTCFormatter</cite>, shown below:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
@@ -2529,7 +2530,7 @@ the following complete example:</p>
 handler.</p>
 </section>
 <section id="using-a-context-manager-for-selective-logging">
-<span id="context-manager"></span><h2>Using a context manager for selective logging<a class="headerlink" href="#using-a-context-manager-for-selective-logging" title="本標題的永久連結">¶</a></h2>
+<span id="context-manager"></span><h2>Using a context manager for selective logging<a class="headerlink" href="#using-a-context-manager-for-selective-logging" title="Permalink to this heading">¶</a></h2>
 <p>There are times when it would be useful to temporarily change the logging
 configuration and revert it back after doing something. For this, a context
 manager is the most obvious way of saving and restoring the logging context.
@@ -2624,7 +2625,7 @@ logging filters temporarily. Note that the above code works in Python 2 as well
 as Python 3.</p>
 </section>
 <section id="a-cli-application-starter-template">
-<span id="starter-template"></span><h2>A CLI application starter template<a class="headerlink" href="#a-cli-application-starter-template" title="本標題的永久連結">¶</a></h2>
+<span id="starter-template"></span><h2>A CLI application starter template<a class="headerlink" href="#a-cli-application-starter-template" title="Permalink to this heading">¶</a></h2>
 <p>Here's an example which shows how you can:</p>
 <ul class="simple">
 <li><p>Use a logging level based on command-line arguments</p></li>
@@ -2774,7 +2775,7 @@ log. For example, if we want more information:</p>
 at <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> level or above is logged by them.</p>
 </section>
 <section id="a-qt-gui-for-logging">
-<span id="qt-gui"></span><h2>A Qt GUI for logging<a class="headerlink" href="#a-qt-gui-for-logging" title="本標題的永久連結">¶</a></h2>
+<span id="qt-gui"></span><h2>A Qt GUI for logging<a class="headerlink" href="#a-qt-gui-for-logging" title="Permalink to this heading">¶</a></h2>
 <p>A question that comes up from time to time is about how to log to a GUI
 application. The <a class="reference external" href="https://www.qt.io/">Qt</a> framework is a popular
 cross-platform UI framework with Python bindings using <a class="reference external" href="https://pypi.org/project/PySide2/">PySide2</a> or <a class="reference external" href="https://pypi.org/project/PyQt5/">PyQt5</a> libraries.</p>
@@ -3000,13 +3001,13 @@ refer to the comments in the code snippet for more detailed information.</p>
 </div>
 </section>
 <section id="patterns-to-avoid">
-<h2>Patterns to avoid<a class="headerlink" href="#patterns-to-avoid" title="本標題的永久連結">¶</a></h2>
+<h2>Patterns to avoid<a class="headerlink" href="#patterns-to-avoid" title="Permalink to this heading">¶</a></h2>
 <p>Although the preceding sections have described ways of doing things you might
 need to do or deal with, it is worth mentioning some usage patterns which are
 <em>unhelpful</em>, and which should therefore be avoided in most cases. The following
 sections are in no particular order.</p>
 <section id="opening-the-same-log-file-multiple-times">
-<h3>Opening the same log file multiple times<a class="headerlink" href="#opening-the-same-log-file-multiple-times" title="本標題的永久連結">¶</a></h3>
+<h3>Opening the same log file multiple times<a class="headerlink" href="#opening-the-same-log-file-multiple-times" title="Permalink to this heading">¶</a></h3>
 <p>On Windows, you will generally not be able to open the same file multiple times
 as this will lead to a &quot;file is in use by another process&quot; error. However, on
 POSIX platforms you'll not get any errors if you open the same file multiple
@@ -3037,7 +3038,7 @@ lost altogether.</p></li>
 issues.</p>
 </section>
 <section id="using-loggers-as-attributes-in-a-class-or-passing-them-as-parameters">
-<h3>Using loggers as attributes in a class or passing them as parameters<a class="headerlink" href="#using-loggers-as-attributes-in-a-class-or-passing-them-as-parameters" title="本標題的永久連結">¶</a></h3>
+<h3>Using loggers as attributes in a class or passing them as parameters<a class="headerlink" href="#using-loggers-as-attributes-in-a-class-or-passing-them-as-parameters" title="Permalink to this heading">¶</a></h3>
 <p>While there might be unusual cases where you'll need to do this, in general
 there is no point because loggers are singletons. Code can always access a
 given logger instance by name using <code class="docutils literal notranslate"><span class="pre">logging.getLogger(name)</span></code>, so passing
@@ -3047,14 +3048,14 @@ attributes. However, this pattern doesn't make sense in Python, where the
 module (and not the class) is the unit of software decomposition.</p>
 </section>
 <section id="adding-handlers-other-than-nullhandler-to-a-logger-in-a-library">
-<h3>Adding handlers other than <code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code> to a logger in a library<a class="headerlink" href="#adding-handlers-other-than-nullhandler-to-a-logger-in-a-library" title="本標題的永久連結">¶</a></h3>
+<h3>Adding handlers other than <code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code> to a logger in a library<a class="headerlink" href="#adding-handlers-other-than-nullhandler-to-a-logger-in-a-library" title="Permalink to this heading">¶</a></h3>
 <p>Configuring logging by adding handlers, formatters and filters is the
 responsibility of the application developer, not the library developer. If you
 are maintaining a library, ensure that you don't add handlers to any of your
 loggers other than a <a class="reference internal" href="../library/logging.handlers.html#logging.NullHandler" title="logging.NullHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullHandler</span></code></a> instance.</p>
 </section>
 <section id="creating-a-lot-of-loggers">
-<h3>Creating a lot of loggers<a class="headerlink" href="#creating-a-lot-of-loggers" title="本標題的永久連結">¶</a></h3>
+<h3>Creating a lot of loggers<a class="headerlink" href="#creating-a-lot-of-loggers" title="Permalink to this heading">¶</a></h3>
 <p>Loggers are singletons that are never freed during a script execution, and so
 creating lots of loggers will use up memory which can't then be freed. Rather
 than create a logger per e.g. file processed or network connection made, use
@@ -3158,6 +3159,10 @@ more fine-grained than that).</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -3223,11 +3228,11 @@ more fine-grained than that).</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

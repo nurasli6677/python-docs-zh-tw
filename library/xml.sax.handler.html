@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>xml.sax.handler --- Base classes for SAX handlers &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -165,7 +166,7 @@
           <div class="body" role="main">
             
   <section id="module-xml.sax.handler">
-<span id="xml-sax-handler-base-classes-for-sax-handlers"></span><h1><a class="reference internal" href="#module-xml.sax.handler" title="xml.sax.handler: Base classes for SAX event handlers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.sax.handler</span></code></a> --- Base classes for SAX handlers<a class="headerlink" href="#module-xml.sax.handler" title="本標題的永久連結">¶</a></h1>
+<span id="xml-sax-handler-base-classes-for-sax-handlers"></span><h1><a class="reference internal" href="#module-xml.sax.handler" title="xml.sax.handler: Base classes for SAX event handlers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.sax.handler</span></code></a> --- Base classes for SAX handlers<a class="headerlink" href="#module-xml.sax.handler" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/xml/sax/handler.py">Lib/xml/sax/handler.py</a></p>
 <hr class="docutils" />
 <p>The SAX API defines five kinds of handlers: content handlers, DTD handlers,
@@ -349,7 +350,7 @@ current event.</div>
 </dd></dl>
 
 <section id="contenthandler-objects">
-<span id="content-handler-objects"></span><h2>ContentHandler 物件<a class="headerlink" href="#contenthandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="content-handler-objects"></span><h2>ContentHandler 物件<a class="headerlink" href="#contenthandler-objects" title="Permalink to this heading">¶</a></h2>
 <p>Users are expected to subclass <a class="reference internal" href="#xml.sax.handler.ContentHandler" title="xml.sax.handler.ContentHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContentHandler</span></code></a> to support their
 application.  The following methods are called by the parser on the appropriate
 events in the input document:</p>
@@ -528,7 +529,7 @@ may skip external entities, depending on the values of the
 
 </section>
 <section id="dtdhandler-objects">
-<span id="dtd-handler-objects"></span><h2>DTDHandler 物件<a class="headerlink" href="#dtdhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="dtd-handler-objects"></span><h2>DTDHandler 物件<a class="headerlink" href="#dtdhandler-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#xml.sax.handler.DTDHandler" title="xml.sax.handler.DTDHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTDHandler</span></code></a> instances provide the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.sax.handler.DTDHandler.notationDecl">
@@ -544,7 +545,7 @@ may skip external entities, depending on the values of the
 
 </section>
 <section id="entityresolver-objects">
-<span id="entity-resolver-objects"></span><h2>EntityResolver 物件<a class="headerlink" href="#entityresolver-objects" title="本標題的永久連結">¶</a></h2>
+<span id="entity-resolver-objects"></span><h2>EntityResolver 物件<a class="headerlink" href="#entityresolver-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.sax.handler.EntityResolver.resolveEntity">
 <span class="sig-prename descclassname"><span class="pre">EntityResolver.</span></span><span class="sig-name descname"><span class="pre">resolveEntity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">publicId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">systemId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.sax.handler.EntityResolver.resolveEntity" title="本定義的永久連結">¶</a></dt>
@@ -555,7 +556,7 @@ implementation returns <em>systemId</em>.</p>
 
 </section>
 <section id="errorhandler-objects">
-<span id="sax-error-handler"></span><h2>ErrorHandler 物件<a class="headerlink" href="#errorhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="sax-error-handler"></span><h2>ErrorHandler 物件<a class="headerlink" href="#errorhandler-objects" title="Permalink to this heading">¶</a></h2>
 <p>Objects with this interface are used to receive error and warning information
 from the <a class="reference internal" href="xml.sax.reader.html#xml.sax.xmlreader.XMLReader" title="xml.sax.xmlreader.XMLReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLReader</span></code></a>.  If you create an object that
 implements this interface, then register the object with your
@@ -592,7 +593,7 @@ in this method will cause parsing to end.</p>
 
 </section>
 <section id="lexicalhandler-objects">
-<span id="lexical-handler-objects"></span><h2>LexicalHandler 物件<a class="headerlink" href="#lexicalhandler-objects" title="本標題的永久連結">¶</a></h2>
+<span id="lexical-handler-objects"></span><h2>LexicalHandler 物件<a class="headerlink" href="#lexicalhandler-objects" title="Permalink to this heading">¶</a></h2>
 <p>Optional SAX2 handler for lexical events.</p>
 <p>This handler is used to obtain lexical information about an XML
 document. Lexical information includes information describing the
@@ -682,6 +683,10 @@ the characters handler.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -748,11 +753,11 @@ the characters handler.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

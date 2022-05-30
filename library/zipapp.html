@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>zipapp --- Manage executable Python zip archives &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -171,7 +172,7 @@
           <div class="body" role="main">
             
   <section id="module-zipapp">
-<span id="zipapp-manage-executable-python-zip-archives"></span><h1><a class="reference internal" href="#module-zipapp" title="zipapp: Manage executable Python zip archives"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code></a> --- Manage executable Python zip archives<a class="headerlink" href="#module-zipapp" title="本標題的永久連結">¶</a></h1>
+<span id="zipapp-manage-executable-python-zip-archives"></span><h1><a class="reference internal" href="#module-zipapp" title="zipapp: Manage executable Python zip archives"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code></a> --- Manage executable Python zip archives<a class="headerlink" href="#module-zipapp" title="Permalink to this heading">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
 </div>
@@ -181,7 +182,7 @@
 Python code, which can be  <a class="reference internal" href="../using/cmdline.html#using-on-interface-options"><span class="std std-ref">executed directly by the Python interpreter</span></a>.  The module provides both a
 <a class="reference internal" href="#zipapp-command-line-interface"><span class="std std-ref">命令執行列介面</span></a> and a <a class="reference internal" href="#zipapp-python-api"><span class="std std-ref">Python API</span></a>.</p>
 <section id="basic-example">
-<h2>基本範例<a class="headerlink" href="#basic-example" title="本標題的永久連結">¶</a></h2>
+<h2>基本範例<a class="headerlink" href="#basic-example" title="Permalink to this heading">¶</a></h2>
 <p>The following example shows how the <a class="reference internal" href="#zipapp-command-line-interface"><span class="std std-ref">命令執行列介面</span></a>
 can be used to create an executable archive from a directory containing
 Python code.  When run, the archive will execute the <code class="docutils literal notranslate"><span class="pre">main</span></code> function from
@@ -193,7 +194,7 @@ the module <code class="docutils literal notranslate"><span class="pre">myapp</s
 </div>
 </section>
 <section id="command-line-interface">
-<span id="zipapp-command-line-interface"></span><h2>命令執行列介面<a class="headerlink" href="#command-line-interface" title="本標題的永久連結">¶</a></h2>
+<span id="zipapp-command-line-interface"></span><h2>命令執行列介面<a class="headerlink" href="#command-line-interface" title="Permalink to this heading">¶</a></h2>
 <p>When called as a program from the command line, the following form is used:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m zipapp <span class="nb">source</span> <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
@@ -259,7 +260,7 @@ directory.</p>
 
 </section>
 <section id="python-api">
-<span id="zipapp-python-api"></span><h2>Python API<a class="headerlink" href="#python-api" title="本標題的永久連結">¶</a></h2>
+<span id="zipapp-python-api"></span><h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading">¶</a></h2>
 <p>The module defines two convenience functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="zipapp.create_archive">
@@ -336,7 +337,7 @@ for reading in bytes mode.  It is assumed to be at the start of the archive.</p>
 
 </section>
 <section id="examples">
-<span id="zipapp-examples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="zipapp-examples"></span><h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>Pack up a directory into an archive, and run it.</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m zipapp myapp
 <span class="gp">$ </span>python myapp.pyz
@@ -377,7 +378,7 @@ fits in memory:</p>
 </div>
 </section>
 <section id="specifying-the-interpreter">
-<span id="zipapp-specifying-the-interpreter"></span><h2>Specifying the Interpreter<a class="headerlink" href="#specifying-the-interpreter" title="本標題的永久連結">¶</a></h2>
+<span id="zipapp-specifying-the-interpreter"></span><h2>Specifying the Interpreter<a class="headerlink" href="#specifying-the-interpreter" title="Permalink to this heading">¶</a></h2>
 <p>Note that if you specify an interpreter and then distribute your application
 archive, you need to ensure that the interpreter used is portable.  The Python
 launcher for Windows supports most common forms of POSIX <code class="docutils literal notranslate"><span class="pre">#!</span></code> line, but there
@@ -398,7 +399,7 @@ shebang line for users of Python 3.5, for example.</p></li>
 depending on whether your code is written for Python 2 or 3.</p>
 </section>
 <section id="creating-standalone-applications-with-zipapp">
-<h2>Creating Standalone Applications with zipapp<a class="headerlink" href="#creating-standalone-applications-with-zipapp" title="本標題的永久連結">¶</a></h2>
+<h2>Creating Standalone Applications with zipapp<a class="headerlink" href="#creating-standalone-applications-with-zipapp" title="Permalink to this heading">¶</a></h2>
 <p>Using the <a class="reference internal" href="#module-zipapp" title="zipapp: Manage executable Python zip archives"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code></a> module, it is possible to create self-contained Python
 programs, which can be distributed to end users who only need to have a
 suitable version of Python installed on their system.  The key to doing this
@@ -437,7 +438,7 @@ Windows, the <code class="docutils literal notranslate"><span class="pre">myapp.
 the Python interpreter registers the <code class="docutils literal notranslate"><span class="pre">.pyz</span></code> and <code class="docutils literal notranslate"><span class="pre">.pyzw</span></code> file extensions
 when installed.</p>
 <section id="making-a-windows-executable">
-<h3>Making a Windows executable<a class="headerlink" href="#making-a-windows-executable" title="本標題的永久連結">¶</a></h3>
+<h3>Making a Windows executable<a class="headerlink" href="#making-a-windows-executable" title="Permalink to this heading">¶</a></h3>
 <p>On Windows, registration of the <code class="docutils literal notranslate"><span class="pre">.pyz</span></code> extension is optional, and
 furthermore, there are certain places that don't recognise registered
 extensions &quot;transparently&quot; (the simplest example is that
@@ -511,7 +512,7 @@ application appended, bundled with the Python &quot;embedded&quot; distribution.
 will run on any PC with the appropriate architecture (32 bit or 64 bit).</p>
 </section>
 <section id="caveats">
-<h3>Caveats<a class="headerlink" href="#caveats" title="本標題的永久連結">¶</a></h3>
+<h3>Caveats<a class="headerlink" href="#caveats" title="Permalink to this heading">¶</a></h3>
 <p>There are some limitations to the process of bundling your application into
 a single file.  In most, if not all, cases they can be addressed without
 needing major changes to your application.</p>
@@ -540,7 +541,7 @@ standard Python interpreter.</p></li>
 </section>
 </section>
 <section id="the-python-zip-application-archive-format">
-<h2>The Python Zip Application Archive Format<a class="headerlink" href="#the-python-zip-application-archive-format" title="本標題的永久連結">¶</a></h2>
+<h2>The Python Zip Application Archive Format<a class="headerlink" href="#the-python-zip-application-archive-format" title="Permalink to this heading">¶</a></h2>
 <p>Python has been able to execute zip files which contain a <code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> file
 since version 2.6.  In order to be executed by Python, an application archive
 simply has to be a standard zip file containing a <code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> file which
@@ -619,6 +620,10 @@ format created by any means are acceptable to Python.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -685,11 +690,11 @@ format created by any means are acceptable to Python.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

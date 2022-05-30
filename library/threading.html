@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>threading --- Thread-based parallelism &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -173,7 +174,7 @@
           <div class="body" role="main">
             
   <section id="module-threading">
-<span id="threading-thread-based-parallelism"></span><h1><a class="reference internal" href="#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> --- Thread-based parallelism<a class="headerlink" href="#module-threading" title="本標題的永久連結">¶</a></h1>
+<span id="threading-thread-based-parallelism"></span><h1><a class="reference internal" href="#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> --- Thread-based parallelism<a class="headerlink" href="#module-threading" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/threading.py">Lib/threading.py</a></p>
 <hr class="docutils" />
 <p>This module constructs higher-level threading interfaces on top of the lower
@@ -384,7 +385,7 @@ suspended, resumed, or interrupted.  The static methods of Java's Thread class,
 when implemented, are mapped to module-level functions.</p>
 <p>All of the methods described below are executed atomically.</p>
 <section id="thread-local-data">
-<h2>Thread-Local Data<a class="headerlink" href="#thread-local-data" title="本標題的永久連結">¶</a></h2>
+<h2>Thread-Local Data<a class="headerlink" href="#thread-local-data" title="Permalink to this heading">¶</a></h2>
 <p>Thread-local data is data whose values are thread specific.  To manage
 thread-local data, just create an instance of <a class="reference internal" href="#threading.local" title="threading.local"><code class="xref py py-class docutils literal notranslate"><span class="pre">local</span></code></a> (or a
 subclass) and store attributes on it:</p>
@@ -403,7 +404,7 @@ subclass) and store attributes on it:</p>
 
 </section>
 <section id="thread-objects">
-<span id="id1"></span><h2>Thread Objects<a class="headerlink" href="#thread-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Thread Objects<a class="headerlink" href="#thread-objects" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#threading.Thread" title="threading.Thread"><code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></a> class represents an activity that is run in a separate
 thread of control.  There are two ways to specify the activity: by passing a
 callable object to the constructor, or by overriding the <a class="reference internal" href="#threading.Thread.run" title="threading.Thread.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>
@@ -604,7 +605,7 @@ property instead.</p>
 
 </section>
 <section id="lock-objects">
-<span id="id2"></span><h2>Lock Objects<a class="headerlink" href="#lock-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Lock Objects<a class="headerlink" href="#lock-objects" title="Permalink to this heading">¶</a></h2>
 <p>A primitive lock is a synchronization primitive that is not owned by a
 particular thread when locked.  In Python, it is currently the lowest level
 synchronization primitive available, implemented directly by the <a class="reference internal" href="_thread.html#module-_thread" title="_thread: Low-level threading API."><code class="xref py py-mod docutils literal notranslate"><span class="pre">_thread</span></code></a>
@@ -681,7 +682,7 @@ to proceed.</p>
 
 </section>
 <section id="rlock-objects">
-<span id="id3"></span><h2>RLock 物件<a class="headerlink" href="#rlock-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id3"></span><h2>RLock 物件<a class="headerlink" href="#rlock-objects" title="Permalink to this heading">¶</a></h2>
 <p>A reentrant lock is a synchronization primitive that may be acquired multiple
 times by the same thread.  Internally, it uses the concepts of &quot;owning thread&quot;
 and &quot;recursion level&quot; in addition to the locked/unlocked state used by primitive
@@ -747,7 +748,7 @@ unlocked.</p>
 
 </section>
 <section id="condition-objects">
-<span id="id4"></span><h2>Condition Objects<a class="headerlink" href="#condition-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id4"></span><h2>Condition Objects<a class="headerlink" href="#condition-objects" title="Permalink to this heading">¶</a></h2>
 <p>A condition variable is always associated with some kind of lock; this can be
 passed in or one will be created by default.  Passing one in is useful when
 several condition variables must share the same lock.  The lock is part of
@@ -913,7 +914,7 @@ calling thread has not acquired the lock when this method is called, a
 
 </section>
 <section id="semaphore-objects">
-<span id="id5"></span><h2>Semaphore Objects<a class="headerlink" href="#semaphore-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id5"></span><h2>Semaphore Objects<a class="headerlink" href="#semaphore-objects" title="Permalink to this heading">¶</a></h2>
 <p>This is one of the oldest synchronization primitives in the history of computer
 science, invented by the early Dutch computer scientist Edsger W. Dijkstra (he
 used the names <code class="docutils literal notranslate"><span class="pre">P()</span></code> and <code class="docutils literal notranslate"><span class="pre">V()</span></code> instead of <a class="reference internal" href="#threading.Semaphore.acquire" title="threading.Semaphore.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code></a> and
@@ -990,7 +991,7 @@ it's a sign of a bug.  If not given, <em>value</em> defaults to 1.</p>
 </dd></dl>
 
 <section id="semaphore-example">
-<span id="semaphore-examples"></span><h3><a class="reference internal" href="#threading.Semaphore" title="threading.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> 範例<a class="headerlink" href="#semaphore-example" title="本標題的永久連結">¶</a></h3>
+<span id="semaphore-examples"></span><h3><a class="reference internal" href="#threading.Semaphore" title="threading.Semaphore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Semaphore</span></code></a> 範例<a class="headerlink" href="#semaphore-example" title="Permalink to this heading">¶</a></h3>
 <p>Semaphores are often used to guard resources with limited capacity, for example,
 a database server.  In any situation where the size of the resource is fixed,
 you should use a bounded semaphore.  Before spawning any worker threads, your
@@ -1015,7 +1016,7 @@ causes the semaphore to be released more than it's acquired will go undetected.<
 </section>
 </section>
 <section id="event-objects">
-<span id="id6"></span><h2>Event Objects<a class="headerlink" href="#event-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id6"></span><h2>Event Objects<a class="headerlink" href="#event-objects" title="Permalink to this heading">¶</a></h2>
 <p>This is one of the simplest mechanisms for communication between threads: one
 thread signals an event and other threads wait for it.</p>
 <p>An event object manages an internal flag that can be set to true with the
@@ -1076,7 +1077,7 @@ times out.</p>
 
 </section>
 <section id="timer-objects">
-<span id="id7"></span><h2>Timer Objects<a class="headerlink" href="#timer-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id7"></span><h2>Timer Objects<a class="headerlink" href="#timer-objects" title="Permalink to this heading">¶</a></h2>
 <p>This class represents an action that should be run only after a certain amount
 of time has passed --- a timer.  <a class="reference internal" href="#threading.Timer" title="threading.Timer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timer</span></code></a> is a subclass of <a class="reference internal" href="#threading.Thread" title="threading.Thread"><code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></a>
 and as such also functions as an example of creating custom threads.</p>
@@ -1114,7 +1115,7 @@ only work if the timer is still in its waiting stage.</p>
 
 </section>
 <section id="barrier-objects">
-<h2>Barrier Objects<a class="headerlink" href="#barrier-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Barrier Objects<a class="headerlink" href="#barrier-objects" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -1223,7 +1224,7 @@ awry.</p>
 
 </section>
 <section id="using-locks-conditions-and-semaphores-in-the-with-statement">
-<span id="with-locks"></span><h2>Using locks, conditions, and semaphores in the <code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code> statement<a class="headerlink" href="#using-locks-conditions-and-semaphores-in-the-with-statement" title="本標題的永久連結">¶</a></h2>
+<span id="with-locks"></span><h2>Using locks, conditions, and semaphores in the <code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code> statement<a class="headerlink" href="#using-locks-conditions-and-semaphores-in-the-with-statement" title="Permalink to this heading">¶</a></h2>
 <p>All of the objects provided by this module that have <code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code> and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">release()</span></code> methods can be used as context managers for a <a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a>
 statement.  The <code class="xref py py-meth docutils literal notranslate"><span class="pre">acquire()</span></code> method will be called when the block is
@@ -1298,6 +1299,10 @@ the following snippet:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1364,11 +1369,11 @@ the following snippet:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

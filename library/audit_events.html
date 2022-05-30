@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>稽核事件表 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -151,18 +152,13 @@
           <div class="body" role="main">
             
   <span class="target" id="audit-events"></span><section id="audit-events-table">
-<span id="index-0"></span><h1>稽核事件表<a class="headerlink" href="#audit-events-table" title="本標題的永久連結">¶</a></h1>
+<span id="index-0"></span><h1>稽核事件表<a class="headerlink" href="#audit-events-table" title="Permalink to this heading">¶</a></h1>
 <p>這張表包含了所有在 CPython 運行環境 (runtime) 與標準函式庫對於 <a class="reference internal" href="sys.html#sys.audit" title="sys.audit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.audit()</span></code></a> 或 <a class="reference internal" href="../c-api/sys.html#c.PySys_Audit" title="PySys_Audit"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySys_Audit()</span></code></a> 的呼叫所觸發的事件。這些呼叫是在 3.8.0 或更新的版本中被新增（請見 <span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0578/"><strong>PEP 578</strong></a>）。</p>
 <p>請參考 <a class="reference internal" href="sys.html#sys.addaudithook" title="sys.addaudithook"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.addaudithook()</span></code></a> 及 <a class="reference internal" href="../c-api/sys.html#c.PySys_AddAuditHook" title="PySys_AddAuditHook"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySys_AddAuditHook()</span></code></a> 來了解如何處理這些事件。</p>
 <div class="impl-detail compound">
 <p><strong>CPython implementation detail:</strong> 這張表是從 CPython 文件產生的，可能不包含其它實作所觸發的事件。請參考你的運行環境 (runtime) 特定文件來了解實際會觸發的事件。</p>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 55%" />
-<col style="width: 15%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Audit event</p></th>
 <th class="head"><p>Arguments</p></th>
@@ -423,7 +419,7 @@
 <td><p><a class="reference internal" href="../reference/datamodel.html#object.__setattr__">[1]</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>open</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">file</span></code>, <code class="docutils literal notranslate"><span class="pre">mode</span></code>, <code class="docutils literal notranslate"><span class="pre">flags</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">mode</span></code>, <code class="docutils literal notranslate"><span class="pre">flags</span></code></p></td>
 <td><p><a class="reference internal" href="functions.html#open">[1]</a><a class="reference internal" href="io.html#io.open">[2]</a><a class="reference internal" href="os.html#os.open">[3]</a></p></td>
 </tr>
 <tr class="row-even"><td><p>os.add_dll_directory</p></td>
@@ -878,10 +874,6 @@
 </table>
 <p>下列事件是內部觸發的，與任何 CPython 的公開 API 並無關係：</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 38%" />
-<col style="width: 62%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>稽核事件</p></th>
 <th class="head"><p>引數</p></th>
@@ -948,6 +940,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1014,11 +1010,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>test --- Regression tests package for Python &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -170,7 +171,7 @@
           <div class="body" role="main">
             
   <section id="module-test">
-<span id="test-regression-tests-package-for-python"></span><h1><a class="reference internal" href="#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a> --- Regression tests package for Python<a class="headerlink" href="#module-test" title="本標題的永久連結">¶</a></h1>
+<span id="test-regression-tests-package-for-python"></span><h1><a class="reference internal" href="#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a> --- Regression tests package for Python<a class="headerlink" href="#module-test" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>The <a class="reference internal" href="#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a> package is meant for internal use by Python only. It is
@@ -199,7 +200,7 @@ written using a &quot;traditional&quot; testing style that compares output print
 </dl>
 </div>
 <section id="writing-unit-tests-for-the-test-package">
-<span id="writing-tests"></span><h2>Writing Unit Tests for the <a class="reference internal" href="#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a> package<a class="headerlink" href="#writing-unit-tests-for-the-test-package" title="本標題的永久連結">¶</a></h2>
+<span id="writing-tests"></span><h2>Writing Unit Tests for the <a class="reference internal" href="#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a> package<a class="headerlink" href="#writing-unit-tests-for-the-test-package" title="Permalink to this heading">¶</a></h2>
 <p>It is preferred that tests that use the <a class="reference internal" href="unittest.html#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> module follow a few
 guidelines. One is to name the test module by starting it with <code class="docutils literal notranslate"><span class="pre">test_</span></code> and end
 it with the name of the module being tested. The test methods in the test module
@@ -306,7 +307,7 @@ inherit from <a class="reference internal" href="unittest.html#unittest.TestCase
 </div>
 </section>
 <section id="running-tests-using-the-command-line-interface">
-<span id="regrtest"></span><h2>Running tests using the command-line interface<a class="headerlink" href="#running-tests-using-the-command-line-interface" title="本標題的永久連結">¶</a></h2>
+<span id="regrtest"></span><h2>Running tests using the command-line interface<a class="headerlink" href="#running-tests-using-the-command-line-interface" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#module-test" title="test: Regression tests package containing the testing suite for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a> package can be run as a script to drive Python's regression
 test suite, thanks to the <a class="reference internal" href="../using/cmdline.html#cmdoption-m"><code class="xref std std-option docutils literal notranslate"><span class="pre">-m</span></code></a> option: <strong class="program">python -m test</strong>. Under
 the hood, it uses <code class="xref py py-mod docutils literal notranslate"><span class="pre">test.regrtest</span></code>; the call <strong class="program">python -m
@@ -337,7 +338,7 @@ regression tests.</p>
 </section>
 </section>
 <section id="module-test.support">
-<span id="test-support-utilities-for-the-python-test-suite"></span><h1><a class="reference internal" href="#module-test.support" title="test.support: Support for Python's regression test suite."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code></a> --- Utilities for the Python test suite<a class="headerlink" href="#module-test.support" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-utilities-for-the-python-test-suite"></span><h1><a class="reference internal" href="#module-test.support" title="test.support: Support for Python's regression test suite."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code></a> --- Utilities for the Python test suite<a class="headerlink" href="#module-test.support" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support" title="test.support: Support for Python's regression test suite."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code></a> module provides support for Python's regression
 test suite.</p>
 <div class="admonition note">
@@ -502,14 +503,18 @@ limited by <a class="reference internal" href="#test.support.MAX_Py_ssize_t" tit
 <dl class="py data">
 <dt class="sig sig-object py" id="test.support.MISSING_C_DOCSTRINGS">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">MISSING_C_DOCSTRINGS</span></span><a class="headerlink" href="#test.support.MISSING_C_DOCSTRINGS" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if running on CPython, not on Windows, and configuration
-not set with <code class="docutils literal notranslate"><span class="pre">WITH_DOC_STRINGS</span></code>.</p>
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if Python is built without docstrings (the
+<code class="xref c c-macro docutils literal notranslate"><span class="pre">WITH_DOC_STRINGS</span></code> macro is not defined).
+See the <a class="reference internal" href="../using/configure.html#cmdoption-without-doc-strings"><code class="xref std std-option docutils literal notranslate"><span class="pre">configure</span> <span class="pre">--without-doc-strings</span></code></a> option.</p>
+<p>See also the <a class="reference internal" href="#test.support.HAVE_DOCSTRINGS" title="test.support.HAVE_DOCSTRINGS"><code class="xref py py-data docutils literal notranslate"><span class="pre">HAVE_DOCSTRINGS</span></code></a> variable.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="test.support.HAVE_DOCSTRINGS">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">HAVE_DOCSTRINGS</span></span><a class="headerlink" href="#test.support.HAVE_DOCSTRINGS" title="本定義的永久連結">¶</a></dt>
-<dd><p>Check for presence of docstrings.</p>
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if function docstrings are available.
+See the <a class="reference internal" href="../using/cmdline.html#cmdoption-O"><code class="xref std std-option docutils literal notranslate"><span class="pre">python</span> <span class="pre">-OO</span></code></a> option, which strips docstrings of functions implemented in Python.</p>
+<p>See also the <a class="reference internal" href="#test.support.MISSING_C_DOCSTRINGS" title="test.support.MISSING_C_DOCSTRINGS"><code class="xref py py-data docutils literal notranslate"><span class="pre">MISSING_C_DOCSTRINGS</span></code></a> variable.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -576,12 +581,6 @@ Used when tests are executed by <code class="xref py py-mod docutils literal not
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="test.support.system_must_validate_cert">
-<span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">system_must_validate_cert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.system_must_validate_cert" title="本定義的永久連結">¶</a></dt>
-<dd><p>Raise <a class="reference internal" href="unittest.html#unittest.SkipTest" title="unittest.SkipTest"><code class="xref py py-exc docutils literal notranslate"><span class="pre">unittest.SkipTest</span></code></a> on TLS certification validation failures.</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="test.support.sortdict">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">sortdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.sortdict" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return a repr of <em>dict</em> with keys sorted.</p>
@@ -600,13 +599,13 @@ rather than looking directly in the path directories.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.match_test">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">match_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.match_test" title="本定義的永久連結">¶</a></dt>
-<dd><p>Match <em>test</em> to patterns set in <a class="reference internal" href="#test.support.set_match_tests" title="test.support.set_match_tests"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_match_tests()</span></code></a>.</p>
+<dd><p>Determine whether <em>test</em> matches the patterns set in <a class="reference internal" href="#test.support.set_match_tests" title="test.support.set_match_tests"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_match_tests()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.set_match_tests">
-<span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">set_match_tests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patterns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.set_match_tests" title="本定義的永久連結">¶</a></dt>
-<dd><p>Define match test with regular expression <em>patterns</em>.</p>
+<span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">set_match_tests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">accept_patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.set_match_tests" title="本定義的永久連結">¶</a></dt>
+<dd><p>Define match patterns on test filenames and test method names for filtering tests.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -648,7 +647,9 @@ a minimum interval for Android systems to prevent the system from hanging.</p>
 <dt class="sig sig-object py" id="test.support.check_impl_detail">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">check_impl_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">guards</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.check_impl_detail" title="本定義的永久連結">¶</a></dt>
 <dd><p>Use this check to guard CPython's implementation-specific tests or to
-run them only on the implementations guarded by the arguments:</p>
+run them only on the implementations guarded by the arguments.  This
+function returns <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> depending on the host platform.
+Example usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">check_impl_detail</span><span class="p">()</span>               <span class="c1"># Only on CPython (default).</span>
 <span class="n">check_impl_detail</span><span class="p">(</span><span class="n">jython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    <span class="c1"># Only on Jython.</span>
 <span class="n">check_impl_detail</span><span class="p">(</span><span class="n">cpython</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Everywhere except CPython.</span>
@@ -722,7 +723,7 @@ optimization settings in <code class="docutils literal notranslate"><span class=
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.disable_faulthandler">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">disable_faulthandler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.support.disable_faulthandler" title="本定義的永久連結">¶</a></dt>
-<dd><p>A context manager that replaces <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> with <code class="docutils literal notranslate"><span class="pre">sys.__stderr__</span></code>.</p>
+<dd><p>A context manager that temporary disables <a class="reference internal" href="faulthandler.html#module-faulthandler" title="faulthandler: Dump the Python traceback."><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -737,8 +738,8 @@ may remain alive for longer than expected.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.disable_gc">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">disable_gc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.support.disable_gc" title="本定義的永久連結">¶</a></dt>
-<dd><p>A context manager that disables the garbage collector upon entry and
-reenables it upon exit.</p>
+<dd><p>A context manager that disables the garbage collector on entry. On
+exit, the garbage collector is restored to its prior state.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -804,15 +805,15 @@ feature is not available on Windows.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.calcobjsize">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">calcobjsize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.calcobjsize" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <a class="reference internal" href="struct.html#struct.calcsize" title="struct.calcsize"><code class="xref py py-func docutils literal notranslate"><span class="pre">struct.calcsize()</span></code></a> for <code class="docutils literal notranslate"><span class="pre">nP{fmt}0n</span></code> or, if <code class="docutils literal notranslate"><span class="pre">gettotalrefcount</span></code>
-exists, <code class="docutils literal notranslate"><span class="pre">2PnP{fmt}0P</span></code>.</p>
+<dd><p>Return the size of the <a class="reference internal" href="../c-api/structures.html#c.PyObject" title="PyObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyObject</span></code></a> whose structure members are
+defined by <em>fmt</em>. The returned value includes the size of the Python object header and alignment.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.calcvobjsize">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">calcvobjsize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.calcvobjsize" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return <a class="reference internal" href="struct.html#struct.calcsize" title="struct.calcsize"><code class="xref py py-func docutils literal notranslate"><span class="pre">struct.calcsize()</span></code></a> for <code class="docutils literal notranslate"><span class="pre">nPn{fmt}0n</span></code> or, if <code class="docutils literal notranslate"><span class="pre">gettotalrefcount</span></code>
-exists, <code class="docutils literal notranslate"><span class="pre">2PnPn{fmt}0P</span></code>.</p>
+<dd><p>Return the size of the <a class="reference internal" href="../c-api/structures.html#c.PyVarObject" title="PyVarObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyVarObject</span></code></a> whose structure members are
+defined by <em>fmt</em>. The returned value includes the size of the Python object header and alignment.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -828,6 +829,12 @@ header size equals <em>size</em>.</p>
 <dd><p>A decorator to conditionally mark tests with
 <a class="reference internal" href="unittest.html#unittest.expectedFailure" title="unittest.expectedFailure"><code class="xref py py-func docutils literal notranslate"><span class="pre">unittest.expectedFailure()</span></code></a>. Any use of this decorator should
 have an associated comment identifying the relevant tracker issue.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.support.system_must_validate_cert">
+<span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">system_must_validate_cert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.system_must_validate_cert" title="本定義的永久連結">¶</a></dt>
+<dd><p>A decorator that skips the decorated test on TLS certification validation failures.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -850,21 +857,21 @@ resetting it after it has finished.</p>
 <dt class="sig sig-object py" id="test.support.requires_freebsd_version">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">requires_freebsd_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">min_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.requires_freebsd_version" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator for the minimum version when running test on FreeBSD.  If the
-FreeBSD version is less than the minimum, raise <a class="reference internal" href="unittest.html#unittest.SkipTest" title="unittest.SkipTest"><code class="xref py py-exc docutils literal notranslate"><span class="pre">unittest.SkipTest</span></code></a>.</p>
+FreeBSD version is less than the minimum, the test is skipped.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.requires_linux_version">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">requires_linux_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">min_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.requires_linux_version" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator for the minimum version when running test on Linux.  If the
-Linux version is less than the minimum, raise <a class="reference internal" href="unittest.html#unittest.SkipTest" title="unittest.SkipTest"><code class="xref py py-exc docutils literal notranslate"><span class="pre">unittest.SkipTest</span></code></a>.</p>
+Linux version is less than the minimum, the test is skipped.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.requires_mac_version">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">requires_mac_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">min_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.requires_mac_version" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator for the minimum version when running test on macOS.  If the
-macOS version is less than the minimum, raise <a class="reference internal" href="unittest.html#unittest.SkipTest" title="unittest.SkipTest"><code class="xref py py-exc docutils literal notranslate"><span class="pre">unittest.SkipTest</span></code></a>.</p>
+macOS version is less than the minimum, the test is skipped.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -911,7 +918,7 @@ macOS version is less than the minimum, raise <a class="reference internal" href
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.cpython_only">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">cpython_only</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.cpython_only" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">cpython_only</span></span><a class="headerlink" href="#test.support.cpython_only" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator for tests only applicable to CPython.</p>
 </dd></dl>
 
@@ -924,13 +931,13 @@ returns <code class="docutils literal notranslate"><span class="pre">False</span
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.no_tracing">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">no_tracing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.no_tracing" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">no_tracing</span></span><a class="headerlink" href="#test.support.no_tracing" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator to temporarily turn off tracing for the duration of the test.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.refcount_test">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">refcount_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.refcount_test" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">refcount_test</span></span><a class="headerlink" href="#test.support.refcount_test" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator for tests which involve reference counting.  The decorator does
 not run the test if it is not run by CPython.  Any trace function is unset
 for the duration of the test to prevent unexpected refcounts caused by
@@ -953,9 +960,8 @@ means the test doesn't support dummy runs when <code class="docutils literal not
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.bigaddrspacetest">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">bigaddrspacetest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.bigaddrspacetest" title="本定義的永久連結">¶</a></dt>
-<dd><p>Decorator for tests that fill the address space.  <em>f</em> is the function to
-wrap.</p>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">bigaddrspacetest</span></span><a class="headerlink" href="#test.support.bigaddrspacetest" title="本定義的永久連結">¶</a></dt>
+<dd><p>Decorator for tests that fill the address space.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1067,7 +1073,7 @@ cleanup procedure to <em>test_instance</em> to restore <em>object_to_patch</em> 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.check_free_after_iterating">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">check_free_after_iterating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.check_free_after_iterating" title="本定義的永久連結">¶</a></dt>
-<dd><p>Assert that <em>iter</em> is deallocated after iterating.</p>
+<dd><p>Assert instances of <em>cls</em> are deallocated after iterating.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1158,6 +1164,20 @@ creation.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">SaveSignals</span></span><a class="headerlink" href="#test.support.SaveSignals" title="本定義的永久連結">¶</a></dt>
 <dd><p>Class to save and restore signal handlers registered by the Python signal
 handler.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="test.support.SaveSignals.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.SaveSignals.save" title="本定義的永久連結">¶</a></dt>
+<dd><p>Save the signal handlers to a dictionary mapping signal numbers to the
+current signal handler.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test.support.SaveSignals.restore">
+<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.SaveSignals.restore" title="本定義的永久連結">¶</a></dt>
+<dd><p>Set the signal numbers from the <a class="reference internal" href="#test.support.SaveSignals.save" title="test.support.SaveSignals.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> dictionary to the saved
+handler.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1190,7 +1210,7 @@ handler.</p>
 
 </section>
 <section id="module-test.support.socket_helper">
-<span id="test-support-socket-helper-utilities-for-socket-tests"></span><h1><a class="reference internal" href="#module-test.support.socket_helper" title="test.support.socket_helper: Support for socket tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code></a> --- Utilities for socket tests<a class="headerlink" href="#module-test.support.socket_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-socket-helper-utilities-for-socket-tests"></span><h1><a class="reference internal" href="#module-test.support.socket_helper" title="test.support.socket_helper: Support for socket tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code></a> --- Utilities for socket tests<a class="headerlink" href="#module-test.support.socket_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.socket_helper" title="test.support.socket_helper: Support for socket tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code></a> module provides support for socket tests.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.9 版本新加入.</span></p>
@@ -1267,7 +1287,7 @@ exceptions.</p>
 
 </section>
 <section id="module-test.support.script_helper">
-<span id="test-support-script-helper-utilities-for-the-python-execution-tests"></span><h1><a class="reference internal" href="#module-test.support.script_helper" title="test.support.script_helper: Support for Python's script execution tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code></a> --- Utilities for the Python execution tests<a class="headerlink" href="#module-test.support.script_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-script-helper-utilities-for-the-python-execution-tests"></span><h1><a class="reference internal" href="#module-test.support.script_helper" title="test.support.script_helper: Support for Python's script execution tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code></a> --- Utilities for the Python execution tests<a class="headerlink" href="#module-test.support.script_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.script_helper" title="test.support.script_helper: Support for Python's script execution tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code></a> module provides support for Python's
 script execution tests.</p>
 <dl class="py function">
@@ -1304,10 +1324,10 @@ in a subprocess.  The values can include <code class="docutils literal notransla
 <dd><p>Assert that running the interpreter with <em>args</em> and optional environment
 variables <em>env_vars</em> succeeds (<code class="docutils literal notranslate"><span class="pre">rc</span> <span class="pre">==</span> <span class="pre">0</span></code>) and return a <code class="docutils literal notranslate"><span class="pre">(return</span> <span class="pre">code,</span>
 <span class="pre">stdout,</span> <span class="pre">stderr)</span></code> tuple.</p>
-<p>If the <code class="docutils literal notranslate"><span class="pre">__cleanenv</span></code> keyword is set, <em>env_vars</em> is used as a fresh
+<p>If the <em>__cleanenv</em> keyword-only parameter is set, <em>env_vars</em> is used as a fresh
 environment.</p>
 <p>Python is started in isolated mode (command line option <code class="docutils literal notranslate"><span class="pre">-I</span></code>),
-except if the <code class="docutils literal notranslate"><span class="pre">__isolated</span></code> keyword is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+except if the <em>__isolated</em> keyword-only parameter is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>The function no longer strips whitespaces from <em>stderr</em>.</p>
 </div>
@@ -1375,7 +1395,7 @@ path and the archive name for the zip file.</p>
 
 </section>
 <section id="module-test.support.bytecode_helper">
-<span id="test-support-bytecode-helper-support-tools-for-testing-correct-bytecode-generation"></span><h1><a class="reference internal" href="#module-test.support.bytecode_helper" title="test.support.bytecode_helper: Support tools for testing correct bytecode generation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code></a> --- Support tools for testing correct bytecode generation<a class="headerlink" href="#module-test.support.bytecode_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-bytecode-helper-support-tools-for-testing-correct-bytecode-generation"></span><h1><a class="reference internal" href="#module-test.support.bytecode_helper" title="test.support.bytecode_helper: Support tools for testing correct bytecode generation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code></a> --- Support tools for testing correct bytecode generation<a class="headerlink" href="#module-test.support.bytecode_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.bytecode_helper" title="test.support.bytecode_helper: Support tools for testing correct bytecode generation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code></a> module provides support for testing
 and inspecting bytecode generation.</p>
 <div class="versionadded">
@@ -1408,7 +1428,7 @@ and inspecting bytecode generation.</p>
 
 </section>
 <section id="module-test.support.threading_helper">
-<span id="test-support-threading-helper-utilities-for-threading-tests"></span><h1><a class="reference internal" href="#module-test.support.threading_helper" title="test.support.threading_helper: Support for threading tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code></a> --- Utilities for threading tests<a class="headerlink" href="#module-test.support.threading_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-threading-helper-utilities-for-threading-tests"></span><h1><a class="reference internal" href="#module-test.support.threading_helper" title="test.support.threading_helper: Support for threading tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code></a> --- Utilities for threading tests<a class="headerlink" href="#module-test.support.threading_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.threading_helper" title="test.support.threading_helper: Support for threading tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code></a> module provides support for threading tests.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
@@ -1422,15 +1442,17 @@ is still alive after <em>timeout</em> seconds.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.threading_helper.reap_threads">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.threading_helper.</span></span><span class="sig-name descname"><span class="pre">reap_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.threading_helper.reap_threads" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">test.support.threading_helper.</span></span><span class="sig-name descname"><span class="pre">reap_threads</span></span><a class="headerlink" href="#test.support.threading_helper.reap_threads" title="本定義的永久連結">¶</a></dt>
 <dd><p>Decorator to ensure the threads are cleaned up even if the test fails.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.threading_helper.start_threads">
 <span class="sig-prename descclassname"><span class="pre">test.support.threading_helper.</span></span><span class="sig-name descname"><span class="pre">start_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unlock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.threading_helper.start_threads" title="本定義的永久連結">¶</a></dt>
-<dd><p>Context manager to start <em>threads</em>.  It attempts to join the threads upon
-exit.</p>
+<dd><p>Context manager to start <em>threads</em>, which is a sequence of threads.
+<em>unlock</em> is a function called after the threads are started, even if an
+exception was raised; an example would be <a class="reference internal" href="threading.html#threading.Event.set" title="threading.Event.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">threading.Event.set()</span></code></a>.
+<code class="docutils literal notranslate"><span class="pre">start_threads</span></code> will attempt to join the started threads upon exit.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1488,7 +1510,7 @@ exit.</p>
 
 </section>
 <section id="module-test.support.os_helper">
-<span id="test-support-os-helper-utilities-for-os-tests"></span><h1><a class="reference internal" href="#module-test.support.os_helper" title="test.support.os_helper: Support for os tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code></a> --- Utilities for os tests<a class="headerlink" href="#module-test.support.os_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-os-helper-utilities-for-os-tests"></span><h1><a class="reference internal" href="#module-test.support.os_helper" title="test.support.os_helper: Support for os tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code></a> --- Utilities for os tests<a class="headerlink" href="#module-test.support.os_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.os_helper" title="test.support.os_helper: Support for os tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code></a> module provides support for os tests.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
@@ -1515,7 +1537,10 @@ temporary file that is created should be closed and unlinked (removed).</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="test.support.os_helper.TESTFN_NONASCII">
 <span class="sig-prename descclassname"><span class="pre">test.support.os_helper.</span></span><span class="sig-name descname"><span class="pre">TESTFN_NONASCII</span></span><a class="headerlink" href="#test.support.os_helper.TESTFN_NONASCII" title="本定義的永久連結">¶</a></dt>
-<dd><p>Set to a filename containing the <a class="reference internal" href="#test.support.os_helper.FS_NONASCII" title="test.support.os_helper.FS_NONASCII"><code class="xref py py-data docutils literal notranslate"><span class="pre">FS_NONASCII</span></code></a> character.</p>
+<dd><p>Set to a filename containing the <a class="reference internal" href="#test.support.os_helper.FS_NONASCII" title="test.support.os_helper.FS_NONASCII"><code class="xref py py-data docutils literal notranslate"><span class="pre">FS_NONASCII</span></code></a> character, if it exists.
+This guarantees that if the filename exists, it can be encoded and decoded
+with the default filesystem encoding. This allows tests that require a
+non-ASCII filename to be easily skipped on platforms where they can't work.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -1627,14 +1652,17 @@ and returning its descriptor.</p>
 <dt class="sig sig-object py" id="test.support.os_helper.rmdir">
 <span class="sig-prename descclassname"><span class="pre">test.support.os_helper.</span></span><span class="sig-name descname"><span class="pre">rmdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.os_helper.rmdir" title="本定義的永久連結">¶</a></dt>
 <dd><p>Call <a class="reference internal" href="os.html#os.rmdir" title="os.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.rmdir()</span></code></a> on <em>filename</em>.  On Windows platforms, this is
-wrapped with a wait loop that checks for the existence of the file.</p>
+wrapped with a wait loop that checks for the existence of the file,
+which is needed due to antivirus programs that can hold files open and prevent
+deletion.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.os_helper.rmtree">
 <span class="sig-prename descclassname"><span class="pre">test.support.os_helper.</span></span><span class="sig-name descname"><span class="pre">rmtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.os_helper.rmtree" title="本定義的永久連結">¶</a></dt>
 <dd><p>Call <a class="reference internal" href="shutil.html#shutil.rmtree" title="shutil.rmtree"><code class="xref py py-func docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code></a> on <em>path</em> or call <a class="reference internal" href="os.html#os.lstat" title="os.lstat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.lstat()</span></code></a> and
-<a class="reference internal" href="os.html#os.rmdir" title="os.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.rmdir()</span></code></a> to remove a path and its contents.  On Windows platforms,
+<a class="reference internal" href="os.html#os.rmdir" title="os.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.rmdir()</span></code></a> to remove a path and its contents.  As with <a class="reference internal" href="#test.support.os_helper.rmdir" title="test.support.os_helper.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">rmdir()</span></code></a>,
+on Windows platforms
 this is wrapped with a wait loop that checks for the existence of the files.</p>
 </dd></dl>
 
@@ -1684,13 +1712,14 @@ cannot be created, only a warning is issued.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.os_helper.unlink">
 <span class="sig-prename descclassname"><span class="pre">test.support.os_helper.</span></span><span class="sig-name descname"><span class="pre">unlink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.os_helper.unlink" title="本定義的永久連結">¶</a></dt>
-<dd><p>Call <a class="reference internal" href="os.html#os.unlink" title="os.unlink"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.unlink()</span></code></a> on <em>filename</em>.  On Windows platforms, this is
+<dd><p>Call <a class="reference internal" href="os.html#os.unlink" title="os.unlink"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.unlink()</span></code></a> on <em>filename</em>.  As with <a class="reference internal" href="#test.support.os_helper.rmdir" title="test.support.os_helper.rmdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">rmdir()</span></code></a>,
+on Windows platforms, this is
 wrapped with a wait loop that checks for the existence of the file.</p>
 </dd></dl>
 
 </section>
 <section id="module-test.support.import_helper">
-<span id="test-support-import-helper-utilities-for-import-tests"></span><h1><a class="reference internal" href="#module-test.support.import_helper" title="test.support.import_helper: Support for import tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code></a> --- Utilities for import tests<a class="headerlink" href="#module-test.support.import_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-import-helper-utilities-for-import-tests"></span><h1><a class="reference internal" href="#module-test.support.import_helper" title="test.support.import_helper: Support for import tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code></a> --- Utilities for import tests<a class="headerlink" href="#module-test.support.import_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.import_helper" title="test.support.import_helper: Support for import tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code></a> module provides support for import tests.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
@@ -1737,7 +1766,7 @@ imported.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="test.support.import_helper.import_module">
-<span class="sig-prename descclassname"><span class="pre">test.support.import_helper.</span></span><span class="sig-name descname"><span class="pre">import_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deprecated=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_on()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.import_helper.import_module" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">test.support.import_helper.</span></span><span class="sig-name descname"><span class="pre">import_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deprecated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.import_helper.import_module" title="本定義的永久連結">¶</a></dt>
 <dd><p>This function imports and returns the named module. Unlike a normal
 import, this function raises <a class="reference internal" href="unittest.html#unittest.SkipTest" title="unittest.SkipTest"><code class="xref py py-exc docutils literal notranslate"><span class="pre">unittest.SkipTest</span></code></a> if the module
 cannot be imported.</p>
@@ -1783,7 +1812,7 @@ path to the source file.  It does not need to exist, however the PEP
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test.support.import_helper.</span></span><span class="sig-name descname"><span class="pre">CleanImport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">module_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.import_helper.CleanImport" title="本定義的永久連結">¶</a></dt>
 <dd><p>A context manager to force import to return a new module reference.  This
 is useful for testing module-level behaviors, such as the emission of a
-DeprecationWarning on import.  Example usage:</p>
+<a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> on import.  Example usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">CleanImport</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">):</span>
     <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>  <span class="c1"># New reference.</span>
 </pre></div>
@@ -1793,7 +1822,7 @@ DeprecationWarning on import.  Example usage:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="test.support.import_helper.DirsOnSysPath">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test.support.import_helper.</span></span><span class="sig-name descname"><span class="pre">DirsOnSysPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.support.import_helper.DirsOnSysPath" title="本定義的永久連結">¶</a></dt>
-<dd><p>A context manager to temporarily add directories to sys.path.</p>
+<dd><p>A context manager to temporarily add directories to <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>.</p>
 <p>This makes a copy of <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a>, appends any directories given
 as positional arguments, then reverts <a class="reference internal" href="sys.html#sys.path" title="sys.path"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> to the copied
 settings when the context ends.</p>
@@ -1804,7 +1833,7 @@ will be reverted at the end of the block.</p>
 
 </section>
 <section id="module-test.support.warnings_helper">
-<span id="test-support-warnings-helper-utilities-for-warnings-tests"></span><h1><a class="reference internal" href="#module-test.support.warnings_helper" title="test.support.warnings_helper: Support for warnings tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code></a> --- Utilities for warnings tests<a class="headerlink" href="#module-test.support.warnings_helper" title="本標題的永久連結">¶</a></h1>
+<span id="test-support-warnings-helper-utilities-for-warnings-tests"></span><h1><a class="reference internal" href="#module-test.support.warnings_helper" title="test.support.warnings_helper: Support for warnings tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code></a> --- Utilities for warnings tests<a class="headerlink" href="#module-test.support.warnings_helper" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="#module-test.support.warnings_helper" title="test.support.warnings_helper: Support for warnings tests."><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code></a> module provides support for warnings tests.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
@@ -1950,6 +1979,10 @@ warnings directly.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -2016,11 +2049,11 @@ warnings directly.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

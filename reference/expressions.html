@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>6. Expressions &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -204,18 +205,18 @@
           <div class="body" role="main">
             
   <section id="expressions">
-<span id="id1"></span><h1><span class="section-number">6. </span>Expressions<a class="headerlink" href="#expressions" title="本標題的永久連結">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">6. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">¶</a></h1>
 <p id="index-0">This chapter explains the meaning of the elements of expressions in Python.</p>
 <p><strong>Syntax Notes:</strong> In this and the following chapters, extended BNF notation will
 be used to describe syntax, not lexical analysis.  When (one alternative of) a
 syntax rule has the form</p>
 <pre>
-<strong id="grammar-token-python-grammar-name"><span id="grammar-token-name"></span>name</strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">othername</span></code>
+<strong id="grammar-token-python-grammar-name">name</strong> ::=  <code class="xref docutils literal notranslate"><span class="pre">othername</span></code>
 </pre>
 <p>and no semantics are given, the semantics of this form of <code class="docutils literal notranslate"><span class="pre">name</span></code> are the same
 as for <code class="docutils literal notranslate"><span class="pre">othername</span></code>.</p>
 <section id="arithmetic-conversions">
-<span id="conversions"></span><h2><span class="section-number">6.1. </span>Arithmetic conversions<a class="headerlink" href="#arithmetic-conversions" title="本標題的永久連結">¶</a></h2>
+<span id="conversions"></span><h2><span class="section-number">6.1. </span>Arithmetic conversions<a class="headerlink" href="#arithmetic-conversions" title="Permalink to this heading">¶</a></h2>
 <p id="index-1">When a description of an arithmetic operator below uses the phrase &quot;the numeric
 arguments are converted to a common type&quot;, this means that the operator
 implementation for built-in types works as follows:</p>
@@ -230,17 +231,17 @@ argument to the '%' operator).  Extensions must define their own conversion
 behavior.</p>
 </section>
 <section id="atoms">
-<span id="id2"></span><h2><span class="section-number">6.2. </span>Atoms<a class="headerlink" href="#atoms" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2><span class="section-number">6.2. </span>Atoms<a class="headerlink" href="#atoms" title="Permalink to this heading">¶</a></h2>
 <p id="index-2">Atoms are the most basic elements of expressions.  The simplest atoms are
 identifiers or literals.  Forms enclosed in parentheses, brackets or braces are
 also categorized syntactically as atoms.  The syntax for atoms is:</p>
 <pre>
-<strong id="grammar-token-python-grammar-atom"><span id="grammar-token-atom"></span>atom     </strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-literal"><code class="xref docutils literal notranslate"><span class="pre">literal</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-enclosure"><code class="xref docutils literal notranslate"><span class="pre">enclosure</span></code></a>
-<strong id="grammar-token-python-grammar-enclosure"><span id="grammar-token-enclosure"></span>enclosure</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-parenth_form"><code class="xref docutils literal notranslate"><span class="pre">parenth_form</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-list_display"><code class="xref docutils literal notranslate"><span class="pre">list_display</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-dict_display"><code class="xref docutils literal notranslate"><span class="pre">dict_display</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-set_display"><code class="xref docutils literal notranslate"><span class="pre">set_display</span></code></a>
+<strong id="grammar-token-python-grammar-atom">atom     </strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-literal"><code class="xref docutils literal notranslate"><span class="pre">literal</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-enclosure"><code class="xref docutils literal notranslate"><span class="pre">enclosure</span></code></a>
+<strong id="grammar-token-python-grammar-enclosure">enclosure</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-parenth_form"><code class="xref docutils literal notranslate"><span class="pre">parenth_form</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-list_display"><code class="xref docutils literal notranslate"><span class="pre">list_display</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-dict_display"><code class="xref docutils literal notranslate"><span class="pre">dict_display</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-set_display"><code class="xref docutils literal notranslate"><span class="pre">set_display</span></code></a>
                | <a class="reference internal" href="#grammar-token-python-grammar-generator_expression"><code class="xref docutils literal notranslate"><span class="pre">generator_expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-yield_atom"><code class="xref docutils literal notranslate"><span class="pre">yield_atom</span></code></a>
 </pre>
 <section id="atom-identifiers">
-<span id="identifiers-names"></span><h3><span class="section-number">6.2.1. </span>Identifiers (Names)<a class="headerlink" href="#atom-identifiers" title="本標題的永久連結">¶</a></h3>
+<span id="identifiers-names"></span><h3><span class="section-number">6.2.1. </span>Identifiers (Names)<a class="headerlink" href="#atom-identifiers" title="Permalink to this heading">¶</a></h3>
 <p id="index-3">An identifier occurring as an atom is a name.  See section <a class="reference internal" href="lexical_analysis.html#identifiers"><span class="std std-ref">Identifiers and keywords</span></a>
 for lexical definition and section <a class="reference internal" href="executionmodel.html#naming"><span class="std std-ref">Naming and binding</span></a> for documentation of naming and
 binding.</p>
@@ -260,10 +261,10 @@ long (longer than 255 characters), implementation defined truncation may happen.
 If the class name consists only of underscores, no transformation is done.</p>
 </section>
 <section id="literals">
-<span id="atom-literals"></span><h3><span class="section-number">6.2.2. </span>Literals<a class="headerlink" href="#literals" title="本標題的永久連結">¶</a></h3>
+<span id="atom-literals"></span><h3><span class="section-number">6.2.2. </span>Literals<a class="headerlink" href="#literals" title="Permalink to this heading">¶</a></h3>
 <p id="index-6">Python supports string and bytes literals and various numeric literals:</p>
 <pre>
-<strong id="grammar-token-python-grammar-literal"><span id="grammar-token-literal"></span>literal</strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-stringliteral"><code class="xref docutils literal notranslate"><span class="pre">stringliteral</span></code></a> | <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-bytesliteral"><code class="xref docutils literal notranslate"><span class="pre">bytesliteral</span></code></a>
+<strong id="grammar-token-python-grammar-literal">literal</strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-stringliteral"><code class="xref docutils literal notranslate"><span class="pre">stringliteral</span></code></a> | <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-bytesliteral"><code class="xref docutils literal notranslate"><span class="pre">bytesliteral</span></code></a>
              | <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-integer"><code class="xref docutils literal notranslate"><span class="pre">integer</span></code></a> | <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-floatnumber"><code class="xref docutils literal notranslate"><span class="pre">floatnumber</span></code></a> | <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-imagnumber"><code class="xref docutils literal notranslate"><span class="pre">imagnumber</span></code></a>
 </pre>
 <p>Evaluation of a literal yields an object of the given type (string, bytes,
@@ -277,10 +278,10 @@ occurrence) may obtain the same object or a different object with the same
 value.</p>
 </section>
 <section id="parenthesized-forms">
-<span id="parenthesized"></span><h3><span class="section-number">6.2.3. </span>Parenthesized forms<a class="headerlink" href="#parenthesized-forms" title="本標題的永久連結">¶</a></h3>
+<span id="parenthesized"></span><h3><span class="section-number">6.2.3. </span>Parenthesized forms<a class="headerlink" href="#parenthesized-forms" title="Permalink to this heading">¶</a></h3>
 <p id="index-8">A parenthesized form is an optional expression list enclosed in parentheses:</p>
 <pre>
-<strong id="grammar-token-python-grammar-parenth_form"><span id="grammar-token-parenth-form"></span>parenth_form</strong> ::=  &quot;(&quot; [<a class="reference internal" href="#grammar-token-python-grammar-starred_expression"><code class="xref docutils literal notranslate"><span class="pre">starred_expression</span></code></a>] &quot;)&quot;
+<strong id="grammar-token-python-grammar-parenth_form">parenth_form</strong> ::=  &quot;(&quot; [<a class="reference internal" href="#grammar-token-python-grammar-starred_expression"><code class="xref docutils literal notranslate"><span class="pre">starred_expression</span></code></a>] &quot;)&quot;
 </pre>
 <p>A parenthesized expression list yields whatever that expression list yields: if
 the list contains at least one comma, it yields a tuple; otherwise, it yields
@@ -294,7 +295,7 @@ required --- allowing unparenthesized &quot;nothing&quot; in expressions would c
 ambiguities and allow common typos to pass uncaught.</p>
 </section>
 <section id="displays-for-lists-sets-and-dictionaries">
-<span id="comprehensions"></span><h3><span class="section-number">6.2.4. </span>Displays for lists, sets and dictionaries<a class="headerlink" href="#displays-for-lists-sets-and-dictionaries" title="本標題的永久連結">¶</a></h3>
+<span id="comprehensions"></span><h3><span class="section-number">6.2.4. </span>Displays for lists, sets and dictionaries<a class="headerlink" href="#displays-for-lists-sets-and-dictionaries" title="Permalink to this heading">¶</a></h3>
 <p id="index-11">For constructing a list, a set or a dictionary Python provides special syntax
 called &quot;displays&quot;, each of them in two flavors:</p>
 <ul class="simple">
@@ -304,10 +305,10 @@ called &quot;displays&quot;, each of them in two flavors:</p>
 </ul>
 <p id="index-12">Common syntax elements for comprehensions are:</p>
 <pre>
-<strong id="grammar-token-python-grammar-comprehension"><span id="grammar-token-comprehension"></span>comprehension</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-assignment_expression"><code class="xref docutils literal notranslate"><span class="pre">assignment_expression</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a>
-<strong id="grammar-token-python-grammar-comp_for"><span id="grammar-token-comp-for"></span>comp_for     </strong> ::=  [&quot;async&quot;] &quot;for&quot; <a class="reference internal" href="simple_stmts.html#grammar-token-python-grammar-target_list"><code class="xref docutils literal notranslate"><span class="pre">target_list</span></code></a> &quot;in&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> [<a class="reference internal" href="#grammar-token-python-grammar-comp_iter"><code class="xref docutils literal notranslate"><span class="pre">comp_iter</span></code></a>]
-<strong id="grammar-token-python-grammar-comp_iter"><span id="grammar-token-comp-iter"></span>comp_iter    </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-comp_if"><code class="xref docutils literal notranslate"><span class="pre">comp_if</span></code></a>
-<strong id="grammar-token-python-grammar-comp_if"><span id="grammar-token-comp-if"></span>comp_if      </strong> ::=  &quot;if&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> [<a class="reference internal" href="#grammar-token-python-grammar-comp_iter"><code class="xref docutils literal notranslate"><span class="pre">comp_iter</span></code></a>]
+<strong id="grammar-token-python-grammar-comprehension">comprehension</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-assignment_expression"><code class="xref docutils literal notranslate"><span class="pre">assignment_expression</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a>
+<strong id="grammar-token-python-grammar-comp_for">comp_for     </strong> ::=  [&quot;async&quot;] &quot;for&quot; <a class="reference internal" href="simple_stmts.html#grammar-token-python-grammar-target_list"><code class="xref docutils literal notranslate"><span class="pre">target_list</span></code></a> &quot;in&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> [<a class="reference internal" href="#grammar-token-python-grammar-comp_iter"><code class="xref docutils literal notranslate"><span class="pre">comp_iter</span></code></a>]
+<strong id="grammar-token-python-grammar-comp_iter">comp_iter    </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-comp_if"><code class="xref docutils literal notranslate"><span class="pre">comp_if</span></code></a>
+<strong id="grammar-token-python-grammar-comp_if">comp_if      </strong> ::=  &quot;if&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> [<a class="reference internal" href="#grammar-token-python-grammar-comp_iter"><code class="xref docutils literal notranslate"><span class="pre">comp_iter</span></code></a>]
 </pre>
 <p>The comprehension consists of a single expression followed by at least one
 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code> clause and zero or more <code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code> or <code class="xref std std-keyword docutils literal notranslate"><span class="pre">if</span></code> clauses.
@@ -346,11 +347,11 @@ See also <span class="target" id="index-14"></span><a class="pep reference exter
 </div>
 </section>
 <section id="list-displays">
-<span id="lists"></span><h3><span class="section-number">6.2.5. </span>List displays<a class="headerlink" href="#list-displays" title="本標題的永久連結">¶</a></h3>
+<span id="lists"></span><h3><span class="section-number">6.2.5. </span>List displays<a class="headerlink" href="#list-displays" title="Permalink to this heading">¶</a></h3>
 <p id="index-15">A list display is a possibly empty series of expressions enclosed in square
 brackets:</p>
 <pre>
-<strong id="grammar-token-python-grammar-list_display"><span id="grammar-token-list-display"></span>list_display</strong> ::=  &quot;[&quot; [<a class="reference internal" href="#grammar-token-python-grammar-starred_list"><code class="xref docutils literal notranslate"><span class="pre">starred_list</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-comprehension"><code class="xref docutils literal notranslate"><span class="pre">comprehension</span></code></a>] &quot;]&quot;
+<strong id="grammar-token-python-grammar-list_display">list_display</strong> ::=  &quot;[&quot; [<a class="reference internal" href="#grammar-token-python-grammar-starred_list"><code class="xref docutils literal notranslate"><span class="pre">starred_list</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-comprehension"><code class="xref docutils literal notranslate"><span class="pre">comprehension</span></code></a>] &quot;]&quot;
 </pre>
 <p>A list display yields a new list object, the contents being specified by either
 a list of expressions or a comprehension.  When a comma-separated list of
@@ -359,11 +360,11 @@ placed into the list object in that order.  When a comprehension is supplied,
 the list is constructed from the elements resulting from the comprehension.</p>
 </section>
 <section id="set-displays">
-<span id="set"></span><h3><span class="section-number">6.2.6. </span>Set displays<a class="headerlink" href="#set-displays" title="本標題的永久連結">¶</a></h3>
+<span id="set"></span><h3><span class="section-number">6.2.6. </span>Set displays<a class="headerlink" href="#set-displays" title="Permalink to this heading">¶</a></h3>
 <p id="index-16">A set display is denoted by curly braces and distinguishable from dictionary
 displays by the lack of colons separating keys and values:</p>
 <pre>
-<strong id="grammar-token-python-grammar-set_display"><span id="grammar-token-set-display"></span>set_display</strong> ::=  &quot;{&quot; (<a class="reference internal" href="#grammar-token-python-grammar-starred_list"><code class="xref docutils literal notranslate"><span class="pre">starred_list</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-comprehension"><code class="xref docutils literal notranslate"><span class="pre">comprehension</span></code></a>) &quot;}&quot;
+<strong id="grammar-token-python-grammar-set_display">set_display</strong> ::=  &quot;{&quot; (<a class="reference internal" href="#grammar-token-python-grammar-starred_list"><code class="xref docutils literal notranslate"><span class="pre">starred_list</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-comprehension"><code class="xref docutils literal notranslate"><span class="pre">comprehension</span></code></a>) &quot;}&quot;
 </pre>
 <p>A set display yields a new mutable set object, the contents being specified by
 either a sequence of expressions or a comprehension.  When a comma-separated
@@ -374,14 +375,14 @@ constructed from the elements resulting from the comprehension.</p>
 dictionary.</p>
 </section>
 <section id="dictionary-displays">
-<span id="dict"></span><h3><span class="section-number">6.2.7. </span>Dictionary displays<a class="headerlink" href="#dictionary-displays" title="本標題的永久連結">¶</a></h3>
+<span id="dict"></span><h3><span class="section-number">6.2.7. </span>Dictionary displays<a class="headerlink" href="#dictionary-displays" title="Permalink to this heading">¶</a></h3>
 <p id="index-17">A dictionary display is a possibly empty series of key/datum pairs enclosed in
 curly braces:</p>
 <pre>
-<strong id="grammar-token-python-grammar-dict_display"><span id="grammar-token-dict-display"></span>dict_display      </strong> ::=  &quot;{&quot; [<a class="reference internal" href="#grammar-token-python-grammar-key_datum_list"><code class="xref docutils literal notranslate"><span class="pre">key_datum_list</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-dict_comprehension"><code class="xref docutils literal notranslate"><span class="pre">dict_comprehension</span></code></a>] &quot;}&quot;
-<strong id="grammar-token-python-grammar-key_datum_list"><span id="grammar-token-key-datum-list"></span>key_datum_list    </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-key_datum"><code class="xref docutils literal notranslate"><span class="pre">key_datum</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-key_datum"><code class="xref docutils literal notranslate"><span class="pre">key_datum</span></code></a>)* [&quot;,&quot;]
-<strong id="grammar-token-python-grammar-key_datum"><span id="grammar-token-key-datum"></span>key_datum         </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> &quot;:&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | &quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a>
-<strong id="grammar-token-python-grammar-dict_comprehension"><span id="grammar-token-dict-comprehension"></span>dict_comprehension</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> &quot;:&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a>
+<strong id="grammar-token-python-grammar-dict_display">dict_display      </strong> ::=  &quot;{&quot; [<a class="reference internal" href="#grammar-token-python-grammar-key_datum_list"><code class="xref docutils literal notranslate"><span class="pre">key_datum_list</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-dict_comprehension"><code class="xref docutils literal notranslate"><span class="pre">dict_comprehension</span></code></a>] &quot;}&quot;
+<strong id="grammar-token-python-grammar-key_datum_list">key_datum_list    </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-key_datum"><code class="xref docutils literal notranslate"><span class="pre">key_datum</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-key_datum"><code class="xref docutils literal notranslate"><span class="pre">key_datum</span></code></a>)* [&quot;,&quot;]
+<strong id="grammar-token-python-grammar-key_datum">key_datum         </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> &quot;:&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | &quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a>
+<strong id="grammar-token-python-grammar-dict_comprehension">dict_comprehension</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> &quot;:&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a>
 </pre>
 <p>A dictionary display yields a new dictionary object.</p>
 <p>If a comma-separated sequence of key/datum pairs is given, they are evaluated
@@ -413,10 +414,10 @@ proposed by <span class="target" id="index-21"></span><a class="pep reference ex
 </div>
 </section>
 <section id="generator-expressions">
-<span id="genexpr"></span><h3><span class="section-number">6.2.8. </span>Generator expressions<a class="headerlink" href="#generator-expressions" title="本標題的永久連結">¶</a></h3>
+<span id="genexpr"></span><h3><span class="section-number">6.2.8. </span>Generator expressions<a class="headerlink" href="#generator-expressions" title="Permalink to this heading">¶</a></h3>
 <p id="index-22">A generator expression is a compact generator notation in parentheses:</p>
 <pre>
-<strong id="grammar-token-python-grammar-generator_expression"><span id="grammar-token-generator-expression"></span>generator_expression</strong> ::=  &quot;(&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a> &quot;)&quot;
+<strong id="grammar-token-python-grammar-generator_expression">generator_expression</strong> ::=  &quot;(&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-comp_for"><code class="xref docutils literal notranslate"><span class="pre">comp_for</span></code></a> &quot;)&quot;
 </pre>
 <p>A generator expression yields a new generator object.  Its syntax is the same as
 for comprehensions, except that it is enclosed in parentheses instead of
@@ -454,10 +455,10 @@ with 3.7, any function can use asynchronous generator expressions.</p>
 </div>
 </section>
 <section id="yield-expressions">
-<span id="yieldexpr"></span><h3><span class="section-number">6.2.9. </span>Yield expressions<a class="headerlink" href="#yield-expressions" title="本標題的永久連結">¶</a></h3>
+<span id="yieldexpr"></span><h3><span class="section-number">6.2.9. </span>Yield expressions<a class="headerlink" href="#yield-expressions" title="Permalink to this heading">¶</a></h3>
 <pre id="index-23">
-<strong id="grammar-token-python-grammar-yield_atom"><span id="grammar-token-yield-atom"></span>yield_atom      </strong> ::=  &quot;(&quot; <a class="reference internal" href="#grammar-token-python-grammar-yield_expression"><code class="xref docutils literal notranslate"><span class="pre">yield_expression</span></code></a> &quot;)&quot;
-<strong id="grammar-token-python-grammar-yield_expression"><span id="grammar-token-yield-expression"></span>yield_expression</strong> ::=  &quot;yield&quot; [<a class="reference internal" href="#grammar-token-python-grammar-expression_list"><code class="xref docutils literal notranslate"><span class="pre">expression_list</span></code></a> | &quot;from&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>]
+<strong id="grammar-token-python-grammar-yield_atom">yield_atom      </strong> ::=  &quot;(&quot; <a class="reference internal" href="#grammar-token-python-grammar-yield_expression"><code class="xref docutils literal notranslate"><span class="pre">yield_expression</span></code></a> &quot;)&quot;
+<strong id="grammar-token-python-grammar-yield_expression">yield_expression</strong> ::=  &quot;yield&quot; [<a class="reference internal" href="#grammar-token-python-grammar-expression_list"><code class="xref docutils literal notranslate"><span class="pre">expression_list</span></code></a> | &quot;from&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>]
 </pre>
 <p>The yield expression is used when defining a <a class="reference internal" href="../glossary.html#term-generator"><span class="xref std std-term">generator</span></a> function
 or an <a class="reference internal" href="../glossary.html#term-asynchronous-generator"><span class="xref std std-term">asynchronous generator</span></a> function and
@@ -544,7 +545,7 @@ coroutine functions.</p>
 </dl>
 </div>
 <section id="generator-iterator-methods">
-<span id="generator-methods"></span><span id="index-31"></span><h4><span class="section-number">6.2.9.1. </span>Generator-iterator methods<a class="headerlink" href="#generator-iterator-methods" title="本標題的永久連結">¶</a></h4>
+<span id="generator-methods"></span><span id="index-31"></span><h4><span class="section-number">6.2.9.1. </span>Generator-iterator methods<a class="headerlink" href="#generator-iterator-methods" title="Permalink to this heading">¶</a></h4>
 <p>This subsection describes the methods of a generator iterator.  They can
 be used to control the execution of a generator function.</p>
 <p>Note that calling any of the generator methods below when the generator
@@ -612,7 +613,7 @@ has already exited due to an exception or normal exit.</p>
 
 </section>
 <section id="examples">
-<span id="index-34"></span><h4><span class="section-number">6.2.9.2. </span>模組<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h4>
+<span id="index-34"></span><h4><span class="section-number">6.2.9.2. </span>模組<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h4>
 <p>Here is a simple example that demonstrates the behavior of generators and
 generator functions:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">echo</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -644,7 +645,7 @@ generator functions:</p>
 Python.&quot;</p>
 </section>
 <section id="asynchronous-generator-functions">
-<span id="id3"></span><h4><span class="section-number">6.2.9.3. </span>Asynchronous generator functions<a class="headerlink" href="#asynchronous-generator-functions" title="本標題的永久連結">¶</a></h4>
+<span id="id3"></span><h4><span class="section-number">6.2.9.3. </span>Asynchronous generator functions<a class="headerlink" href="#asynchronous-generator-functions" title="Permalink to this heading">¶</a></h4>
 <p>The presence of a yield expression in a function or method defined using
 <a class="reference internal" href="compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> further defines the function as an
 <a class="reference internal" href="../glossary.html#term-asynchronous-generator"><span class="xref std std-term">asynchronous generator</span></a> function.</p>
@@ -699,7 +700,7 @@ of a <em>finalizer</em> method see the implementation of
 asynchronous generator function.</p>
 </section>
 <section id="asynchronous-generator-iterator-methods">
-<span id="asynchronous-generator-methods"></span><span id="index-35"></span><h4><span class="section-number">6.2.9.4. </span>Asynchronous generator-iterator methods<a class="headerlink" href="#asynchronous-generator-iterator-methods" title="本標題的永久連結">¶</a></h4>
+<span id="asynchronous-generator-methods"></span><span id="index-35"></span><h4><span class="section-number">6.2.9.4. </span>Asynchronous generator-iterator methods<a class="headerlink" href="#asynchronous-generator-iterator-methods" title="Permalink to this heading">¶</a></h4>
 <p>This subsection describes the methods of an asynchronous generator iterator,
 which are used to control the execution of a generator function.</p>
 <span class="target" id="index-36"></span><dl class="py method">
@@ -770,17 +771,17 @@ further calls to <a class="reference internal" href="#agen.aclose" title="agen.a
 </section>
 </section>
 <section id="primaries">
-<span id="id4"></span><h2><span class="section-number">6.3. </span>Primaries<a class="headerlink" href="#primaries" title="本標題的永久連結">¶</a></h2>
+<span id="id4"></span><h2><span class="section-number">6.3. </span>Primaries<a class="headerlink" href="#primaries" title="Permalink to this heading">¶</a></h2>
 <p id="index-38">Primaries represent the most tightly bound operations of the language. Their
 syntax is:</p>
 <pre>
-<strong id="grammar-token-python-grammar-primary"><span id="grammar-token-primary"></span>primary</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-atom"><code class="xref docutils literal notranslate"><span class="pre">atom</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-attributeref"><code class="xref docutils literal notranslate"><span class="pre">attributeref</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-subscription"><code class="xref docutils literal notranslate"><span class="pre">subscription</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-slicing"><code class="xref docutils literal notranslate"><span class="pre">slicing</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-call"><code class="xref docutils literal notranslate"><span class="pre">call</span></code></a>
+<strong id="grammar-token-python-grammar-primary">primary</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-atom"><code class="xref docutils literal notranslate"><span class="pre">atom</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-attributeref"><code class="xref docutils literal notranslate"><span class="pre">attributeref</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-subscription"><code class="xref docutils literal notranslate"><span class="pre">subscription</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-slicing"><code class="xref docutils literal notranslate"><span class="pre">slicing</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-call"><code class="xref docutils literal notranslate"><span class="pre">call</span></code></a>
 </pre>
 <section id="attribute-references">
-<span id="id5"></span><h3><span class="section-number">6.3.1. </span>Attribute references<a class="headerlink" href="#attribute-references" title="本標題的永久連結">¶</a></h3>
+<span id="id5"></span><h3><span class="section-number">6.3.1. </span>Attribute references<a class="headerlink" href="#attribute-references" title="Permalink to this heading">¶</a></h3>
 <p id="index-39">An attribute reference is a primary followed by a period and a name:</p>
 <pre>
-<strong id="grammar-token-python-grammar-attributeref"><span id="grammar-token-attributeref"></span>attributeref</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;.&quot; <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a>
+<strong id="grammar-token-python-grammar-attributeref">attributeref</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;.&quot; <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a>
 </pre>
 <p id="index-40">The primary must evaluate to an object of a type that supports attribute
 references, which most objects do.  This object is then asked to produce the
@@ -791,13 +792,13 @@ the object produced is determined by the object.  Multiple evaluations of the
 same attribute reference may yield different objects.</p>
 </section>
 <section id="subscriptions">
-<span id="id6"></span><h3><span class="section-number">6.3.2. </span>Subscriptions<a class="headerlink" href="#subscriptions" title="本標題的永久連結">¶</a></h3>
+<span id="id6"></span><h3><span class="section-number">6.3.2. </span>Subscriptions<a class="headerlink" href="#subscriptions" title="Permalink to this heading">¶</a></h3>
 <span class="target" id="index-41"></span><p id="index-42">The subscription of an instance of a <a class="reference internal" href="datamodel.html#sequence-types"><span class="std std-ref">container class</span></a>
 will generally select an element from the container. The subscription of a
 <a class="reference internal" href="../glossary.html#term-generic-type"><span class="xref std std-term">generic class</span></a> will generally return a
 <a class="reference internal" href="../library/stdtypes.html#types-genericalias"><span class="std std-ref">GenericAlias</span></a> object.</p>
 <pre>
-<strong id="grammar-token-python-grammar-subscription"><span id="grammar-token-subscription"></span>subscription</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;[&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression_list"><code class="xref docutils literal notranslate"><span class="pre">expression_list</span></code></a> &quot;]&quot;
+<strong id="grammar-token-python-grammar-subscription">subscription</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;[&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression_list"><code class="xref docutils literal notranslate"><span class="pre">expression_list</span></code></a> &quot;]&quot;
 </pre>
 <p>When an object is subscripted, the interpreter will evaluate the primary and
 the expression list.</p>
@@ -836,18 +837,18 @@ this method will need to explicitly add that support.</p>
 string of exactly one character.</p>
 </section>
 <section id="slicings">
-<span id="id7"></span><h3><span class="section-number">6.3.3. </span>Slicings<a class="headerlink" href="#slicings" title="本標題的永久連結">¶</a></h3>
+<span id="id7"></span><h3><span class="section-number">6.3.3. </span>Slicings<a class="headerlink" href="#slicings" title="Permalink to this heading">¶</a></h3>
 <span class="target" id="index-44"></span><p id="index-45">A slicing selects a range of items in a sequence object (e.g., a string, tuple
 or list).  Slicings may be used as expressions or as targets in assignment or
 <a class="reference internal" href="simple_stmts.html#del"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">del</span></code></a> statements.  The syntax for a slicing:</p>
 <pre>
-<strong id="grammar-token-python-grammar-slicing"><span id="grammar-token-slicing"></span>slicing     </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;[&quot; <a class="reference internal" href="#grammar-token-python-grammar-slice_list"><code class="xref docutils literal notranslate"><span class="pre">slice_list</span></code></a> &quot;]&quot;
-<strong id="grammar-token-python-grammar-slice_list"><span id="grammar-token-slice-list"></span>slice_list  </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-slice_item"><code class="xref docutils literal notranslate"><span class="pre">slice_item</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-slice_item"><code class="xref docutils literal notranslate"><span class="pre">slice_item</span></code></a>)* [&quot;,&quot;]
-<strong id="grammar-token-python-grammar-slice_item"><span id="grammar-token-slice-item"></span>slice_item  </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-proper_slice"><code class="xref docutils literal notranslate"><span class="pre">proper_slice</span></code></a>
-<strong id="grammar-token-python-grammar-proper_slice"><span id="grammar-token-proper-slice"></span>proper_slice</strong> ::=  [<a class="reference internal" href="#grammar-token-python-grammar-lower_bound"><code class="xref docutils literal notranslate"><span class="pre">lower_bound</span></code></a>] &quot;:&quot; [<a class="reference internal" href="#grammar-token-python-grammar-upper_bound"><code class="xref docutils literal notranslate"><span class="pre">upper_bound</span></code></a>] [ &quot;:&quot; [<a class="reference internal" href="#grammar-token-python-grammar-stride"><code class="xref docutils literal notranslate"><span class="pre">stride</span></code></a>] ]
-<strong id="grammar-token-python-grammar-lower_bound"><span id="grammar-token-lower-bound"></span>lower_bound </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
-<strong id="grammar-token-python-grammar-upper_bound"><span id="grammar-token-upper-bound"></span>upper_bound </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
-<strong id="grammar-token-python-grammar-stride"><span id="grammar-token-stride"></span>stride      </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-slicing">slicing     </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;[&quot; <a class="reference internal" href="#grammar-token-python-grammar-slice_list"><code class="xref docutils literal notranslate"><span class="pre">slice_list</span></code></a> &quot;]&quot;
+<strong id="grammar-token-python-grammar-slice_list">slice_list  </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-slice_item"><code class="xref docutils literal notranslate"><span class="pre">slice_item</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-slice_item"><code class="xref docutils literal notranslate"><span class="pre">slice_item</span></code></a>)* [&quot;,&quot;]
+<strong id="grammar-token-python-grammar-slice_item">slice_item  </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-proper_slice"><code class="xref docutils literal notranslate"><span class="pre">proper_slice</span></code></a>
+<strong id="grammar-token-python-grammar-proper_slice">proper_slice</strong> ::=  [<a class="reference internal" href="#grammar-token-python-grammar-lower_bound"><code class="xref docutils literal notranslate"><span class="pre">lower_bound</span></code></a>] &quot;:&quot; [<a class="reference internal" href="#grammar-token-python-grammar-upper_bound"><code class="xref docutils literal notranslate"><span class="pre">upper_bound</span></code></a>] [ &quot;:&quot; [<a class="reference internal" href="#grammar-token-python-grammar-stride"><code class="xref docutils literal notranslate"><span class="pre">stride</span></code></a>] ]
+<strong id="grammar-token-python-grammar-lower_bound">lower_bound </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-upper_bound">upper_bound </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-stride">stride      </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
 </pre>
 <p>There is ambiguity in the formal syntax here: anything that looks like an
 expression list also looks like a slice list, so any subscription can be
@@ -868,22 +869,22 @@ expressions given as lower bound, upper bound and stride, respectively,
 substituting <code class="docutils literal notranslate"><span class="pre">None</span></code> for missing expressions.</p>
 </section>
 <section id="calls">
-<span id="index-47"></span><span id="id8"></span><h3><span class="section-number">6.3.4. </span>Calls<a class="headerlink" href="#calls" title="本標題的永久連結">¶</a></h3>
+<span id="index-47"></span><span id="id8"></span><h3><span class="section-number">6.3.4. </span>Calls<a class="headerlink" href="#calls" title="Permalink to this heading">¶</a></h3>
 <p>A call calls a callable object (e.g., a <a class="reference internal" href="../glossary.html#term-function"><span class="xref std std-term">function</span></a>) with a possibly empty
 series of <a class="reference internal" href="../glossary.html#term-argument"><span class="xref std std-term">arguments</span></a>:</p>
 <pre>
-<strong id="grammar-token-python-grammar-call"><span id="grammar-token-call"></span>call                </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;(&quot; [<a class="reference internal" href="#grammar-token-python-grammar-argument_list"><code class="xref docutils literal notranslate"><span class="pre">argument_list</span></code></a> [&quot;,&quot;] | <a class="reference internal" href="#grammar-token-python-grammar-comprehension"><code class="xref docutils literal notranslate"><span class="pre">comprehension</span></code></a>] &quot;)&quot;
-<strong id="grammar-token-python-grammar-argument_list"><span id="grammar-token-argument-list"></span>argument_list       </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-positional_arguments"><code class="xref docutils literal notranslate"><span class="pre">positional_arguments</span></code></a> [&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-starred_and_keywords"><code class="xref docutils literal notranslate"><span class="pre">starred_and_keywords</span></code></a>]
+<strong id="grammar-token-python-grammar-call">call                </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a> &quot;(&quot; [<a class="reference internal" href="#grammar-token-python-grammar-argument_list"><code class="xref docutils literal notranslate"><span class="pre">argument_list</span></code></a> [&quot;,&quot;] | <a class="reference internal" href="#grammar-token-python-grammar-comprehension"><code class="xref docutils literal notranslate"><span class="pre">comprehension</span></code></a>] &quot;)&quot;
+<strong id="grammar-token-python-grammar-argument_list">argument_list       </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-positional_arguments"><code class="xref docutils literal notranslate"><span class="pre">positional_arguments</span></code></a> [&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-starred_and_keywords"><code class="xref docutils literal notranslate"><span class="pre">starred_and_keywords</span></code></a>]
                             [&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-keywords_arguments"><code class="xref docutils literal notranslate"><span class="pre">keywords_arguments</span></code></a>]
                           | <a class="reference internal" href="#grammar-token-python-grammar-starred_and_keywords"><code class="xref docutils literal notranslate"><span class="pre">starred_and_keywords</span></code></a> [&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-keywords_arguments"><code class="xref docutils literal notranslate"><span class="pre">keywords_arguments</span></code></a>]
                           | <a class="reference internal" href="#grammar-token-python-grammar-keywords_arguments"><code class="xref docutils literal notranslate"><span class="pre">keywords_arguments</span></code></a>
-<strong id="grammar-token-python-grammar-positional_arguments"><span id="grammar-token-positional-arguments"></span>positional_arguments</strong> ::=  positional_item (&quot;,&quot; positional_item)*
-<strong id="grammar-token-python-grammar-positional_item"><span id="grammar-token-positional-item"></span>positional_item     </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-assignment_expression"><code class="xref docutils literal notranslate"><span class="pre">assignment_expression</span></code></a> | &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
-<strong id="grammar-token-python-grammar-starred_and_keywords"><span id="grammar-token-starred-and-keywords"></span>starred_and_keywords</strong> ::=  (&quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-keyword_item"><code class="xref docutils literal notranslate"><span class="pre">keyword_item</span></code></a>)
+<strong id="grammar-token-python-grammar-positional_arguments">positional_arguments</strong> ::=  positional_item (&quot;,&quot; positional_item)*
+<strong id="grammar-token-python-grammar-positional_item">positional_item     </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-assignment_expression"><code class="xref docutils literal notranslate"><span class="pre">assignment_expression</span></code></a> | &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-starred_and_keywords">starred_and_keywords</strong> ::=  (&quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-keyword_item"><code class="xref docutils literal notranslate"><span class="pre">keyword_item</span></code></a>)
                           (&quot;,&quot; &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | &quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-keyword_item"><code class="xref docutils literal notranslate"><span class="pre">keyword_item</span></code></a>)*
-<strong id="grammar-token-python-grammar-keywords_arguments"><span id="grammar-token-keywords-arguments"></span>keywords_arguments  </strong> ::=  (<a class="reference internal" href="#grammar-token-python-grammar-keyword_item"><code class="xref docutils literal notranslate"><span class="pre">keyword_item</span></code></a> | &quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>)
+<strong id="grammar-token-python-grammar-keywords_arguments">keywords_arguments  </strong> ::=  (<a class="reference internal" href="#grammar-token-python-grammar-keyword_item"><code class="xref docutils literal notranslate"><span class="pre">keyword_item</span></code></a> | &quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>)
                           (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-keyword_item"><code class="xref docutils literal notranslate"><span class="pre">keyword_item</span></code></a> | &quot;,&quot; &quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>)*
-<strong id="grammar-token-python-grammar-keyword_item"><span id="grammar-token-keyword-item"></span>keyword_item        </strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> &quot;=&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-keyword_item">keyword_item        </strong> ::=  <a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> &quot;=&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
 </pre>
 <p>An optional trailing comma may be present after the positional and keyword arguments
 but does not affect the semantics.</p>
@@ -991,22 +992,22 @@ if that method was called.</p>
 </section>
 </section>
 <section id="await-expression">
-<span id="await"></span><span id="index-57"></span><h2><span class="section-number">6.4. </span>Await expression<a class="headerlink" href="#await-expression" title="本標題的永久連結">¶</a></h2>
+<span id="await"></span><span id="index-57"></span><h2><span class="section-number">6.4. </span>Await expression<a class="headerlink" href="#await-expression" title="Permalink to this heading">¶</a></h2>
 <p>Suspend the execution of <a class="reference internal" href="../glossary.html#term-coroutine"><span class="xref std std-term">coroutine</span></a> on an <a class="reference internal" href="../glossary.html#term-awaitable"><span class="xref std std-term">awaitable</span></a> object.
 Can only be used inside a <a class="reference internal" href="../glossary.html#term-coroutine-function"><span class="xref std std-term">coroutine function</span></a>.</p>
 <pre>
-<strong id="grammar-token-python-grammar-await_expr"><span id="grammar-token-await-expr"></span>await_expr</strong> ::=  &quot;await&quot; <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a>
+<strong id="grammar-token-python-grammar-await_expr">await_expr</strong> ::=  &quot;await&quot; <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a>
 </pre>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
 </div>
 </section>
 <section id="the-power-operator">
-<span id="power"></span><h2><span class="section-number">6.5. </span>The power operator<a class="headerlink" href="#the-power-operator" title="本標題的永久連結">¶</a></h2>
+<span id="power"></span><h2><span class="section-number">6.5. </span>The power operator<a class="headerlink" href="#the-power-operator" title="Permalink to this heading">¶</a></h2>
 <p id="index-58">The power operator binds more tightly than unary operators on its left; it binds
 less tightly than unary operators on its right.  The syntax is:</p>
 <pre>
-<strong id="grammar-token-python-grammar-power"><span id="grammar-token-power"></span>power</strong> ::=  (<a class="reference internal" href="#grammar-token-python-grammar-await_expr"><code class="xref docutils literal notranslate"><span class="pre">await_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a>) [&quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a>]
+<strong id="grammar-token-python-grammar-power">power</strong> ::=  (<a class="reference internal" href="#grammar-token-python-grammar-await_expr"><code class="xref docutils literal notranslate"><span class="pre">await_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-primary"><code class="xref docutils literal notranslate"><span class="pre">primary</span></code></a>) [&quot;**&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a>]
 </pre>
 <p>Thus, in an unparenthesized sequence of power and unary operators, the operators
 are evaluated from right to left (this does not constrain the evaluation order
@@ -1025,10 +1026,10 @@ number. (In earlier versions it raised a <a class="reference internal" href="../
 <p>This operation can be customized using the special <code class="xref py py-meth docutils literal notranslate"><span class="pre">__pow__()</span></code> method.</p>
 </section>
 <section id="unary-arithmetic-and-bitwise-operations">
-<span id="unary"></span><h2><span class="section-number">6.6. </span>Unary arithmetic and bitwise operations<a class="headerlink" href="#unary-arithmetic-and-bitwise-operations" title="本標題的永久連結">¶</a></h2>
+<span id="unary"></span><h2><span class="section-number">6.6. </span>Unary arithmetic and bitwise operations<a class="headerlink" href="#unary-arithmetic-and-bitwise-operations" title="Permalink to this heading">¶</a></h2>
 <p id="index-59">All unary arithmetic and bitwise operations have the same priority:</p>
 <pre>
-<strong id="grammar-token-python-grammar-u_expr"><span id="grammar-token-u-expr"></span>u_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-power"><code class="xref docutils literal notranslate"><span class="pre">power</span></code></a> | &quot;-&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | &quot;+&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | &quot;~&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a>
+<strong id="grammar-token-python-grammar-u_expr">u_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-power"><code class="xref docutils literal notranslate"><span class="pre">power</span></code></a> | &quot;-&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | &quot;+&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | &quot;~&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a>
 </pre>
 <p id="index-60">The unary <code class="docutils literal notranslate"><span class="pre">-</span></code> (minus) operator yields the negation of its numeric argument; the
 operation can be overridden with the <code class="xref py py-meth docutils literal notranslate"><span class="pre">__neg__()</span></code> special method.</p>
@@ -1042,16 +1043,16 @@ applies to integral numbers or to custom objects that override the
 <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> exception is raised.</p>
 </section>
 <section id="binary-arithmetic-operations">
-<span id="binary"></span><h2><span class="section-number">6.7. </span>Binary arithmetic operations<a class="headerlink" href="#binary-arithmetic-operations" title="本標題的永久連結">¶</a></h2>
+<span id="binary"></span><h2><span class="section-number">6.7. </span>Binary arithmetic operations<a class="headerlink" href="#binary-arithmetic-operations" title="Permalink to this heading">¶</a></h2>
 <p id="index-64">The binary arithmetic operations have the conventional priority levels.  Note
 that some of these operations also apply to certain non-numeric types.  Apart
 from the power operator, there are only two levels, one for multiplicative
 operators and one for additive operators:</p>
 <pre>
-<strong id="grammar-token-python-grammar-m_expr"><span id="grammar-token-m-expr"></span>m_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;&#64;&quot; <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> |
+<strong id="grammar-token-python-grammar-m_expr">m_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;&#64;&quot; <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> |
             <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;//&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;/&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a> |
             <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> &quot;%&quot; <a class="reference internal" href="#grammar-token-python-grammar-u_expr"><code class="xref docutils literal notranslate"><span class="pre">u_expr</span></code></a>
-<strong id="grammar-token-python-grammar-a_expr"><span id="grammar-token-a-expr"></span>a_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a> &quot;+&quot; <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a> &quot;-&quot; <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a>
+<strong id="grammar-token-python-grammar-a_expr">a_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a> &quot;+&quot; <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a> &quot;-&quot; <a class="reference internal" href="#grammar-token-python-grammar-m_expr"><code class="xref docutils literal notranslate"><span class="pre">m_expr</span></code></a>
 </pre>
 <p id="index-65">The <code class="docutils literal notranslate"><span class="pre">*</span></code> (multiplication) operator yields the product of its arguments.  The
 arguments must either both be numbers, or one argument must be an integer and
@@ -1080,11 +1081,11 @@ arguments may be floating point numbers, e.g., <code class="docutils literal not
 (since <code class="docutils literal notranslate"><span class="pre">3.14</span></code> equals <code class="docutils literal notranslate"><span class="pre">4*0.7</span> <span class="pre">+</span> <span class="pre">0.34</span></code>.)  The modulo operator always yields a
 result with the same sign as its second operand (or zero); the absolute value of
 the result is strictly smaller than the absolute value of the second operand
-<a class="footnote-reference brackets" href="#id17" id="id9">1</a>.</p>
+<a class="footnote-reference brackets" href="#id17" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <p>The floor division and modulo operators are connected by the following
 identity: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">(x//y)*y</span> <span class="pre">+</span> <span class="pre">(x%y)</span></code>.  Floor division and modulo are also
 connected with the built-in function <a class="reference internal" href="../library/functions.html#divmod" title="divmod"><code class="xref py py-func docutils literal notranslate"><span class="pre">divmod()</span></code></a>: <code class="docutils literal notranslate"><span class="pre">divmod(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">(x//y,</span>
-<span class="pre">x%y)</span></code>. <a class="footnote-reference brackets" href="#id18" id="id10">2</a>.</p>
+<span class="pre">x%y)</span></code>. <a class="footnote-reference brackets" href="#id18" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 <p>In addition to performing the modulo operation on numbers, the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator is
 also overloaded by string objects to perform old-style string formatting (also
 known as interpolation).  The syntax for string formatting is described in the
@@ -1104,10 +1105,10 @@ numeric arguments are first converted to a common type.</p>
 <p>This operation can be customized using the special <code class="xref py py-meth docutils literal notranslate"><span class="pre">__sub__()</span></code> method.</p>
 </section>
 <section id="shifting-operations">
-<span id="shifting"></span><h2><span class="section-number">6.8. </span>Shifting operations<a class="headerlink" href="#shifting-operations" title="本標題的永久連結">¶</a></h2>
+<span id="shifting"></span><h2><span class="section-number">6.8. </span>Shifting operations<a class="headerlink" href="#shifting-operations" title="Permalink to this heading">¶</a></h2>
 <p id="index-71">The shifting operations have lower priority than the arithmetic operations:</p>
 <pre>
-<strong id="grammar-token-python-grammar-shift_expr"><span id="grammar-token-shift-expr"></span>shift_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-shift_expr"><code class="xref docutils literal notranslate"><span class="pre">shift_expr</span></code></a> (&quot;&lt;&lt;&quot; | &quot;&gt;&gt;&quot;) <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a>
+<strong id="grammar-token-python-grammar-shift_expr">shift_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-shift_expr"><code class="xref docutils literal notranslate"><span class="pre">shift_expr</span></code></a> (&quot;&lt;&lt;&quot; | &quot;&gt;&gt;&quot;) <a class="reference internal" href="#grammar-token-python-grammar-a_expr"><code class="xref docutils literal notranslate"><span class="pre">a_expr</span></code></a>
 </pre>
 <p>These operators accept integers as arguments.  They shift the first argument to
 the left or right by the number of bits given by the second argument.</p>
@@ -1117,12 +1118,12 @@ the left or right by the number of bits given by the second argument.</p>
 shift by <em>n</em> bits is defined as multiplication with <code class="docutils literal notranslate"><span class="pre">pow(2,n)</span></code>.</p>
 </section>
 <section id="binary-bitwise-operations">
-<span id="bitwise"></span><h2><span class="section-number">6.9. </span>Binary bitwise operations<a class="headerlink" href="#binary-bitwise-operations" title="本標題的永久連結">¶</a></h2>
+<span id="bitwise"></span><h2><span class="section-number">6.9. </span>Binary bitwise operations<a class="headerlink" href="#binary-bitwise-operations" title="Permalink to this heading">¶</a></h2>
 <p id="index-73">Each of the three bitwise operations has a different priority level:</p>
 <pre>
-<strong id="grammar-token-python-grammar-and_expr"><span id="grammar-token-and-expr"></span>and_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-shift_expr"><code class="xref docutils literal notranslate"><span class="pre">shift_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-and_expr"><code class="xref docutils literal notranslate"><span class="pre">and_expr</span></code></a> &quot;&amp;&quot; <a class="reference internal" href="#grammar-token-python-grammar-shift_expr"><code class="xref docutils literal notranslate"><span class="pre">shift_expr</span></code></a>
-<strong id="grammar-token-python-grammar-xor_expr"><span id="grammar-token-xor-expr"></span>xor_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-and_expr"><code class="xref docutils literal notranslate"><span class="pre">and_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-xor_expr"><code class="xref docutils literal notranslate"><span class="pre">xor_expr</span></code></a> &quot;^&quot; <a class="reference internal" href="#grammar-token-python-grammar-and_expr"><code class="xref docutils literal notranslate"><span class="pre">and_expr</span></code></a>
-<strong id="grammar-token-python-grammar-or_expr"><span id="grammar-token-or-expr"></span>or_expr </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-xor_expr"><code class="xref docutils literal notranslate"><span class="pre">xor_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a> &quot;|&quot; <a class="reference internal" href="#grammar-token-python-grammar-xor_expr"><code class="xref docutils literal notranslate"><span class="pre">xor_expr</span></code></a>
+<strong id="grammar-token-python-grammar-and_expr">and_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-shift_expr"><code class="xref docutils literal notranslate"><span class="pre">shift_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-and_expr"><code class="xref docutils literal notranslate"><span class="pre">and_expr</span></code></a> &quot;&amp;&quot; <a class="reference internal" href="#grammar-token-python-grammar-shift_expr"><code class="xref docutils literal notranslate"><span class="pre">shift_expr</span></code></a>
+<strong id="grammar-token-python-grammar-xor_expr">xor_expr</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-and_expr"><code class="xref docutils literal notranslate"><span class="pre">and_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-xor_expr"><code class="xref docutils literal notranslate"><span class="pre">xor_expr</span></code></a> &quot;^&quot; <a class="reference internal" href="#grammar-token-python-grammar-and_expr"><code class="xref docutils literal notranslate"><span class="pre">and_expr</span></code></a>
+<strong id="grammar-token-python-grammar-or_expr">or_expr </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-xor_expr"><code class="xref docutils literal notranslate"><span class="pre">xor_expr</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a> &quot;|&quot; <a class="reference internal" href="#grammar-token-python-grammar-xor_expr"><code class="xref docutils literal notranslate"><span class="pre">xor_expr</span></code></a>
 </pre>
 <p id="index-74">The <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator yields the bitwise AND of its arguments, which must be
 integers or one of them must be a custom object overriding <code class="xref py py-meth docutils literal notranslate"><span class="pre">__and__()</span></code> or
@@ -1135,14 +1136,14 @@ must be integers or one of them must be a custom object overriding <code class="
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__ror__()</span></code> special methods.</p>
 </section>
 <section id="comparisons">
-<span id="id11"></span><h2><span class="section-number">6.10. </span>Comparisons<a class="headerlink" href="#comparisons" title="本標題的永久連結">¶</a></h2>
+<span id="id11"></span><h2><span class="section-number">6.10. </span>Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this heading">¶</a></h2>
 <p id="index-77">Unlike C, all comparison operations in Python have the same priority, which is
 lower than that of any arithmetic, shifting or bitwise operation.  Also unlike
 C, expressions like <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">c</span></code> have the interpretation that is conventional
 in mathematics:</p>
 <pre>
-<strong id="grammar-token-python-grammar-comparison"><span id="grammar-token-comparison"></span>comparison   </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a> (<a class="reference internal" href="#grammar-token-python-grammar-comp_operator"><code class="xref docutils literal notranslate"><span class="pre">comp_operator</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a>)*
-<strong id="grammar-token-python-grammar-comp_operator"><span id="grammar-token-comp-operator"></span>comp_operator</strong> ::=  &quot;&lt;&quot; | &quot;&gt;&quot; | &quot;==&quot; | &quot;&gt;=&quot; | &quot;&lt;=&quot; | &quot;!=&quot;
+<strong id="grammar-token-python-grammar-comparison">comparison   </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a> (<a class="reference internal" href="#grammar-token-python-grammar-comp_operator"><code class="xref docutils literal notranslate"><span class="pre">comp_operator</span></code></a> <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a>)*
+<strong id="grammar-token-python-grammar-comp_operator">comp_operator</strong> ::=  &quot;&lt;&quot; | &quot;&gt;&quot; | &quot;==&quot; | &quot;&gt;=&quot; | &quot;&lt;=&quot; | &quot;!=&quot;
                    | &quot;is&quot; [&quot;not&quot;] | [&quot;not&quot;] &quot;in&quot;
 </pre>
 <p>Comparisons yield boolean values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Custom
@@ -1159,7 +1160,7 @@ evaluated at most once.</p>
 <em>c</em>, so that, e.g., <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span> <span class="pre">&gt;</span> <span class="pre">z</span></code> is perfectly legal (though perhaps not
 pretty).</p>
 <section id="value-comparisons">
-<h3><span class="section-number">6.10.1. </span>Value comparisons<a class="headerlink" href="#value-comparisons" title="本標題的永久連結">¶</a></h3>
+<h3><span class="section-number">6.10.1. </span>Value comparisons<a class="headerlink" href="#value-comparisons" title="Permalink to this heading">¶</a></h3>
 <p>The operators <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, and <code class="docutils literal notranslate"><span class="pre">!=</span></code> compare the
 values of two objects.  The objects do not need to have the same type.</p>
 <p>Chapter <a class="reference internal" href="datamodel.html#objects"><span class="std std-ref">Objects, values and types</span></a> states that objects have a value (in addition to type
@@ -1213,7 +1214,7 @@ compared within and across their types.  They compare lexicographically using
 the numeric values of their elements.</p></li>
 <li><p>Strings (instances of <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) compare lexicographically using the
 numerical Unicode code points (the result of the built-in function
-<a class="reference internal" href="../library/functions.html#ord" title="ord"><code class="xref py py-func docutils literal notranslate"><span class="pre">ord()</span></code></a>) of their characters. <a class="footnote-reference brackets" href="#id19" id="id12">3</a></p>
+<a class="reference internal" href="../library/functions.html#ord" title="ord"><code class="xref py py-func docutils literal notranslate"><span class="pre">ord()</span></code></a>) of their characters. <a class="footnote-reference brackets" href="#id19" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <p>Strings and binary sequences cannot be directly compared.</p>
 </li>
 <li><p>Sequences (instances of <a class="reference internal" href="../library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, <a class="reference internal" href="../library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>, or <a class="reference internal" href="../library/stdtypes.html#range" title="range"><code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code></a>) can
@@ -1301,7 +1302,7 @@ or be marked as unhashable.</p></li>
 values are an example for not following these rules.</p>
 </section>
 <section id="membership-test-operations">
-<span id="membership-test-details"></span><span id="not-in"></span><span id="in"></span><h3><span class="section-number">6.10.2. </span>Membership test operations<a class="headerlink" href="#membership-test-operations" title="本標題的永久連結">¶</a></h3>
+<span id="membership-test-details"></span><span id="not-in"></span><span id="in"></span><h3><span class="section-number">6.10.2. </span>Membership test operations<a class="headerlink" href="#membership-test-operations" title="Permalink to this heading">¶</a></h3>
 <p>The operators <a class="reference internal" href="#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a> and <a class="reference internal" href="#not-in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></a> test for membership.  <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">in</span>
 <span class="pre">s</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>x</em> is a member of <em>s</em>, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.
 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">s</span></code> returns the negation of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">in</span> <span class="pre">s</span></code>.  All built-in sequences and
@@ -1330,19 +1331,19 @@ if <a class="reference internal" href="#in"><code class="xref std std-keyword do
 <a class="reference internal" href="#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a>.</p>
 </section>
 <section id="is-not">
-<span id="is"></span><span id="index-81"></span><span id="identity-comparisons"></span><h3><span class="section-number">6.10.3. </span>Identity comparisons<a class="headerlink" href="#is-not" title="本標題的永久連結">¶</a></h3>
+<span id="is"></span><span id="index-81"></span><span id="identity-comparisons"></span><h3><span class="section-number">6.10.3. </span>Identity comparisons<a class="headerlink" href="#is-not" title="Permalink to this heading">¶</a></h3>
 <p>The operators <a class="reference internal" href="#is"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">is</span></code></a> and <a class="reference internal" href="#is-not"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code></a> test for an object's identity: <code class="docutils literal notranslate"><span class="pre">x</span>
 <span class="pre">is</span> <span class="pre">y</span></code> is true if and only if <em>x</em> and <em>y</em> are the same object.  An Object's identity
 is determined using the <a class="reference internal" href="../library/functions.html#id" title="id"><code class="xref py py-meth docutils literal notranslate"><span class="pre">id()</span></code></a> function.  <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">y</span></code> yields the inverse
-truth value. <a class="footnote-reference brackets" href="#id20" id="id13">4</a></p>
+truth value. <a class="footnote-reference brackets" href="#id20" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 </section>
 </section>
 <section id="boolean-operations">
-<span id="not"></span><span id="or"></span><span id="and"></span><span id="booleans"></span><h2><span class="section-number">6.11. </span>Boolean operations<a class="headerlink" href="#boolean-operations" title="本標題的永久連結">¶</a></h2>
+<span id="not"></span><span id="or"></span><span id="and"></span><span id="booleans"></span><h2><span class="section-number">6.11. </span>Boolean operations<a class="headerlink" href="#boolean-operations" title="Permalink to this heading">¶</a></h2>
 <pre id="index-82">
-<strong id="grammar-token-python-grammar-or_test"><span id="grammar-token-or-test"></span>or_test </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-and_test"><code class="xref docutils literal notranslate"><span class="pre">and_test</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> &quot;or&quot; <a class="reference internal" href="#grammar-token-python-grammar-and_test"><code class="xref docutils literal notranslate"><span class="pre">and_test</span></code></a>
-<strong id="grammar-token-python-grammar-and_test"><span id="grammar-token-and-test"></span>and_test</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-not_test"><code class="xref docutils literal notranslate"><span class="pre">not_test</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-and_test"><code class="xref docutils literal notranslate"><span class="pre">and_test</span></code></a> &quot;and&quot; <a class="reference internal" href="#grammar-token-python-grammar-not_test"><code class="xref docutils literal notranslate"><span class="pre">not_test</span></code></a>
-<strong id="grammar-token-python-grammar-not_test"><span id="grammar-token-not-test"></span>not_test</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-comparison"><code class="xref docutils literal notranslate"><span class="pre">comparison</span></code></a> | &quot;not&quot; <a class="reference internal" href="#grammar-token-python-grammar-not_test"><code class="xref docutils literal notranslate"><span class="pre">not_test</span></code></a>
+<strong id="grammar-token-python-grammar-or_test">or_test </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-and_test"><code class="xref docutils literal notranslate"><span class="pre">and_test</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> &quot;or&quot; <a class="reference internal" href="#grammar-token-python-grammar-and_test"><code class="xref docutils literal notranslate"><span class="pre">and_test</span></code></a>
+<strong id="grammar-token-python-grammar-and_test">and_test</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-not_test"><code class="xref docutils literal notranslate"><span class="pre">not_test</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-and_test"><code class="xref docutils literal notranslate"><span class="pre">and_test</span></code></a> &quot;and&quot; <a class="reference internal" href="#grammar-token-python-grammar-not_test"><code class="xref docutils literal notranslate"><span class="pre">not_test</span></code></a>
+<strong id="grammar-token-python-grammar-not_test">not_test</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-comparison"><code class="xref docutils literal notranslate"><span class="pre">comparison</span></code></a> | &quot;not&quot; <a class="reference internal" href="#grammar-token-python-grammar-not_test"><code class="xref docutils literal notranslate"><span class="pre">not_test</span></code></a>
 </pre>
 <p>In the context of Boolean operations, and also when expressions are used by
 control flow statements, the following values are interpreted as false:
@@ -1365,9 +1366,9 @@ returns a boolean value regardless of the type of its argument
 (for example, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">'foo'</span></code> produces <code class="docutils literal notranslate"><span class="pre">False</span></code> rather than <code class="docutils literal notranslate"><span class="pre">''</span></code>.)</p>
 </section>
 <section id="assignment-expressions">
-<h2><span class="section-number">6.12. </span>Assignment expressions<a class="headerlink" href="#assignment-expressions" title="本標題的永久連結">¶</a></h2>
+<h2><span class="section-number">6.12. </span>Assignment expressions<a class="headerlink" href="#assignment-expressions" title="Permalink to this heading">¶</a></h2>
 <pre>
-<strong id="grammar-token-python-grammar-assignment_expression"><span id="grammar-token-assignment-expression"></span>assignment_expression</strong> ::=  [<a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> &quot;:=&quot;] <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-assignment_expression">assignment_expression</strong> ::=  [<a class="reference internal" href="lexical_analysis.html#grammar-token-python-grammar-identifier"><code class="xref docutils literal notranslate"><span class="pre">identifier</span></code></a> &quot;:=&quot;] <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
 </pre>
 <p>An assignment expression (sometimes also called a &quot;named expression&quot; or
 &quot;walrus&quot;) assigns an <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref std std-token docutils literal notranslate"><span class="pre">expression</span></code></a> to an
@@ -1388,10 +1389,10 @@ returns a boolean value regardless of the type of its argument
 </div>
 </section>
 <section id="conditional-expressions">
-<span id="if-expr"></span><h2><span class="section-number">6.13. </span>Conditional expressions<a class="headerlink" href="#conditional-expressions" title="本標題的永久連結">¶</a></h2>
+<span id="if-expr"></span><h2><span class="section-number">6.13. </span>Conditional expressions<a class="headerlink" href="#conditional-expressions" title="Permalink to this heading">¶</a></h2>
 <pre id="index-87">
-<strong id="grammar-token-python-grammar-conditional_expression"><span id="grammar-token-conditional-expression"></span>conditional_expression</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> [&quot;if&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> &quot;else&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>]
-<strong id="grammar-token-python-grammar-expression"><span id="grammar-token-expression"></span>expression            </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-conditional_expression"><code class="xref docutils literal notranslate"><span class="pre">conditional_expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-lambda_expr"><code class="xref docutils literal notranslate"><span class="pre">lambda_expr</span></code></a>
+<strong id="grammar-token-python-grammar-conditional_expression">conditional_expression</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> [&quot;if&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_test"><code class="xref docutils literal notranslate"><span class="pre">or_test</span></code></a> &quot;else&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>]
+<strong id="grammar-token-python-grammar-expression">expression            </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-conditional_expression"><code class="xref docutils literal notranslate"><span class="pre">conditional_expression</span></code></a> | <a class="reference internal" href="#grammar-token-python-grammar-lambda_expr"><code class="xref docutils literal notranslate"><span class="pre">lambda_expr</span></code></a>
 </pre>
 <p>Conditional expressions (sometimes called a &quot;ternary operator&quot;) have the lowest
 priority of all Python operations.</p>
@@ -1401,9 +1402,9 @@ evaluated and its value is returned.</p>
 <p>See <span class="target" id="index-88"></span><a class="pep reference external" href="https://peps.python.org/pep-0308/"><strong>PEP 308</strong></a> for more details about conditional expressions.</p>
 </section>
 <section id="lambda">
-<span id="lambdas"></span><span id="id14"></span><h2><span class="section-number">6.14. </span>Lambdas<a class="headerlink" href="#lambda" title="本標題的永久連結">¶</a></h2>
+<span id="lambdas"></span><span id="id14"></span><h2><span class="section-number">6.14. </span>Lambdas<a class="headerlink" href="#lambda" title="Permalink to this heading">¶</a></h2>
 <pre id="index-89">
-<strong id="grammar-token-python-grammar-lambda_expr"><span id="grammar-token-lambda-expr"></span>lambda_expr</strong> ::=  &quot;lambda&quot; [<a class="reference internal" href="compound_stmts.html#grammar-token-python-grammar-parameter_list"><code class="xref docutils literal notranslate"><span class="pre">parameter_list</span></code></a>] &quot;:&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
+<strong id="grammar-token-python-grammar-lambda_expr">lambda_expr</strong> ::=  &quot;lambda&quot; [<a class="reference internal" href="compound_stmts.html#grammar-token-python-grammar-parameter_list"><code class="xref docutils literal notranslate"><span class="pre">parameter_list</span></code></a>] &quot;:&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>
 </pre>
 <p>Lambda expressions (sometimes called lambda forms) are used to create anonymous
 functions. The expression <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">parameters:</span> <span class="pre">expression</span></code> yields a function
@@ -1417,12 +1418,12 @@ functions created with lambda expressions cannot contain statements or
 annotations.</p>
 </section>
 <section id="expression-lists">
-<span id="exprlists"></span><h2><span class="section-number">6.15. </span>Expression lists<a class="headerlink" href="#expression-lists" title="本標題的永久連結">¶</a></h2>
+<span id="exprlists"></span><h2><span class="section-number">6.15. </span>Expression lists<a class="headerlink" href="#expression-lists" title="Permalink to this heading">¶</a></h2>
 <pre id="index-90">
-<strong id="grammar-token-python-grammar-expression_list"><span id="grammar-token-expression-list"></span>expression_list   </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>)* [&quot;,&quot;]
-<strong id="grammar-token-python-grammar-starred_list"><span id="grammar-token-starred-list"></span>starred_list      </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a>)* [&quot;,&quot;]
-<strong id="grammar-token-python-grammar-starred_expression"><span id="grammar-token-starred-expression"></span>starred_expression</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | (<a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a> &quot;,&quot;)* [<a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a>]
-<strong id="grammar-token-python-grammar-starred_item"><span id="grammar-token-starred-item"></span>starred_item      </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-assignment_expression"><code class="xref docutils literal notranslate"><span class="pre">assignment_expression</span></code></a> | &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a>
+<strong id="grammar-token-python-grammar-expression_list">expression_list   </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a>)* [&quot;,&quot;]
+<strong id="grammar-token-python-grammar-starred_list">starred_list      </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a>)* [&quot;,&quot;]
+<strong id="grammar-token-python-grammar-starred_expression">starred_expression</strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-expression"><code class="xref docutils literal notranslate"><span class="pre">expression</span></code></a> | (<a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a> &quot;,&quot;)* [<a class="reference internal" href="#grammar-token-python-grammar-starred_item"><code class="xref docutils literal notranslate"><span class="pre">starred_item</span></code></a>]
+<strong id="grammar-token-python-grammar-starred_item">starred_item      </strong> ::=  <a class="reference internal" href="#grammar-token-python-grammar-assignment_expression"><code class="xref docutils literal notranslate"><span class="pre">assignment_expression</span></code></a> | &quot;*&quot; <a class="reference internal" href="#grammar-token-python-grammar-or_expr"><code class="xref docutils literal notranslate"><span class="pre">or_expr</span></code></a>
 </pre>
 <p id="index-91">Except when part of a list or set display, an expression list
 containing at least one comma yields a tuple.  The length of
@@ -1442,7 +1443,7 @@ expression. (To create an empty tuple, use an empty pair of parentheses:
 <code class="docutils literal notranslate"><span class="pre">()</span></code>.)</p>
 </section>
 <section id="evaluation-order">
-<span id="evalorder"></span><h2><span class="section-number">6.16. </span>Evaluation order<a class="headerlink" href="#evaluation-order" title="本標題的永久連結">¶</a></h2>
+<span id="evalorder"></span><h2><span class="section-number">6.16. </span>Evaluation order<a class="headerlink" href="#evaluation-order" title="Permalink to this heading">¶</a></h2>
 <p id="index-95">Python evaluates expressions from left to right.  Notice that while evaluating
 an assignment, the right-hand side is evaluated before the left-hand side.</p>
 <p>In the following lines, expressions will be evaluated in the arithmetic order of
@@ -1457,7 +1458,7 @@ their suffixes:</p>
 </div>
 </section>
 <section id="operator-precedence">
-<span id="operator-summary"></span><h2><span class="section-number">6.17. </span>Operator precedence<a class="headerlink" href="#operator-precedence" title="本標題的永久連結">¶</a></h2>
+<span id="operator-summary"></span><h2><span class="section-number">6.17. </span>Operator precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this heading">¶</a></h2>
 <p id="index-96">The following table summarizes the operator precedence in Python, from highest
 precedence (most binding) to lowest precedence (least binding).  Operators in
 the same box have the same precedence.  Unless the syntax is explicitly given,
@@ -1467,10 +1468,6 @@ exponentiation, which groups from right to left).</p>
 precedence and have a left-to-right chaining feature as described in the
 <a class="reference internal" href="#comparisons"><span class="std std-ref">Comparisons</span></a> section.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>描述</p></th>
@@ -1497,7 +1494,7 @@ call, attribute reference</p></td>
 <td><p>Await expression</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
-<td><p>Exponentiation <a class="footnote-reference brackets" href="#id21" id="id15">5</a></p></td>
+<td><p>Exponentiation <a class="footnote-reference brackets" href="#id21" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+x</span></code>, <code class="docutils literal notranslate"><span class="pre">-x</span></code>, <code class="docutils literal notranslate"><span class="pre">~x</span></code></p></td>
 <td><p>Positive, negative, bitwise NOT</p></td>
@@ -1505,7 +1502,7 @@ call, attribute reference</p></td>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">//</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
 <td><p>Multiplication, matrix
 multiplication, division, floor
-division, remainder <a class="footnote-reference brackets" href="#id22" id="id16">6</a></p></td>
+division, remainder <a class="footnote-reference brackets" href="#id22" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
 <td><p>Addition and subtraction</p></td>
@@ -1549,9 +1546,9 @@ tests and identity tests</p></td>
 </tbody>
 </table>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id9">1</a></span></dt>
-<dd><p>While <code class="docutils literal notranslate"><span class="pre">abs(x%y)</span> <span class="pre">&lt;</span> <span class="pre">abs(y)</span></code> is true mathematically, for floats it may not be
+<aside class="footnote brackets" id="id17" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">1</a><span class="fn-bracket">]</span></span>
+<p>While <code class="docutils literal notranslate"><span class="pre">abs(x%y)</span> <span class="pre">&lt;</span> <span class="pre">abs(y)</span></code> is true mathematically, for floats it may not be
 true numerically due to roundoff.  For example, and assuming a platform on which
 a Python float is an IEEE 754 double-precision number, in order that <code class="docutils literal notranslate"><span class="pre">-1e-100</span> <span class="pre">%</span>
 <span class="pre">1e100</span></code> have the same sign as <code class="docutils literal notranslate"><span class="pre">1e100</span></code>, the computed result is <code class="docutils literal notranslate"><span class="pre">-1e-100</span> <span class="pre">+</span>
@@ -1559,15 +1556,17 @@ a Python float is an IEEE 754 double-precision number, in order that <code class
 <a class="reference internal" href="../library/math.html#math.fmod" title="math.fmod"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.fmod()</span></code></a> returns a result whose sign matches the sign of the
 first argument instead, and so returns <code class="docutils literal notranslate"><span class="pre">-1e-100</span></code> in this case. Which approach
 is more appropriate depends on the application.</p>
-</dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id10">2</a></span></dt>
-<dd><p>If x is very close to an exact integer multiple of y, it's possible for
+</aside>
+<aside class="footnote brackets" id="id18" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">2</a><span class="fn-bracket">]</span></span>
+<p>If x is very close to an exact integer multiple of y, it's possible for
 <code class="docutils literal notranslate"><span class="pre">x//y</span></code> to be one larger than <code class="docutils literal notranslate"><span class="pre">(x-x%y)//y</span></code> due to rounding.  In such
 cases, Python returns the latter result, in order to preserve that
 <code class="docutils literal notranslate"><span class="pre">divmod(x,y)[0]</span> <span class="pre">*</span> <span class="pre">y</span> <span class="pre">+</span> <span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code> be very close to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-</dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
-<dd><p>The Unicode standard distinguishes between <em class="dfn">code points</em>
+</aside>
+<aside class="footnote brackets" id="id19" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">3</a><span class="fn-bracket">]</span></span>
+<p>The Unicode standard distinguishes between <em class="dfn">code points</em>
 (e.g. U+0041) and <em class="dfn">abstract characters</em> (e.g. &quot;LATIN CAPITAL LETTER A&quot;).
 While most abstract characters in Unicode are only represented using one
 code point, there is a number of abstract characters that can in addition be
@@ -1583,22 +1582,24 @@ points. This may be counter-intuitive to humans.  For example,
 represent the same abstract character &quot;LATIN CAPITAL LETTER C WITH CEDILLA&quot;.</p>
 <p>To compare strings at the level of abstract characters (that is, in a way
 intuitive to humans), use <a class="reference internal" href="../library/unicodedata.html#unicodedata.normalize" title="unicodedata.normalize"><code class="xref py py-func docutils literal notranslate"><span class="pre">unicodedata.normalize()</span></code></a>.</p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
-<dd><p>Due to automatic garbage-collection, free lists, and the dynamic nature of
+</aside>
+<aside class="footnote brackets" id="id20" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">4</a><span class="fn-bracket">]</span></span>
+<p>Due to automatic garbage-collection, free lists, and the dynamic nature of
 descriptors, you may notice seemingly unusual behaviour in certain uses of
 the <a class="reference internal" href="#is"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">is</span></code></a> operator, like those involving comparisons between instance
 methods, or constants.  Check their documentation for more info.</p>
-</dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id15">5</a></span></dt>
-<dd><p>The power operator <code class="docutils literal notranslate"><span class="pre">**</span></code> binds less tightly than an arithmetic or
+</aside>
+<aside class="footnote brackets" id="id21" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">5</a><span class="fn-bracket">]</span></span>
+<p>The power operator <code class="docutils literal notranslate"><span class="pre">**</span></code> binds less tightly than an arithmetic or
 bitwise unary operator on its right, that is, <code class="docutils literal notranslate"><span class="pre">2**-1</span></code> is <code class="docutils literal notranslate"><span class="pre">0.5</span></code>.</p>
-</dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id16">6</a></span></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">%</span></code> operator is also used for string formatting; the same
+</aside>
+<aside class="footnote brackets" id="id22" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">6</a><span class="fn-bracket">]</span></span>
+<p>The <code class="docutils literal notranslate"><span class="pre">%</span></code> operator is also used for string formatting; the same
 precedence applies.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -1685,6 +1686,10 @@ precedence applies.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1750,11 +1755,11 @@ precedence applies.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

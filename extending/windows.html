@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5. Building C and C++ Extensions on Windows &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="building-c-and-c-extensions-on-windows">
-<span id="building-on-windows"></span><h1><span class="section-number">5. </span>Building C and C++ Extensions on Windows<a class="headerlink" href="#building-c-and-c-extensions-on-windows" title="本標題的永久連結">¶</a></h1>
+<span id="building-on-windows"></span><h1><span class="section-number">5. </span>Building C and C++ Extensions on Windows<a class="headerlink" href="#building-c-and-c-extensions-on-windows" title="Permalink to this heading">¶</a></h1>
 <p>This chapter briefly explains how to create a Windows extension module for
 Python using Microsoft Visual C++, and follows with more detailed background
 information on how it works.  The explanatory material is useful for both the
@@ -182,7 +183,7 @@ will be the minor version number of the Python release you're working with.  For
 example, if you are using Python 2.2.1, <code class="docutils literal notranslate"><span class="pre">XY</span></code> will actually be <code class="docutils literal notranslate"><span class="pre">22</span></code>.</p>
 </div>
 <section id="a-cookbook-approach">
-<span id="win-cookbook"></span><h2><span class="section-number">5.1. </span>A Cookbook Approach<a class="headerlink" href="#a-cookbook-approach" title="本標題的永久連結">¶</a></h2>
+<span id="win-cookbook"></span><h2><span class="section-number">5.1. </span>A Cookbook Approach<a class="headerlink" href="#a-cookbook-approach" title="Permalink to this heading">¶</a></h2>
 <p>There are two approaches to building extension modules on Windows, just as there
 are on Unix: use the <a class="reference internal" href="../library/distutils.html#module-distutils" title="distutils: Support for building and installing Python modules into an existing Python installation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils</span></code></a> package to control the build process, or
 do things manually.  The distutils approach works well for most extensions;
@@ -192,7 +193,7 @@ things manually, it may be instructive to study the project file for the
 <a class="reference external" href="https://github.com/python/cpython/tree/3.10/PCbuild/winsound.vcxproj">winsound</a> standard library module.</p>
 </section>
 <section id="differences-between-unix-and-windows">
-<span id="dynamic-linking"></span><h2><span class="section-number">5.2. </span>Differences Between Unix and Windows<a class="headerlink" href="#differences-between-unix-and-windows" title="本標題的永久連結">¶</a></h2>
+<span id="dynamic-linking"></span><h2><span class="section-number">5.2. </span>Differences Between Unix and Windows<a class="headerlink" href="#differences-between-unix-and-windows" title="Permalink to this heading">¶</a></h2>
 <p>Unix and Windows use completely different paradigms for run-time loading of
 code.  Before you try to build a module that can be dynamically loaded, be aware
 of how your system works.</p>
@@ -234,7 +235,7 @@ linking with a library is more like <code class="docutils literal notranslate"><
 separate copy.</p>
 </section>
 <section id="using-dlls-in-practice">
-<span id="win-dlls"></span><h2><span class="section-number">5.3. </span>Using DLLs in Practice<a class="headerlink" href="#using-dlls-in-practice" title="本標題的永久連結">¶</a></h2>
+<span id="win-dlls"></span><h2><span class="section-number">5.3. </span>Using DLLs in Practice<a class="headerlink" href="#using-dlls-in-practice" title="Permalink to this heading">¶</a></h2>
 <p>Windows Python is built in Microsoft Visual C++; using other compilers may or
 may not work.  The rest of this section is MSVC++ specific.</p>
 <p>When creating DLLs in Windows, you must pass <code class="file docutils literal notranslate"><span class="pre">pythonXY.lib</span></code> to the linker.
@@ -303,6 +304,10 @@ correct <code class="file docutils literal notranslate"><span class="pre">msvcrt
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -368,11 +373,11 @@ correct <code class="file docutils literal notranslate"><span class="pre">msvcrt
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>sunau --- 讀寫 Sun AU 檔案 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="module-sunau">
-<span id="sunau-read-and-write-sun-au-files"></span><h1><a class="reference internal" href="#module-sunau" title="sunau: Provide an interface to the Sun AU sound format.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sunau</span></code></a> --- 讀寫 Sun AU 檔案<a class="headerlink" href="#module-sunau" title="本標題的永久連結">¶</a></h1>
+<span id="sunau-read-and-write-sun-au-files"></span><h1><a class="reference internal" href="#module-sunau" title="sunau: Provide an interface to the Sun AU sound format.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sunau</span></code></a> --- 讀寫 Sun AU 檔案<a class="headerlink" href="#module-sunau" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/sunau.py">Lib/sunau.py</a></p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-sunau" title="sunau: Provide an interface to the Sun AU sound format.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sunau</span></code></a> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0594/#sunau"><strong>PEP 594</strong></a>）。</p>
@@ -171,10 +172,6 @@
 <p><a class="reference internal" href="#module-sunau" title="sunau: Provide an interface to the Sun AU sound format.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sunau</span></code></a> 模組 (module) 提供了一個處理 Sun AU 聲音格式的便利介面。請注意此模組與 <a class="reference internal" href="aifc.html#module-aifc" title="aifc: Read and write audio files in AIFF or AIFC format.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aifc</span></code></a> 和 <a class="reference internal" href="wave.html#module-wave" title="wave: Provide an interface to the WAV sound format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">wave</span></code></a> 的介面是相容的。</p>
 <p>音訊檔案由標頭 (header) 和資料組成。標頭包含以下欄位：</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>欄位</p></th>
 <th class="head"><p>內容</p></th>
@@ -267,7 +264,7 @@
 </dd></dl>
 
 <section id="au-read-objects">
-<span id="id1"></span><h2>AU_read 物件<a class="headerlink" href="#au-read-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>AU_read 物件<a class="headerlink" href="#au-read-objects" title="Permalink to this heading">¶</a></h2>
 <p>如上述 <a class="reference internal" href="#sunau.open" title="sunau.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 所回傳的 AU_read 物件擁有以下 method（方法）：</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sunau.AU_read.close">
@@ -357,7 +354,7 @@
 
 </section>
 <section id="au-write-objects">
-<span id="id2"></span><h2>AU_write 物件<a class="headerlink" href="#au-write-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>AU_write 物件<a class="headerlink" href="#au-write-objects" title="Permalink to this heading">¶</a></h2>
 <p>如上述 <a class="reference internal" href="#sunau.open" title="sunau.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> 所回傳的 AU_write 物件擁有以下 methods：</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sunau.AU_write.setnchannels">
@@ -473,6 +470,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -539,11 +540,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

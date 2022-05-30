@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>http.cookiejar --- Cookie handling for HTTP clients &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="module-http.cookiejar">
-<span id="http-cookiejar-cookie-handling-for-http-clients"></span><h1><a class="reference internal" href="#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a> --- Cookie handling for HTTP clients<a class="headerlink" href="#module-http.cookiejar" title="本標題的永久連結">¶</a></h1>
+<span id="http-cookiejar-cookie-handling-for-http-clients"></span><h1><a class="reference internal" href="#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a> --- Cookie handling for HTTP clients<a class="headerlink" href="#module-http.cookiejar" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/http/cookiejar.py">Lib/http/cookiejar.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a> module defines classes for automatic handling of HTTP
@@ -290,7 +291,7 @@ place of <em class="mailheader">Set-Cookie</em>.  Not widely used.</p>
 <p><span class="target" id="index-10"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2964.html"><strong>RFC 2964</strong></a> - Use of HTTP State Management</p>
 </div>
 <section id="cookiejar-and-filecookiejar-objects">
-<span id="cookie-jar-objects"></span><h2>CookieJar 與 FileCookieJar 物件<a class="headerlink" href="#cookiejar-and-filecookiejar-objects" title="本標題的永久連結">¶</a></h2>
+<span id="cookie-jar-objects"></span><h2>CookieJar 與 FileCookieJar 物件<a class="headerlink" href="#cookiejar-and-filecookiejar-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#http.cookiejar.CookieJar" title="http.cookiejar.CookieJar"><code class="xref py py-class docutils literal notranslate"><span class="pre">CookieJar</span></code></a> objects support the <a class="reference internal" href="../glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a> protocol for iterating over
 contained <a class="reference internal" href="#http.cookiejar.Cookie" title="http.cookiejar.Cookie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cookie</span></code></a> objects.</p>
 <p><a class="reference internal" href="#http.cookiejar.CookieJar" title="http.cookiejar.CookieJar"><code class="xref py py-class docutils literal notranslate"><span class="pre">CookieJar</span></code></a> has the following methods:</p>
@@ -447,7 +448,7 @@ library lazily loads cookies.</p>
 
 </section>
 <section id="filecookiejar-subclasses-and-co-operation-with-web-browsers">
-<span id="file-cookie-jar-classes"></span><h2>FileCookieJar subclasses and co-operation with web browsers<a class="headerlink" href="#filecookiejar-subclasses-and-co-operation-with-web-browsers" title="本標題的永久連結">¶</a></h2>
+<span id="file-cookie-jar-classes"></span><h2>FileCookieJar subclasses and co-operation with web browsers<a class="headerlink" href="#filecookiejar-subclasses-and-co-operation-with-web-browsers" title="Permalink to this heading">¶</a></h2>
 <p>The following <a class="reference internal" href="#http.cookiejar.CookieJar" title="http.cookiejar.CookieJar"><code class="xref py py-class docutils literal notranslate"><span class="pre">CookieJar</span></code></a> subclasses are provided for reading and
 writing.</p>
 <dl class="py class">
@@ -484,7 +485,7 @@ convenient if you want to store cookies in a human-readable file.</p>
 
 </section>
 <section id="cookiepolicy-objects">
-<span id="cookie-policy-objects"></span><h2>CookiePolicy 物件<a class="headerlink" href="#cookiepolicy-objects" title="本標題的永久連結">¶</a></h2>
+<span id="cookie-policy-objects"></span><h2>CookiePolicy 物件<a class="headerlink" href="#cookiepolicy-objects" title="Permalink to this heading">¶</a></h2>
 <p>Objects implementing the <a class="reference internal" href="#http.cookiejar.CookiePolicy" title="http.cookiejar.CookiePolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">CookiePolicy</span></code></a> interface have the following
 methods:</p>
 <dl class="py method">
@@ -562,7 +563,7 @@ above.  <a class="reference internal" href="#http.cookiejar.CookiePolicy" title=
 setting and receiving any and all cookies (this is unlikely to be useful).</p>
 </section>
 <section id="defaultcookiepolicy-objects">
-<span id="default-cookie-policy-objects"></span><h2>DefaultCookiePolicy 物件<a class="headerlink" href="#defaultcookiepolicy-objects" title="本標題的永久連結">¶</a></h2>
+<span id="default-cookie-policy-objects"></span><h2>DefaultCookiePolicy 物件<a class="headerlink" href="#defaultcookiepolicy-objects" title="Permalink to this heading">¶</a></h2>
 <p>Implements the standard rules for accepting and returning cookies.</p>
 <p>Both <span class="target" id="index-14"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2965.html"><strong>RFC 2965</strong></a> and Netscape cookies are covered.  RFC 2965 handling is switched
 off by default.</p>
@@ -739,7 +740,7 @@ off).</p>
 
 </section>
 <section id="cookie-objects">
-<h2>Cookie 物件<a class="headerlink" href="#cookie-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Cookie 物件<a class="headerlink" href="#cookie-objects" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#http.cookiejar.Cookie" title="http.cookiejar.Cookie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cookie</span></code></a> instances have Python attributes roughly corresponding to the
 standard cookie-attributes specified in the various cookie standards.  The
 correspondence is not one-to-one, because there are complicated rules for
@@ -879,7 +880,7 @@ cookie has expired at the specified time.</p>
 
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>The first example shows the most common usage of <a class="reference internal" href="#module-http.cookiejar" title="http.cookiejar: Classes for automatic handling of HTTP cookies."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookiejar</span></code></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">http.cookiejar</span><span class="o">,</span> <span class="nn">urllib.request</span>
 <span class="n">cj</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">cookiejar</span><span class="o">.</span><span class="n">CookieJar</span><span class="p">()</span>
@@ -957,6 +958,10 @@ returned:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1023,11 +1028,11 @@ returned:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

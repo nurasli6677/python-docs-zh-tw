@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>xml.parsers.expat --- Fast XML parsing using Expat &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -165,7 +166,7 @@
           <div class="body" role="main">
             
   <section id="module-xml.parsers.expat">
-<span id="xml-parsers-expat-fast-xml-parsing-using-expat"></span><h1><a class="reference internal" href="#module-xml.parsers.expat" title="xml.parsers.expat: An interface to the Expat non-validating XML parser."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.parsers.expat</span></code></a> --- Fast XML parsing using Expat<a class="headerlink" href="#module-xml.parsers.expat" title="本標題的永久連結">¶</a></h1>
+<span id="xml-parsers-expat-fast-xml-parsing-using-expat"></span><h1><a class="reference internal" href="#module-xml.parsers.expat" title="xml.parsers.expat: An interface to the Expat non-validating XML parser."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.parsers.expat</span></code></a> --- Fast XML parsing using Expat<a class="headerlink" href="#module-xml.parsers.expat" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -216,7 +217,7 @@ parser.  Direct use of the <code class="xref py py-mod docutils literal notransl
 must be a string naming the encoding  used by the XML data.  Expat doesn't
 support as many encodings as Python does, and its repertoire of encodings can't
 be extended; it supports UTF-8, UTF-16, ISO-8859-1 (Latin1), and ASCII.  If
-<em>encoding</em> <a class="footnote-reference brackets" href="#id3" id="id1">1</a> is given it will override the implicit or explicit encoding of the
+<em>encoding</em> <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is given it will override the implicit or explicit encoding of the
 document.</p>
 <p>Expat can optionally do XML namespace processing for you, enabled by providing a
 value for <em>namespace_separator</em>.  The value must be a one-character string; a
@@ -260,7 +261,7 @@ parser instances.</p>
 </dl>
 </div>
 <section id="xmlparser-objects">
-<span id="id2"></span><h2>XMLParser 物件<a class="headerlink" href="#xmlparser-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>XMLParser 物件<a class="headerlink" href="#xmlparser-objects" title="Permalink to this heading">¶</a></h2>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">xmlparser</span></code> objects have the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.parsers.expat.xmlparser.Parse">
@@ -655,7 +656,7 @@ continue.</p>
 
 </section>
 <section id="expaterror-exceptions">
-<span id="expaterror-objects"></span><h2>ExpatError 例外<a class="headerlink" href="#expaterror-exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="expaterror-objects"></span><h2>ExpatError 例外<a class="headerlink" href="#expaterror-exceptions" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#xml.parsers.expat.ExpatError" title="xml.parsers.expat.ExpatError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ExpatError</span></code></a> exceptions have a number of interesting attributes:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="xml.parsers.expat.ExpatError.code">
@@ -692,7 +693,7 @@ numbered <code class="docutils literal notranslate"><span class="pre">0</span></
 
 </section>
 <section id="example">
-<span id="expat-example"></span><h2>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
+<span id="expat-example"></span><h2>範例<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p>The following program defines three handlers that just print out their
 arguments.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.parsers.expat</span>
@@ -732,7 +733,7 @@ arguments.</p>
 </div>
 </section>
 <section id="module-xml.parsers.expat.model">
-<span id="content-model-descriptions"></span><span id="expat-content-models"></span><h2>Content Model Descriptions<a class="headerlink" href="#module-xml.parsers.expat.model" title="本標題的永久連結">¶</a></h2>
+<span id="content-model-descriptions"></span><span id="expat-content-models"></span><h2>Content Model Descriptions<a class="headerlink" href="#module-xml.parsers.expat.model" title="Permalink to this heading">¶</a></h2>
 <p>Content models are described using nested tuples.  Each tuple contains four
 values: the type, the quantifier, the name, and a tuple of children.  Children
 are simply additional content model descriptions.</p>
@@ -804,7 +805,7 @@ indicated with this model type.  This is used for models such as <code class="do
 
 </section>
 <section id="module-xml.parsers.expat.errors">
-<span id="expat-error-constants"></span><span id="expat-errors"></span><h2>Expat error constants<a class="headerlink" href="#module-xml.parsers.expat.errors" title="本標題的永久連結">¶</a></h2>
+<span id="expat-error-constants"></span><span id="expat-errors"></span><h2>Expat error constants<a class="headerlink" href="#module-xml.parsers.expat.errors" title="Permalink to this heading">¶</a></h2>
 <p>The following constants are provided in the <a class="reference internal" href="#module-xml.parsers.expat.errors" title="xml.parsers.expat.errors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.parsers.expat.errors</span></code></a>
 module.  These constants are useful in interpreting some of the attributes of
 the <code class="xref py py-exc docutils literal notranslate"><span class="pre">ExpatError</span></code> exception objects raised when an error has occurred.
@@ -1065,14 +1066,13 @@ stop the parser.</p>
 <dd></dd></dl>
 
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>The encoding string included in XML output should conform to the
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The encoding string included in XML output should conform to the
 appropriate standards. For example, &quot;UTF-8&quot; is valid, but &quot;UTF8&quot; is
 not. See <a class="reference external" href="https://www.w3.org/TR/2006/REC-xml11-20060816/#NT-EncodingDecl">https://www.w3.org/TR/2006/REC-xml11-20060816/#NT-EncodingDecl</a>
 and <a class="reference external" href="https://www.iana.org/assignments/character-sets/character-sets.xhtml">https://www.iana.org/assignments/character-sets/character-sets.xhtml</a>.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -1119,6 +1119,10 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1185,11 +1189,11 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

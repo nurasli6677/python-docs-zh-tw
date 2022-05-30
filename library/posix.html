@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>posix --- The most common POSIX system calls &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="module-posix">
-<span id="posix-the-most-common-posix-system-calls"></span><h1><a class="reference internal" href="#module-posix" title="posix: The most common POSIX system calls (normally used via module os). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">posix</span></code></a> --- The most common POSIX system calls<a class="headerlink" href="#module-posix" title="本標題的永久連結">¶</a></h1>
+<span id="posix-the-most-common-posix-system-calls"></span><h1><a class="reference internal" href="#module-posix" title="posix: The most common POSIX system calls (normally used via module os). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">posix</span></code></a> --- The most common POSIX system calls<a class="headerlink" href="#module-posix" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <p>This module provides access to operating system functionality that is
 standardized by the C Standard and the POSIX standard (a thinly disguised Unix
@@ -178,7 +179,7 @@ available through the <a class="reference internal" href="os.html#module-os" tit
 <p>Errors are reported as exceptions; the usual exceptions are given for type
 errors, while errors reported by the system calls raise <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.</p>
 <section id="large-file-support">
-<span id="posix-large-files"></span><h2>Large File Support<a class="headerlink" href="#large-file-support" title="本標題的永久連結">¶</a></h2>
+<span id="posix-large-files"></span><h2>Large File Support<a class="headerlink" href="#large-file-support" title="Permalink to this heading">¶</a></h2>
 <p id="index-1">Several operating systems (including AIX, HP-UX and Solaris) provide
 support for files that are larger than 2 GiB from a C programming model where
 <span class="xref c c-texpr"><span class="kt">int</span></span> and <span class="xref c c-texpr"><span class="kt">long</span></span> are 32-bit values. This is typically accomplished
@@ -201,7 +202,7 @@ something like:</p>
 </div>
 </section>
 <section id="notable-module-contents">
-<span id="posix-contents"></span><h2>Notable Module Contents<a class="headerlink" href="#notable-module-contents" title="本標題的永久連結">¶</a></h2>
+<span id="posix-contents"></span><h2>Notable Module Contents<a class="headerlink" href="#notable-module-contents" title="Permalink to this heading">¶</a></h2>
 <p>In addition to many functions described in the <a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module documentation,
 <a class="reference internal" href="#module-posix" title="posix: The most common POSIX system calls (normally used via module os). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">posix</span></code></a> defines the following data item:</p>
 <dl class="py data">
@@ -272,6 +273,10 @@ which updates the environment on modification. Note also that updating
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -338,11 +343,11 @@ which updates the environment on modification. Note also that updating
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

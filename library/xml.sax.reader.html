@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>xml.sax.xmlreader --- Interface for XML parsers &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="module-xml.sax.xmlreader">
-<span id="xml-sax-xmlreader-interface-for-xml-parsers"></span><h1><a class="reference internal" href="#module-xml.sax.xmlreader" title="xml.sax.xmlreader: Interface which SAX-compliant XML parsers must implement."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.sax.xmlreader</span></code></a> --- Interface for XML parsers<a class="headerlink" href="#module-xml.sax.xmlreader" title="本標題的永久連結">¶</a></h1>
+<span id="xml-sax-xmlreader-interface-for-xml-parsers"></span><h1><a class="reference internal" href="#module-xml.sax.xmlreader" title="xml.sax.xmlreader: Interface which SAX-compliant XML parsers must implement."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.sax.xmlreader</span></code></a> --- Interface for XML parsers<a class="headerlink" href="#module-xml.sax.xmlreader" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/xml/sax/xmlreader.py">Lib/xml/sax/xmlreader.py</a></p>
 <hr class="docutils" />
 <p>SAX parsers implement the <a class="reference internal" href="#xml.sax.xmlreader.XMLReader" title="xml.sax.xmlreader.XMLReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLReader</span></code></a> interface. They are implemented in
@@ -247,7 +248,7 @@ names as they appear in the original document.  This class implements the
 </dd></dl>
 
 <section id="xmlreader-objects">
-<span id="id1"></span><h2>XMLReader 物件<a class="headerlink" href="#xmlreader-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>XMLReader 物件<a class="headerlink" href="#xmlreader-objects" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#xml.sax.xmlreader.XMLReader" title="xml.sax.xmlreader.XMLReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLReader</span></code></a> interface supports the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.sax.xmlreader.XMLReader.parse">
@@ -365,7 +366,7 @@ not supported by the parser, <em>SAXNotSupportedException</em> is raised.</p>
 
 </section>
 <section id="incrementalparser-objects">
-<span id="incremental-parser-objects"></span><h2>IncrementalParser 物件<a class="headerlink" href="#incrementalparser-objects" title="本標題的永久連結">¶</a></h2>
+<span id="incremental-parser-objects"></span><h2>IncrementalParser 物件<a class="headerlink" href="#incrementalparser-objects" title="Permalink to this heading">¶</a></h2>
 <p>Instances of <a class="reference internal" href="#xml.sax.xmlreader.IncrementalParser" title="xml.sax.xmlreader.IncrementalParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">IncrementalParser</span></code></a> offer the following additional methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.sax.xmlreader.IncrementalParser.feed">
@@ -391,7 +392,7 @@ close without calling reset are undefined.</p>
 
 </section>
 <section id="locator-objects">
-<span id="id2"></span><h2>Locator Objects<a class="headerlink" href="#locator-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Locator Objects<a class="headerlink" href="#locator-objects" title="Permalink to this heading">¶</a></h2>
 <p>Instances of <a class="reference internal" href="#xml.sax.xmlreader.Locator" title="xml.sax.xmlreader.Locator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Locator</span></code></a> provide these methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.sax.xmlreader.Locator.getColumnNumber">
@@ -419,7 +420,7 @@ close without calling reset are undefined.</p>
 
 </section>
 <section id="inputsource-objects">
-<span id="input-source-objects"></span><h2>InputSource 物件<a class="headerlink" href="#inputsource-objects" title="本標題的永久連結">¶</a></h2>
+<span id="input-source-objects"></span><h2>InputSource 物件<a class="headerlink" href="#inputsource-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.sax.xmlreader.InputSource.setPublicId">
 <span class="sig-prename descclassname"><span class="pre">InputSource.</span></span><span class="sig-name descname"><span class="pre">setPublicId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.sax.xmlreader.InputSource.setPublicId" title="本定義的永久連結">¶</a></dt>
@@ -494,7 +495,7 @@ stream and will not attempt to open a URI connection to the system identifier.</
 
 </section>
 <section id="the-attributes-interface">
-<span id="attributes-objects"></span><h2>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Attributes</span></code> Interface<a class="headerlink" href="#the-attributes-interface" title="本標題的永久連結">¶</a></h2>
+<span id="attributes-objects"></span><h2>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Attributes</span></code> Interface<a class="headerlink" href="#the-attributes-interface" title="Permalink to this heading">¶</a></h2>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">Attributes</span></code> objects implement a portion of the <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping protocol</span></a>, including the methods <code class="xref py py-meth docutils literal notranslate"><span class="pre">copy()</span></code>,
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code>, <a class="reference internal" href="../reference/datamodel.html#object.__contains__" title="object.__contains__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__contains__()</span></code></a>,
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">items()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">keys()</span></code>,
@@ -526,7 +527,7 @@ are also provided:</p>
 
 </section>
 <section id="the-attributesns-interface">
-<span id="attributes-ns-objects"></span><h2>The <code class="xref py py-class docutils literal notranslate"><span class="pre">AttributesNS</span></code> Interface<a class="headerlink" href="#the-attributesns-interface" title="本標題的永久連結">¶</a></h2>
+<span id="attributes-ns-objects"></span><h2>The <code class="xref py py-class docutils literal notranslate"><span class="pre">AttributesNS</span></code> Interface<a class="headerlink" href="#the-attributesns-interface" title="Permalink to this heading">¶</a></h2>
 <p>This interface is a subtype of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Attributes</span></code> interface (see section
 <a class="reference internal" href="#attributes-objects"><span class="std std-ref">The Attributes Interface</span></a>).  All methods supported by that interface are also
 available on <code class="xref py py-class docutils literal notranslate"><span class="pre">AttributesNS</span></code> objects.</p>
@@ -602,6 +603,10 @@ available on <code class="xref py py-class docutils literal notranslate"><span c
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -668,11 +673,11 @@ available on <code class="xref py py-class docutils literal notranslate"><span c
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

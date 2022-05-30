@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>termios --- POSIX style tty control &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -161,7 +162,7 @@
           <div class="body" role="main">
             
   <section id="module-termios">
-<span id="termios-posix-style-tty-control"></span><h1><a class="reference internal" href="#module-termios" title="termios: POSIX style tty control. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code></a> --- POSIX style tty control<a class="headerlink" href="#module-termios" title="本標題的永久連結">¶</a></h1>
+<span id="termios-posix-style-tty-control"></span><h1><a class="reference internal" href="#module-termios" title="termios: POSIX style tty control. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code></a> --- POSIX style tty control<a class="headerlink" href="#module-termios" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" id="index-0" />
 <p>This module provides an interface to the POSIX calls for tty I/O control. For a
 complete description of these calls, see <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/termios(3)">termios(3)</a></em> Unix manual
@@ -235,7 +236,7 @@ output, <code class="xref py py-const docutils literal notranslate"><span class=
 </dl>
 </div>
 <section id="example">
-<span id="termios-example"></span><h2>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
+<span id="termios-example"></span><h2>範例<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p>Here's a function that prompts for a password with echoing turned off.  Note the
 technique using a separate <a class="reference internal" href="#termios.tcgetattr" title="termios.tcgetattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">tcgetattr()</span></code></a> call and a <a class="reference internal" href="../reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> ...
 <a class="reference internal" href="../reference/compound_stmts.html#finally"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">finally</span></code></a> statement to ensure that the old tty attributes are restored
@@ -296,6 +297,10 @@ exactly no matter what happens:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -362,11 +367,11 @@ exactly no matter what happens:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

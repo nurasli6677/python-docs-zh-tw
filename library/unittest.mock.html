@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>unittest.mock --- mock object library &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -198,7 +199,7 @@
           <div class="body" role="main">
             
   <section id="module-unittest.mock">
-<span id="unittest-mock-mock-object-library"></span><h1><a class="reference internal" href="#module-unittest.mock" title="unittest.mock: Mock object library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest.mock</span></code></a> --- mock object library<a class="headerlink" href="#module-unittest.mock" title="本標題的永久連結">¶</a></h1>
+<span id="unittest-mock-mock-object-library"></span><h1><a class="reference internal" href="#module-unittest.mock" title="unittest.mock: Mock object library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest.mock</span></code></a> --- mock object library<a class="headerlink" href="#module-unittest.mock" title="Permalink to this heading">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
@@ -223,7 +224,7 @@ used by many mocking frameworks.</p>
 <p>There is a backport of <a class="reference internal" href="#module-unittest.mock" title="unittest.mock: Mock object library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest.mock</span></code></a> for earlier versions of Python,
 available as <a class="reference external" href="https://pypi.org/project/mock">mock on PyPI</a>.</p>
 <section id="quick-guide">
-<h2>Quick Guide<a class="headerlink" href="#quick-guide" title="本標題的永久連結">¶</a></h2>
+<h2>Quick Guide<a class="headerlink" href="#quick-guide" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#unittest.mock.Mock" title="unittest.mock.Mock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mock</span></code></a> and <a class="reference internal" href="#unittest.mock.MagicMock" title="unittest.mock.MagicMock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MagicMock</span></code></a> objects create all attributes and
 methods as you access them and store details of how they have been used. You
 can configure them, to specify return values or limit what attributes are
@@ -358,10 +359,10 @@ the <code class="docutils literal notranslate"><span class="pre">__init__</span>
 the <code class="docutils literal notranslate"><span class="pre">__call__</span></code> method.</p>
 </section>
 <section id="the-mock-class">
-<h2>The Mock Class<a class="headerlink" href="#the-mock-class" title="本標題的永久連結">¶</a></h2>
+<h2>The Mock Class<a class="headerlink" href="#the-mock-class" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#unittest.mock.Mock" title="unittest.mock.Mock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mock</span></code></a> is a flexible mock object intended to replace the use of stubs and
 test doubles throughout your code. Mocks are callable and create attributes as
-new mocks when you access them <a class="footnote-reference brackets" href="#id3" id="id1">1</a>. Accessing the same attribute will always
+new mocks when you access them <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Accessing the same attribute will always
 return the same mock. Mocks record how you use them, allowing you to make
 assertions about what your code has done to them.</p>
 <p><a class="reference internal" href="#unittest.mock.MagicMock" title="unittest.mock.MagicMock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MagicMock</span></code></a> is a subclass of <a class="reference internal" href="#unittest.mock.Mock" title="unittest.mock.Mock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mock</span></code></a> with all the magic methods
@@ -1311,7 +1312,7 @@ awaits have been made it is an empty list.</p>
 </dd></dl>
 
 <section id="calling">
-<h3>Calling<a class="headerlink" href="#calling" title="本標題的永久連結">¶</a></h3>
+<h3>Calling<a class="headerlink" href="#calling" title="Permalink to this heading">¶</a></h3>
 <p>Mock objects are callable. The call will return the value set as the
 <a class="reference internal" href="#unittest.mock.Mock.return_value" title="unittest.mock.Mock.return_value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">return_value</span></code></a> attribute. The default return value is a new Mock
 object; it is created the first time the return value is accessed (either
@@ -1421,7 +1422,7 @@ returned:</p>
 </div>
 </section>
 <section id="deleting-attributes">
-<span id="id2"></span><h3>Deleting Attributes<a class="headerlink" href="#deleting-attributes" title="本標題的永久連結">¶</a></h3>
+<span id="id2"></span><h3>Deleting Attributes<a class="headerlink" href="#deleting-attributes" title="Permalink to this heading">¶</a></h3>
 <p>Mock objects create attributes on demand. This allows them to pretend to be
 objects of any type.</p>
 <p>You may want a mock object to return <code class="docutils literal notranslate"><span class="pre">False</span></code> to a <a class="reference internal" href="functions.html#hasattr" title="hasattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">hasattr()</span></code></a> call, or raise an
@@ -1444,7 +1445,7 @@ will raise an <a class="reference internal" href="exceptions.html#AttributeError
 </div>
 </section>
 <section id="mock-names-and-the-name-attribute">
-<h3>Mock names and the name attribute<a class="headerlink" href="#mock-names-and-the-name-attribute" title="本標題的永久連結">¶</a></h3>
+<h3>Mock names and the name attribute<a class="headerlink" href="#mock-names-and-the-name-attribute" title="Permalink to this heading">¶</a></h3>
 <p>Since &quot;name&quot; is an argument to the <a class="reference internal" href="#unittest.mock.Mock" title="unittest.mock.Mock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mock</span></code></a> constructor, if you want your
 mock object to have a &quot;name&quot; attribute you can't just pass it in at creation
 time. There are two alternatives. One option is to use
@@ -1462,7 +1463,7 @@ time. There are two alternatives. One option is to use
 </div>
 </section>
 <section id="attaching-mocks-as-attributes">
-<h3>Attaching Mocks as Attributes<a class="headerlink" href="#attaching-mocks-as-attributes" title="本標題的永久連結">¶</a></h3>
+<h3>Attaching Mocks as Attributes<a class="headerlink" href="#attaching-mocks-as-attributes" title="Permalink to this heading">¶</a></h3>
 <p>When you attach a mock as an attribute of another mock (or as the return
 value) it becomes a &quot;child&quot; of that mock. Calls to the child are recorded in
 the <a class="reference internal" href="#unittest.mock.Mock.method_calls" title="unittest.mock.Mock.method_calls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">method_calls</span></code></a> and <a class="reference internal" href="#unittest.mock.Mock.mock_calls" title="unittest.mock.Mock.mock_calls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mock_calls</span></code></a> attributes of the
@@ -1509,26 +1510,25 @@ method:</p>
 <span class="go">[call.child1(&#39;one&#39;), call.child2(&#39;two&#39;)]</span>
 </pre></div>
 </div>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>The only exceptions are magic methods and attributes (those that have
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The only exceptions are magic methods and attributes (those that have
 leading and trailing double underscores). Mock doesn't create these but
 instead raises an <a class="reference internal" href="exceptions.html#AttributeError" title="AttributeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code></a>. This is because the interpreter
 will often implicitly request these methods, and gets <em>very</em> confused to
 get a new Mock object when it expects a magic method. If you need magic
 method support see <a class="reference internal" href="#magic-methods"><span class="std std-ref">magic methods</span></a>.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 <section id="the-patchers">
-<h2>The patchers<a class="headerlink" href="#the-patchers" title="本標題的永久連結">¶</a></h2>
+<h2>The patchers<a class="headerlink" href="#the-patchers" title="Permalink to this heading">¶</a></h2>
 <p>The patch decorators are used for patching objects only within the scope of
 the function they decorate. They automatically handle the unpatching for you,
 even if exceptions are raised. All of these functions can also be used in with
 statements or as class decorators.</p>
 <section id="patch">
-<h3>patch<a class="headerlink" href="#patch" title="本標題的永久連結">¶</a></h3>
+<h3>patch<a class="headerlink" href="#patch" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>The key is to do the patching in the right namespace. See the section <a class="reference internal" href="#id6">where to patch</a>.</p>
@@ -1721,7 +1721,7 @@ work as expected:</p>
 </div>
 </section>
 <section id="patch-object">
-<h3>patch.object<a class="headerlink" href="#patch-object" title="本標題的永久連結">¶</a></h3>
+<h3>patch.object<a class="headerlink" href="#patch-object" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.patch.object">
 <span class="sig-prename descclassname"><span class="pre">patch.</span></span><span class="sig-name descname"><span class="pre">object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autospec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_callable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.patch.object" title="本定義的永久連結">¶</a></dt>
@@ -1754,7 +1754,7 @@ function:</p>
 meaning as they do for <a class="reference internal" href="#unittest.mock.patch" title="unittest.mock.patch"><code class="xref py py-func docutils literal notranslate"><span class="pre">patch()</span></code></a>.</p>
 </section>
 <section id="patch-dict">
-<h3>patch.dict<a class="headerlink" href="#patch-dict" title="本標題的永久連結">¶</a></h3>
+<h3>patch.dict<a class="headerlink" href="#patch-dict" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.patch.dict">
 <span class="sig-prename descclassname"><span class="pre">patch.</span></span><span class="sig-name descname"><span class="pre">dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.patch.dict" title="本定義的永久連結">¶</a></dt>
@@ -1862,7 +1862,7 @@ magic methods <code class="xref py py-meth docutils literal notranslate"><span c
 </div>
 </section>
 <section id="patch-multiple">
-<h3>patch.multiple<a class="headerlink" href="#patch-multiple" title="本標題的永久連結">¶</a></h3>
+<h3>patch.multiple<a class="headerlink" href="#patch-multiple" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.patch.multiple">
 <span class="sig-prename descclassname"><span class="pre">patch.</span></span><span class="sig-name descname"><span class="pre">multiple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autospec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_callable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.patch.multiple" title="本定義的永久連結">¶</a></dt>
@@ -1923,7 +1923,7 @@ context manager is a dictionary where created mocks are keyed by name:</p>
 </div>
 </section>
 <section id="patch-methods-start-and-stop">
-<span id="start-and-stop"></span><h3>patch methods: start and stop<a class="headerlink" href="#patch-methods-start-and-stop" title="本標題的永久連結">¶</a></h3>
+<span id="start-and-stop"></span><h3>patch methods: start and stop<a class="headerlink" href="#patch-methods-start-and-stop" title="Permalink to this heading">¶</a></h3>
 <p>All the patchers have <code class="xref py py-meth docutils literal notranslate"><span class="pre">start()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code> methods. These make it simpler to do
 patching in <code class="docutils literal notranslate"><span class="pre">setUp</span></code> methods or where you want to do multiple patches without
 nesting decorators or with statements.</p>
@@ -1993,7 +1993,7 @@ object.</p>
 
 </section>
 <section id="patch-builtins">
-<span id="id4"></span><h3>patch builtins<a class="headerlink" href="#patch-builtins" title="本標題的永久連結">¶</a></h3>
+<span id="id4"></span><h3>patch builtins<a class="headerlink" href="#patch-builtins" title="Permalink to this heading">¶</a></h3>
 <p>You can patch any builtins within a module. The following example patches
 builtin <a class="reference internal" href="functions.html#ord" title="ord"><code class="xref py py-func docutils literal notranslate"><span class="pre">ord()</span></code></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;__main__.ord&#39;</span><span class="p">)</span>
@@ -2007,7 +2007,7 @@ builtin <a class="reference internal" href="functions.html#ord" title="ord"><cod
 </div>
 </section>
 <section id="test-prefix">
-<span id="id5"></span><h3>TEST_PREFIX<a class="headerlink" href="#test-prefix" title="本標題的永久連結">¶</a></h3>
+<span id="id5"></span><h3>TEST_PREFIX<a class="headerlink" href="#test-prefix" title="Permalink to this heading">¶</a></h3>
 <p>All of the patchers can be used as class decorators. When used in this way
 they wrap every test method on the class. The patchers recognise methods that
 start with <code class="docutils literal notranslate"><span class="pre">'test'</span></code> as being test methods. This is the same way that the
@@ -2035,7 +2035,7 @@ inform the patchers of the different prefix by setting <code class="docutils lit
 </div>
 </section>
 <section id="nesting-patch-decorators">
-<h3>Nesting Patch Decorators<a class="headerlink" href="#nesting-patch-decorators" title="本標題的永久連結">¶</a></h3>
+<h3>Nesting Patch Decorators<a class="headerlink" href="#nesting-patch-decorators" title="Permalink to this heading">¶</a></h3>
 <p>If you want to perform multiple patches then you can simply stack up the
 decorators.</p>
 <p>You can stack up multiple patch decorators using this pattern:</p>
@@ -2058,7 +2058,7 @@ standard way that Python applies decorators. The order of the created mocks
 passed into your test function matches this order.</p>
 </section>
 <section id="where-to-patch">
-<span id="id6"></span><h3>Where to patch<a class="headerlink" href="#where-to-patch" title="本標題的永久連結">¶</a></h3>
+<span id="id6"></span><h3>Where to patch<a class="headerlink" href="#where-to-patch" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference internal" href="#unittest.mock.patch" title="unittest.mock.patch"><code class="xref py py-func docutils literal notranslate"><span class="pre">patch()</span></code></a> works by (temporarily) changing the object that a <em>name</em> points to with
 another one. There can be many names pointing to any individual object, so
 for patching to work you must ensure that you patch the name used by the system
@@ -2096,7 +2096,7 @@ being looked up in the module and so we have to patch <code class="docutils lite
 </div>
 </section>
 <section id="patching-descriptors-and-proxy-objects">
-<h3>Patching Descriptors and Proxy Objects<a class="headerlink" href="#patching-descriptors-and-proxy-objects" title="本標題的永久連結">¶</a></h3>
+<h3>Patching Descriptors and Proxy Objects<a class="headerlink" href="#patching-descriptors-and-proxy-objects" title="Permalink to this heading">¶</a></h3>
 <p>Both <a class="reference internal" href="#patch">patch</a> and <a class="reference internal" href="#patch-object">patch.object</a> correctly patch and restore descriptors: class
 methods, static methods and properties. You should patch these on the <em>class</em>
 rather than an instance. They also work with <em>some</em> objects
@@ -2104,19 +2104,19 @@ that proxy attribute access, like the <a class="reference external" href="http:/
 </section>
 </section>
 <section id="magicmock-and-magic-method-support">
-<h2>MagicMock and magic method support<a class="headerlink" href="#magicmock-and-magic-method-support" title="本標題的永久連結">¶</a></h2>
+<h2>MagicMock and magic method support<a class="headerlink" href="#magicmock-and-magic-method-support" title="Permalink to this heading">¶</a></h2>
 <section id="mocking-magic-methods">
-<span id="magic-methods"></span><h3>Mocking Magic Methods<a class="headerlink" href="#mocking-magic-methods" title="本標題的永久連結">¶</a></h3>
+<span id="magic-methods"></span><h3>Mocking Magic Methods<a class="headerlink" href="#mocking-magic-methods" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference internal" href="#unittest.mock.Mock" title="unittest.mock.Mock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mock</span></code></a> supports mocking the Python protocol methods, also known as
 &quot;magic methods&quot;. This allows mock objects to replace containers or other
 objects that implement Python protocols.</p>
-<p>Because magic methods are looked up differently from normal methods <a class="footnote-reference brackets" href="#id9" id="id7">2</a>, this
+<p>Because magic methods are looked up differently from normal methods <a class="footnote-reference brackets" href="#id9" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, this
 support has been specially implemented. This means that only specific magic
 methods are supported. The supported list includes <em>almost</em> all of them. If
 there are any missing that you need please let us know.</p>
 <p>You mock magic methods by setting the method you are interested in to a function
 or a mock instance. If you are using a function then it <em>must</em> take <code class="docutils literal notranslate"><span class="pre">self</span></code> as
-the first argument <a class="footnote-reference brackets" href="#id10" id="id8">3</a>.</p>
+the first argument <a class="footnote-reference brackets" href="#id10" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="s1">&#39;fooble&#39;</span>
 <span class="gp">...</span>
@@ -2196,7 +2196,7 @@ by mock, can't be set dynamically, or can cause problems:</p>
 </ul>
 </section>
 <section id="magic-mock">
-<h3>Magic Mock<a class="headerlink" href="#magic-mock" title="本標題的永久連結">¶</a></h3>
+<h3>Magic Mock<a class="headerlink" href="#magic-mock" title="Permalink to this heading">¶</a></h3>
 <p>There are two <code class="docutils literal notranslate"><span class="pre">MagicMock</span></code> variants: <a class="reference internal" href="#unittest.mock.MagicMock" title="unittest.mock.MagicMock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MagicMock</span></code></a> and <a class="reference internal" href="#unittest.mock.NonCallableMagicMock" title="unittest.mock.NonCallableMagicMock"><code class="xref py py-class docutils literal notranslate"><span class="pre">NonCallableMagicMock</span></code></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="unittest.mock.MagicMock">
@@ -2311,24 +2311,24 @@ of the obscure and obsolete ones. You can still set these up if you want.</p>
 <code class="docutils literal notranslate"><span class="pre">__getstate__</span></code> and <code class="docutils literal notranslate"><span class="pre">__setstate__</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__getformat__</span></code> 和 <code class="docutils literal notranslate"><span class="pre">__setformat__</span></code></p></li>
 </ul>
-<dl class="footnote brackets">
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
-<dd><p>Magic methods <em>should</em> be looked up on the class rather than the
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
+<p>Magic methods <em>should</em> be looked up on the class rather than the
 instance. Different versions of Python are inconsistent about applying this
 rule. The supported protocol methods should work with all supported versions
 of Python.</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
-<dd><p>The function is basically hooked up to the class, but each <code class="docutils literal notranslate"><span class="pre">Mock</span></code>
+</aside>
+<aside class="footnote brackets" id="id10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">3</a><span class="fn-bracket">]</span></span>
+<p>The function is basically hooked up to the class, but each <code class="docutils literal notranslate"><span class="pre">Mock</span></code>
 instance is kept isolated from the others.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 <section id="helpers">
-<h2>Helpers<a class="headerlink" href="#helpers" title="本標題的永久連結">¶</a></h2>
+<h2>Helpers<a class="headerlink" href="#helpers" title="Permalink to this heading">¶</a></h2>
 <section id="sentinel">
-<h3>sentinel<a class="headerlink" href="#sentinel" title="本標題的永久連結">¶</a></h3>
+<h3>sentinel<a class="headerlink" href="#sentinel" title="Permalink to this heading">¶</a></h3>
 <dl class="py data">
 <dt class="sig sig-object py" id="unittest.mock.sentinel">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">sentinel</span></span><a class="headerlink" href="#unittest.mock.sentinel" title="本定義的永久連結">¶</a></dt>
@@ -2359,7 +2359,7 @@ creating and testing the identity of objects like this.</p>
 </div>
 </section>
 <section id="default">
-<h3>DEFAULT<a class="headerlink" href="#default" title="本標題的永久連結">¶</a></h3>
+<h3>DEFAULT<a class="headerlink" href="#default" title="Permalink to this heading">¶</a></h3>
 <dl class="py data">
 <dt class="sig sig-object py" id="unittest.mock.DEFAULT">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">DEFAULT</span></span><a class="headerlink" href="#unittest.mock.DEFAULT" title="本定義的永久連結">¶</a></dt>
@@ -2370,7 +2370,7 @@ functions to indicate that the normal return value should be used.</p>
 
 </section>
 <section id="call">
-<h3>call<a class="headerlink" href="#call" title="本標題的永久連結">¶</a></h3>
+<h3>call<a class="headerlink" href="#call" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.call">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.call" title="本定義的永久連結">¶</a></dt>
@@ -2458,7 +2458,7 @@ arguments are a dictionary:</p>
 </div>
 </section>
 <section id="create-autospec">
-<h3>create_autospec<a class="headerlink" href="#create-autospec" title="本標題的永久連結">¶</a></h3>
+<h3>create_autospec<a class="headerlink" href="#create-autospec" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.create_autospec">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">create_autospec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.create_autospec" title="本定義的永久連結">¶</a></dt>
@@ -2485,7 +2485,7 @@ an async function.</p>
 </div>
 </section>
 <section id="any">
-<h3>ANY<a class="headerlink" href="#any" title="本標題的永久連結">¶</a></h3>
+<h3>ANY<a class="headerlink" href="#any" title="Permalink to this heading">¶</a></h3>
 <dl class="py data">
 <dt class="sig sig-object py" id="unittest.mock.ANY">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">ANY</span></span><a class="headerlink" href="#unittest.mock.ANY" title="本定義的永久連結">¶</a></dt>
@@ -2516,7 +2516,7 @@ passed in.</p>
 </div>
 </section>
 <section id="filter-dir">
-<h3>FILTER_DIR<a class="headerlink" href="#filter-dir" title="本標題的永久連結">¶</a></h3>
+<h3>FILTER_DIR<a class="headerlink" href="#filter-dir" title="Permalink to this heading">¶</a></h3>
 <dl class="py data">
 <dt class="sig sig-object py" id="unittest.mock.FILTER_DIR">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">FILTER_DIR</span></span><a class="headerlink" href="#unittest.mock.FILTER_DIR" title="本定義的永久連結">¶</a></dt>
@@ -2574,7 +2574,7 @@ behaviour you can switch it off by setting the module level switch
 <code class="xref py py-data docutils literal notranslate"><span class="pre">mock.FILTER_DIR</span></code>.</p>
 </section>
 <section id="mock-open">
-<h3>mock_open<a class="headerlink" href="#mock-open" title="本標題的永久連結">¶</a></h3>
+<h3>mock_open<a class="headerlink" href="#mock-open" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.mock_open">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">mock_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.mock_open" title="本定義的永久連結">¶</a></dt>
@@ -2642,7 +2642,7 @@ enough that a helper function is useful.</p>
 </div>
 </section>
 <section id="autospeccing">
-<span id="auto-speccing"></span><h3>Autospeccing<a class="headerlink" href="#autospeccing" title="本標題的永久連結">¶</a></h3>
+<span id="auto-speccing"></span><h3>Autospeccing<a class="headerlink" href="#autospeccing" title="Permalink to this heading">¶</a></h3>
 <p>Autospeccing is based on the existing <code class="xref py py-attr docutils literal notranslate"><span class="pre">spec</span></code> feature of mock. It limits the
 api of mocks to the api of an original object (the spec), but it is recursive
 (implemented lazily) so that attributes of mocks only have the same api as
@@ -2766,7 +2766,7 @@ traverse attributes on the mock a corresponding traversal of the original
 object is happening under the hood. If any of your specced objects have
 properties or descriptors that can trigger code execution then you may not be
 able to use autospec. On the other hand it is much better to design your
-objects so that introspection is safe <a class="footnote-reference brackets" href="#id12" id="id11">4</a>.</p>
+objects so that introspection is safe <a class="footnote-reference brackets" href="#id12" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
 <p>A more serious problem is that it is common for instance attributes to be
 created in the <code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code> method and not to exist on the class at all.
 <em>autospec</em> can't know about any dynamically created attributes and restricts
@@ -2851,16 +2851,15 @@ alternative object as the <em>autospec</em> argument:</p>
 <span class="go">&lt;NonCallableMagicMock name=&#39;Something.a&#39; spec=&#39;int&#39; id=&#39;...&#39;&gt;</span>
 </pre></div>
 </div>
-<dl class="footnote brackets">
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id11">4</a></span></dt>
-<dd><p>This only applies to classes or already instantiated objects. Calling
+<aside class="footnote brackets" id="id12" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">4</a><span class="fn-bracket">]</span></span>
+<p>This only applies to classes or already instantiated objects. Calling
 a mocked class to create a mock instance <em>does not</em> create a real instance.
 It is only attribute lookups - along with calls to <a class="reference internal" href="functions.html#dir" title="dir"><code class="xref py py-func docutils literal notranslate"><span class="pre">dir()</span></code></a> - that are done.</p>
-</dd>
-</dl>
+</aside>
 </section>
 <section id="sealing-mocks">
-<h3>Sealing mocks<a class="headerlink" href="#sealing-mocks" title="本標題的永久連結">¶</a></h3>
+<h3>Sealing mocks<a class="headerlink" href="#sealing-mocks" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.seal">
 <span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">seal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.seal" title="本定義的永久連結">¶</a></dt>
@@ -2963,6 +2962,10 @@ fixing part of the mock object.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -3029,11 +3032,11 @@ fixing part of the mock object.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

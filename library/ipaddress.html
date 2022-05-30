@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ipaddress --- IPv4/IPv6 manipulation library &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -191,7 +192,7 @@
           <div class="body" role="main">
             
   <section id="module-ipaddress">
-<span id="ipaddress-ipv4-ipv6-manipulation-library"></span><h1><a class="reference internal" href="#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> --- IPv4/IPv6 manipulation library<a class="headerlink" href="#module-ipaddress" title="本標題的永久連結">¶</a></h1>
+<span id="ipaddress-ipv4-ipv6-manipulation-library"></span><h1><a class="reference internal" href="#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> --- IPv4/IPv6 manipulation library<a class="headerlink" href="#module-ipaddress" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/ipaddress.py">Lib/ipaddress.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> provides the capabilities to create, manipulate and
@@ -207,7 +208,7 @@ network definition, and so on.</p>
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
 <section id="convenience-factory-functions">
-<h2>Convenience factory functions<a class="headerlink" href="#convenience-factory-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Convenience factory functions<a class="headerlink" href="#convenience-factory-functions" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> module provides factory functions to conveniently create
 IP addresses, networks and interfaces:</p>
 <dl class="py function">
@@ -261,9 +262,9 @@ obtained by calling the appropriate version specific class constructors
 directly.</p>
 </section>
 <section id="ip-addresses">
-<h2>IP Addresses<a class="headerlink" href="#ip-addresses" title="本標題的永久連結">¶</a></h2>
+<h2>IP Addresses<a class="headerlink" href="#ip-addresses" title="Permalink to this heading">¶</a></h2>
 <section id="address-objects">
-<h3>Address objects<a class="headerlink" href="#address-objects" title="本標題的永久連結">¶</a></h3>
+<h3>Address objects<a class="headerlink" href="#address-objects" title="Permalink to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="#ipaddress.IPv4Address" title="ipaddress.IPv4Address"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv4Address</span></code></a> and <a class="reference internal" href="#ipaddress.IPv6Address" title="ipaddress.IPv6Address"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv6Address</span></code></a> objects share a lot of common
 attributes.  Some attributes that are only meaningful for IPv6 addresses are
 also implemented by <a class="reference internal" href="#ipaddress.IPv4Address" title="ipaddress.IPv4Address"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv4Address</span></code></a> objects, in order to make it easier to
@@ -613,7 +614,7 @@ address, this property will be <code class="docutils literal notranslate"><span 
 
 </section>
 <section id="conversion-to-strings-and-integers">
-<h3>Conversion to Strings and Integers<a class="headerlink" href="#conversion-to-strings-and-integers" title="本標題的永久連結">¶</a></h3>
+<h3>Conversion to Strings and Integers<a class="headerlink" href="#conversion-to-strings-and-integers" title="Permalink to this heading">¶</a></h3>
 <p>To interoperate with networking interfaces such as the socket module,
 addresses must be converted to strings or integers. This is handled using
 the <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> and <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> builtin functions:</p>
@@ -630,12 +631,12 @@ the <a class="reference internal" href="stdtypes.html#str" title="str"><code cla
 <p>Note that IPv6 scoped addresses are converted to integers without scope zone ID.</p>
 </section>
 <section id="operators">
-<h3>Operators<a class="headerlink" href="#operators" title="本標題的永久連結">¶</a></h3>
+<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this heading">¶</a></h3>
 <p>Address objects support some operators.  Unless stated otherwise, operators can
 only be applied between compatible objects (i.e. IPv4 with IPv4, IPv6 with
 IPv6).</p>
 <section id="comparison-operators">
-<h4>Comparison operators<a class="headerlink" href="#comparison-operators" title="本標題的永久連結">¶</a></h4>
+<h4>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">¶</a></h4>
 <p>Address objects can be compared with the usual set of comparison operators.
 Same IPv6 addresses with different scope zone IDs are not equal.
 Some examples:</p>
@@ -653,7 +654,7 @@ Some examples:</p>
 </div>
 </section>
 <section id="arithmetic-operators">
-<h4>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="本標題的永久連結">¶</a></h4>
+<h4>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this heading">¶</a></h4>
 <p>Integers can be added to or subtracted from address objects.  Some examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">IPv4Address</span><span class="p">(</span><span class="s1">&#39;127.0.0.2&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
 <span class="go">IPv4Address(&#39;127.0.0.5&#39;)</span>
@@ -669,7 +670,7 @@ Some examples:</p>
 </section>
 </section>
 <section id="ip-network-definitions">
-<h2>IP Network definitions<a class="headerlink" href="#ip-network-definitions" title="本標題的永久連結">¶</a></h2>
+<h2>IP Network definitions<a class="headerlink" href="#ip-network-definitions" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#ipaddress.IPv4Network" title="ipaddress.IPv4Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv4Network</span></code></a> and <a class="reference internal" href="#ipaddress.IPv6Network" title="ipaddress.IPv6Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv6Network</span></code></a> objects provide a mechanism
 for defining and inspecting IP network definitions.  A network definition
 consists of a <em>mask</em> and a <em>network address</em>, and as such defines a range of
@@ -678,7 +679,7 @@ mask.  For example, a network definition with the mask <code class="docutils lit
 the network address <code class="docutils literal notranslate"><span class="pre">192.168.1.0</span></code> consists of IP addresses in the inclusive
 range <code class="docutils literal notranslate"><span class="pre">192.168.1.0</span></code> to <code class="docutils literal notranslate"><span class="pre">192.168.1.255</span></code>.</p>
 <section id="prefix-net-mask-and-host-mask">
-<h3>Prefix, net mask and host mask<a class="headerlink" href="#prefix-net-mask-and-host-mask" title="本標題的永久連結">¶</a></h3>
+<h3>Prefix, net mask and host mask<a class="headerlink" href="#prefix-net-mask-and-host-mask" title="Permalink to this heading">¶</a></h3>
 <p>There are several equivalent ways to specify IP network masks.  A <em>prefix</em>
 <code class="docutils literal notranslate"><span class="pre">/&lt;nbits&gt;</span></code> is a notation that denotes how many high-order bits are set in
 the network mask.  A <em>net mask</em> is an IP address with some number of
@@ -689,7 +690,7 @@ high-order bits set.  Thus the prefix <code class="docutils literal notranslate"
 host mask equivalent to <code class="docutils literal notranslate"><span class="pre">/24</span></code> in IPv4 is <code class="docutils literal notranslate"><span class="pre">0.0.0.255</span></code>.</p>
 </section>
 <section id="network-objects">
-<h3>Network objects<a class="headerlink" href="#network-objects" title="本標題的永久連結">¶</a></h3>
+<h3>Network objects<a class="headerlink" href="#network-objects" title="Permalink to this heading">¶</a></h3>
 <p>All attributes implemented by address objects are implemented by network
 objects as well.  In addition, network objects implement additional attributes.
 All of these are common between <a class="reference internal" href="#ipaddress.IPv4Network" title="ipaddress.IPv4Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv4Network</span></code></a> and <a class="reference internal" href="#ipaddress.IPv6Network" title="ipaddress.IPv6Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPv6Network</span></code></a>,
@@ -1180,17 +1181,17 @@ for both the network address and the broadcast address.</p>
 
 </section>
 <section id="id1">
-<h3>Operators<a class="headerlink" href="#id1" title="本標題的永久連結">¶</a></h3>
+<h3>Operators<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <p>Network objects support some operators.  Unless stated otherwise, operators can
 only be applied between compatible objects (i.e. IPv4 with IPv4, IPv6 with
 IPv6).</p>
 <section id="logical-operators">
-<h4>Logical operators<a class="headerlink" href="#logical-operators" title="本標題的永久連結">¶</a></h4>
+<h4>Logical operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">¶</a></h4>
 <p>Network objects can be compared with the usual set of logical operators.
 Network objects are ordered first by network address, then by net mask.</p>
 </section>
 <section id="iteration">
-<h4>Iteration<a class="headerlink" href="#iteration" title="本標題的永久連結">¶</a></h4>
+<h4>Iteration<a class="headerlink" href="#iteration" title="Permalink to this heading">¶</a></h4>
 <p>Network objects can be iterated to list all the addresses belonging to the
 network.  For iteration, <em>all</em> hosts are returned, including unusable hosts
 (for usable hosts, use the <a class="reference internal" href="#ipaddress.IPv4Network.hosts" title="ipaddress.IPv4Network.hosts"><code class="xref py py-meth docutils literal notranslate"><span class="pre">hosts()</span></code></a> method).  An
@@ -1218,7 +1219,7 @@ example:</p>
 </div>
 </section>
 <section id="networks-as-containers-of-addresses">
-<h4>Networks as containers of addresses<a class="headerlink" href="#networks-as-containers-of-addresses" title="本標題的永久連結">¶</a></h4>
+<h4>Networks as containers of addresses<a class="headerlink" href="#networks-as-containers-of-addresses" title="Permalink to this heading">¶</a></h4>
 <p>Network objects can act as containers of addresses.  Some examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">IPv4Network</span><span class="p">(</span><span class="s1">&#39;192.0.2.0/28&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="go">IPv4Address(&#39;192.0.2.0&#39;)</span>
@@ -1234,7 +1235,7 @@ example:</p>
 </section>
 </section>
 <section id="interface-objects">
-<h2>Interface objects<a class="headerlink" href="#interface-objects" title="本標題的永久連結">¶</a></h2>
+<h2>Interface objects<a class="headerlink" href="#interface-objects" title="Permalink to this heading">¶</a></h2>
 <p>Interface objects are <a class="reference internal" href="../glossary.html#term-hashable"><span class="xref std std-term">hashable</span></a>, so they can be used as keys in
 dictionaries.</p>
 <dl class="py class">
@@ -1342,12 +1343,12 @@ are available:</p>
 </dd></dl>
 
 <section id="id2">
-<h3>Operators<a class="headerlink" href="#id2" title="本標題的永久連結">¶</a></h3>
+<h3>Operators<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>Interface objects support some operators.  Unless stated otherwise, operators
 can only be applied between compatible objects (i.e. IPv4 with IPv4, IPv6 with
 IPv6).</p>
 <section id="id3">
-<h4>Logical operators<a class="headerlink" href="#id3" title="本標題的永久連結">¶</a></h4>
+<h4>Logical operators<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h4>
 <p>Interface objects can be compared with the usual set of logical operators.</p>
 <p>For equality comparison (<code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">!=</span></code>), both the IP address and network
 must be the same for the objects to be equal.  An interface will not compare
@@ -1361,7 +1362,7 @@ IP addresses.</p>
 </section>
 </section>
 <section id="other-module-level-functions">
-<h2>Other Module Level Functions<a class="headerlink" href="#other-module-level-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Other Module Level Functions<a class="headerlink" href="#other-module-level-functions" title="Permalink to this heading">¶</a></h2>
 <p>The module also provides the following module level functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ipaddress.v4_int_to_packed">
@@ -1437,7 +1438,7 @@ this function as the <em>key</em> argument to <a class="reference internal" href
 
 </section>
 <section id="custom-exceptions">
-<h2>Custom Exceptions<a class="headerlink" href="#custom-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>Custom Exceptions<a class="headerlink" href="#custom-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>To support more specific error reporting from class constructors, the
 module defines the following exceptions:</p>
 <dl class="py exception">
@@ -1524,6 +1525,10 @@ module defines the following exceptions:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1590,11 +1595,11 @@ module defines the following exceptions:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

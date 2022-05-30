@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>bisect --- 陣列二分演算法 (Array bisection algorithm) &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -163,7 +164,7 @@
           <div class="body" role="main">
             
   <section id="module-bisect">
-<span id="bisect-array-bisection-algorithm"></span><h1><a class="reference internal" href="#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code></a> --- 陣列二分演算法 (Array bisection algorithm)<a class="headerlink" href="#module-bisect" title="本標題的永久連結">¶</a></h1>
+<span id="bisect-array-bisection-algorithm"></span><h1><a class="reference internal" href="#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code></a> --- 陣列二分演算法 (Array bisection algorithm)<a class="headerlink" href="#module-bisect" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/bisect.py">Lib/bisect.py</a></p>
 <hr class="docutils" />
 <p>這個模組維護一個已經排序過的 list ，當我們每次做完插入後不需要再次排序整個 list 。一個很長的 list 的比較操作很花費時間，為了改進這點，這個模組是其中一個常用的方法。這個模組被命名為 <a class="reference internal" href="#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code></a> 來自他使用一個基礎的 bisection 演算法實作。模組的原始碼是這個演算法的一個完善的實作（邊界條件已經是正確的了）。</p>
@@ -235,7 +236,7 @@ insertion step.</p>
 </dd></dl>
 
 <section id="performance-notes">
-<h2>Performance Notes<a class="headerlink" href="#performance-notes" title="本標題的永久連結">¶</a></h2>
+<h2>Performance Notes<a class="headerlink" href="#performance-notes" title="Permalink to this heading">¶</a></h2>
 <p>When writing time sensitive code using <em>bisect()</em> and <em>insort()</em>, keep these
 thoughts in mind:</p>
 <ul class="simple">
@@ -264,7 +265,7 @@ unnecessary calls to the key function during searches.</p></li>
 </div>
 </section>
 <section id="searching-sorted-lists">
-<h2>Searching Sorted Lists<a class="headerlink" href="#searching-sorted-lists" title="本標題的永久連結">¶</a></h2>
+<h2>Searching Sorted Lists<a class="headerlink" href="#searching-sorted-lists" title="Permalink to this heading">¶</a></h2>
 <p>The above <a class="reference internal" href="#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-func docutils literal notranslate"><span class="pre">bisect()</span></code></a> functions are useful for finding insertion points but
 can be tricky or awkward to use for common searching tasks. The following five
 functions show how to transform them into the standard lookups for sorted
@@ -307,7 +308,7 @@ lists:</p>
 </div>
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p id="bisect-example">The <a class="reference internal" href="#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-func docutils literal notranslate"><span class="pre">bisect()</span></code></a> function can be useful for numeric table lookups. This
 example uses <a class="reference internal" href="#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-func docutils literal notranslate"><span class="pre">bisect()</span></code></a> to look up a letter grade for an exam score (say)
 based on a set of ordered numeric breakpoints: 90 and up is an 'A', 80 to 89 is
@@ -413,6 +414,10 @@ calls by searching a list of precomputed keys to find the index of a record:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -479,11 +484,11 @@ calls by searching a list of precomputed keys to find the index of a record:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

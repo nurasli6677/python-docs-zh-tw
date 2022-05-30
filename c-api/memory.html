@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>記憶體管理 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -173,9 +174,9 @@
           <div class="body" role="main">
             
   <section id="memory-management">
-<span id="memory"></span><h1>記憶體管理<a class="headerlink" href="#memory-management" title="本標題的永久連結">¶</a></h1>
+<span id="memory"></span><h1>記憶體管理<a class="headerlink" href="#memory-management" title="Permalink to this heading">¶</a></h1>
 <section id="overview">
-<span id="memoryoverview"></span><h2>總覽<a class="headerlink" href="#overview" title="本標題的永久連結">¶</a></h2>
+<span id="memoryoverview"></span><h2>總覽<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>Memory management in Python involves a private heap containing all Python
 objects and data structures. The management of this private heap is ensured
 internally by the <em>Python memory manager</em>.  The Python memory manager has
@@ -242,7 +243,7 @@ new pymalloc object arena is created, and on shutdown.</p>
 </div>
 </section>
 <section id="allocator-domains">
-<h2>Allocator Domains<a class="headerlink" href="#allocator-domains" title="本標題的永久連結">¶</a></h2>
+<h2>Allocator Domains<a class="headerlink" href="#allocator-domains" title="Permalink to this heading">¶</a></h2>
 <p>All allocating functions belong to one of three different &quot;domains&quot; (see also
 <a class="reference internal" href="#c.PyMemAllocatorDomain" title="PyMemAllocatorDomain"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMemAllocatorDomain</span></code></a>). These domains represent different allocation
 strategies and are optimized for different purposes. The specific details on
@@ -271,7 +272,7 @@ given domain,the matching specific deallocating functions must be used. For exam
 <a class="reference internal" href="#c.PyMem_Free" title="PyMem_Free"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Free()</span></code></a> must be used to free memory allocated using <a class="reference internal" href="#c.PyMem_Malloc" title="PyMem_Malloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_Malloc()</span></code></a>.</p>
 </section>
 <section id="raw-memory-interface">
-<h2>Raw Memory Interface<a class="headerlink" href="#raw-memory-interface" title="本標題的永久連結">¶</a></h2>
+<h2>Raw Memory Interface<a class="headerlink" href="#raw-memory-interface" title="Permalink to this heading">¶</a></h2>
 <p>The following function sets are wrappers to the system allocator. These
 functions are thread-safe, the <a class="reference internal" href="../glossary.html#term-global-interpreter-lock"><span class="xref std std-term">GIL</span></a> does not
 need to be held.</p>
@@ -333,7 +334,7 @@ called before, undefined behavior occurs.</p>
 
 </section>
 <section id="memory-interface">
-<span id="memoryinterface"></span><h2>Memory Interface<a class="headerlink" href="#memory-interface" title="本標題的永久連結">¶</a></h2>
+<span id="memoryinterface"></span><h2>Memory Interface<a class="headerlink" href="#memory-interface" title="Permalink to this heading">¶</a></h2>
 <p>The following function sets, modeled after the ANSI C standard, but specifying
 behavior when requesting zero bytes, are available for allocating and releasing
 memory from the Python heap.</p>
@@ -436,7 +437,7 @@ versions and is therefore deprecated in extension modules.</p>
 </ul>
 </section>
 <section id="object-allocators">
-<h2>Object allocators<a class="headerlink" href="#object-allocators" title="本標題的永久連結">¶</a></h2>
+<h2>Object allocators<a class="headerlink" href="#object-allocators" title="Permalink to this heading">¶</a></h2>
 <p>The following function sets, modeled after the ANSI C standard, but specifying
 behavior when requesting zero bytes, are available for allocating and releasing
 memory from the Python heap.</p>
@@ -504,16 +505,9 @@ before, undefined behavior occurs.</p>
 
 </section>
 <section id="default-memory-allocators">
-<span id="id1"></span><h2>Default Memory Allocators<a class="headerlink" href="#default-memory-allocators" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Default Memory Allocators<a class="headerlink" href="#default-memory-allocators" title="Permalink to this heading">¶</a></h2>
 <p>Default memory allocators:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 18%" />
-<col style="width: 16%" />
-<col style="width: 19%" />
-<col style="width: 18%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Configuration</p></th>
 <th class="head"><p>Name</p></th>
@@ -560,7 +554,7 @@ before, undefined behavior occurs.</p>
 </ul>
 </section>
 <section id="customize-memory-allocators">
-<span id="id2"></span><h2>Customize Memory Allocators<a class="headerlink" href="#customize-memory-allocators" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Customize Memory Allocators<a class="headerlink" href="#customize-memory-allocators" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -570,10 +564,6 @@ before, undefined behavior occurs.</p>
 <dd><p>Structure used to describe a memory block allocator. The structure has
 the following fields:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 60%" />
-<col style="width: 40%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Field</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -675,7 +665,7 @@ to detect memory errors.</p>
 
 </section>
 <section id="debug-hooks-on-the-python-memory-allocators">
-<span id="pymem-debug-hooks"></span><h2>Debug hooks on the Python memory allocators<a class="headerlink" href="#debug-hooks-on-the-python-memory-allocators" title="本標題的永久連結">¶</a></h2>
+<span id="pymem-debug-hooks"></span><h2>Debug hooks on the Python memory allocators<a class="headerlink" href="#debug-hooks-on-the-python-memory-allocators" title="Permalink to this heading">¶</a></h2>
 <p>When <a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">Python is built in debug mode</span></a>, the
 <a class="reference internal" href="#c.PyMem_SetupDebugHooks" title="PyMem_SetupDebugHooks"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_SetupDebugHooks()</span></code></a> function is called at the <a class="reference internal" href="init_config.html#c-preinit"><span class="std std-ref">Python
 preinitialization</span></a> to setup debug hooks on Python memory allocators
@@ -767,7 +757,7 @@ and <code class="docutils literal notranslate"><span class="pre">0xFB</span></co
 </div>
 </section>
 <section id="the-pymalloc-allocator">
-<span id="pymalloc"></span><h2>The pymalloc allocator<a class="headerlink" href="#the-pymalloc-allocator" title="本標題的永久連結">¶</a></h2>
+<span id="pymalloc"></span><h2>The pymalloc allocator<a class="headerlink" href="#the-pymalloc-allocator" title="Permalink to this heading">¶</a></h2>
 <p>Python has a <em>pymalloc</em> allocator optimized for small objects (smaller or equal
 to 512 bytes) with a short lifetime. It uses memory mappings called &quot;arenas&quot;
 with a fixed size of 256 KiB. It falls back to <a class="reference internal" href="#c.PyMem_RawMalloc" title="PyMem_RawMalloc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyMem_RawMalloc()</span></code></a> and
@@ -785,7 +775,7 @@ with a fixed size of 256 KiB. It falls back to <a class="reference internal" hre
 <a class="reference internal" href="../using/configure.html#cmdoption-without-pymalloc"><code class="xref std std-option docutils literal notranslate"><span class="pre">--without-pymalloc</span></code></a> option. It can also be disabled at runtime using
 the <span class="target" id="index-5"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONMALLOC"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONMALLOC</span></code></a> environment variable (ex: <code class="docutils literal notranslate"><span class="pre">PYTHONMALLOC=malloc</span></code>).</p>
 <section id="customize-pymalloc-arena-allocator">
-<h3>Customize pymalloc Arena Allocator<a class="headerlink" href="#customize-pymalloc-arena-allocator" title="本標題的永久連結">¶</a></h3>
+<h3>Customize pymalloc Arena Allocator<a class="headerlink" href="#customize-pymalloc-arena-allocator" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -795,10 +785,6 @@ the <span class="target" id="index-5"></span><a class="reference internal" href=
 <dd><p>Structure used to describe an arena allocator. The structure has
 three fields:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Field</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -833,7 +819,7 @@ three fields:</p>
 </section>
 </section>
 <section id="tracemalloc-c-api">
-<h2>tracemalloc C API<a class="headerlink" href="#tracemalloc-c-api" title="本標題的永久連結">¶</a></h2>
+<h2>tracemalloc C API<a class="headerlink" href="#tracemalloc-c-api" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
@@ -856,7 +842,7 @@ Do nothing if the block was not tracked.</p>
 
 </section>
 <section id="examples">
-<span id="memoryexamples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="memoryexamples"></span><h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>Here is the example from section <a class="reference internal" href="#memoryoverview"><span class="std std-ref">總覽</span></a>, rewritten so that the
 I/O buffer is allocated from the Python heap by using the first function set:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">res</span><span class="p">;</span><span class="w"></span>
@@ -957,6 +943,10 @@ object types in C.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1022,11 +1012,11 @@ object types in C.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

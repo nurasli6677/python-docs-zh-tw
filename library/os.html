@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>os --- Miscellaneous operating system interfaces &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -177,7 +178,7 @@
           <div class="body" role="main">
             
   <section id="module-os">
-<span id="os-miscellaneous-operating-system-interfaces"></span><h1><a class="reference internal" href="#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> --- Miscellaneous operating system interfaces<a class="headerlink" href="#module-os" title="本標題的永久連結">¶</a></h1>
+<span id="os-miscellaneous-operating-system-interfaces"></span><h1><a class="reference internal" href="#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> --- Miscellaneous operating system interfaces<a class="headerlink" href="#module-os" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/os.py">Lib/os.py</a></p>
 <hr class="docutils" />
 <p>This module provides a portable way of using operating system dependent
@@ -230,7 +231,7 @@ system's identity.</p>
 </dd></dl>
 
 <section id="file-names-command-line-arguments-and-environment-variables">
-<span id="filesystem-encoding"></span><span id="os-filenames"></span><h2>File Names, Command Line Arguments, and Environment Variables<a class="headerlink" href="#file-names-command-line-arguments-and-environment-variables" title="本標題的永久連結">¶</a></h2>
+<span id="filesystem-encoding"></span><span id="os-filenames"></span><h2>File Names, Command Line Arguments, and Environment Variables<a class="headerlink" href="#file-names-command-line-arguments-and-environment-variables" title="Permalink to this heading">¶</a></h2>
 <p>In Python, file names, command line arguments, and environment variables are
 represented using the string type. On some systems, decoding these strings to
 and from bytes is necessary before passing them to the operating system. Python
@@ -253,7 +254,7 @@ encoding fails to provide this guarantee, API functions can raise
 <p>另請參閱 <a class="reference internal" href="../glossary.html#term-locale-encoding"><span class="xref std std-term">locale encoding</span></a>。</p>
 </section>
 <section id="python-utf-8-mode">
-<span id="utf8-mode"></span><h2>Python UTF-8 Mode<a class="headerlink" href="#python-utf-8-mode" title="本標題的永久連結">¶</a></h2>
+<span id="utf8-mode"></span><h2>Python UTF-8 Mode<a class="headerlink" href="#python-utf-8-mode" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入: </span>更多資訊請見 <span class="target" id="index-54"></span><a class="pep reference external" href="https://peps.python.org/pep-0540/"><strong>PEP 540</strong></a>。</p>
 </div>
@@ -303,7 +304,7 @@ can be read from <a class="reference internal" href="sys.html#sys.flags" title="
 and the <a class="reference internal" href="../glossary.html#term-filesystem-encoding-and-error-handler"><span class="xref std std-term">filesystem encoding and error handler</span></a>.</p>
 </section>
 <section id="process-parameters">
-<span id="os-procinfo"></span><h2>Process Parameters<a class="headerlink" href="#process-parameters" title="本標題的永久連結">¶</a></h2>
+<span id="os-procinfo"></span><h2>Process Parameters<a class="headerlink" href="#process-parameters" title="Permalink to this heading">¶</a></h2>
 <p>These functions and data items provide information and operate on the current
 process and user.</p>
 <dl class="py function">
@@ -874,7 +875,7 @@ don't update <a class="reference internal" href="#os.environ" title="os.environ"
 
 </section>
 <section id="file-object-creation">
-<span id="os-newstreams"></span><h2>File Object Creation<a class="headerlink" href="#file-object-creation" title="本標題的永久連結">¶</a></h2>
+<span id="os-newstreams"></span><h2>File Object Creation<a class="headerlink" href="#file-object-creation" title="Permalink to this heading">¶</a></h2>
 <p>These functions create new <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file objects</span></a>.  (See also
 <a class="reference internal" href="#os.open" title="os.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> for opening file descriptors.)</p>
 <dl class="py function">
@@ -888,7 +889,7 @@ be an integer.</p>
 
 </section>
 <section id="file-descriptor-operations">
-<span id="os-fd-ops"></span><h2>File Descriptor Operations<a class="headerlink" href="#file-descriptor-operations" title="本標題的永久連結">¶</a></h2>
+<span id="os-fd-ops"></span><h2>File Descriptor Operations<a class="headerlink" href="#file-descriptor-operations" title="Permalink to this heading">¶</a></h2>
 <p>These functions operate on I/O streams referenced using file descriptors.</p>
 <p>File descriptors are small integers corresponding to a file that has been opened
 by the current process.  For example, standard input is usually file descriptor
@@ -1730,7 +1731,7 @@ before proceeding to the second, and so on.</p>
 </dd></dl>
 
 <section id="querying-the-size-of-a-terminal">
-<span id="terminal-size"></span><h3>Querying the size of a terminal<a class="headerlink" href="#querying-the-size-of-a-terminal" title="本標題的永久連結">¶</a></h3>
+<span id="terminal-size"></span><h3>Querying the size of a terminal<a class="headerlink" href="#querying-the-size-of-a-terminal" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
@@ -1769,7 +1770,7 @@ implementation.</p>
 
 </section>
 <section id="inheritance-of-file-descriptors">
-<span id="fd-inheritance"></span><h3>Inheritance of File Descriptors<a class="headerlink" href="#inheritance-of-file-descriptors" title="本標題的永久連結">¶</a></h3>
+<span id="fd-inheritance"></span><h3>Inheritance of File Descriptors<a class="headerlink" href="#inheritance-of-file-descriptors" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -1814,7 +1815,7 @@ streams are closed, and inheritable handles are only inherited if the
 </section>
 </section>
 <section id="files-and-directories">
-<span id="os-file-dir"></span><h2>Files and Directories<a class="headerlink" href="#files-and-directories" title="本標題的永久連結">¶</a></h2>
+<span id="os-file-dir"></span><h2>Files and Directories<a class="headerlink" href="#files-and-directories" title="Permalink to this heading">¶</a></h2>
 <p>On some Unix platforms, many of these functions support one or more of these
 features:</p>
 <ul id="path-fd">
@@ -3583,7 +3584,7 @@ descriptor. On read the internal counter is decremented by one.</p>
 </dd></dl>
 
 <section id="linux-extended-attributes">
-<h3>Linux extended attributes<a class="headerlink" href="#linux-extended-attributes" title="本標題的永久連結">¶</a></h3>
+<h3>Linux extended attributes<a class="headerlink" href="#linux-extended-attributes" title="Permalink to this heading">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
@@ -3681,7 +3682,7 @@ indicates the operation must replace an existing attribute.</p>
 </section>
 </section>
 <section id="process-management">
-<span id="os-process"></span><h2>Process Management<a class="headerlink" href="#process-management" title="本標題的永久連結">¶</a></h2>
+<span id="os-process"></span><h2>Process Management<a class="headerlink" href="#process-management" title="Permalink to this heading">¶</a></h2>
 <p>These functions may be used to create and manage processes.</p>
 <p>The various <a class="reference internal" href="#os.execl" title="os.execl"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec*</span></code></a> functions take a list of arguments for the new
 program loaded into the process.  In each case, the first of these arguments is
@@ -4670,7 +4671,7 @@ otherwise return <code class="docutils literal notranslate"><span class="pre">Fa
 
 </section>
 <section id="interface-to-the-scheduler">
-<h2>Interface to the scheduler<a class="headerlink" href="#interface-to-the-scheduler" title="本標題的永久連結">¶</a></h2>
+<h2>Interface to the scheduler<a class="headerlink" href="#interface-to-the-scheduler" title="Permalink to this heading">¶</a></h2>
 <p>These functions control how a process is allocated CPU time by the operating
 system. They are only available on some Unix platforms. For more detailed
 information, consult your Unix manpages.</p>
@@ -4813,7 +4814,7 @@ if zero) is restricted to.</p>
 
 </section>
 <section id="miscellaneous-system-information">
-<span id="os-path"></span><h2>Miscellaneous System Information<a class="headerlink" href="#miscellaneous-system-information" title="本標題的永久連結">¶</a></h2>
+<span id="os-path"></span><h2>Miscellaneous System Information<a class="headerlink" href="#miscellaneous-system-information" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="os.confstr">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">confstr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#os.confstr" title="本定義的永久連結">¶</a></dt>
@@ -4985,7 +4986,7 @@ POSIX, <code class="docutils literal notranslate"><span class="pre">'nul'</span>
 
 </section>
 <section id="random-numbers">
-<h2>Random numbers<a class="headerlink" href="#random-numbers" title="本標題的永久連結">¶</a></h2>
+<h2>Random numbers<a class="headerlink" href="#random-numbers" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="os.getrandom">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">getrandom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#os.getrandom" title="本定義的永久連結">¶</a></dt>
@@ -5127,6 +5128,10 @@ block in these cases, but instead immediately raises <a class="reference interna
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -5193,11 +5198,11 @@ block in these cases, but instead immediately raises <a class="reference interna
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

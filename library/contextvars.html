@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>contextvars --- Context Variables &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -163,7 +164,7 @@
           <div class="body" role="main">
             
   <section id="module-contextvars">
-<span id="contextvars-context-variables"></span><h1><a class="reference internal" href="#module-contextvars" title="contextvars: Context Variables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code></a> --- Context Variables<a class="headerlink" href="#module-contextvars" title="本標題的永久連結">¶</a></h1>
+<span id="contextvars-context-variables"></span><h1><a class="reference internal" href="#module-contextvars" title="contextvars: Context Variables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code></a> --- Context Variables<a class="headerlink" href="#module-contextvars" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <p>This module provides APIs to manage, store, and access context-local
 state.  The <a class="reference internal" href="#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextVar</span></code></a> class is used to declare
@@ -178,7 +179,7 @@ bleeding to other code unexpectedly, when used in concurrent code.</p>
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
 <section id="context-variables">
-<h2>Context Variables<a class="headerlink" href="#context-variables" title="本標題的永久連結">¶</a></h2>
+<h2>Context Variables<a class="headerlink" href="#context-variables" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="contextvars.ContextVar">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">contextvars.</span></span><span class="sig-name descname"><span class="pre">ContextVar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.ContextVar" title="本定義的永久連結">¶</a></dt>
@@ -284,7 +285,7 @@ before the call.</p>
 
 </section>
 <section id="manual-context-management">
-<h2>Manual Context Management<a class="headerlink" href="#manual-context-management" title="本標題的永久連結">¶</a></h2>
+<h2>Manual Context Management<a class="headerlink" href="#manual-context-management" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="contextvars.copy_context">
 <span class="sig-prename descclassname"><span class="pre">contextvars.</span></span><span class="sig-name descname"><span class="pre">copy_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contextvars.copy_context" title="本定義的永久連結">¶</a></dt>
@@ -413,7 +414,7 @@ values in the context object.</p>
 
 </section>
 <section id="asyncio-support">
-<h2>asyncio support<a class="headerlink" href="#asyncio-support" title="本標題的永久連結">¶</a></h2>
+<h2>asyncio support<a class="headerlink" href="#asyncio-support" title="Permalink to this heading">¶</a></h2>
 <p>Context variables are natively supported in <a class="reference internal" href="asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> and are
 ready to be used without any extra configuration.  For example, here
 is a simple echo server, that uses a context variable to make the
@@ -505,6 +506,10 @@ client:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -571,11 +576,11 @@ client:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

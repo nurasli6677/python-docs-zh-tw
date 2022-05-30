@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>imp --- Access the import internals &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -161,7 +162,7 @@
           <div class="body" role="main">
             
   <section id="module-imp">
-<span id="imp-access-the-import-internals"></span><h1><a class="reference internal" href="#module-imp" title="imp: Access the implementation of the import statement.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code></a> --- Access the <a class="reference internal" href="../reference/import.html#importsystem"><span class="std std-ref">import</span></a> internals<a class="headerlink" href="#module-imp" title="本標題的永久連結">¶</a></h1>
+<span id="imp-access-the-import-internals"></span><h1><a class="reference internal" href="#module-imp" title="imp: Access the implementation of the import statement.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code></a> --- Access the <a class="reference internal" href="../reference/import.html#importsystem"><span class="std std-ref">import</span></a> internals<a class="headerlink" href="#module-imp" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/imp.py">Lib/imp.py</a></p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.4 版本開始棄用: </span>The <a class="reference internal" href="#module-imp" title="imp: Access the implementation of the import statement.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imp</span></code></a> module is deprecated in favor of <a class="reference internal" href="importlib.html#module-importlib" title="importlib: The implementation of the import machinery."><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib</span></code></a>.</p>
@@ -534,7 +535,7 @@ instance of <a class="reference internal" href="#imp.NullImporter" title="imp.Nu
 </dd></dl>
 
 <section id="examples">
-<span id="examples-imp"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="examples-imp"></span><h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>The following function emulates what was the standard import statement up to
 Python 1.4 (no hierarchical module names).  (This <em>implementation</em> wouldn't work
 in that version, since <a class="reference internal" href="#imp.find_module" title="imp.find_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">find_module()</span></code></a> has been extended and
@@ -604,6 +605,10 @@ in that version, since <a class="reference internal" href="#imp.find_module" tit
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -670,11 +675,11 @@ in that version, since <a class="reference internal" href="#imp.find_module" tit
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

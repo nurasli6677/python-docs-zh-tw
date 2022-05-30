@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>例外處理 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -170,7 +171,7 @@
           <div class="body" role="main">
             
   <section id="exception-handling">
-<span id="exceptionhandling"></span><h1>例外處理<a class="headerlink" href="#exception-handling" title="本標題的永久連結">¶</a></h1>
+<span id="exceptionhandling"></span><h1>例外處理<a class="headerlink" href="#exception-handling" title="Permalink to this heading">¶</a></h1>
 <p>The functions described in this chapter will let you handle and raise Python
 exceptions.  It is important to understand some of the basics of Python
 exception handling.  It works somewhat like the POSIX <code class="xref c c-data docutils literal notranslate"><span class="pre">errno</span></code> variable:
@@ -202,7 +203,7 @@ therefore still propagating), while the latter returns an exception after
 it is caught (and has therefore stopped propagating).</p>
 </div>
 <section id="printing-and-clearing">
-<h2>Printing and clearing<a class="headerlink" href="#printing-and-clearing" title="本標題的永久連結">¶</a></h2>
+<h2>Printing and clearing<a class="headerlink" href="#printing-and-clearing" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyErr_Clear">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyErr_Clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyErr_Clear" title="本定義的永久連結">¶</a><br /></dt>
@@ -247,7 +248,7 @@ the repr of <em>obj</em> will be printed in the warning message.</p>
 
 </section>
 <section id="raising-exceptions">
-<h2>Raising exceptions<a class="headerlink" href="#raising-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>Raising exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>These functions help you set the current thread's error indicator.
 For convenience, some of these functions will always return a
 <code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointer for use in a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement.</p>
@@ -473,7 +474,7 @@ use.</p>
 
 </section>
 <section id="issuing-warnings">
-<h2>Issuing warnings<a class="headerlink" href="#issuing-warnings" title="本標題的永久連結">¶</a></h2>
+<h2>Issuing warnings<a class="headerlink" href="#issuing-warnings" title="Permalink to this heading">¶</a></h2>
 <p>Use these functions to issue warnings from C code.  They mirror similar
 functions exported by the Python <a class="reference internal" href="../library/warnings.html#module-warnings" title="warnings: Issue warning messages and control their disposition."><code class="xref py py-mod docutils literal notranslate"><span class="pre">warnings</span></code></a> module.  They normally
 print a warning message to <em>sys.stderr</em>; however, it is
@@ -549,7 +550,7 @@ an ASCII-encoded string.</p>
 
 </section>
 <section id="querying-the-error-indicator">
-<h2>Querying the error indicator<a class="headerlink" href="#querying-the-error-indicator" title="本標題的永久連結">¶</a></h2>
+<h2>Querying the error indicator<a class="headerlink" href="#querying-the-error-indicator" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyErr_Occurred">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyErr_Occurred</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyErr_Occurred" title="本定義的永久連結">¶</a><br /></dt>
@@ -691,7 +692,7 @@ state.</p>
 
 </section>
 <section id="signal-handling">
-<h2>Signal Handling<a class="headerlink" href="#signal-handling" title="本標題的永久連結">¶</a></h2>
+<h2>Signal Handling<a class="headerlink" href="#signal-handling" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyErr_CheckSignals">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyErr_CheckSignals</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyErr_CheckSignals" title="本定義的永久連結">¶</a><br /></dt>
@@ -770,7 +771,7 @@ only be called from the main thread.</p>
 
 </section>
 <section id="exception-classes">
-<h2>例外類別<a class="headerlink" href="#exception-classes" title="本標題的永久連結">¶</a></h2>
+<h2>例外類別<a class="headerlink" href="#exception-classes" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyErr_NewException">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyErr_NewException</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">base</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">dict</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyErr_NewException" title="本定義的永久連結">¶</a><br /></dt>
@@ -799,7 +800,7 @@ docstring for the exception class.</p>
 
 </section>
 <section id="exception-objects">
-<h2>例外物件<a class="headerlink" href="#exception-objects" title="本標題的永久連結">¶</a></h2>
+<h2>例外物件<a class="headerlink" href="#exception-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyException_GetTraceback">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyException_GetTraceback</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">ex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyException_GetTraceback" title="本定義的永久連結">¶</a><br /></dt>
@@ -851,7 +852,7 @@ instance or <a class="reference internal" href="../library/constants.html#None" 
 
 </section>
 <section id="unicode-exception-objects">
-<span id="unicodeexceptions"></span><h2>Unicode Exception Objects<a class="headerlink" href="#unicode-exception-objects" title="本標題的永久連結">¶</a></h2>
+<span id="unicodeexceptions"></span><h2>Unicode Exception Objects<a class="headerlink" href="#unicode-exception-objects" title="Permalink to this heading">¶</a></h2>
 <p>The following functions are used to create and modify Unicode exceptions from C.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyUnicodeDecodeError_Create">
@@ -973,7 +974,7 @@ on success, <code class="docutils literal notranslate"><span class="pre">-1</spa
 
 </section>
 <section id="recursion-control">
-<span id="recursion"></span><h2>Recursion Control<a class="headerlink" href="#recursion-control" title="本標題的永久連結">¶</a></h2>
+<span id="recursion"></span><h2>Recursion Control<a class="headerlink" href="#recursion-control" title="Permalink to this heading">¶</a></h2>
 <p>These two functions provide a way to perform safe recursive calls at the C
 level, both in the core and in extension modules.  They are needed if the
 recursive code does not necessarily invoke Python code (which tracks its
@@ -1039,17 +1040,12 @@ invocation of <a class="reference internal" href="#c.Py_ReprEnter" title="Py_Rep
 
 </section>
 <section id="standard-exceptions">
-<span id="standardexceptions"></span><h2>Standard Exceptions<a class="headerlink" href="#standard-exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="standardexceptions"></span><h2>Standard Exceptions<a class="headerlink" href="#standard-exceptions" title="Permalink to this heading">¶</a></h2>
 <p>All standard Python exceptions are available as global variables whose names are
 <code class="docutils literal notranslate"><span class="pre">PyExc_</span></code> followed by the Python exception name.  These have the type
 <span class="xref c c-texpr"><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n">PyObject</span></a><span class="p">*</span></span>; they are all class objects.  For completeness, here are all
 the variables:</p>
 <table class="docutils align-default" id="index-4">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 39%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>C Name</p></th>
 <th class="head"><p>Python Name</p></th>
@@ -1059,15 +1055,15 @@ the variables:</p>
 <tbody>
 <tr class="row-even"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_BaseException</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#BaseException" title="BaseException"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BaseException</span></code></a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id7" id="id1">1</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id7" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_Exception</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#Exception" title="Exception"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Exception</span></code></a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id7" id="id2">1</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id7" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_ArithmeticError</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#ArithmeticError" title="ArithmeticError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ArithmeticError</span></code></a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id7" id="id3">1</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_AssertionError</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#AssertionError" title="AssertionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AssertionError</span></code></a></p></td>
@@ -1159,7 +1155,7 @@ the variables:</p>
 </tr>
 <tr class="row-odd"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_LookupError</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#LookupError" title="LookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">LookupError</span></code></a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id7" id="id4">1</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id7" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_MemoryError</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#MemoryError" title="MemoryError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a></p></td>
@@ -1183,7 +1179,7 @@ the variables:</p>
 </tr>
 <tr class="row-odd"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_OSError</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id7" id="id5">1</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id7" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_OverflowError</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a></p></td>
@@ -1282,10 +1278,6 @@ the variables:</p>
 </div>
 <p>These are compatibility aliases to <code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_OSError</span></code>:</p>
 <table class="docutils align-default" id="index-6">
-<colgroup>
-<col style="width: 79%" />
-<col style="width: 21%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>C Name</p></th>
 <th class="head"><p>註解</p></th>
@@ -1299,7 +1291,7 @@ the variables:</p>
 <td></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_WindowsError</span></code></p></td>
-<td><p><a class="footnote-reference brackets" href="#id8" id="id6">2</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1307,28 +1299,24 @@ the variables:</p>
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>These aliases used to be separate exception types.</p>
 </div>
 <p>註解：</p>
-<dl class="footnote brackets">
-<dt class="label" id="id7"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>,<a href="#id5">5</a>)</span></dt>
-<dd><p>This is a base class for other standard exceptions.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
-<dd><p>Only defined on Windows; protect code that uses this by testing that the
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>,<a role="doc-backlink" href="#id4">4</a>,<a role="doc-backlink" href="#id5">5</a>)</span>
+<p>This is a base class for other standard exceptions.</p>
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">2</a><span class="fn-bracket">]</span></span>
+<p>Only defined on Windows; protect code that uses this by testing that the
 preprocessor macro <code class="docutils literal notranslate"><span class="pre">MS_WINDOWS</span></code> is defined.</p>
-</dd>
-</dl>
+</aside>
 </section>
 <section id="standard-warning-categories">
-<span id="standardwarningcategories"></span><h2>Standard Warning Categories<a class="headerlink" href="#standard-warning-categories" title="本標題的永久連結">¶</a></h2>
+<span id="standardwarningcategories"></span><h2>Standard Warning Categories<a class="headerlink" href="#standard-warning-categories" title="Permalink to this heading">¶</a></h2>
 <p>All standard Python warning categories are available as global variables whose
 names are <code class="docutils literal notranslate"><span class="pre">PyExc_</span></code> followed by the Python exception name. These have the type
 <span class="xref c c-texpr"><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n">PyObject</span></a><span class="p">*</span></span>; they are all class objects. For completeness, here are all
 the variables:</p>
 <table class="docutils align-default" id="index-7">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 39%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>C Name</p></th>
 <th class="head"><p>Python Name</p></th>
@@ -1338,7 +1326,7 @@ the variables:</p>
 <tbody>
 <tr class="row-even"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_Warning</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#Warning" title="Warning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Warning</span></code></a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id10" id="id9">3</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id10" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_BytesWarning</span></code></p></td>
 <td><p><a class="reference internal" href="../library/exceptions.html#BytesWarning" title="BytesWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BytesWarning</span></code></a></p></td>
@@ -1386,11 +1374,10 @@ the variables:</p>
 <p><span class="versionmodified added">在 3.2 版本新加入: </span><code class="xref c c-data docutils literal notranslate"><span class="pre">PyExc_ResourceWarning</span></code>.</p>
 </div>
 <p>註解：</p>
-<dl class="footnote brackets">
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id9">3</a></span></dt>
-<dd><p>This is a base class for other standard warning categories.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="id10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">3</a><span class="fn-bracket">]</span></span>
+<p>This is a base class for other standard warning categories.</p>
+</aside>
 </section>
 </section>
 
@@ -1443,6 +1430,10 @@ the variables:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1508,11 +1499,11 @@ the variables:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

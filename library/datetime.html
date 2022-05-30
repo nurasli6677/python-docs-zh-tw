@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>datetime --- 日期與時間的基本型別 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -190,7 +191,7 @@
           <div class="body" role="main">
             
   <section id="module-datetime">
-<span id="datetime-basic-date-and-time-types"></span><h1><a class="reference internal" href="#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> --- 日期與時間的基本型別<a class="headerlink" href="#module-datetime" title="本標題的永久連結">¶</a></h1>
+<span id="datetime-basic-date-and-time-types"></span><h1><a class="reference internal" href="#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> --- 日期與時間的基本型別<a class="headerlink" href="#module-datetime" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/datetime.py">Lib/datetime.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> module supplies classes for manipulating dates and times.</p>
@@ -210,14 +211,14 @@ on efficient attribute extraction for output formatting and manipulation.</p>
 </dl>
 </div>
 <section id="aware-and-naive-objects">
-<span id="datetime-naive-aware"></span><h2>Aware and Naive Objects<a class="headerlink" href="#aware-and-naive-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-naive-aware"></span><h2>Aware and Naive Objects<a class="headerlink" href="#aware-and-naive-objects" title="Permalink to this heading">¶</a></h2>
 <p>Date and time objects may be categorized as &quot;aware&quot; or &quot;naive&quot; depending on
 whether or not they include timezone information.</p>
 <p>With sufficient knowledge of applicable algorithmic and political time
 adjustments, such as time zone and daylight saving time information,
 an <strong>aware</strong> object can locate itself relative to other aware objects.
 An aware object represents a specific moment in time that is not open to
-interpretation. <a class="footnote-reference brackets" href="#id5" id="id1">1</a></p>
+interpretation. <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>A <strong>naive</strong> object does not contain enough information to unambiguously locate
 itself relative to other date/time objects. Whether a naive object represents
 Coordinated Universal Time (UTC), local time, or time in some other timezone is
@@ -238,7 +239,7 @@ world are more political than rational, change frequently, and there is no
 standard suitable for every application aside from UTC.</p>
 </section>
 <section id="constants">
-<h2>常數<a class="headerlink" href="#constants" title="本標題的永久連結">¶</a></h2>
+<h2>常數<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> module exports the following constants:</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="datetime.MINYEAR">
@@ -256,7 +257,7 @@ standard suitable for every application aside from UTC.</p>
 
 </section>
 <section id="available-types">
-<h2>Available Types<a class="headerlink" href="#available-types" title="本標題的永久連結">¶</a></h2>
+<h2>Available Types<a class="headerlink" href="#available-types" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datetime.</span></span><span class="sig-name descname"><span class="pre">date</span></span></dt>
@@ -320,7 +321,7 @@ fixed offset from the UTC.</p>
 </pre></div>
 </div>
 <section id="common-properties">
-<h3>Common Properties<a class="headerlink" href="#common-properties" title="本標題的永久連結">¶</a></h3>
+<h3>Common Properties<a class="headerlink" href="#common-properties" title="Permalink to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>, <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a>, and <a class="reference internal" href="#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a> types
 share these common features:</p>
 <ul class="simple">
@@ -331,7 +332,7 @@ dictionary keys.</p></li>
 </ul>
 </section>
 <section id="determining-if-an-object-is-aware-or-naive">
-<h3>Determining if an Object is Aware or Naive<a class="headerlink" href="#determining-if-an-object-is-aware-or-naive" title="本標題的永久連結">¶</a></h3>
+<h3>Determining if an Object is Aware or Naive<a class="headerlink" href="#determining-if-an-object-is-aware-or-naive" title="Permalink to this heading">¶</a></h3>
 <p>Objects of the <a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a> type are always naive.</p>
 <p>An object of type <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> or <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> may be aware or naive.</p>
 <p>A <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> object <em>d</em> is aware if both of the following hold:</p>
@@ -351,7 +352,7 @@ objects.</p>
 </section>
 </section>
 <section id="timedelta-objects">
-<span id="datetime-timedelta"></span><h2><a class="reference internal" href="#datetime.timedelta" title="datetime.timedelta"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code></a> 物件<a class="headerlink" href="#timedelta-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-timedelta"></span><h2><a class="reference internal" href="#datetime.timedelta" title="datetime.timedelta"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code></a> 物件<a class="headerlink" href="#timedelta-objects" title="Permalink to this heading">¶</a></h2>
 <p>A <a class="reference internal" href="#datetime.timedelta" title="datetime.timedelta"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code></a> object represents a duration, the difference between two
 dates or times.</p>
 <dl class="py class">
@@ -435,10 +436,6 @@ example:</p>
 <code class="docutils literal notranslate"><span class="pre">-timedelta.max</span></code> is not representable as a <a class="reference internal" href="#datetime.timedelta" title="datetime.timedelta"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code></a> object.</p>
 <p>Instance attributes (read-only):</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>屬性</p></th>
 <th class="head"><p>Value</p></th>
@@ -458,10 +455,6 @@ example:</p>
 </table>
 <p>Supported operations:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 41%" />
-<col style="width: 59%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
 <th class="head"><p>Result</p></th>
@@ -612,7 +605,7 @@ most platforms) this method will lose microsecond accuracy.</p>
 </dd></dl>
 
 <section id="examples-of-usage-timedelta">
-<h3>用法範例：<a class="reference internal" href="#datetime.timedelta" title="datetime.timedelta"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code></a><a class="headerlink" href="#examples-of-usage-timedelta" title="本標題的永久連結">¶</a></h3>
+<h3>用法範例：<a class="reference internal" href="#datetime.timedelta" title="datetime.timedelta"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code></a><a class="headerlink" href="#examples-of-usage-timedelta" title="Permalink to this heading">¶</a></h3>
 <p>An additional example of normalization:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Components of another_year add up to exactly 365 days</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
@@ -644,12 +637,12 @@ most platforms) this method will lose microsecond accuracy.</p>
 </section>
 </section>
 <section id="date-objects">
-<span id="datetime-date"></span><h2><a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a> 物件<a class="headerlink" href="#date-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-date"></span><h2><a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a> 物件<a class="headerlink" href="#date-objects" title="Permalink to this heading">¶</a></h2>
 <p>A <a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a> object represents a date (year, month and day) in an idealized
 calendar, the current Gregorian calendar indefinitely extended in both
 directions.</p>
 <p>January 1 of year 1 is called day number 1, January 2 of year 1 is
-called day number 2, and so on. <a class="footnote-reference brackets" href="#id6" id="id2">2</a></p>
+called day number 2, and so on. <a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <dl class="py class">
 <dt class="sig sig-object py" id="datetime.date">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datetime.</span></span><span class="sig-name descname"><span class="pre">date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datetime.date" title="本定義的永久連結">¶</a></dt>
@@ -768,10 +761,6 @@ year, week and day. This is the inverse of the function <a class="reference inte
 
 <p>Supported operations:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 60%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
 <th class="head"><p>Result</p></th>
@@ -873,7 +862,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">date(2
 <span class="sig-prename descclassname"><span class="pre">date.</span></span><span class="sig-name descname"><span class="pre">isocalendar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datetime.date.isocalendar" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return a <a class="reference internal" href="../glossary.html#term-named-tuple"><span class="xref std std-term">named tuple</span></a> object with three components: <code class="docutils literal notranslate"><span class="pre">year</span></code>,
 <code class="docutils literal notranslate"><span class="pre">week</span></code> and <code class="docutils literal notranslate"><span class="pre">weekday</span></code>.</p>
-<p>The ISO calendar is a widely used variant of the Gregorian calendar. <a class="footnote-reference brackets" href="#id7" id="id3">3</a></p>
+<p>The ISO calendar is a widely used variant of the Gregorian calendar. <a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <p>The ISO year consists of 52 or 53 full weeks, and where a week starts on a
 Monday and ends on a Sunday. The first week of an ISO year is the first
 (Gregorian) calendar week of a year containing a Thursday. This is called week
@@ -948,7 +937,7 @@ complete list of formatting directives, see
 </dd></dl>
 
 <section id="examples-of-usage-date">
-<h3>用法範例：<a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a><a class="headerlink" href="#examples-of-usage-date" title="本標題的永久連結">¶</a></h3>
+<h3>用法範例：<a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a><a class="headerlink" href="#examples-of-usage-date" title="Permalink to this heading">¶</a></h3>
 <p>Example of counting days to an event:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
@@ -1013,7 +1002,7 @@ complete list of formatting directives, see
 </section>
 </section>
 <section id="datetime-objects">
-<span id="datetime-datetime"></span><h2><a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> 物件<a class="headerlink" href="#datetime-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-datetime"></span><h2><a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> 物件<a class="headerlink" href="#datetime-objects" title="Permalink to this heading">¶</a></h2>
 <p>A <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> object is a single object containing all the information
 from a <a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a> object and a <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> object.</p>
 <p>Like a <a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a> object, <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> assumes the current Gregorian
@@ -1331,10 +1320,6 @@ time representation.</p>
 
 <p>Supported operations:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 55%" />
-<col style="width: 45%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
 <th class="head"><p>Result</p></th>
@@ -1746,7 +1731,7 @@ complete list of formatting directives, see
 </dd></dl>
 
 <section id="examples-of-usage-datetime">
-<h3>Examples of Usage: <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a><a class="headerlink" href="#examples-of-usage-datetime" title="本標題的永久連結">¶</a></h3>
+<h3>Examples of Usage: <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a><a class="headerlink" href="#examples-of-usage-datetime" title="Permalink to this heading">¶</a></h3>
 <p>Examples of working with <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> objects:</p>
 <div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">timezone</span>
 
@@ -1871,7 +1856,7 @@ and then +4:30 UTC thereafter:</p>
 </section>
 </section>
 <section id="time-objects">
-<span id="datetime-time"></span><h2><a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> 物件<a class="headerlink" href="#time-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-time"></span><h2><a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> 物件<a class="headerlink" href="#time-objects" title="Permalink to this heading">¶</a></h2>
 <p>A <a class="reference internal" href="time.html#module-time" title="time: Time access and conversions."><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> object represents a (local) time of day, independent of any particular
 day, and subject to adjustment via a <a class="reference internal" href="#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a> object.</p>
 <dl class="py class">
@@ -2125,7 +2110,7 @@ return <code class="docutils literal notranslate"><span class="pre">None</span><
 </dd></dl>
 
 <section id="examples-of-usage-time">
-<h3>Examples of Usage: <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a><a class="headerlink" href="#examples-of-usage-time" title="本標題的永久連結">¶</a></h3>
+<h3>Examples of Usage: <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a><a class="headerlink" href="#examples-of-usage-time" title="Permalink to this heading">¶</a></h3>
 <p>Examples of working with a <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> object:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">tzinfo</span><span class="p">,</span> <span class="n">timedelta</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">TZ1</span><span class="p">(</span><span class="n">tzinfo</span><span class="p">):</span>
@@ -2156,7 +2141,7 @@ return <code class="docutils literal notranslate"><span class="pre">None</span><
 </section>
 </section>
 <section id="tzinfo-objects">
-<span id="datetime-tzinfo"></span><h2><a class="reference internal" href="#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a> 物件<a class="headerlink" href="#tzinfo-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-tzinfo"></span><h2><a class="reference internal" href="#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a> 物件<a class="headerlink" href="#tzinfo-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="datetime.tzinfo">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datetime.</span></span><span class="sig-name descname"><span class="pre">tzinfo</span></span><a class="headerlink" href="#datetime.tzinfo" title="本定義的永久連結">¶</a></dt>
@@ -2590,7 +2575,7 @@ daylight-saving rules.</p>
 </div>
 </section>
 <section id="timezone-objects">
-<span id="datetime-timezone"></span><h2><a class="reference internal" href="#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a> 物件<a class="headerlink" href="#timezone-objects" title="本標題的永久連結">¶</a></h2>
+<span id="datetime-timezone"></span><h2><a class="reference internal" href="#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a> 物件<a class="headerlink" href="#timezone-objects" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a> class is a subclass of <a class="reference internal" href="#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a>, each
 instance of which represents a timezone defined by a fixed offset from
 UTC.</p>
@@ -2664,7 +2649,7 @@ two digits of <code class="docutils literal notranslate"><span class="pre">offse
 
 </section>
 <section id="strftime-and-strptime-behavior">
-<span id="strftime-strptime-behavior"></span><span id="index-0"></span><h2><code class="xref py py-meth docutils literal notranslate"><span class="pre">strftime()</span></code> 與 <code class="xref py py-meth docutils literal notranslate"><span class="pre">strptime()</span></code> 的行為<a class="headerlink" href="#strftime-and-strptime-behavior" title="本標題的永久連結">¶</a></h2>
+<span id="strftime-strptime-behavior"></span><span id="index-0"></span><h2><code class="xref py py-meth docutils literal notranslate"><span class="pre">strftime()</span></code> 與 <code class="xref py py-meth docutils literal notranslate"><span class="pre">strptime()</span></code> 的行為<a class="headerlink" href="#strftime-and-strptime-behavior" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#datetime.date" title="datetime.date"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>, <a class="reference internal" href="#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, and <a class="reference internal" href="#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> objects all support a
 <code class="docutils literal notranslate"><span class="pre">strftime(format)</span></code> method, to create a string representing the time under the
 control of an explicit format string.</p>
@@ -2674,11 +2659,6 @@ corresponding format string.</p>
 <p>The table below provides a high-level comparison of <code class="xref py py-meth docutils literal notranslate"><span class="pre">strftime()</span></code>
 versus <code class="xref py py-meth docutils literal notranslate"><span class="pre">strptime()</span></code>:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 37%" />
-<col style="width: 52%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">strftime</span></code></p></th>
@@ -2705,16 +2685,10 @@ versus <code class="xref py py-meth docutils literal notranslate"><span class="p
 </tbody>
 </table>
 <section id="strftime-and-strptime-format-codes">
-<h3><code class="xref py py-meth docutils literal notranslate"><span class="pre">strftime()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">strptime()</span></code> Format Codes<a class="headerlink" href="#strftime-and-strptime-format-codes" title="本標題的永久連結">¶</a></h3>
+<h3><code class="xref py py-meth docutils literal notranslate"><span class="pre">strftime()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">strptime()</span></code> Format Codes<a class="headerlink" href="#strftime-and-strptime-format-codes" title="Permalink to this heading">¶</a></h3>
 <p>The following is a list of all the format codes that the 1989 C standard
 requires, and these work on all platforms with a standard C implementation.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 43%" />
-<col style="width: 32%" />
-<col style="width: 9%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Directive</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -2935,12 +2909,6 @@ representation.</p></td>
 <p>Several additional directives not required by the C89 standard are included for
 convenience. These parameters all correspond to ISO 8601 date values.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 43%" />
-<col style="width: 32%" />
-<col style="width: 9%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Directive</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -2990,13 +2958,13 @@ differences between platforms in handling of unsupported format specifiers.</p>
 </div>
 </section>
 <section id="technical-detail">
-<h3>Technical Detail<a class="headerlink" href="#technical-detail" title="本標題的永久連結">¶</a></h3>
+<h3>Technical Detail<a class="headerlink" href="#technical-detail" title="Permalink to this heading">¶</a></h3>
 <p>Broadly speaking, <code class="docutils literal notranslate"><span class="pre">d.strftime(fmt)</span></code> acts like the <a class="reference internal" href="time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module's
 <code class="docutils literal notranslate"><span class="pre">time.strftime(fmt,</span> <span class="pre">d.timetuple())</span></code> although not all objects support a
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">timetuple()</span></code> method.</p>
 <p>For the <a class="reference internal" href="#datetime.datetime.strptime" title="datetime.datetime.strptime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">datetime.strptime()</span></code></a> class method, the default value is
 <code class="docutils literal notranslate"><span class="pre">1900-01-01T00:00:00.000</span></code>: any components not specified in the format string
-will be pulled from the default value. <a class="footnote-reference brackets" href="#id8" id="id4">4</a></p>
+will be pulled from the default value. <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">datetime.strptime(date_string,</span> <span class="pre">format)</span></code> is equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="nb">format</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]))</span>
 </pre></div>
@@ -3102,25 +3070,27 @@ for  formats <code class="docutils literal notranslate"><span class="pre">%d</sp
 <code class="docutils literal notranslate"><span class="pre">%W</span></code>, and <code class="docutils literal notranslate"><span class="pre">%V</span></code>. Format <code class="docutils literal notranslate"><span class="pre">%y</span></code> does require a leading zero.</p></li>
 </ol>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>If, that is, we ignore the effects of Relativity</p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>This matches the definition of the &quot;proleptic Gregorian&quot; calendar in
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>If, that is, we ignore the effects of Relativity</p>
+</aside>
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>This matches the definition of the &quot;proleptic Gregorian&quot; calendar in
 Dershowitz and Reingold's book <em>Calendrical Calculations</em>,
 where it's the base calendar for all computations. See the book for
 algorithms for converting between proleptic Gregorian ordinals and
 many other calendar systems.</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>See R. H. van Gent's <a class="reference external" href="https://www.staff.science.uu.nl/~gent0113/calendar/isocalendar.htm">guide to the mathematics of the ISO 8601 calendar</a>
+</aside>
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>See R. H. van Gent's <a class="reference external" href="https://www.staff.science.uu.nl/~gent0113/calendar/isocalendar.htm">guide to the mathematics of the ISO 8601 calendar</a>
 for a good explanation.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>Passing <code class="docutils literal notranslate"><span class="pre">datetime.strptime('Feb</span> <span class="pre">29',</span> <span class="pre">'%b</span> <span class="pre">%d')</span></code> will fail since <code class="docutils literal notranslate"><span class="pre">1900</span></code> is not a leap year.</p>
-</dd>
-</dl>
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Passing <code class="docutils literal notranslate"><span class="pre">datetime.strptime('Feb</span> <span class="pre">29',</span> <span class="pre">'%b</span> <span class="pre">%d')</span></code> will fail since <code class="docutils literal notranslate"><span class="pre">1900</span></code> is not a leap year.</p>
+</aside>
 </section>
 </section>
 </section>
@@ -3193,6 +3163,10 @@ for a good explanation.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -3259,11 +3233,11 @@ for a good explanation.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

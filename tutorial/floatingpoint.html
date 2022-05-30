@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>15. 浮點數運算：問題與限制 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -160,7 +161,7 @@
           <div class="body" role="main">
             
   <section id="floating-point-arithmetic-issues-and-limitations">
-<span id="tut-fp-issues"></span><h1><span class="section-number">15. </span>浮點數運算：問題與限制<a class="headerlink" href="#floating-point-arithmetic-issues-and-limitations" title="本標題的永久連結">¶</a></h1>
+<span id="tut-fp-issues"></span><h1><span class="section-number">15. </span>浮點數運算：問題與限制<a class="headerlink" href="#floating-point-arithmetic-issues-and-limitations" title="Permalink to this heading">¶</a></h1>
 <p>在計算機架構中，浮點數 (floating-point number) 是以基數為 2（二進位）的小數表示。例如說，在十進位小數中：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="mf">0.125</span>
 </pre></div>
@@ -266,7 +267,7 @@
 </pre></div>
 </div>
 <section id="representation-error">
-<span id="tut-fp-error"></span><h2><span class="section-number">15.1. </span>表示法誤差 (Representation Error)<a class="headerlink" href="#representation-error" title="本標題的永久連結">¶</a></h2>
+<span id="tut-fp-error"></span><h2><span class="section-number">15.1. </span>表示法誤差 (Representation Error)<a class="headerlink" href="#representation-error" title="Permalink to this heading">¶</a></h2>
 <p>本節將會詳細解釋「0.1」的例子，並說明你自己要如何對類似案例執行精準的分析。 以下假設你對二進位浮點表示法已有基本程度的熟悉。</p>
 <p><em class="dfn">Representation error</em>（表示法誤差）是指在真實情況中，有些（實際上是大多數）十進位小數並不能精準地以二進位（基數為 2）小數表示。這是 Python（或 Perl、C、C++、JAVA、Fortran 和其他許多）通常不會顯示你期望的精準十進位數字的主要原因。</p>
 <p>為什麼呢？因為 1/10 無法精準地以一個二進位小數來表示。至今（2000 年 11 月）幾乎所有的計算機皆使用 IEEE-754 浮點數運算標準，並且幾乎所有的平台都以 IEEE-754 標準中的「雙精度 (double precision)」來繪製 Python 的 float。754 double 包含 53 位元的精度，所以在輸入時，電腦會努力把 0.1 轉換到最接近的分數，以 <em>J</em>/2**<em>N</em> 的形式表示，此處 <em>J</em> 是一個正好包含 53 位元的整數。可以將：</p>
@@ -376,6 +377,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -441,11 +446,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

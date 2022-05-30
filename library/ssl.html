@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ssl --- TLS/SSL wrapper for socket objects &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -199,7 +200,7 @@
           <div class="body" role="main">
             
   <section id="module-ssl">
-<span id="ssl-tls-ssl-wrapper-for-socket-objects"></span><h1><a class="reference internal" href="#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> --- TLS/SSL wrapper for socket objects<a class="headerlink" href="#module-ssl" title="本標題的永久連結">¶</a></h1>
+<span id="ssl-tls-ssl-wrapper-for-socket-objects"></span><h1><a class="reference internal" href="#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> --- TLS/SSL wrapper for socket objects<a class="headerlink" href="#module-ssl" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/ssl.py">Lib/ssl.py</a></p>
 <span class="target" id="index-0"></span><hr class="docutils" id="index-1" />
 <p>This module provides access to Transport Layer Security (often known as &quot;Secure
@@ -246,9 +247,9 @@ or newer.</p>
 <p>Use of deprecated constants and functions result in deprecation warnings.</p>
 </div>
 <section id="functions-constants-and-exceptions">
-<h2>函式、常數與例外<a class="headerlink" href="#functions-constants-and-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>函式、常數與例外<a class="headerlink" href="#functions-constants-and-exceptions" title="Permalink to this heading">¶</a></h2>
 <section id="socket-creation">
-<h3>Socket creation<a class="headerlink" href="#socket-creation" title="本標題的永久連結">¶</a></h3>
+<h3>Socket creation<a class="headerlink" href="#socket-creation" title="Permalink to this heading">¶</a></h3>
 <p>Since Python 3.2 and 2.7.9, it is recommended to use the
 <a class="reference internal" href="#ssl.SSLContext.wrap_socket" title="ssl.SSLContext.wrap_socket"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.wrap_socket()</span></code></a> of an <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> instance to wrap
 sockets as <a class="reference internal" href="#ssl.SSLSocket" title="ssl.SSLSocket"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLSocket</span></code></a> objects. The helper functions
@@ -293,7 +294,7 @@ hostname matching.</p>
 </div>
 </section>
 <section id="context-creation">
-<h3>Context creation<a class="headerlink" href="#context-creation" title="本標題的永久連結">¶</a></h3>
+<h3>Context creation<a class="headerlink" href="#context-creation" title="Permalink to this heading">¶</a></h3>
 <p>A convenience function helps create <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> objects for common
 purposes.</p>
 <dl class="py function">
@@ -363,7 +364,7 @@ them using:</p>
 
 </section>
 <section id="exceptions">
-<h3>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h3>
+<h3>例外<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h3>
 <dl class="py exception">
 <dt class="sig sig-object py" id="ssl.SSLError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">SSLError</span></span><a class="headerlink" href="#ssl.SSLError" title="本定義的永久連結">¶</a></dt>
@@ -488,7 +489,7 @@ failed.</p>
 
 </section>
 <section id="random-generation">
-<h3>Random generation<a class="headerlink" href="#random-generation" title="本標題的永久連結">¶</a></h3>
+<h3>Random generation<a class="headerlink" href="#random-generation" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.RAND_bytes">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">RAND_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ssl.RAND_bytes" title="本定義的永久連結">¶</a></dt>
@@ -550,7 +551,7 @@ information on sources of entropy.</p>
 
 </section>
 <section id="certificate-handling">
-<h3>Certificate handling<a class="headerlink" href="#certificate-handling" title="本標題的永久連結">¶</a></h3>
+<h3>Certificate handling<a class="headerlink" href="#certificate-handling" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.match_hostname">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">match_hostname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cert</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ssl.match_hostname" title="本定義的永久連結">¶</a></dt>
@@ -750,7 +751,7 @@ without server name indication or hostname matching.</p>
 
 </section>
 <section id="constants">
-<h3>常數<a class="headerlink" href="#constants" title="本標題的永久連結">¶</a></h3>
+<h3>常數<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p>All constants are now <a class="reference internal" href="enum.html#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a> or <a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> collections.</p>
 <div class="versionadded">
@@ -1481,7 +1482,7 @@ TLS/SSL versions.</p>
 </section>
 </section>
 <section id="ssl-sockets">
-<h2>SSL Sockets<a class="headerlink" href="#ssl-sockets" title="本標題的永久連結">¶</a></h2>
+<h2>SSL Sockets<a class="headerlink" href="#ssl-sockets" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.SSLSocket">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">SSLSocket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">socket.socket</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ssl.SSLSocket" title="本定義的永久連結">¶</a></dt>
@@ -1868,7 +1869,7 @@ performed. For client sockets the session can be set before
 
 </section>
 <section id="ssl-contexts">
-<h2>SSL Contexts<a class="headerlink" href="#ssl-contexts" title="本標題的永久連結">¶</a></h2>
+<h2>SSL Contexts<a class="headerlink" href="#ssl-contexts" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -1891,20 +1892,11 @@ versions.</p>
 to which versions in a server (along the top):</p>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 14%" />
-<col style="width: 10%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><em>client</em> / <strong>server</strong></p></td>
 <td><p><strong>SSLv2</strong></p></td>
 <td><p><strong>SSLv3</strong></p></td>
-<td><p><strong>TLS</strong> <a class="footnote-reference brackets" href="#id9" id="id1">3</a></p></td>
+<td><p><strong>TLS</strong> <a class="footnote-reference brackets" href="#id9" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
 <td><p><strong>TLSv1</strong></p></td>
 <td><p><strong>TLSv1.1</strong></p></td>
 <td><p><strong>TLSv1.2</strong></p></td>
@@ -1912,7 +1904,7 @@ to which versions in a server (along the top):</p>
 <tr class="row-even"><td><p><em>SSLv2</em></p></td>
 <td><p>yes</p></td>
 <td><p>no</p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id7" id="id2">1</a></p></td>
+<td><p>no <a class="footnote-reference brackets" href="#id7" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 <td><p>no</p></td>
 <td><p>no</p></td>
 <td><p>no</p></td>
@@ -1920,14 +1912,14 @@ to which versions in a server (along the top):</p>
 <tr class="row-odd"><td><p><em>SSLv3</em></p></td>
 <td><p>no</p></td>
 <td><p>yes</p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id8" id="id3">2</a></p></td>
+<td><p>no <a class="footnote-reference brackets" href="#id8" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 <td><p>no</p></td>
 <td><p>no</p></td>
 <td><p>no</p></td>
 </tr>
-<tr class="row-even"><td><p><em>TLS</em> (<em>SSLv23</em>) <a class="footnote-reference brackets" href="#id9" id="id4">3</a></p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id7" id="id5">1</a></p></td>
-<td><p>no <a class="footnote-reference brackets" href="#id8" id="id6">2</a></p></td>
+<tr class="row-even"><td><p><em>TLS</em> (<em>SSLv23</em>) <a class="footnote-reference brackets" href="#id9" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
+<td><p>no <a class="footnote-reference brackets" href="#id7" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+<td><p>no <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 <td><p>yes</p></td>
 <td><p>yes</p></td>
 <td><p>yes</p></td>
@@ -1961,19 +1953,23 @@ to which versions in a server (along the top):</p>
 </table>
 </div></blockquote>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id7"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id5">2</a>)</span></dt>
-<dd><p><a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> disables SSLv2 with <a class="reference internal" href="#ssl.OP_NO_SSLv2" title="ssl.OP_NO_SSLv2"><code class="xref py py-data docutils literal notranslate"><span class="pre">OP_NO_SSLv2</span></code></a> by default.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id6">2</a>)</span></dt>
-<dd><p><a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> disables SSLv3 with <a class="reference internal" href="#ssl.OP_NO_SSLv3" title="ssl.OP_NO_SSLv3"><code class="xref py py-data docutils literal notranslate"><span class="pre">OP_NO_SSLv3</span></code></a> by default.</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets">3</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>TLS 1.3 protocol will be available with <a class="reference internal" href="#ssl.PROTOCOL_TLS" title="ssl.PROTOCOL_TLS"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS</span></code></a> in
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p><a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> disables SSLv2 with <a class="reference internal" href="#ssl.OP_NO_SSLv2" title="ssl.OP_NO_SSLv2"><code class="xref py py-data docutils literal notranslate"><span class="pre">OP_NO_SSLv2</span></code></a> by default.</p>
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
+<p><a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> disables SSLv3 with <a class="reference internal" href="#ssl.OP_NO_SSLv3" title="ssl.OP_NO_SSLv3"><code class="xref py py-data docutils literal notranslate"><span class="pre">OP_NO_SSLv3</span></code></a> by default.</p>
+</aside>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>TLS 1.3 protocol will be available with <a class="reference internal" href="#ssl.PROTOCOL_TLS" title="ssl.PROTOCOL_TLS"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS</span></code></a> in
 OpenSSL &gt;= 1.1.1. There is no dedicated PROTOCOL constant for just
 TLS 1.3.</p>
-</dd>
-</dl>
+</aside>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <p><a class="reference internal" href="#ssl.create_default_context" title="ssl.create_default_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_default_context()</span></code></a> lets the <a class="reference internal" href="#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code></a> module choose
@@ -2610,7 +2606,7 @@ if verification fails.  This attribute must be one of
 
 <span class="target" id="index-18"></span></section>
 <section id="certificates">
-<span id="ssl-certificates"></span><span id="index-19"></span><h2>Certificates<a class="headerlink" href="#certificates" title="本標題的永久連結">¶</a></h2>
+<span id="ssl-certificates"></span><span id="index-19"></span><h2>Certificates<a class="headerlink" href="#certificates" title="Permalink to this heading">¶</a></h2>
 <p>Certificates in general are part of a public-key / private-key system.  In this
 system, each <em>principal</em>, (which may be a machine, or a person, or an
 organization) is assigned a unique two-part encryption key.  One part of the key
@@ -2645,7 +2641,7 @@ and a footer line:</p>
 </pre></div>
 </div>
 <section id="certificate-chains">
-<h3>Certificate chains<a class="headerlink" href="#certificate-chains" title="本標題的永久連結">¶</a></h3>
+<h3>Certificate chains<a class="headerlink" href="#certificate-chains" title="Permalink to this heading">¶</a></h3>
 <p>The Python files which contain certificates can contain a sequence of
 certificates, sometimes called a <em>certificate chain</em>.  This chain should start
 with the specific certificate for the principal who &quot;is&quot; the client or server,
@@ -2671,7 +2667,7 @@ certification authority's certificate:</p>
 </div>
 </section>
 <section id="ca-certificates">
-<h3>CA certificates<a class="headerlink" href="#ca-certificates" title="本標題的永久連結">¶</a></h3>
+<h3>CA certificates<a class="headerlink" href="#ca-certificates" title="Permalink to this heading">¶</a></h3>
 <p>If you are going to require validation of the other side of the connection's
 certificate, you need to provide a &quot;CA certs&quot; file, filled with the certificate
 chains for each issuer you are willing to trust.  Again, this file just contains
@@ -2681,7 +2677,7 @@ be used by calling <a class="reference internal" href="#ssl.SSLContext.load_defa
 automatically with <a class="reference internal" href="#ssl.create_default_context" title="ssl.create_default_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_default_context()</span></code></a>.</p>
 </section>
 <section id="combined-key-and-certificate">
-<h3>Combined key and certificate<a class="headerlink" href="#combined-key-and-certificate" title="本標題的永久連結">¶</a></h3>
+<h3>Combined key and certificate<a class="headerlink" href="#combined-key-and-certificate" title="Permalink to this heading">¶</a></h3>
 <p>Often the private key is stored in the same file as the certificate; in this
 case, only the <code class="docutils literal notranslate"><span class="pre">certfile</span></code> parameter to <a class="reference internal" href="#ssl.SSLContext.load_cert_chain" title="ssl.SSLContext.load_cert_chain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_cert_chain()</span></code></a>
 and <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a> needs to be passed.  If the private key is stored
@@ -2697,7 +2693,7 @@ the certificate chain:</p>
 </div>
 </section>
 <section id="self-signed-certificates">
-<h3>Self-signed certificates<a class="headerlink" href="#self-signed-certificates" title="本標題的永久連結">¶</a></h3>
+<h3>Self-signed certificates<a class="headerlink" href="#self-signed-certificates" title="Permalink to this heading">¶</a></h3>
 <p>If you are going to create a server that provides SSL-encrypted connection
 services, you will need to acquire a certificate for that service.  There are
 many ways of acquiring appropriate certificates, such as buying one from a
@@ -2733,9 +2729,9 @@ root certificates.</p>
 </section>
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="testing-for-ssl-support">
-<h3>Testing for SSL support<a class="headerlink" href="#testing-for-ssl-support" title="本標題的永久連結">¶</a></h3>
+<h3>Testing for SSL support<a class="headerlink" href="#testing-for-ssl-support" title="Permalink to this heading">¶</a></h3>
 <p>To test for the presence of SSL support in a Python installation, user code
 should use the following idiom:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -2748,7 +2744,7 @@ should use the following idiom:</p>
 </div>
 </section>
 <section id="client-side-operation">
-<h3>Client-side operation<a class="headerlink" href="#client-side-operation" title="本標題的永久連結">¶</a></h3>
+<h3>Client-side operation<a class="headerlink" href="#client-side-operation" title="Permalink to this heading">¶</a></h3>
 <p>This example creates a SSL context with the recommended security settings
 for client sockets, including automatic certificate verification:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
@@ -2851,7 +2847,7 @@ proceed to talk with the server:</p>
 <p>參閱下方 <a class="reference internal" href="#ssl-security"><span class="std std-ref">Security considerations</span></a> 的討論。</p>
 </section>
 <section id="server-side-operation">
-<h3>Server-side operation<a class="headerlink" href="#server-side-operation" title="本標題的永久連結">¶</a></h3>
+<h3>Server-side operation<a class="headerlink" href="#server-side-operation" title="Permalink to this heading">¶</a></h3>
 <p>For server operation, typically you'll need to have a server certificate, and
 private key, each in a file.  You'll first create a context holding the key
 and the certificate, so that clients can check your authenticity.  Then
@@ -2900,7 +2896,7 @@ the sockets in <a class="reference internal" href="#ssl-nonblocking"><span class
 </section>
 </section>
 <section id="notes-on-non-blocking-sockets">
-<span id="ssl-nonblocking"></span><h2>Notes on non-blocking sockets<a class="headerlink" href="#notes-on-non-blocking-sockets" title="本標題的永久連結">¶</a></h2>
+<span id="ssl-nonblocking"></span><h2>Notes on non-blocking sockets<a class="headerlink" href="#notes-on-non-blocking-sockets" title="Permalink to this heading">¶</a></h2>
 <p>SSL sockets behave slightly different than regular sockets in
 non-blocking mode. When working with non-blocking sockets, there are
 thus several things you need to be aware of:</p>
@@ -2960,7 +2956,7 @@ as well.</p>
 </div>
 </section>
 <section id="memory-bio-support">
-<h2>Memory BIO Support<a class="headerlink" href="#memory-bio-support" title="本標題的永久連結">¶</a></h2>
+<h2>Memory BIO Support<a class="headerlink" href="#memory-bio-support" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
 </div>
@@ -3104,7 +3100,7 @@ become true after all data currently in the buffer has been read.</p>
 
 </section>
 <section id="ssl-session">
-<h2>SSL session<a class="headerlink" href="#ssl-session" title="本標題的永久連結">¶</a></h2>
+<h2>SSL session<a class="headerlink" href="#ssl-session" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版本新加入.</span></p>
 </div>
@@ -3141,9 +3137,9 @@ become true after all data currently in the buffer has been read.</p>
 
 </section>
 <section id="security-considerations">
-<span id="ssl-security"></span><h2>Security considerations<a class="headerlink" href="#security-considerations" title="本標題的永久連結">¶</a></h2>
+<span id="ssl-security"></span><h2>Security considerations<a class="headerlink" href="#security-considerations" title="Permalink to this heading">¶</a></h2>
 <section id="best-defaults">
-<h3>Best defaults<a class="headerlink" href="#best-defaults" title="本標題的永久連結">¶</a></h3>
+<h3>Best defaults<a class="headerlink" href="#best-defaults" title="Permalink to this heading">¶</a></h3>
 <p>For <strong>client use</strong>, if you don't have any special requirements for your
 security policy, it is highly recommended that you use the
 <a class="reference internal" href="#ssl.create_default_context" title="ssl.create_default_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_default_context()</span></code></a> function to create your SSL context.
@@ -3167,9 +3163,9 @@ checking enabled by default.  If you do so, please read the paragraphs below
 to achieve a good security level.</p>
 </section>
 <section id="manual-settings">
-<h3>Manual settings<a class="headerlink" href="#manual-settings" title="本標題的永久連結">¶</a></h3>
+<h3>Manual settings<a class="headerlink" href="#manual-settings" title="Permalink to this heading">¶</a></h3>
 <section id="verifying-certificates">
-<h4>Verifying certificates<a class="headerlink" href="#verifying-certificates" title="本標題的永久連結">¶</a></h4>
+<h4>Verifying certificates<a class="headerlink" href="#verifying-certificates" title="Permalink to this heading">¶</a></h4>
 <p>When calling the <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a> constructor directly,
 <a class="reference internal" href="#ssl.CERT_NONE" title="ssl.CERT_NONE"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_NONE</span></code></a> is the default.  Since it does not authenticate the other
 peer, it can be insecure, especially in client mode where most of time you
@@ -3191,7 +3187,7 @@ enabled.</p>
 to specify <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> and similarly check the client certificate.</p>
 </section>
 <section id="protocol-versions">
-<h4>Protocol versions<a class="headerlink" href="#protocol-versions" title="本標題的永久連結">¶</a></h4>
+<h4>Protocol versions<a class="headerlink" href="#protocol-versions" title="Permalink to this heading">¶</a></h4>
 <p>SSL versions 2 and 3 are considered insecure and are therefore dangerous to
 use.  If you want maximum compatibility between clients and servers, it is
 recommended to use <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> or
@@ -3208,7 +3204,7 @@ implies certificate validation and hostname checks by default. You have to
 load certificates into the context.</p>
 </section>
 <section id="cipher-selection">
-<h4>Cipher selection<a class="headerlink" href="#cipher-selection" title="本標題的永久連結">¶</a></h4>
+<h4>Cipher selection<a class="headerlink" href="#cipher-selection" title="Permalink to this heading">¶</a></h4>
 <p>If you have advanced security requirements, fine-tuning of the ciphers
 enabled when negotiating a SSL session is possible through the
 <a class="reference internal" href="#ssl.SSLContext.set_ciphers" title="ssl.SSLContext.set_ciphers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.set_ciphers()</span></code></a> method.  Starting from Python 3.2.3, the
@@ -3221,7 +3217,7 @@ system.</p>
 </section>
 </section>
 <section id="multi-processing">
-<h3>Multi-processing<a class="headerlink" href="#multi-processing" title="本標題的永久連結">¶</a></h3>
+<h3>Multi-processing<a class="headerlink" href="#multi-processing" title="Permalink to this heading">¶</a></h3>
 <p>If using this module as part of a multi-processed application (using,
 for example the <a class="reference internal" href="multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> or <a class="reference internal" href="concurrent.futures.html#module-concurrent.futures" title="concurrent.futures: Execute computations concurrently using threads or processes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code></a> modules),
 be aware that OpenSSL's internal random number generator does not properly
@@ -3232,7 +3228,7 @@ successful call of <a class="reference internal" href="#ssl.RAND_add" title="ssl
 </section>
 </section>
 <section id="tls-1-3">
-<span id="ssl-tlsv1-3"></span><h2>TLS 1.3<a class="headerlink" href="#tls-1-3" title="本標題的永久連結">¶</a></h2>
+<span id="ssl-tlsv1-3"></span><h2>TLS 1.3<a class="headerlink" href="#tls-1-3" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
@@ -3358,6 +3354,10 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -3424,11 +3424,11 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

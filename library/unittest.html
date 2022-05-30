@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>unittest --- 單元測試框架 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -188,7 +189,7 @@
           <div class="body" role="main">
             
   <section id="module-unittest">
-<span id="unittest-unit-testing-framework"></span><h1><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> --- 單元測試框架<a class="headerlink" href="#module-unittest" title="本標題的永久連結">¶</a></h1>
+<span id="unittest-unit-testing-framework"></span><h1><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> --- 單元測試框架<a class="headerlink" href="#module-unittest" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/unittest/__init__.py">Lib/unittest/__init__.py</a></p>
 <hr class="docutils" />
 <p>（假如你已經熟悉相關基礎的測試概念，你可能會希望跳過以下段落，直接參考 <a class="reference internal" href="#assert-methods"><span class="std std-ref">assert 方法清單</span></a>。）</p>
@@ -226,7 +227,7 @@ recommended that tests be driven by a continuous integration system such as
 or <a class="reference external" href="https://travis-ci.com">Travis-CI</a>, or <a class="reference external" href="https://www.appveyor.com/">AppVeyor</a>.</p>
 </div>
 <section id="basic-example">
-<span id="unittest-minimal-example"></span><h2>簡單範例<a class="headerlink" href="#basic-example" title="本標題的永久連結">¶</a></h2>
+<span id="unittest-minimal-example"></span><h2>簡單範例<a class="headerlink" href="#basic-example" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 模組提供一系列豐富的工具用來建構與執行測試。本節將展示這一系列工具中一部份，它們已能滿足大部份使用者需求。</p>
 <p>這是一段簡短的腳本用來測試 3 個字串方法：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
@@ -278,7 +279,7 @@ They are covered in more detail in the section <a class="reference internal" hre
 <p>以上的例子顯示大多數使用 <a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 特徵足以滿足大多數日常測試的需求。接下來第一部分文件的剩餘部分將繼續探索完整特徵設定。</p>
 </section>
 <section id="command-line-interface">
-<span id="unittest-command-line-interface"></span><h2>命令執行列介面 (Command-Line Interface)<a class="headerlink" href="#command-line-interface" title="本標題的永久連結">¶</a></h2>
+<span id="unittest-command-line-interface"></span><h2>命令執行列介面 (Command-Line Interface)<a class="headerlink" href="#command-line-interface" title="Permalink to this heading">¶</a></h2>
 <p>單元測試模組可以透過命令執行列執行測試模組，物件甚至個別的測試方法：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">test_module1</span> <span class="n">test_module2</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">test_module</span><span class="o">.</span><span class="n">TestClass</span>
@@ -307,7 +308,7 @@ They are covered in more detail in the section <a class="reference internal" hre
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>在早期的版本可以個別執行測試方法和不需要模組或是類別。</p>
 </div>
 <section id="command-line-options">
-<h3>命令列模式選項<a class="headerlink" href="#command-line-options" title="本標題的永久連結">¶</a></h3>
+<h3>命令列模式選項<a class="headerlink" href="#command-line-options" title="Permalink to this heading">¶</a></h3>
 <p><strong class="program">unittest</strong> 支援以下命令列選項：</p>
 <dl class="std cmdoption">
 <dt class="sig sig-object std" id="cmdoption-unittest-b">
@@ -362,7 +363,7 @@ imported by the test loader.</p>
 </section>
 </section>
 <section id="test-discovery">
-<span id="unittest-test-discovery"></span><h2>Test Discovery（測試探索）<a class="headerlink" href="#test-discovery" title="本標題的永久連結">¶</a></h2>
+<span id="unittest-test-discovery"></span><h2>Test Discovery（測試探索）<a class="headerlink" href="#test-discovery" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -434,7 +435,7 @@ directory too (e.g.
 </div>
 </section>
 <section id="organizing-test-code">
-<span id="organizing-tests"></span><h2>Organizing test code<a class="headerlink" href="#organizing-test-code" title="本標題的永久連結">¶</a></h2>
+<span id="organizing-tests"></span><h2>Organizing test code<a class="headerlink" href="#organizing-test-code" title="Permalink to this heading">¶</a></h2>
 <p>The basic building blocks of unit testing are <em class="dfn">test cases</em> --- single
 scenarios that must be set up and checked for correctness.  In <a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a>,
 test cases are represented by <a class="reference internal" href="#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></a> instances.
@@ -543,7 +544,7 @@ be consistent?</p></li>
 </ul>
 </section>
 <section id="re-using-old-test-code">
-<span id="legacy-unit-tests"></span><h2>Re-using old test code<a class="headerlink" href="#re-using-old-test-code" title="本標題的永久連結">¶</a></h2>
+<span id="legacy-unit-tests"></span><h2>Re-using old test code<a class="headerlink" href="#re-using-old-test-code" title="Permalink to this heading">¶</a></h2>
 <p>Some users will find that they have existing test code that they would like to
 run from <a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a>, without converting every old test function to a
 <a class="reference internal" href="#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a> subclass.</p>
@@ -577,7 +578,7 @@ automatically build <a class="reference internal" href="#unittest.TestSuite" tit
 <a class="reference internal" href="doctest.html#module-doctest" title="doctest: Test pieces of code within docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a>-based tests.</p>
 </section>
 <section id="skipping-tests-and-expected-failures">
-<span id="unittest-skipping"></span><h2>Skipping tests and expected failures<a class="headerlink" href="#skipping-tests-and-expected-failures" title="本標題的永久連結">¶</a></h2>
+<span id="unittest-skipping"></span><h2>Skipping tests and expected failures<a class="headerlink" href="#skipping-tests-and-expected-failures" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.1 版本新加入.</span></p>
 </div>
@@ -692,7 +693,7 @@ Skipped classes will not have <a class="reference internal" href="#unittest.Test
 Skipped modules will not have <code class="xref py py-func docutils literal notranslate"><span class="pre">setUpModule()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">tearDownModule()</span></code> run.</p>
 </section>
 <section id="distinguishing-test-iterations-using-subtests">
-<span id="subtests"></span><h2>Distinguishing test iterations using subtests<a class="headerlink" href="#distinguishing-test-iterations-using-subtests" title="本標題的永久連結">¶</a></h2>
+<span id="subtests"></span><h2>Distinguishing test iterations using subtests<a class="headerlink" href="#distinguishing-test-iterations-using-subtests" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -751,10 +752,10 @@ wouldn't be displayed:</p>
 </div>
 </section>
 <section id="classes-and-functions">
-<span id="unittest-contents"></span><h2>Classes and functions<a class="headerlink" href="#classes-and-functions" title="本標題的永久連結">¶</a></h2>
+<span id="unittest-contents"></span><h2>Classes and functions<a class="headerlink" href="#classes-and-functions" title="Permalink to this heading">¶</a></h2>
 <p>This section describes in depth the API of <a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a>.</p>
 <section id="test-cases">
-<span id="testcase-objects"></span><h3>Test cases<a class="headerlink" href="#test-cases" title="本標題的永久連結">¶</a></h3>
+<span id="testcase-objects"></span><h3>Test cases<a class="headerlink" href="#test-cases" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="unittest.TestCase">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unittest.</span></span><span class="sig-name descname"><span class="pre">TestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.TestCase" title="本定義的永久連結">¶</a></dt>
@@ -888,11 +889,6 @@ running tests under a debugger.</p>
 report failures.  The following table lists the most commonly used methods
 (see the tables below for more assert methods):</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 48%" />
-<col style="width: 34%" />
-<col style="width: 18%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Checks that</p></th>
@@ -1043,11 +1039,6 @@ To check for the exact type, use <a class="reference internal" href="#unittest.T
 <p>It is also possible to check the production of exceptions, warnings, and
 log messages using the following methods:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 36%" />
-<col style="width: 11%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Checks that</p></th>
@@ -1293,11 +1284,6 @@ manager.</p>
 
 <p>There are also other methods used to perform more specific checks, such as:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 46%" />
-<col style="width: 38%" />
-<col style="width: 16%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Checks that</p></th>
@@ -1451,11 +1437,6 @@ message.</p>
 <a class="reference internal" href="#unittest.TestCase.assertEqual" title="unittest.TestCase.assertEqual"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertEqual()</span></code></a> are summarized in the following table.  Note
 that it's usually not necessary to invoke these methods directly.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 35%" />
-<col style="width: 17%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Used to compare</p></th>
@@ -1812,17 +1793,12 @@ test cases using legacy test code, allowing it to be integrated into a
 </dd></dl>
 
 <section id="deprecated-aliases">
-<span id="id1"></span><h4>Deprecated aliases<a class="headerlink" href="#deprecated-aliases" title="本標題的永久連結">¶</a></h4>
+<span id="id1"></span><h4>Deprecated aliases<a class="headerlink" href="#deprecated-aliases" title="Permalink to this heading">¶</a></h4>
 <p>For historical reasons, some of the <a class="reference internal" href="#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a> methods had one or more
 aliases that are now deprecated.  The following table lists the correct names
 along with their deprecated aliases:</p>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 29%" />
-<col style="width: 31%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Method Name</p></th>
 <th class="head"><p>Deprecated alias</p></th>
@@ -1889,7 +1865,7 @@ along with their deprecated aliases:</p>
 </section>
 </section>
 <section id="grouping-tests">
-<span id="testsuite-objects"></span><h3>Grouping tests<a class="headerlink" href="#grouping-tests" title="本標題的永久連結">¶</a></h3>
+<span id="testsuite-objects"></span><h3>Grouping tests<a class="headerlink" href="#grouping-tests" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="unittest.TestSuite">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unittest.</span></span><span class="sig-name descname"><span class="pre">TestSuite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.TestSuite" title="本定義的永久連結">¶</a></dt>
@@ -1974,7 +1950,7 @@ is invoked by a <code class="xref py py-class docutils literal notranslate"><spa
 
 </section>
 <section id="loading-and-running-tests">
-<h3>Loading and running tests<a class="headerlink" href="#loading-and-running-tests" title="本標題的永久連結">¶</a></h3>
+<h3>Loading and running tests<a class="headerlink" href="#loading-and-running-tests" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="unittest.TestLoader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unittest.</span></span><span class="sig-name descname"><span class="pre">TestLoader</span></span><a class="headerlink" href="#unittest.TestLoader" title="本定義的永久連結">¶</a></dt>
@@ -2546,7 +2522,7 @@ test names.</p>
 </dd></dl>
 
 <section id="load-tests-protocol">
-<h4>load_tests Protocol<a class="headerlink" href="#load-tests-protocol" title="本標題的永久連結">¶</a></h4>
+<h4>load_tests Protocol<a class="headerlink" href="#load-tests-protocol" title="Permalink to this heading">¶</a></h4>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -2608,7 +2584,7 @@ impossibility of package names matching the default pattern.</p>
 </section>
 </section>
 <section id="class-and-module-fixtures">
-<h2>Class and Module Fixtures<a class="headerlink" href="#class-and-module-fixtures" title="本標題的永久連結">¶</a></h2>
+<h2>Class and Module Fixtures<a class="headerlink" href="#class-and-module-fixtures" title="Permalink to this heading">¶</a></h2>
 <p>Class and module level fixtures are implemented in <a class="reference internal" href="#unittest.TestSuite" title="unittest.TestSuite"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestSuite</span></code></a>. When
 the test suite encounters a test from a new class then <code class="xref py py-meth docutils literal notranslate"><span class="pre">tearDownClass()</span></code>
 from the previous class (if there is one) is called, followed by
@@ -2636,7 +2612,7 @@ instance an <code class="docutils literal notranslate"><span class="pre">_ErrorH
 the standard unittest test runner then this detail doesn't matter, but if you
 are a framework author it may be relevant.</p>
 <section id="setupclass-and-teardownclass">
-<h3>setUpClass and tearDownClass<a class="headerlink" href="#setupclass-and-teardownclass" title="本標題的永久連結">¶</a></h3>
+<h3>setUpClass and tearDownClass<a class="headerlink" href="#setupclass-and-teardownclass" title="Permalink to this heading">¶</a></h3>
 <p>These must be implemented as class methods:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
 
@@ -2660,7 +2636,7 @@ have <code class="docutils literal notranslate"><span class="pre">setUpClass</sp
 instead of as an error.</p>
 </section>
 <section id="setupmodule-and-teardownmodule">
-<h3>setUpModule and tearDownModule<a class="headerlink" href="#setupmodule-and-teardownmodule" title="本標題的永久連結">¶</a></h3>
+<h3>setUpModule and tearDownModule<a class="headerlink" href="#setupmodule-and-teardownmodule" title="Permalink to this heading">¶</a></h3>
 <p>These should be implemented as functions:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setUpModule</span><span class="p">():</span>
     <span class="n">createConnection</span><span class="p">()</span>
@@ -2709,7 +2685,7 @@ functions one at a time, so it can be called at any time.</p>
 </section>
 </section>
 <section id="signal-handling">
-<h2>Signal Handling<a class="headerlink" href="#signal-handling" title="本標題的永久連結">¶</a></h2>
+<h2>Signal Handling<a class="headerlink" href="#signal-handling" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -2838,6 +2814,10 @@ to temporarily remove the handler while the test is being executed:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -2904,11 +2884,11 @@ to temporarily remove the handler while the test is being executed:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Coroutines and Tasks &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -175,10 +176,10 @@
           <div class="body" role="main">
             
   <section id="coroutines-and-tasks">
-<h1>Coroutines and Tasks<a class="headerlink" href="#coroutines-and-tasks" title="本標題的永久連結">¶</a></h1>
+<h1>Coroutines and Tasks<a class="headerlink" href="#coroutines-and-tasks" title="Permalink to this heading">¶</a></h1>
 <p>This section outlines high-level asyncio APIs to work with coroutines
 and Tasks.</p>
-<div class="contents local topic" id="id1">
+<nav class="contents local" id="id1">
 <ul class="simple">
 <li><p><a class="reference internal" href="#coroutines" id="id2">協程</a></p></li>
 <li><p><a class="reference internal" href="#awaitables" id="id3">Awaitables</a></p></li>
@@ -195,9 +196,9 @@ and Tasks.</p>
 <li><p><a class="reference internal" href="#task-object" id="id14">Task Object</a></p></li>
 <li><p><a class="reference internal" href="#generator-based-coroutines" id="id15">Generator-based Coroutines</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="coroutines">
-<span id="coroutine"></span><h2><a class="toc-backref" href="#id2">協程</a><a class="headerlink" href="#coroutines" title="本標題的永久連結">¶</a></h2>
+<span id="coroutine"></span><h2><a class="toc-backref" href="#id2" role="doc-backlink">協程</a><a class="headerlink" href="#coroutines" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="../glossary.html#term-coroutine"><span class="xref std std-term">Coroutines</span></a> declared with the async/await syntax is the
 preferred way of writing asyncio applications.  For example, the following
 snippet of code prints &quot;hello&quot;, waits 1 second,
@@ -286,7 +287,7 @@ concurrently as asyncio <a class="reference internal" href="#asyncio.Task" title
 </ul>
 </section>
 <section id="awaitables">
-<span id="asyncio-awaitables"></span><h2><a class="toc-backref" href="#id3">Awaitables</a><a class="headerlink" href="#awaitables" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-awaitables"></span><h2><a class="toc-backref" href="#id3" role="doc-backlink">Awaitables</a><a class="headerlink" href="#awaitables" title="Permalink to this heading">¶</a></h2>
 <p>We say that an object is an <strong>awaitable</strong> object if it can be used
 in an <a class="reference internal" href="../reference/expressions.html#await"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">await</span></code></a> expression.  Many asyncio APIs are designed to
 accept awaitables.</p>
@@ -370,7 +371,7 @@ APIs, can be awaited:</p>
 is <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a>.</p>
 </section>
 <section id="running-an-asyncio-program">
-<h2><a class="toc-backref" href="#id4">Running an asyncio Program</a><a class="headerlink" href="#running-an-asyncio-program" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Running an asyncio Program</a><a class="headerlink" href="#running-an-asyncio-program" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.run">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.run" title="本定義的永久連結">¶</a></dt>
@@ -407,7 +408,7 @@ programs, and should ideally only be called once.</p>
 
 </section>
 <section id="creating-tasks">
-<h2><a class="toc-backref" href="#id5">Creating Tasks</a><a class="headerlink" href="#creating-tasks" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Creating Tasks</a><a class="headerlink" href="#creating-tasks" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.create_task">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">create_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.create_task" title="本定義的永久連結">¶</a></dt>
@@ -433,7 +434,7 @@ a task disappearing mid execution.</p>
 
 </section>
 <section id="sleeping">
-<h2><a class="toc-backref" href="#id6">Sleeping</a><a class="headerlink" href="#sleeping" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Sleeping</a><a class="headerlink" href="#sleeping" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.sleep">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">sleep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.sleep" title="本定義的永久連結">¶</a></dt>
@@ -475,7 +476,7 @@ for 5 seconds:</p>
 
 </section>
 <section id="running-tasks-concurrently">
-<h2><a class="toc-backref" href="#id7">Running Tasks Concurrently</a><a class="headerlink" href="#running-tasks-concurrently" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Running Tasks Concurrently</a><a class="headerlink" href="#running-tasks-concurrently" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.gather">
 <em class="property"><span class="pre">awaitable</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">gather</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">aws</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.gather" title="本定義的永久連結">¶</a></dt>
@@ -564,7 +565,7 @@ and there is no running event loop.</p>
 
 </section>
 <section id="shielding-from-cancellation">
-<h2><a class="toc-backref" href="#id8">Shielding From Cancellation</a><a class="headerlink" href="#shielding-from-cancellation" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Shielding From Cancellation</a><a class="headerlink" href="#shielding-from-cancellation" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.shield">
 <em class="property"><span class="pre">awaitable</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">shield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.shield" title="本定義的永久連結">¶</a></dt>
@@ -606,7 +607,7 @@ and there is no running event loop.</p>
 
 </section>
 <section id="timeouts">
-<h2><a class="toc-backref" href="#id9">Timeouts</a><a class="headerlink" href="#timeouts" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Timeouts</a><a class="headerlink" href="#timeouts" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.wait_for">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.wait_for" title="本定義的永久連結">¶</a></dt>
@@ -659,7 +660,7 @@ for <em>aw</em> to be cancelled.  Previously, it raised
 
 </section>
 <section id="waiting-primitives">
-<h2><a class="toc-backref" href="#id10">Waiting Primitives</a><a class="headerlink" href="#waiting-primitives" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Waiting Primitives</a><a class="headerlink" href="#waiting-primitives" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.wait">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aws</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_when</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ALL_COMPLETED</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.wait" title="本定義的永久連結">¶</a></dt>
@@ -680,10 +681,6 @@ returned in the second set.</p>
 <p><em>return_when</em> indicates when this function should return.  It must
 be one of the following constants:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>常數</p></th>
 <th class="head"><p>描述</p></th>
@@ -783,7 +780,7 @@ iterable are Future-like objects and there is no running event loop.</p>
 
 </section>
 <section id="running-in-threads">
-<h2><a class="toc-backref" href="#id11">Running in Threads</a><a class="headerlink" href="#running-in-threads" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Running in Threads</a><a class="headerlink" href="#running-in-threads" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.to_thread">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">to_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.to_thread" title="本定義的永久連結">¶</a></dt>
@@ -841,7 +838,7 @@ have one, <cite>asyncio.to_thread()</cite> can also be used for CPU-bound functi
 
 </section>
 <section id="scheduling-from-other-threads">
-<h2><a class="toc-backref" href="#id12">Scheduling From Other Threads</a><a class="headerlink" href="#scheduling-from-other-threads" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Scheduling From Other Threads</a><a class="headerlink" href="#scheduling-from-other-threads" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.run_coroutine_threadsafe">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">run_coroutine_threadsafe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.run_coroutine_threadsafe" title="本定義的永久連結">¶</a></dt>
@@ -885,7 +882,7 @@ argument to be passed explicitly.</p>
 
 </section>
 <section id="introspection">
-<h2><a class="toc-backref" href="#id13">Introspection</a><a class="headerlink" href="#introspection" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Introspection</a><a class="headerlink" href="#introspection" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.current_task">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">current_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.current_task" title="本定義的永久連結">¶</a></dt>
@@ -912,7 +909,7 @@ current loop.</p>
 
 </section>
 <section id="task-object">
-<h2><a class="toc-backref" href="#id14">Task Object</a><a class="headerlink" href="#task-object" title="本標題的永久連結">¶</a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Task Object</a><a class="headerlink" href="#task-object" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Task">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Task" title="本定義的永久連結">¶</a></dt>
@@ -1139,7 +1136,7 @@ in the <a class="reference internal" href="functions.html#repr" title="repr"><co
 
 </section>
 <section id="generator-based-coroutines">
-<span id="asyncio-generator-based-coro"></span><h2><a class="toc-backref" href="#id15">Generator-based Coroutines</a><a class="headerlink" href="#generator-based-coroutines" title="本標題的永久連結">¶</a></h2>
+<span id="asyncio-generator-based-coro"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink">Generator-based Coroutines</a><a class="headerlink" href="#generator-based-coroutines" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>Support for generator-based coroutines is <strong>deprecated</strong> and
@@ -1244,6 +1241,10 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1311,11 +1312,11 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

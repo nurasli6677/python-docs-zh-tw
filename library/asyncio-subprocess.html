@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>子行程 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -168,7 +169,7 @@
           <div class="body" role="main">
             
   <section id="subprocesses">
-<span id="asyncio-subprocess"></span><h1>子行程<a class="headerlink" href="#subprocesses" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-subprocess"></span><h1>子行程<a class="headerlink" href="#subprocesses" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/subprocess.py">Lib/asyncio/subprocess.py</a>、<a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/base_subprocess.py">Lib/asyncio/base_subprocess.py</a></p>
 <hr class="docutils" />
 <p>This section describes high-level async/await asyncio APIs to
@@ -214,7 +215,7 @@ to modify the above example to run several commands simultaneously:</p>
 </div>
 <p>另請參閱<a class="reference internal" href="#examples">Examples</a>。</p>
 <section id="creating-subprocesses">
-<h2>建立子行程<a class="headerlink" href="#creating-subprocesses" title="本標題的永久連結">¶</a></h2>
+<h2>建立子行程<a class="headerlink" href="#creating-subprocesses" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.create_subprocess_exec">
 <em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">create_subprocess_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.create_subprocess_exec" title="本定義的永久連結">¶</a></dt>
@@ -269,7 +270,7 @@ and <a class="reference internal" href="asyncio-protocol.html#asyncio-subprocess
 </div>
 </section>
 <section id="constants">
-<h2>常數<a class="headerlink" href="#constants" title="本標題的永久連結">¶</a></h2>
+<h2>常數<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="asyncio.subprocess.PIPE">
 <span class="sig-prename descclassname"><span class="pre">asyncio.subprocess.</span></span><span class="sig-name descname"><span class="pre">PIPE</span></span><a class="headerlink" href="#asyncio.subprocess.PIPE" title="本定義的永久連結">¶</a></dt>
@@ -300,7 +301,7 @@ to process creation functions.  It indicates that the special file
 
 </section>
 <section id="interacting-with-subprocesses">
-<h2>Interacting with Subprocesses<a class="headerlink" href="#interacting-with-subprocesses" title="本標題的永久連結">¶</a></h2>
+<h2>Interacting with Subprocesses<a class="headerlink" href="#interacting-with-subprocesses" title="Permalink to this heading">¶</a></h2>
 <p>Both <a class="reference internal" href="#asyncio.create_subprocess_exec" title="asyncio.create_subprocess_exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_exec()</span></code></a> and <a class="reference internal" href="#asyncio.create_subprocess_shell" title="asyncio.create_subprocess_shell"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_subprocess_shell()</span></code></a>
 functions return instances of the <em>Process</em> class.  <em>Process</em> is a high-level
 wrapper that allows communicating with subprocesses and watching for
@@ -450,7 +451,7 @@ by signal <code class="docutils literal notranslate"><span class="pre">N</span><
 </dd></dl>
 
 <section id="subprocess-and-threads">
-<span id="asyncio-subprocess-threads"></span><h3>子行程與線程<a class="headerlink" href="#subprocess-and-threads" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-subprocess-threads"></span><h3>子行程與線程<a class="headerlink" href="#subprocess-and-threads" title="Permalink to this heading">¶</a></h3>
 <p>Standard asyncio event loop supports running subprocesses from different threads by
 default.</p>
 <p>On Windows subprocesses are provided by <a class="reference internal" href="asyncio-eventloop.html#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> only (default),
@@ -471,7 +472,7 @@ please refer to their documentation.</p>
 </div>
 </section>
 <section id="examples">
-<h3>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h3>
+<h3>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h3>
 <p>An example using the <a class="reference internal" href="#asyncio.subprocess.Process" title="asyncio.subprocess.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> class to
 control a subprocess and the <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a> class to read from
 its standard output.</p>
@@ -552,6 +553,10 @@ written using low-level APIs.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -619,11 +624,11 @@ written using low-level APIs.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

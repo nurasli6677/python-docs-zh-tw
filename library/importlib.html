@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>importlib --- The implementation of import &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -175,14 +176,14 @@
           <div class="body" role="main">
             
   <section id="module-importlib">
-<span id="importlib-the-implementation-of-import"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib</span></code> --- The implementation of <code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#module-importlib" title="本標題的永久連結">¶</a></h1>
+<span id="importlib-the-implementation-of-import"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib</span></code> --- The implementation of <code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#module-importlib" title="Permalink to this heading">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.1 版本新加入.</span></p>
 </div>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/importlib/__init__.py">Lib/importlib/__init__.py</a></p>
 <hr class="docutils" />
 <section id="introduction">
-<h2>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h2>
+<h2>簡介<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>The purpose of the <a class="reference internal" href="#module-importlib" title="importlib: The implementation of the import machinery."><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib</span></code></a> package is two-fold. One is to provide the
 implementation of the <a class="reference internal" href="../reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> statement (and thus, by extension, the
 <a class="reference internal" href="functions.html#import__" title="__import__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__import__()</span></code></a> function) in Python source code. This provides an
@@ -231,7 +232,7 @@ in <a class="reference internal" href="sys.html#sys.modules" title="sys.modules"
 </div>
 </section>
 <section id="functions">
-<h2>函式<a class="headerlink" href="#functions" title="本標題的永久連結">¶</a></h2>
+<h2>函式<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="importlib.__import__">
 <span class="sig-prename descclassname"><span class="pre">importlib.</span></span><span class="sig-name descname"><span class="pre">__import__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fromlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#importlib.__import__" title="本定義的永久連結">¶</a></dt>
@@ -369,7 +370,7 @@ a <a class="reference internal" href="#importlib.machinery.ModuleSpec" title="im
 
 </section>
 <section id="module-importlib.abc">
-<span id="importlib-abc-abstract-base-classes-related-to-import"></span><h2><a class="reference internal" href="#module-importlib.abc" title="importlib.abc: Abstract base classes related to import"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.abc</span></code></a> -- Abstract base classes related to import<a class="headerlink" href="#module-importlib.abc" title="本標題的永久連結">¶</a></h2>
+<span id="importlib-abc-abstract-base-classes-related-to-import"></span><h2><a class="reference internal" href="#module-importlib.abc" title="importlib.abc: Abstract base classes related to import"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.abc</span></code></a> -- Abstract base classes related to import<a class="headerlink" href="#module-importlib.abc" title="Permalink to this heading">¶</a></h2>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/importlib/abc.py">Lib/importlib/abc.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-importlib.abc" title="importlib.abc: Abstract base classes related to import"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.abc</span></code></a> module contains all of the core abstract base classes
@@ -1132,7 +1133,7 @@ implement this interface.</p>
 
 </section>
 <section id="module-importlib.resources">
-<span id="importlib-resources-resources"></span><h2><a class="reference internal" href="#module-importlib.resources" title="importlib.resources: Package resource reading, opening, and access"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.resources</span></code></a> -- Resources<a class="headerlink" href="#module-importlib.resources" title="本標題的永久連結">¶</a></h2>
+<span id="importlib-resources-resources"></span><h2><a class="reference internal" href="#module-importlib.resources" title="importlib.resources: Package resource reading, opening, and access"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.resources</span></code></a> -- Resources<a class="headerlink" href="#module-importlib.resources" title="Permalink to this heading">¶</a></h2>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/importlib/resources.py">Lib/importlib/resources.py</a></p>
 <hr class="docutils" />
 <div class="versionadded">
@@ -1293,7 +1294,7 @@ returns <a class="reference internal" href="stdtypes.html#str" title="str"><code
 
 </section>
 <section id="module-importlib.machinery">
-<span id="importlib-machinery-importers-and-path-hooks"></span><h2><a class="reference internal" href="#module-importlib.machinery" title="importlib.machinery: Importers and path hooks"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.machinery</span></code></a> -- Importers and path hooks<a class="headerlink" href="#module-importlib.machinery" title="本標題的永久連結">¶</a></h2>
+<span id="importlib-machinery-importers-and-path-hooks"></span><h2><a class="reference internal" href="#module-importlib.machinery" title="importlib.machinery: Importers and path hooks"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.machinery</span></code></a> -- Importers and path hooks<a class="headerlink" href="#module-importlib.machinery" title="Permalink to this heading">¶</a></h2>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/importlib/machinery.py">Lib/importlib/machinery.py</a></p>
 <hr class="docutils" />
 <p>This module contains the various objects that help <a class="reference internal" href="../reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a>
@@ -1798,7 +1799,7 @@ attribute refers to a loadable location.</p>
 
 </section>
 <section id="module-importlib.util">
-<span id="importlib-util-utility-code-for-importers"></span><h2><a class="reference internal" href="#module-importlib.util" title="importlib.util: Utility code for importers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.util</span></code></a> -- Utility code for importers<a class="headerlink" href="#module-importlib.util" title="本標題的永久連結">¶</a></h2>
+<span id="importlib-util-utility-code-for-importers"></span><h2><a class="reference internal" href="#module-importlib.util" title="importlib.util: Utility code for importers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.util</span></code></a> -- Utility code for importers<a class="headerlink" href="#module-importlib.util" title="Permalink to this heading">¶</a></h2>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/importlib/util.py">Lib/importlib/util.py</a></p>
 <hr class="docutils" />
 <p>This module contains the various objects that help in the construction of
@@ -2090,9 +2091,9 @@ instead of by instance.</p>
 
 </section>
 <section id="examples">
-<span id="importlib-examples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="importlib-examples"></span><h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="importing-programmatically">
-<h3>Importing programmatically<a class="headerlink" href="#importing-programmatically" title="本標題的永久連結">¶</a></h3>
+<h3>Importing programmatically<a class="headerlink" href="#importing-programmatically" title="Permalink to this heading">¶</a></h3>
 <p>To programmatically import a module, use <a class="reference internal" href="#importlib.import_module" title="importlib.import_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.import_module()</span></code></a>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">importlib</span>
 
@@ -2101,9 +2102,11 @@ instead of by instance.</p>
 </div>
 </section>
 <section id="checking-if-a-module-can-be-imported">
-<h3>Checking if a module can be imported<a class="headerlink" href="#checking-if-a-module-can-be-imported" title="本標題的永久連結">¶</a></h3>
+<h3>Checking if a module can be imported<a class="headerlink" href="#checking-if-a-module-can-be-imported" title="Permalink to this heading">¶</a></h3>
 <p>If you need to find out if a module can be imported without actually doing the
 import, then you should use <a class="reference internal" href="#importlib.util.find_spec" title="importlib.util.find_spec"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.util.find_spec()</span></code></a>.</p>
+<p>Note that if <code class="docutils literal notranslate"><span class="pre">name</span></code> is a submodule (contains a dot),
+<a class="reference internal" href="#importlib.util.find_spec" title="importlib.util.find_spec"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.util.find_spec()</span></code></a> will import the parent module.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">importlib.util</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -2124,7 +2127,7 @@ import, then you should use <a class="reference internal" href="#importlib.util.
 </div>
 </section>
 <section id="importing-a-source-file-directly">
-<h3>Importing a source file directly<a class="headerlink" href="#importing-a-source-file-directly" title="本標題的永久連結">¶</a></h3>
+<h3>Importing a source file directly<a class="headerlink" href="#importing-a-source-file-directly" title="Permalink to this heading">¶</a></h3>
 <p>To import a Python source file directly, use the following recipe
 (Python 3.5 and newer only):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">importlib.util</span>
@@ -2143,7 +2146,7 @@ import, then you should use <a class="reference internal" href="#importlib.util.
 </div>
 </section>
 <section id="implementing-lazy-imports">
-<h3>Implementing lazy imports<a class="headerlink" href="#implementing-lazy-imports" title="本標題的永久連結">¶</a></h3>
+<h3>Implementing lazy imports<a class="headerlink" href="#implementing-lazy-imports" title="Permalink to this heading">¶</a></h3>
 <p>The example below shows how to implement lazy imports:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">importlib.util</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
@@ -2165,7 +2168,7 @@ import, then you should use <a class="reference internal" href="#importlib.util.
 </div>
 </section>
 <section id="setting-up-an-importer">
-<h3>Setting up an importer<a class="headerlink" href="#setting-up-an-importer" title="本標題的永久連結">¶</a></h3>
+<h3>Setting up an importer<a class="headerlink" href="#setting-up-an-importer" title="Permalink to this heading">¶</a></h3>
 <p>For deep customizations of import, you typically want to implement an
 <a class="reference internal" href="../glossary.html#term-importer"><span class="xref std std-term">importer</span></a>. This means managing both the <a class="reference internal" href="../glossary.html#term-finder"><span class="xref std std-term">finder</span></a> and <a class="reference internal" href="../glossary.html#term-loader"><span class="xref std std-term">loader</span></a>
 side of things. For finders there are two flavours to choose from depending on
@@ -2198,7 +2201,7 @@ classes defined within this package):</p>
 </div>
 </section>
 <section id="approximating-importlib-import-module">
-<h3>Approximating <a class="reference internal" href="#importlib.import_module" title="importlib.import_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.import_module()</span></code></a><a class="headerlink" href="#approximating-importlib-import-module" title="本標題的永久連結">¶</a></h3>
+<h3>Approximating <a class="reference internal" href="#importlib.import_module" title="importlib.import_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">importlib.import_module()</span></code></a><a class="headerlink" href="#approximating-importlib-import-module" title="Permalink to this heading">¶</a></h3>
 <p>Import itself is implemented in Python code, making it possible to
 expose most of the import machinery through importlib. The following
 helps illustrate the various APIs that importlib exposes by providing an
@@ -2293,6 +2296,10 @@ Python 3.6 and newer for other parts of the code).</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -2359,11 +2366,11 @@ Python 3.6 and newer for other parts of the code).</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

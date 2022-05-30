@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>readline --- GNU readline interface &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -167,7 +168,7 @@
           <div class="body" role="main">
             
   <section id="module-readline">
-<span id="readline-gnu-readline-interface"></span><h1><a class="reference internal" href="#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> --- GNU readline interface<a class="headerlink" href="#module-readline" title="本標題的永久連結">¶</a></h1>
+<span id="readline-gnu-readline-interface"></span><h1><a class="reference internal" href="#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> --- GNU readline interface<a class="headerlink" href="#module-readline" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> module defines a number of functions to facilitate
 completion and reading/writing of history files from the Python interpreter.
@@ -201,7 +202,7 @@ turn ON <em>vi</em> keybindings and TAB completion:</p>
 </div>
 </div>
 <section id="init-file">
-<h2>Init file<a class="headerlink" href="#init-file" title="本標題的永久連結">¶</a></h2>
+<h2>Init file<a class="headerlink" href="#init-file" title="Permalink to this heading">¶</a></h2>
 <p>The following functions relate to the init file and user configuration:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="readline.parse_and_bind">
@@ -219,7 +220,7 @@ used. This calls <code class="xref c c-func docutils literal notranslate"><span 
 
 </section>
 <section id="line-buffer">
-<h2>Line buffer<a class="headerlink" href="#line-buffer" title="本標題的永久連結">¶</a></h2>
+<h2>Line buffer<a class="headerlink" href="#line-buffer" title="Permalink to this heading">¶</a></h2>
 <p>The following functions operate on the line buffer:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="readline.get_line_buffer">
@@ -245,7 +246,7 @@ line buffer.  This calls <code class="xref c c-func docutils literal notranslate
 
 </section>
 <section id="history-file">
-<h2>History file<a class="headerlink" href="#history-file" title="本標題的永久連結">¶</a></h2>
+<h2>History file<a class="headerlink" href="#history-file" title="Permalink to this heading">¶</a></h2>
 <p>The following functions operate on a history file:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="readline.read_history_file">
@@ -290,7 +291,7 @@ unlimited history file size.</p>
 
 </section>
 <section id="history-list">
-<h2>History list<a class="headerlink" href="#history-list" title="本標題的永久連結">¶</a></h2>
+<h2>History list<a class="headerlink" href="#history-list" title="Permalink to this heading">¶</a></h2>
 <p>The following functions operate on a global history list:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="readline.clear_history">
@@ -356,7 +357,7 @@ across multiple sessions.</p>
 
 </section>
 <section id="startup-hooks">
-<h2>Startup hooks<a class="headerlink" href="#startup-hooks" title="本標題的永久連結">¶</a></h2>
+<h2>Startup hooks<a class="headerlink" href="#startup-hooks" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="readline.set_startup_hook">
 <span class="sig-prename descclassname"><span class="pre">readline.</span></span><span class="sig-name descname"><span class="pre">set_startup_hook</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#readline.set_startup_hook" title="本定義的永久連結">¶</a></dt>
@@ -381,7 +382,7 @@ if Python was compiled for a version of the library that supports it.</p>
 
 </section>
 <section id="completion">
-<h2>Completion<a class="headerlink" href="#completion" title="本標題的永久連結">¶</a></h2>
+<h2>Completion<a class="headerlink" href="#completion" title="Permalink to this heading">¶</a></h2>
 <p>The following functions relate to implementing a custom word completion
 function.  This is typically operated by the Tab key, and can suggest and
 automatically complete a word being typed.  By default, Readline is set up
@@ -457,7 +458,7 @@ each time matches need to be displayed.</p>
 
 </section>
 <section id="example">
-<span id="readline-example"></span><h2>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
+<span id="readline-example"></span><h2>範例<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p>The following example demonstrates how to use the <a class="reference internal" href="#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a> module's
 history reading and writing functions to automatically load and save a history
 file named <code class="file docutils literal notranslate"><span class="pre">.python_history</span></code> from the user's home directory.  The code
@@ -576,6 +577,10 @@ support history save/restore.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -642,11 +647,11 @@ support history save/restore.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

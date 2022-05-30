@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>dis --- Python bytecode的反組譯器 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -164,16 +165,16 @@
           <div class="body" role="main">
             
   <section id="module-dis">
-<span id="dis-disassembler-for-python-bytecode"></span><h1><a class="reference internal" href="#module-dis" title="dis: Disassembler for Python bytecode."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dis</span></code></a> --- Python bytecode的反組譯器<a class="headerlink" href="#module-dis" title="本標題的永久連結">¶</a></h1>
+<span id="dis-disassembler-for-python-bytecode"></span><h1><a class="reference internal" href="#module-dis" title="dis: Disassembler for Python bytecode."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dis</span></code></a> --- Python bytecode的反組譯器<a class="headerlink" href="#module-dis" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/dis.py">Lib/dis.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-dis" title="dis: Disassembler for Python bytecode."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dis</span></code></a> 模組支援反組譯分析 CPython <a class="reference internal" href="../glossary.html#term-bytecode"><span class="xref std std-term">bytecode</span></a>。CPython bytecode 作為輸入的模組被定義於 <code class="file docutils literal notranslate"><span class="pre">Include/opcode.h</span></code> 並且被編譯器和直譯器所使用。</p>
 <div class="impl-detail compound">
-<p class="compound-first"><strong>CPython implementation detail:</strong> Bytecode is an implementation detail of the CPython interpreter.  No
+<p><strong>CPython implementation detail:</strong> Bytecode is an implementation detail of the CPython interpreter.  No
 guarantees are made that bytecode will not be added, removed, or changed
 between versions of Python.  Use of this module should not be considered to
 work across Python VMs or Python releases.</p>
-<div class="compound-last versionchanged">
+<div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>Use 2 bytes for each instruction. Previously the number of bytes varied
 by instruction.</p>
 </div>
@@ -194,7 +195,7 @@ by instruction.</p>
 </div>
 <p>(The &quot;2&quot; is a line number).</p>
 <section id="bytecode-analysis">
-<h2>Bytecode analysis<a class="headerlink" href="#bytecode-analysis" title="本標題的永久連結">¶</a></h2>
+<h2>Bytecode analysis<a class="headerlink" href="#bytecode-analysis" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -268,7 +269,7 @@ code object, like <a class="reference internal" href="#dis.code_info" title="dis
 </div>
 </section>
 <section id="analysis-functions">
-<h2>Analysis functions<a class="headerlink" href="#analysis-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Analysis functions<a class="headerlink" href="#analysis-functions" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#module-dis" title="dis: Disassembler for Python bytecode."><code class="xref py py-mod docutils literal notranslate"><span class="pre">dis</span></code></a> module also defines the following analysis functions that convert
 the input directly to the desired output. They can be useful if only a single
 operation is being performed, so the intermediate analysis object isn't useful:</p>
@@ -427,7 +428,7 @@ it will return the stack effect of not jumping. And if <em>jump</em> is
 
 </section>
 <section id="python-bytecode-instructions">
-<span id="bytecodes"></span><h2>Python Bytecode Instructions<a class="headerlink" href="#python-bytecode-instructions" title="本標題的永久連結">¶</a></h2>
+<span id="bytecodes"></span><h2>Python Bytecode Instructions<a class="headerlink" href="#python-bytecode-instructions" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#dis.get_instructions" title="dis.get_instructions"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_instructions()</span></code></a> function and <a class="reference internal" href="#dis.Bytecode" title="dis.Bytecode"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bytecode</span></code></a> class provide
 details of bytecode instructions as <a class="reference internal" href="#dis.Instruction" title="dis.Instruction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Instruction</span></code></a> instances:</p>
 <dl class="py class">
@@ -1616,7 +1617,7 @@ ignore it. Before, only opcodes <code class="docutils literal notranslate"><span
 
 </section>
 <section id="opcode-collections">
-<span id="id1"></span><h2>Opcode collections<a class="headerlink" href="#opcode-collections" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Opcode collections<a class="headerlink" href="#opcode-collections" title="Permalink to this heading">¶</a></h2>
 <p>These collections are provided for automatic introspection of bytecode
 instructions:</p>
 <dl class="py data">
@@ -1727,6 +1728,10 @@ scopes or names in outer scopes that are referenced from this scope.  It does
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1793,11 +1798,11 @@ scopes or names in outer scopes that are referenced from this scope.  It does
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

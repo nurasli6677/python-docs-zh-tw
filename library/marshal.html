@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>marshal --- 内部 Python 物件序列化 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -151,9 +152,9 @@
           <div class="body" role="main">
             
   <section id="module-marshal">
-<span id="marshal-internal-python-object-serialization"></span><h1><a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> --- 内部 Python 物件序列化<a class="headerlink" href="#module-marshal" title="本標題的永久連結">¶</a></h1>
+<span id="marshal-internal-python-object-serialization"></span><h1><a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> --- 内部 Python 物件序列化<a class="headerlink" href="#module-marshal" title="Permalink to this heading">¶</a></h1>
 <hr class="docutils" />
-<p>此 module（模組）包含一個能以二進位制格式來讀寫 Python 值的函式。這種格式是 Python 專屬但獨立於機器架構的（例如，你可以在一臺 PC 上寫入某個 Python 值，再將檔案傳到一臺 Sun 上並在那裡讀取它）。這種格式的細節是有意地不在文件上說明的；它可能在不同 Python 版本中被改變（雖然這種情況極少發生）。<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+<p>此 module（模組）包含一個能以二進位制格式來讀寫 Python 值的函式。這種格式是 Python 專屬但獨立於機器架構的（例如，你可以在一臺 PC 上寫入某個 Python 值，再將檔案傳到一臺 Sun 上並在那裡讀取它）。這種格式的細節是有意地不在文件上說明的；它可能在不同 Python 版本中被改變（雖然這種情況極少發生）。<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p id="index-0">這不是一個通用「持續性 (persistence)」module 。關於通用持續性以及透過 RPC 呼叫傳遞 Python 物件，請參閱 <a class="reference internal" href="pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> 和 <a class="reference internal" href="shelve.html#module-shelve" title="shelve: Python object persistence."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shelve</span></code></a> 等 module 。<a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> module 主要是為了支援用來讀寫「偽編譯 (pseudo-compiled)」 <code class="file docutils literal notranslate"><span class="pre">.pyc</span></code> 檔案的 Python module。因此，Python 維護者保留了在必要時以不向後相容的方式修改 marshal 格式的權利。如果你要序列化和反序列化 Python 物件，請改用 <a class="reference internal" href="pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module  -- 其執行效率相當、有保證版本獨立性，且實質上 pickle 還支援比 marshal 更多樣的物件。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -211,11 +212,10 @@
 </dd></dl>
 
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>此 module 的名稱來源於 Modula-3 (及其他語言) 的設計者所使用的術語，他們使用 &quot;marshal&quot; 來表示自包含 (self-contained) 形式資料的傳輸。嚴格來說，將資料從內部形式轉換為外部形式 (例如用於 RPC 緩衝區) 稱為 &quot;marshal&quot;，而其反向過程則稱為 &quot;unmarshal&quot;。</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>此 module 的名稱來源於 Modula-3 (及其他語言) 的設計者所使用的術語，他們使用 &quot;marshal&quot; 來表示自包含 (self-contained) 形式資料的傳輸。嚴格來說，將資料從內部形式轉換為外部形式 (例如用於 RPC 緩衝區) 稱為 &quot;marshal&quot;，而其反向過程則稱為 &quot;unmarshal&quot;。</p>
+</aside>
 </section>
 
 
@@ -247,6 +247,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -313,11 +317,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

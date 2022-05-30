@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>nntplib --- NNTP 協定客戶端 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="module-nntplib">
-<span id="nntplib-nntp-protocol-client"></span><h1><a class="reference internal" href="#module-nntplib" title="nntplib: NNTP protocol client (requires sockets).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> --- NNTP 協定客戶端<a class="headerlink" href="#module-nntplib" title="本標題的永久連結">¶</a></h1>
+<span id="nntplib-nntp-protocol-client"></span><h1><a class="reference internal" href="#module-nntplib" title="nntplib: NNTP protocol client (requires sockets).（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntplib</span></code></a> --- NNTP 協定客戶端<a class="headerlink" href="#module-nntplib" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/nntplib.py">Lib/nntplib.py</a></p>
 <div class="deprecated" id="index-0">
 <p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><code class="xref py py-mod docutils literal notranslate"><span class="pre">nntlib</span></code> 模組 (module) 即將被棄用（詳見 <span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0594/"><strong>PEP 594</strong></a>）。</p>
@@ -332,11 +333,11 @@ with a digit in the range 1--5.</p>
 </dd></dl>
 
 <section id="nntp-objects">
-<span id="id1"></span><h2>NNTP 物件<a class="headerlink" href="#nntp-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>NNTP 物件<a class="headerlink" href="#nntp-objects" title="Permalink to this heading">¶</a></h2>
 <p>When connected, <a class="reference internal" href="#nntplib.NNTP" title="nntplib.NNTP"><code class="xref py py-class docutils literal notranslate"><span class="pre">NNTP</span></code></a> and <a class="reference internal" href="#nntplib.NNTP_SSL" title="nntplib.NNTP_SSL"><code class="xref py py-class docutils literal notranslate"><span class="pre">NNTP_SSL</span></code></a> objects support the
 following methods and attributes.</p>
 <section id="attributes">
-<h3>屬性<a class="headerlink" href="#attributes" title="本標題的永久連結">¶</a></h3>
+<h3>屬性<a class="headerlink" href="#attributes" title="Permalink to this heading">¶</a></h3>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nntplib.NNTP.nntp_version">
 <span class="sig-prename descclassname"><span class="pre">NNTP.</span></span><span class="sig-name descname"><span class="pre">nntp_version</span></span><a class="headerlink" href="#nntplib.NNTP.nntp_version" title="本定義的永久連結">¶</a></dt>
@@ -360,7 +361,7 @@ or <a class="reference internal" href="constants.html#None" title="None"><code c
 
 </section>
 <section id="methods">
-<h3>Methods<a class="headerlink" href="#methods" title="本標題的永久連結">¶</a></h3>
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
 <p>The <em>response</em> that is returned as the first item in the return tuple of almost
 all methods is the server's response: a string beginning with a three-digit
 code.  If the server's response indicates an error, the method raises one of
@@ -734,7 +735,7 @@ if available.</p>
 </section>
 </section>
 <section id="utility-functions">
-<h2>Utility functions<a class="headerlink" href="#utility-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this heading">¶</a></h2>
 <p>The module also defines the following utility function:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="nntplib.decode_header">
@@ -800,6 +801,10 @@ in a human readable form:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -866,11 +871,11 @@ in a human readable form:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

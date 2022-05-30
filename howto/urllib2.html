@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>如何使用urllib套件取得網路資源 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -184,9 +185,9 @@
           <div class="body" role="main">
             
   <section id="howto-fetch-internet-resources-using-the-urllib-package">
-<span id="urllib-howto"></span><h1>如何使用urllib套件取得網路資源<a class="headerlink" href="#howto-fetch-internet-resources-using-the-urllib-package" title="本標題的永久連結">¶</a></h1>
+<span id="urllib-howto"></span><h1>如何使用urllib套件取得網路資源<a class="headerlink" href="#howto-fetch-internet-resources-using-the-urllib-package" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="http://www.voidspace.org.uk/python/index.shtml">Michael Foord</a></p>
 </dd>
 </dl>
@@ -195,7 +196,7 @@
 <p>這份指南出自於早期版本的法文翻譯 <a class="reference external" href="http://www.voidspace.org.uk/python/articles/urllib2_francais.shtml">urllib2 - Le Manuel manquant</a>.</p>
 </div>
 <section id="introduction">
-<h2>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h2>
+<h2>簡介<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">Related Articles</p>
 <p>以下這些與Python有關的文章說不定能幫到你:</p>
@@ -215,7 +216,7 @@ This tutorial focuses on the most common case, HTTP.</p>
 <p>一般情形下 <em>urlopen</em> 是非常容易使用的，但當你遇到錯誤或者較複雜的情況下，你可能需要對超文本協議HyperText Transfer Protocol有一定的了解。最完整且具參考價值的是 <span class="target" id="index-5"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2616.html"><strong>RFC 2616</strong></a>，不過它是一份技術文件並不容易閱讀，以下的教學會提供足夠的HTTP知識來幫助你使用 <em>urllib</em>。這份教學並非要取代 <a class="reference internal" href="../library/urllib.request.html#module-urllib.request" title="urllib.request: Extensible library for opening URLs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a> 這份文件，你還是會需要它!</p>
 </section>
 <section id="fetching-urls">
-<h2>從URL取得資源<a class="headerlink" href="#fetching-urls" title="本標題的永久連結">¶</a></h2>
+<h2>從URL取得資源<a class="headerlink" href="#fetching-urls" title="Permalink to this heading">¶</a></h2>
 <p>以下是使用 urllib.request 最簡單的方法:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
 <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://python.org/&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
@@ -266,7 +267,7 @@ extra information (&quot;metadata&quot;) <em>about</em> the data or about the re
 the server - this information is sent as HTTP &quot;headers&quot;.  Let's look at each of
 these in turn.</p>
 <section id="data">
-<h3>Data<a class="headerlink" href="#data" title="本標題的永久連結">¶</a></h3>
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this heading">¶</a></h3>
 <p>Sometimes you want to send data to a URL (often the URL will refer to a CGI
 (Common Gateway Interface) script or other web application). With HTTP,
 this is often done using what's known as a <strong>POST</strong> request. This is often what
@@ -322,19 +323,19 @@ GET request by encoding it in the URL itself.</p>
 the encoded values.</p>
 </section>
 <section id="headers">
-<h3>Headers<a class="headerlink" href="#headers" title="本標題的永久連結">¶</a></h3>
+<h3>Headers<a class="headerlink" href="#headers" title="Permalink to this heading">¶</a></h3>
 <p>We'll discuss here one particular HTTP header, to illustrate how to add headers
 to your HTTP request.</p>
-<p>Some websites <a class="footnote-reference brackets" href="#id8" id="id1">1</a> dislike being browsed by programs, or send different versions
-to different browsers <a class="footnote-reference brackets" href="#id9" id="id2">2</a>. By default urllib identifies itself as
+<p>Some websites <a class="footnote-reference brackets" href="#id8" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> dislike being browsed by programs, or send different versions
+to different browsers <a class="footnote-reference brackets" href="#id9" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. By default urllib identifies itself as
 <code class="docutils literal notranslate"><span class="pre">Python-urllib/x.y</span></code> (where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are the major and minor version
 numbers of the Python release,
 e.g. <code class="docutils literal notranslate"><span class="pre">Python-urllib/2.5</span></code>), which may confuse the site, or just plain
 not work. The way a browser identifies itself is through the
-<code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> header <a class="footnote-reference brackets" href="#id10" id="id3">3</a>. When you create a Request object you can
+<code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> header <a class="footnote-reference brackets" href="#id10" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. When you create a Request object you can
 pass a dictionary of headers in. The following example makes the same
 request as above, but identifies itself as a version of Internet
-Explorer <a class="footnote-reference brackets" href="#id11" id="id4">4</a>.</p>
+Explorer <a class="footnote-reference brackets" href="#id11" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.parse</span>
 <span class="kn">import</span> <span class="nn">urllib.request</span>
 
@@ -357,7 +358,7 @@ which comes after we have a look at what happens when things go wrong.</p>
 </section>
 </section>
 <section id="handling-exceptions">
-<h2>Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this heading">¶</a></h2>
 <p><em>urlopen</em> raises <code class="xref py py-exc docutils literal notranslate"><span class="pre">URLError</span></code> when it cannot handle a response (though as
 usual with Python APIs, built-in exceptions such as <a class="reference internal" href="../library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>,
 <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> etc. may also be raised).</p>
@@ -365,7 +366,7 @@ usual with Python APIs, built-in exceptions such as <a class="reference internal
 HTTP URLs.</p>
 <p>The exception classes are exported from the <a class="reference internal" href="../library/urllib.error.html#module-urllib.error" title="urllib.error: Exception classes raised by urllib.request."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.error</span></code></a> module.</p>
 <section id="urlerror">
-<h3>URLError<a class="headerlink" href="#urlerror" title="本標題的永久連結">¶</a></h3>
+<h3>URLError<a class="headerlink" href="#urlerror" title="Permalink to this heading">¶</a></h3>
 <p>Often, URLError is raised because there is no network connection (no route to
 the specified server), or the specified server doesn't exist.  In this case, the
 exception raised will have a 'reason' attribute, which is a tuple containing an
@@ -381,7 +382,7 @@ error code and a text error message.</p>
 </div>
 </section>
 <section id="httperror">
-<h3>HTTPError<a class="headerlink" href="#httperror" title="本標題的永久連結">¶</a></h3>
+<h3>HTTPError<a class="headerlink" href="#httperror" title="Permalink to this heading">¶</a></h3>
 <p>Every HTTP response from the server contains a numeric &quot;status code&quot;. Sometimes
 the status code indicates that the server is unable to fulfil the request. The
 default handlers will handle some of these responses for you (for example, if
@@ -393,7 +394,7 @@ found), '403' (request forbidden), and '401' (authentication required).</p>
 <p>The <code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPError</span></code> instance raised will have an integer 'code' attribute, which
 corresponds to the error sent by the server.</p>
 <section id="error-codes">
-<h4>Error Codes<a class="headerlink" href="#error-codes" title="本標題的永久連結">¶</a></h4>
+<h4>Error Codes<a class="headerlink" href="#error-codes" title="Permalink to this heading">¶</a></h4>
 <p>Because the default handlers handle redirects (codes in the 300 range), and
 codes in the 100--299 range indicate success, you will usually only see error
 codes in the 400--599 range.</p>
@@ -491,11 +492,11 @@ geturl, and info, methods as returned by the <code class="docutils literal notra
 </section>
 </section>
 <section id="wrapping-it-up">
-<h3>Wrapping it Up<a class="headerlink" href="#wrapping-it-up" title="本標題的永久連結">¶</a></h3>
+<h3>Wrapping it Up<a class="headerlink" href="#wrapping-it-up" title="Permalink to this heading">¶</a></h3>
 <p>So if you want to be prepared for <code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPError</span></code> <em>or</em> <code class="xref py py-exc docutils literal notranslate"><span class="pre">URLError</span></code> there are two
 basic approaches. I prefer the second approach.</p>
 <section id="number-1">
-<h4>Number 1<a class="headerlink" href="#number-1" title="本標題的永久連結">¶</a></h4>
+<h4>Number 1<a class="headerlink" href="#number-1" title="Permalink to this heading">¶</a></h4>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
 <span class="kn">from</span> <span class="nn">urllib.error</span> <span class="kn">import</span> <span class="n">URLError</span><span class="p">,</span> <span class="n">HTTPError</span>
 <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span><span class="n">someurl</span><span class="p">)</span>
@@ -518,7 +519,7 @@ will <em>also</em> catch an <code class="xref py py-exc docutils literal notrans
 </div>
 </section>
 <section id="number-2">
-<h4>Number 2<a class="headerlink" href="#number-2" title="本標題的永久連結">¶</a></h4>
+<h4>Number 2<a class="headerlink" href="#number-2" title="Permalink to this heading">¶</a></h4>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
 <span class="kn">from</span> <span class="nn">urllib.error</span> <span class="kn">import</span> <span class="n">URLError</span>
 <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span><span class="n">someurl</span><span class="p">)</span>
@@ -539,7 +540,7 @@ will <em>also</em> catch an <code class="xref py py-exc docutils literal notrans
 </section>
 </section>
 <section id="info-and-geturl">
-<h2>info and geturl<a class="headerlink" href="#info-and-geturl" title="本標題的永久連結">¶</a></h2>
+<h2>info and geturl<a class="headerlink" href="#info-and-geturl" title="Permalink to this heading">¶</a></h2>
 <p>The response returned by urlopen (or the <code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPError</span></code> instance) has two
 useful methods <code class="xref py py-meth docutils literal notranslate"><span class="pre">info()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">geturl()</span></code> and is defined in the module
 <a class="reference internal" href="../library/urllib.request.html#module-urllib.response" title="urllib.response: Response classes used by urllib."><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.response</span></code></a>..</p>
@@ -555,7 +556,7 @@ for a useful listing of HTTP headers with brief explanations of their meaning
 and use.</p>
 </section>
 <section id="openers-and-handlers">
-<h2>Openers and Handlers<a class="headerlink" href="#openers-and-handlers" title="本標題的永久連結">¶</a></h2>
+<h2>Openers and Handlers<a class="headerlink" href="#openers-and-handlers" title="Permalink to this heading">¶</a></h2>
 <p>When you fetch a URL you use an opener (an instance of the perhaps
 confusingly-named <a class="reference internal" href="../library/urllib.request.html#urllib.request.OpenerDirector" title="urllib.request.OpenerDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">urllib.request.OpenerDirector</span></code></a>). Normally we have been using
 the default opener - via <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> - but you can create custom
@@ -582,7 +583,7 @@ urls in the same way as the <code class="docutils literal notranslate"><span cla
 <code class="docutils literal notranslate"><span class="pre">install_opener</span></code>, except as a convenience.</p>
 </section>
 <section id="id5">
-<h2>Basic Authentication<a class="headerlink" href="#id5" title="本標題的永久連結">¶</a></h2>
+<h2>Basic Authentication<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>To illustrate creating and installing a handler we will use the
 <code class="docutils literal notranslate"><span class="pre">HTTPBasicAuthHandler</span></code>. For a more detailed discussion of this subject --
 including an explanation of how Basic Authentication works - see the <a class="reference external" href="http://www.voidspace.org.uk/python/articles/authentication.shtml">Basic
@@ -649,11 +650,11 @@ NOT contain the &quot;userinfo&quot; component - for example <code class="docuti
 not correct.</p>
 </section>
 <section id="proxies">
-<h2>Proxies<a class="headerlink" href="#proxies" title="本標題的永久連結">¶</a></h2>
+<h2>Proxies<a class="headerlink" href="#proxies" title="Permalink to this heading">¶</a></h2>
 <p><strong>urllib</strong> will auto-detect your proxy settings and use those. This is through
 the <code class="docutils literal notranslate"><span class="pre">ProxyHandler</span></code>, which is part of the normal handler chain when a proxy
 setting is detected.  Normally that's a good thing, but there are occasions
-when it may not be helpful <a class="footnote-reference brackets" href="#id12" id="id6">5</a>. One way to do this is to setup our own
+when it may not be helpful <a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. One way to do this is to setup our own
 <code class="docutils literal notranslate"><span class="pre">ProxyHandler</span></code>, with no proxies defined. This is done using similar steps to
 setting up a <a class="reference external" href="http://www.voidspace.org.uk/python/articles/authentication.shtml">Basic Authentication</a> handler:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">proxy_support</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">({})</span>
@@ -665,7 +666,7 @@ setting up a <a class="reference external" href="http://www.voidspace.org.uk/pyt
 <p class="admonition-title">備註</p>
 <p>Currently <code class="docutils literal notranslate"><span class="pre">urllib.request</span></code> <em>does not</em> support fetching of <code class="docutils literal notranslate"><span class="pre">https</span></code> locations
 through a proxy.  However, this can be enabled by extending urllib.request as
-shown in the recipe <a class="footnote-reference brackets" href="#id13" id="id7">6</a>.</p>
+shown in the recipe <a class="footnote-reference brackets" href="#id13" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -674,7 +675,7 @@ the documentation on <a class="reference internal" href="../library/urllib.reque
 </div>
 </section>
 <section id="sockets-and-layers">
-<h2>Sockets and Layers<a class="headerlink" href="#sockets-and-layers" title="本標題的永久連結">¶</a></h2>
+<h2>Sockets and Layers<a class="headerlink" href="#sockets-and-layers" title="Permalink to this heading">¶</a></h2>
 <p>The Python support for fetching resources from the web is layered.  urllib uses
 the <a class="reference internal" href="../library/http.client.html#module-http.client" title="http.client: HTTP and HTTPS protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.client</span></code></a> library, which in turn uses the socket library.</p>
 <p>As of Python 2.3 you can specify how long a socket should wait for a response
@@ -698,36 +699,40 @@ However, you can set the default timeout globally for all sockets using</p>
 </section>
 <hr class="docutils" />
 <section id="footnotes">
-<h2>註解<a class="headerlink" href="#footnotes" title="本標題的永久連結">¶</a></h2>
+<h2>註解<a class="headerlink" href="#footnotes" title="Permalink to this heading">¶</a></h2>
 <p>This document was reviewed and revised by John Lee.</p>
-<dl class="footnote brackets">
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Google for example.</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Browser sniffing is a very bad practice for website design - building
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Google for example.</p>
+</aside>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Browser sniffing is a very bad practice for website design - building
 sites using web standards is much more sensible. Unfortunately a lot of
 sites still send different versions to different browsers.</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>The user agent for MSIE 6 is
+</aside>
+<aside class="footnote brackets" id="id10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>The user agent for MSIE 6 is
 <em>'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)'</em></p>
-</dd>
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>For details of more HTTP request headers, see
+</aside>
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>For details of more HTTP request headers, see
 <a class="reference external" href="http://jkorpela.fi/http.html">Quick Reference to HTTP Headers</a>.</p>
-</dd>
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
-<dd><p>In my case I have to use a proxy to access the internet at work. If you
+</aside>
+<aside class="footnote brackets" id="id12" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>In my case I have to use a proxy to access the internet at work. If you
 attempt to fetch <em>localhost</em> URLs through this proxy it blocks them. IE
 is set to use the proxy, which urllib picks up on. In order to test
 scripts with a localhost server, I have to prevent urllib from using
 the proxy.</p>
-</dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
-<dd><p>urllib opener for SSL proxy (CONNECT method): <a class="reference external" href="https://code.activestate.com/recipes/456195/">ASPN Cookbook Recipe</a>.</p>
-</dd>
-</dl>
+</aside>
+<aside class="footnote brackets" id="id13" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">6</a><span class="fn-bracket">]</span></span>
+<p>urllib opener for SSL proxy (CONNECT method): <a class="reference external" href="https://code.activestate.com/recipes/456195/">ASPN Cookbook Recipe</a>.</p>
+</aside>
 </section>
 </section>
 
@@ -794,6 +799,10 @@ the proxy.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -859,11 +868,11 @@ the proxy.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

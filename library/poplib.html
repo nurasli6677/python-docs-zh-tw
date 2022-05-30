@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>poplib --- POP3 protocol client &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -162,7 +163,7 @@
           <div class="body" role="main">
             
   <section id="module-poplib">
-<span id="poplib-pop3-protocol-client"></span><h1><a class="reference internal" href="#module-poplib" title="poplib: POP3 protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">poplib</span></code></a> --- POP3 protocol client<a class="headerlink" href="#module-poplib" title="本標題的永久連結">¶</a></h1>
+<span id="poplib-pop3-protocol-client"></span><h1><a class="reference internal" href="#module-poplib" title="poplib: POP3 protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">poplib</span></code></a> --- POP3 protocol client<a class="headerlink" href="#module-poplib" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/poplib.py">Lib/poplib.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>This module defines a class, <a class="reference internal" href="#poplib.POP3" title="poplib.POP3"><code class="xref py py-class docutils literal notranslate"><span class="pre">POP3</span></code></a>, which encapsulates a connection to a
@@ -256,7 +257,7 @@ write an application based on the POP protocol.</p>
 </dl>
 </div>
 <section id="pop3-objects">
-<span id="id1"></span><h2>POP3 物件<a class="headerlink" href="#pop3-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>POP3 物件<a class="headerlink" href="#pop3-objects" title="Permalink to this heading">¶</a></h2>
 <p>All POP3 commands are represented by methods of the same name, in lower-case;
 most return the response text sent by the server.</p>
 <p>An <a class="reference internal" href="#poplib.POP3" title="poplib.POP3"><code class="xref py py-class docutils literal notranslate"><span class="pre">POP3</span></code></a> instance has the following methods:</p>
@@ -409,7 +410,7 @@ for best practices.</p>
 subclass is identical to its parent.</p>
 </section>
 <section id="pop3-example">
-<span id="id2"></span><h2>POP3 範例<a class="headerlink" href="#pop3-example" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>POP3 範例<a class="headerlink" href="#pop3-example" title="Permalink to this heading">¶</a></h2>
 <p>Here is a minimal example (without error checking) that opens a mailbox and
 retrieves and prints all messages:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">poplib</span>
@@ -468,6 +469,10 @@ example of usage.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -534,11 +539,11 @@ example of usage.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

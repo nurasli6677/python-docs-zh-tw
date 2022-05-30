@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>typing --- Support for type hints &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -195,7 +196,7 @@
           <div class="body" role="main">
             
   <section id="module-typing">
-<span id="typing-support-for-type-hints"></span><h1><a class="reference internal" href="#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> --- Support for type hints<a class="headerlink" href="#module-typing" title="本標題的永久連結">¶</a></h1>
+<span id="typing-support-for-type-hints"></span><h1><a class="reference internal" href="#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> --- Support for type hints<a class="headerlink" href="#module-typing" title="Permalink to this heading">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
 </div>
@@ -223,7 +224,7 @@ arguments.</p>
 The <a class="reference external" href="https://pypi.org/project/typing-extensions/">typing_extensions</a> package
 provides backports of these new features to older versions of Python.</p>
 <section id="relevant-peps">
-<span id="id1"></span><h2>Relevant PEPs<a class="headerlink" href="#relevant-peps" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Relevant PEPs<a class="headerlink" href="#relevant-peps" title="Permalink to this heading">¶</a></h2>
 <p>Since the initial introduction of type hints in <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> and <span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0483/"><strong>PEP 483</strong></a>, a
 number of PEPs have modified and enhanced Python's framework for type
 annotations. These include:</p>
@@ -291,7 +292,7 @@ the binary-or operator <code class="docutils literal notranslate"><span class="p
 </ul>
 </section>
 <section id="type-aliases">
-<span id="id2"></span><h2>Type aliases<a class="headerlink" href="#type-aliases" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>Type aliases<a class="headerlink" href="#type-aliases" title="Permalink to this heading">¶</a></h2>
 <p>A type alias is defined by assigning the type to the alias. In this example,
 <code class="docutils literal notranslate"><span class="pre">Vector</span></code> and <code class="docutils literal notranslate"><span class="pre">list[float]</span></code> will be treated as interchangeable synonyms:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Vector</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
@@ -325,7 +326,7 @@ the binary-or operator <code class="docutils literal notranslate"><span class="p
 <code class="docutils literal notranslate"><span class="pre">type(None)</span></code>.</p>
 </section>
 <section id="newtype">
-<span id="distinct"></span><h2>NewType<a class="headerlink" href="#newtype" title="本標題的永久連結">¶</a></h2>
+<span id="distinct"></span><h2>NewType<a class="headerlink" href="#newtype" title="Permalink to this heading">¶</a></h2>
 <p>Use the <a class="reference internal" href="#typing.NewType" title="typing.NewType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NewType</span></code></a> helper to create distinct types:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">NewType</span>
 
@@ -402,7 +403,7 @@ cost will be reduced in 3.11.0.</p>
 </div>
 </section>
 <section id="callable">
-<h2>Callable<a class="headerlink" href="#callable" title="本標題的永久連結">¶</a></h2>
+<h2>Callable<a class="headerlink" href="#callable" title="Permalink to this heading">¶</a></h2>
 <p>Frameworks expecting callback functions of specific signatures might be
 type hinted using <code class="docutils literal notranslate"><span class="pre">Callable[[Arg1Type,</span> <span class="pre">Arg2Type],</span> <span class="pre">ReturnType]</span></code>.</p>
 <p>舉例來說：</p>
@@ -441,7 +442,7 @@ examples of usage in <code class="docutils literal notranslate"><span class="pre
 </div>
 </section>
 <section id="generics">
-<span id="id3"></span><h2>Generics<a class="headerlink" href="#generics" title="本標題的永久連結">¶</a></h2>
+<span id="id3"></span><h2>Generics<a class="headerlink" href="#generics" title="Permalink to this heading">¶</a></h2>
 <p>Since type information about objects kept in containers cannot be statically
 inferred in a generic way, abstract base classes have been extended to support
 subscription to denote expected types for container elements.</p>
@@ -464,7 +465,7 @@ called <a class="reference internal" href="#typing.TypeVar" title="typing.TypeVa
 </div>
 </section>
 <section id="user-defined-generic-types">
-<span id="user-defined-generics"></span><h2>User-defined generic types<a class="headerlink" href="#user-defined-generic-types" title="本標題的永久連結">¶</a></h2>
+<span id="user-defined-generics"></span><h2>User-defined generic types<a class="headerlink" href="#user-defined-generic-types" title="Permalink to this heading">¶</a></h2>
 <p>A user-defined class can be defined as a generic class.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
 <span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">Logger</span>
@@ -614,7 +615,7 @@ generics is cached, and most types in the typing module are hashable and
 comparable for equality.</p>
 </section>
 <section id="the-any-type">
-<h2><a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a> 型別<a class="headerlink" href="#the-any-type" title="本標題的永久連結">¶</a></h2>
+<h2><a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a> 型別<a class="headerlink" href="#the-any-type" title="Permalink to this heading">¶</a></h2>
 <p>A special kind of type is <a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>. A static type checker will treat
 every type as being compatible with <a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a> and <a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a> as being
 compatible with every type.</p>
@@ -686,7 +687,7 @@ it as a return value) of a more specialized type is a type error. For example:</
 manner. Use <a class="reference internal" href="#typing.Any" title="typing.Any"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a> to indicate that a value is dynamically typed.</p>
 </section>
 <section id="nominal-vs-structural-subtyping">
-<h2>Nominal vs structural subtyping<a class="headerlink" href="#nominal-vs-structural-subtyping" title="本標題的永久連結">¶</a></h2>
+<h2>Nominal vs structural subtyping<a class="headerlink" href="#nominal-vs-structural-subtyping" title="Permalink to this heading">¶</a></h2>
 <p>Initially <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> defined the Python static type system as using
 <em>nominal subtyping</em>. This means that a class <code class="docutils literal notranslate"><span class="pre">A</span></code> is allowed where
 a class <code class="docutils literal notranslate"><span class="pre">B</span></code> is expected if and only if <code class="docutils literal notranslate"><span class="pre">A</span></code> is a subclass of <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
@@ -724,7 +725,7 @@ can define new custom protocols to fully enjoy structural subtyping
 (see examples below).</p>
 </section>
 <section id="module-contents">
-<h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<h2>模組內容<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
 <p>The module defines the following classes, functions and decorators.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -742,9 +743,9 @@ in the first Python version released 5 years after the release of Python 3.9.0.
 See details in <span class="target" id="index-21"></span><a class="pep reference external" href="https://peps.python.org/pep-0585/"><strong>PEP 585</strong></a>—<em>Type Hinting Generics In Standard Collections</em>.</p>
 </div>
 <section id="special-typing-primitives">
-<h3>Special typing primitives<a class="headerlink" href="#special-typing-primitives" title="本標題的永久連結">¶</a></h3>
+<h3>Special typing primitives<a class="headerlink" href="#special-typing-primitives" title="Permalink to this heading">¶</a></h3>
 <section id="special-types">
-<h4>Special types<a class="headerlink" href="#special-types" title="本標題的永久連結">¶</a></h4>
+<h4>Special types<a class="headerlink" href="#special-types" title="Permalink to this heading">¶</a></h4>
 <p>These can be used as types in annotations and do not support <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="typing.Any">
@@ -793,7 +794,7 @@ For example:</p>
 
 </section>
 <section id="special-forms">
-<h4>Special forms<a class="headerlink" href="#special-forms" title="本標題的永久連結">¶</a></h4>
+<h4>Special forms<a class="headerlink" href="#special-forms" title="Permalink to this heading">¶</a></h4>
 <p>These can be used as types in annotations using <code class="docutils literal notranslate"><span class="pre">[]</span></code>, each having a unique syntax.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="typing.Tuple">
@@ -1256,7 +1257,7 @@ The responsibility of writing type-safe type guards is left to the user.</p>
 
 </section>
 <section id="building-generic-types">
-<h4>Building generic types<a class="headerlink" href="#building-generic-types" title="本標題的永久連結">¶</a></h4>
+<h4>Building generic types<a class="headerlink" href="#building-generic-types" title="Permalink to this heading">¶</a></h4>
 <p>These are not used in annotations. They are building blocks for creating generic types.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.Generic">
@@ -1588,7 +1589,7 @@ it impossible to call (instantiate) <a class="reference internal" href="ssl.html
 
 </section>
 <section id="other-special-directives">
-<h4>Other special directives<a class="headerlink" href="#other-special-directives" title="本標題的永久連結">¶</a></h4>
+<h4>Other special directives<a class="headerlink" href="#other-special-directives" title="Permalink to this heading">¶</a></h4>
 <p>These are not used in annotations. They are building blocks for declaring types.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.NamedTuple">
@@ -1814,9 +1815,9 @@ Usage:</p>
 </section>
 </section>
 <section id="generic-concrete-collections">
-<h3>Generic concrete collections<a class="headerlink" href="#generic-concrete-collections" title="本標題的永久連結">¶</a></h3>
+<h3>Generic concrete collections<a class="headerlink" href="#generic-concrete-collections" title="Permalink to this heading">¶</a></h3>
 <section id="corresponding-to-built-in-types">
-<h4>Corresponding to built-in types<a class="headerlink" href="#corresponding-to-built-in-types" title="本標題的永久連結">¶</a></h4>
+<h4>Corresponding to built-in types<a class="headerlink" href="#corresponding-to-built-in-types" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.Dict">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">Dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">dict,</span> <span class="pre">MutableMapping[KT,</span> <span class="pre">VT]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.Dict" title="本定義的永久連結">¶</a></dt>
@@ -1885,7 +1886,7 @@ to use an abstract collection type such as <a class="reference internal" href="#
 </div>
 </section>
 <section id="corresponding-to-types-in-collections">
-<h4>Corresponding to types in <a class="reference internal" href="collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a><a class="headerlink" href="#corresponding-to-types-in-collections" title="本標題的永久連結">¶</a></h4>
+<h4>Corresponding to types in <a class="reference internal" href="collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a><a class="headerlink" href="#corresponding-to-types-in-collections" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.DefaultDict">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">DefaultDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">collections.defaultdict,</span> <span class="pre">MutableMapping[KT,</span> <span class="pre">VT]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.DefaultDict" title="本定義的永久連結">¶</a></dt>
@@ -1962,7 +1963,7 @@ to use an abstract collection type such as <a class="reference internal" href="#
 
 </section>
 <section id="other-concrete-types">
-<h4>Other concrete types<a class="headerlink" href="#other-concrete-types" title="本標題的永久連結">¶</a></h4>
+<h4>Other concrete types<a class="headerlink" href="#other-concrete-types" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.IO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">IO</span></span><a class="headerlink" href="#typing.IO" title="本定義的永久連結">¶</a></dt>
@@ -2021,9 +2022,9 @@ a manner that is compatible with both Python 2 and Python 3:</p>
 </section>
 </section>
 <section id="abstract-base-classes">
-<h3>Abstract Base Classes<a class="headerlink" href="#abstract-base-classes" title="本標題的永久連結">¶</a></h3>
+<h3>Abstract Base Classes<a class="headerlink" href="#abstract-base-classes" title="Permalink to this heading">¶</a></h3>
 <section id="corresponding-to-collections-in-collections-abc">
-<h4>Corresponding to collections in <a class="reference internal" href="collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a><a class="headerlink" href="#corresponding-to-collections-in-collections-abc" title="本標題的永久連結">¶</a></h4>
+<h4>Corresponding to collections in <a class="reference internal" href="collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a><a class="headerlink" href="#corresponding-to-collections-in-collections-abc" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.AbstractSet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">AbstractSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Sized,</span> <span class="pre">Collection[T_co]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.AbstractSet" title="本定義的永久連結">¶</a></dt>
@@ -2168,7 +2169,7 @@ and <a class="reference internal" href="stdtypes.html#types-genericalias"><span 
 
 </section>
 <section id="corresponding-to-other-types-in-collections-abc">
-<h4>Corresponding to other types in <a class="reference internal" href="collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a><a class="headerlink" href="#corresponding-to-other-types-in-collections-abc" title="本標題的永久連結">¶</a></h4>
+<h4>Corresponding to other types in <a class="reference internal" href="collections.abc.html#module-collections.abc" title="collections.abc: Abstract base classes for containers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code></a><a class="headerlink" href="#corresponding-to-other-types-in-collections-abc" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.Iterable">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">Iterable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Generic[T_co]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.Iterable" title="本定義的永久連結">¶</a></dt>
@@ -2250,7 +2251,7 @@ and <a class="reference internal" href="stdtypes.html#types-genericalias"><span 
 
 </section>
 <section id="asynchronous-programming">
-<h4>Asynchronous programming<a class="headerlink" href="#asynchronous-programming" title="本標題的永久連結">¶</a></h4>
+<h4>Asynchronous programming<a class="headerlink" href="#asynchronous-programming" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.Coroutine">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">Coroutine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Awaitable[V_co],</span> <span class="pre">Generic[T_co,</span> <span class="pre">T_contra,</span> <span class="pre">V_co]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.Coroutine" title="本定義的永久連結">¶</a></dt>
@@ -2354,7 +2355,7 @@ and <a class="reference internal" href="stdtypes.html#types-genericalias"><span 
 
 </section>
 <section id="context-manager-types">
-<h4>Context manager types<a class="headerlink" href="#context-manager-types" title="本標題的永久連結">¶</a></h4>
+<h4>Context manager types<a class="headerlink" href="#context-manager-types" title="Permalink to this heading">¶</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.ContextManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">ContextManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Generic[T_co]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.ContextManager" title="本定義的永久連結">¶</a></dt>
@@ -2390,7 +2391,7 @@ and <a class="reference internal" href="stdtypes.html#types-genericalias"><span 
 </section>
 </section>
 <section id="protocols">
-<h3>Protocols<a class="headerlink" href="#protocols" title="本標題的永久連結">¶</a></h3>
+<h3>Protocols<a class="headerlink" href="#protocols" title="Permalink to this heading">¶</a></h3>
 <p>These protocols are decorated with <a class="reference internal" href="#typing.runtime_checkable" title="typing.runtime_checkable"><code class="xref py py-func docutils literal notranslate"><span class="pre">runtime_checkable()</span></code></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="typing.SupportsAbs">
@@ -2441,7 +2442,7 @@ that is covariant in its return type.</p>
 
 </section>
 <section id="functions-and-decorators">
-<h3>函式與裝飾器<a class="headerlink" href="#functions-and-decorators" title="本標題的永久連結">¶</a></h3>
+<h3>函式與裝飾器<a class="headerlink" href="#functions-and-decorators" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="typing.cast">
 <span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">cast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.cast" title="本定義的永久連結">¶</a></dt>
@@ -2549,7 +2550,7 @@ It is usually preferable to make such classes public.</p>
 
 </section>
 <section id="introspection-helpers">
-<h3>Introspection helpers<a class="headerlink" href="#introspection-helpers" title="本標題的永久連結">¶</a></h3>
+<h3>Introspection helpers<a class="headerlink" href="#introspection-helpers" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="typing.get_type_hints">
 <span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">get_type_hints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">globalns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_extras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#typing.get_type_hints" title="本定義的永久連結">¶</a></dt>
@@ -2654,7 +2655,7 @@ will not automatically resolve to <code class="docutils literal notranslate"><sp
 
 </section>
 <section id="constant">
-<h3>常數<a class="headerlink" href="#constant" title="本標題的永久連結">¶</a></h3>
+<h3>常數<a class="headerlink" href="#constant" title="Permalink to this heading">¶</a></h3>
 <dl class="py data">
 <dt class="sig sig-object py" id="typing.TYPE_CHECKING">
 <span class="sig-prename descclassname"><span class="pre">typing.</span></span><span class="sig-name descname"><span class="pre">TYPE_CHECKING</span></span><a class="headerlink" href="#typing.TYPE_CHECKING" title="本定義的永久連結">¶</a></dt>
@@ -2761,6 +2762,10 @@ This makes it unnecessary to use quotes around the annotation
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -2827,11 +2832,11 @@ This makes it unnecessary to use quotes around the annotation
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

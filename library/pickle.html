@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>pickle --- Python object serialization &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -184,7 +185,7 @@
           <div class="body" role="main">
             
   <section id="module-pickle">
-<span id="pickle-python-object-serialization"></span><h1><a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> --- Python object serialization<a class="headerlink" href="#module-pickle" title="本標題的永久連結">¶</a></h1>
+<span id="pickle-python-object-serialization"></span><h1><a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> --- Python object serialization<a class="headerlink" href="#module-pickle" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/pickle.py">Lib/pickle.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The <a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module implements binary protocols for serializing and
@@ -193,7 +194,7 @@ whereby a Python object hierarchy is converted into a byte stream, and
 <em>&quot;unpickling&quot;</em> is the inverse operation, whereby a byte stream
 (from a <a class="reference internal" href="../glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a> or <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>) is converted
 back into an object hierarchy.  Pickling (and unpickling) is alternatively
-known as &quot;serialization&quot;, &quot;marshalling,&quot; <a class="footnote-reference brackets" href="#id7" id="id1">1</a> or &quot;flattening&quot;; however, to
+known as &quot;serialization&quot;, &quot;marshalling,&quot; <a class="footnote-reference brackets" href="#id7" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> or &quot;flattening&quot;; however, to
 avoid confusion, the terms used here are &quot;pickling&quot; and &quot;unpickling&quot;.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -207,9 +208,9 @@ been tampered with.</p>
 you are processing untrusted data. See <a class="reference internal" href="#comparison-with-json"><span class="std std-ref">Comparison with json</span></a>.</p>
 </div>
 <section id="relationship-to-other-python-modules">
-<h2>Relationship to other Python modules<a class="headerlink" href="#relationship-to-other-python-modules" title="本標題的永久連結">¶</a></h2>
+<h2>Relationship to other Python modules<a class="headerlink" href="#relationship-to-other-python-modules" title="Permalink to this heading">¶</a></h2>
 <section id="comparison-with-marshal">
-<h3>Comparison with <code class="docutils literal notranslate"><span class="pre">marshal</span></code><a class="headerlink" href="#comparison-with-marshal" title="本標題的永久連結">¶</a></h3>
+<h3>Comparison with <code class="docutils literal notranslate"><span class="pre">marshal</span></code><a class="headerlink" href="#comparison-with-marshal" title="Permalink to this heading">¶</a></h3>
 <p>Python has a more primitive serialization module called <a class="reference internal" href="marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a>, but in
 general <a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> should always be the preferred way to serialize Python
 objects.  <a class="reference internal" href="marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> exists primarily to support Python's <code class="file docutils literal notranslate"><span class="pre">.pyc</span></code>
@@ -243,7 +244,7 @@ if your data is crossing that unique breaking change language boundary.</p></li>
 </ul>
 </section>
 <section id="comparison-with-json">
-<span id="id2"></span><h3>Comparison with <code class="docutils literal notranslate"><span class="pre">json</span></code><a class="headerlink" href="#comparison-with-json" title="本標題的永久連結">¶</a></h3>
+<span id="id2"></span><h3>Comparison with <code class="docutils literal notranslate"><span class="pre">json</span></code><a class="headerlink" href="#comparison-with-json" title="Permalink to this heading">¶</a></h3>
 <p>There are fundamental differences between the pickle protocols and
 <a class="reference external" href="http://json.org">JSON (JavaScript Object Notation)</a>:</p>
 <ul class="simple">
@@ -269,7 +270,7 @@ serialization and deserialization.</p>
 </section>
 </section>
 <section id="data-stream-format">
-<span id="pickle-protocols"></span><h2>Data stream format<a class="headerlink" href="#data-stream-format" title="本標題的永久連結">¶</a></h2>
+<span id="pickle-protocols"></span><h2>Data stream format<a class="headerlink" href="#data-stream-format" title="Permalink to this heading">¶</a></h2>
 <p id="index-1">The data format used by <a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> is Python-specific.  This has the
 advantage that there are no restrictions imposed by external standards such as
 JSON or XDR (which can't represent pointer sharing); however it means that
@@ -318,7 +319,7 @@ DBM-style database files.</p>
 </div>
 </section>
 <section id="module-interface">
-<h2>模組介面<a class="headerlink" href="#module-interface" title="本標題的永久連結">¶</a></h2>
+<h2>模組介面<a class="headerlink" href="#module-interface" title="Permalink to this heading">¶</a></h2>
 <p>To serialize an object hierarchy, you simply call the <a class="reference internal" href="#pickle.dumps" title="pickle.dumps"><code class="xref py py-func docutils literal notranslate"><span class="pre">dumps()</span></code></a> function.
 Similarly, to de-serialize a data stream, you call the <a class="reference internal" href="#pickle.loads" title="pickle.loads"><code class="xref py py-func docutils literal notranslate"><span class="pre">loads()</span></code></a> function.
 However, if you want more control over serialization and de-serialization,
@@ -632,7 +633,7 @@ the buffer is neither C- nor Fortran-contiguous.</p>
 
 </section>
 <section id="what-can-be-pickled-and-unpickled">
-<span id="pickle-picklable"></span><h2>What can be pickled and unpickled?<a class="headerlink" href="#what-can-be-pickled-and-unpickled" title="本標題的永久連結">¶</a></h2>
+<span id="pickle-picklable"></span><h2>What can be pickled and unpickled?<a class="headerlink" href="#what-can-be-pickled-and-unpickled" title="Permalink to this heading">¶</a></h2>
 <p>The following types can be pickled:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>、<code class="docutils literal notranslate"><span class="pre">True</span></code> 和 <code class="docutils literal notranslate"><span class="pre">False</span></code>；</p></li>
@@ -653,11 +654,11 @@ structure may exceed the maximum recursion depth, a <a class="reference internal
 raised in this case.  You can carefully raise this limit with
 <a class="reference internal" href="sys.html#sys.setrecursionlimit" title="sys.setrecursionlimit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.setrecursionlimit()</span></code></a>.</p>
 <p>Note that functions (built-in and user-defined) are pickled by fully
-<a class="reference internal" href="../glossary.html#term-qualified-name"><span class="xref std std-term">qualified name</span></a>, not by value. <a class="footnote-reference brackets" href="#id8" id="id3">2</a>  This means that only the function name is
+<a class="reference internal" href="../glossary.html#term-qualified-name"><span class="xref std std-term">qualified name</span></a>, not by value. <a class="footnote-reference brackets" href="#id8" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>  This means that only the function name is
 pickled, along with the name of the containing module and classes.  Neither
 the function's code, nor any of its function attributes are pickled.  Thus the
 defining module must be importable in the unpickling environment, and the module
-must contain the named object, otherwise an exception will be raised. <a class="footnote-reference brackets" href="#id9" id="id4">3</a></p>
+must contain the named object, otherwise an exception will be raised. <a class="footnote-reference brackets" href="#id9" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <p>Similarly, classes are pickled by fully qualified name, so the same restrictions in
 the unpickling environment apply.  Note that none of the class's code or data is
 pickled, so in the following example the class attribute <code class="docutils literal notranslate"><span class="pre">attr</span></code> is not
@@ -679,7 +680,7 @@ be worthwhile to put a version number in the objects so that suitable
 conversions can be made by the class's <code class="xref py py-meth docutils literal notranslate"><span class="pre">__setstate__()</span></code> method.</p>
 </section>
 <section id="pickling-class-instances">
-<span id="pickle-inst"></span><h2>Pickling Class Instances<a class="headerlink" href="#pickling-class-instances" title="本標題的永久連結">¶</a></h2>
+<span id="pickle-inst"></span><h2>Pickling Class Instances<a class="headerlink" href="#pickling-class-instances" title="Permalink to this heading">¶</a></h2>
 <p>In this section, we describe the general mechanisms available to you to define,
 customize, and control how class instances are pickled and unpickled.</p>
 <p>In most cases, no additional code is needed to make instances picklable.  By
@@ -770,7 +771,7 @@ instance.</p>
 fact, these methods are part of the copy protocol which implements the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__reduce__()</span></code> special method.  The copy protocol provides a unified
 interface for retrieving the data necessary for pickling and copying
-objects. <a class="footnote-reference brackets" href="#id10" id="id5">4</a></p>
+objects. <a class="footnote-reference brackets" href="#id10" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <p>Although powerful, implementing <code class="xref py py-meth docutils literal notranslate"><span class="pre">__reduce__()</span></code> directly in your classes is
 error prone.  For this reason, class designers should use the high-level
 interface (i.e., <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getnewargs_ex__()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getstate__()</span></code> and
@@ -835,11 +836,11 @@ backwards-compatible reduce values for older Python releases.</p>
 </dd></dl>
 
 <section id="persistence-of-external-objects">
-<span id="pickle-persistent"></span><h3>Persistence of External Objects<a class="headerlink" href="#persistence-of-external-objects" title="本標題的永久連結">¶</a></h3>
+<span id="pickle-persistent"></span><h3>Persistence of External Objects<a class="headerlink" href="#persistence-of-external-objects" title="Permalink to this heading">¶</a></h3>
 <p id="index-6">For the benefit of object persistence, the <a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module supports the
 notion of a reference to an object outside the pickled data stream.  Such
 objects are referenced by a persistent ID, which should be either a string of
-alphanumeric characters (for protocol 0) <a class="footnote-reference brackets" href="#id11" id="id6">5</a> or just an arbitrary object (for
+alphanumeric characters (for protocol 0) <a class="footnote-reference brackets" href="#id11" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> or just an arbitrary object (for
 any newer protocol).</p>
 <p>The resolution of such persistent IDs is not defined by the <a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a>
 module; it will delegate this resolution to the user-defined methods on the
@@ -947,7 +948,7 @@ pickle external objects by reference.</p>
 </div>
 </section>
 <section id="dispatch-tables">
-<span id="pickle-dispatch"></span><h3>Dispatch Tables<a class="headerlink" href="#dispatch-tables" title="本標題的永久連結">¶</a></h3>
+<span id="pickle-dispatch"></span><h3>Dispatch Tables<a class="headerlink" href="#dispatch-tables" title="Permalink to this heading">¶</a></h3>
 <p>If one wants to customize pickling of some classes without disturbing
 any other code which depends on pickling, then one can create a
 pickler with a private dispatch table.</p>
@@ -982,7 +983,7 @@ share the private dispatch table.  On the other hand, the code</p>
 <p>modifies the global dispatch table shared by all users of the <a class="reference internal" href="copyreg.html#module-copyreg" title="copyreg: Register pickle support functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copyreg</span></code></a> module.</p>
 </section>
 <section id="handling-stateful-objects">
-<span id="pickle-state"></span><h3>Handling Stateful Objects<a class="headerlink" href="#handling-stateful-objects" title="本標題的永久連結">¶</a></h3>
+<span id="pickle-state"></span><h3>Handling Stateful Objects<a class="headerlink" href="#handling-stateful-objects" title="Permalink to this heading">¶</a></h3>
 <p id="index-7">Here's an example that shows how to modify pickling behavior for a class.
 The <code class="xref py py-class docutils literal notranslate"><span class="pre">TextReader</span></code> class opens a text file, and returns the line number and
 line contents each time its <code class="xref py py-meth docutils literal notranslate"><span class="pre">readline()</span></code> method is called. If a
@@ -1042,7 +1043,7 @@ reading resumes from the last location. The <code class="xref py py-meth docutil
 </section>
 </section>
 <section id="custom-reduction-for-types-functions-and-other-objects">
-<span id="reducer-override"></span><h2>Custom Reduction for Types, Functions, and Other Objects<a class="headerlink" href="#custom-reduction-for-types-functions-and-other-objects" title="本標題的永久連結">¶</a></h2>
+<span id="reducer-override"></span><h2>Custom Reduction for Types, Functions, and Other Objects<a class="headerlink" href="#custom-reduction-for-types-functions-and-other-objects" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
@@ -1098,7 +1099,7 @@ a given class:</p>
 </div>
 </section>
 <section id="out-of-band-buffers">
-<span id="pickle-oob"></span><h2>Out-of-band Buffers<a class="headerlink" href="#out-of-band-buffers" title="本標題的永久連結">¶</a></h2>
+<span id="pickle-oob"></span><h2>Out-of-band Buffers<a class="headerlink" href="#out-of-band-buffers" title="Permalink to this heading">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版本新加入.</span></p>
 </div>
@@ -1113,7 +1114,7 @@ of the object types to be transferred) and the <em>consumer</em> (the implementa
 of the communications system) support the out-of-band transfer facilities
 provided by pickle protocol 5 and higher.</p>
 <section id="provider-api">
-<h3>Provider API<a class="headerlink" href="#provider-api" title="本標題的永久連結">¶</a></h3>
+<h3>Provider API<a class="headerlink" href="#provider-api" title="Permalink to this heading">¶</a></h3>
 <p>The large data objects to be pickled must implement a <code class="xref py py-meth docutils literal notranslate"><span class="pre">__reduce_ex__()</span></code>
 method specialized for protocol 5 and higher, which returns a
 <a class="reference internal" href="#pickle.PickleBuffer" title="pickle.PickleBuffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PickleBuffer</span></code></a> instance (instead of e.g. a <a class="reference internal" href="stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object)
@@ -1125,7 +1126,7 @@ opt-in to tell <a class="reference internal" href="#module-pickle" title="pickle
 themselves.</p>
 </section>
 <section id="consumer-api">
-<h3>Consumer API<a class="headerlink" href="#consumer-api" title="本標題的永久連結">¶</a></h3>
+<h3>Consumer API<a class="headerlink" href="#consumer-api" title="Permalink to this heading">¶</a></h3>
 <p>A communications system can enable custom handling of the <a class="reference internal" href="#pickle.PickleBuffer" title="pickle.PickleBuffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PickleBuffer</span></code></a>
 objects generated when serializing an object graph.</p>
 <p>On the sending side, it needs to pass a <em>buffer_callback</em> argument to
@@ -1147,7 +1148,7 @@ Potential optimizations include the use of shared memory or datatype-dependent
 compression.</p>
 </section>
 <section id="example">
-<h3>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h3>
+<h3>範例<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h3>
 <p>Here is a trivial example where we implement a <a class="reference internal" href="stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> subclass
 able to participate in out-of-band buffer pickling:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ZeroCopyByteArray</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">):</span>
@@ -1207,7 +1208,7 @@ processes or systems.</p>
 </section>
 </section>
 <section id="restricting-globals">
-<span id="pickle-restrict"></span><h2>Restricting Globals<a class="headerlink" href="#restricting-globals" title="本標題的永久連結">¶</a></h2>
+<span id="pickle-restrict"></span><h2>Restricting Globals<a class="headerlink" href="#restricting-globals" title="Permalink to this heading">¶</a></h2>
 <p id="index-9">By default, unpickling will import any class or function that it finds in the
 pickle data.  For many applications, this behaviour is unacceptable as it
 permits the unpickler to import and invoke arbitrary code.  Just consider what
@@ -1276,13 +1277,13 @@ alternatives such as the marshalling API in <a class="reference internal" href="
 third-party solutions.</p>
 </section>
 <section id="performance">
-<h2>Performance<a class="headerlink" href="#performance" title="本標題的永久連結">¶</a></h2>
+<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this heading">¶</a></h2>
 <p>Recent versions of the pickle protocol (from protocol 2 and upwards) feature
 efficient binary encodings for several common features and built-in types.
 Also, the <a class="reference internal" href="#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module has a transparent optimizer written in C.</p>
 </section>
 <section id="examples">
-<span id="pickle-example"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="pickle-example"></span><h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>For the simplest code, use the <a class="reference internal" href="#pickle.dump" title="pickle.dump"><code class="xref py py-func docutils literal notranslate"><span class="pre">dump()</span></code></a> and <a class="reference internal" href="#pickle.load" title="pickle.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a> functions.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
 
@@ -1323,29 +1324,32 @@ Also, the <a class="reference internal" href="#module-pickle" title="pickle: Con
 </dl>
 </div>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Don't confuse this with the <a class="reference internal" href="marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> module</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
-<dd><p>This is why <a class="reference internal" href="../reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a> functions cannot be pickled:  all
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Don't confuse this with the <a class="reference internal" href="marshal.html#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">marshal</span></code></a> module</p>
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>This is why <a class="reference internal" href="../reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code></a> functions cannot be pickled:  all
 <code class="xref std std-keyword docutils literal notranslate"><span class="pre">lambda</span></code> functions share the same name:  <code class="docutils literal notranslate"><span class="pre">&lt;lambda&gt;</span></code>.</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
-<dd><p>The exception raised will likely be an <a class="reference internal" href="exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a> or an
+</aside>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>The exception raised will likely be an <a class="reference internal" href="exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a> or an
 <a class="reference internal" href="exceptions.html#AttributeError" title="AttributeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code></a> but it could be something else.</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
-<dd><p>The <a class="reference internal" href="copy.html#module-copy" title="copy: Shallow and deep copy operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code></a> module uses this protocol for shallow and deep copying
+</aside>
+<aside class="footnote brackets" id="id10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>The <a class="reference internal" href="copy.html#module-copy" title="copy: Shallow and deep copy operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code></a> module uses this protocol for shallow and deep copying
 operations.</p>
-</dd>
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
-<dd><p>The limitation on alphanumeric characters is due to the fact
+</aside>
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>The limitation on alphanumeric characters is due to the fact
 that persistent IDs in protocol 0 are delimited by the newline
 character.  Therefore if any kind of newline characters occurs in
 persistent IDs, the resulting pickled data will become unreadable.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -1411,6 +1415,10 @@ persistent IDs, the resulting pickled data will become unreadable.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1477,11 +1485,11 @@ persistent IDs, the resulting pickled data will become unreadable.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

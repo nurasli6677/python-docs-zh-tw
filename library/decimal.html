@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>decimal --- Decimal fixed point and floating point arithmetic &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -177,7 +178,7 @@
           <div class="body" role="main">
             
   <section id="module-decimal">
-<span id="decimal-decimal-fixed-point-and-floating-point-arithmetic"></span><h1><a class="reference internal" href="#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> --- Decimal fixed point and floating point arithmetic<a class="headerlink" href="#module-decimal" title="本標題的永久連結">¶</a></h1>
+<span id="decimal-decimal-fixed-point-and-floating-point-arithmetic"></span><h1><a class="reference internal" href="#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> --- Decimal fixed point and floating point arithmetic<a class="headerlink" href="#module-decimal" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/decimal.py">Lib/decimal.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> module provides support for fast correctly-rounded
@@ -259,7 +260,7 @@ Specification</a>.</p></li>
 </ul>
 </div>
 <section id="quick-start-tutorial">
-<span id="decimal-tutorial"></span><h2>Quick-start Tutorial<a class="headerlink" href="#quick-start-tutorial" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-tutorial"></span><h2>Quick-start Tutorial<a class="headerlink" href="#quick-start-tutorial" title="Permalink to this heading">¶</a></h2>
 <p>The usual start to using decimals is importing the module, viewing the current
 context with <a class="reference internal" href="#decimal.getcontext" title="decimal.getcontext"><code class="xref py py-func docutils literal notranslate"><span class="pre">getcontext()</span></code></a> and, if necessary, setting new values for
 precision, rounding, or enabled traps:</p>
@@ -460,7 +461,7 @@ the program manipulates the data no differently than with other Python numeric
 types.</p>
 </section>
 <section id="decimal-objects">
-<span id="decimal-decimal"></span><h2>Decimal objects<a class="headerlink" href="#decimal-objects" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-decimal"></span><h2>Decimal objects<a class="headerlink" href="#decimal-objects" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="decimal.Decimal">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decimal.</span></span><span class="sig-name descname"><span class="pre">Decimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decimal.Decimal" title="本定義的永久連結">¶</a></dt>
@@ -1098,7 +1099,7 @@ rounding method in either the supplied <em>context</em> or the current context.<
 </dd></dl>
 
 <section id="logical-operands">
-<span id="logical-operands-label"></span><h3>Logical operands<a class="headerlink" href="#logical-operands" title="本標題的永久連結">¶</a></h3>
+<span id="logical-operands-label"></span><h3>Logical operands<a class="headerlink" href="#logical-operands" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">logical_and()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">logical_invert()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">logical_or()</span></code>,
 and <code class="xref py py-meth docutils literal notranslate"><span class="pre">logical_xor()</span></code> methods expect their arguments to be <em>logical
 operands</em>.  A <em>logical operand</em> is a <a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> instance whose
@@ -1107,7 +1108,7 @@ exponent and sign are both zero, and whose digits are all either
 </section>
 </section>
 <section id="context-objects">
-<span id="decimal-context"></span><h2>Context objects<a class="headerlink" href="#context-objects" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-context"></span><h2>Context objects<a class="headerlink" href="#context-objects" title="Permalink to this heading">¶</a></h2>
 <p>Contexts are environments for arithmetic operations.  They govern precision, set
 rules for rounding, determine which signals are treated as exceptions, and limit
 the range for exponents.</p>
@@ -1716,15 +1717,10 @@ require the addition of either one or two trailing zeros.</p>
 
 </section>
 <section id="constants">
-<span id="decimal-rounding-modes"></span><h2>常數<a class="headerlink" href="#constants" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-rounding-modes"></span><h2>常數<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
 <p>The constants in this section are only relevant for the C module. They
 are also included in the pure Python version for compatibility.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 29%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>32-bit</p></th>
@@ -1793,7 +1789,7 @@ is <code class="docutils literal notranslate"><span class="pre">False</span></co
 </div>
 </section>
 <section id="rounding-modes">
-<h2>Rounding modes<a class="headerlink" href="#rounding-modes" title="本標題的永久連結">¶</a></h2>
+<h2>Rounding modes<a class="headerlink" href="#rounding-modes" title="Permalink to this heading">¶</a></h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="decimal.ROUND_CEILING">
 <span class="sig-prename descclassname"><span class="pre">decimal.</span></span><span class="sig-name descname"><span class="pre">ROUND_CEILING</span></span><a class="headerlink" href="#decimal.ROUND_CEILING" title="本定義的永久連結">¶</a></dt>
@@ -1845,7 +1841,7 @@ been 0 or 5; otherwise round towards zero.</p>
 
 </section>
 <section id="signals">
-<span id="decimal-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this heading">¶</a></h2>
 <p>Signals represent conditions that arise during computation. Each corresponds to
 one context flag and one context trap enabler.</p>
 <p>The context flag is set whenever the condition is encountered. After the
@@ -1976,9 +1972,9 @@ conversions are silent. All other mixed operations raise <a class="reference int
 </div>
 </section>
 <section id="floating-point-notes">
-<span id="decimal-notes"></span><h2>Floating Point Notes<a class="headerlink" href="#floating-point-notes" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-notes"></span><h2>Floating Point Notes<a class="headerlink" href="#floating-point-notes" title="Permalink to this heading">¶</a></h2>
 <section id="mitigating-round-off-error-with-increased-precision">
-<h3>Mitigating round-off error with increased precision<a class="headerlink" href="#mitigating-round-off-error-with-increased-precision" title="本標題的永久連結">¶</a></h3>
+<h3>Mitigating round-off error with increased precision<a class="headerlink" href="#mitigating-round-off-error-with-increased-precision" title="Permalink to this heading">¶</a></h3>
 <p>The use of decimal floating point eliminates decimal representation error
 (making it possible to represent <code class="xref py py-const docutils literal notranslate"><span class="pre">0.1</span></code> exactly); however, some operations
 can still incur round-off error when non-zero digits exceed the fixed precision.</p>
@@ -2022,7 +2018,7 @@ expanding the precision sufficiently to avoid loss of significance:</p>
 </div>
 </section>
 <section id="special-values">
-<h3>Special values<a class="headerlink" href="#special-values" title="本標題的永久連結">¶</a></h3>
+<h3>Special values<a class="headerlink" href="#special-values" title="Permalink to this heading">¶</a></h3>
 <p>The number system for the <a class="reference internal" href="#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> module provides special values
 including <code class="xref py py-const docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">sNaN</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">-Infinity</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">Infinity</span></code>,
 and two zeros, <code class="xref py py-const docutils literal notranslate"><span class="pre">+0</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">-0</span></code>.</p>
@@ -2071,7 +2067,7 @@ the following calculation returns a value equal to zero:</p>
 </section>
 </section>
 <section id="working-with-threads">
-<span id="decimal-threads"></span><h2>Working with threads<a class="headerlink" href="#working-with-threads" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-threads"></span><h2>Working with threads<a class="headerlink" href="#working-with-threads" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#decimal.getcontext" title="decimal.getcontext"><code class="xref py py-func docutils literal notranslate"><span class="pre">getcontext()</span></code></a> function accesses a different <a class="reference internal" href="#decimal.Context" title="decimal.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code></a> object for
 each thread.  Having separate thread contexts means that threads may make
 changes (such as <code class="docutils literal notranslate"><span class="pre">getcontext().prec=10</span></code>) without interfering with other threads.</p>
@@ -2101,7 +2097,7 @@ threads calling <a class="reference internal" href="#decimal.getcontext" title="
 </div>
 </section>
 <section id="recipes">
-<span id="decimal-recipes"></span><h2>Recipes<a class="headerlink" href="#recipes" title="本標題的永久連結">¶</a></h2>
+<span id="decimal-recipes"></span><h2>Recipes<a class="headerlink" href="#recipes" title="Permalink to this heading">¶</a></h2>
 <p>Here are a few recipes that serve as utility functions and that demonstrate ways
 to work with the <a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> class:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moneyfmt</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">curr</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">dp</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span>
@@ -2252,7 +2248,7 @@ to work with the <a class="reference internal" href="#decimal.Decimal" title="de
 </div>
 </section>
 <section id="decimal-faq">
-<span id="id1"></span><h2>Decimal FAQ<a class="headerlink" href="#decimal-faq" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Decimal FAQ<a class="headerlink" href="#decimal-faq" title="Permalink to this heading">¶</a></h2>
 <p>Q. It is cumbersome to type <code class="docutils literal notranslate"><span class="pre">decimal.Decimal('1234.5')</span></code>.  Is there a way to
 minimize typing when using the interactive interpreter?</p>
 <p>A. Some users abbreviate the constructor to just a single letter:</p>
@@ -2391,7 +2387,7 @@ using the unary plus operation:</p>
 <p>Q. Is the CPython implementation fast for large numbers?</p>
 <p>A. Yes.  In the CPython and PyPy3 implementations, the C/CFFI versions of
 the decimal module integrate the high speed <a class="reference external" href="https://www.bytereef.org/mpdecimal/doc/libmpdec/index.html">libmpdec</a> library for
-arbitrary precision correctly-rounded decimal floating point arithmetic <a class="footnote-reference brackets" href="#id4" id="id2">1</a>.
+arbitrary precision correctly-rounded decimal floating point arithmetic <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
 <code class="docutils literal notranslate"><span class="pre">libmpdec</span></code> uses <a class="reference external" href="https://en.wikipedia.org/wiki/Karatsuba_algorithm">Karatsuba multiplication</a>
 for medium-sized numbers and the <a class="reference external" href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform_(general)#Number-theoretic_transform">Number Theoretic Transform</a>
 for very large numbers.</p>
@@ -2399,7 +2395,7 @@ for very large numbers.</p>
 and <code class="xref py py-attr docutils literal notranslate"><span class="pre">Emax</span></code> should always be set to the maximum values, <code class="xref py py-attr docutils literal notranslate"><span class="pre">clamp</span></code>
 should always be 0 (the default).  Setting <code class="xref py py-attr docutils literal notranslate"><span class="pre">prec</span></code> requires some care.</p>
 <p>The easiest approach for trying out bignum arithmetic is to use the maximum
-value for <code class="xref py py-attr docutils literal notranslate"><span class="pre">prec</span></code> as well <a class="footnote-reference brackets" href="#id5" id="id3">2</a>:</p>
+value for <code class="xref py py-attr docutils literal notranslate"><span class="pre">prec</span></code> as well <a class="footnote-reference brackets" href="#id5" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">setcontext</span><span class="p">(</span><span class="n">Context</span><span class="p">(</span><span class="n">prec</span><span class="o">=</span><span class="n">MAX_PREC</span><span class="p">,</span> <span class="n">Emax</span><span class="o">=</span><span class="n">MAX_EMAX</span><span class="p">,</span> <span class="n">Emin</span><span class="o">=</span><span class="n">MIN_EMIN</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">256</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">/</span> <span class="mi">128</span>
@@ -2441,18 +2437,18 @@ RAM and expect 10 simultaneous operands using a maximum of 500MB each:</p>
 <p>In general (and especially on systems without overallocation), it is recommended
 to estimate even tighter bounds and set the <a class="reference internal" href="#decimal.Inexact" title="decimal.Inexact"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Inexact</span></code></a> trap if all calculations
 are expected to be exact.</p>
-<dl class="footnote brackets">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><div class="versionadded">
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
-</dd>
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
-<dd><div class="versionchanged">
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<div class="versionchanged">
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>This approach now works for all exact results except for non-integer powers.</p>
 </div>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -2511,6 +2507,10 @@ are expected to be exact.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -2577,11 +2577,11 @@ are expected to be exact.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

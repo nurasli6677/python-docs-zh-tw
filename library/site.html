@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>site --- Site-specific configuration hook &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -163,7 +164,7 @@
           <div class="body" role="main">
             
   <section id="module-site">
-<span id="site-site-specific-configuration-hook"></span><h1><a class="reference internal" href="#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> --- Site-specific configuration hook<a class="headerlink" href="#module-site" title="本標題的永久連結">¶</a></h1>
+<span id="site-site-specific-configuration-hook"></span><h1><a class="reference internal" href="#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> --- Site-specific configuration hook<a class="headerlink" href="#module-site" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/site.py">Lib/site.py</a></p>
 <hr class="docutils" />
 <p><strong>This module is automatically imported during initialization.</strong> The automatic
@@ -266,7 +267,7 @@ its subclass exception, and the exception's <code class="xref py py-attr docutil
 empty, and the path manipulations are skipped; however the import of
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sitecustomize</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">usercustomize</span></code> is still attempted.</p>
 <section id="readline-configuration">
-<span id="rlcompleter-config"></span><h2>Readline configuration<a class="headerlink" href="#readline-configuration" title="本標題的永久連結">¶</a></h2>
+<span id="rlcompleter-config"></span><h2>Readline configuration<a class="headerlink" href="#readline-configuration" title="Permalink to this heading">¶</a></h2>
 <p>On systems that support <a class="reference internal" href="readline.html#module-readline" title="readline: GNU readline support for Python. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">readline</span></code></a>, this module will also import and
 configure the <a class="reference internal" href="rlcompleter.html#module-rlcompleter" title="rlcompleter: Python identifier completion, suitable for the GNU readline library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlcompleter</span></code></a> module, if Python is started in
 <a class="reference internal" href="../tutorial/interpreter.html#tut-interactive"><span class="std std-ref">interactive mode</span></a> and without the <a class="reference internal" href="../using/cmdline.html#cmdoption-S"><code class="xref std std-option docutils literal notranslate"><span class="pre">-S</span></code></a> option.
@@ -280,7 +281,7 @@ override) the <a class="reference internal" href="sys.html#sys.__interactivehook
 </div>
 </section>
 <section id="module-contents">
-<h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<h2>模組內容<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="site.PREFIXES">
 <span class="sig-prename descclassname"><span class="pre">site.</span></span><span class="sig-name descname"><span class="pre">PREFIXES</span></span><a class="headerlink" href="#site.PREFIXES" title="本定義的永久連結">¶</a></dt>
@@ -376,7 +377,7 @@ used.</p>
 
 </section>
 <section id="command-line-interface">
-<span id="site-commandline"></span><h2>Command Line Interface<a class="headerlink" href="#command-line-interface" title="本標題的永久連結">¶</a></h2>
+<span id="site-commandline"></span><h2>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> module also provides a way to get the user directories from the
 command line:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m site --user-site
@@ -453,6 +454,10 @@ value greater than 2 if there is an error.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -519,11 +524,11 @@ value greater than 2 if there is an error.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

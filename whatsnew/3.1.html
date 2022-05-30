@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Python 3.1 有什麼新功能 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -167,15 +168,16 @@
           <div class="body" role="main">
             
   <section id="what-s-new-in-python-3-1">
-<h1>Python 3.1 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-3-1" title="本標題的永久連結">¶</a></h1>
+<h1>Python 3.1 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-3-1" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Raymond Hettinger</p>
 </dd>
 </dl>
-<p>This article explains the new features in Python 3.1, compared to 3.0.</p>
+<p>This article explains the new features in Python 3.1, compared to 3.0.
+Python 3.1 was released on June 27, 2009.</p>
 <section id="pep-372-ordered-dictionaries">
-<h2>PEP 372: Ordered Dictionaries<a class="headerlink" href="#pep-372-ordered-dictionaries" title="本標題的永久連結">¶</a></h2>
+<h2>PEP 372: Ordered Dictionaries<a class="headerlink" href="#pep-372-ordered-dictionaries" title="Permalink to this heading">¶</a></h2>
 <p>Regular Python dictionaries iterate over key/value pairs in arbitrary order.
 Over the years, a number of authors have written alternative implementations
 that remember the order that the keys were originally inserted.  Based on
@@ -204,7 +206,7 @@ written by Raymond Hettinger.</p>
 </div>
 </section>
 <section id="pep-378-format-specifier-for-thousands-separator">
-<h2>PEP 378: Format Specifier for Thousands Separator<a class="headerlink" href="#pep-378-format-specifier-for-thousands-separator" title="本標題的永久連結">¶</a></h2>
+<h2>PEP 378: Format Specifier for Thousands Separator<a class="headerlink" href="#pep-378-format-specifier-for-thousands-separator" title="Permalink to this heading">¶</a></h2>
 <p>The built-in <a class="reference internal" href="../library/functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a> function and the <a class="reference internal" href="../library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> method use
 a mini-language that now includes a simple, non-locale aware way to format
 a number with a thousands separator.  That provides a way to humanize a
@@ -235,7 +237,7 @@ Mark Dickinson.</p>
 </div>
 </section>
 <section id="other-language-changes">
-<h2>Other Language Changes<a class="headerlink" href="#other-language-changes" title="本標題的永久連結">¶</a></h2>
+<h2>Other Language Changes<a class="headerlink" href="#other-language-changes" title="Permalink to this heading">¶</a></h2>
 <p>Some smaller changes made to the core Python language are:</p>
 <ul>
 <li><p>Directories and zip archives containing a <code class="file docutils literal notranslate"><span class="pre">__main__.py</span></code>
@@ -334,7 +336,7 @@ assure cross-platform portability by using the old algorithm.</p>
 </ul>
 </section>
 <section id="new-improved-and-deprecated-modules">
-<h2>New, Improved, and Deprecated Modules<a class="headerlink" href="#new-improved-and-deprecated-modules" title="本標題的永久連結">¶</a></h2>
+<h2>New, Improved, and Deprecated Modules<a class="headerlink" href="#new-improved-and-deprecated-modules" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p>Added a <a class="reference internal" href="../library/collections.html#collections.Counter" title="collections.Counter"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.Counter</span></code></a> class to support convenient
 counting of unique items in a sequence or iterable:</p>
@@ -519,7 +521,7 @@ imports.</p>
 </ul>
 </section>
 <section id="optimizations">
-<h2>Optimizations<a class="headerlink" href="#optimizations" title="本標題的永久連結">¶</a></h2>
+<h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this heading">¶</a></h2>
 <p>Major performance enhancements have been added:</p>
 <ul>
 <li><p>The new I/O library (as defined in <span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-3116/"><strong>PEP 3116</strong></a>) was mostly written in
@@ -563,7 +565,7 @@ memory and allows pickles to be smaller.</p>
 </ul>
 </section>
 <section id="idle">
-<h2>IDLE<a class="headerlink" href="#idle" title="本標題的永久連結">¶</a></h2>
+<h2>IDLE<a class="headerlink" href="#idle" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p>IDLE's format menu now provides an option to strip trailing whitespace
 from a source file.</p>
@@ -572,7 +574,7 @@ from a source file.</p>
 </ul>
 </section>
 <section id="build-and-c-api-changes">
-<h2>Build and C API Changes<a class="headerlink" href="#build-and-c-api-changes" title="本標題的永久連結">¶</a></h2>
+<h2>Build and C API Changes<a class="headerlink" href="#build-and-c-api-changes" title="Permalink to this heading">¶</a></h2>
 <p>Changes to Python's build process and to the C API include:</p>
 <ul>
 <li><p>Integers are now stored internally either in base <code class="docutils literal notranslate"><span class="pre">2**15</span></code> or in base
@@ -616,7 +618,7 @@ deprecated.</p>
 </ul>
 </section>
 <section id="porting-to-python-3-1">
-<h2>Porting to Python 3.1<a class="headerlink" href="#porting-to-python-3-1" title="本標題的永久連結">¶</a></h2>
+<h2>Porting to Python 3.1<a class="headerlink" href="#porting-to-python-3-1" title="Permalink to this heading">¶</a></h2>
 <p>This section lists previously described changes and other bugfixes
 that may require changes to your code:</p>
 <ul>
@@ -698,6 +700,10 @@ See the discussion above for more details.</p></li>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -763,11 +769,11 @@ See the discussion above for more details.</p></li>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

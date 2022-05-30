@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>內建常數 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -160,7 +161,7 @@
           <div class="body" role="main">
             
   <section id="built-in-constants">
-<span id="built-in-consts"></span><h1>內建常數<a class="headerlink" href="#built-in-constants" title="本標題的永久連結">¶</a></h1>
+<span id="built-in-consts"></span><h1>內建常數<a class="headerlink" href="#built-in-constants" title="Permalink to this heading">¶</a></h1>
 <p>有一小部分的常數存在於內建命名空間中。他們是：</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="False">
@@ -206,7 +207,7 @@
 
 <dl class="py data">
 <dt class="sig sig-object py" id="debug__">
-<span id="__debug__"></span><span class="sig-name descname"><span class="pre">__debug__</span></span><a class="headerlink" href="#debug__" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__debug__</span></span><a class="headerlink" href="#debug__" title="本定義的永久連結">¶</a></dt>
 <dd><p>如果 Python 沒有被以 <a class="reference internal" href="../using/cmdline.html#cmdoption-O"><code class="xref std std-option docutils literal notranslate"><span class="pre">-O</span></code></a> 選項啟動，則此常數為 true。請參見 <a class="reference internal" href="../reference/simple_stmts.html#assert"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">assert</span></code></a> 陳述式。</p>
 </dd></dl>
 
@@ -215,7 +216,7 @@
 <p><a class="reference internal" href="#None" title="None"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>，<a class="reference internal" href="#False" title="False"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>，<a class="reference internal" href="#True" title="True"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>，以及 <a class="reference internal" href="#debug__" title="__debug__"><code class="xref py py-data docutils literal notranslate"><span class="pre">__debug__</span></code></a> 都是不能被重新賦值的（任何對它們的賦值，即使是屬性的名稱，也會拋出 <a class="reference internal" href="exceptions.html#SyntaxError" title="SyntaxError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SyntaxError</span></code></a>）。因此，它們可以被視為”真正的”常數。</p>
 </div>
 <section id="constants-added-by-the-site-module">
-<h2>由 <a class="reference internal" href="site.html#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> module（模組）所添增的常數<a class="headerlink" href="#constants-added-by-the-site-module" title="本標題的永久連結">¶</a></h2>
+<h2>由 <a class="reference internal" href="site.html#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> module（模組）所添增的常數<a class="headerlink" href="#constants-added-by-the-site-module" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="site.html#module-site" title="site: Module responsible for site-specific configuration."><code class="xref py py-mod docutils literal notranslate"><span class="pre">site</span></code></a> module（模組）（在啟動期間自動 import ，除非有給予 <a class="reference internal" href="../using/cmdline.html#cmdoption-S"><code class="xref std std-option docutils literal notranslate"><span class="pre">-S</span></code></a> 指令行選項）會添增一些常數到內建命名空間 (built-in namespace) 中。它們在互動式直譯器中是很有幫助的，但不應該在程式 (programs) 中被使用。</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="quit">
@@ -281,6 +282,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -346,11 +351,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

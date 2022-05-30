@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>安裝 Python 模組（舊版） &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -188,9 +189,9 @@
           <div class="body" role="main">
             
   <section id="installing-python-modules-legacy-version">
-<span id="install-index"></span><h1>安裝 Python 模組（舊版）<a class="headerlink" href="#installing-python-modules-legacy-version" title="本標題的永久連結">¶</a></h1>
+<span id="install-index"></span><h1>安裝 Python 模組（舊版）<a class="headerlink" href="#installing-python-modules-legacy-version" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Greg Ward</p>
 </dd>
 </dl>
@@ -224,7 +225,7 @@ recommendations section</a>
 in the Python Packaging User Guide for more information.</p>
 </div>
 <section id="introduction">
-<span id="inst-intro"></span><h2>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h2>
+<span id="inst-intro"></span><h2>簡介<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>In Python 2.0, the <code class="docutils literal notranslate"><span class="pre">distutils</span></code> API was first added to the standard library.
 This provided Linux distro maintainers with a standard way of converting
 Python projects into Linux distro packages, and system administrators with a
@@ -238,7 +239,7 @@ using <code class="docutils literal notranslate"><span class="pre">distutils</sp
 <p>This legacy documentation is being retained only until we're confident that the
 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> documentation covers everything needed.</p>
 <section id="distutils-based-source-distributions">
-<span id="inst-new-standard"></span><h3>Distutils based source distributions<a class="headerlink" href="#distutils-based-source-distributions" title="本標題的永久連結">¶</a></h3>
+<span id="inst-new-standard"></span><h3>Distutils based source distributions<a class="headerlink" href="#distutils-based-source-distributions" title="Permalink to this heading">¶</a></h3>
 <p>If you download a module source distribution, you can tell pretty quickly if it
 was packaged and distributed in the standard way, i.e. using the Distutils.
 First, the distribution's name and version number will be featured prominently
@@ -265,7 +266,7 @@ get out of this manual.</p>
 </section>
 </section>
 <section id="standard-build-and-install">
-<span id="inst-standard-install"></span><h2>Standard Build and Install<a class="headerlink" href="#standard-build-and-install" title="本標題的永久連結">¶</a></h2>
+<span id="inst-standard-install"></span><h2>Standard Build and Install<a class="headerlink" href="#standard-build-and-install" title="Permalink to this heading">¶</a></h2>
 <p>As described in section <a class="reference internal" href="#inst-new-standard"><span class="std std-ref">Distutils based source distributions</span></a>, building and installing a module
 distribution using the Distutils is usually one simple command to run from a
 terminal:</p>
@@ -273,7 +274,7 @@ terminal:</p>
 </pre></div>
 </div>
 <section id="platform-variations">
-<span id="inst-platform-variations"></span><h3>Platform variations<a class="headerlink" href="#platform-variations" title="本標題的永久連結">¶</a></h3>
+<span id="inst-platform-variations"></span><h3>Platform variations<a class="headerlink" href="#platform-variations" title="Permalink to this heading">¶</a></h3>
 <p>You should always run the setup command from the distribution root directory,
 i.e. the top-level subdirectory that the module source distribution unpacks
 into.  For example, if you've just downloaded a module source distribution
@@ -295,7 +296,7 @@ python setup.py install
 </div>
 </section>
 <section id="splitting-the-job-up">
-<span id="inst-splitting-up"></span><h3>Splitting the job up<a class="headerlink" href="#splitting-the-job-up" title="本標題的永久連結">¶</a></h3>
+<span id="inst-splitting-up"></span><h3>Splitting the job up<a class="headerlink" href="#splitting-the-job-up" title="Permalink to this heading">¶</a></h3>
 <p>Running <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">install</span></code> builds and installs all modules in one run.  If you
 prefer to work incrementally---especially useful if you want to customize the
 build process, or if things are going wrong---you can use the setup script to do
@@ -319,7 +320,7 @@ tasks.  If you get into distributing your own Python modules and extensions,
 you'll run lots of individual Distutils commands on their own.</p>
 </section>
 <section id="how-building-works">
-<span id="inst-how-build-works"></span><h3>How building works<a class="headerlink" href="#how-building-works" title="本標題的永久連結">¶</a></h3>
+<span id="inst-how-build-works"></span><h3>How building works<a class="headerlink" href="#how-building-works" title="Permalink to this heading">¶</a></h3>
 <p>As implied above, the <strong class="command">build</strong> command is responsible for putting the
 files to install into a <em>build directory</em>.  By default, this is <code class="file docutils literal notranslate"><span class="pre">build</span></code>
 under the distribution root; if you're excessively concerned with speed, or want
@@ -352,7 +353,7 @@ documentation, binary executables, and whatever else is needed to handle the job
 of installing Python modules and applications.</p>
 </section>
 <section id="how-installation-works">
-<span id="inst-how-install-works"></span><h3>How installation works<a class="headerlink" href="#how-installation-works" title="本標題的永久連結">¶</a></h3>
+<span id="inst-how-install-works"></span><h3>How installation works<a class="headerlink" href="#how-installation-works" title="Permalink to this heading">¶</a></h3>
 <p>After the <strong class="command">build</strong> command runs (whether you run it explicitly, or the
 <strong class="command">install</strong> command does it for you), the work of the <strong class="command">install</strong>
 command is relatively simple: all it has to do is copy everything under
@@ -365,12 +366,6 @@ by how you built/installed Python itself.  On Unix (and macOS, which is also
 Unix-based), it also depends on whether the module distribution being installed
 is pure Python or contains extensions (&quot;non-pure&quot;):</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 42%" />
-<col style="width: 39%" />
-<col style="width: 6%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>平台</p></th>
 <th class="head"><p>Standard installation location</p></th>
@@ -440,7 +435,7 @@ custom installations.</p>
 </section>
 </section>
 <section id="alternate-installation">
-<span id="inst-alt-install"></span><h2>Alternate Installation<a class="headerlink" href="#alternate-installation" title="本標題的永久連結">¶</a></h2>
+<span id="inst-alt-install"></span><h2>Alternate Installation<a class="headerlink" href="#alternate-installation" title="Permalink to this heading">¶</a></h2>
 <p>Often, it is necessary or desirable to install modules to a location other than
 the standard location for third-party Python modules.  For example, on a Unix
 system you might not have permission to write to the standard third-party module
@@ -460,7 +455,7 @@ can pass <code class="docutils literal notranslate"><span class="pre">--user</sp
 <code class="docutils literal notranslate"><span class="pre">--install-base</span></code> and <code class="docutils literal notranslate"><span class="pre">--install-platbase</span></code>, but you can't mix from these
 groups.</p>
 <section id="alternate-installation-the-user-scheme">
-<span id="inst-alt-install-user"></span><h3>Alternate installation: the user scheme<a class="headerlink" href="#alternate-installation-the-user-scheme" title="本標題的永久連結">¶</a></h3>
+<span id="inst-alt-install-user"></span><h3>Alternate installation: the user scheme<a class="headerlink" href="#alternate-installation-the-user-scheme" title="Permalink to this heading">¶</a></h3>
 <p>This scheme is designed to be the most convenient solution for users that don't
 have write permission to the global site-packages directory or don't want to
 install into it.  It is enabled with a simple option:</p>
@@ -472,10 +467,6 @@ as <code class="file docutils literal notranslate"><em><span class="pre">userbas
 extension modules in the same location (also known as <a class="reference internal" href="../library/site.html#site.USER_SITE" title="site.USER_SITE"><code class="xref py py-data docutils literal notranslate"><span class="pre">site.USER_SITE</span></code></a>).
 Here are the values for UNIX, including macOS:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Installation directory</p></th>
@@ -498,10 +489,6 @@ Here are the values for UNIX, including macOS:</p>
 </table>
 <p>And here are the values used on Windows:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Installation directory</p></th>
@@ -533,7 +520,7 @@ to finalize the installation.</p>
 the runtime search path for shared C libraries (rpath).</p>
 </section>
 <section id="alternate-installation-the-home-scheme">
-<span id="inst-alt-install-home"></span><h3>Alternate installation: the home scheme<a class="headerlink" href="#alternate-installation-the-home-scheme" title="本標題的永久連結">¶</a></h3>
+<span id="inst-alt-install-home"></span><h3>Alternate installation: the home scheme<a class="headerlink" href="#alternate-installation-the-home-scheme" title="Permalink to this heading">¶</a></h3>
 <p>The idea behind the &quot;home scheme&quot; is that you build and maintain a personal
 stash of Python modules.  This scheme's name is derived from the idea of a
 &quot;home&quot; directory on Unix, since it's not unusual for a Unix user to make their
@@ -557,10 +544,6 @@ to <a class="reference internal" href="#inst-search-path"><span class="std std-r
 <p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">--home</span></code> option defines the installation base directory.  Files are
 installed to the following directories under the installation base as follows:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Installation directory</p></th>
@@ -584,7 +567,7 @@ installed to the following directories under the installation base as follows:</
 <p>(Mentally replace slashes with backslashes if you're on Windows.)</p>
 </section>
 <section id="alternate-installation-unix-the-prefix-scheme">
-<span id="inst-alt-install-prefix-unix"></span><h3>Alternate installation: Unix (the prefix scheme)<a class="headerlink" href="#alternate-installation-unix-the-prefix-scheme" title="本標題的永久連結">¶</a></h3>
+<span id="inst-alt-install-prefix-unix"></span><h3>Alternate installation: Unix (the prefix scheme)<a class="headerlink" href="#alternate-installation-unix-the-prefix-scheme" title="Permalink to this heading">¶</a></h3>
 <p>The &quot;prefix scheme&quot; is useful when you wish to use one Python installation to
 perform the build/install (i.e., to run the setup script), but install modules
 into the third-party module directory of a different Python installation (or
@@ -616,10 +599,6 @@ non-pure module distributions, but could be expanded to C libraries, binary
 executables, etc.)  If <code class="xref std std-option docutils literal notranslate"><span class="pre">--exec-prefix</span></code> is not supplied, it defaults to
 <code class="xref std std-option docutils literal notranslate"><span class="pre">--prefix</span></code>.  Files are installed as follows:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 77%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Installation directory</p></th>
@@ -664,7 +643,7 @@ if your <code class="xref std std-option docutils literal notranslate"><span cla
 alternate Python installation, this is immaterial.)</p>
 </section>
 <section id="alternate-installation-windows-the-prefix-scheme">
-<span id="inst-alt-install-prefix-windows"></span><h3>Alternate installation: Windows (the prefix scheme)<a class="headerlink" href="#alternate-installation-windows-the-prefix-scheme" title="本標題的永久連結">¶</a></h3>
+<span id="inst-alt-install-prefix-windows"></span><h3>Alternate installation: Windows (the prefix scheme)<a class="headerlink" href="#alternate-installation-windows-the-prefix-scheme" title="Permalink to this heading">¶</a></h3>
 <p>Windows has no concept of a user's home directory, and since the standard Python
 installation under Windows is simpler than under Unix, the <code class="xref std std-option docutils literal notranslate"><span class="pre">--prefix</span></code>
 option has traditionally been used to install additional packages in separate
@@ -678,10 +657,6 @@ locations on Windows.</p>
 pure Python modules and extension modules are installed into the same location.
 Files are installed as follows:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Installation directory</p></th>
@@ -705,7 +680,7 @@ Files are installed as follows:</p>
 </section>
 </section>
 <section id="custom-installation">
-<span id="inst-custom-install"></span><h2>Custom Installation<a class="headerlink" href="#custom-installation" title="本標題的永久連結">¶</a></h2>
+<span id="inst-custom-install"></span><h2>Custom Installation<a class="headerlink" href="#custom-installation" title="Permalink to this heading">¶</a></h2>
 <p>Sometimes, the alternate installation schemes described in section
 <a class="reference internal" href="#inst-alt-install"><span class="std std-ref">Alternate Installation</span></a> just don't do what you want.  You might want to tweak just
 one or two directories while keeping everything under the same base directory,
@@ -715,10 +690,6 @@ case, you're creating a <em>custom installation scheme</em>.</p>
 schemes and override some of the installation directories used for the various
 types of files, using these options:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 51%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Override option</p></th>
@@ -856,7 +827,7 @@ files to prevent inadvertently installing projects outside of the virtual
 environment.</p>
 </div>
 <section id="modifying-python-s-search-path">
-<span id="inst-search-path"></span><h3>Modifying Python's Search Path<a class="headerlink" href="#modifying-python-s-search-path" title="本標題的永久連結">¶</a></h3>
+<span id="inst-search-path"></span><h3>Modifying Python's Search Path<a class="headerlink" href="#modifying-python-s-search-path" title="Permalink to this heading">¶</a></h3>
 <p>When the Python interpreter executes an <a class="reference internal" href="../reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> statement, it searches
 for both Python code and extension modules along a search path.  A default value
 for the path is configured into the Python binary when the interpreter is built.
@@ -921,7 +892,7 @@ can modify it by adding or removing entries.</p>
 </section>
 </section>
 <section id="distutils-configuration-files">
-<span id="inst-config-files"></span><h2>Distutils Configuration Files<a class="headerlink" href="#distutils-configuration-files" title="本標題的永久連結">¶</a></h2>
+<span id="inst-config-files"></span><h2>Distutils Configuration Files<a class="headerlink" href="#distutils-configuration-files" title="Permalink to this heading">¶</a></h2>
 <p>As mentioned above, you can use Distutils configuration files to record personal
 or site preferences for any Distutils options.  That is, any option to any
 command can be stored in one of two or three (depending on your platform)
@@ -931,16 +902,11 @@ command-line will in turn override configuration files.  Furthermore, if
 multiple configuration files apply, values from &quot;earlier&quot; files are overridden
 by &quot;later&quot; files.</p>
 <section id="location-and-names-of-config-files">
-<span id="inst-config-filenames"></span><h3>Location and names of config files<a class="headerlink" href="#location-and-names-of-config-files" title="本標題的永久連結">¶</a></h3>
+<span id="inst-config-filenames"></span><h3>Location and names of config files<a class="headerlink" href="#location-and-names-of-config-files" title="Permalink to this heading">¶</a></h3>
 <p>The names and locations of the configuration files vary slightly across
 platforms.  On Unix and macOS, the three configuration files (in the order
 they are processed) are:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 73%" />
-<col style="width: 9%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Location and filename</p></th>
@@ -964,11 +930,6 @@ they are processed) are:</p>
 </table>
 <p>And on Windows, the configuration files are:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 70%" />
-<col style="width: 10%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type of file</p></th>
 <th class="head"><p>Location and filename</p></th>
@@ -1018,7 +979,7 @@ by Distutils.</p></li>
 </ol>
 </section>
 <section id="syntax-of-config-files">
-<span id="inst-config-syntax"></span><h3>Syntax of config files<a class="headerlink" href="#syntax-of-config-files" title="本標題的永久連結">¶</a></h3>
+<span id="inst-config-syntax"></span><h3>Syntax of config files<a class="headerlink" href="#syntax-of-config-files" title="Permalink to this heading">¶</a></h3>
 <p>The Distutils configuration files all have the same syntax.  The config files
 are grouped into sections.  There is one section for each Distutils command,
 plus a <code class="docutils literal notranslate"><span class="pre">global</span></code> section for global options that affect every command.  Each
@@ -1066,7 +1027,7 @@ run, they will use the values in the config file.)</p>
 </section>
 </section>
 <section id="building-extensions-tips-and-tricks">
-<span id="inst-building-ext"></span><h2>Building Extensions: Tips and Tricks<a class="headerlink" href="#building-extensions-tips-and-tricks" title="本標題的永久連結">¶</a></h2>
+<span id="inst-building-ext"></span><h2>Building Extensions: Tips and Tricks<a class="headerlink" href="#building-extensions-tips-and-tricks" title="Permalink to this heading">¶</a></h2>
 <p>Whenever possible, the Distutils try to use the configuration information made
 available by the Python interpreter used to run the <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> script.
 For example, the same compiler and linker flags used to compile Python will also
@@ -1074,7 +1035,7 @@ be used for compiling extensions.  Usually this will work well, but in
 complicated situations this might be inappropriate.  This section discusses how
 to override the usual Distutils behaviour.</p>
 <section id="tweaking-compiler-linker-flags">
-<span id="inst-tweak-flags"></span><h3>Tweaking compiler/linker flags<a class="headerlink" href="#tweaking-compiler-linker-flags" title="本標題的永久連結">¶</a></h3>
+<span id="inst-tweak-flags"></span><h3>Tweaking compiler/linker flags<a class="headerlink" href="#tweaking-compiler-linker-flags" title="Permalink to this heading">¶</a></h3>
 <p>Compiling a Python extension written in C or C++ will sometimes require
 specifying custom flags for the compiler and linker in order to use a particular
 library or produce a special kind of object code. This is especially true if the
@@ -1133,9 +1094,9 @@ environment variable.  If set, the contents of <span class="target" id="index-10
 the compiler flags specified in the  <code class="file docutils literal notranslate"><span class="pre">Setup</span></code> file.</p>
 </section>
 <section id="using-non-microsoft-compilers-on-windows">
-<span id="inst-non-ms-compilers"></span><h3>Using non-Microsoft compilers on Windows<a class="headerlink" href="#using-non-microsoft-compilers-on-windows" title="本標題的永久連結">¶</a></h3>
+<span id="inst-non-ms-compilers"></span><h3>Using non-Microsoft compilers on Windows<a class="headerlink" href="#using-non-microsoft-compilers-on-windows" title="Permalink to this heading">¶</a></h3>
 <section id="borland-codegear-c">
-<h4>Borland/CodeGear C++<a class="headerlink" href="#borland-codegear-c" title="本標題的永久連結">¶</a></h4>
+<h4>Borland/CodeGear C++<a class="headerlink" href="#borland-codegear-c" title="Permalink to this heading">¶</a></h4>
 <p>This subsection describes the necessary steps to use Distutils with the Borland
 C++ compiler version 5.5.  First you have to know that Borland's object file
 format (OMF) is different from the format used by the Python version you can
@@ -1156,7 +1117,7 @@ libraries.</p>
 the extension needs a library (eg. <code class="file docutils literal notranslate"><span class="pre">foo</span></code>) Distutils checks first if it
 finds a library with suffix <code class="file docutils literal notranslate"><span class="pre">_bcpp</span></code> (eg. <code class="file docutils literal notranslate"><span class="pre">foo_bcpp.lib</span></code>) and then
 uses this library.  In the case it doesn't find such a special library it uses
-the default name (<code class="file docutils literal notranslate"><span class="pre">foo.lib</span></code>.) <a class="footnote-reference brackets" href="#id4" id="id1">1</a></p>
+the default name (<code class="file docutils literal notranslate"><span class="pre">foo.lib</span></code>.) <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>To let Distutils compile your extension with Borland C++ you now have to type:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python setup.py build --compiler=bcpp
 </pre></div>
@@ -1177,9 +1138,9 @@ Python.</p>
 </div>
 </section>
 <section id="gnu-c-cygwin-mingw">
-<h4>GNU C / Cygwin / MinGW<a class="headerlink" href="#gnu-c-cygwin-mingw" title="本標題的永久連結">¶</a></h4>
+<h4>GNU C / Cygwin / MinGW<a class="headerlink" href="#gnu-c-cygwin-mingw" title="Permalink to this heading">¶</a></h4>
 <p>This section describes the necessary steps to use Distutils with the GNU C/C++
-compilers in their Cygwin and MinGW distributions. <a class="footnote-reference brackets" href="#id5" id="id2">2</a> For a Python interpreter
+compilers in their Cygwin and MinGW distributions. <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> For a Python interpreter
 that was built with Cygwin, everything should work without any of these
 following steps.</p>
 <p>Not all extensions can be built with MinGW or Cygwin, but many can.  Extensions
@@ -1189,7 +1150,7 @@ extensions.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python setup.py build --compiler=cygwin
 </pre></div>
 </div>
-<p>and for Cygwin in no-cygwin mode <a class="footnote-reference brackets" href="#id6" id="id3">3</a> or for MinGW type:</p>
+<p>and for Cygwin in no-cygwin mode <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> or for MinGW type:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python setup.py build --compiler=mingw32
 </pre></div>
 </div>
@@ -1197,7 +1158,7 @@ extensions.</p>
 consider writing it in your personal or system-wide configuration file for
 Distutils (see section <a class="reference internal" href="#inst-config-files"><span class="std std-ref">Distutils Configuration Files</span></a>.)</p>
 <section id="older-versions-of-python-and-mingw">
-<h5>Older Versions of Python and MinGW<a class="headerlink" href="#older-versions-of-python-and-mingw" title="本標題的永久連結">¶</a></h5>
+<h5>Older Versions of Python and MinGW<a class="headerlink" href="#older-versions-of-python-and-mingw" title="Permalink to this heading">¶</a></h5>
 <p>The following instructions only apply if you're using a version of Python
 inferior to 2.4.1 with a MinGW inferior to 3.0.0 (with
 binutils-2.13.90-20030111-1).</p>
@@ -1231,19 +1192,20 @@ normal libraries do.</p>
 </dl>
 </div>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>This also means you could replace all existing COFF-libraries with OMF-libraries
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This also means you could replace all existing COFF-libraries with OMF-libraries
 of the same name.</p>
-</dd>
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>更多資訊請見 <a class="reference external" href="https://www.sourceware.org/cygwin/">https://www.sourceware.org/cygwin/</a></p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Then you have no POSIX emulation available, but you also don't need
+</aside>
+<aside class="footnote brackets" id="id5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>更多資訊請見 <a class="reference external" href="https://www.sourceware.org/cygwin/">https://www.sourceware.org/cygwin/</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Then you have no POSIX emulation available, but you also don't need
 <code class="file docutils literal notranslate"><span class="pre">cygwin1.dll</span></code>.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 </section>
@@ -1322,6 +1284,10 @@ of the same name.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -1383,11 +1349,11 @@ of the same name.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>cgi --- 通用閘道器介面支援 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -169,7 +170,7 @@
           <div class="body" role="main">
             
   <section id="module-cgi">
-<span id="cgi-common-gateway-interface-support"></span><h1><a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> --- 通用閘道器介面支援<a class="headerlink" href="#module-cgi" title="本標題的永久連結">¶</a></h1>
+<span id="cgi-common-gateway-interface-support"></span><h1><a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> --- 通用閘道器介面支援<a class="headerlink" href="#module-cgi" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/cgi.py">Lib/cgi.py</a></p>
 <div class="deprecated" id="index-0">
 <p><span class="versionmodified deprecated">在 3.11 版本開始棄用: </span><a class="reference internal" href="#module-cgi" title="cgi: Helpers for running Python scripts via the Common Gateway Interface.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgi</span></code></a> 模組 (module) 即將被棄用（詳情與替代方案請見 <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0594/#cgi"><strong>PEP 594</strong></a>）。</p>
@@ -179,7 +180,7 @@
 <p>This module defines a number of utilities for use by CGI scripts written in
 Python.</p>
 <section id="introduction">
-<h2>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h2>
+<h2>簡介<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p id="cgi-intro">A CGI script is invoked by an HTTP server, usually to process user input
 submitted through an HTML <code class="docutils literal notranslate"><span class="pre">&lt;FORM&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;ISINDEX&gt;</span></code> element.</p>
 <p>Most often, CGI scripts live in the server's special <code class="file docutils literal notranslate"><span class="pre">cgi-bin</span></code> directory.
@@ -211,7 +212,7 @@ prints a simple piece of HTML:</p>
 </div>
 </section>
 <section id="using-the-cgi-module">
-<span id="id1"></span><h2>Using the cgi module<a class="headerlink" href="#using-the-cgi-module" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>Using the cgi module<a class="headerlink" href="#using-the-cgi-module" title="Permalink to this heading">¶</a></h2>
 <p>Begin by writing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cgi</span></code>.</p>
 <p>When you write a new script, consider adding these lines:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cgitb</span>
@@ -327,7 +328,7 @@ garbage collection of the creating <code class="xref py py-class docutils litera
 </div>
 </section>
 <section id="higher-level-interface">
-<h2>Higher Level Interface<a class="headerlink" href="#higher-level-interface" title="本標題的永久連結">¶</a></h2>
+<h2>Higher Level Interface<a class="headerlink" href="#higher-level-interface" title="Permalink to this heading">¶</a></h2>
 <p>The previous section explains how to read CGI form data using the
 <code class="xref py py-class docutils literal notranslate"><span class="pre">FieldStorage</span></code> class.  This section describes a higher level interface
 which was added to this class to allow one to do it in a more readable and
@@ -376,7 +377,7 @@ and <a class="reference internal" href="#cgi.FieldStorage.getlist" title="cgi.Fi
 <dd><p>This method always returns only one value associated with form field <em>name</em>.
 The method returns only the first value in case that more values were posted
 under such name.  Please note that the order in which the values are received
-may vary from browser to browser and should not be counted on. <a class="footnote-reference brackets" href="#id3" id="id2">1</a>  If no such
+may vary from browser to browser and should not be counted on. <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>  If no such
 form field or value exists then the method returns the value specified by the
 optional parameter <em>default</em>.  This parameter defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> if not
 specified.</p>
@@ -400,7 +401,7 @@ The method returns an empty list if no such form field or value exists for
 </div>
 </section>
 <section id="functions">
-<span id="functions-in-cgi-module"></span><h2>函式<a class="headerlink" href="#functions" title="本標題的永久連結">¶</a></h2>
+<span id="functions-in-cgi-module"></span><h2>函式<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <p>These are useful if you want more control, or if you want to employ some of the
 algorithms implemented in this module in other circumstances.</p>
 <dl class="py function">
@@ -473,7 +474,7 @@ formats all information provided to the script in HTML format.</p>
 
 </section>
 <section id="caring-about-security">
-<span id="cgi-security"></span><h2>Caring about security<a class="headerlink" href="#caring-about-security" title="本標題的永久連結">¶</a></h2>
+<span id="cgi-security"></span><h2>Caring about security<a class="headerlink" href="#caring-about-security" title="Permalink to this heading">¶</a></h2>
 <p id="index-2">There's one important rule: if you invoke an external program (via
 <a class="reference internal" href="os.html#os.system" title="os.system"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.system()</span></code></a>, <a class="reference internal" href="os.html#os.popen" title="os.popen"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.popen()</span></code></a> or other functions with similar
 functionality), make very sure you don't pass arbitrary strings received from
@@ -486,7 +487,7 @@ command, you should make sure the string contains only alphanumeric characters,
 dashes, underscores, and periods.</p>
 </section>
 <section id="installing-your-cgi-script-on-a-unix-system">
-<h2>Installing your CGI script on a Unix system<a class="headerlink" href="#installing-your-cgi-script-on-a-unix-system" title="本標題的永久連結">¶</a></h2>
+<h2>Installing your CGI script on a Unix system<a class="headerlink" href="#installing-your-cgi-script-on-a-unix-system" title="Permalink to this heading">¶</a></h2>
 <p>Read the documentation for your HTTP server and check with your local system
 administrator to find the directory where CGI scripts should be installed;
 usually this is in a directory <code class="file docutils literal notranslate"><span class="pre">cgi-bin</span></code> in the server tree.</p>
@@ -521,7 +522,7 @@ other modules.  For example:</p>
 documentation (it will usually have a section on CGI scripts).</p>
 </section>
 <section id="testing-your-cgi-script">
-<h2>Testing your CGI script<a class="headerlink" href="#testing-your-cgi-script" title="本標題的永久連結">¶</a></h2>
+<h2>Testing your CGI script<a class="headerlink" href="#testing-your-cgi-script" title="Permalink to this heading">¶</a></h2>
 <p>Unfortunately, a CGI script will generally not run when you try it from the
 command line, and a script that works perfectly from the command line may fail
 mysteriously when run from the server.  There's one reason why you should still
@@ -532,7 +533,7 @@ send a cryptic error to the client.</p>
 choice but to read the next section.</p>
 </section>
 <section id="debugging-cgi-scripts">
-<h2>Debugging CGI scripts<a class="headerlink" href="#debugging-cgi-scripts" title="本標題的永久連結">¶</a></h2>
+<h2>Debugging CGI scripts<a class="headerlink" href="#debugging-cgi-scripts" title="Permalink to this heading">¶</a></h2>
 <p id="index-5">First of all, check for trivial installation errors --- reading the section
 above on installing your CGI script carefully can save you a lot of time.  If
 you wonder whether you have understood the installation procedure correctly, try
@@ -592,7 +593,7 @@ will be displayed. Because no HTML interpretation is going on, the traceback
 will be readable.</p>
 </section>
 <section id="common-problems-and-solutions">
-<h2>Common problems and solutions<a class="headerlink" href="#common-problems-and-solutions" title="本標題的永久連結">¶</a></h2>
+<h2>Common problems and solutions<a class="headerlink" href="#common-problems-and-solutions" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Most HTTP servers buffer the output from CGI scripts until the script is
 completed.  This means that it is not possible to display a progress report on
@@ -615,14 +616,13 @@ userid for a web server's <code class="docutils literal notranslate"><span class
 systems, and is a security liability as well.</p></li>
 </ul>
 <p class="rubric">註解</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>Note that some recent versions of the HTML specification do state what
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Note that some recent versions of the HTML specification do state what
 order the field values should be supplied in, but knowing whether a request
 was received from a conforming browser, or even from a browser at all, is
 tedious and error-prone.</p>
-</dd>
-</dl>
+</aside>
 </section>
 </section>
 
@@ -673,6 +673,10 @@ tedious and error-prone.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -739,11 +743,11 @@ tedious and error-prone.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

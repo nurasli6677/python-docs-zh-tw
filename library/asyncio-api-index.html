@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>高階 API 索引 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -167,12 +168,12 @@
           <div class="body" role="main">
             
   <section id="high-level-api-index">
-<h1>高階 API 索引<a class="headerlink" href="#high-level-api-index" title="本標題的永久連結">¶</a></h1>
+<h1>高階 API 索引<a class="headerlink" href="#high-level-api-index" title="Permalink to this heading">¶</a></h1>
 <p>這個頁面列出了所有能使用 async/wait 的高階 asyncio API。</p>
 <section id="tasks">
-<h2>任務 (Tasks)<a class="headerlink" href="#tasks" title="本標題的永久連結">¶</a></h2>
+<h2>任務 (Tasks)<a class="headerlink" href="#tasks" title="Permalink to this heading">¶</a></h2>
 <p>用於執行非同步程式、建立 Task 物件、帶有超時 (timeout) 設定地等待多個事件的工具程式。</p>
-<table class="colwidths-given full-width-table docutils align-default">
+<table class="full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -229,9 +230,9 @@
 </ul>
 </section>
 <section id="queues">
-<h2>佇列 (Queues)<a class="headerlink" href="#queues" title="本標題的永久連結">¶</a></h2>
+<h2>佇列 (Queues)<a class="headerlink" href="#queues" title="Permalink to this heading">¶</a></h2>
 <p>佇列應被用於為多個 asyncio Task 物件分配工作、實作 connection pools（連線池）以及 pub/sub（發行/訂閱）模式。</p>
-<table class="colwidths-given full-width-table docutils align-default">
+<table class="full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -255,9 +256,9 @@
 </ul>
 </section>
 <section id="subprocesses">
-<h2>子行程 (Subprocesses)<a class="headerlink" href="#subprocesses" title="本標題的永久連結">¶</a></h2>
+<h2>子行程 (Subprocesses)<a class="headerlink" href="#subprocesses" title="Permalink to this heading">¶</a></h2>
 <p>用於衍生（spawn）子行程和執行 shell 指令的工具程式。</p>
-<table class="colwidths-given full-width-table docutils align-default">
+<table class="full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -278,9 +279,9 @@
 </ul>
 </section>
 <section id="streams">
-<h2>串流 (Streams)<a class="headerlink" href="#streams" title="本標題的永久連結">¶</a></h2>
+<h2>串流 (Streams)<a class="headerlink" href="#streams" title="Permalink to this heading">¶</a></h2>
 <p>用於網路 IO 處理的高階 API。</p>
-<table class="colwidths-given full-width-table docutils align-default">
+<table class="full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -313,9 +314,9 @@
 </ul>
 </section>
 <section id="synchronization">
-<h2>同步化 (Synchronization)<a class="headerlink" href="#synchronization" title="本標題的永久連結">¶</a></h2>
+<h2>同步化 (Synchronization)<a class="headerlink" href="#synchronization" title="Permalink to this heading">¶</a></h2>
 <p>類似執行緒且能被用於 Task 中的同步化原始物件 (primitive)。</p>
-<table class="colwidths-given full-width-table docutils align-default">
+<table class="full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -345,8 +346,8 @@
 </ul>
 </section>
 <section id="exceptions">
-<h2>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
-<table class="colwidths-given full-width-table docutils align-default">
+<h2>例外<a class="headerlink" href="#exceptions" title="Permalink to this heading">¶</a></h2>
+<table class="full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -412,6 +413,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -479,11 +484,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

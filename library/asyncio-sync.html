@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>同步化原始物件 (Synchronization Primitives) &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="synchronization-primitives">
-<span id="asyncio-sync"></span><h1>同步化原始物件 (Synchronization Primitives)<a class="headerlink" href="#synchronization-primitives" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-sync"></span><h1>同步化原始物件 (Synchronization Primitives)<a class="headerlink" href="#synchronization-primitives" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/locks.py">Lib/asyncio/locks.py</a></p>
 <hr class="docutils" />
 <p>asyncio 的同步化原始物件被設計成和那些 <a class="reference internal" href="threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> 模組 (module) 中的同名物件相似，但有兩個重要的限制條件：</p>
@@ -184,7 +185,7 @@
 </ul>
 <hr class="docutils" />
 <section id="lock">
-<h2>Lock<a class="headerlink" href="#lock" title="本標題的永久連結">¶</a></h2>
+<h2>Lock<a class="headerlink" href="#lock" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Lock">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Lock</span></span><a class="headerlink" href="#asyncio.Lock" title="本定義的永久連結">¶</a></dt>
@@ -239,7 +240,7 @@
 
 </section>
 <section id="event">
-<h2>Event<a class="headerlink" href="#event" title="本標題的永久連結">¶</a></h2>
+<h2>Event<a class="headerlink" href="#event" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Event">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><a class="headerlink" href="#asyncio.Event" title="本定義的永久連結">¶</a></dt>
@@ -303,7 +304,7 @@
 
 </section>
 <section id="condition">
-<h2>Condition<a class="headerlink" href="#condition" title="本標題的永久連結">¶</a></h2>
+<h2>Condition<a class="headerlink" href="#condition" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Condition">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Condition" title="本定義的永久連結">¶</a></dt>
@@ -387,7 +388,7 @@
 
 </section>
 <section id="semaphore">
-<h2>Semaphore<a class="headerlink" href="#semaphore" title="本標題的永久連結">¶</a></h2>
+<h2>Semaphore<a class="headerlink" href="#semaphore" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.Semaphore">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">Semaphore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Semaphore" title="本定義的永久連結">¶</a></dt>
@@ -440,7 +441,7 @@
 
 </section>
 <section id="boundedsemaphore">
-<h2>BoundedSemaphore<a class="headerlink" href="#boundedsemaphore" title="本標題的永久連結">¶</a></h2>
+<h2>BoundedSemaphore<a class="headerlink" href="#boundedsemaphore" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.BoundedSemaphore">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">BoundedSemaphore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.BoundedSemaphore" title="本定義的永久連結">¶</a></dt>
@@ -501,6 +502,10 @@
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -568,11 +573,11 @@
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

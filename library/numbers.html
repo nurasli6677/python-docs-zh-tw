@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>numbers --- Numeric abstract base classes &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -166,7 +167,7 @@
           <div class="body" role="main">
             
   <section id="module-numbers">
-<span id="numbers-numeric-abstract-base-classes"></span><h1><a class="reference internal" href="#module-numbers" title="numbers: Numeric abstract base classes (Complex, Real, Integral, etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">numbers</span></code></a> --- Numeric abstract base classes<a class="headerlink" href="#module-numbers" title="本標題的永久連結">¶</a></h1>
+<span id="numbers-numeric-abstract-base-classes"></span><h1><a class="reference internal" href="#module-numbers" title="numbers: Numeric abstract base classes (Complex, Real, Integral, etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">numbers</span></code></a> --- Numeric abstract base classes<a class="headerlink" href="#module-numbers" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/numbers.py">Lib/numbers.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-numbers" title="numbers: Numeric abstract base classes (Complex, Real, Integral, etc.)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">numbers</span></code></a> module (<span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-3141/"><strong>PEP 3141</strong></a>) defines a hierarchy of numeric
@@ -180,7 +181,7 @@ more operations.  None of the types defined in this module are intended to be in
 </dd></dl>
 
 <section id="the-numeric-tower">
-<h2>The numeric tower<a class="headerlink" href="#the-numeric-tower" title="本標題的永久連結">¶</a></h2>
+<h2>The numeric tower<a class="headerlink" href="#the-numeric-tower" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="numbers.Complex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numbers.</span></span><span class="sig-name descname"><span class="pre">Complex</span></span><a class="headerlink" href="#numbers.Complex" title="本定義的永久連結">¶</a></dt>
@@ -255,7 +256,7 @@ modulus and bit-string operations: <code class="docutils literal notranslate"><s
 
 </section>
 <section id="notes-for-type-implementors">
-<h2>Notes for type implementors<a class="headerlink" href="#notes-for-type-implementors" title="本標題的永久連結">¶</a></h2>
+<h2>Notes for type implementors<a class="headerlink" href="#notes-for-type-implementors" title="Permalink to this heading">¶</a></h2>
 <p>Implementors should be careful to make equal numbers equal and hash
 them to the same values. This may be subtle if there are two different
 extensions of the real numbers. For example, <a class="reference internal" href="fractions.html#fractions.Fraction" title="fractions.Fraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">fractions.Fraction</span></code></a>
@@ -274,7 +275,7 @@ implements <a class="reference internal" href="functions.html#hash" title="hash"
 </pre></div>
 </div>
 <section id="adding-more-numeric-abcs">
-<h3>Adding More Numeric ABCs<a class="headerlink" href="#adding-more-numeric-abcs" title="本標題的永久連結">¶</a></h3>
+<h3>Adding More Numeric ABCs<a class="headerlink" href="#adding-more-numeric-abcs" title="Permalink to this heading">¶</a></h3>
 <p>There are, of course, more possible ABCs for numbers, and this would
 be a poor hierarchy if it precluded the possibility of adding
 those. You can add <code class="docutils literal notranslate"><span class="pre">MyFoo</span></code> between <a class="reference internal" href="#numbers.Complex" title="numbers.Complex"><code class="xref py py-class docutils literal notranslate"><span class="pre">Complex</span></code></a> and
@@ -285,7 +286,7 @@ those. You can add <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="implementing-the-arithmetic-operations">
-<span id="id1"></span><h3>Implementing the arithmetic operations<a class="headerlink" href="#implementing-the-arithmetic-operations" title="本標題的永久連結">¶</a></h3>
+<span id="id1"></span><h3>Implementing the arithmetic operations<a class="headerlink" href="#implementing-the-arithmetic-operations" title="Permalink to this heading">¶</a></h3>
 <p>We want to implement the arithmetic operations so that mixed-mode
 operations either call an implementation whose author knew about the
 types of both arguments, or convert both to the nearest built in type
@@ -438,6 +439,10 @@ forward and reverse instances of any given operator. For example,
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -504,11 +509,11 @@ forward and reverse instances of any given operator. For example,
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

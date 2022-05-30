@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>如何排序 &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -167,12 +168,12 @@
           <div class="body" role="main">
             
   <section id="sorting-how-to">
-<span id="sortinghowto"></span><h1>如何排序<a class="headerlink" href="#sorting-how-to" title="本標題的永久連結">¶</a></h1>
+<span id="sortinghowto"></span><h1>如何排序<a class="headerlink" href="#sorting-how-to" title="Permalink to this heading">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Andrew Dalke 和 Raymond Hettinger</p>
 </dd>
-<dt class="field-even">發佈版本</dt>
+<dt class="field-even">發佈版本<span class="colon">:</span></dt>
 <dd class="field-even"><p>0.1</p>
 </dd>
 </dl>
@@ -181,7 +182,7 @@ in-place.  There is also a <a class="reference internal" href="../library/functi
 sorted list from an iterable.</p>
 <p>在此文件，我們使用Python進行各種方式排序資料</p>
 <section id="sorting-basics">
-<h2>基礎排序<a class="headerlink" href="#sorting-basics" title="本標題的永久連結">¶</a></h2>
+<h2>基礎排序<a class="headerlink" href="#sorting-basics" title="Permalink to this heading">¶</a></h2>
 <p>A simple ascending sort is very easy: just call the <a class="reference internal" href="../library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> function. It
 returns a new sorted list:</p>
 <div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -206,7 +207,7 @@ lists. In contrast, the <a class="reference internal" href="../library/functions
 </div>
 </section>
 <section id="key-functions">
-<h2>Key Functions<a class="headerlink" href="#key-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Key Functions<a class="headerlink" href="#key-functions" title="Permalink to this heading">¶</a></h2>
 <p>Both <a class="reference internal" href="../library/stdtypes.html#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> and <a class="reference internal" href="../library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> have a <em>key</em> parameter to specify a
 function (or other callable) to be called on each list element prior to making
 comparisons.</p>
@@ -250,7 +251,7 @@ as keys. For example:</p>
 </div>
 </section>
 <section id="operator-module-functions">
-<h2>Operator Module Functions<a class="headerlink" href="#operator-module-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Operator Module Functions<a class="headerlink" href="#operator-module-functions" title="Permalink to this heading">¶</a></h2>
 <p>The key-function patterns shown above are very common, so Python provides
 convenience functions to make accessor functions easier and faster. The
 <a class="reference internal" href="../library/operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> module has <a class="reference internal" href="../library/operator.html#operator.itemgetter" title="operator.itemgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">itemgetter()</span></code></a>,
@@ -276,7 +277,7 @@ sort by <em>grade</em> then by <em>age</em>:</p>
 </div>
 </section>
 <section id="ascending-and-descending">
-<h2>升冪與降冪<a class="headerlink" href="#ascending-and-descending" title="本標題的永久連結">¶</a></h2>
+<h2>升冪與降冪<a class="headerlink" href="#ascending-and-descending" title="Permalink to this heading">¶</a></h2>
 <p>Both <a class="reference internal" href="../library/stdtypes.html#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> and <a class="reference internal" href="../library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> accept a <em>reverse</em> parameter with a
 boolean value. This is used to flag descending sorts. For example, to get the
 student data in reverse <em>age</em> order:</p>
@@ -289,7 +290,7 @@ student data in reverse <em>age</em> order:</p>
 </div>
 </section>
 <section id="sort-stability-and-complex-sorts">
-<h2>Sort Stability and Complex Sorts<a class="headerlink" href="#sort-stability-and-complex-sorts" title="本標題的永久連結">¶</a></h2>
+<h2>Sort Stability and Complex Sorts<a class="headerlink" href="#sort-stability-and-complex-sorts" title="Permalink to this heading">¶</a></h2>
 <p>Sorts are guaranteed to be <a class="reference external" href="https://en.wikipedia.org/wiki/Sorting_algorithm#Stability">stable</a>. That means that
 when multiple records have the same key, their original order is preserved.</p>
 <div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
@@ -323,7 +324,7 @@ does multiple sorts efficiently because it can take advantage of any ordering
 already present in a dataset.</p>
 </section>
 <section id="the-old-way-using-decorate-sort-undecorate">
-<h2>The Old Way Using Decorate-Sort-Undecorate<a class="headerlink" href="#the-old-way-using-decorate-sort-undecorate" title="本標題的永久連結">¶</a></h2>
+<h2>The Old Way Using Decorate-Sort-Undecorate<a class="headerlink" href="#the-old-way-using-decorate-sort-undecorate" title="Permalink to this heading">¶</a></h2>
 <p>This idiom is called Decorate-Sort-Undecorate after its three steps:</p>
 <ul class="simple">
 <li><p>First, the initial list is decorated with new values that control the sort order.</p></li>
@@ -357,7 +358,7 @@ after Randal L. Schwartz, who popularized it among Perl programmers.</p>
 <p>Now that Python sorting provides key-functions, this technique is not often needed.</p>
 </section>
 <section id="the-old-way-using-the-cmp-parameter">
-<h2>The Old Way Using the <em>cmp</em> Parameter<a class="headerlink" href="#the-old-way-using-the-cmp-parameter" title="本標題的永久連結">¶</a></h2>
+<h2>The Old Way Using the <em>cmp</em> Parameter<a class="headerlink" href="#the-old-way-using-the-cmp-parameter" title="Permalink to this heading">¶</a></h2>
 <p>Many constructs given in this HOWTO assume Python 2.4 or later. Before that,
 there was no <a class="reference internal" href="../library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> builtin and <a class="reference internal" href="../library/stdtypes.html#list.sort" title="list.sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a> took no keyword
 arguments. Instead, all of the Py2.x versions supported a <em>cmp</em> parameter to
@@ -414,7 +415,7 @@ function. The following wrapper makes that easy to do:</p>
 <a class="reference internal" href="../library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> module in the standard library.</p>
 </section>
 <section id="odd-and-ends">
-<h2>Odd and Ends<a class="headerlink" href="#odd-and-ends" title="本標題的永久連結">¶</a></h2>
+<h2>Odd and Ends<a class="headerlink" href="#odd-and-ends" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p>For locale aware sorting, use <a class="reference internal" href="../library/locale.html#locale.strxfrm" title="locale.strxfrm"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.strxfrm()</span></code></a> for a key function or
 <a class="reference internal" href="../library/locale.html#locale.strcoll" title="locale.strcoll"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.strcoll()</span></code></a> for a comparison function.</p></li>
@@ -503,6 +504,10 @@ names:</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -568,11 +573,11 @@ names:</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

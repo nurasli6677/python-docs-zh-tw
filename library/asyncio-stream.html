@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Streams &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -170,7 +171,7 @@
           <div class="body" role="main">
             
   <section id="streams">
-<span id="asyncio-streams"></span><h1>Streams<a class="headerlink" href="#streams" title="本標題的永久連結">¶</a></h1>
+<span id="asyncio-streams"></span><h1>Streams<a class="headerlink" href="#streams" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/streams.py">Lib/asyncio/streams.py</a></p>
 <hr class="docutils" />
 <p>Streams are high-level async/await-ready primitives to work with
@@ -282,7 +283,7 @@ is set to 64 KiB.</p>
 </dd></dl>
 
 <section id="streamreader">
-<h2>StreamReader<a class="headerlink" href="#streamreader" title="本標題的永久連結">¶</a></h2>
+<h2>StreamReader<a class="headerlink" href="#streamreader" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.StreamReader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">StreamReader</span></span><a class="headerlink" href="#asyncio.StreamReader" title="本定義的永久連結">¶</a></dt>
@@ -350,7 +351,7 @@ was called.</p>
 
 </section>
 <section id="streamwriter">
-<h2>StreamWriter<a class="headerlink" href="#streamwriter" title="本標題的永久連結">¶</a></h2>
+<h2>StreamWriter<a class="headerlink" href="#streamwriter" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="asyncio.StreamWriter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">StreamWriter</span></span><a class="headerlink" href="#asyncio.StreamWriter" title="本定義的永久連結">¶</a></dt>
@@ -466,9 +467,9 @@ connection is closed.</p>
 
 </section>
 <section id="examples">
-<h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<h2>範例<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="tcp-echo-client-using-streams">
-<span id="asyncio-tcp-echo-client-streams"></span><h3>TCP echo client using streams<a class="headerlink" href="#tcp-echo-client-using-streams" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-tcp-echo-client-streams"></span><h3>TCP echo client using streams<a class="headerlink" href="#tcp-echo-client-using-streams" title="Permalink to this heading">¶</a></h3>
 <p>TCP echo client using the <a class="reference internal" href="#asyncio.open_connection" title="asyncio.open_connection"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.open_connection()</span></code></a> function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
@@ -495,7 +496,7 @@ example uses the low-level <a class="reference internal" href="asyncio-eventloop
 </div>
 </section>
 <section id="tcp-echo-server-using-streams">
-<span id="asyncio-tcp-echo-server-streams"></span><h3>TCP echo server using streams<a class="headerlink" href="#tcp-echo-server-using-streams" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-tcp-echo-server-streams"></span><h3>TCP echo server using streams<a class="headerlink" href="#tcp-echo-server-using-streams" title="Permalink to this heading">¶</a></h3>
 <p>TCP echo server using the <a class="reference internal" href="#asyncio.start_server" title="asyncio.start_server"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.start_server()</span></code></a> function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
@@ -533,7 +534,7 @@ example uses the <a class="reference internal" href="asyncio-eventloop.html#asyn
 </div>
 </section>
 <section id="get-http-headers">
-<h3>Get HTTP headers<a class="headerlink" href="#get-http-headers" title="本標題的永久連結">¶</a></h3>
+<h3>Get HTTP headers<a class="headerlink" href="#get-http-headers" title="Permalink to this heading">¶</a></h3>
 <p>Simple example querying HTTP headers of the URL passed on the command line:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="kn">import</span> <span class="nn">urllib.parse</span>
@@ -581,7 +582,7 @@ example uses the <a class="reference internal" href="asyncio-eventloop.html#asyn
 </div>
 </section>
 <section id="register-an-open-socket-to-wait-for-data-using-streams">
-<span id="asyncio-example-create-connection-streams"></span><h3>Register an open socket to wait for data using streams<a class="headerlink" href="#register-an-open-socket-to-wait-for-data-using-streams" title="本標題的永久連結">¶</a></h3>
+<span id="asyncio-example-create-connection-streams"></span><h3>Register an open socket to wait for data using streams<a class="headerlink" href="#register-an-open-socket-to-wait-for-data-using-streams" title="Permalink to this heading">¶</a></h3>
 <p>Coroutine waiting until a socket receives data using the
 <a class="reference internal" href="#asyncio.open_connection" title="asyncio.open_connection"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_connection()</span></code></a> function:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
@@ -672,6 +673,10 @@ the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.crea
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -739,11 +744,11 @@ the <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.crea
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>

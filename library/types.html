@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_TW">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>types --- Dynamic type creation and names for built-in types &#8212; Python 3.10.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,6 +14,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     
@@ -164,7 +165,7 @@
           <div class="body" role="main">
             
   <section id="module-types">
-<span id="types-dynamic-type-creation-and-names-for-built-in-types"></span><h1><a class="reference internal" href="#module-types" title="types: Names for built-in types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code></a> --- Dynamic type creation and names for built-in types<a class="headerlink" href="#module-types" title="本標題的永久連結">¶</a></h1>
+<span id="types-dynamic-type-creation-and-names-for-built-in-types"></span><h1><a class="reference internal" href="#module-types" title="types: Names for built-in types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code></a> --- Dynamic type creation and names for built-in types<a class="headerlink" href="#module-types" title="Permalink to this heading">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/types.py">Lib/types.py</a></p>
 <hr class="docutils" />
 <p>This module defines utility functions to assist in dynamic creation of
@@ -175,7 +176,7 @@ Python interpreter, but not exposed as builtins like <a class="reference interna
 <p>Finally, it provides some additional type-related utility classes and functions
 that are not fundamental enough to be builtins.</p>
 <section id="dynamic-type-creation">
-<h2>Dynamic Type Creation<a class="headerlink" href="#dynamic-type-creation" title="本標題的永久連結">¶</a></h2>
+<h2>Dynamic Type Creation<a class="headerlink" href="#dynamic-type-creation" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="types.new_class">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">new_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exec_body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#types.new_class" title="本定義的永久連結">¶</a></dt>
@@ -245,7 +246,7 @@ the return tuple unchanged.</p>
 </div>
 </section>
 <section id="standard-interpreter-types">
-<h2>Standard Interpreter Types<a class="headerlink" href="#standard-interpreter-types" title="本標題的永久連結">¶</a></h2>
+<h2>Standard Interpreter Types<a class="headerlink" href="#standard-interpreter-types" title="Permalink to this heading">¶</a></h2>
 <p>This module provides names for many of the types that are required to
 implement a Python interpreter. It deliberately avoids including some of
 the types that arise only incidentally during processing such as the
@@ -639,7 +640,7 @@ pairs).</p>
 
 </section>
 <section id="additional-utility-classes-and-functions">
-<h2>Additional Utility Classes and Functions<a class="headerlink" href="#additional-utility-classes-and-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Additional Utility Classes and Functions<a class="headerlink" href="#additional-utility-classes-and-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="types.SimpleNamespace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">SimpleNamespace</span></span><a class="headerlink" href="#types.SimpleNamespace" title="本定義的永久連結">¶</a></dt>
@@ -692,7 +693,7 @@ attributes on the class with the same name (see <a class="reference internal" hr
 
 </section>
 <section id="coroutine-utility-functions">
-<h2>Coroutine Utility Functions<a class="headerlink" href="#coroutine-utility-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Coroutine Utility Functions<a class="headerlink" href="#coroutine-utility-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="types.coroutine">
 <span class="sig-prename descclassname"><span class="pre">types.</span></span><span class="sig-name descname"><span class="pre">coroutine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gen_func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#types.coroutine" title="本定義的永久連結">¶</a></dt>
@@ -757,6 +758,10 @@ of objects will be returned as is.</p>
     </ul>
   </div>
         </div>
+<div id="sidebarbutton" title="收合側邊欄">
+<span>«</span>
+</div>
+
       </div>
       <div class="clearer"></div>
     </div>  
@@ -823,11 +828,11 @@ of objects will be returned as is.</p>
 <br />
     <br />
 
-    最後更新於 5月 21, 2022。
+    最後更新於 5月 30, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0 建立。
     </div>
 
   </body>
